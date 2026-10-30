@@ -123,8 +123,8 @@ export function generateCrossword(module:CrosswordModule):CrosswordResult{
         if(c===null)continue;
         for(let i=0;i<entry.answer.length;i++){
           if(entry.answer[i]!==c)continue;
-          if(!(occupied[y][x]&ACROSS))candidates.push({x,y:y-i,direction:'down'});
-          if(!(occupied[y][x]&DOWN))candidates.push({x:x-i,y,direction:'across'});
+          if(!(occupied[y][x]&DOWN))candidates.push({x,y:y-i,direction:'down'});
+          if(!(occupied[y][x]&ACROSS))candidates.push({x:x-i,y,direction:'across'});
         }
       }
     }
@@ -204,7 +204,7 @@ export function checkCrossword(result:CrosswordResult):boolean{
       if(x<0||y<0||x>=result.width||y>=result.height||result.cells[y][x]!==word.answer[i])return false;
       const key=x+','+y;
       occupied.set(key,(occupied.get(key)??0)+1);
-      if(occupied.get(key)!>2)return false;
+      if((occupied.get(key)??0)>2)return false;
     }
   }
   if(![...occupied.values()].some(n=>n===2))return false;
@@ -227,7 +227,7 @@ export function connectPositions(module:ConnectVerseModule|ConnectBigIdeaModule)
 export function spiralPoints(count=400):{x:number;y:number}[]{
   return Array.from({length:count},(_,i)=>{
     const t=i/(count-1),angle=t*Math.PI*11-Math.PI/2;
-    const r=.035+t*.44;
+    const r=.035+t*.41;
     return {x:.5+Math.cos(angle)*r,y:.5+Math.sin(angle)*r};
   });
 }
