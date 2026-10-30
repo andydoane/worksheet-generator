@@ -5,6 +5,8 @@ import SmallModuleEditor from './SmallModuleEditor';
 import { isSmallModule } from './smallModules';
 import { isStoryVerseModule } from './storyVerseModules';
 import StoryVerseEditor from './StoryVerseEditor';
+import { isPuzzleId, isPuzzleModule } from './puzzleEngines';
+import PuzzleEditor from './PuzzleEditor';
 import {
   blankModule, moduleForSize, readAssignments, slotKey, validateModule,
   type ActivityModule, type ModuleAssignments, type ModuleId,
@@ -81,7 +83,7 @@ function readDraft(): Draft {
   }
 }
 
-function RegionContents({ region, draft, module }: { region: Region; draft: Draft; module?: ActivityModule }) {
+function RegionContents({ region, draft, module, showSolution = false }: { region: Region; draft: Draft; module?: ActivityModule; showSolution?: boolean }) {
   if (region.kind === 'title') {
     return (
       <div className="cover-content">
@@ -92,7 +94,7 @@ function RegionContents({ region, draft, module }: { region: Region; draft: Draf
     );
   }
 
-  if (module && moduleForSize(region.size).some((item) => item.id === module.type)) return <ModulePreview module={module} />;
+  if (module && moduleForSize(region.size).some((item) => item.id === module.type)) return <ModulePreview module={module} showSolution={showSolution} />;
 
   return (
     <div className="region-content">
@@ -104,11 +106,12 @@ function RegionContents({ region, draft, module }: { region: Region; draft: Draf
 }
 
 function BookletPage({
-  page, draft, selectedId, onSelect,
+  page, draft, selectedId, onSelect, showSolution = false,
 }: {
   page: PageNumber;
   draft: Draft;
   selectedId?: string;
+  showSolution?: boolean;
   onSelect: (page: PageNumber, regionId: string) => void;
 }) {
   const layoutId = page === 1 ? DEFAULT_LAYOUTS[2] : draft.layouts[page];
@@ -120,7 +123,7 @@ function BookletPage({
         const style = { ...regionStyle(region), padding: String((BOOKLET.padding / BOOKLET.page.width) * 100) + '%' };
         const className = 'booklet-region ' + (region.kind === 'title' ? 'title-region' : 'activity-region') +
           ' size-' + region.size + (region.id === selectedId ? ' selected-region' : '');
-        const content = <RegionContents region={region} draft={draft} module={draft.modules[slotKey(page, region.id)]} />;
+        const content = <RegionContents region={region} draft={draft} module={draft.modules[slotKey(page, region.id)]} showSolution={showSolution && region.id === selectedId} />;
         return region.kind === 'title'
           ? <div key={region.id} className={className} style={style} aria-label="Fixed title area">{content}</div>
           : <button type="button" key={region.id} className={className} style={style}
@@ -156,6 +159,7 @@ export default function App() {
   const [page, setPage] = useState<PageNumber>(1);
   const [tab, setTab] = useState<EditorTab>('details');
   const [selectedRegionId, setSelectedRegionId] = useState<string>('cover-activity');
+  const [solutionKey, setSolutionKey] = useState<string | null>(null);
   const [mode, setMode] = useState<PreviewMode>('page');
   const [saved, setSaved] = useState(false);
   const [exporting, setExporting] = useState(false);
@@ -251,6 +255,7 @@ export default function App() {
   const activeRegion = available.find((region) => region.id === selectedRegionId) ?? available[0];
   const activeKey = activeRegion ? slotKey(page, activeRegion.id) : '';
   const activeModule = draft.modules[activeKey];
+  const showSolution = solutionKey === activeKey;
   const validation = activeModule ? validateModule(activeModule) : [];
   const selected = pages.find((item) => item.number === page) ?? pages[0];
   const activeSheet = SHEETS.find((sheet) => sheet.pages.includes(page)) ?? SHEETS[0];
@@ -286,7 +291,7 @@ export default function App() {
             </button>
           ))}
         </div>
-        <div className="sidebar-foot"><span aria-hidden="true">●</span> Story & verse activities · PR 6</div>
+        <div className="sidebar-foot"><span aria-hidden="true">●</span> Word search & maze · PR 7</div>
       </aside>
 
       <div className="workspace">
@@ -437,16 +442,25 @@ export default function App() {
                   {activeModule && isStoryVerseModule(activeModule) && (
                     <StoryVerseEditor module={activeModule} onChange={(patch) => editModule(patch)} />
                   )}
+                  {activeModule && isPuzzleModule(activeModule) && (
+                    <PuzzleEditor module={activeModule} onChange={(patch) => editModule(patch)} showSolution={showSolution} />
+                  )}
+                  {activeModule && isPuzzleModule(activeModule) && validation.length === 0 && (
+                    <button type="button" className="puzzle-solution-toggle"
+                      aria-pressed={showSolution} onClick={() => setSolutionKey(showSolution ? null : activeKey)}>
+                      {showSolution ? 'Hide puzzle solution' : 'Show puzzle solution'}
+                    </button>
+                  )}
                   {activeModule && 'seed' in activeModule && (
                     <button type="button" className="regenerate-module" onClick={regenerateModule}>
-                      Shuffle {activeModule.type === 'match-words' ? 'matching answers'
+                      {isPuzzleId(activeModule.type) ? 'Regenerate puzzle' : 'Shuffle ' + (activeModule.type === 'match-words' ? 'matching answers'
                         : activeModule.type === 'finish-story' ? 'word bank'
                         : activeModule.type === 'multiple-choice' ? 'answer choices'
                         : activeModule.type === 'unscramble-words' || activeModule.type === 'unscramble-verse' ? 'letters'
                         : activeModule.type === 'finish-verse' ? 'verse word bank'
                         : activeModule.type === 'story-order' ? 'event order'
                         : activeModule.type === 'sort-story' ? 'statement order'
-                        : 'word order'} ↻
+                        : 'word order')} ↻
                     </button>
                   )}
                   {validation.length > 0 && (
@@ -479,12 +493,12 @@ export default function App() {
               </div>
               <div className={'preview-stage ' + (mode === 'sheet' ? 'sheet-stage' : '')}>
                 {mode === 'page' ? (
-                  <BookletPage page={page} draft={draft} selectedId={activeRegion?.id} onSelect={selectRegion} />
+                  <BookletPage page={page} draft={draft} selectedId={activeRegion?.id} onSelect={selectRegion} showSolution={showSolution} />
                 ) : (
                   <div className="print-sheet" aria-label={activeSheet.name}>
                     {activeSheet.pages.map((number) => (
                       <div key={number} className={'sheet-half ' + (number === page ? 'selected-half' : '')}>
-                        <BookletPage page={number} draft={draft} selectedId={number === page ? activeRegion?.id : undefined} onSelect={selectRegion} />
+                        <BookletPage page={number} draft={draft} selectedId={number === page ? activeRegion?.id : undefined} onSelect={selectRegion} showSolution={showSolution && number === page} />
                       </div>
                     ))}
                   </div>

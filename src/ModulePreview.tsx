@@ -3,8 +3,10 @@ import { isSmallModule } from './smallModules';
 import SmallModulePreview from './SmallModulePreview';
 import { isStoryVerseModule } from './storyVerseModules';
 import StoryVersePreview from './StoryVersePreview';
+import { isPuzzleModule } from './puzzleEngines';
+import PuzzlePreview from './PuzzlePreview';
 
-export default function ModulePreview({ module }: { module: ActivityModule }) {
+export default function ModulePreview({ module, showSolution = false }: { module: ActivityModule; showSolution?: boolean }) {
   const errors = validateModule(module);
   if (errors.length) {
     return (
@@ -17,6 +19,7 @@ export default function ModulePreview({ module }: { module: ActivityModule }) {
 
   if (isSmallModule(module)) return <SmallModulePreview module={module}/>;
   if (isStoryVerseModule(module)) return <StoryVersePreview module={module}/>;
+  if (isPuzzleModule(module)) return <PuzzlePreview module={module} showSolution={showSolution}/>;
 
   if (module.type === 'draw-picture') {
     return (

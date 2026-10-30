@@ -2,6 +2,46 @@
 
 A browser-based editor for four-page Bible story worksheet booklets.
 
+## PR 7 — Word Search and True or False Maze
+
+Two seeded puzzle engines use the **same generated puzzle data** for the browser preview,
+PDF, and automatic solution checks. Regenerating one module does not change any other
+module or rearrange existing saved content.
+
+**Large — Word Search:** 12 columns × 10 rows. Enter **4–10 distinct words**,
+one per line, using A–Z and 2–12 letters each. Words are placed horizontally,
+vertically or diagonally, never backwards. All words are actually placed and
+checked against their recorded solution coordinates; a seeded backtracking
+algorithm rejects an impossible set instead of silently dropping words.
+The printed worksheet uses **Zilla Slab Bold** for grid letters and provides
+the word list below the grid.
+
+**Medium — True or False Trek!:** A genuine randomized **35×14-cell maze**
+with an entrance on the left, an exit on the right, and another on the
+bottom (middle-right). Enter a statement **and its correct true/false answer**.
+The generated maze is a connected perfect maze; both exits are accessible,
+but students must take the exit marked with the correct answer. The engine
+runs a solver over the maze walls and verifies the correct route. Changing
+the answer affects which exit is correct, never the wall geometry for a
+given statement and seed.
+
+Use **Regenerate puzzle** on each module to get a different repeatable puzzle.
+Use **Show puzzle solution** in the editor to highlight the word-search
+placements or the maze's correct route and answer. **No solutions appear
+in the student PDF.** A future teacher-answer-key PR can reuse this data.
+
+Tests check generated grid dimensions, words placed in valid directions,
+maze wall symmetry, full connectivity, both exits, shortest correct route,
+seed reproducibility and independence, validation errors, and two-page
+vector PDF export.
+
+Run `npm run sample:pr7` to generate two sample puzzle booklets in
+`artifacts/`. CI uploads those with earlier example PDFs.
+
+**Still deferred:** final optical centering, balanced line wraps,
+decorative graphics, answer-key PDFs and an interactive student-solving
+game (the student worksheet is printed and completed by hand).
+
 ## PR 6 — Story and verse activities
 
 Six new modules, all with editable content, browser previews, saved assignments,

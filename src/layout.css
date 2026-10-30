@@ -189,3 +189,27 @@
 .new-scramble-letter { display:flex; flex-direction:column; align-items:center; justify-content:flex-end; min-width:clamp(8px,2.5cqw,12px); font:700 clamp(8px,2.5cqw,12px)/1.1 'Zilla Slab',serif; }
 .new-scramble-letter i { width:90%; height:3px; border-top:1px solid #333; margin-bottom:3px; }
 .sv-mistake-paragraph { text-align:left; font:800 clamp(10px,3.2cqw,15px)/1.65 'Nunito Sans',sans-serif; padding:5px; overflow-wrap:anywhere; }
+
+
+/* PR 7: Word-search letters and the vector-walled true/false maze. */
+.puzzle-word-search { align-items:stretch; justify-content:flex-start; gap:8px; }
+.puzzle-word-search .module-title { flex:none; }
+.puzzle-letter-grid {
+  width:91%; aspect-ratio:12/10; max-height:72%; margin:0 auto; min-height:0;
+  display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); grid-template-rows:repeat(10,minmax(0,1fr));
+  align-items:center; justify-items:center; border:1px solid #aaa; padding:2px;
+  font:700 clamp(10px,3.5cqw,18px)/1 'Zilla Slab',serif; letter-spacing:.01em;
+}
+.puzzle-letter-grid span { display:flex; align-items:center; justify-content:center; width:100%; height:100%; }
+.puzzle-letter-grid .puzzle-found-letter { background:rgba(24,131,82,.22); color:#205c43; font-weight:700; }
+.puzzle-search-bank { width:100%; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:3px 8px; align-items:start; justify-items:center; margin-top:2px; font:900 clamp(7px,2.7cqw,13px)/1.15 'Nunito Sans',sans-serif; }
+.puzzle-search-bank span { max-width:100%; overflow-wrap:anywhere; }
+.puzzle-maze-module { gap:3px; align-items:stretch; }
+.puzzle-maze-module .module-title { font-size:clamp(14px,4.7cqw,23px); }
+.puzzle-maze-subtitle { font:750 clamp(7px,2.3cqw,11px)/1.1 'Nunito Sans',sans-serif; }
+.puzzle-maze-statement { font:750 clamp(8px,2.6cqw,12px)/1.12 'Nunito Sans',sans-serif; }
+.puzzle-maze-svg { display:block; width:100%; height:auto; flex:1; min-height:0; overflow:visible; margin:0; }
+.puzzle-solution-toggle { border:1px solid #a0c8ab; background:#e9f6ec; color:#256a4d; font-weight:800; border-radius:7px; padding:10px 12px; font-size:12px; }
+.puzzle-solution-toggle[aria-pressed="true"] { background:#d3e9d9; border-color:#529770; }
+.puzzle-solution-data { padding:9px 10px; background:#f0f7f2; border:1px solid #c8e1cd; border-radius:7px; color:#245d43; font-size:11px; line-height:1.5; overflow-wrap:anywhere; }
+.puzzle-solution-data pre { font:600 10px/1.45 monospace; white-space:pre-wrap; margin:5px 0 0; }
