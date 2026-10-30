@@ -34,7 +34,7 @@ export default function PuzzleEditor({module,onChange,showSolution}:{module:Puzz
       onChange={e=>onChange({answer:e.target.value==='true'})}>
       <option value="true">True</option><option value="false">False</option>
     </select>
-    <p>The maze has a left entrance, a right exit, and a bottom exit. Both paths are reachable; the correct exit depends on your answer.</p>
+    <p>The maze starts at IN on the bottom. Exit left for TRUE, or right for FALSE. Both routes are reachable; the engine prefers shorter, more balanced paths.</p>
     {showSolution&&answer&&<p className="puzzle-solution-data">{answer} The highlighted green route is visible only in the editor preview.</p>}
   </div>;
 }

@@ -35,8 +35,8 @@ const all = [
 test('all eight small module IDs are offered, while existing module sizes are untouched', () => {
   assert.equal(SMALL_MODULES.length,7);
   assert.equal(moduleForSize('small').length,8);
-  assert.deepEqual(moduleForSize('medium').map(x=>x.id),['match-words','finish-verse','unscramble-verse','circle-mistakes','true-false-maze']);
-  assert.deepEqual(moduleForSize('large').map(x=>x.id),['finish-story','story-order','sort-story','draw-story','word-search']);
+  assert.deepEqual(moduleForSize('medium').map(x=>x.id),['match-words','finish-verse','unscramble-verse','circle-mistakes','true-false-maze','big-idea-cryptogram']);
+  assert.deepEqual(moduleForSize('large').map(x=>x.id),['finish-story','story-order','sort-story','draw-story','word-search','verse-cryptogram']);
   for(const module of all){
     assert.ok(MODULES.some((x)=>x.id===module.type&&x.size==='small'));
     assert.equal(blankModule(module.type).type,module.type);

@@ -82,7 +82,7 @@ function drawMaze(page:PDFPage,rect:Rect,fonts:ModuleFonts,module:Extract<Puzzle
   const size=Math.min(maxW/MAZE_COLS,maxH/MAZE_ROWS);
   if(size<5.5)throw Error('The maze is too small to print; shorten the statement.');
   const width=MAZE_COLS*size,height=MAZE_ROWS*size;
-  const startX=box.x+12+(maxW-width)/2;
+  const startX=box.x+26+(maxW-width)/2;
   const startY=mazeTop-height;
   const line=(x1:number,y1:number,x2:number,y2:number)=>{
     page.drawLine({start:{x:x1,y:y1},end:{x:x2,y:y2},thickness:.68,color:BLACK});
@@ -95,17 +95,15 @@ function drawMaze(page:PDFPage,rect:Rect,fonts:ModuleFonts,module:Extract<Puzzle
     if(y===MAZE_ROWS-1&&(w&SOUTH))line(cx,cy-size,cx+size,cy-size);
   }
   const startText='IN';
-  page.drawText(startText,{x:startX-textWidth(fonts.body,startText,7)-3,
-    y:mazeTop-(maze.entrance.y+.5)*size-2,font:fonts.body,size:7,color:BLACK});
+  center(page,fonts.body,startText,
+    startX+(maze.entrance.x+.5)*size-14,startY-12,28,7.4);
   for(const exit of maze.exits){
     const sizeLabel=7.4;
-    if(exit.edge==='right'){
-      const x=startX+width+4,y=mazeTop-(exit.y+.5)*size-2.5;
-      page.drawText(exit.label,{x,y,font:fonts.body,size:sizeLabel,color:BLACK});
-    }else{
-      const mid=startX+(exit.x+.5)*size;
-      center(page,fonts.body,exit.label,mid-21,startY-12,42,sizeLabel);
-    }
+    const x=exit.edge==='left'
+      ? startX-textWidth(fonts.body,exit.label,sizeLabel)-4
+      : startX+width+4;
+    const y=mazeTop-(exit.y+.5)*size-2.5;
+    page.drawText(exit.label,{x,y,font:fonts.body,size:sizeLabel,color:BLACK});
   }
 }
 

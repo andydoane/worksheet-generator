@@ -5,6 +5,8 @@ import { isStoryVerseModule } from './storyVerseModules';
 import StoryVersePreview from './StoryVersePreview';
 import { isPuzzleModule } from './puzzleEngines';
 import PuzzlePreview from './PuzzlePreview';
+import { isCryptogram } from './cryptograms.ts';
+import CryptogramPreview from './CryptogramPreview';
 
 export default function ModulePreview({ module, showSolution = false }: { module: ActivityModule; showSolution?: boolean }) {
   const errors = validateModule(module);
@@ -20,6 +22,7 @@ export default function ModulePreview({ module, showSolution = false }: { module
   if (isSmallModule(module)) return <SmallModulePreview module={module}/>;
   if (isStoryVerseModule(module)) return <StoryVersePreview module={module}/>;
   if (isPuzzleModule(module)) return <PuzzlePreview module={module} showSolution={showSolution}/>;
+  if (isCryptogram(module)) return <CryptogramPreview module={module}/>;
 
   if (module.type === 'draw-picture') {
     return (

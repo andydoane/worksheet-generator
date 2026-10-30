@@ -2,6 +2,39 @@
 
 A browser-based editor for four-page Bible story worksheet booklets.
 
+## PR 8b — Cryptograms and improved True/False Trek
+
+**Large Verse Cryptogram** and **Medium Big Idea Cryptogram** now use one shared
+deterministic substitution engine. Each letter A–Z maps to one of 26 unique
+**pigpen-style vector symbols** (drawn with line strokes and dots instead of
+depending on a symbol font or emoji). A regenerated seed scrambles the
+letter-to-symbol mapping. The two-row key shows symbols above their letters,
+lists **only used letters**, and sorts the letters alphabetically. Above
+each encoded symbol is a line for the child to write the decoded letter.
+Punctuation, spaces and numbers stay visible as originally entered.
+
+The Verse Cryptogram has a Scripture reference beneath the code; the
+Big Idea Cryptogram deliberately has no reference. Editors prefill content
+from Lesson details, where available. Long content is rejected rather than
+silently clipped: 145 characters maximum for verses and 62 for Big Ideas,
+with a smaller unique-letter key limit for medium modules.
+
+**True or False Trek** now has **IN at the bottom middle**, **TRUE on the
+left**, and **FALSE on the right**. It is still a 35×14 randomized
+depth-first maze with verified correct routes and two reachable exits.
+The generator now evaluates 24 reproducible candidates and chooses one
+with shorter, more balanced routes. Moving labels alone would not have
+guaranteed shorter walks; the entrance and path checks changed too.
+
+No symbols or answer paths are rasterized. Existing lesson data, booklet
+imposition, Zilla Slab Bold, and previous modules are preserved.
+
+Run `npm run sample:pr8b` for two example booklets in `artifacts/`.
+CI also checks glyph uniqueness, symbol bijection, stable regeneration,
+maze entrances/exits and correct routes, and complete PDF export.
+
+Deferred: teacher answer-key PDFs and final optical layout polish.
+
 ## PR 7 — Word Search and True or False Maze
 
 Two seeded puzzle engines use the **same generated puzzle data** for the browser preview,
