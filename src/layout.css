@@ -1,0 +1,70 @@
+/* PR 2 layout editor: all physical geometry comes from src/booklet.ts. */
+.step { width: 100%; text-align: left; border: 0; background: transparent; }
+.step:hover, .step:focus-visible { background: #2b5a57; color: #fff; }
+.step-upcoming { cursor: default; }
+.step-upcoming:hover { background: transparent; }
+.editor-tabs { display: flex; gap: 6px; padding: 14px 27px 0; }
+.editor-tabs button { flex: 1; padding: 10px 8px; border-radius: 8px; border: 1px solid #e0e9e1; background: #f9fbf8; color: #72877a; font-weight: 900; font-size: 12px; }
+.editor-tabs button[aria-selected="true"] { background: #e3f1e4; color: #1d6658; border-color: #9bc5aa; }
+.layouts-panel { padding: 22px 27px 29px; }
+.layout-page-picker { display: grid; grid-template-columns: repeat(4,1fr); gap: 5px; margin-bottom: 23px; }
+.layout-page-picker button { border-radius: 7px; padding: 9px 1px; border: 1px solid #e0e9e1; background: #f7faf7; color: #728679; font-weight: 900; font-size: 11px; }
+.layout-page-picker button.active { background: #307e6c; color: #fff; border-color: #307e6c; }
+.layout-selection-title { font-size: 15px; margin: 0 0 6px; }
+.layout-explainer { font-size: 12px; line-height: 1.6; margin: 0 0 15px; color: #718779; }
+.layout-options { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 11px; }
+.layout-option { background: #fbfcfa; color: #315147; border: 2px solid #e4ece4; border-radius: 11px; padding: 13px 8px; display: flex; flex-direction: column; align-items: center; gap: 7px; text-align: center; }
+.layout-option:hover { border-color: #95bca4; background: #f3f9f2; }
+.layout-option.chosen { border-color: #33816d; background: #eef7ef; }
+.layout-option-label { font-size: 11px; font-weight: 900; line-height: 1.3; }
+.layout-option-description { color: #6a8074; font-size: 10px; line-height: 1.3; }
+.layout-diagram { width: 73px; aspect-ratio: 4.8 / 7.8; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); grid-template-rows: repeat(3,minmax(0,1fr)); }
+.diagram-region { display: flex; align-items: center; justify-content: center; border: 1px solid #fff; font-family: 'Zilla Slab',serif; font-size: 17px; color: #366659; border-radius: 3px; }
+.diagram-small { background: #dfecda; }
+.diagram-medium { background: #cfebde; }
+.diagram-large { background: #a9dacd; }
+.fixed-layout-note { display: flex; gap: 18px; align-items: center; padding: 20px 16px; border-radius: 12px; background: #f1f8f0; border: 1px solid #d9eade; }
+.fixed-layout-note .fixed-layout-illustration { flex: 0 0 auto; }
+.fixed-layout-note h3 { font-size: 15px; margin: 0 0 8px; }
+.fixed-layout-note p { color: #718779; font-size: 12px; line-height: 1.6; margin: 0; }
+.dimension-guide { border-top: 1px solid #e9efe8; margin-top: 24px; padding-top: 18px; }
+.dimension-guide h3 { font-size: 13px; margin: 0 0 11px; }
+.dimension-guide > div { display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; font-size: 12px; }
+.dimension-guide > div span { color: #738b7b; }
+.dimension-guide p { font-size: 11px; line-height: 1.6; color: #839889; margin: 13px 0 0; }
+.preview-toolbar { display: flex; justify-content: space-between; gap: 8px; padding: 14px 22px; flex-wrap: wrap; background: #fff; }
+.preview-mode-switch, .sheet-selector { display: flex; gap: 3px; background: #f1f5ef; border-radius: 8px; padding: 4px; }
+.preview-mode-switch button, .sheet-selector button { border: 0; border-radius: 5px; padding: 8px 10px; background: transparent; font-size: 11px; font-weight: 900; color: #718779; }
+.preview-mode-switch button.active, .sheet-selector button.active { background: #fff; color: #25695a; box-shadow: 0 1px 4px #244d301a; }
+.preview-stage { min-height: 315px; }
+/* A responsive half-letter page. All slot positions use percent-converted inches. */
+.booklet-page { display: block; width: min(100%, 365px); aspect-ratio: 5.5 / 8.5; flex: none; background: #fff; border: 1px solid #e3e7e0; box-shadow: 0 10px 24px #21412d20; position: relative; container-type: inline-size; }
+.booklet-region { position: absolute; box-sizing: border-box; padding: 1.8181818%; border: 1px dashed #b7d3c1; overflow: hidden; display: flex; align-items: center; justify-content: center; background: #f8faf6; }
+.booklet-region.title-region { background: #f1f7ee; border-color: #7cad99; }
+.booklet-region.size-small { background: #f5f9f1; }
+.booklet-region.size-large { background: #f7f9f4; }
+.region-content { display: flex; flex-direction: column; align-items: center; text-align: center; gap: clamp(3px, 1cqw, 6px); width: 100%; }
+.region-tag { color: #3a8873; font-size: clamp(8px, 2.2cqw, 11px); font-weight: 900; letter-spacing: .6px; }
+.region-content strong { color: #49695a; font: 400 clamp(16px, 6.2cqw, 25px)/1 'Mouse Memoirs', sans-serif; }
+.region-content small { font-size: clamp(7px, 2.2cqw, 10px); color: #7b9a86; white-space: nowrap; }
+.cover-content { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; width: 100%; min-width: 0; height: 100%; overflow: hidden; }
+.cover-overline { font-size: clamp(6px, 2cqw, 9px); color: #51907b; font-weight: 900; letter-spacing: 1px; }
+.booklet-region .cover-title { font: 400 clamp(17px, 8cqw, 38px)/1.05 'Mouse Memoirs', sans-serif; color: #225b53; overflow-wrap: anywhere; margin: 7px 0 4px; }
+.booklet-region .cover-reference { color: #688b7b; font-size: clamp(7px, 2.6cqw, 11px); font-weight: 900; overflow-wrap: anywhere; }
+.booklet-page-number { position: absolute; bottom: 1.2%; right: 5.6%; color: #9baa9f; font-size: clamp(8px, 2.2cqw, 11px); font-weight: 900; }
+.sheet-stage { padding: 25px 10px; }
+.print-sheet { width: min(100%, 740px); aspect-ratio: 11 / 8.5; display: flex; border: 1px solid #dce6dc; box-shadow: 0 10px 24px #21412d20; background: white; }
+.sheet-half { display: block; width: 50%; height: 100%; flex: none; border: 0; border-radius: 0; padding: 0; background: white; position: relative; min-width: 0; }
+.sheet-half + .sheet-half { border-left: 1px dotted #8daa9b; }
+.sheet-half.selected-half { outline: 3px solid #419984; outline-offset: -3px; z-index: 1; }
+.sheet-half .booklet-page { width: 100%; height: 100%; aspect-ratio: auto; box-shadow: none; border: 0; pointer-events: none; }
+.sheet-half:focus-visible { outline: 3px solid #d6a066; outline-offset: 2px; z-index: 2; }
+@media (max-width: 700px) {
+  .editor-tabs { padding: 13px 18px 0; }
+  .layouts-panel { padding: 20px 18px; }
+  .layout-option { padding: 10px 6px; }
+  .layout-option-description { font-size: 9px; }
+  .preview-toolbar { padding: 10px 12px; }
+  .preview-mode-switch button, .sheet-selector button { font-size: 10px; padding: 7px; }
+  .sheet-stage { min-height: 240px; }
+}

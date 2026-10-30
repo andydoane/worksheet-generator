@@ -1,57 +1,53 @@
 # Worksheet Studio
 
-A browser-based project for creating printable Bible story worksheet booklets.
+A browser-based editor for building four-page Bible story worksheet booklets.
 
-## PR 1: Application foundation
+## Current milestone: PR 2 — booklet layout engine
 
-This first release replaces the "Coming soon" page with a responsive React/TypeScript editor shell. It can:
+- All PR 1 fields remain editable: title, story Scripture reference, Big Idea, memory verse reference and text.
+- Each of four virtual folded pages has a physical size of **5.5 × 8.5 inches** and **0.35-inch margins**, leaving **4.8 × 7.8 inches** for content.
+- Page 1 always uses a **medium title area on top** and a **large activity area below**.
+- Pages 2, 3, and 4 can each independently use one of **six layout presets**, selected in the Page layouts tab.
+- The responsive **Single page** preview shows the selected virtual page. **Print sheets** shows the correct imposition: outside sheet [4, 1] and inside sheet [2, 3].
+- Layout selections and lesson content are automatically saved in your current browser. PR 1 draft content is preserved when the app upgrades.
 
-- Edit worksheet title, story Scripture reference, Big Idea, and memory verse details.
-- Switch between previews for all four booklet pages.
-- Save these details automatically in the current browser via localStorage.
-- Use the existing Mouse Memoirs, Nunito Sans, and Zilla Slab Bold fonts.
+These are **empty module regions**. Actual module assignment, puzzle generation, answer keys, and PDF export are reserved for future milestones. Although the preview is based on exact inch measurements, it is **screen-scaled** and is not a print/export button.
 
-**Not yet implemented:** page-layout selection, puzzle modules, printable page geometry, PDF export, and answer keys. The preview in PR 1 is a mockup, **not** a print-accurate PDF.
+## Layout grid
 
-## Local development
+Each page has a 2-column × 3-row content grid:
+- **Small:** 2.4 × 2.6 inches (1 column × 1 row).
+- **Medium:** 4.8 × 2.6 inches (2 columns × 1 row).
+- **Large:** 4.8 × 5.2 inches (2 columns × 2 rows).
 
-Install Node.js 22.12 or newer, then run:
+Page 1: medium title + large activity. Pages 2–4 choose from:
 
-1. `npm install`
-2. `npm run dev`
-3. Open the local address shown in your terminal.
+1. Medium, Large
+2. Large, Medium
+3. Small + Small, Medium, Medium
+4. Medium, Small + Small, Medium
+5. Medium, Medium, Small + Small
+6. Large, Small + Small
 
-Run `npm run check` to type-check and `npm run build` to type-check and build the static site in `dist/`. No server, account, or API key is needed for this initial release.
+Geometry and page order are defined in `src/booklet.ts`, independent of display styling, so PR 3 can use those same measurements for PDF output. Tests ensure the six layouts have no gaps, overlaps, or out-of-bounds regions.
 
-## GitHub Pages deployment
+## Development
 
-The production Vite base path is `/worksheet-generator/`, matching the repository's Pages URL.
+Requires Node.js 22.12 or later.
 
-The workflow in `.github/workflows/pages.yml` checks each pull request and deploys to Pages on a push to `main`.
+1. Run `npm install`.
+2. Run `npm run dev` and open the local URL shown.
+3. Run `npm run test` for layout geometry tests.
+4. Run `npm run build` for TypeScript validation and a production build.
 
-**One-time setup:** In the GitHub repo, go to **Settings → Pages → Build and deployment → Source** and select **GitHub Actions**. After merging, check the **Actions** tab for the deployment run. The eventual address is https://andydoane.github.io/worksheet-generator/.
+The GitHub Actions workflow runs tests and builds on PRs; after merge to `main` it also deploys the built site to GitHub Pages.
 
-This first PR uses `npm install` in CI; a future dependency-management change can add a committed package lockfile for reproducible installs.
+**One-time setup:** GitHub repository **Settings → Pages → Build and deployment → Source → GitHub Actions**.
 
-## Planned booklet dimensions
-
-Two landscape US Letter PDF pages, imposed for a 4-page bifold booklet:
-
-- Outside sheet: booklet page 4 (left), page 1 (right).
-- Inside sheet: booklet page 2 (left), page 3 (right).
-- Folded page: 5.5 × 8.5 inches, with 0.35-inch margins.
-- Large region: 4.8 × 5.2 inches.
-- Medium region: 4.8 × 2.6 inches.
-- Small region: 2.4 × 2.6 inches.
-
-These exact dimensions will be implemented in PR 2 and the PDF export in PR 3.
+Production URL: https://andydoane.github.io/worksheet-generator/
 
 ## Fonts
 
-Font files already in this repository are loaded from the `fonts/` directory:
+The three existing repository fonts are bundled automatically: Mouse Memoirs, Nunito Sans, and Zilla Slab Bold. The uploaded slab font is **Zilla** Slab (not “Villa Slab”).
 
-- `MouseMemoirs-Regular.ttf` — display headings.
-- `NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf` — interface and body text.
-- `ZillaSlab-Bold.ttf` — puzzle-style lettering in future modules.
-
-The uploaded font is named **Zilla** Slab (rather than "Villa Slab"). Verify font licenses before republishing or redistributing assets.
+No account, server, paid API, or backend is required for the current editor. Draft data is stored only in the current browser.
