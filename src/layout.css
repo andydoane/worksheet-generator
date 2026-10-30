@@ -273,3 +273,6 @@
 .connect-word {position:absolute;white-space:nowrap;font:700 clamp(9px,3.2cqw,14px)/1 'Zilla Slab',serif;transform-origin:center;}
 .connect-word span {display:inline-block;}
 .specialty-status {color:#426f5e!important;font-weight:800;}
+
+.mark-blank {border:1px solid #b8d7c4;color:#286c55;background:#eaf5ec;border-radius:7px;
+  padding:9px 11px;font-size:12px;font-weight:800;justify-self:start;}

@@ -49,16 +49,18 @@ function drawWordSearch(page:PDFPage,rect:Rect,fonts:ModuleFonts,module:Extract<
     page.drawText(letter,{x:cx,y:cy,size,font:fonts.puzzle,color:BLACK});
   }
   const bankTop=bottom-16;
-  const colW=box.width/2;
-  const rows=Math.ceil(puzzle.words.length/2);
-  if(bankTop-rows*13<box.y+2)throw Error('Word list does not fit; shorten your words.');
-  const fontSize=Math.min(11.3,...puzzle.words.map(word=>{
-    for(let s=11.3;s>=8;s-=.5)if(textWidth(fonts.body,word,s)<=colW-14)return s;
+  const columns=puzzle.words.length>8?3:2;
+  const colW=box.width/columns;
+  const rows=Math.ceil(puzzle.words.length/columns);
+  const rowStep=Math.min(21,(bankTop-box.y-6)/rows);
+  if(rowStep<12)throw Error('Word list does not fit; shorten your words.');
+  const fontSize=Math.min(12,...puzzle.labels.map(word=>{
+    for(let s=12;s>=7.5;s-=.5)if(textWidth(fonts.body,word,s)<=colW-7)return s;
     throw Error('Word-list entry is too long to print clearly.');
   }));
-  puzzle.words.forEach((word,i)=>{
-    const col=i%2,row=Math.floor(i/2);
-    center(page,fonts.body,word,box.x+col*colW,bankTop-row*13,colW,fontSize);
+  puzzle.labels.forEach((word,i)=>{
+    const col=i%columns,row=Math.floor(i/columns);
+    center(page,fonts.body,word,box.x+col*colW,bankTop-row*rowStep,colW,fontSize);
   });
 }
 

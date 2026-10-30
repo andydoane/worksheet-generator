@@ -11,11 +11,20 @@ export default function PuzzleEditor({module,onChange,showSolution}:{module:Puzz
       }catch{ /* validation messages appear below the editor */ }
     }
     return <div className="activity-inputs">
-      <label htmlFor="search-words">Hidden words (4–10)</label>
-      <textarea id="search-words" rows={10} value={module.words}
-        onChange={e=>onChange({words:e.target.value})}
-        placeholder={'DAVID\nGOLIATH\nSLING\nSTONE\nSHEPHERD\nSAUL'}/>
-      <p>One word per line, 2–12 letters. The 12×10 grid uses forward horizontal, vertical and diagonal words. Shuffle to generate a new arrangement.</p>
+      <label id="search-words-label">Words or phrases (4–12)</label>
+      <ol className="word-search-editor-list" aria-labelledby="search-words-label">
+        {(module.words?module.words.split(/\r?\n/u):['']).map((item,i,all)=><li key={i}>
+          <span aria-hidden="true">{i+1}.</span>
+          <input aria-label={'Word or phrase '+(i+1)} value={item}
+            onChange={e=>onChange({words:all.map((word,j)=>i===j?e.target.value:word).join('\n')})}
+            placeholder={i===0?'Red Sea':'Word or phrase'}/>
+          <button type="button" aria-label={'Remove entry '+(i+1)}
+            disabled={all.length<=1} onClick={()=>onChange({words:all.filter((_,j)=>i!==j).join('\n')})}>×</button>
+        </li>)}
+      </ol>
+      <button type="button" className="word-search-add" disabled={module.words.split(/\r?\n/u).length>=12}
+        onClick={()=>onChange({words:(module.words?module.words+'\n':'')})}>+ Add word</button>
+      <p>Enter 4–12 entries. Spaces are shown in the word bank but omitted from the 12×10 puzzle (Red Sea becomes REDSEA). Each entry needs 2–12 letters excluding spaces.</p>
       {showSolution&&info&&<div className="puzzle-solution-data"><strong>Word positions</strong><pre>{info}</pre></div>}
     </div>;
   }

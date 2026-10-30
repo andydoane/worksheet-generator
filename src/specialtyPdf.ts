@@ -38,7 +38,7 @@ function crossword(page:PDFPage,b:Rect,module:Extract<SpecialtyModule,{type:'cro
   const puzzle=generateCrossword(module);
   centered(page,fonts.title,'CROSSWORD',b.x,b.y+b.height-27,b.width,26);
   const top=b.y+b.height-41;
-  const cell=Math.min(19,(b.width-12)/puzzle.width, (b.height-175)/puzzle.height);
+  const cell=Math.min(21,(b.width-12)/puzzle.width, (b.height-175)/puzzle.height);
   if(cell<9)throw Error('Crossword is too large for this section. Use shorter answers.');
   const gw=puzzle.width*cell,gh=puzzle.height*cell;
   const x0=b.x+(b.width-gw)/2, y0=top-gh;
@@ -54,10 +54,10 @@ function crossword(page:PDFPage,b:Rect,module:Extract<SpecialtyModule,{type:'cro
     ['Across',puzzle.across,b.x],['Down',puzzle.down,b.x+mid+gap/2],
   ];
   for(const [name,list,startX] of columns){
-    const cw=mid-gap,available=cluesTop-clueBottom-14;
+    const cw=mid-gap,available=cluesTop-clueBottom-32;
     centered(page,fonts.title,name.toUpperCase(),startX,cluesTop-14,cw,17);
     let fittedRows:{lines:string[];size:number;step:number}[]|null=null;
-    for(let fontSize=9.3;fontSize>=7;fontSize-=.4){
+    for(let fontSize=9.3;fontSize>=6.8;fontSize-=.4){
       const step=fontSize*1.27;
       const rows=list.map(word=>{
         const lines=wrapped(fonts.body,word.number+'. '+word.clue,fontSize,cw-2);
@@ -68,7 +68,7 @@ function crossword(page:PDFPage,b:Rect,module:Extract<SpecialtyModule,{type:'cro
       }
     }
     if(!fittedRows)throw Error('Crossword clues cannot fit in the large section. Shorten the longest clues.');
-    let y=cluesTop-20;
+    let y=cluesTop-33;
     for(const group of fittedRows){
       for(const line of group.lines){
         page.drawText(line,{x:startX+2,y,size:group.size,font:fonts.body,color:INK});

@@ -64,7 +64,11 @@ test('word search seed is repeatable and regeneration changes the puzzle', () =>
 test('invalid or duplicate inputs fail helpfully',()=>{
   assert.ok(validateModule({...search,words:'DAVID\nDAVID\nSLING\nSTONE'}).some(x=>/duplicate/i.test(x)));
   assert.ok(validateModule({...search,words:'ONE\nTWO'}).length>0);
-  assert.ok(validateModule({...search,words:'DAVID\nONE TWO\nSLING\nSTONE'}).length>0);
+  assert.deepEqual(parseSearchWords('Red Sea\nDry Land\nDAVID\nSTONE'),['REDSEA','DRYLAND','DAVID','STONE']);
+  const phrases=generateWordSearch({...search,words:'Red Sea\nDry Land\nDAVID\nSTONE'});
+  assert.deepEqual(phrases.labels,['Red Sea','Dry Land','David','Stone']);
+  assert.ok(checkWordSearch(phrases));
+  assert.ok(validateModule({...search,words:'REDSEA\nRed Sea\nDAVID\nSTONE'}).some(x=>/duplicate/i.test(x)));
   assert.ok(validateModule({...search,words:'ABCDEFGHIJKLM\nDAVID\nSTONE\nSLING'}).length>0);
   assert.ok(validatePuzzle({...mazeModule,statement:''}).length>0);
 });
@@ -127,4 +131,13 @@ test('both puzzles export into the existing 2-page vector PDF',async()=>{
   assert.deepEqual(pdf.getPages().map(p=>[p.getWidth(),p.getHeight()]),[[792,612],[792,612]]);
   const bad={...draft,modules:{'2:top-medium':search}};
   await assert.rejects(async()=>createBookletPdf(bad,await fonts()),/wrong size area/);
+});
+
+
+test('twelve entries switch to a three-column printable bank without dropping words',()=>{
+  const input='Red Sea\nDry Land\nMoses\nPharaoh\nEgypt\nExodus\nManna\nDesert\nAaron\nStaff\nCloud\nPassover';
+  const data=generateWordSearch({...search,words:input,seed:15});
+  assert.equal(data.words.length,12);
+  assert.deepEqual(data.words.slice(0,2),['REDSEA','DRYLAND']);
+  assert.ok(checkWordSearch(data));
 });

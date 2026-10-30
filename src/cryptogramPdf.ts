@@ -18,15 +18,13 @@ function centered(page:PDFPage,font:PDFFont,text:string,x:number,y:number,w:numb
 }
 /** All symbols are direct vector lines/dots; no missing-glyph font fallback. */
 export function drawCipherGlyph(page:PDFPage,id:number,x:number,y:number,size:number):void{
-  const glyph=cipherSymbol(id),factor=size/16;
-  for(const [x1,y1,x2,y2] of glyph.strokes){
-    page.drawLine({
-      start:{x:x+x1*factor,y:y+(16-y1)*factor},
-      end:{x:x+x2*factor,y:y+(16-y2)*factor},
-      thickness:Math.max(.8,size*.095),color:INK,
+  const glyph=cipherSymbol(id);
+  for(const p of glyph.paths) {
+    page.drawSvgPath(p.d,{
+      x,y:y+size,scale:size/16,
+      ...(p.filled ? {color:INK} : {borderColor:INK,borderWidth:1.45}),
     });
   }
-  if(glyph.dot)page.drawCircle({x:x+8*factor,y:y+8*factor,size:Math.max(1.1,size*.12),color:INK});
 }
 type Cell={char:string;symbol?:number};
 function splitTokens(text:string,mapping:Record<string,number>):Cell[][]{

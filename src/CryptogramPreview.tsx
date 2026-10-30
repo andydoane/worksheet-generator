@@ -4,10 +4,9 @@ import {generateCryptogram, type Cryptogram} from './cryptograms.ts';
 export function CipherGlyph({id}:{id:number}){
   const glyph=cipherSymbol(id);
   return <svg viewBox="0 0 16 16" className="cipher-glyph" aria-hidden="true">
-    <g fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-      {glyph.strokes.map((line,i)=><line key={i} x1={line[0]} y1={line[1]} x2={line[2]} y2={line[3]}/>)}
-    </g>
-    {glyph.dot&&<circle cx="8" cy="8" r="2" fill="currentColor"/>}
+    {glyph.paths.map((path,i)=><path key={i} d={path.d} fill={path.filled?'currentColor':'none'}
+      stroke={path.filled?'none':'currentColor'} strokeWidth="1.45"
+      strokeLinejoin="round" strokeLinecap="round"/>)}
   </svg>;
 }
 export default function CryptogramPreview({module}:{module:Cryptogram}){

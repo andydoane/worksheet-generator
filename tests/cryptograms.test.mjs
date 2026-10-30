@@ -16,16 +16,19 @@ const fonts=async()=>({
   zillaSlab:await readFile(new URL('../fonts/ZillaSlab-Bold-pdf.ttf',import.meta.url)),
 });
 
-test('26 different pigpen symbols are valid vector strokes, never OS glyphs',()=>{
+test('all 26 selected symbols are unique vector paths, never Unicode or emoji glyphs',()=>{
   assert.equal(CIPHER_SYMBOL_COUNT,26);
-  const signs=new Set();
+  const signs=new Set(),labels=new Set();
   for(let i=0;i<26;i++){
     const symbol=cipherSymbol(i);
-    assert.ok(symbol.strokes.length>=2);
-    assert.ok(symbol.strokes.every(s=>s.length===4&&s.every(Number.isFinite)));
+    assert.ok(symbol.paths.length>=1);
+    assert.ok(symbol.paths.every(p=>p.d.startsWith('M ') && !/[<>]/.test(p.d)));
     signs.add(cipherSymbolSignature(i));
+    labels.add(symbol.label);
   }
   assert.equal(signs.size,26);
+  assert.equal(labels.size,26);
+  assert.equal(cipherSymbol(16).label,'☾');
   assert.throws(()=>cipherSymbol(26),/Unknown/);
 });
 test('cryptograms use a one-to-one substitution, alphabetized key, and punctuation stays literal',()=>{

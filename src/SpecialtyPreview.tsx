@@ -11,13 +11,13 @@ function CrosswordView({module}:{module:Extract<SpecialtyModule,{type:'crossword
   }
   return <div className="module-preview specialty-preview crossword-preview">
     <div className="module-title">CROSSWORD</div>
-    <div className="crossword-grid" style={{
-      gridTemplateColumns:'repeat('+puzzle.width+',minmax(0,1fr))',
-      aspectRatio:puzzle.width+'/'+puzzle.height,
-    }}>{puzzle.cells.flatMap((row,y)=>row.map((letter,x)=>
-      <span key={x+','+y} className={letter?'crossword-cell':'crossword-empty'}>
-        {letter&&puzzle.numbers[x+','+y]&&<small>{puzzle.numbers[x+','+y]}</small>}
-      </span>))}</div>
+    <svg className="crossword-grid" viewBox={'0 0 '+(puzzle.width*20)+' '+(puzzle.height*20)}
+      role="img" aria-label={'Blank numbered crossword grid with '+puzzle.width+' columns'}>
+      {puzzle.cells.flatMap((row,y)=>row.map((letter,x)=>letter?<g key={x+','+y}>
+        <rect x={x*20+.4} y={y*20+.4} width={19.2} height={19.2} fill="#fff" stroke="#333" strokeWidth=".7"/>
+        {puzzle.numbers[x+','+y]&&<text x={x*20+2} y={y*20+6} fontSize="6">{puzzle.numbers[x+','+y]}</text>}
+      </g>:null))}
+    </svg>
     <div className="crossword-clues">
       <div><strong>Across</strong>{puzzle.across.map(p=><span key={p.number}>{p.number}. {p.clue}</span>)}</div>
       <div><strong>Down</strong>{puzzle.down.map(p=><span key={p.number}>{p.number}. {p.clue}</span>)}</div>

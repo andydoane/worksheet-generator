@@ -27,18 +27,51 @@ function wrap(text:string,font:PDFFont,size:number,w:number):string[]|null {
   if(current)result.push(current);
   return result;
 }
-function fittedLines(text:string,font:PDFFont,w:number,h:number,start=12,min=8):{rows:string[];size:number;step:number} {
+/** Balance only story events; left-aligned statements keep ordinary word wrapping. */
+export function balancedLines(text:string,font:PDFFont,size:number,maxWidth:number):string[]|null {
+  const greedy=wrap(text,font,size,maxWidth);
+  if(!greedy||greedy.length<2)return greedy;
+  const words=text.trim().split(/\s+/u),count=greedy.length,n=words.length;
+  const measure=(s:string)=>width(font,s,size);
+  const cache=new Map<string,{cost:number;lines:string[]}>();
+  function solve(i:number,k:number):{cost:number;lines:string[]}|null {
+    if(k===0)return i===n?{cost:0,lines:[]}:null;
+    if(n-i<k)return null;
+    const key=i+':'+k,cached=cache.get(key);
+    if(cached)return cached;
+    let best:{cost:number;lines:string[]}|null=null;
+    for(let j=i+1;j<=n-k+1;j++){
+      const line=words.slice(i,j).join(' '),used=measure(line);
+      if(used>maxWidth)break;
+      const rest=solve(j,k-1);
+      if(!rest)continue;
+      const slack=(maxWidth-used)/maxWidth;
+      const cost=slack*slack+rest.cost;
+      if(!best||cost<best.cost)best={cost,lines:[line,...rest.lines]};
+    }
+    if(best)cache.set(key,best);
+    return best;
+  }
+  return solve(0,count)?.lines??greedy;
+}
+function fittedLines(text:string,font:PDFFont,w:number,h:number,start=12,min=8,balance=false):{rows:string[];size:number;step:number} {
   for(let size=start;size>=min;size-=.5){
-    const rows=wrap(text,font,size,w);
+    const rows=balance?balancedLines(text,font,size,w):wrap(text,font,size,w);
     const step=size*1.25;
     if(rows && rows.length*step<=h)return {rows,size,step};
   }
   throw new Error('A text entry is too long for this section. Shorten the entry or use fewer words.');
 }
-function drawLines(page:PDFPage,font:PDFFont,text:string,rect:Rect,top:number,maxHeight:number,start=12,min=8):void{
-  const {rows,size,step}=fittedLines(text,font,rect.width,maxHeight,start,min);
-  const height=rows.length*step;
-  rows.forEach((row,i)=>centered(page,font,row,rect,top-(maxHeight-height)/2-(i+1)*step,size));
+function drawLines(page:PDFPage,font:PDFFont,text:string,rect:Rect,top:number,maxHeight:number,start=12,min=8,
+  alignment:'center'|'left'='center',balance=false):void{
+  const {rows,size,step}=fittedLines(text,font,rect.width,maxHeight,start,min,balance);
+  const mid=(top+top-maxHeight)/2;
+  const firstBaseline=mid+(rows.length-1)*step/2-size*.35;
+  rows.forEach((row,i)=>{
+    const y=firstBaseline-i*step;
+    if(alignment==='left')page.drawText(row,{x:rect.x,y,size,font,color:INK});
+    else centered(page,font,row,rect,y,size);
+  });
 }
 function heading(page:PDFPage,fonts:ModuleFonts,text:string,b:Rect):void {
   centered(page,fonts.title,text,b,b.y+b.height-24,25);
@@ -56,12 +89,12 @@ function order(page:PDFPage,b:Rect,fonts:ModuleFonts,module:Extract<StoryVerseMo
     const textRect={x:b.x+28,y,width:b.width-28,height:rowH-4};
     page.drawRectangle({x:textRect.x,y:textRect.y,width:textRect.width,height:textRect.height,borderWidth:.7,borderColor:MID});
     drawLines(page,fonts.body,event,{x:textRect.x+6,y:textRect.y,width:textRect.width-12,height:textRect.height},
-      textRect.y+textRect.height,textRect.height-2,12,8.5);
+      textRect.y+textRect.height,textRect.height-2,12,8.5,'center',true);
   });
 }
 function sort(page:PDFPage,b:Rect,fonts:ModuleFonts,module:Extract<StoryVerseModule,{type:'sort-story'}>):void {
   heading(page,fonts,'SORT THE STORY',b);
-  centered(page,fonts.body,'Write each letter in the TRUE or FALSE box.',b,b.y+b.height-43,9);
+  centered(page,fonts.body,'Sort TRUE or FALSE; circle incorrect words in false statements.',b,b.y+b.height-43,9);
   const items=sortedStoryBank(module);
   const top=b.y+b.height-56,bankBottom=b.y+93;
   const rowH=(top-bankBottom)/items.length;
@@ -72,7 +105,7 @@ function sort(page:PDFPage,b:Rect,fonts:ModuleFonts,module:Extract<StoryVerseMod
     page.drawRectangle({x:b.x+5,y:y+(rowH-18)/2,width:19,height:18,borderColor:MID,borderWidth:.7});
     centered(page,fonts.puzzle,String.fromCharCode(65+i),{x:b.x+5,y,width:19,height:rowH},y+(rowH-18)/2+5,11);
     drawLines(page,fonts.body,item.text,{x:b.x+29,y,width:b.width-35,height:rowH},
-      y+rowH-2,rowH-4,10.5,8);
+      y+rowH-2,rowH-4,10.5,8,'left');
   });
   const gap=10,half=(b.width-gap)/2;
   for(let k=0;k<2;k++){

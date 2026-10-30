@@ -37,7 +37,7 @@ export default function PuzzlePreview({module,showSolution=false}:{module:Puzzle
         {puzzle.grid.flatMap((row,y)=>row.map((letter,x)=><span key={x+','+y}
           className={selected.has(x+','+y)?'puzzle-found-letter':''}>{letter}</span>))}
       </div>
-      <div className="puzzle-search-bank">{puzzle.words.map(w=><span key={w}>{w}</span>)}</div>
+      <div className="puzzle-search-bank" style={{gridTemplateColumns:'repeat('+(puzzle.words.length>8?3:2)+',minmax(0,1fr))'}}>{puzzle.labels.map((w,i)=><span key={i}>{w}</span>)}</div>
     </div>;
   }
   const maze=generateMaze(module);
