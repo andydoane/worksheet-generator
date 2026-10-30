@@ -74,3 +74,52 @@
 .export-button.export-ready:hover:not(:disabled) { background: #1d594c; }
 .export-button.export-ready:disabled { opacity: .65; }
 .pdf-error { color: #963d2f !important; background: #fff1ed; border: 1px solid #e8b2a6; padding: 10px 12px; border-radius: 8px; max-width: 680px; }
+
+
+/* PR 4: section selection and module-specific previews. */
+.booklet-region.activity-region { cursor: pointer; font-family: inherit; color: #253e38; text-align: center; border-radius: 0; }
+.booklet-region.activity-region:hover { border: 1.5px solid #3b8974; background-color: #f0f8f1; }
+.booklet-region.selected-region { outline: 2px solid #2a8770; outline-offset: -2px; z-index: 2; }
+.booklet-region.activity-region:focus-visible { outline: 2px solid #e3a55d; outline-offset: -2px; z-index: 3; }
+.sheet-half .booklet-page { pointer-events: auto; }
+.sheet-half { cursor: default; }
+.editor-tabs { gap: 4px; }
+.editor-tabs button { font-size: 11px; }
+.activity-editor { display: grid; gap: 10px; padding: 22px 27px 29px; }
+.activity-editor label, .activity-inputs label { font-size: 12px; font-weight: 900; }
+.activity-help { margin: 0 0 5px; color: #6d8479; font-size: 12px; line-height: 1.55; }
+.activity-page-pickers { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 6px; margin-bottom: 8px; }
+.activity-page-pickers button { border: 1px solid #d8e6db; background: #f8fbf7; border-radius: 7px; padding: 8px 3px; font-size: 11px; color: #567569; font-weight: 800; }
+.activity-page-pickers button.active { background: #2a7f6a; color: white; border-color: #2a7f6a; }
+.activity-editor select, .activity-editor textarea { min-width: 0; width: 100%; font: 600 13px/1.55 'Nunito Sans',sans-serif; padding: 11px; border: 1px solid #dae6dd; background: #fbfdfa; color: #294840; border-radius: 9px; }
+.activity-editor textarea { resize: vertical; }
+.activity-editor select:focus-visible, .activity-editor textarea:focus-visible { outline: 3px solid #aedbc2; }
+.activity-section-info { font-size: 11px; margin: -1px 0 8px; color: #82988a; }
+.activity-inputs { display: grid; gap: 8px; padding-top: 10px; border-top: 1px solid #e8ede7; }
+.activity-inputs p { color: #758c7d; margin: 0; font-size: 11px; line-height: 1.6; }
+.regenerate-module { background: #ecf6ee; border: 1px solid #badac4; color: #2d7362; font-weight: 900; font-size: 12px; border-radius: 7px; padding: 10px 12px; }
+.regenerate-module:hover { background: #e0efe2; }
+.activity-validation { background: #fff4e9; border: 1px solid #e8c6a2; padding: 10px; border-radius: 8px; }
+.activity-validation p { color: #875a29; margin: 3px 0; font-size: 11px; line-height: 1.5; }
+.activity-ready { font-size: 12px; color: #26794b; font-weight: 800; }
+/* Content uses a scale-independent column/row layout inside existing 0.1-in padding. */
+.module-preview { display: flex; flex-direction: column; width: 100%; height: 100%; min-width: 0; min-height: 0; color: #202c29; text-align: center; overflow: hidden; }
+.module-incomplete { justify-content: center; align-items: center; gap: 6px; color: #647b6b; }
+.module-incomplete strong { font-family: 'Mouse Memoirs',sans-serif; font-size: clamp(14px, 5cqw, 27px); font-weight: 400; }
+.module-incomplete span { font-size: clamp(7px, 2.3cqw, 11px); }
+.drawing-module { gap: 5px; }
+.drawing-box { border: 1px solid #777; flex: 1; min-height: 0; background: white; }
+.drawing-prompt { font-family: 'Mouse Memoirs', sans-serif; font-size: clamp(12px, 4.6cqw, 20px); line-height: 1.05; flex: 0 0 auto; overflow-wrap: anywhere; }
+.module-title { font: 400 clamp(15px, 5.2cqw, 27px)/1 'Mouse Memoirs',sans-serif; letter-spacing: .3px; }
+.module-subtitle { font: 650 clamp(8px, 2.4cqw, 11px)/1.2 'Nunito Sans',sans-serif; color: #46564f; margin: 2px auto 4px; }
+.matching-module { gap: 4px; justify-content: flex-start; }
+.match-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; text-align: left; flex: 1; min-height: 0; }
+.match-columns > div { display: flex; flex-direction: column; justify-content: space-around; min-width: 0; }
+.match-word { font: 700 clamp(9px, 2.7cqw, 14px)/1.1 'Zilla Slab',serif; text-transform: uppercase; overflow-wrap: anywhere; padding-left: 2px; }
+.match-columns > div:last-child { padding-left: 7px; }
+.story-module { gap: 6px; text-align: center; }
+.story-bank { border: 1px solid #777; display: grid; grid-template-rows: repeat(2,1fr); align-content: center; justify-items: center; align-items: center; width: 100%; min-height: 55px; padding: 3px 1px; gap: 4px 0; background: white; }
+.bank-word { font: 900 clamp(6px, 2.3cqw, 11px)/1.15 'Nunito Sans',sans-serif; text-transform: uppercase; min-width: 0; max-width: 100%; overflow-wrap: anywhere; }
+.story-body { font: 500 clamp(9px, 2.9cqw, 13px)/1.65 'Nunito Sans',sans-serif; text-align: left; white-space: pre-wrap; overflow-wrap: anywhere; flex: 1; overflow: hidden; }
+.story-blank { display: inline-block; border-bottom: 1px solid #222; height: .9em; vertical-align: baseline; margin: 0 2px; }
+@media (max-width: 700px) { .activity-editor { padding: 19px; } .editor-tabs button { font-size: 10px; padding: 10px 5px; } }

@@ -1,5 +1,10 @@
 import { useEffect, useState } from 'react';
 import { downloadBookletPdf } from './exportPdf';
+import ModulePreview from './ModulePreview';
+import {
+  blankModule, moduleForSize, readAssignments, slotKey, validateModule,
+  type ActivityModule, type ModuleAssignments, type ModuleId,
+} from './modules';
 import {
   BOOKLET, DEFAULT_LAYOUTS, LAYOUTS, SHEETS, getRegions,
   isLayoutId, regionStyle,
@@ -13,9 +18,10 @@ type Draft = {
   verseReference: string;
   verseText: string;
   layouts: Record<2 | 3 | 4, LayoutId>;
+  modules: ModuleAssignments;
 };
 
-type EditorTab = 'details' | 'layouts';
+type EditorTab = 'details' | 'layouts' | 'activities';
 type PreviewMode = 'page' | 'sheet';
 
 const KEY = 'worksheet-studio:draft:v1';
@@ -26,6 +32,7 @@ const blank: Draft = {
   verseReference: '',
   verseText: '',
   layouts: { ...DEFAULT_LAYOUTS },
+  modules: {},
 };
 
 const pages: { number: PageNumber; label: string }[] = [
@@ -62,6 +69,7 @@ function readDraft(): Draft {
         3: isLayoutId(storedLayouts[3]) ? storedLayouts[3] : DEFAULT_LAYOUTS[3],
         4: isLayoutId(storedLayouts[4]) ? storedLayouts[4] : DEFAULT_LAYOUTS[4],
       },
+      modules: readAssignments(value.modules),
     };
   } catch {
     // Storage can be unavailable, and old user content could be malformed.
@@ -69,7 +77,7 @@ function readDraft(): Draft {
   }
 }
 
-function RegionContents({ region, draft }: { region: Region; draft: Draft }) {
+function RegionContents({ region, draft, module }: { region: Region; draft: Draft; module?: ActivityModule }) {
   if (region.kind === 'title') {
     return (
       <div className="cover-content">
@@ -80,6 +88,8 @@ function RegionContents({ region, draft }: { region: Region; draft: Draft }) {
     );
   }
 
+  if (module && moduleForSize(region.size).some((item) => item.id === module.type)) return <ModulePreview module={module} />;
+
   return (
     <div className="region-content">
       <span className="region-tag">{region.size.toUpperCase()}</span>
@@ -89,23 +99,31 @@ function RegionContents({ region, draft }: { region: Region; draft: Draft }) {
   );
 }
 
-function BookletPage({ page, draft }: { page: PageNumber; draft: Draft }) {
+function BookletPage({
+  page, draft, selectedId, onSelect,
+}: {
+  page: PageNumber;
+  draft: Draft;
+  selectedId?: string;
+  onSelect: (page: PageNumber, regionId: string) => void;
+}) {
   const layoutId = page === 1 ? DEFAULT_LAYOUTS[2] : draft.layouts[page];
   const regions = getRegions(page, layoutId);
-
   return (
     <div className="booklet-page" aria-label={'Booklet page ' + page + ' layout'}>
       <div className="booklet-page-number" aria-hidden="true">{page}</div>
-      {regions.map((region) => (
-        <div
-          className={'booklet-region ' + (region.kind === 'title' ? 'title-region' : 'activity-region') + ' size-' + region.size}
-          key={region.id}
-          style={{ ...regionStyle(region), padding: String((BOOKLET.padding / BOOKLET.page.width) * 100) + '%' }}
-          aria-label={region.kind === 'title' ? 'Title area' : region.size + ' activity area'}
-        >
-          <RegionContents region={region} draft={draft} />
-        </div>
-      ))}
+      {regions.map((region) => {
+        const style = { ...regionStyle(region), padding: String((BOOKLET.padding / BOOKLET.page.width) * 100) + '%' };
+        const className = 'booklet-region ' + (region.kind === 'title' ? 'title-region' : 'activity-region') +
+          ' size-' + region.size + (region.id === selectedId ? ' selected-region' : '');
+        const content = <RegionContents region={region} draft={draft} module={draft.modules[slotKey(page, region.id)]} />;
+        return region.kind === 'title'
+          ? <div key={region.id} className={className} style={style} aria-label="Fixed title area">{content}</div>
+          : <button type="button" key={region.id} className={className} style={style}
+              aria-label={'Edit ' + region.size + ' activity on page ' + page}
+              aria-pressed={region.id === selectedId}
+              onClick={() => onSelect(page, region.id)}>{content}</button>;
+      })}
     </div>
   );
 }
@@ -133,6 +151,7 @@ export default function App() {
   const [draft, setDraft] = useState<Draft>(readDraft);
   const [page, setPage] = useState<PageNumber>(1);
   const [tab, setTab] = useState<EditorTab>('details');
+  const [selectedRegionId, setSelectedRegionId] = useState<string>('cover-activity');
   const [mode, setMode] = useState<PreviewMode>('page');
   const [saved, setSaved] = useState(false);
   const [exporting, setExporting] = useState(false);
@@ -174,8 +193,57 @@ export default function App() {
 
   function selectPage(number: PageNumber) {
     setPage(number);
+    const layout = number === 1 ? DEFAULT_LAYOUTS[2] : draft.layouts[number];
+    const first = getRegions(number, layout).find((region) => region.kind === 'activity');
+    if (first) setSelectedRegionId(first.id);
   }
 
+  function selectRegion(number: PageNumber, regionId: string) {
+    setPage(number);
+    setSelectedRegionId(regionId);
+    setTab('activities');
+  }
+
+  function setModuleType(type: ModuleId | '') {
+    if (!activeKey) return;
+    setDraft((previous) => {
+      const modules = { ...previous.modules };
+      if (type) modules[activeKey] = blankModule(type);
+      else delete modules[activeKey];
+      return { ...previous, modules };
+    });
+  }
+
+  function editModule(update: Partial<ActivityModule>) {
+    if (!activeKey) return;
+    setDraft((previous) => {
+      const original = previous.modules[activeKey];
+      if (!original) return previous;
+      return {
+        ...previous,
+        modules: { ...previous.modules, [activeKey]: { ...original, ...update } as ActivityModule },
+      };
+    });
+  }
+
+  function regenerateModule() {
+    if (!activeKey) return;
+    setDraft((previous) => {
+      const original = previous.modules[activeKey];
+      if (!original || original.type === 'draw-picture') return previous;
+      return {
+        ...previous,
+        modules: { ...previous.modules, [activeKey]: { ...original, seed: original.seed + 1 } },
+      };
+    });
+  }
+
+  const currentLayout = page === 1 ? DEFAULT_LAYOUTS[2] : draft.layouts[page];
+  const available = getRegions(page, currentLayout).filter((region) => region.kind === 'activity');
+  const activeRegion = available.find((region) => region.id === selectedRegionId) ?? available[0];
+  const activeKey = activeRegion ? slotKey(page, activeRegion.id) : '';
+  const activeModule = draft.modules[activeKey];
+  const validation = activeModule ? validateModule(activeModule) : [];
   const selected = pages.find((item) => item.number === page) ?? pages[0];
   const activeSheet = SHEETS.find((sheet) => sheet.pages.includes(page)) ?? SHEETS[0];
   const layoutName = page === 1
@@ -197,7 +265,9 @@ export default function App() {
           <button type="button" className={'step ' + (tab === 'layouts' ? 'current' : '')} onClick={() => setTab('layouts')}>
             <span className="step-number">02</span><span><strong>Page layouts</strong><small>Ready to customize</small></span>
           </button>
-          <div className="step step-upcoming"><span className="step-number">03</span><span><strong>Activity modules</strong><small>Coming in PR 4</small></span></div>
+          <button type="button" className={'step ' + (tab === 'activities' ? 'current' : '')} onClick={() => setTab('activities')}>
+            <span className="step-number">03</span><span><strong>Activity modules</strong><small>Choose and edit activities</small></span>
+          </button>
         </div>
         <div className="sidebar-group page-nav">
           <div className="nav-label">BOOKLET PAGES</div>
@@ -208,7 +278,7 @@ export default function App() {
             </button>
           ))}
         </div>
-        <div className="sidebar-foot"><span aria-hidden="true">●</span> Printable booklet release · PR 3</div>
+        <div className="sidebar-foot"><span aria-hidden="true">●</span> Activity modules release · PR 4</div>
       </aside>
 
       <div className="workspace">
@@ -224,18 +294,19 @@ export default function App() {
           <div className="intro">
             <span className="eyebrow">YOUR NEXT BIBLE STORY RESOURCE</span>
             <h1>Design your <em>little</em> booklet.</h1>
-            <p>Choose the page arrangement for your folded Bible worksheet, then download a two-sided, print-ready PDF with the correct booklet page order. Activity modules are coming next.</p>
+            <p>Choose the page arrangement, click any activity area to add a module, and download a booklet with real activities.</p>
             {exportError && <p className="pdf-error" role="alert">{exportError}</p>}
           </div>
           <div className="columns">
             <section className="panel" aria-labelledby="editor-heading">
               <div className="panel-heading">
-                <div><span className="eyebrow">{tab === 'details' ? 'STEP 01 OF 03' : 'STEP 02 OF 03'}</span><h2 id="editor-heading">{tab === 'details' ? 'Worksheet details' : 'Page layouts'}</h2></div>
-                <span className="panel-icon" aria-hidden="true">{tab === 'details' ? '✎' : '▦'}</span>
+                <div><span className="eyebrow">{tab === 'details' ? 'STEP 01 OF 03' : tab === 'layouts' ? 'STEP 02 OF 03' : 'STEP 03 OF 03'}</span><h2 id="editor-heading">{tab === 'details' ? 'Worksheet details' : tab === 'layouts' ? 'Page layouts' : 'Activity modules'}</h2></div>
+                <span className="panel-icon" aria-hidden="true">{tab === 'details' ? '✎' : tab === 'layouts' ? '▦' : '✦'}</span>
               </div>
               <div className="editor-tabs" role="tablist" aria-label="Worksheet editor sections">
                 <button type="button" role="tab" aria-selected={tab === 'details'} onClick={() => setTab('details')}>Lesson details</button>
                 <button type="button" role="tab" aria-selected={tab === 'layouts'} onClick={() => setTab('layouts')}>Page layouts</button>
+                <button type="button" role="tab" aria-selected={tab === 'activities'} onClick={() => setTab('activities')}>Activities</button>
               </div>
               {tab === 'details' ? (
                 <div className="fields">
@@ -262,7 +333,7 @@ export default function App() {
                     <p>Text from your PR 1 draft is preserved, and layout selections save automatically too.</p>
                   </div>
                 </div>
-              ) : (
+              ) : tab === 'layouts' ? (
                 <div className="layouts-panel">
                   <div className="layout-page-picker" aria-label="Choose page to arrange">
                     {pages.map((item) => (
@@ -304,6 +375,67 @@ export default function App() {
                     <p>Every page has {BOOKLET.margin.toFixed(2)}-inch outer margins and a 4.8 × 7.8-inch usable area.</p>
                   </div>
                 </div>
+              ) : (
+                <div className="activity-editor">
+                  <p className="activity-help">Choose a booklet page, then click an activity region in the preview or select a section below.</p>
+                  <div className="activity-page-pickers" aria-label="Choose booklet page">
+                    {pages.map((item) => <button key={item.number} type="button" onClick={() => selectPage(item.number)}
+                      className={page === item.number ? 'active' : ''} aria-pressed={page === item.number}>Page {item.number}</button>)}
+                  </div>
+                  <label htmlFor="activity-region">Activity section</label>
+                  <select id="activity-region" value={activeRegion?.id ?? ''}
+                    onChange={(e) => setSelectedRegionId(e.target.value)}>
+                    {available.map((region) =>
+                      <option key={region.id} value={region.id}>{region.size.toUpperCase()} · {region.id.replaceAll('-', ' ')}</option>)}
+                  </select>
+                  <p className="activity-section-info">Page {page} · {activeRegion?.width.toFixed(1)} × {activeRegion?.height.toFixed(1)} inches</p>
+                  <label htmlFor="activity-type">Module</label>
+                  <select id="activity-type" value={activeModule?.type ?? ''}
+                    onChange={(e) => setModuleType(e.target.value as ModuleId | '')}>
+                    <option value="">No activity (placeholder)</option>
+                    {activeRegion && moduleForSize(activeRegion.size).map((definition) =>
+                      <option key={definition.id} value={definition.id}>{definition.name}</option>)}
+                  </select>
+                  {activeModule?.type === 'draw-picture' && (
+                    <div className="activity-inputs">
+                      <label htmlFor="draw-prompt">Draw a picture of…</label>
+                      <textarea id="draw-prompt" rows={3} value={activeModule.prompt} maxLength={130}
+                        placeholder="David facing Goliath"
+                        onChange={(e) => editModule({ prompt: e.target.value })} />
+                      <p>The phrase “Draw a picture of” is added automatically.</p>
+                    </div>
+                  )}
+                  {activeModule?.type === 'match-words' && (
+                    <div className="activity-inputs">
+                      <label htmlFor="matching-pairs">Matching pairs (3–6)</label>
+                      <textarea id="matching-pairs" rows={7} value={activeModule.pairs}
+                        placeholder={'Paul, Pharisee\nPeter, Fisherman\nJesus, Savior'}
+                        onChange={(e) => editModule({ pairs: e.target.value })} />
+                      <p>Enter one pair per line, with a comma between the two words. Left items stay in order; right items are shuffled.</p>
+                    </div>
+                  )}
+                  {activeModule?.type === 'finish-story' && (
+                    <div className="activity-inputs">
+                      <label htmlFor="story-text">Story with 6–12 missing words</label>
+                      <textarea id="story-text" rows={10} value={activeModule.story}
+                        placeholder={'[David] was a young [shepherd]. He faced the giant [Goliath] with a [sling] and five [stones]. David trusted in [God].'}
+                        onChange={(e) => editModule({ story: e.target.value })} />
+                      <p>Put [brackets] around every word to remove. The shuffled word bank always has two rows.</p>
+                    </div>
+                  )}
+                  {activeModule && activeModule.type !== 'draw-picture' && (
+                    <button type="button" className="regenerate-module" onClick={regenerateModule}>
+                      Shuffle {activeModule.type === 'match-words' ? 'matching answers' : 'word bank'} ↻
+                    </button>
+                  )}
+                  {validation.length > 0 && (
+                    <div className="activity-validation" role="status">
+                      {validation.map((error) => <p key={error}>{error}</p>)}
+                    </div>
+                  )}
+                  {activeModule && validation.length === 0 && <p className="activity-ready">✓ Ready to export in the booklet PDF</p>}
+                  {!activeModule && <p className="activity-section-info">Select a module above to begin.</p>}
+                </div>
               )}
             </section>
 
@@ -326,14 +458,13 @@ export default function App() {
               </div>
               <div className={'preview-stage ' + (mode === 'sheet' ? 'sheet-stage' : '')}>
                 {mode === 'page' ? (
-                  <BookletPage page={page} draft={draft} />
+                  <BookletPage page={page} draft={draft} selectedId={activeRegion?.id} onSelect={selectRegion} />
                 ) : (
                   <div className="print-sheet" aria-label={activeSheet.name}>
                     {activeSheet.pages.map((number) => (
-                      <button key={number} type="button" className={'sheet-half ' + (number === page ? 'selected-half' : '')}
-                        onClick={() => selectPage(number)} aria-label={'Select booklet page ' + number}>
-                        <BookletPage page={number} draft={draft} />
-                      </button>
+                      <div key={number} className={'sheet-half ' + (number === page ? 'selected-half' : '')}>
+                        <BookletPage page={number} draft={draft} selectedId={number === page ? activeRegion?.id : undefined} onSelect={selectRegion} />
+                      </div>
                     ))}
                   </div>
                 )}
@@ -347,7 +478,7 @@ export default function App() {
                   ))}
                 </nav>
               </div>
-              <p className="preview-disclaimer">ⓘ This preview scales to your screen; Download PDF creates two landscape US Letter pages in booklet order. Print at 100% / Actual size, double-sided, and flip on the short edge. Activity regions are placeholders.</p>
+              <p className="preview-disclaimer">ⓘ This preview scales to your screen; Download PDF creates two landscape US Letter pages in booklet order. Print at 100% / Actual size, double-sided, and flip on the short edge. Empty regions remain placeholders; filled regions export real activities.</p>
             </section>
           </div>
         </main>

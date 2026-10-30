@@ -1,5 +1,7 @@
 import { PDFDocument, rgb, type PDFFont, type PDFPage } from 'pdf-lib';
 import fontkit from '@pdf-lib/fontkit';
+import { drawModulePdf } from './modulePdf.ts';
+import { slotKey, type ModuleAssignments, type ActivityModule } from './modules.ts';
 import {
   BOOKLET, DEFAULT_LAYOUTS, SHEETS, getRegions,
   type LayoutId, type PageNumber, type Region,
@@ -25,6 +27,7 @@ export type PdfDraft = {
   title: string;
   scripture: string;
   layouts: Record<2 | 3 | 4, LayoutId>;
+  modules?: ModuleAssignments;
 };
 
 export type PdfFontFiles = {
@@ -315,7 +318,22 @@ export async function createBookletPdf(draft: PdfDraft, fontFiles: PdfFontFiles)
       if (item.kind === 'title') {
         drawCoverTitle(page, item.rect, fonts, draft);
       } else {
-        drawActivityPlaceholder(page, item.rect, item.size, fonts);
+        const assigned: ActivityModule | undefined = draft.modules?.[slotKey(item.bookletPage, item.id)];
+        if (assigned) {
+          if (assigned.type === 'draw-picture' && item.size !== 'small' ||
+              assigned.type === 'match-words' && item.size !== 'medium' ||
+              assigned.type === 'finish-story' && item.size !== 'large') {
+            throw new Error('Page ' + item.bookletPage + ' contains an activity in the wrong size area.');
+          }
+          try {
+            drawModulePdf(page, item.rect, assigned, fonts);
+          } catch (error) {
+            throw new Error('Page ' + item.bookletPage + ' (' + assigned.type.replaceAll('-', ' ') + '): ' +
+              (error instanceof Error ? error.message : String(error)));
+          }
+        } else {
+          drawActivityPlaceholder(page, item.rect, item.size, fonts);
+        }
       }
     }
     const sheet = SHEETS[sheetIndex];
