@@ -64,3 +64,22 @@ test('long cover text is wrapped rather than spilling into neighboring regions',
   const pdf = await PDFDocument.load(bytes);
   assert.equal(pdf.getPageCount(), 2);
 });
+
+test('diagnose custom font compatibility independently', async () => {
+  const fontkit = (await import('@pdf-lib/fontkit')).default;
+  const files = await fonts();
+  const results = [];
+  for (const [name, bytes] of Object.entries(files)) {
+    try {
+      const doc = await PDFDocument.create();
+      doc.registerFontkit(fontkit);
+      const font = await doc.embedFont(bytes, { subset: false });
+      doc.addPage([792, 612]).drawText('ABC abc 123', { x: 20, y: 80, font, size: 12 });
+      await doc.save();
+      results.push(name + ': ok');
+    } catch (e) {
+      results.push(name + ': ' + (e instanceof Error ? e.message : String(e)));
+    }
+  }
+  assert.deepEqual(results, ['mouseMemoirs: ok', 'nunitoSans: ok', 'zillaSlab: ok']);
+});
