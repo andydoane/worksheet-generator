@@ -2,7 +2,7 @@
  * Seven PR 5 small-format activities. These share the same typed inputs
  * and deterministic derived data in the HTML preview and exported PDF.
  */
-import { shuffledIndices } from './modules.ts';
+import { shuffledIndices } from './shuffle.ts';
 
 export type MultipleChoice = {
   type: 'multiple-choice'; question: string; correct: string; wrong1: string; wrong2: string; seed: number;

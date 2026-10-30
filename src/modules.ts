@@ -1,4 +1,6 @@
 import type { PageNumber, RegionSize } from './booklet.ts';
+import { shuffledIndices } from './shuffle.ts';
+export { shuffledIndices } from './shuffle.ts';
 import { SMALL_MODULES, blankSmallModule, isSmallModule, isSmallModuleId, validateSmallModule, type SmallModule, type SmallModuleId } from './smallModules.ts';
 
 
@@ -89,33 +91,6 @@ export function parseStory(input: string): { parts: StoryPart[]; answers: string
   }
   if (start < input.length) parts.push({ kind: 'text', text: input.slice(start) });
   return { parts, answers };
-}
-
-function hash(text: string, seed: number): number {
-  let value = (seed >>> 0) ^ 2166136261;
-  for (const char of text) {
-    value ^= char.charCodeAt(0);
-    value = Math.imul(value, 16777619);
-  }
-  return value >>> 0;
-}
-
-/** Fisher–Yates; enforce a different visible order when possible. */
-export function shuffledIndices(length: number, content: string, seed: number): number[] {
-  const indices = Array.from({ length }, (_, index) => index);
-  let state = hash(content, seed) || 1;
-  const next = () => {
-    state = (Math.imul(state, 1664525) + 1013904223) >>> 0;
-    return state / 4294967296;
-  };
-  for (let index = length - 1; index > 0; index--) {
-    const swap = Math.floor(next() * (index + 1));
-    [indices[index], indices[swap]] = [indices[swap], indices[index]];
-  }
-  if (length > 1 && indices.every((item, index) => item === index)) {
-    indices.push(indices.shift()!);
-  }
-  return indices;
 }
 
 export function matchRows(module: MatchWordsModule): { left: string; right: string }[] {
