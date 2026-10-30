@@ -99,9 +99,12 @@ type StoryPlacement = { kind: 'text' | 'blank'; text: string; x: number; y: numb
 
 function tokenizeStory(story: string): StoryToken[] {
   const { parts } = parseStory(story);
-  return parts.flatMap(part => part.kind === 'blank'
-    ? [{ kind: 'blank' as const, value: part.word }]
-    : (part.text.match(/\s+|[^\s]+/gu) ?? []).map(value => ({ kind: 'text' as const, value })));
+  const tokens: StoryToken[] = [];
+  for (const part of parts) {
+    if (part.kind === 'blank') tokens.push({ kind: 'blank', value: part.word });
+    else for (const value of part.text.match(/\s+|[^\s]+/gu) ?? []) tokens.push({ kind: 'text', value });
+  }
+  return tokens;
 }
 
 /** Compute all text positions before drawing, so overflow fails instead of clipping. */
