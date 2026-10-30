@@ -54,15 +54,15 @@ test('short and maximum story/card examples print in existing four-page layout',
   };
   const order={
     type:'story-order',seed:9,
-    events:'Jesus sat near the lake.\\nThe people gathered to hear his teaching.\\nJesus spoke about the kingdom of God.\\nHis followers asked him questions.\\nThe people listened carefully.',
+    events:'Jesus sat near the lake.\nThe people gathered to hear his teaching.\nJesus spoke about the kingdom of God.\nHis followers asked him questions.\nThe people listened carefully.',
   };
   const sort={
     type:'sort-story',seed:4,
-    statements:'Jesus taught the people. true\\nJesus never told stories. false\\nThe crowd listened to Jesus. true\\nThe disciples had never met Jesus. false\\nJesus used stories to teach. true',
+    statements:'Jesus taught the people. true\nJesus never told stories. false\nThe crowd listened to Jesus. true\nThe disciples had never met Jesus. false\nJesus used stories to teach. true',
   };
   const prompts={
     type:'draw-story',
-    prompts:'Jesus sits by the lake.\\nThe people come to listen.\\nJesus tells them a story.\\nThe disciples ask questions.',
+    prompts:'Jesus sits by the lake.\nThe people come to listen.\nJesus tells them a story.\nThe disciples ask questions.',
   };
   assert.equal(boxGrid(prompts).cols,2);
   const bytes=await createBookletPdf({

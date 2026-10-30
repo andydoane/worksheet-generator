@@ -9,7 +9,7 @@ const source=(weight)=>readFile(new URL('../fonts/Nunito-'+({500:'Medium',700:'B
 const instances=async()=>({body:await source(500),bodyBold:await source(700),bank:await source(800)});
 const files=async()=>({
   mouseMemoirs:await readFile(new URL('../fonts/MouseMemoirs-Regular.ttf',import.meta.url)),
-  nunitoSans:await source(600),
+  nunitoSans:await source(500),
   nunitoSans750:await source(700),
   nunitoSans900:await source(800),
   zillaSlab:await readFile(new URL('../fonts/ZillaSlab-Bold-pdf.ttf',import.meta.url)),

@@ -1,6 +1,6 @@
 import { rgb, type PDFFont, type PDFPage } from 'pdf-lib';
 import { BOOKLET } from './booklet.ts';
-import {MODULE_TITLE_PT,verticalStack,measureWrappedLines,centeredBaseline} from './pdfLayout.ts';
+import {MODULE_TITLE_PT,verticalStack,centeredBaseline} from './pdfLayout.ts';
 import type { ModuleFonts } from './modulePdf.ts';
 import {
   boxGrid, linesFromInput, mistakesTitle, orderedStoryEvents, parseVerse,
