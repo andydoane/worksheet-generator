@@ -3,7 +3,7 @@ import { isSmallModule } from './smallModules';
 import SmallModulePreview from './SmallModulePreview';
 import { isStoryVerseModule } from './storyVerseModules';
 import StoryVersePreview from './StoryVersePreview';
-import { isPuzzleId } from './puzzleEngines';
+import { isPuzzleModule } from './puzzleEngines';
 import PuzzlePreview from './PuzzlePreview';
 
 export default function ModulePreview({ module, showSolution = false }: { module: ActivityModule; showSolution?: boolean }) {
@@ -19,7 +19,7 @@ export default function ModulePreview({ module, showSolution = false }: { module
 
   if (isSmallModule(module)) return <SmallModulePreview module={module}/>;
   if (isStoryVerseModule(module)) return <StoryVersePreview module={module}/>;
-  if (isPuzzleId(module.type)) return <PuzzlePreview module={module} showSolution={showSolution}/>;
+  if (isPuzzleModule(module)) return <PuzzlePreview module={module} showSolution={showSolution}/>;
 
   if (module.type === 'draw-picture') {
     return (

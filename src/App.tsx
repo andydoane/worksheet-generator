@@ -5,7 +5,7 @@ import SmallModuleEditor from './SmallModuleEditor';
 import { isSmallModule } from './smallModules';
 import { isStoryVerseModule } from './storyVerseModules';
 import StoryVerseEditor from './StoryVerseEditor';
-import { isPuzzleId } from './puzzleEngines';
+import { isPuzzleId, isPuzzleModule } from './puzzleEngines';
 import PuzzleEditor from './PuzzleEditor';
 import {
   blankModule, moduleForSize, readAssignments, slotKey, validateModule,
@@ -442,10 +442,10 @@ export default function App() {
                   {activeModule && isStoryVerseModule(activeModule) && (
                     <StoryVerseEditor module={activeModule} onChange={(patch) => editModule(patch)} />
                   )}
-                  {activeModule && isPuzzleId(activeModule.type) && (
+                  {activeModule && isPuzzleModule(activeModule) && (
                     <PuzzleEditor module={activeModule} onChange={(patch) => editModule(patch)} showSolution={showSolution} />
                   )}
-                  {activeModule && isPuzzleId(activeModule.type) && validation.length === 0 && (
+                  {activeModule && isPuzzleModule(activeModule) && validation.length === 0 && (
                     <button type="button" className="puzzle-solution-toggle"
                       aria-pressed={showSolution} onClick={() => setSolutionKey(showSolution ? null : activeKey)}>
                       {showSolution ? 'Hide puzzle solution' : 'Show puzzle solution'}
