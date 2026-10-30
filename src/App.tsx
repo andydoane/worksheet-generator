@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import {markWordSelection} from './storySelection.ts';
 import { downloadBookletPdf } from './exportPdf';
 import ModulePreview from './ModulePreview';
 import SmallModuleEditor from './SmallModuleEditor';
@@ -255,17 +256,13 @@ export default function App() {
   function markSelectedStoryWord() {
     const input=storyInputRef.current;
     if(!input||activeModule?.type!=='finish-story')return;
-    let start=input.selectionStart,end=input.selectionEnd;
-    const text=activeModule.story;
-    if(start===end){
-      while(start>0&&/[\p{L}'’-]/u.test(text[start-1]))start--;
-      while(end<text.length&&/[\p{L}'’-]/u.test(text[end]))end++;
-    }
-    const selection=text.slice(start,end);
-    if(!/^[\p{L}]+(?:['’-][\p{L}]+)*$/u.test(selection))return;
-    if(text[start-1]==='['&&text[end]===']')return;
-    editModule({story:text.slice(0,start)+'['+selection+']'+text.slice(end)});
-    requestAnimationFrame(()=>{input.focus();input.setSelectionRange(start+1,end+1);});
+    const result=markWordSelection(activeModule.story,input.selectionStart,input.selectionEnd);
+    if(!result)return;
+    editModule({story:result.text});
+    requestAnimationFrame(()=>{
+      input.focus();
+      input.setSelectionRange(result.selectionStart,result.selectionEnd);
+    });
   }
 
   function regenerateModule() {

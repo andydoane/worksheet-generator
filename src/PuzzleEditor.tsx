@@ -1,30 +1,24 @@
-import { generateMaze, generateWordSearch, type PuzzleModule } from './puzzleEngines.ts';
+import {generateMaze, generateWordSearch, parseSearchWords, type PuzzleModule} from './puzzleEngines.ts';
 
 export default function PuzzleEditor({module,onChange,showSolution}:{module:PuzzleModule;onChange:(patch:Partial<PuzzleModule>)=>void;showSolution:boolean}) {
   if(module.type==='word-search') {
-    const errors=module.words.trim()?[]:['Enter words to generate the puzzle.'];
+    const count=parseSearchWords(module.words).length;
     let info='';
-    if(!errors.length){
+    if(count){
       try{
         const grid=generateWordSearch(module);
         info=grid.placements.map(p=>p.word+': row '+(p.y+1)+', column '+(p.x+1)+' ('+p.direction+')').join('\n');
-      }catch{ /* validation messages appear below the editor */ }
+      }catch{/* input validation displays below */}
     }
     return <div className="activity-inputs">
-      <label id="search-words-label">Words or phrases (4–12)</label>
-      <ol className="word-search-editor-list" aria-labelledby="search-words-label">
-        {(module.words?module.words.split(/\r?\n/u):['']).map((item,i,all)=><li key={i}>
-          <span aria-hidden="true">{i+1}.</span>
-          <input aria-label={'Word or phrase '+(i+1)} value={item}
-            onChange={e=>onChange({words:all.map((word,j)=>i===j?e.target.value:word).join('\n')})}
-            placeholder={i===0?'Red Sea':'Word or phrase'}/>
-          <button type="button" aria-label={'Remove entry '+(i+1)}
-            disabled={all.length<=1} onClick={()=>onChange({words:all.filter((_,j)=>i!==j).join('\n')})}>×</button>
-        </li>)}
-      </ol>
-      <button type="button" className="word-search-add" disabled={module.words.split(/\r?\n/u).length>=12}
-        onClick={()=>onChange({words:(module.words?module.words+'\n':'')})}>+ Add word</button>
-      <p>Enter 4–12 entries. Spaces are shown in the word bank but omitted from the 12×10 puzzle (Red Sea becomes REDSEA). Each entry needs 2–12 letters excluding spaces.</p>
+      <label htmlFor="search-words">Words or phrases (4–12)</label>
+      <textarea id="search-words" rows={12} value={module.words} spellCheck={false}
+        placeholder={'Red Sea\nDry Land\nMoses\nPharaoh\nEgypt\nExodus'}
+        onChange={e=>onChange({words:e.target.value})}/>
+      <p className="word-search-count" role="status" aria-live="polite">
+        {count} of 12 words{count>12?' — over the limit':''}
+      </p>
+      <p>Type one word or short phrase per line; press Enter for the next entry or paste a list. Spaces appear in the bank, but not in the 12×10 puzzle.</p>
       {showSolution&&info&&<div className="puzzle-solution-data"><strong>Word positions</strong><pre>{info}</pre></div>}
     </div>;
   }
@@ -32,7 +26,7 @@ export default function PuzzleEditor({module,onChange,showSolution}:{module:Puzz
   try{
     const maze=generateMaze(module);
     answer='Correct exit: '+maze.correctExit.label+' ('+maze.correctExit.edge+' side), shortest path '+maze.solution.length+' cells.';
-  }catch{ /* shown through shared validation */ }
+  }catch{/* input validation displays below */}
   return <div className="activity-inputs">
     <label htmlFor="maze-statement">True-or-false statement</label>
     <textarea id="maze-statement" rows={4} value={module.statement}

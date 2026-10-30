@@ -1,5 +1,7 @@
 import { PDFDocument, rgb, type PDFFont, type PDFPage } from 'pdf-lib';
 import fontkit from '@pdf-lib/fontkit';
+import {embedNunitoWeights} from './nunitoPdf.ts';
+import type {ModuleFonts} from './modulePdf.ts';
 import { drawModulePdf } from './modulePdf.ts';
 import { slotKey, moduleForSize, type ModuleAssignments, type ActivityModule } from './modules.ts';
 import {
@@ -33,11 +35,7 @@ export type PdfFontFiles = {
   zillaSlab: Uint8Array | ArrayBuffer;
 };
 
-type Fonts = {
-  title: PDFFont;
-  body: PDFFont;
-  puzzle: PDFFont;
-};
+type Fonts = ModuleFonts;
 
 type PdfRect = { x: number; y: number; width: number; height: number };
 
@@ -272,13 +270,13 @@ export async function createBookletPdf(draft: PdfDraft, fontFiles: PdfFontFiles)
       throw new Error('Could not embed ' + name + ' in the PDF: ' + (error instanceof Error ? error.message : String(error)));
     }
   }
-  const [title, body, puzzle] = await Promise.all([
-    embedChecked('Mouse Memoirs', fontFiles.mouseMemoirs),
-    embedChecked('Nunito Sans', fontFiles.nunitoSans),
-    // Full-glyph fontTools reserialization fixes the original fontkit error.
-    embedChecked('Zilla Slab Bold', fontFiles.zillaSlab),
-  ]);
-  const fonts: Fonts = { title, body, puzzle };
+  // True weight-specific outlines are resolved from Nunito's variable font.
+  // These are individual vector TrueType subsets, not synthetic stroke effects.
+  const {body,bodyBold,bank}=await embedNunitoWeights(document,fontFiles.nunitoSans);
+  const title=await embedChecked('Mouse Memoirs',fontFiles.mouseMemoirs);
+  // Full-glyph fontTools reserialization fixes Zilla's original fontkit error.
+  const puzzle=await embedChecked('Zilla Slab Bold',fontFiles.zillaSlab);
+  const fonts: Fonts = {title,body,bodyBold,bank,puzzle};
 
   const sheets = getPrintableSheetRegions(draft);
   for (let sheetIndex = 0; sheetIndex < sheets.length; sheetIndex++) {
