@@ -1,5 +1,6 @@
 import type { PageNumber, RegionSize } from './booklet.ts';
-import { shuffledIndices } from './shuffle.ts';
+import { shuffledIndices, derangedIndices } from './shuffle.ts';
+import { STORY_VERSE_MODULES, blankStoryVerseModule, isStoryVerseId, isStoryVerseModule, validateStoryVerse, type StoryVerseModule, type StoryVerseId } from './storyVerseModules.ts';
 export { shuffledIndices } from './shuffle.ts';
 import { SMALL_MODULES, blankSmallModule, isSmallModule, isSmallModuleId, validateSmallModule, type SmallModule, type SmallModuleId } from './smallModules.ts';
 
@@ -8,12 +9,12 @@ import { SMALL_MODULES, blankSmallModule, isSmallModule, isSmallModuleId, valida
  * Each module has one typed payload, a compatible region size, and shared
  * parsing/validation. HTML preview and PDF use the same derived content.
  */
-export type ModuleId = 'draw-picture' | 'match-words' | 'finish-story' | SmallModuleId;
+export type ModuleId = 'draw-picture' | 'match-words' | 'finish-story' | SmallModuleId | StoryVerseId;
 
 export type DrawPictureModule = { type: 'draw-picture'; prompt: string };
 export type MatchWordsModule = { type: 'match-words'; pairs: string; seed: number };
 export type FinishStoryModule = { type: 'finish-story'; story: string; seed: number };
-export type ActivityModule = DrawPictureModule | MatchWordsModule | FinishStoryModule | SmallModule;
+export type ActivityModule = DrawPictureModule | MatchWordsModule | FinishStoryModule | SmallModule | StoryVerseModule;
 export type ModuleAssignments = Record<string, ActivityModule>;
 
 export const MODULES: readonly { id: ModuleId; name: string; size: RegionSize; description: string }[] = [
@@ -21,6 +22,7 @@ export const MODULES: readonly { id: ModuleId; name: string; size: RegionSize; d
   { id: 'match-words', name: 'Match the Words', size: 'medium', description: 'Match 3–6 pairs by drawing connecting lines.' },
   { id: 'finish-story', name: 'Finish the Story', size: 'large', description: 'Complete the story using a two-row word bank.' },
   ...SMALL_MODULES,
+  ...STORY_VERSE_MODULES,
 ];
 
 export function slotKey(page: PageNumber, regionId: string): string {
@@ -36,7 +38,7 @@ export function blankModule(type: ModuleId): ActivityModule {
     case 'draw-picture': return { type, prompt: '' };
     case 'match-words': return { type, pairs: '', seed: 1 };
     case 'finish-story': return { type, story: '', seed: 1 };
-    default: return blankSmallModule(type);
+    default: return isStoryVerseId(type) ? blankStoryVerseModule(type) : blankSmallModule(type);
   }
 }
 
@@ -47,7 +49,7 @@ export function isActivityModule(raw: unknown): raw is ActivityModule {
     case 'draw-picture': return typeof object.prompt === 'string';
     case 'match-words': return typeof object.pairs === 'string' && Number.isSafeInteger(object.seed) && Number(object.seed) >= 0;
     case 'finish-story': return typeof object.story === 'string' && Number.isSafeInteger(object.seed) && Number(object.seed) >= 0;
-    default: return isSmallModuleId(object.type) && isSmallModule(raw);
+    default: return isStoryVerseId(object.type) ? isStoryVerseModule(raw) : isSmallModuleId(object.type) && isSmallModule(raw);
   }
 }
 
@@ -95,7 +97,7 @@ export function parseStory(input: string): { parts: StoryPart[]; answers: string
 
 export function matchRows(module: MatchWordsModule): { left: string; right: string }[] {
   const pairs = parsePairs(module.pairs);
-  const indices = shuffledIndices(pairs.length, module.pairs, module.seed);
+  const indices = derangedIndices(pairs.length, module.pairs, module.seed);
   return pairs.map((pair, i) => ({ left: pair.left, right: pairs[indices[i]].right }));
 }
 
@@ -107,6 +109,7 @@ export function storyBank(module: FinishStoryModule): string[] {
 /** Returns user-facing messages; empty inputs aren't silently printed as completed puzzles. */
 export function validateModule(module: ActivityModule): string[] {
   if (isSmallModule(module)) return validateSmallModule(module);
+  if (isStoryVerseId(module.type)) return validateStoryVerse(module as StoryVerseModule);
   if (module.type === 'draw-picture') {
     if (!module.prompt.trim()) return ['Enter what the child should draw.'];
     if (module.prompt.trim().length > 105) return ['Keep the drawing prompt under 105 characters.'];
@@ -124,6 +127,7 @@ export function validateModule(module: ActivityModule): string[] {
     }
     return errors;
   }
+  if (module.type !== 'finish-story') return ['Unknown or invalid activity module.'];
   const story = parseStory(module.story);
   const errors: string[] = [];
   if (story.answers.length < 6 || story.answers.length > 12) errors.push('Use 6–12 [bracketed] missing words.');

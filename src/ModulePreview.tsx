@@ -1,6 +1,8 @@
 import { matchRows, parseStory, storyBank, validateModule, MODULES, type ActivityModule } from './modules';
 import { isSmallModule } from './smallModules';
 import SmallModulePreview from './SmallModulePreview';
+import { isStoryVerseModule } from './storyVerseModules';
+import StoryVersePreview from './StoryVersePreview';
 
 export default function ModulePreview({ module }: { module: ActivityModule }) {
   const errors = validateModule(module);
@@ -14,6 +16,7 @@ export default function ModulePreview({ module }: { module: ActivityModule }) {
   }
 
   if (isSmallModule(module)) return <SmallModulePreview module={module}/>;
+  if (isStoryVerseModule(module)) return <StoryVersePreview module={module}/>;
 
   if (module.type === 'draw-picture') {
     return (

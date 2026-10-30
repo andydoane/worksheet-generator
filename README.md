@@ -2,6 +2,40 @@
 
 A browser-based editor for four-page Bible story worksheet booklets.
 
+## PR 6 — Story and verse activities
+
+Six new modules, all with editable content, browser previews, saved assignments,
+and vector PDF output:
+
+| Activity | Size | Input | Worksheet |
+|---|---|---|---|
+| Story Order | Large | 5–8 chronological events, one per line | Shuffled bordered events with number circles |
+| Sort the Story | Large | 4–8 statements ending in true/false | Shuffled lettered bank and True / False answer boxes |
+| Draw the Story | Large | 4–6 prompts | 2×2 or 3×2 drawing panels with captions |
+| Finish the Verse | Medium | Reference + verse with 4–8 [bracketed] words | Two-row word bank and letter-height writing squares |
+| Unscramble the Verse | Medium | Reference + verse with 4–6 [bracketed] words | Blank writing lines above scrambled letters |
+| Circle the Mistakes | Medium | Paragraph + number of errors | “Circle all X mistakes!” above the text |
+
+**Match the Words refinement:** the right column is now fully deranged, so
+none of the shuffled answers remains directly opposite its corresponding
+left-hand word. This applies to the web preview and PDF.
+
+The memory verse and reference from **Lesson details** are prefilled when
+you first create a verse module, ready for you to bracket the missing words.
+Previously saved drafts and module assignments remain compatible.
+
+Invalid or overflowing content is rejected with an error rather than silently
+clipped. This preserves existing inch-based margins, the three project fonts
+(including Zilla Slab Bold in PDFs), and outside 4 | 1 / inside 2 | 3 booklet
+imposition.
+
+**Deferred:** teacher answer keys, optical centering, balanced wrapping, and
+decorative illustration polish. Sort the Story retains true/false flags for an
+eventual answer key; Circle the Mistakes captures only the number, as specified.
+
+Run `npm run sample:pr6` to create two demonstration booklets in
+`artifacts/`. GitHub Actions runs tests, builds, and uploads samples on PRs.
+
 ## PR 5 — All eight small modules
 
 Small sections now support all eight activities from the original module specifications:

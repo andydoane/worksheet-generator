@@ -3,6 +3,8 @@ import { downloadBookletPdf } from './exportPdf';
 import ModulePreview from './ModulePreview';
 import SmallModuleEditor from './SmallModuleEditor';
 import { isSmallModule } from './smallModules';
+import { isStoryVerseModule } from './storyVerseModules';
+import StoryVerseEditor from './StoryVerseEditor';
 import {
   blankModule, moduleForSize, readAssignments, slotKey, validateModule,
   type ActivityModule, type ModuleAssignments, type ModuleId,
@@ -212,6 +214,8 @@ export default function App() {
       const modules = { ...previous.modules };
       if (type === 'first-letters') {
         modules[activeKey] = { type, reference: previous.verseReference, verse: previous.verseText };
+      } else if (type === 'finish-verse' || type === 'unscramble-verse') {
+        modules[activeKey] = { type, reference: previous.verseReference, verse: previous.verseText, seed: 1 };
       } else if (type) modules[activeKey] = blankModule(type);
       else delete modules[activeKey];
       return { ...previous, modules };
@@ -282,7 +286,7 @@ export default function App() {
             </button>
           ))}
         </div>
-        <div className="sidebar-foot"><span aria-hidden="true">●</span> Small modules release · PR 5</div>
+        <div className="sidebar-foot"><span aria-hidden="true">●</span> Story & verse activities · PR 6</div>
       </aside>
 
       <div className="workspace">
@@ -430,12 +434,18 @@ export default function App() {
                   {activeModule && isSmallModule(activeModule) && (
                     <SmallModuleEditor module={activeModule} onChange={(patch) => editModule(patch)} />
                   )}
+                  {activeModule && isStoryVerseModule(activeModule) && (
+                    <StoryVerseEditor module={activeModule} onChange={(patch) => editModule(patch)} />
+                  )}
                   {activeModule && 'seed' in activeModule && (
                     <button type="button" className="regenerate-module" onClick={regenerateModule}>
                       Shuffle {activeModule.type === 'match-words' ? 'matching answers'
                         : activeModule.type === 'finish-story' ? 'word bank'
                         : activeModule.type === 'multiple-choice' ? 'answer choices'
-                        : activeModule.type === 'unscramble-words' ? 'letters'
+                        : activeModule.type === 'unscramble-words' || activeModule.type === 'unscramble-verse' ? 'letters'
+                        : activeModule.type === 'finish-verse' ? 'verse word bank'
+                        : activeModule.type === 'story-order' ? 'event order'
+                        : activeModule.type === 'sort-story' ? 'statement order'
                         : 'word order'} ↻
                     </button>
                   )}
