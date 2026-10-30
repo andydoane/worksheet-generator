@@ -75,8 +75,8 @@ test('true-or-false maze is a fully connected, symmetric 35×14 perfect maze',()
     assert.equal(m.walls.length,MAZE_ROWS);
     assert.ok(m.walls.every(row=>row.length===MAZE_COLS));
     assert.ok(checkMaze(m));
-    assert.equal(m.exits.filter(e=>e.edge==='right').length,1);
-    assert.equal(m.exits.filter(e=>e.edge==='bottom').length,1);
+    assert.equal(m.exits.filter(e=>e.edge==='right'&&e.label==='FALSE').length,1);
+    assert.equal(m.exits.filter(e=>e.edge==='left'&&e.label==='TRUE').length,1);
     assert.deepEqual(m.solution,solveMazePath(m.walls,m.entrance,m.correctExit));
     assert.ok(m.solution.length>1);
     assert.equal(m.correctExit.label,'TRUE');
@@ -88,7 +88,10 @@ test('true-or-false maze is a fully connected, symmetric 35×14 perfect maze',()
       if(y<MAZE_ROWS-1&&!(m.walls[y][x]&SOUTH))edges++;
     }
     assert.equal(edges,MAZE_COLS*MAZE_ROWS-1);
-    assert.equal(m.walls[m.entrance.y][m.entrance.x]&WEST,0);
+    assert.equal(m.walls[m.entrance.y][m.entrance.x]&SOUTH,0);
+    assert.equal(m.entrance.x,Math.floor(MAZE_COLS/2));
+    assert.equal(m.entrance.y,MAZE_ROWS-1);
+    assert.equal(m.exits[0].edge,'left');
   }
 });
 

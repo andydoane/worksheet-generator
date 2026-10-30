@@ -7,6 +7,8 @@ import { isStoryVerseModule } from './storyVerseModules';
 import StoryVerseEditor from './StoryVerseEditor';
 import { isPuzzleId, isPuzzleModule } from './puzzleEngines';
 import PuzzleEditor from './PuzzleEditor';
+import {isCryptogram,isCryptogramId} from './cryptograms.ts';
+import CryptogramEditor from './CryptogramEditor';
 import {
   blankModule, moduleForSize, readAssignments, slotKey, validateModule,
   type ActivityModule, type ModuleAssignments, type ModuleId,
@@ -220,6 +222,10 @@ export default function App() {
         modules[activeKey] = { type, reference: previous.verseReference, verse: previous.verseText };
       } else if (type === 'finish-verse' || type === 'unscramble-verse') {
         modules[activeKey] = { type, reference: previous.verseReference, verse: previous.verseText, seed: 1 };
+      } else if (type === 'verse-cryptogram') {
+        modules[activeKey] = {type,reference:previous.verseReference,verse:previous.verseText,seed:1};
+      } else if (type === 'big-idea-cryptogram') {
+        modules[activeKey] = {type,idea:previous.bigIdea,seed:1};
       } else if (type) modules[activeKey] = blankModule(type);
       else delete modules[activeKey];
       return { ...previous, modules };
@@ -291,7 +297,7 @@ export default function App() {
             </button>
           ))}
         </div>
-        <div className="sidebar-foot"><span aria-hidden="true">●</span> Word search & maze · PR 7</div>
+        <div className="sidebar-foot"><span aria-hidden="true">●</span> Cryptograms & maze labels · PR 8b</div>
       </aside>
 
       <div className="workspace">
@@ -445,6 +451,9 @@ export default function App() {
                   {activeModule && isPuzzleModule(activeModule) && (
                     <PuzzleEditor module={activeModule} onChange={(patch) => editModule(patch)} showSolution={showSolution} />
                   )}
+                  {activeModule && isCryptogram(activeModule) && (
+                    <CryptogramEditor module={activeModule} onChange={(patch) => editModule(patch)} />
+                  )}
                   {activeModule && isPuzzleModule(activeModule) && validation.length === 0 && (
                     <button type="button" className="puzzle-solution-toggle"
                       aria-pressed={showSolution} onClick={() => setSolutionKey(showSolution ? null : activeKey)}>
@@ -453,7 +462,7 @@ export default function App() {
                   )}
                   {activeModule && 'seed' in activeModule && (
                     <button type="button" className="regenerate-module" onClick={regenerateModule}>
-                      {isPuzzleId(activeModule.type) ? 'Regenerate puzzle' : 'Shuffle ' + (activeModule.type === 'match-words' ? 'matching answers'
+                      {isCryptogramId(activeModule.type) ? 'Regenerate symbol key' : isPuzzleId(activeModule.type) ? 'Regenerate puzzle' : 'Shuffle ' + (activeModule.type === 'match-words' ? 'matching answers'
                         : activeModule.type === 'finish-story' ? 'word bank'
                         : activeModule.type === 'multiple-choice' ? 'answer choices'
                         : activeModule.type === 'unscramble-words' || activeModule.type === 'unscramble-verse' ? 'letters'

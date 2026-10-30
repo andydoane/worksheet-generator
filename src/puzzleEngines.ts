@@ -143,7 +143,7 @@ export function wordSearchCells(result:WordSearchGrid):Set<string>{
 
 /** Wall bitmasks NORTH=1, EAST=2, SOUTH=4, WEST=8. */
 export const NORTH=1,EAST=2,SOUTH=4,WEST=8;
-type MazeExit = {x:number;y:number;edge:'right'|'bottom';label:'TRUE'|'FALSE'};
+type MazeExit = {x:number;y:number;edge:'left'|'right';label:'TRUE'|'FALSE'};
 export type MazePoint={x:number;y:number};
 export type MazeGrid={
   walls:number[][];
@@ -184,50 +184,66 @@ export function solveMazePath(walls:number[][],start:MazePoint,end:MazePoint):Ma
   }
   return path.reverse();
 }
-export function generateMaze(module:TrueFalseMaze):MazeGrid{
+/**
+ * Keep the 35×14 randomized depth-first corridor generator, but move the
+ * entry to the bottom center and make left=TRUE, right=FALSE. To avoid a
+ * very long child-sized trek, select the best of 24 deterministic maze
+ * candidates, preferring short and reasonably balanced exit routes.
+ */
+export function generateMaze(module:TrueFalseMaze):MazeGrid {
   const errors=validatePuzzle(module);
   if(errors.length)throw Error(errors.join(' '));
-  const rng=randomStream(module.statement,module.seed);
-  const walls:number[][]=Array.from({length:MAZE_ROWS},()=>Array(MAZE_COLS).fill(15));
-  const entrance={x:0,y:Math.floor(MAZE_ROWS/2)};
-  const visited:boolean[][]=Array.from({length:MAZE_ROWS},()=>Array(MAZE_COLS).fill(false));
-  const stack:MazePoint[]=[entrance];visited[entrance.y][entrance.x]=true;
-  while(stack.length){
-    const here=stack[stack.length-1];
-    const options=dirs.filter(d=>{
-      const x=here.x+d.dx,y=here.y+d.dy;
-      return inside(x,y)&&!visited[y][x];
-    });
-    if(!options.length){stack.pop();continue;}
-    const d=options[Math.floor(rng()*options.length)];
-    const next={x:here.x+d.dx,y:here.y+d.dy};
-    walls[here.y][here.x]&=~d.from;
-    walls[next.y][next.x]&=~d.to;
-    visited[next.y][next.x]=true;stack.push(next);
-  }
-  // Two distinct boundary exits: east wall and bottom wall (middle/right).
-  const right={x:MAZE_COLS-1,y:2+Math.floor(rng()*(MAZE_ROWS-4)),edge:'right' as const};
-  const bottom={x:Math.floor(MAZE_COLS*.58)+Math.floor(rng()*9),y:MAZE_ROWS-1,edge:'bottom' as const};
-  const trueRight=rng()<.5;
+  const entrance={x:Math.floor(MAZE_COLS/2),y:MAZE_ROWS-1};
   const exits:[MazeExit,MazeExit]=[
-    {...right,label:trueRight?'TRUE':'FALSE'},
-    {...bottom,label:trueRight?'FALSE':'TRUE'},
+    {x:0,y:Math.floor(MAZE_ROWS/2),edge:'left',label:'TRUE'},
+    {x:MAZE_COLS-1,y:Math.floor(MAZE_ROWS/2),edge:'right',label:'FALSE'},
   ];
-  walls[entrance.y][entrance.x]&=~WEST;
-  walls[right.y][right.x]&=~EAST;
-  walls[bottom.y][bottom.x]&=~SOUTH;
+  let bestWalls:number[][]|null=null;
+  let bestScore=Infinity;
+  for(let trial=0;trial<24;trial++){
+    const rng=randomStream(module.statement,module.seed*101+trial*871);
+    const walls:number[][]=Array.from({length:MAZE_ROWS},()=>Array(MAZE_COLS).fill(15));
+    const visited:boolean[][]=Array.from({length:MAZE_ROWS},()=>Array(MAZE_COLS).fill(false));
+    const stack:MazePoint[]=[entrance];visited[entrance.y][entrance.x]=true;
+    while(stack.length){
+      const here=stack[stack.length-1];
+      const options=dirs.filter(d=>{
+        const x=here.x+d.dx,y=here.y+d.dy;
+        return inside(x,y)&&!visited[y][x];
+      });
+      if(!options.length){stack.pop();continue;}
+      const d=options[Math.floor(rng()*options.length)];
+      const next={x:here.x+d.dx,y:here.y+d.dy};
+      walls[here.y][here.x]&=~d.from;
+      walls[next.y][next.x]&=~d.to;
+      visited[next.y][next.x]=true;stack.push(next);
+    }
+    walls[entrance.y][entrance.x]&=~SOUTH;
+    walls[exits[0].y][exits[0].x]&=~WEST;
+    walls[exits[1].y][exits[1].x]&=~EAST;
+    const leftLength=solveMazePath(walls,entrance,exits[0]).length;
+    const rightLength=solveMazePath(walls,entrance,exits[1]).length;
+    const score=Math.max(leftLength,rightLength)*3+
+      Math.abs(leftLength-rightLength)+
+      (leftLength+rightLength)*.15;
+    if(score<bestScore){bestScore=score;bestWalls=walls;}
+  }
+  if(!bestWalls)throw Error('Could not build a valid maze.');
   const correctExit=exits.find(e=>(e.label==='TRUE')===module.answer)!;
-  const solution=solveMazePath(walls,entrance,correctExit);
-  const result={walls,entrance,exits,correctExit,solution};
+  const solution=solveMazePath(bestWalls,entrance,correctExit);
+  const result={walls:bestWalls,entrance,exits,correctExit,solution};
   if(!checkMaze(result))throw Error('Maze connectivity check failed. Regenerate the puzzle.');
   return result;
 }
-export function checkMaze(maze:MazeGrid):boolean{
+
+export function checkMaze(maze:MazeGrid):boolean {
   const {walls,entrance,exits,correctExit,solution}=maze;
   if(walls.length!==MAZE_ROWS||walls.some(row=>row.length!==MAZE_COLS))return false;
-  if(!same(entrance,{x:0,y:Math.floor(MAZE_ROWS/2)}))return false;
-  if((walls[entrance.y][entrance.x]&WEST)!==0)return false;
-  if(exits.length!==2||new Set(exits.map(e=>e.label)).size!==2)return false;
+  const expectedEntrance={x:Math.floor(MAZE_COLS/2),y:MAZE_ROWS-1};
+  if(!same(entrance,expectedEntrance) || (walls[entrance.y][entrance.x]&SOUTH)!==0)return false;
+  if(exits.length!==2||
+     !exits.some(e=>e.edge==='left'&&e.label==='TRUE'&&e.x===0)||
+     !exits.some(e=>e.edge==='right'&&e.label==='FALSE'&&e.x===MAZE_COLS-1))return false;
   if(!exits.some(e=>same(e,correctExit)&&e.label===correctExit.label))return false;
   for(let y=0;y<MAZE_ROWS;y++)for(let x=0;x<MAZE_COLS;x++){
     const cell=walls[y][x];
@@ -237,10 +253,14 @@ export function checkMaze(maze:MazeGrid):boolean{
       if(!inside(nx,ny))continue;
       if(Boolean(cell&d.from)!==Boolean(walls[ny][nx]&d.to))return false;
     }
+    // Exactly three boundary openings: entrance + two labeled exits.
+    if(y===0 && !(cell&NORTH) ||
+       y===MAZE_ROWS-1 && !(cell&SOUTH) && !same({x,y},entrance) ||
+       x===0 && !(cell&WEST) && !exits.some(e=>e.edge==='left'&&e.x===x&&e.y===y) ||
+       x===MAZE_COLS-1 && !(cell&EAST) && !exits.some(e=>e.edge==='right'&&e.x===x&&e.y===y))return false;
   }
   for(const exit of exits){
-    const boundary=exit.edge==='right'?EAST:SOUTH;
-    if(exit.edge==='right'&&exit.x!==MAZE_COLS-1 || exit.edge==='bottom'&&exit.y!==MAZE_ROWS-1)return false;
+    const boundary=exit.edge==='left'?WEST:EAST;
     if(walls[exit.y][exit.x]&boundary)return false;
     if(!solveMazePath(walls,entrance,exit).length)return false;
   }
