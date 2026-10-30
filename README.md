@@ -29,7 +29,7 @@ Each folded booklet page is 5.5 × 8.5 inches with a 0.35-inch outer margin, lea
 - Fixed front cover: a medium-size title/reference area above a large activity area.
 - Six valid arrangements for pages 2–4.
 - Print-friendly black/grey vector borders, safe-area padding, and placeholder region labels.
-- Embedded project fonts in PDFs: **Mouse Memoirs** for the title, **Nunito Sans** for text, and **Zilla Slab Bold** for labels.
+- Embedded PDF fonts: **Mouse Memoirs** for the title and **Nunito Sans** for body text and placeholder labels. The supplied **Zilla Slab Bold** file is still used in the web preview, but its glyph data is incompatible with the current PDF font library; printable puzzle-font support will be revisited with the puzzle modules.
 - Browser download of a two-page PDF without any extra account or server.
 - Automated tests for geometry, imposition, PDF page count, and 11 × 8.5-inch dimensions.
 - A downloadable **sample-bifold-booklet** artifact in the GitHub Actions run for each PR.
@@ -58,4 +58,4 @@ Lesson data remains in this browser's local storage. Reloading the page preserve
 
 ## Fonts and licensing
 
-Project font files are already present in the repository under `fonts/`: Mouse Memoirs Regular, Nunito Sans Variable, and Zilla Slab Bold. The PDF exporter embeds those same fonts using `pdf-lib` and `@pdf-lib/fontkit`. Keep their licenses in mind if distributing modified font files in the future.
+Project font files are already present in the repository under `fonts/`: Mouse Memoirs Regular, Nunito Sans Variable, and Zilla Slab Bold. The PDF exporter embeds Mouse Memoirs and Nunito Sans using `pdf-lib` and `@pdf-lib/fontkit`; Zilla Slab remains available to the browser interface. Keep their licenses in mind if distributing modified font files in the future.

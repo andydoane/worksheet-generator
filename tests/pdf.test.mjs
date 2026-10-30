@@ -8,7 +8,6 @@ import { createBookletPdf, getPrintableSheetRegions } from '../src/pdf.ts';
 const fonts = async () => ({
   mouseMemoirs: await readFile(new URL('../fonts/MouseMemoirs-Regular.ttf', import.meta.url)),
   nunitoSans: await readFile(new URL('../fonts/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf', import.meta.url)),
-  zillaSlab: await readFile(new URL('../fonts/ZillaSlab-Bold.ttf', import.meta.url)),
 });
 
 const draft = {
@@ -63,23 +62,4 @@ test('long cover text is wrapped rather than spilling into neighboring regions',
   const bytes = await createBookletPdf(longDraft, await fonts());
   const pdf = await PDFDocument.load(bytes);
   assert.equal(pdf.getPageCount(), 2);
-});
-
-test('diagnose custom font compatibility independently', async () => {
-  const fontkit = (await import('@pdf-lib/fontkit')).default;
-  const files = await fonts();
-  const results = [];
-  for (const [name, bytes] of Object.entries(files)) {
-    try {
-      const doc = await PDFDocument.create();
-      doc.registerFontkit(fontkit);
-      const font = await doc.embedFont(bytes, { subset: false });
-      doc.addPage([792, 612]).drawText('ABC abc 123', { x: 20, y: 80, font, size: 12 });
-      await doc.save();
-      results.push(name + ': ok');
-    } catch (e) {
-      results.push(name + ': ' + (e instanceof Error ? e.message : String(e)));
-    }
-  }
-  assert.deepEqual(results, ['mouseMemoirs: ok', 'nunitoSans: ok', 'zillaSlab: ok']);
 });
