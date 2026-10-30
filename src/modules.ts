@@ -1,5 +1,6 @@
 import type { PageNumber, RegionSize } from './booklet.ts';
 import { shuffledIndices, derangedIndices } from './shuffle.ts';
+import { PUZZLE_MODULES, blankPuzzleModule, isPuzzleId, isPuzzleModule, validatePuzzle, type PuzzleModule, type PuzzleId } from './puzzleEngines.ts';
 import { STORY_VERSE_MODULES, blankStoryVerseModule, isStoryVerseId, isStoryVerseModule, validateStoryVerse, type StoryVerseModule, type StoryVerseId } from './storyVerseModules.ts';
 export { shuffledIndices } from './shuffle.ts';
 import { SMALL_MODULES, blankSmallModule, isSmallModule, isSmallModuleId, validateSmallModule, type SmallModule, type SmallModuleId } from './smallModules.ts';
@@ -9,12 +10,12 @@ import { SMALL_MODULES, blankSmallModule, isSmallModule, isSmallModuleId, valida
  * Each module has one typed payload, a compatible region size, and shared
  * parsing/validation. HTML preview and PDF use the same derived content.
  */
-export type ModuleId = 'draw-picture' | 'match-words' | 'finish-story' | SmallModuleId | StoryVerseId;
+export type ModuleId = 'draw-picture' | 'match-words' | 'finish-story' | SmallModuleId | StoryVerseId | PuzzleId;
 
 export type DrawPictureModule = { type: 'draw-picture'; prompt: string };
 export type MatchWordsModule = { type: 'match-words'; pairs: string; seed: number };
 export type FinishStoryModule = { type: 'finish-story'; story: string; seed: number };
-export type ActivityModule = DrawPictureModule | MatchWordsModule | FinishStoryModule | SmallModule | StoryVerseModule;
+export type ActivityModule = DrawPictureModule | MatchWordsModule | FinishStoryModule | SmallModule | StoryVerseModule | PuzzleModule;
 export type ModuleAssignments = Record<string, ActivityModule>;
 
 export const MODULES: readonly { id: ModuleId; name: string; size: RegionSize; description: string }[] = [
@@ -23,6 +24,7 @@ export const MODULES: readonly { id: ModuleId; name: string; size: RegionSize; d
   { id: 'finish-story', name: 'Finish the Story', size: 'large', description: 'Complete the story using a two-row word bank.' },
   ...SMALL_MODULES,
   ...STORY_VERSE_MODULES,
+  ...PUZZLE_MODULES,
 ];
 
 export function slotKey(page: PageNumber, regionId: string): string {
@@ -38,7 +40,7 @@ export function blankModule(type: ModuleId): ActivityModule {
     case 'draw-picture': return { type, prompt: '' };
     case 'match-words': return { type, pairs: '', seed: 1 };
     case 'finish-story': return { type, story: '', seed: 1 };
-    default: return isStoryVerseId(type) ? blankStoryVerseModule(type) : blankSmallModule(type);
+    default: return isPuzzleId(type) ? blankPuzzleModule(type) : isStoryVerseId(type) ? blankStoryVerseModule(type) : blankSmallModule(type);
   }
 }
 
@@ -49,7 +51,7 @@ export function isActivityModule(raw: unknown): raw is ActivityModule {
     case 'draw-picture': return typeof object.prompt === 'string';
     case 'match-words': return typeof object.pairs === 'string' && Number.isSafeInteger(object.seed) && Number(object.seed) >= 0;
     case 'finish-story': return typeof object.story === 'string' && Number.isSafeInteger(object.seed) && Number(object.seed) >= 0;
-    default: return isStoryVerseId(object.type) ? isStoryVerseModule(raw) : isSmallModuleId(object.type) && isSmallModule(raw);
+    default: return isPuzzleId(object.type) ? isPuzzleModule(raw) : isStoryVerseId(object.type) ? isStoryVerseModule(raw) : isSmallModuleId(object.type) && isSmallModule(raw);
   }
 }
 
@@ -109,6 +111,7 @@ export function storyBank(module: FinishStoryModule): string[] {
 /** Returns user-facing messages; empty inputs aren't silently printed as completed puzzles. */
 export function validateModule(module: ActivityModule): string[] {
   if (isSmallModule(module)) return validateSmallModule(module);
+  if (isPuzzleId(module.type)) return validatePuzzle(module as PuzzleModule);
   if (isStoryVerseId(module.type)) return validateStoryVerse(module as StoryVerseModule);
   if (module.type === 'draw-picture') {
     if (!module.prompt.trim()) return ['Enter what the child should draw.'];
