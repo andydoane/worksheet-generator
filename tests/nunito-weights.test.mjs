@@ -5,16 +5,19 @@ import {PDFDocument,PDFDict,PDFName} from 'pdf-lib';
 import {embedNunitoWeights,NUNITO_WEIGHTS} from '../src/nunitoPdf.ts';
 import {createBookletPdf} from '../src/pdf.ts';
 import {DEFAULT_LAYOUTS} from '../src/booklet.ts';
-const source=()=>readFile(new URL('../fonts/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf',import.meta.url));
+const source=(weight)=>readFile(new URL('../fonts/NunitoSans-'+weight+'.ttf',import.meta.url));
+const instances=async()=>({body:await source(600),bodyBold:await source(750),bank:await source(900)});
 const files=async()=>({
   mouseMemoirs:await readFile(new URL('../fonts/MouseMemoirs-Regular.ttf',import.meta.url)),
-  nunitoSans:await source(),
+  nunitoSans:await source(600),
+  nunitoSans750:await source(750),
+  nunitoSans900:await source(900),
   zillaSlab:await readFile(new URL('../fonts/ZillaSlab-Bold-pdf.ttf',import.meta.url)),
 });
-test('Nunito uses three distinct physical variable-font instances, not a single ExtraLight face',async()=>{
+test('Nunito uses three actual static font weights, not variable ExtraLight glyphs',async()=>{
   assert.deepEqual(NUNITO_WEIGHTS,{body:600,bodyBold:750,bank:900});
   const pdf=await PDFDocument.create();
-  const {body,bodyBold,bank}=await embedNunitoWeights(pdf,await source());
+  const {body,bodyBold,bank}=await embedNunitoWeights(pdf,await instances());
   assert.equal(new Set([body.ref.toString(),bodyBold.ref.toString(),bank.ref.toString()]).size,3);
   const page=pdf.addPage([792,612]);
   for(const [i,font] of [body,bodyBold,bank].entries()){
@@ -22,14 +25,16 @@ test('Nunito uses three distinct physical variable-font instances, not a single 
     page.drawText('God loves every child.',{x:80,y:500-i*45,size:18,font});
   }
   const bytes=await pdf.save();
-  assert.ok(bytes.length>2000,'embedded TrueType subset should produce a nonempty PDF');
+  assert.ok(bytes.length>20000,'all three actual TrueType fonts should embed');
   const loaded=await PDFDocument.load(bytes);
   assert.equal(loaded.getPageCount(),1);
   const names=loaded.context.enumerateIndirectObjects()
     .filter(([,obj])=>obj instanceof PDFDict)
     .map(([,obj])=>obj.get(PDFName.of('BaseFont'))?.toString()??'');
-  assert.ok(names.filter(name=>/Nunito/i.test(name)).length>=3,
-    'Expected three vector Nunito font resources: '+names.join(', '));
+  for(const weight of [600,750,900]){
+    assert.ok(names.some(name=>name.includes('NunitoSans-'+weight)),
+      'Missing Nunito '+weight+' vector face: '+names.join(', '));
+  }
 });
 test('all font weights work in a normal two-page booklet',async()=>{
   const pdf=await PDFDocument.load(await createBookletPdf({

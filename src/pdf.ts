@@ -31,7 +31,9 @@ export type PdfDraft = {
 
 export type PdfFontFiles = {
   mouseMemoirs: Uint8Array | ArrayBuffer;
-  nunitoSans: Uint8Array | ArrayBuffer;
+  nunitoSans: Uint8Array | ArrayBuffer; // Static 600 for current callers; old variable font remains a legacy fallback
+  nunitoSans750?: Uint8Array | ArrayBuffer;
+  nunitoSans900?: Uint8Array | ArrayBuffer;
   zillaSlab: Uint8Array | ArrayBuffer;
 };
 
@@ -270,9 +272,12 @@ export async function createBookletPdf(draft: PdfDraft, fontFiles: PdfFontFiles)
       throw new Error('Could not embed ' + name + ' in the PDF: ' + (error instanceof Error ? error.message : String(error)));
     }
   }
-  // True weight-specific outlines are resolved from Nunito's variable font.
-  // These are individual vector TrueType subsets, not synthetic stroke effects.
-  const {body,bodyBold,bank}=await embedNunitoWeights(document,fontFiles.nunitoSans);
+  // Real static font outlines with a reliable complete cmap: no missing glyphs.
+  const {body,bodyBold,bank}=await embedNunitoWeights(document,{
+    body:fontFiles.nunitoSans,
+    bodyBold:fontFiles.nunitoSans750??fontFiles.nunitoSans,
+    bank:fontFiles.nunitoSans900??fontFiles.nunitoSans,
+  });
   const title=await embedChecked('Mouse Memoirs',fontFiles.mouseMemoirs);
   // Full-glyph fontTools reserialization fixes Zilla's original fontkit error.
   const puzzle=await embedChecked('Zilla Slab Bold',fontFiles.zillaSlab);

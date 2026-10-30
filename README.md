@@ -26,10 +26,12 @@ seeds remain compatible.
 
 ### Typography and reusable layout system
 
-- **Three real Nunito Sans instances for PDF** from the existing local variable
-  font: 600 for body, 750 for emphasis/instructions and 900 for word banks.
-  The fontkit variable outlines are embedded as individual TrueType subsets:
-  no fake bold, emoji, rasterization or external font downloads.
+- **Three real Nunito Sans PDF faces** generated once from the project's
+  licensed variable font and committed as static TTFs: 600 for body,
+  750 for emphasis/instructions, and 900 for word banks. Full-font
+  embedding preserves the entire character map (variable fontkit subsetting
+  was tested and rejected because it dropped letters in rendered PDFs).
+  No fake bold, emoji, rasterization or runtime font downloads.
 - Shared print helpers now measure word wrapping, horizontal text centering,
   a standard 25-point module title for medium/large activities, and content-group
   stacks that distribute spare vertical space to growable elements, then center
@@ -40,6 +42,14 @@ seeds remain compatible.
 - The live preview applies a common title-size rule and fixed-size drawing
   captions. The new font instances let the PDF follow the requested weights
   rather than accidentally using the variable font's ExtraLight default.
+
+### Reproducing the font files
+
+The three files `fonts/NunitoSans-{600,750,900}.ttf` are part of the repository.
+They were built from `fonts/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf`
+using `python scripts/generate_nunito.py` with fontTools. Regeneration requires
+fontTools, but ordinary local development and GitHub Pages builds require
+only Node.js.
 
 ### Verification
 

@@ -1,41 +1,31 @@
 import {PDFDocument,type PDFFont} from 'pdf-lib';
-import fontkit from '@pdf-lib/fontkit';
 
 /**
- * pdf-lib embeds the default face of a variable font unless fontkit is
- * given a specific variation. With subset:true fontkit resolves the chosen
- * variation's outlines into a TrueType subset (not synthetic PDF bold).
- * No additional font downloads or Python toolchain are needed.
+ * Actual static Nunito outlines, generated from the project's licensed
+ * variable font using scripts/generate_nunito.py (fontTools). The static
+ * binaries are committed to the repository; no runtime tools/network fonts.
+ *
+ * Full-font embedding is intentional. fontkit's subset encoder dropped glyphs
+ * from variable instances despite passing unit tests and PDF serialization.
  */
 export type NunitoWeightFaces={body:PDFFont;bodyBold:PDFFont;bank:PDFFont};
+export type NunitoWeightSources={
+  body:Uint8Array|ArrayBuffer;
+  bodyBold:Uint8Array|ArrayBuffer;
+  bank:Uint8Array|ArrayBuffer;
+};
 export const NUNITO_WEIGHTS={body:600,bodyBold:750,bank:900} as const;
-export async function embedNunitoWeights(document:PDFDocument,source:Uint8Array|ArrayBuffer):Promise<NunitoWeightFaces>{
-  const bytes=source instanceof Uint8Array?source:new Uint8Array(source);
-  const out={} as NunitoWeightFaces;
+export async function embedNunitoWeights(document:PDFDocument,sources:NunitoWeightSources):Promise<NunitoWeightFaces>{
+  const output={} as NunitoWeightFaces;
   try{
     for(const key of ['body','bodyBold','bank'] as const){
-      const weight=NUNITO_WEIGHTS[key];
-      const varyingKit={
-        create(data:Uint8Array){
-          const variable=fontkit.create(data) as ReturnType<typeof fontkit.create> & {
-            getVariation?: (axes:Record<string,number>)=>ReturnType<typeof fontkit.create>;
-          };
-          if(typeof variable.getVariation!=='function'){
-            throw new Error('The Nunito Sans font does not expose its weight axis.');
-          }
-          return variable.getVariation({wght:weight});
-        },
-      };
-      document.registerFontkit(varyingKit as typeof fontkit);
-      const face=await document.embedFont(bytes,{subset:true});
+      // subset:false preserves the font's complete, tested cmap.
+      const face=await document.embedFont(sources[key],{subset:false});
       face.widthOfTextAtSize('BIBLE STORY WORKSHEET',12);
-      out[key]=face;
+      output[key]=face;
     }
-    return out;
+    return output;
   }catch(error){
-    throw new Error('Could not embed weighted Nunito Sans in the PDF: '+
-      (error instanceof Error?error.message:String(error)));
-  }finally{
-    document.registerFontkit(fontkit);
+    throw Error('Could not embed Nunito Sans PDF fonts: '+(error instanceof Error?error.message:String(error)));
   }
 }
