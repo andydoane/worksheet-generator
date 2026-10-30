@@ -1,5 +1,6 @@
 import { rgb, type PDFFont, type PDFPage } from 'pdf-lib';
 import { BOOKLET } from './booklet.ts';
+import {MODULE_TITLE_PT,verticalStack,measureWrappedLines,centeredBaseline} from './pdfLayout.ts';
 import type { ModuleFonts } from './modulePdf.ts';
 import {
   boxGrid, linesFromInput, mistakesTitle, orderedStoryEvents, parseVerse,
@@ -74,16 +75,22 @@ function drawLines(page:PDFPage,font:PDFFont,text:string,rect:Rect,top:number,ma
   });
 }
 function heading(page:PDFPage,fonts:ModuleFonts,text:string,b:Rect):void {
-  centered(page,fonts.title,text,b,b.y+b.height-24,25);
+  centered(page,fonts.title,text,b,b.y+b.height-24,MODULE_TITLE_PT);
 }
 function order(page:PDFPage,b:Rect,fonts:ModuleFonts,module:Extract<StoryVerseModule,{type:'story-order'}>):void {
   heading(page,fonts,'STORY ORDER',b);
-  centered(page,fonts.body,'Number the events from first to last.',b,b.y+b.height-43,10);
+  centered(page,fonts.bodyBold,'Number the events from first to last.',b,b.y+b.height-43,10);
   const events=orderedStoryEvents(module);
-  const top=b.y+b.height-56, bottom=b.y+4;
-  const rowH=(top-bottom)/events.length;
+  const available={x:b.x,y:b.y+4,width:b.width,height:b.height-61};
+  // Short lists have more surrounding whitespace. Longer lists expand cards.
+  const [group]=verticalStack(available,[{
+    height:events.length*33,
+    maxHeight:Math.min(available.height,events.length*53),
+    grow:1,
+  }]);
+  const rowH=group.height/events.length;
   events.forEach((event,i)=>{
-    const y=top-(i+1)*rowH+2;
+    const y=group.y+(events.length-1-i)*rowH+2;
     const radius=11,cy=y+(rowH-4)/2;
     page.drawEllipse({x:b.x+11,y:cy,xScale:radius,yScale:radius,borderWidth:1,borderColor:INK});
     const textRect={x:b.x+28,y,width:b.width-28,height:rowH-4};
@@ -94,11 +101,23 @@ function order(page:PDFPage,b:Rect,fonts:ModuleFonts,module:Extract<StoryVerseMo
 }
 function sort(page:PDFPage,b:Rect,fonts:ModuleFonts,module:Extract<StoryVerseModule,{type:'sort-story'}>):void {
   heading(page,fonts,'SORT THE STORY',b);
-  centered(page,fonts.body,'Sort TRUE or FALSE; circle incorrect words in false statements.',b,b.y+b.height-43,9);
+  const subtitle='Sort the letters into TRUE or FALSE. Circle the incorrect words in false statements.';
+  // Measure the exact requested subtitle; it wraps naturally without clipping.
+  const instructionSize=9.4;
+  const instructions=measureWrappedLines(subtitle,b.width-6,t=>width(fonts.bodyBold,t,instructionSize));
+  if(!instructions)throw Error('Sort the Story instructions do not fit.');
+  const instructionTop=b.y+b.height-39;
+  instructions.forEach((line,i)=>centered(page,fonts.bodyBold,line,b,instructionTop-i*11.2,instructionSize));
   const items=sortedStoryBank(module);
-  const top=b.y+b.height-56,bankBottom=b.y+93;
-  const rowH=(top-bankBottom)/items.length;
-  page.drawRectangle({x:b.x,y:bankBottom,width:b.width,height:top-bankBottom,borderWidth:.9,borderColor:INK});
+  const contentTop=instructionTop-instructions.length*11.2-11;
+  const area={x:b.x,y:b.y+4,width:b.width,height:contentTop-b.y-4};
+  // Banks grow when few statements are present; answer boxes remain stable.
+  const [bank,answers]=verticalStack(area,[
+    {height:items.length*23,maxHeight:items.length*38,grow:1},
+    {height:72,maxHeight:89,grow:.25},
+  ],10);
+  const top=bank.y+bank.height,rowH=bank.height/items.length;
+  page.drawRectangle({x:bank.x,y:bank.y,width:bank.width,height:bank.height,borderWidth:.9,borderColor:INK});
   items.forEach((item,i)=>{
     const y=top-(i+1)*rowH;
     if(i)page.drawLine({start:{x:b.x,y:y+rowH},end:{x:b.x+b.width,y:y+rowH},color:MID,thickness:.45});
@@ -107,12 +126,14 @@ function sort(page:PDFPage,b:Rect,fonts:ModuleFonts,module:Extract<StoryVerseMod
     drawLines(page,fonts.body,item.text,{x:b.x+29,y,width:b.width-35,height:rowH},
       y+rowH-2,rowH-4,10.5,8,'left');
   });
-  const gap=10,half=(b.width-gap)/2;
+  const gap=10,half=(answers.width-gap)/2;
   for(let k=0;k<2;k++){
-    const x=b.x+k*(half+gap);
-    const topBox=b.y+82;
-    centered(page,fonts.title,k?'FALSE':'TRUE',{x,y:b.y,width:half,height:80},topBox-14,18);
-    page.drawRectangle({x,y:b.y+4,width:half,height:60,borderColor:MID,borderWidth:.8});
+    const x=answers.x+k*(half+gap);
+    const titleH=23;
+    centered(page,fonts.title,k?'FALSE':'TRUE',{x,y:answers.y,width:half,height:answers.height},
+      centeredBaseline({x,y:answers.y+answers.height-titleH,width:half,height:titleH},18),18);
+    page.drawRectangle({x,y:answers.y+1,width:half,height:answers.height-titleH-2,
+      borderColor:MID,borderWidth:.8});
   }
 }
 function drawStory(page:PDFPage,b:Rect,fonts:ModuleFonts,module:Extract<StoryVerseModule,{type:'draw-story'}>):void {
@@ -192,10 +213,10 @@ function finishVerse(page:PDFPage,b:Rect,fonts:ModuleFonts,m:FinishVerse):void {
   page.drawRectangle({x:b.x,y:top-bankH,width:b.width,height:bankH,borderColor:MID,borderWidth:.9});
   const cols=Math.ceil(bank.length/2),cw=b.width/cols;
   const size=Math.min(11,...bank.map(word=>{
-    for(let s=11;s>=6.5;s-=.5)if(width(fonts.body,word.toUpperCase(),s)<cw-4)return s;
+    for(let s=11;s>=6.5;s-=.5)if(width(fonts.bank,word.toUpperCase(),s)<cw-4)return s;
     throw new Error('A word-bank entry is too wide for its cell.');
   }));
-  bank.forEach((word,i)=>centered(page,fonts.body,word.toUpperCase(),
+  bank.forEach((word,i)=>centered(page,fonts.bank,word.toUpperCase(),
     {x:b.x+(i%cols)*cw,y:top-bankH,width:cw,height:bankH},top-16-Math.floor(i/cols)*18,size));
   centered(page,fonts.body,m.reference,{x:b.x,y:top-87,width:b.width,height:16},top-bankH-15,10.5);
   drawVerseBody(page,fonts,m.verse,{x:b.x+3,y:b.y+4,width:b.width-6,height:67},top-bankH-38,'box',[]);

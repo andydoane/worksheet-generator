@@ -2,6 +2,68 @@
 
 A browser-based editor for four-page Bible story worksheet booklets.
 
+## PR 10b+c — Review fixes, genuine Nunito weights and reusable layout foundations
+
+This combines the requested small review fixes with the shared typography/layout
+foundation, while retaining all **25** existing activity definitions and the
+same four-page booklet. Previously saved worksheet assignments and shuffling
+seeds remain compatible.
+
+### User feedback incorporated
+
+- **Sort the Story:** exact instruction: “Sort the letters into TRUE or FALSE.
+  Circle the incorrect words in false statements.” The PDF wraps this instruction
+  into measured lines rather than running outside its region. Text and answer
+  panels use a centered flexible-height layout.
+- **Draw the Story:** preview allocates exactly equal height to all panels,
+  regardless of how many caption lines each needs. Exported PDF already did so.
+- **Word Search:** restores one multiline textarea, natural Enter-to-next-line,
+  easy bulk paste, and a live **X of 12 words** counter. Existing multiword
+  entries remain supported without losing their stored values.
+- **Finish the Story:** selects the exact occurrence and trims any extra
+  leading/trailing whitespace included by Windows double-click. Existing
+  bracketed text remains valid, and repeated words are safe.
+
+### Typography and reusable layout system
+
+- **Three real Nunito Sans PDF faces** generated once from the project's
+  licensed variable font and committed as static TTFs: 600 for body,
+  750 for emphasis/instructions, and 900 for word banks. Full-font
+  embedding preserves the entire character map (variable fontkit subsetting
+  was tested and rejected because it dropped letters in rendered PDFs).
+  No fake bold, emoji, rasterization or runtime font downloads.
+- Shared print helpers now measure word wrapping, horizontal text centering,
+  a standard 25-point module title for medium/large activities, and content-group
+  stacks that distribute spare vertical space to growable elements, then center
+  the group as one unit.
+- The new stacks are used for Story Order and Sort the Story layouts. Additional
+  activities can adopt the shared rules during their already planned detailed
+  module-by-module polishing.
+- The live preview applies a common title-size rule and fixed-size drawing
+  captions. The new font instances let the PDF follow the requested weights
+  rather than accidentally using the variable font's ExtraLight default.
+
+### Reproducing the font files
+
+The three files `fonts/NunitoSans-{600,750,900}.ttf` are part of the repository.
+They were built from `fonts/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf`
+using `python scripts/generate_nunito.py` with fontTools. Regeneration requires
+fontTools, but ordinary local development and GitHub Pages builds require
+only Node.js.
+
+### Verification
+
+Run `npm run test`, `npm run build` and `npm run sample:pr10bc`.
+The new automated tests exercise selection whitespace and duplicate occurrences,
+group centering and content growth, real PDF Nunito weight instances, and
+two-sheet PDF export. Existing layout/puzzle tests still run.
+
+**Remaining detailed Large polish:** cross-renderer pixel-perfect line wrapping
+and growth on Finish the Story, finer word-bank spacing, Verse Cryptogram
+handwriting space and centering, Crossword placement tuning, and Spiral Verse
+length/word-on-path. These use the new shared foundation but remain separate
+reviewable work rather than silently claiming every module is already perfect.
+
 ## PR 10a — First large-module polish pass and kid-friendly vector ciphers
 
 This is **the first of several intentionally small visual-polish PRs**.

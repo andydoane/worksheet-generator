@@ -3,7 +3,9 @@ import { createBookletPdf, type PdfDraft, type PdfFontFiles } from './pdf.ts';
 // Vite packages these local files as versioned static assets for GitHub Pages.
 const FONT_URLS = {
   mouseMemoirs: new URL('../fonts/MouseMemoirs-Regular.ttf', import.meta.url).href,
-  nunitoSans: new URL('../fonts/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf', import.meta.url).href,
+  nunitoSans600: new URL('../fonts/NunitoSans-600.ttf', import.meta.url).href,
+  nunitoSans750: new URL('../fonts/NunitoSans-750.ttf', import.meta.url).href,
+  nunitoSans900: new URL('../fonts/NunitoSans-900.ttf', import.meta.url).href,
   // Normalized copy; the original Zilla font is still used in the browser UI.
   zillaSlab: new URL('../fonts/ZillaSlab-Bold-pdf.ttf', import.meta.url).href,
 } as const;
@@ -27,11 +29,14 @@ function fileName(title: string): string {
 }
 
 export async function downloadBookletPdf(draft: PdfDraft): Promise<void> {
-  const files: PdfFontFiles = {
-    mouseMemoirs: await loadFont(FONT_URLS.mouseMemoirs, 'Mouse Memoirs'),
-    nunitoSans: await loadFont(FONT_URLS.nunitoSans, 'Nunito Sans'),
-    zillaSlab: await loadFont(FONT_URLS.zillaSlab, 'Zilla Slab Bold'),
-  };
+  const [mouseMemoirs,nunitoSans,nunitoSans750,nunitoSans900,zillaSlab]=await Promise.all([
+    loadFont(FONT_URLS.mouseMemoirs,'Mouse Memoirs'),
+    loadFont(FONT_URLS.nunitoSans600,'Nunito Sans Medium'),
+    loadFont(FONT_URLS.nunitoSans750,'Nunito Sans Extra Bold'),
+    loadFont(FONT_URLS.nunitoSans900,'Nunito Sans Black'),
+    loadFont(FONT_URLS.zillaSlab,'Zilla Slab Bold'),
+  ]);
+  const files:PdfFontFiles={mouseMemoirs,nunitoSans,nunitoSans750,nunitoSans900,zillaSlab};
   const bytes = await createBookletPdf(draft, files);
   // Create an owned ArrayBuffer to avoid SharedArrayBuffer/Blob type mismatches.
   const buffer = new ArrayBuffer(bytes.length);

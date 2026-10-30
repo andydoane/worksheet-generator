@@ -31,7 +31,7 @@ export default function StoryVersePreview({module}: {module:StoryVerseModule}) {
     case 'sort-story':
       return <div className="module-preview sv-preview">
         <div className="module-title">SORT THE STORY</div>
-        <div className="sv-instruction">Write each letter in the TRUE or FALSE box. Circle the incorrect words in false statements.</div>
+        <div className="sv-instruction">Sort the letters into TRUE or FALSE. Circle the incorrect words in false statements.</div>
         <div className="sv-statement-bank">
           {sortedStoryBank(module).map((row,i)=><div className="sv-statement" key={i}>
             <span className="sv-letter">{String.fromCharCode(65+i)}</span><span>{row.text}</span>

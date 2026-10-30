@@ -1,5 +1,6 @@
 import {rgb,type PDFFont,type PDFPage} from 'pdf-lib';
 import {BOOKLET} from './booklet.ts';
+import {MODULE_TITLE_PT} from './pdfLayout.ts';
 import {cipherSymbol} from './cipherSymbols.ts';
 import {generateCryptogram,type Cryptogram} from './cryptograms.ts';
 import type {ModuleFonts} from './modulePdf.ts';
@@ -58,7 +59,7 @@ function layoutWords(words:Cell[][],font:PDFFont,availableWidth:number):Cell[][]
 export function drawCryptogramPdf(page:PDFPage,rect:Rect,module:Cryptogram,fonts:ModuleFonts):void{
   const box=interior(rect),data=generateCryptogram(module);
   const top=box.y+box.height;
-  centered(page,fonts.title,'SOLVE THE CODE!',box.x,top-25,box.width,25);
+  centered(page,fonts.title,'SOLVE THE CODE!',box.x,top-25,box.width,MODULE_TITLE_PT);
   const keyCols=module.type==='verse-cryptogram'?20:18;
   const keyRows=Math.ceil(data.key.length/keyCols);
   const keyTop=top-37,keyHeight=28;
@@ -97,6 +98,6 @@ export function drawCryptogramPdf(page:PDFPage,rect:Rect,module:Cryptogram,fonts
   if(data.reference){
     if(width(fonts.body,data.reference,10)>box.width)
       throw Error('Verse reference is too long to fit.');
-    centered(page,fonts.body,data.reference,box.x,box.y+5,box.width,10);
+    centered(page,fonts.bodyBold,data.reference,box.x,box.y+5,box.width,10);
   }
 }

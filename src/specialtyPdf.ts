@@ -3,6 +3,7 @@ import {
   popGraphicsState, concatTransformationMatrix,
 } from 'pdf-lib';
 import {BOOKLET} from './booklet.ts';
+import {MODULE_TITLE_PT} from './pdfLayout.ts';
 import type {ModuleFonts} from './modulePdf.ts';
 import {
   generateCrossword,parseConnectionWords,connectPositions,spiralPoints,validateSpecialty,
@@ -36,7 +37,7 @@ function wrapped(font:PDFFont,text:string,size:number,width:number):string[]|nul
 }
 function crossword(page:PDFPage,b:Rect,module:Extract<SpecialtyModule,{type:'crossword'}>,fonts:ModuleFonts):void{
   const puzzle=generateCrossword(module);
-  centered(page,fonts.title,'CROSSWORD',b.x,b.y+b.height-27,b.width,26);
+  centered(page,fonts.title,'CROSSWORD',b.x,b.y+b.height-27,b.width,MODULE_TITLE_PT);
   const top=b.y+b.height-41;
   const cell=Math.min(21,(b.width-12)/puzzle.width, (b.height-175)/puzzle.height);
   if(cell<9)throw Error('Crossword is too large for this section. Use shorter answers.');
@@ -82,12 +83,12 @@ function spiral(page:PDFPage,b:Rect,module:Extract<SpecialtyModule,{type:'spiral
   centered(page,fonts.title,'SPIRAL VERSE',b.x,b.y+b.height-27,b.width,26);
   centered(page,fonts.body,'Copy the verse on the spiral line.',b.x,b.y+b.height-42,b.width,9);
   let size=10.8,rows:string[]|null=null;
-  for(;size>=8;size-=.4){rows=wrapped(fonts.body,module.verse,size,b.width-16);if(rows&&rows.length<=4)break;}
+  for(;size>=8;size-=.4){rows=wrapped(fonts.bodyBold,module.verse,size,b.width-16);if(rows&&rows.length<=4)break;}
   if(!rows||rows.length>4)throw Error('Verse does not fit the reference box. Shorten it.');
   const bankHeight=rows.length*size*1.27+34,bankTop=b.y+b.height-53,bankBottom=bankTop-bankHeight;
   page.drawRectangle({x:b.x,y:bankBottom,width:b.width,height:bankHeight,borderColor:LIGHT,borderWidth:.9});
-  centered(page,fonts.body,module.reference,b.x,bankTop-15,b.width,10.5);
-  rows.forEach((text,i)=>centered(page,fonts.body,text,b.x+6,bankTop-31-i*size*1.27,b.width-12,size));
+  centered(page,fonts.bodyBold,module.reference,b.x,bankTop-15,b.width,10.5);
+  rows.forEach((text,i)=>centered(page,fonts.bodyBold,text,b.x+6,bankTop-31-i*size*1.27,b.width-12,size));
   const bottom=b.y+2,diameter=Math.min(b.width-8,bankBottom-bottom-9);
   if(diameter<120)throw Error('Verse bank leaves insufficient room for a usable spiral.');
   const cx=b.x+b.width/2,cy=bottom+(bankBottom-bottom)/2;
@@ -101,7 +102,7 @@ function spiral(page:PDFPage,b:Rect,module:Extract<SpecialtyModule,{type:'spiral
   }
 }
 function upsideDown(page:PDFPage,b:Rect,module:Extract<SpecialtyModule,{type:'upside-down-verse'}>,fonts:ModuleFonts):void{
-  centered(page,fonts.title,'UPSIDE DOWN VERSE',b.x,b.y+b.height-25,b.width,23);
+  centered(page,fonts.title,'UPSIDE DOWN VERSE',b.x,b.y+b.height-25,b.width,MODULE_TITLE_PT);
   centered(page,fonts.body,module.reference,b.x,b.y+b.height-42,b.width,10.5);
   const s=module.verse.trim().toUpperCase();
   const tokens=s.split(/(\s+)/u);

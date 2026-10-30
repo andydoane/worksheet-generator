@@ -3,7 +3,9 @@ import {createBookletPdf} from '../src/pdf.ts';
 
 const fonts={
   mouseMemoirs:await readFile(new URL('../fonts/MouseMemoirs-Regular.ttf',import.meta.url)),
-  nunitoSans:await readFile(new URL('../fonts/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf',import.meta.url)),
+  nunitoSans:await readFile(new URL('../fonts/NunitoSans-600.ttf',import.meta.url)),
+  nunitoSans750:await readFile(new URL('../fonts/NunitoSans-750.ttf',import.meta.url)),
+  nunitoSans900:await readFile(new URL('../fonts/NunitoSans-900.ttf',import.meta.url)),
   zillaSlab:await readFile(new URL('../fonts/ZillaSlab-Bold-pdf.ttf',import.meta.url)),
 };
 const wordSearch={type:'word-search',words:'DAVID\nGOLIATH\nSLING\nSTONE\nSHEPHERD\nSAUL\nARMOR\nGIANT',seed:7};

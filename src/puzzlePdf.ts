@@ -1,5 +1,6 @@
 import { rgb, type PDFFont, type PDFPage } from 'pdf-lib';
 import { BOOKLET } from './booklet.ts';
+import {MODULE_TITLE_PT} from './pdfLayout.ts';
 import type { ModuleFonts } from './modulePdf.ts';
 import {
   generateMaze, generateWordSearch, NORTH, SOUTH, EAST, WEST,
@@ -32,7 +33,7 @@ function wrap(text:string,font:PDFFont,size:number,w:number):string[]|null{
 function drawWordSearch(page:PDFPage,rect:Rect,fonts:ModuleFonts,module:Extract<PuzzleModule,{type:'word-search'}>):void{
   const box=inside(rect);
   const puzzle=generateWordSearch(module);
-  center(page,fonts.title,'WORD SEARCH',box.x,box.y+box.height-28,box.width,25);
+  center(page,fonts.title,'WORD SEARCH',box.x,box.y+box.height-28,box.width,MODULE_TITLE_PT);
   // Reserve 76pt for the 2-column word list, plus header and gutters.
   const cell=Math.min((box.width-12)/WORD_COLS,(box.height-134)/WORD_ROWS);
   if(cell<15)throw Error('Not enough space for a readable word-search grid.');
@@ -55,19 +56,19 @@ function drawWordSearch(page:PDFPage,rect:Rect,fonts:ModuleFonts,module:Extract<
   const rowStep=Math.min(21,(bankTop-box.y-6)/rows);
   if(rowStep<12)throw Error('Word list does not fit; shorten your words.');
   const fontSize=Math.min(12,...puzzle.labels.map(word=>{
-    for(let s=12;s>=7.5;s-=.5)if(textWidth(fonts.body,word,s)<=colW-7)return s;
+    for(let s=12;s>=7.5;s-=.5)if(textWidth(fonts.bank,word,s)<=colW-7)return s;
     throw Error('Word-list entry is too long to print clearly.');
   }));
   puzzle.labels.forEach((word,i)=>{
     const col=i%columns,row=Math.floor(i/columns);
-    center(page,fonts.body,word,box.x+col*colW,bankTop-row*rowStep,colW,fontSize);
+    center(page,fonts.bank,word,box.x+col*colW,bankTop-row*rowStep,colW,fontSize);
   });
 }
 
 function drawMaze(page:PDFPage,rect:Rect,fonts:ModuleFonts,module:Extract<PuzzleModule,{type:'true-false-maze'}>):void{
   const box=inside(rect);
   const maze=generateMaze(module),top=box.y+box.height;
-  center(page,fonts.title,'TRUE OR FALSE TREK!',box.x,top-23,box.width,23);
+  center(page,fonts.title,'TRUE OR FALSE TREK!',box.x,top-23,box.width,MODULE_TITLE_PT);
   center(page,fonts.body,'Exit the maze at the correct answer.',box.x,top-37,box.width,8.7);
   // Limit statement to two comfortably readable lines above the maze.
   let statementRows:string[]|null=null,statementSize=10.2;

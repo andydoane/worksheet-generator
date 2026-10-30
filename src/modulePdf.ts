@@ -1,5 +1,6 @@
 import { rgb, type PDFFont, type PDFPage } from 'pdf-lib';
 import { BOOKLET } from './booklet.ts';
+import {MODULE_TITLE_PT,measureWrappedLines} from './pdfLayout.ts';
 import { drawSmallModulePdf } from './smallPdf.ts';
 import { isSmallModule } from './smallModules.ts';
 import { isStoryVerseModule } from './storyVerseModules.ts';
@@ -15,7 +16,7 @@ import {
 } from './modules.ts';
 
 type Rect = { x: number; y: number; width: number; height: number };
-export type ModuleFonts = { title: PDFFont; body: PDFFont; puzzle: PDFFont };
+export type ModuleFonts = { title: PDFFont; body: PDFFont; bodyBold: PDFFont; bank: PDFFont; puzzle: PDFFont };
 const INCH = 72;
 const INSET = BOOKLET.padding * INCH;
 const INK = rgb(0.13, 0.13, 0.13);
@@ -28,20 +29,12 @@ function interior(rect: Rect): Rect {
 }
 
 /** Word wrapping with no clipping or invisible text. */
-function lines(text: string, font: PDFFont, size: number, maxWidth: number): string[] {
-  const words = text.trim().replace(/\s+/g, ' ').split(' ').filter(Boolean);
-  const output: string[] = [];
-  let row = '';
-  for (const word of words) {
-    if (measure(font, word, size) > maxWidth) throw new Error('A word is too long to fit; please shorten the text.');
-    const test = row ? row + ' ' + word : word;
-    if (row && measure(font, test, size) > maxWidth) { output.push(row); row = word; }
-    else row = test;
-  }
-  if (row) output.push(row);
-  return output;
+/** Measured wrapping shared with the newer module PDF renderers. */
+function lines(text:string,font:PDFFont,size:number,maxWidth:number):string[]{
+  const result=measureWrappedLines(text,maxWidth,value=>measure(font,value,size));
+  if(!result)throw Error('A word is too long to fit; please shorten the text.');
+  return result;
 }
-
 function centered(page: PDFPage, font: PDFFont, text: string, x: number, y: number, width: number, size: number, color = INK): void {
   page.drawText(text, { x: x + (width - measure(font, text, size)) / 2, y, font, size, color });
 }
@@ -84,7 +77,7 @@ function drawPicture(page: PDFPage, rect: Rect, font: PDFFont, prompt: string): 
 function drawMatching(page: PDFPage, rect: Rect, fonts: ModuleFonts, module: Extract<ActivityModule, { type: 'match-words' }>): void {
   const box = interior(rect);
   const rows = matchRows(module);
-  centered(page, fonts.title, 'MATCH THE WORDS', box.x, box.y + box.height - 25, box.width, 22);
+  centered(page, fonts.title, 'MATCH THE WORDS', box.x, box.y + box.height - 25, box.width, MODULE_TITLE_PT);
   const subtitle = 'Draw a line from each word on the left to its match on the right.';
   const instructionLines = lines(subtitle, fonts.body, 9, box.width);
   instructionLines.forEach((line, index) =>
@@ -144,7 +137,7 @@ function positionStory(tokens: StoryToken[], font: PDFFont, size: number, box: R
 
 function drawStory(page: PDFPage, rect: Rect, fonts: ModuleFonts, module: Extract<ActivityModule, { type: 'finish-story' }>): void {
   const inner = interior(rect);
-  centered(page, fonts.title, 'FINISH THE STORY', inner.x, inner.y + inner.height - 28, inner.width, 25);
+  centered(page, fonts.title, 'FINISH THE STORY', inner.x, inner.y + inner.height - 28, inner.width, MODULE_TITLE_PT);
 
   const bank = storyBank(module);
   const columns = Math.ceil(bank.length / 2);
@@ -157,11 +150,11 @@ function drawStory(page: PDFPage, rect: Rect, fonts: ModuleFonts, module: Extrac
   });
 
   const cellWidth = inner.width / columns;
-  const size = fittedSize(fonts.body, bank.map(word => word.toUpperCase()), cellWidth - 6, 11.5, 6.5);
+  const size = fittedSize(fonts.bank, bank.map(word => word.toUpperCase()), cellWidth - 6, 11.5, 6.5);
   bank.forEach((word, index) => {
     const row = Math.floor(index / columns);
     const col = index % columns;
-    centered(page, fonts.body, word.toUpperCase(), inner.x + col * cellWidth, bankTop - 24 - row * 29, cellWidth, size);
+    centered(page, fonts.bank, word.toUpperCase(), inner.x + col * cellWidth, bankTop - 24 - row * 29, cellWidth, size);
   });
 
   const storyBox = {

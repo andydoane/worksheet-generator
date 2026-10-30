@@ -276,3 +276,49 @@
 
 .mark-blank {border:1px solid #b8d7c4;color:#286c55;background:#eaf5ec;border-radius:7px;
   padding:9px 11px;font-size:12px;font-weight:800;justify-self:start;}
+
+
+/* 10b/10c: consistent scalable headings and exact, equal panel allocations. */
+.module-preview .module-title {
+  font:400 clamp(15px,5cqw,25px)/1 'Mouse Memoirs',sans-serif !important;
+  flex:0 0 auto;
+}
+.sv-drawing-grid {
+  grid-template-rows:repeat(2,minmax(0,1fr));
+  grid-auto-rows:minmax(0,1fr);
+  height:100%;
+  overflow:hidden;
+}
+.sv-drawing-cell {
+  min-height:0;
+  height:100%;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+}
+.sv-drawing-blank {flex:1 1 0;min-height:0;}
+.sv-drawing-label {
+  box-sizing:border-box;
+  flex:0 0 clamp(52px,15cqw,72px);
+  height:clamp(52px,15cqw,72px);
+  min-height:0;
+  max-height:clamp(52px,15cqw,72px);
+  overflow:hidden;
+  padding:2px 2px;
+  font-size:clamp(7px,2.2cqw,10px);
+  line-height:1.05;
+}
+.sv-instruction {flex:0 0 auto;}
+.sv-order-list {align-content:center;}
+.word-search-count {
+  display:inline-block;
+  justify-self:start;
+  width:max-content;
+  margin:0;
+  padding:6px 10px;
+  border-radius:7px;
+  background:#edf5ee;
+  border:1px solid #d2e5d6;
+  color:#245e43 !important;
+  font-weight:900 !important;
+}

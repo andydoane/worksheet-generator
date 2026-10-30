@@ -12,7 +12,9 @@ const verse={type:'verse-cryptogram',reference:'John 3:16',verse:'For God so lov
 const big={type:'big-idea-cryptogram',idea:'God loves us and calls us to love others.',seed:5};
 const fonts=async()=>({
   mouseMemoirs:await readFile(new URL('../fonts/MouseMemoirs-Regular.ttf',import.meta.url)),
-  nunitoSans:await readFile(new URL('../fonts/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf',import.meta.url)),
+  nunitoSans:await readFile(new URL('../fonts/NunitoSans-600.ttf',import.meta.url)),
+  nunitoSans750:await readFile(new URL('../fonts/NunitoSans-750.ttf',import.meta.url)),
+  nunitoSans900:await readFile(new URL('../fonts/NunitoSans-900.ttf',import.meta.url)),
   zillaSlab:await readFile(new URL('../fonts/ZillaSlab-Bold-pdf.ttf',import.meta.url)),
 });
 

@@ -1,5 +1,7 @@
 import { PDFDocument, rgb, type PDFFont, type PDFPage } from 'pdf-lib';
 import fontkit from '@pdf-lib/fontkit';
+import {embedNunitoWeights} from './nunitoPdf.ts';
+import type {ModuleFonts} from './modulePdf.ts';
 import { drawModulePdf } from './modulePdf.ts';
 import { slotKey, moduleForSize, type ModuleAssignments, type ActivityModule } from './modules.ts';
 import {
@@ -29,15 +31,13 @@ export type PdfDraft = {
 
 export type PdfFontFiles = {
   mouseMemoirs: Uint8Array | ArrayBuffer;
-  nunitoSans: Uint8Array | ArrayBuffer;
+  nunitoSans: Uint8Array | ArrayBuffer; // Static 600 for current callers; old variable font remains a legacy fallback
+  nunitoSans750?: Uint8Array | ArrayBuffer;
+  nunitoSans900?: Uint8Array | ArrayBuffer;
   zillaSlab: Uint8Array | ArrayBuffer;
 };
 
-type Fonts = {
-  title: PDFFont;
-  body: PDFFont;
-  puzzle: PDFFont;
-};
+type Fonts = ModuleFonts;
 
 type PdfRect = { x: number; y: number; width: number; height: number };
 
@@ -272,13 +272,16 @@ export async function createBookletPdf(draft: PdfDraft, fontFiles: PdfFontFiles)
       throw new Error('Could not embed ' + name + ' in the PDF: ' + (error instanceof Error ? error.message : String(error)));
     }
   }
-  const [title, body, puzzle] = await Promise.all([
-    embedChecked('Mouse Memoirs', fontFiles.mouseMemoirs),
-    embedChecked('Nunito Sans', fontFiles.nunitoSans),
-    // Full-glyph fontTools reserialization fixes the original fontkit error.
-    embedChecked('Zilla Slab Bold', fontFiles.zillaSlab),
-  ]);
-  const fonts: Fonts = { title, body, puzzle };
+  // Real static font outlines with a reliable complete cmap: no missing glyphs.
+  const {body,bodyBold,bank}=await embedNunitoWeights(document,{
+    body:fontFiles.nunitoSans,
+    bodyBold:fontFiles.nunitoSans750??fontFiles.nunitoSans,
+    bank:fontFiles.nunitoSans900??fontFiles.nunitoSans,
+  });
+  const title=await embedChecked('Mouse Memoirs',fontFiles.mouseMemoirs);
+  // Full-glyph fontTools reserialization fixes Zilla's original fontkit error.
+  const puzzle=await embedChecked('Zilla Slab Bold',fontFiles.zillaSlab);
+  const fonts: Fonts = {title,body,bodyBold,bank,puzzle};
 
   const sheets = getPrintableSheetRegions(draft);
   for (let sheetIndex = 0; sheetIndex < sheets.length; sheetIndex++) {
