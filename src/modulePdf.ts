@@ -1,5 +1,7 @@
 import { rgb, type PDFFont, type PDFPage } from 'pdf-lib';
 import { BOOKLET } from './booklet.ts';
+import { drawSmallModulePdf } from './smallPdf.ts';
+import { isSmallModule } from './smallModules.ts';
 import {
   matchRows, parseStory, storyBank, validateModule, type ActivityModule,
 } from './modules.ts';
@@ -185,6 +187,7 @@ function drawStory(page: PDFPage, rect: Rect, fonts: ModuleFonts, module: Extrac
 export function drawModulePdf(page: PDFPage, rect: Rect, module: ActivityModule, fonts: ModuleFonts): void {
   const errors = validateModule(module);
   if (errors.length) throw new Error(errors.join(' '));
+  if (isSmallModule(module)) return drawSmallModulePdf(page, rect, module, fonts);
   switch (module.type) {
     case 'draw-picture': return drawPicture(page, rect, fonts.title, module.prompt);
     case 'match-words': return drawMatching(page, rect, fonts, module);

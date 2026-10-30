@@ -28,7 +28,9 @@ const finish = {
 };
 
 test('module registry filters by region size', () => {
-  assert.deepEqual(moduleForSize('small').map((m) => m.id), ['draw-picture']);
+  assert.equal(moduleForSize('small').length, 8);
+  assert.ok(moduleForSize('small').some((m) => m.id === 'draw-picture'));
+  assert.ok(moduleForSize('small').some((m) => m.id === 'who-am-i'));
   assert.deepEqual(moduleForSize('medium').map((m) => m.id), ['match-words']);
   assert.deepEqual(moduleForSize('large').map((m) => m.id), ['finish-story']);
   assert.equal(blankModule('match-words').type, 'match-words');

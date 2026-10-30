@@ -2,78 +2,58 @@
 
 A browser-based editor for four-page Bible story worksheet booklets.
 
-## PR 4 — First working activity modules
+## PR 5 — All eight small modules
 
-The **Activities** tab lets you click or select any activity region, choose a compatible module, enter its content, preview the result, and export it directly into the same two-page vector PDF. Each region remembers its own assignment when you refresh. Changing a page layout hides any assignments for slots no longer visible; switching back restores them.
+Small sections now support all eight activities from the original module specifications:
 
-| Module | Region | Inputs | Printed result |
-|---|---|---|---|
-| Draw a Picture | Small (2.4 × 2.6 in) | A short prompt completing 'Draw a picture of...' | Blank drawing frame with the prompt underneath |
-| Match the Words | Medium (4.8 × 2.6 in) | 3–6 lines in `left, right` format | Heading, instructions, two word columns; right words shuffled from source order |
-| Finish the Story | Large (4.8 × 5.2 in) | A paragraph with 6–12 `[bracketed]` single words | Heading, boxed two-row shuffled word bank, story with proportional answer lines |
+| Small activity | Inputs | What children see |
+|---|---|---|
+| Draw a Picture | Drawing prompt | Empty drawing frame and “Draw a picture of…” |
+| Multiple Choice Question | Question, one correct answer, two incorrect answers | Three shuffled answers, each with an empty checkbox |
+| True or False Questions | One statement | “True or False?”, statement, thumbs-up and thumbs-down icons to circle |
+| First Letter Challenge | Scripture reference and verse | Instruction, reference and uppercase verse initials in Zilla Slab Bold |
+| What Doesn't Belong? | Up to five related and five unrelated words, one per line | A mixed two-column word bank to scribble out unrelated words |
+| Unscramble the Words | Two words (3–10 letters each) | Two scrambled letter sequences with writing lines above each letter |
+| Checkboxes | Up to five story and five unrelated words | Two columns of mixed words with empty checkboxes |
+| Who Am I? | Character clue and answer | Clue, “Who Am I?” and one answer blank per letter |
 
-Select an empty region to choose its module. Only the module compatible with that region's size is offered. **Empty regions** keep their former labeled placeholders; invalid or incomplete modules produce editor validation messages and block PDF export rather than printing misleading activities. The export button displays a page-specific error when PDF content cannot fit.
+Click a **Small** activity region and open the **Activities** tab to choose an activity. The editor provides activity-specific fields and validation messages. Matching, word lists, answer options and scrambles use saved deterministic shuffle seeds; changing unrelated text does not reshuffle puzzles. Click **Shuffle** to regenerate an eligible activity.
 
-Matching answer order and story word-bank order are deterministic and stored per region: text edits in unrelated sections won't reshuffle them. Use **Shuffle** in the activity editor to request another arrangement. The typed module registry and validation/parsing helpers are in `src/modules.ts`, the HTML preview in `src/ModulePreview.tsx`, and the PDF renderers in `src/modulePdf.ts`.
+The browser preview and PDF use the same derived answer orders and text transformations. PDFs remain exactly **two landscape US Letter pages** in booklet order (outside: 4 | 1; inside: 2 | 3), and the Zilla Slab Bold compatibility fix from PR 4.1 is preserved.
 
-**PR 4.1 resolved:** Zilla Slab Bold is embedded in vector PDFs using a fontTools-normalized, full-glyph copy. The original font remains unchanged for the browser. Matching words now use Zilla Slab Bold in the preview and the PDF.
+**Limits:** Small regions measure 2.4 × 2.6 inches and have 0.1-inch internal padding. Longer content is validated or rejected instead of silently clipping. The original specification mentions 6–12 total words for What Doesn't Belong but also limits each of the two input lists to five words; this version supports 6–10 total words, honoring the per-list limits. True/False only needs a statement as specified; answer keys are a future milestone.
 
-**Still planned:** additional module types, answer keys, custom decorative border assets, and more advanced font support.
+### Review samples
 
-## PR 3 — printable PDF foundation
+Run `npm run sample:pdf` to produce **two** demonstration booklets in `artifacts/`:
+- `sample-bifold-booklet.pdf`: Multiple Choice, True/False, First Letter Challenge, What Doesn't Belong, Unscramble, Checkboxes; also existing matching and story modules.
+- `sample-small-modules-b.pdf`: Who Am I?, Draw a Picture, plus existing matching and story modules.
 
-**PDF export now works.** Enter a worksheet title and story Scripture reference, choose one of six layouts independently for pages 2–4, then click **Download PDF**. The app creates a vector PDF directly in your browser; it does not upload lesson data to a server.
+The GitHub Actions workflow runs all layout, PDF, font and module tests, checks TypeScript, builds the website, and uploads both sample PDFs as a downloadable artifact on pull requests.
 
-The PDF contains **two landscape US Letter pages** (each 11 × 8.5 inches) in the order needed for folding:
+## Earlier releases
 
-- **PDF page 1 (outside):** booklet page **4 on the left**, booklet page **1 on the right**.
-- **PDF page 2 (inside):** booklet page **2 on the left**, booklet page **3 on the right**.
+PR 4 introduced the typed module registry and three activities: Small Draw a Picture, Medium Match the Words, and Large Finish the Story. Module assignments and lesson fields save in the browser, with a per-page layout selector and PDF export.
 
-Each folded booklet page is 5.5 × 8.5 inches with a 0.35-inch outer margin, leaving 4.8 × 7.8 inches for the module grid. Module frames use 0.1-inch internal padding. All sizes and positions derive from the same constants in `src/booklet.ts` used by the responsive on-screen preview.
+PR 4.1 fixed Zilla Slab PDF embedding by reserializing the original complete TrueType font. The original remains the browser font; the normalized copy is embedded in PDFs (both are covered by the SIL Open Font License).
 
-### How to print
+PRs 1–3 established the React/Vite/TypeScript editor, inch-based booklet layout, and a vector PDF download.
 
-1. Download the PDF with the button at the top of the editor.
-2. Open the PDF in your normal PDF reader.
-3. Choose **US Letter**, **Landscape**, **Actual size / 100%** (not 'Fit to printable area').
-4. Choose **two-sided / duplex printing, flip on short edge**.
-5. Fold the printed sheet in half vertically so the title page is the front cover.
+## Printing
 
-**Printer note:** Duplex settings can vary by driver. Print one test sheet, confirm page 4 and page 1 are on the outside and pages 2 and 3 on the inside, and adjust the flip setting if the reverse side is upside down. The faint 'PAGE N' labels near the bottom are temporary verification helpers.
+Download the generated PDF, open it in a PDF reader, and select US Letter, landscape, **Actual size / 100%**, duplex printing, **flip on short edge**. Fold the sheet vertically. Printer options may vary: check a test sheet when possible.
 
-### What this milestone includes
+## Local development
 
-- Responsive worksheet editor and saved lesson details from PRs 1 and 2.
-- Fixed front cover: a medium-size title/reference area above a large activity area.
-- Six valid arrangements for pages 2–4.
-- Print-friendly black/grey vector borders, safe-area padding, and placeholder region labels.
-- Embedded PDF fonts: **Mouse Memoirs** for the title and **Nunito Sans** for body text and placeholder labels. **Zilla Slab Bold** now embeds in PDFs using a full-glyph normalized font file (`fonts/ZillaSlab-Bold-pdf.ttf`), while the browser continues using the original.
-- Browser download of a two-page PDF without any extra account or server.
-- Automated tests for geometry, imposition, PDF page count, and 11 × 8.5-inch dimensions.
-- A downloadable **sample-bifold-booklet** artifact in the GitHub Actions run for each PR.
+Node.js 22.12 or later:
+1. `npm install`
+2. `npm run dev`
+3. `npm run test`
+4. `npm run build`
+5. `npm run sample:pdf`
 
-**The first three modules are now implemented in PR 4.** Answer keys, decorative border images, and the remaining activity types are planned for future pull requests.
+GitHub Actions builds on pull requests and deploys on a push to `main` when **Settings → Pages → Build and deployment → Source** is set to **GitHub Actions**.
 
-### Visual preview vs exported PDF
+Deployed site: https://andydoane.github.io/worksheet-generator/
 
-The on-screen preview is scaled to fit your monitor. The PDF is created separately from the exact inch-based model, so it has consistent physical coordinates regardless of screen size. The editor is colored for usability, but the PDF uses black-and-white-friendly rules to save ink.
-
-## Running locally
-
-Requires Node.js 22.12 or later.
-
-1. Run `npm install`.
-2. Run `npm run dev` and open the local URL.
-3. Run `npm run test` for geometry/PDF tests.
-4. Run `npm run build` for type checks and a production build.
-5. Run `npm run sample:pdf` to create an example PDF at `artifacts/sample-bifold-booklet.pdf`.
-
-GitHub Actions checks every pull request, and after a push to `main` deploys to GitHub Pages. The Pages source should be set to **GitHub Actions** under **Settings → Pages**.
-
-Live site: https://andydoane.github.io/worksheet-generator/
-
-Lesson data remains in this browser's local storage. Reloading the page preserves the draft, but it does not sync between devices or browsers.
-
-## Fonts and licensing
-
-Project font files are already present in the repository under `fonts/`: Mouse Memoirs Regular, Nunito Sans Variable, and Zilla Slab Bold. The PDF exporter embeds Mouse Memoirs, Nunito Sans, and a normalized, full-glyph Zilla Slab Bold using `pdf-lib` and `@pdf-lib/fontkit`. Keep their licenses in mind if distributing modified font files in the future.
+No server, paid API, or account is needed. Worksheet drafts reside in browser localStorage, not in GitHub.

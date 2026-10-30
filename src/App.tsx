@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { downloadBookletPdf } from './exportPdf';
 import ModulePreview from './ModulePreview';
+import SmallModuleEditor from './SmallModuleEditor';
+import { isSmallModule } from './smallModules';
 import {
   blankModule, moduleForSize, readAssignments, slotKey, validateModule,
   type ActivityModule, type ModuleAssignments, type ModuleId,
@@ -208,7 +210,9 @@ export default function App() {
     if (!activeKey) return;
     setDraft((previous) => {
       const modules = { ...previous.modules };
-      if (type) modules[activeKey] = blankModule(type);
+      if (type === 'first-letters') {
+        modules[activeKey] = { type, reference: previous.verseReference, verse: previous.verseText };
+      } else if (type) modules[activeKey] = blankModule(type);
       else delete modules[activeKey];
       return { ...previous, modules };
     });
@@ -230,7 +234,7 @@ export default function App() {
     if (!activeKey) return;
     setDraft((previous) => {
       const original = previous.modules[activeKey];
-      if (!original || original.type === 'draw-picture') return previous;
+      if (!original || !('seed' in original)) return previous;
       return {
         ...previous,
         modules: { ...previous.modules, [activeKey]: { ...original, seed: original.seed + 1 } },
@@ -278,7 +282,7 @@ export default function App() {
             </button>
           ))}
         </div>
-        <div className="sidebar-foot"><span aria-hidden="true">●</span> Activity modules release · PR 4</div>
+        <div className="sidebar-foot"><span aria-hidden="true">●</span> Small modules release · PR 5</div>
       </aside>
 
       <div className="workspace">
@@ -423,9 +427,16 @@ export default function App() {
                       <p>Put [brackets] around every word to remove. The shuffled word bank always has two rows.</p>
                     </div>
                   )}
-                  {activeModule && activeModule.type !== 'draw-picture' && (
+                  {activeModule && isSmallModule(activeModule) && (
+                    <SmallModuleEditor module={activeModule} onChange={(patch) => editModule(patch)} />
+                  )}
+                  {activeModule && 'seed' in activeModule && (
                     <button type="button" className="regenerate-module" onClick={regenerateModule}>
-                      Shuffle {activeModule.type === 'match-words' ? 'matching answers' : 'word bank'} ↻
+                      Shuffle {activeModule.type === 'match-words' ? 'matching answers'
+                        : activeModule.type === 'finish-story' ? 'word bank'
+                        : activeModule.type === 'multiple-choice' ? 'answer choices'
+                        : activeModule.type === 'unscramble-words' ? 'letters'
+                        : 'word order'} ↻
                     </button>
                   )}
                   {validation.length > 0 && (

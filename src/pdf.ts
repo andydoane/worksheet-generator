@@ -1,7 +1,7 @@
 import { PDFDocument, rgb, type PDFFont, type PDFPage } from 'pdf-lib';
 import fontkit from '@pdf-lib/fontkit';
 import { drawModulePdf } from './modulePdf.ts';
-import { slotKey, type ModuleAssignments, type ActivityModule } from './modules.ts';
+import { slotKey, moduleForSize, type ModuleAssignments, type ActivityModule } from './modules.ts';
 import {
   BOOKLET, DEFAULT_LAYOUTS, SHEETS, getRegions,
   type LayoutId, type PageNumber, type Region,
@@ -320,9 +320,7 @@ export async function createBookletPdf(draft: PdfDraft, fontFiles: PdfFontFiles)
       } else {
         const assigned: ActivityModule | undefined = draft.modules?.[slotKey(item.bookletPage, item.id)];
         if (assigned) {
-          if (assigned.type === 'draw-picture' && item.size !== 'small' ||
-              assigned.type === 'match-words' && item.size !== 'medium' ||
-              assigned.type === 'finish-story' && item.size !== 'large') {
+          if (!moduleForSize(item.size).some((definition) => definition.id === assigned.type)) {
             throw new Error('Page ' + item.bookletPage + ' contains an activity in the wrong size area.');
           }
           try {
