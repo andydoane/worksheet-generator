@@ -1,4 +1,5 @@
 import {PDFDocument,type PDFFont} from 'pdf-lib';
+import fontkit from '@pdf-lib/fontkit';
 
 /**
  * Actual static Nunito outlines, generated from the project's licensed
@@ -16,6 +17,7 @@ export type NunitoWeightSources={
 };
 export const NUNITO_WEIGHTS={body:600,bodyBold:750,bank:900} as const;
 export async function embedNunitoWeights(document:PDFDocument,sources:NunitoWeightSources):Promise<NunitoWeightFaces>{
+  document.registerFontkit(fontkit);
   const output={} as NunitoWeightFaces;
   try{
     for(const key of ['body','bodyBold','bank'] as const){
