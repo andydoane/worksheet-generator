@@ -26,9 +26,9 @@ const connect={type:'connect-verse',verse:'The Lord is my shepherd I lack nothin
 const idea={type:'connect-big-idea',idea:'God always cares for his children.',seed:3};
 const fontFiles=async()=>({
   mouseMemoirs:await readFile(new URL('../fonts/MouseMemoirs-Regular.ttf',import.meta.url)),
-  nunitoSans:await readFile(new URL('../fonts/NunitoSans-600.ttf',import.meta.url)),
-  nunitoSans750:await readFile(new URL('../fonts/NunitoSans-750.ttf',import.meta.url)),
-  nunitoSans900:await readFile(new URL('../fonts/NunitoSans-900.ttf',import.meta.url)),
+  nunitoSans:await readFile(new URL('../fonts/Nunito-Medium.ttf',import.meta.url)),
+  nunitoSans750:await readFile(new URL('../fonts/Nunito-Bold.ttf',import.meta.url)),
+  nunitoSans900:await readFile(new URL('../fonts/Nunito-ExtraBold.ttf',import.meta.url)),
   zillaSlab:await readFile(new URL('../fonts/ZillaSlab-Bold-pdf.ttf',import.meta.url)),
 });
 

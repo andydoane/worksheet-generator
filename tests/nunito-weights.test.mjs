@@ -5,17 +5,17 @@ import {PDFDocument,PDFDict,PDFName} from 'pdf-lib';
 import {embedNunitoWeights,NUNITO_WEIGHTS} from '../src/nunitoPdf.ts';
 import {createBookletPdf} from '../src/pdf.ts';
 import {DEFAULT_LAYOUTS} from '../src/booklet.ts';
-const source=(weight)=>readFile(new URL('../fonts/NunitoSans-'+weight+'.ttf',import.meta.url));
-const instances=async()=>({body:await source(600),bodyBold:await source(750),bank:await source(900)});
+const source=(weight)=>readFile(new URL('../fonts/Nunito-'+({500:'Medium',700:'Bold',800:'ExtraBold'}[weight])+'.ttf',import.meta.url));
+const instances=async()=>({body:await source(500),bodyBold:await source(700),bank:await source(800)});
 const files=async()=>({
   mouseMemoirs:await readFile(new URL('../fonts/MouseMemoirs-Regular.ttf',import.meta.url)),
   nunitoSans:await source(600),
-  nunitoSans750:await source(750),
-  nunitoSans900:await source(900),
+  nunitoSans750:await source(700),
+  nunitoSans900:await source(800),
   zillaSlab:await readFile(new URL('../fonts/ZillaSlab-Bold-pdf.ttf',import.meta.url)),
 });
-test('Nunito uses three actual static font weights, not variable ExtraLight glyphs',async()=>{
-  assert.deepEqual(NUNITO_WEIGHTS,{body:600,bodyBold:750,bank:900});
+test('Nunito uses the user-supplied Nunito Medium Bold and ExtraBold faces',async()=>{
+  assert.deepEqual(NUNITO_WEIGHTS,{body:500,bodyBold:700,bank:800});
   const pdf=await PDFDocument.create();
   const {body,bodyBold,bank}=await embedNunitoWeights(pdf,await instances());
   assert.equal(new Set([body.ref.toString(),bodyBold.ref.toString(),bank.ref.toString()]).size,3);
@@ -31,8 +31,8 @@ test('Nunito uses three actual static font weights, not variable ExtraLight glyp
   const names=loaded.context.enumerateIndirectObjects()
     .filter(([,obj])=>obj instanceof PDFDict)
     .map(([,obj])=>obj.get(PDFName.of('BaseFont'))?.toString()??'');
-  for(const weight of [600,750,900]){
-    assert.ok(names.some(name=>name.includes('NunitoSans-'+weight)),
+  for(const weight of [500,700,800]){
+    assert.ok(names.some(name=>name.replace(/[-\s]/g,'').includes('Nunito'+({500:'Medium',700:'Bold',800:'ExtraBold'}[weight]))),
       'Missing Nunito '+weight+' vector face: '+names.join(', '));
   }
 });

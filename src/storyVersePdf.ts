@@ -95,8 +95,8 @@ function order(page:PDFPage,b:Rect,fonts:ModuleFonts,module:Extract<StoryVerseMo
     page.drawEllipse({x:b.x+11,y:cy,xScale:radius,yScale:radius,borderWidth:1,borderColor:INK});
     const textRect={x:b.x+28,y,width:b.width-28,height:rowH-4};
     page.drawRectangle({x:textRect.x,y:textRect.y,width:textRect.width,height:textRect.height,borderWidth:.7,borderColor:MID});
-    drawLines(page,fonts.body,event,{x:textRect.x+6,y:textRect.y,width:textRect.width-12,height:textRect.height},
-      textRect.y+textRect.height,textRect.height-2,12,8.5,'center',true);
+    drawLines(page,fonts.body,event,{x:textRect.x+8,y:textRect.y+4,width:textRect.width-16,height:textRect.height-8},
+      textRect.y+textRect.height-4,textRect.height-8,12,8.5,'center',true);
   });
 }
 function sort(page:PDFPage,b:Rect,fonts:ModuleFonts,module:Extract<StoryVerseModule,{type:'sort-story'}>):void {
@@ -104,7 +104,7 @@ function sort(page:PDFPage,b:Rect,fonts:ModuleFonts,module:Extract<StoryVerseMod
   const subtitle='Sort the letters into TRUE or FALSE. Circle the incorrect words in false statements.';
   // Measure the exact requested subtitle; it wraps naturally without clipping.
   const instructionSize=9.4;
-  const instructions=measureWrappedLines(subtitle,b.width-6,t=>width(fonts.bodyBold,t,instructionSize));
+  const instructions=balancedLines(subtitle,fonts.bodyBold,instructionSize,b.width-12);
   if(!instructions)throw Error('Sort the Story instructions do not fit.');
   const instructionTop=b.y+b.height-39;
   instructions.forEach((line,i)=>centered(page,fonts.bodyBold,line,b,instructionTop-i*11.2,instructionSize));
@@ -123,8 +123,8 @@ function sort(page:PDFPage,b:Rect,fonts:ModuleFonts,module:Extract<StoryVerseMod
     if(i)page.drawLine({start:{x:b.x,y:y+rowH},end:{x:b.x+b.width,y:y+rowH},color:MID,thickness:.45});
     page.drawRectangle({x:b.x+5,y:y+(rowH-18)/2,width:19,height:18,borderColor:MID,borderWidth:.7});
     centered(page,fonts.puzzle,String.fromCharCode(65+i),{x:b.x+5,y,width:19,height:rowH},y+(rowH-18)/2+5,11);
-    drawLines(page,fonts.body,item.text,{x:b.x+29,y,width:b.width-35,height:rowH},
-      y+rowH-2,rowH-4,10.5,8,'left');
+    drawLines(page,fonts.body,item.text,{x:b.x+31,y:y+3,width:b.width-39,height:rowH-6},
+      y+rowH-3,rowH-6,10.5,8,'left');
   });
   const gap=10,half=(answers.width-gap)/2;
   for(let k=0;k<2;k++){
@@ -147,9 +147,12 @@ function drawStory(page:PDFPage,b:Rect,fonts:ModuleFonts,module:Extract<StoryVer
     const row=Math.floor(i/grid.cols),col=i%grid.cols;
     const x=b.x+col*(colWidth+gutter);
     const y=top-(row+1)*rowHeight-row*gutter;
-    const captionH=44;
-    page.drawRectangle({x,y:y+captionH,width:colWidth,height:rowHeight-captionH,borderWidth:.8,borderColor:MID});
-    drawLines(page,fonts.body,text,{x:x+2,y,width:colWidth-4,height:captionH},y+captionH,captionH-2,10,7.5);
+    // Equal-sized drawing areas with a deliberate clear gap before captions.
+    const captionH=grid.cols===3?56:48;
+    const frameGap=10;
+    page.drawRectangle({x,y:y+captionH+frameGap,width:colWidth,height:rowHeight-captionH-frameGap,borderWidth:.8,borderColor:MID});
+    drawLines(page,fonts.body,text,{x:x+3,y:y+3,width:colWidth-6,height:captionH-6},
+      y+captionH-3,captionH-6,9.4,7.0);
   });
 }
 type VerseToken={kind:'word'|'blank'|'space';value:string};

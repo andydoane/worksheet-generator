@@ -322,3 +322,50 @@
   color:#245e43 !important;
   font-weight:900 !important;
 }
+
+
+/* PR 10d: large story and drawing typography measured against Nunito Medium
+ * (body), Nunito Bold (instructions) and Nunito ExtraBold (bank words).
+ * The browser uses the same family and optical weights as the PDF. */
+.module-subtitle {font-weight:700;}
+.story-module {gap:6px;}
+.story-bank {min-height:55px;flex:none;}
+.story-bank .bank-word {font:800 clamp(7px,2.65cqw,12px)/1.15 'Nunito',sans-serif;}
+.story-module .story-body {
+  font:500 clamp(10.5px,3.7cqw,14px)/1.58 'Nunito',sans-serif;
+  text-align:left;
+  white-space:pre-wrap;
+  overflow-wrap:normal;
+  word-break:normal;
+  flex:1;
+  min-height:0;
+}
+.story-module .story-blank {height:.9em;vertical-align:baseline;}
+.sv-preview {font-family:'Nunito',sans-serif;}
+.sv-preview .sv-instruction {font-weight:700;}
+.sv-sort-instruction {
+  text-wrap:balance;
+  max-width:92%;
+  margin-inline:auto;
+  line-height:1.25;
+}
+.sv-order-list {justify-content:center;gap:clamp(3px,1.2cqw,6px);}
+.sv-order-row {min-height:0;flex:1 1 0;align-items:center;}
+.sv-order-text {
+  font-weight:500;
+  padding:clamp(4px,1.5cqw,7px) clamp(5px,2.1cqw,10px);
+  text-wrap:balance;
+  line-height:1.22;
+}
+.sv-statement {font-weight:500;padding:clamp(3px,1.5cqw,6px) clamp(5px,1.8cqw,8px);line-height:1.2;}
+.sv-drawing-cell {min-height:0;height:100%;}
+.sv-drawing-blank {flex:1 1 0;min-height:0;}
+.sv-drawing-label {
+  flex:0 0 clamp(54px,16cqw,72px);
+  height:clamp(54px,16cqw,72px);
+  max-height:clamp(54px,16cqw,72px);
+  font:500 clamp(7px,2.2cqw,10px)/1.1 'Nunito',sans-serif;
+  padding:clamp(7px,2cqw,10px) 2px 2px;
+  display:flex;align-items:flex-start;justify-content:center;
+  text-align:center;
+}
