@@ -134,6 +134,6 @@ test('bad category sizes and invalid verse input cause useful PDF export errors'
     layouts:{2:'medium-large',3:'medium-large',4:'medium-large'},
     modules:{'2:top-medium':order},
   };
-  await assert.rejects(()=>createBookletPdf(draft,await fonts()),/wrong size area/);
-  await assert.rejects(()=>createBookletPdf({...draft,modules:{'2:top-medium':{...unscramble,verse:'No [brackets]'}}},await fonts()),/4–6/);
+  await assert.rejects(async()=>createBookletPdf(draft,await fonts()),/wrong size area/);
+  await assert.rejects(async()=>createBookletPdf({...draft,modules:{'2:top-medium':{...unscramble,verse:'No [brackets]'}}},await fonts()),/4–6/);
 });
