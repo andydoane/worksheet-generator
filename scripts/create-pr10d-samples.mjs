@@ -29,13 +29,13 @@ const draw={type:'draw-story',prompts:[
   'He sees that one of them is missing.',
   'He searches for the sheep in the rocky hills.',
   'He carries the sheep safely home.',
-],};
+].join('\n')};
 const drawLong={type:'draw-story',prompts:[
   'The shepherd looks across the meadow and realizes that one sheep is missing.',
   'He carefully searches the hills, calling out for the lost sheep among the rocks and bushes.',
   'The shepherd finds the sheep, gently picks it up, and carries it home on his shoulders.',
   'He gathers his friends and neighbors and celebrates because the lost sheep has been found.',
-],};
+].join('\n')};
 const story={type:'finish-story',story:
   'Jesus told the people a [story] about a [shepherd]. He had one hundred [sheep], but one was [lost]. The shepherd went to [find] it. When he found the sheep, he lifted it onto his [shoulders] and carried it [home]. He invited his [friends] to [celebrate]. Everyone [rejoiced] because the [sheep] had been found. We know that [God] cares for us.',seed:3};
 const shortStory={type:'finish-story',story:
