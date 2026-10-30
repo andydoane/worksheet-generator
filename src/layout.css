@@ -245,3 +245,31 @@
 .cipher-medium .cipher-character {height:clamp(18px,5.6cqw,25px);}
 .cipher-medium .cipher-punctuation,.cipher-medium .cipher-space {height:clamp(18px,5.6cqw,25px);}
 .cipher-editor-count {color:#246a50!important;font-weight:800;}
+
+
+/* PR 9b: Crossword and specialty activity previews. Final optical polish deferred. */
+.specialty-preview {gap:clamp(4px,1.4cqw,8px);justify-content:flex-start;align-items:stretch;text-align:center;}
+.specialty-instruction {font:750 clamp(8px,2.5cqw,12px)/1.2 'Nunito Sans',sans-serif;}
+.crossword-grid {width:90%;max-height:55%;margin:0 auto;display:grid;align-content:stretch;justify-content:stretch;}
+.crossword-cell {position:relative;background:white;border:1px solid #333;aspect-ratio:1;min-width:0;min-height:0;}
+.crossword-cell small {position:absolute;left:1px;top:0;font:700 clamp(5px,1.5cqw,8px)/1 'Nunito Sans',sans-serif;}
+.crossword-empty {border:1px solid transparent;aspect-ratio:1;min-width:0;min-height:0;}
+.crossword-clues {display:grid;grid-template-columns:1fr 1fr;text-align:left;gap:clamp(6px,2.5cqw,12px);flex:1;min-height:0;}
+.crossword-clues > div {min-width:0;display:flex;flex-direction:column;gap:3px;font:600 clamp(7px,2.4cqw,11px)/1.15 'Nunito Sans',sans-serif;overflow-wrap:anywhere;}
+.crossword-clues strong {font:400 clamp(15px,4.4cqw,21px)/1 'Mouse Memoirs',sans-serif;}
+.spiral-bank {border:1px solid #777;padding:clamp(5px,1.5cqw,9px);display:flex;flex-direction:column;gap:3px;flex:none;font:750 clamp(8px,2.45cqw,12px)/1.25 'Nunito Sans',sans-serif;}
+.spiral-bank strong {font-weight:900;}
+.spiral-svg {width:100%;flex:1;min-height:0;margin:0 auto;stroke:#333;}
+.specialty-verse-reference {font:850 clamp(10px,2.7cqw,14px)/1.2 'Nunito Sans',sans-serif;}
+.upside-words {display:flex;flex-wrap:wrap;align-content:flex-start;gap:clamp(8px,2.5cqw,12px) 0;flex:1;min-height:0;overflow:hidden;padding:clamp(8px,2cqw,12px) 3px 0;}
+.upside-word {display:inline-flex;white-space:nowrap;}
+.upside-letter {display:flex;flex-direction:column;align-items:center;justify-content:flex-start;min-width:clamp(10px,3.3cqw,14px);font:700 clamp(11px,3.7cqw,16px)/1.3 'Zilla Slab',serif;}
+.upside-letter i {width:82%;height:8px;border-top:1px solid #333;display:block;}
+.upside-letter b {font-weight:700;}
+.upside-letter .upside-flip {display:block;transform:scaleY(-1);}
+.upside-space {width:clamp(7px,2.2cqw,10px);height:30px;}
+.connect-bank {border:1px solid #777;padding:clamp(3px,1.1cqw,6px);font:850 clamp(8px,2.4cqw,12px)/1.3 'Nunito Sans',sans-serif;}
+.connect-field {flex:1;min-height:0;position:relative;margin:2px;}
+.connect-word {position:absolute;white-space:nowrap;font:700 clamp(9px,3.2cqw,14px)/1 'Zilla Slab',serif;transform-origin:center;}
+.connect-word span {display:inline-block;}
+.specialty-status {color:#426f5e!important;font-weight:800;}

@@ -1,5 +1,6 @@
 import type { PageNumber, RegionSize } from './booklet.ts';
 import { shuffledIndices, derangedIndices } from './shuffle.ts';
+import {SPECIALTY_MODULES,blankSpecialtyModule,isSpecialtyId,isSpecialtyModule,validateSpecialty,type SpecialtyModule,type SpecialtyId} from './specialtyModules.ts';
 import { CRYPTOGRAM_MODULES,blankCryptogram,isCryptogramId,isCryptogram,validateCryptogram,type Cryptogram,type CryptogramId } from './cryptograms.ts';
 import { PUZZLE_MODULES, blankPuzzleModule, isPuzzleId, isPuzzleModule, validatePuzzle, type PuzzleModule, type PuzzleId } from './puzzleEngines.ts';
 import { STORY_VERSE_MODULES, blankStoryVerseModule, isStoryVerseId, isStoryVerseModule, validateStoryVerse, type StoryVerseModule, type StoryVerseId } from './storyVerseModules.ts';
@@ -11,12 +12,12 @@ import { SMALL_MODULES, blankSmallModule, isSmallModule, isSmallModuleId, valida
  * Each module has one typed payload, a compatible region size, and shared
  * parsing/validation. HTML preview and PDF use the same derived content.
  */
-export type ModuleId = 'draw-picture' | 'match-words' | 'finish-story' | SmallModuleId | StoryVerseId | PuzzleId | CryptogramId;
+export type ModuleId = 'draw-picture' | 'match-words' | 'finish-story' | SmallModuleId | StoryVerseId | PuzzleId | CryptogramId | SpecialtyId;
 
 export type DrawPictureModule = { type: 'draw-picture'; prompt: string };
 export type MatchWordsModule = { type: 'match-words'; pairs: string; seed: number };
 export type FinishStoryModule = { type: 'finish-story'; story: string; seed: number };
-export type ActivityModule = DrawPictureModule | MatchWordsModule | FinishStoryModule | SmallModule | StoryVerseModule | PuzzleModule | Cryptogram;
+export type ActivityModule = DrawPictureModule | MatchWordsModule | FinishStoryModule | SmallModule | StoryVerseModule | PuzzleModule | Cryptogram | SpecialtyModule;
 export type ModuleAssignments = Record<string, ActivityModule>;
 
 export const MODULES: readonly { id: ModuleId; name: string; size: RegionSize; description: string }[] = [
@@ -27,6 +28,7 @@ export const MODULES: readonly { id: ModuleId; name: string; size: RegionSize; d
   ...STORY_VERSE_MODULES,
   ...PUZZLE_MODULES,
   ...CRYPTOGRAM_MODULES,
+  ...SPECIALTY_MODULES,
 ];
 
 export function slotKey(page: PageNumber, regionId: string): string {
@@ -42,7 +44,7 @@ export function blankModule(type: ModuleId): ActivityModule {
     case 'draw-picture': return { type, prompt: '' };
     case 'match-words': return { type, pairs: '', seed: 1 };
     case 'finish-story': return { type, story: '', seed: 1 };
-    default: return isCryptogramId(type) ? blankCryptogram(type) : isPuzzleId(type) ? blankPuzzleModule(type) : isStoryVerseId(type) ? blankStoryVerseModule(type) : blankSmallModule(type);
+    default: return isSpecialtyId(type) ? blankSpecialtyModule(type) : isCryptogramId(type) ? blankCryptogram(type) : isPuzzleId(type) ? blankPuzzleModule(type) : isStoryVerseId(type) ? blankStoryVerseModule(type) : blankSmallModule(type);
   }
 }
 
@@ -53,7 +55,7 @@ export function isActivityModule(raw: unknown): raw is ActivityModule {
     case 'draw-picture': return typeof object.prompt === 'string';
     case 'match-words': return typeof object.pairs === 'string' && Number.isSafeInteger(object.seed) && Number(object.seed) >= 0;
     case 'finish-story': return typeof object.story === 'string' && Number.isSafeInteger(object.seed) && Number(object.seed) >= 0;
-    default: return isCryptogramId(object.type) ? isCryptogram(raw) : isPuzzleId(object.type) ? isPuzzleModule(raw) : isStoryVerseId(object.type) ? isStoryVerseModule(raw) : isSmallModuleId(object.type) && isSmallModule(raw);
+    default: return isSpecialtyId(object.type) ? isSpecialtyModule(raw) : isCryptogramId(object.type) ? isCryptogram(raw) : isPuzzleId(object.type) ? isPuzzleModule(raw) : isStoryVerseId(object.type) ? isStoryVerseModule(raw) : isSmallModuleId(object.type) && isSmallModule(raw);
   }
 }
 
@@ -115,6 +117,7 @@ export function validateModule(module: ActivityModule): string[] {
   if (isSmallModule(module)) return validateSmallModule(module);
   if (isPuzzleId(module.type)) return validatePuzzle(module as PuzzleModule);
   if (isCryptogramId(module.type)) return validateCryptogram(module as Cryptogram);
+  if (isSpecialtyId(module.type)) return validateSpecialty(module as SpecialtyModule);
   if (isStoryVerseId(module.type)) return validateStoryVerse(module as StoryVerseModule);
   if (module.type === 'draw-picture') {
     if (!module.prompt.trim()) return ['Enter what the child should draw.'];
