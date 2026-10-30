@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { downloadBookletPdf } from './exportPdf';
 import ModulePreview from './ModulePreview';
 import SmallModuleEditor from './SmallModuleEditor';
@@ -160,6 +160,7 @@ function LayoutDiagram({ id }: { id: LayoutId }) {
 
 export default function App() {
   const [draft, setDraft] = useState<Draft>(readDraft);
+  const storyInputRef = useRef<HTMLTextAreaElement>(null);
   const [page, setPage] = useState<PageNumber>(1);
   const [tab, setTab] = useState<EditorTab>('details');
   const [selectedRegionId, setSelectedRegionId] = useState<string>('cover-activity');
@@ -248,6 +249,23 @@ export default function App() {
         modules: { ...previous.modules, [activeKey]: { ...original, ...update } as ActivityModule },
       };
     });
+  }
+
+  /** Double-click selects an exact occurrence, even when a word repeats. */
+  function markSelectedStoryWord() {
+    const input=storyInputRef.current;
+    if(!input||activeModule?.type!=='finish-story')return;
+    let start=input.selectionStart,end=input.selectionEnd;
+    const text=activeModule.story;
+    if(start===end){
+      while(start>0&&/[\p{L}'’-]/u.test(text[start-1]))start--;
+      while(end<text.length&&/[\p{L}'’-]/u.test(text[end]))end++;
+    }
+    const selection=text.slice(start,end);
+    if(!/^[\p{L}]+(?:['’-][\p{L}]+)*$/u.test(selection))return;
+    if(text[start-1]==='['&&text[end]===']')return;
+    editModule({story:text.slice(0,start)+'['+selection+']'+text.slice(end)});
+    requestAnimationFrame(()=>{input.focus();input.setSelectionRange(start+1,end+1);});
   }
 
   function regenerateModule() {
@@ -442,10 +460,12 @@ export default function App() {
                   {activeModule?.type === 'finish-story' && (
                     <div className="activity-inputs">
                       <label htmlFor="story-text">Story with 6–12 missing words</label>
-                      <textarea id="story-text" rows={10} value={activeModule.story}
+                      <textarea id="story-text" rows={10} value={activeModule.story} ref={storyInputRef}
                         placeholder={'[David] was a young [shepherd]. He faced the giant [Goliath] with a [sling] and five [stones]. David trusted in [God].'}
                         onChange={(e) => editModule({ story: e.target.value })} />
-                      <p>Put [brackets] around every word to remove. The shuffled word bank always has two rows.</p>
+                      <button type="button" className="mark-blank" onMouseDown={e=>e.preventDefault()}
+                        onClick={markSelectedStoryWord}>Make selected word a blank</button>
+                      <p>Double-click a word, then choose “Make selected word a blank.” You can still type [brackets] manually. Repeated words are marked one occurrence at a time.</p>
                     </div>
                   )}
                   {activeModule && isSmallModule(activeModule) && (

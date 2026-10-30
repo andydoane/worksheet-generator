@@ -1,6 +1,6 @@
 {
   "name": "worksheet-generator",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -12,6 +12,7 @@
     "sample:pr7": "node --experimental-strip-types scripts/create-pr7-samples.mjs",
     "sample:pr8b": "node --experimental-strip-types scripts/create-pr8b-samples.mjs",
     "sample:pr9b": "node --experimental-strip-types scripts/create-pr9b-samples.mjs",
+    "sample:pr10a": "node --experimental-strip-types scripts/create-pr10a-samples.mjs",
     "build": "npm run check && vite build",
     "preview": "vite preview"
   },

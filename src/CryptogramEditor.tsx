@@ -1,4 +1,6 @@
 import type {Cryptogram} from './cryptograms.ts';
+import {CIPHER_SYMBOL_COUNT,CIPHER_SYMBOL_LABELS} from './cipherSymbols.ts';
+import {CipherGlyph} from './CryptogramPreview';
 import {generateCryptogram, validateCryptogram} from './cryptograms.ts';
 
 export default function CryptogramEditor({module,onChange}:{module:Cryptogram;onChange:(patch:Partial<Cryptogram>)=>void}){
@@ -23,6 +25,10 @@ export default function CryptogramEditor({module,onChange}:{module:Cryptogram;on
         ?'For God so loved the world that he gave his one and only Son.'
         :'God loves us and calls us to love others.'}/>
     <p>Every letter uses one unique symbol from our 26-piece vector alphabet. Only the letters used in the text appear in the decoding key, sorted A–Z. Punctuation and numbers remain unchanged.</p>
+    <details className="cipher-symbol-gallery"><summary>Preview the 26 printable symbols</summary>
+      <div className="cipher-symbol-grid">{Array.from({length:CIPHER_SYMBOL_COUNT},(_,i)=><span key={i} title={CIPHER_SYMBOL_LABELS[i]}><CipherGlyph id={i}/></span>)}</div>
+      <p>All symbols are vector artwork, not emoji. The second ∴ in the shortlist is provisionally replaced with ☾.</p>
+    </details>
     {!errors.length&&<p className="cipher-editor-count">{chars} encoded letters · {unique} key entries · seed {module.seed}</p>}
   </div>;
 }

@@ -19,9 +19,6 @@ const CONTENT_PADDING = BOOKLET.padding * PT;
 const BLACK = rgb(0.13, 0.13, 0.13);
 const DARK_GREY = rgb(0.28, 0.28, 0.28);
 const MID_GREY = rgb(0.42, 0.42, 0.42);
-const FRAME_GREY = rgb(0.49, 0.49, 0.49);
-const LIGHT_GREY = rgb(0.9, 0.9, 0.9);
-const WHITE = rgb(1, 1, 1);
 
 export type PdfDraft = {
   title: string;
@@ -166,35 +163,8 @@ function drawCenteredLines(
   });
 }
 
-function drawFrame(page: PDFPage, rect: PdfRect): void {
-  page.drawRectangle({
-    x: rect.x,
-    y: rect.y,
-    width: rect.width,
-    height: rect.height,
-    borderColor: FRAME_GREY,
-    borderWidth: 0.8,
-    color: WHITE,
-  });
-
-  // Small corner accents are vector lines, not decorative image files.
-  const length = Math.min(10, rect.width * 0.06);
-  const offset = 4;
-  const x0 = rect.x + offset;
-  const x1 = rect.x + rect.width - offset;
-  const y0 = rect.y + offset;
-  const y1 = rect.y + rect.height - offset;
-  for (const x of [x0, x1]) {
-    for (const y of [y0, y1]) {
-      page.drawLine({
-        start: { x: x + (x === x0 ? 0 : -length), y },
-        end: { x: x + (x === x0 ? length : 0), y },
-        thickness: 0.55,
-        color: LIGHT_GREY,
-      });
-    }
-  }
-}
+/** Print regions are invisible guides; the preview retains an editor-only selection outline. */
+function drawFrame(_page: PDFPage, _rect: PdfRect): void {}
 
 function drawCoverTitle(page: PDFPage, rect: PdfRect, fonts: Fonts, draft: PdfDraft): void {
   const box = inset(rect, CONTENT_PADDING);

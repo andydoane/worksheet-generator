@@ -12,7 +12,7 @@ export type TrueFalseMaze = { type: 'true-false-maze'; statement: string; answer
 export type PuzzleModule = WordSearch | TrueFalseMaze;
 export type PuzzleId = PuzzleModule['type'];
 export const PUZZLE_MODULES = [
-  { id: 'word-search', name: 'Word Search', size: 'large', description: 'A 12 × 10 grid with 4–10 forward words.' },
+  { id: 'word-search', name: 'Word Search', size: 'large', description: 'A 12 × 10 grid with 4–12 words or short phrases.' },
   { id: 'true-false-maze', name: 'True or False Maze', size: 'medium', description: 'A real 35 × 14 maze with TRUE and FALSE exits.' },
 ] as const;
 
@@ -21,7 +21,7 @@ const directions = [
   {dx:1,dy:1,name:'down-right'}, {dx:1,dy:-1,name:'up-right'},
 ] as const;
 export type WordPlacement = { word: string; x: number; y: number; dx: number; dy: number; direction: string };
-export type WordSearchGrid = { grid: string[][]; words: string[]; placements: WordPlacement[] };
+export type WordSearchGrid = { grid: string[][]; words: string[]; labels:string[]; placements: WordPlacement[] };
 
 export function isPuzzleId(value:unknown):value is PuzzleId {
   return value === 'word-search' || value === 'true-false-maze';
@@ -37,15 +37,22 @@ export function isPuzzleModule(raw:unknown):raw is PuzzleModule {
   return m.type==='word-search' ? typeof m.words==='string'
     : m.type==='true-false-maze' && typeof m.statement==='string' && typeof m.answer==='boolean';
 }
-export function parseSearchWords(text:string):string[] {
-  return text.split(/\r?\n/u).map(s=>s.trim().toUpperCase()).filter(Boolean);
+/** Save user-facing labels independently of the grid's A–Z sequences. */
+export function parseSearchEntries(text:string):{label:string;word:string}[]{
+  return text.split(/\r?\n/u).map(s=>s.trim()).filter(Boolean).map(label=>({
+    label:label.toLowerCase().replace(/\b[a-z]/g,ch=>ch.toUpperCase()),
+    word:label.toUpperCase().replace(/\s+/gu,''),
+  }));
+}
+export function parseSearchWords(text:string):string[]{
+  return parseSearchEntries(text).map(e=>e.word);
 }
 export function validatePuzzle(module:PuzzleModule):string[]{
   if(module.type==='word-search'){
-    const words=parseSearchWords(module.words);
+    const entries=parseSearchEntries(module.words),words=entries.map(e=>e.word);
     const errors:string[]=[];
-    if(words.length<4||words.length>10) errors.push('Enter 4–10 words, one per line.');
-    if(words.some(w=>!(/^[A-Z]+$/u.test(w)))) errors.push('Use individual words made of letters A–Z (no spaces, digits or punctuation).');
+    if(words.length<4||words.length>12) errors.push('Enter 4–12 words or short phrases, one per line.');
+    if(entries.some(e=>!(/^[A-Z]+(?: [A-Z]+)*$/u.test(e.label.toUpperCase())))) errors.push('Use only letters A–Z and single spaces between words.');
     if(words.some(w=>w.length<2||w.length>12)) errors.push('Each word must contain 2–12 letters.');
     if(new Set(words).size!==words.length)errors.push('Use different words; duplicate entries would be confusing.');
     return errors;
@@ -76,7 +83,7 @@ function shuffle<T>(items:T[],random:()=>number):T[]{
 export function generateWordSearch(module:WordSearch):WordSearchGrid {
   const problems=validatePuzzle(module);
   if(problems.length)throw Error(problems.join(' '));
-  const words=parseSearchWords(module.words);
+  const entries=parseSearchEntries(module.words), words=entries.map(x=>x.word);
   const rng=randomStream(words.join('|'),module.seed);
   const board:(string|null)[][]=Array.from({length:WORD_ROWS},()=>Array(WORD_COLS).fill(null));
   const placements:WordPlacement[]=[];
@@ -116,13 +123,13 @@ export function generateWordSearch(module:WordSearch):WordSearchGrid {
   }
   if(!place(0))throw Error('Could not fit these words in a 12×10 search. Try shorter words or a different list.');
   const grid=board.map(row=>row.map(letter=>letter??String.fromCharCode(65+Math.floor(rng()*26))));
-  const result={grid,words,placements:words.map(word=>placements.find(p=>p.word===word)!)};
+  const result={grid,words,labels:entries.map(x=>x.label),placements:words.map(word=>placements.find(p=>p.word===word)!)};
   if(!checkWordSearch(result))throw Error('Word-search solution validation failed. Please regenerate.');
   return result;
 }
 export function checkWordSearch(result:WordSearchGrid):boolean{
   if(result.grid.length!==WORD_ROWS||result.grid.some(row=>row.length!==WORD_COLS))return false;
-  if(result.placements.length!==result.words.length)return false;
+  if(result.placements.length!==result.words.length || result.labels.length!==result.words.length)return false;
   for(const p of result.placements){
     if(!directions.some(d=>d.dx===p.dx&&d.dy===p.dy))return false;
     if(!result.words.includes(p.word))return false;

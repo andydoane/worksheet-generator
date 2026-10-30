@@ -2,6 +2,62 @@
 
 A browser-based editor for four-page Bible story worksheet booklets.
 
+## PR 10a — First large-module polish pass and kid-friendly vector ciphers
+
+This is **the first of several intentionally small visual-polish PRs**.
+All 25 modules remain available. No previously saved content is migrated or
+deleted; output still uses the two landscape US Letter PDF sheets, pages
+4|1 outside and 2|3 inside.
+
+### Included
+
+- **Custom symbol set:** 26 explicit path-based black-and-white glyphs, used
+  for browser previews and exported PDFs (no emoji, Unicode font fallback,
+  external icon package or raster images). The 26-symbol shortlist included
+  the ∴ glyph twice. Position 17 uses **☾ temporarily** so each symbol is
+  distinguishable. The editor has an optional gallery to inspect the vector set.
+  Existing cryptogram assignments and seeds remain valid, but glyph shapes
+  intentionally change in this release.
+- **No region scaffolding:** remove the outer printed activity rectangles
+  and the four gray corner marks. The browser page preview uses a transparent
+  region background; hover/selection indicators remain in the **editor only**.
+  Functional module borders (drawing boxes, crossword squares, word banks)
+  are untouched.
+- **Story Order:** balanced wraps in the PDF and CSS preview, plus corrected
+  vertical baseline/padding in event cards.
+- **Sort the Story:** left-aligned PDF statements, centered within their
+  cards vertically. Instruction now asks children to circle the incorrect
+  portions of false statements.
+- **Draw the Story:** consistent caption height across every panel in the
+  browser preview, matching the PDF's equal-height drawing frames.
+- **Word Search:** accepts up to 12 words, including short phrases such as
+  "Red Sea" and "Dry Land". The display bank shows readable phrase labels;
+  only A–Z letters without spaces are hidden in the 12×10 grid. The bank
+  switches to three columns for nine or more entries, with flexible row
+  spacing. Editor entries are individually numbered and editable.
+- **Finish the Story:** double-click any word and use **Make selected word
+  a blank** to add square brackets around that *exact occurrence*. Manual
+  brackets remain supported. The same data format is retained.
+- **Crossword:** render the browser preview grid as exact SVG squares
+  rather than flexed CSS boxes; reserve more space below clue headings and
+  allow slightly larger squares in the PDF when there is room.
+
+### Deferred to PR 10b and later
+
+- PDF **Nunito Sans static weight instances** (currently one variable-font
+  default is used for regular and heavy text); comprehensive font parity
+  still requires a separate font pipeline.
+- Detailed Finish the Story PDF/preview line-break synchronization.
+- Crossword multiword answer normalization and compact placement tuning.
+- Spiral Verse word-on-path and verse-length-dependent number of turns.
+- Shared vertical group centering for every module and remaining
+  Medium/Small-specific polish.
+- JSON load/save, teacher answer keys, printer calibration and release QA.
+
+This scope keeps the first PR reviewable while the printed visual rules are
+still being refined. Run `npm run sample:pr10a` for sample print pages
+demonstrating the updated large modules and symbol set.
+
 ## PR 9b — Complete all 25 specified modules
 
 The final five specified activities now use typed inputs, live previews, browser-saved
