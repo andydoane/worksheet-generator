@@ -127,6 +127,7 @@ export function validateModule(module: ActivityModule): string[] {
     }
     return errors;
   }
+  if (module.type !== 'finish-story') return ['Unknown or invalid activity module.'];
   const story = parseStory(module.story);
   const errors: string[] = [];
   if (story.answers.length < 6 || story.answers.length > 12) errors.push('Use 6–12 [bracketed] missing words.');
