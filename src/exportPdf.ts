@@ -4,6 +4,8 @@ import { createBookletPdf, type PdfDraft, type PdfFontFiles } from './pdf.ts';
 const FONT_URLS = {
   mouseMemoirs: new URL('../fonts/MouseMemoirs-Regular.ttf', import.meta.url).href,
   nunitoSans: new URL('../fonts/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf', import.meta.url).href,
+  // Normalized copy; the original Zilla font is still used in the browser UI.
+  zillaSlab: new URL('../fonts/ZillaSlab-Bold-pdf.ttf', import.meta.url).href,
 } as const;
 
 async function loadFont(url: string, name: string): Promise<Uint8Array> {
@@ -28,6 +30,7 @@ export async function downloadBookletPdf(draft: PdfDraft): Promise<void> {
   const files: PdfFontFiles = {
     mouseMemoirs: await loadFont(FONT_URLS.mouseMemoirs, 'Mouse Memoirs'),
     nunitoSans: await loadFont(FONT_URLS.nunitoSans, 'Nunito Sans'),
+    zillaSlab: await loadFont(FONT_URLS.zillaSlab, 'Zilla Slab Bold'),
   };
   const bytes = await createBookletPdf(draft, files);
   // Create an owned ArrayBuffer to avoid SharedArrayBuffer/Blob type mismatches.

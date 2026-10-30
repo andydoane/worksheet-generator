@@ -33,6 +33,7 @@ export type PdfDraft = {
 export type PdfFontFiles = {
   mouseMemoirs: Uint8Array | ArrayBuffer;
   nunitoSans: Uint8Array | ArrayBuffer;
+  zillaSlab: Uint8Array | ArrayBuffer;
 };
 
 type Fonts = {
@@ -301,14 +302,13 @@ export async function createBookletPdf(draft: PdfDraft, fontFiles: PdfFontFiles)
       throw new Error('Could not embed ' + name + ' in the PDF: ' + (error instanceof Error ? error.message : String(error)));
     }
   }
-  const [title, body] = await Promise.all([
+  const [title, body, puzzle] = await Promise.all([
     embedChecked('Mouse Memoirs', fontFiles.mouseMemoirs),
     embedChecked('Nunito Sans', fontFiles.nunitoSans),
+    // Full-glyph fontTools reserialization fixes the original fontkit error.
+    embedChecked('Zilla Slab Bold', fontFiles.zillaSlab),
   ]);
-  // The supplied Zilla Slab font is readable by browsers, but pdf-lib/fontkit
-  // cannot parse its glyph metrics. Use the embedded Nunito font for labels
-  // until a PDF-compatible Zilla font becomes available.
-  const fonts: Fonts = { title, body, puzzle: body };
+  const fonts: Fonts = { title, body, puzzle };
 
   const sheets = getPrintableSheetRegions(draft);
   for (let sheetIndex = 0; sheetIndex < sheets.length; sheetIndex++) {
