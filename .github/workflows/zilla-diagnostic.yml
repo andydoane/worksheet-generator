@@ -1,0 +1,29 @@
+name: Diagnose Zilla Slab PDF embedding
+
+on:
+  push:
+    branches: ['fix/pr4-1-zilla-slab-pdf']
+
+permissions:
+  contents: read
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install application dependencies
+        run: npm install --no-audit --no-fund
+      - name: Install fontTools
+        run: python -m pip install --quiet fonttools
+      - name: Prepare candidate font variants
+        run: python scripts/zilla-candidates.py
+      - name: Test font embedding with current pdf-lib/fontkit
+        run: node scripts/zilla-test.mjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: zilla-font-candidates
+          path: artifacts/zilla-candidates/
