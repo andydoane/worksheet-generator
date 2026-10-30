@@ -109,7 +109,7 @@ export function storyBank(module: FinishStoryModule): string[] {
 /** Returns user-facing messages; empty inputs aren't silently printed as completed puzzles. */
 export function validateModule(module: ActivityModule): string[] {
   if (isSmallModule(module)) return validateSmallModule(module);
-  if (isStoryVerseModule(module)) return validateStoryVerse(module);
+  if (isStoryVerseId(module.type)) return validateStoryVerse(module as StoryVerseModule);
   if (module.type === 'draw-picture') {
     if (!module.prompt.trim()) return ['Enter what the child should draw.'];
     if (module.prompt.trim().length > 105) return ['Keep the drawing prompt under 105 characters.'];
