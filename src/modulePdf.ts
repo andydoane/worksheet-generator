@@ -85,7 +85,7 @@ function drawMatching(page: PDFPage, rect: Rect, fonts: ModuleFonts, module: Ext
   if (spacing < 16) throw new Error('Matching rows need more room; use fewer pairs.');
   const colWidth = box.width / 2 - 18;
   const names = rows.flatMap(row => [row.left.toUpperCase(), row.right.toUpperCase()]);
-  // PDF uses Nunito Sans until the Zilla Slab file can be parsed reliably.
+  // Matching words use embedded Zilla Slab Bold, like the browser preview.
   const size = fittedSize(fonts.puzzle, names, colWidth, 13.5, 8);
   rows.forEach((row, index) => {
     const y = start - index * spacing;

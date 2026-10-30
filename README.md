@@ -16,7 +16,7 @@ Select an empty region to choose its module. Only the module compatible with tha
 
 Matching answer order and story word-bank order are deterministic and stored per region: text edits in unrelated sections won't reshuffle them. Use **Shuffle** in the activity editor to request another arrangement. The typed module registry and validation/parsing helpers are in `src/modules.ts`, the HTML preview in `src/ModulePreview.tsx`, and the PDF renderers in `src/modulePdf.ts`.
 
-**Priority follow-up:** Zilla Slab Bold is working in the browser but the current PDF font parser cannot embed the supplied font. Matching text uses Zilla Slab in the browser and Nunito Sans in exported PDFs. Restoring Zilla Slab in vector PDFs remains a high-priority follow-up, potentially via font normalization or glyph outlines; this PR does not silently rasterize PDFs.
+**PR 4.1 resolved:** Zilla Slab Bold is embedded in vector PDFs using a fontTools-normalized, full-glyph copy. The original font remains unchanged for the browser. Matching words now use Zilla Slab Bold in the preview and the PDF.
 
 **Still planned:** additional module types, answer keys, custom decorative border assets, and more advanced font support.
 
@@ -47,7 +47,7 @@ Each folded booklet page is 5.5 × 8.5 inches with a 0.35-inch outer margin, lea
 - Fixed front cover: a medium-size title/reference area above a large activity area.
 - Six valid arrangements for pages 2–4.
 - Print-friendly black/grey vector borders, safe-area padding, and placeholder region labels.
-- Embedded PDF fonts: **Mouse Memoirs** for the title and **Nunito Sans** for body text and placeholder labels. The supplied **Zilla Slab Bold** file is still used in the web preview, but its glyph data is incompatible with the current PDF font library; printable puzzle-font support will be revisited with the puzzle modules.
+- Embedded PDF fonts: **Mouse Memoirs** for the title and **Nunito Sans** for body text and placeholder labels. **Zilla Slab Bold** now embeds in PDFs using a full-glyph normalized font file (`fonts/ZillaSlab-Bold-pdf.ttf`), while the browser continues using the original.
 - Browser download of a two-page PDF without any extra account or server.
 - Automated tests for geometry, imposition, PDF page count, and 11 × 8.5-inch dimensions.
 - A downloadable **sample-bifold-booklet** artifact in the GitHub Actions run for each PR.
@@ -76,4 +76,4 @@ Lesson data remains in this browser's local storage. Reloading the page preserve
 
 ## Fonts and licensing
 
-Project font files are already present in the repository under `fonts/`: Mouse Memoirs Regular, Nunito Sans Variable, and Zilla Slab Bold. The PDF exporter embeds Mouse Memoirs and Nunito Sans using `pdf-lib` and `@pdf-lib/fontkit`; Zilla Slab remains available to the browser interface. Keep their licenses in mind if distributing modified font files in the future.
+Project font files are already present in the repository under `fonts/`: Mouse Memoirs Regular, Nunito Sans Variable, and Zilla Slab Bold. The PDF exporter embeds Mouse Memoirs, Nunito Sans, and a normalized, full-glyph Zilla Slab Bold using `pdf-lib` and `@pdf-lib/fontkit`. Keep their licenses in mind if distributing modified font files in the future.
