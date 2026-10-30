@@ -45,8 +45,8 @@ const all=[order,sorted,drawing,finish,unscramble,mistakes];
 
 test('six story and verse modules are size-filtered and survive draft loading',()=>{
   assert.equal(STORY_VERSE_MODULES.length,6);
-  assert.equal(moduleForSize('large').length,6);
-  assert.equal(moduleForSize('medium').length,6);
+  assert.equal(moduleForSize('large').length,8);
+  assert.equal(moduleForSize('medium').length,9);
   assert.equal(moduleForSize('small').length,8);
   const slots={};
   all.forEach((m,i)=>{

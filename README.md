@@ -2,6 +2,46 @@
 
 A browser-based editor for four-page Bible story worksheet booklets.
 
+## PR 9b — Complete all 25 specified modules
+
+The final five specified activities now use typed inputs, live previews, browser-saved
+assignments, and true vector PDF exports:
+
+| Activity | Size | How it works |
+|---|---|---|
+| Crossword | Large | Enter 6–10 `ANSWER, clue` lines. A seeded, crossing-aware backtracking engine makes a connected numbered crossword, with **Across** and **Down** columns. |
+| Spiral Verse | Large | Enter a Scripture reference and verse. A bordered verse bank sits above a large continuous spiral writing line. |
+| Upside Down Verse | Medium | Enter a reference and verse. Each uppercase Zilla Slab letter is flipped **vertically**, with an empty writing line above it. |
+| Connect the Verse | Medium | Enter 4–12 words. Words are scattered in a seeded 3-column layout, with small rotations and per-letter vertical jitter. |
+| Connect the Big Idea | Medium | Like Connect the Verse, but with an extra bordered word bank in the original order. |
+
+**Crossword placement** requires meaningful intersections, avoids merging
+parallel neighboring words into accidental new words, and numbers each starting
+square in conventional reading order. If a particular set cannot be fitted
+legibly into the Large module, PDF export explains that the answers or clues
+need adjustment rather than silently dropping an answer. The user can
+**Regenerate crossword** to request a different deterministic arrangement.
+
+Spiral Verse and Upside Down Verse start with the lesson's memory verse and
+reference. Connect the Verse starts with the lesson's memory verse; Connect
+the Big Idea starts with the lesson's Big Idea. Each copy can be edited
+independently after assignment. The PDF preserves the original letter order,
+uses Zilla Slab Bold for puzzle lettering, and makes all spiral/blank/word
+graphics from vectors without raster images.
+
+**All 25 planned activity types are now represented in the registry:**
+8 Large, 9 Medium and 8 Small. The geometry and duplex sheet order
+remain unchanged (outside 4|1, inside 2|3).
+
+Run `npm run sample:pr9b` to generate two sample booklets in `artifacts/`.
+CI checks crossword placement and solver integrity, deterministic word scatters,
+spiral geometry, input validation, and two-sheet vector PDF export.
+
+**Deferred:** optical centering, balanced text wraps, final size limits,
+more distinguishable cryptogram symbols, decorative thumbs artwork, teacher
+answer-key output and user-save/export polish. This is the completion of the
+*module implementation* stage, not the final visual polish pass.
+
 ## PR 8b — Cryptograms and improved True/False Trek
 
 **Large Verse Cryptogram** and **Medium Big Idea Cryptogram** now use one shared

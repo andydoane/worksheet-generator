@@ -8,6 +8,8 @@ import { isPuzzleModule } from './puzzleEngines.ts';
 import { drawPuzzlePdf } from './puzzlePdf.ts';
 import { isCryptogram } from './cryptograms.ts';
 import { drawCryptogramPdf } from './cryptogramPdf.ts';
+import {isSpecialtyModule} from './specialtyModules.ts';
+import {drawSpecialtyPdf} from './specialtyPdf.ts';
 import {
   matchRows, parseStory, storyBank, validateModule, type ActivityModule,
 } from './modules.ts';
@@ -197,6 +199,7 @@ export function drawModulePdf(page: PDFPage, rect: Rect, module: ActivityModule,
   if (isStoryVerseModule(module)) return drawStoryVersePdf(page, rect, module, fonts);
   if (isPuzzleModule(module)) return drawPuzzlePdf(page, rect, module, fonts);
   if (isCryptogram(module)) return drawCryptogramPdf(page, rect, module, fonts);
+  if (isSpecialtyModule(module)) return drawSpecialtyPdf(page,rect,module,fonts);
   switch (module.type) {
     case 'draw-picture': return drawPicture(page, rect, fonts.title, module.prompt);
     case 'match-words': return drawMatching(page, rect, fonts, module);
