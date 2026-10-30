@@ -24,10 +24,18 @@ jobs:
           node-version: '22'
       - name: Install dependencies
         run: npm install --no-audit --no-fund
-      - name: Test booklet geometry
+      - name: Test booklet geometry and PDF output
         run: npm run test
       - name: Type-check and build
         run: npm run build
+      - name: Generate sample PDF
+        run: npm run sample:pdf
+      - name: Upload sample PDF for review
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: sample-bifold-booklet
+          path: artifacts/sample-bifold-booklet.pdf
       - name: Configure GitHub Pages
         if: github.event_name != 'pull_request'
         uses: actions/configure-pages@v5

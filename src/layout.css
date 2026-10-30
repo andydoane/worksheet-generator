@@ -68,3 +68,9 @@
   .preview-mode-switch button, .sheet-selector button { font-size: 10px; padding: 7px; }
   .sheet-stage { min-height: 240px; }
 }
+
+/* PR 3: Export action and accessible failure feedback. */
+.export-button.export-ready { background: #276e5c; border-color: #276e5c; color: white; }
+.export-button.export-ready:hover:not(:disabled) { background: #1d594c; }
+.export-button.export-ready:disabled { opacity: .65; }
+.pdf-error { color: #963d2f !important; background: #fff1ed; border: 1px solid #e8b2a6; padding: 10px 12px; border-radius: 8px; max-width: 680px; }

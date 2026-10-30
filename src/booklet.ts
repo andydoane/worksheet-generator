@@ -6,6 +6,7 @@ export const BOOKLET = {
   sheet: { width: 11, height: 8.5 },
   page: { width: 5.5, height: 8.5 },
   margin: 0.35,
+  padding: 0.1, // default inset inside every module, in inches
   area: { width: 4.8, height: 7.8 },
   cell: { width: 2.4, height: 2.6 },
 } as const;

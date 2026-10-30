@@ -1,53 +1,61 @@
 # Worksheet Studio
 
-A browser-based editor for building four-page Bible story worksheet booklets.
+A browser-based editor for four-page Bible story worksheet booklets.
 
-## Current milestone: PR 2 — booklet layout engine
+## PR 3 — printable PDF foundation
 
-- All PR 1 fields remain editable: title, story Scripture reference, Big Idea, memory verse reference and text.
-- Each of four virtual folded pages has a physical size of **5.5 × 8.5 inches** and **0.35-inch margins**, leaving **4.8 × 7.8 inches** for content.
-- Page 1 always uses a **medium title area on top** and a **large activity area below**.
-- Pages 2, 3, and 4 can each independently use one of **six layout presets**, selected in the Page layouts tab.
-- The responsive **Single page** preview shows the selected virtual page. **Print sheets** shows the correct imposition: outside sheet [4, 1] and inside sheet [2, 3].
-- Layout selections and lesson content are automatically saved in your current browser. PR 1 draft content is preserved when the app upgrades.
+**PDF export now works.** Enter a worksheet title and story Scripture reference, choose one of six layouts independently for pages 2–4, then click **Download PDF**. The app creates a vector PDF directly in your browser; it does not upload lesson data to a server.
 
-These are **empty module regions**. Actual module assignment, puzzle generation, answer keys, and PDF export are reserved for future milestones. Although the preview is based on exact inch measurements, it is **screen-scaled** and is not a print/export button.
+The PDF contains **two landscape US Letter pages** (each 11 × 8.5 inches) in the order needed for folding:
 
-## Layout grid
+- **PDF page 1 (outside):** booklet page **4 on the left**, booklet page **1 on the right**.
+- **PDF page 2 (inside):** booklet page **2 on the left**, booklet page **3 on the right**.
 
-Each page has a 2-column × 3-row content grid:
-- **Small:** 2.4 × 2.6 inches (1 column × 1 row).
-- **Medium:** 4.8 × 2.6 inches (2 columns × 1 row).
-- **Large:** 4.8 × 5.2 inches (2 columns × 2 rows).
+Each folded booklet page is 5.5 × 8.5 inches with a 0.35-inch outer margin, leaving 4.8 × 7.8 inches for the module grid. Module frames use 0.1-inch internal padding. All sizes and positions derive from the same constants in `src/booklet.ts` used by the responsive on-screen preview.
 
-Page 1: medium title + large activity. Pages 2–4 choose from:
+### How to print
 
-1. Medium, Large
-2. Large, Medium
-3. Small + Small, Medium, Medium
-4. Medium, Small + Small, Medium
-5. Medium, Medium, Small + Small
-6. Large, Small + Small
+1. Download the PDF with the button at the top of the editor.
+2. Open the PDF in your normal PDF reader.
+3. Choose **US Letter**, **Landscape**, **Actual size / 100%** (not 'Fit to printable area').
+4. Choose **two-sided / duplex printing, flip on short edge**.
+5. Fold the printed sheet in half vertically so the title page is the front cover.
 
-Geometry and page order are defined in `src/booklet.ts`, independent of display styling, so PR 3 can use those same measurements for PDF output. Tests ensure the six layouts have no gaps, overlaps, or out-of-bounds regions.
+**Printer note:** Duplex settings can vary by driver. Print one test sheet, confirm page 4 and page 1 are on the outside and pages 2 and 3 on the inside, and adjust the flip setting if the reverse side is upside down. The faint 'PAGE N' labels near the bottom are temporary verification helpers.
 
-## Development
+### What this milestone includes
+
+- Responsive worksheet editor and saved lesson details from PRs 1 and 2.
+- Fixed front cover: a medium-size title/reference area above a large activity area.
+- Six valid arrangements for pages 2–4.
+- Print-friendly black/grey vector borders, safe-area padding, and placeholder region labels.
+- Embedded project fonts in PDFs: **Mouse Memoirs** for the title, **Nunito Sans** for text, and **Zilla Slab Bold** for labels.
+- Browser download of a two-page PDF without any extra account or server.
+- Automated tests for geometry, imposition, PDF page count, and 11 × 8.5-inch dimensions.
+- A downloadable **sample-bifold-booklet** artifact in the GitHub Actions run for each PR.
+
+**Not yet included:** individual activity modules, answer keys, decorative border images, or module-specific typography. Empty activity spaces are intentional until PR 4 and later.
+
+### Visual preview vs exported PDF
+
+The on-screen preview is scaled to fit your monitor. The PDF is created separately from the exact inch-based model, so it has consistent physical coordinates regardless of screen size. The editor is colored for usability, but the PDF uses black-and-white-friendly rules to save ink.
+
+## Running locally
 
 Requires Node.js 22.12 or later.
 
 1. Run `npm install`.
-2. Run `npm run dev` and open the local URL shown.
-3. Run `npm run test` for layout geometry tests.
-4. Run `npm run build` for TypeScript validation and a production build.
+2. Run `npm run dev` and open the local URL.
+3. Run `npm run test` for geometry/PDF tests.
+4. Run `npm run build` for type checks and a production build.
+5. Run `npm run sample:pdf` to create an example PDF at `artifacts/sample-bifold-booklet.pdf`.
 
-The GitHub Actions workflow runs tests and builds on PRs; after merge to `main` it also deploys the built site to GitHub Pages.
+GitHub Actions checks every pull request, and after a push to `main` deploys to GitHub Pages. The Pages source should be set to **GitHub Actions** under **Settings → Pages**.
 
-**One-time setup:** GitHub repository **Settings → Pages → Build and deployment → Source → GitHub Actions**.
+Live site: https://andydoane.github.io/worksheet-generator/
 
-Production URL: https://andydoane.github.io/worksheet-generator/
+Lesson data remains in this browser's local storage. Reloading the page preserves the draft, but it does not sync between devices or browsers.
 
-## Fonts
+## Fonts and licensing
 
-The three existing repository fonts are bundled automatically: Mouse Memoirs, Nunito Sans, and Zilla Slab Bold. The uploaded slab font is **Zilla** Slab (not “Villa Slab”).
-
-No account, server, paid API, or backend is required for the current editor. Draft data is stored only in the current browser.
+Project font files are already present in the repository under `fonts/`: Mouse Memoirs Regular, Nunito Sans Variable, and Zilla Slab Bold. The PDF exporter embeds those same fonts using `pdf-lib` and `@pdf-lib/fontkit`. Keep their licenses in mind if distributing modified font files in the future.

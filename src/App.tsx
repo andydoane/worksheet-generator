@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { downloadBookletPdf } from './exportPdf';
 import {
   BOOKLET, DEFAULT_LAYOUTS, LAYOUTS, SHEETS, getRegions,
   isLayoutId, regionStyle,
@@ -99,7 +100,7 @@ function BookletPage({ page, draft }: { page: PageNumber; draft: Draft }) {
         <div
           className={'booklet-region ' + (region.kind === 'title' ? 'title-region' : 'activity-region') + ' size-' + region.size}
           key={region.id}
-          style={regionStyle(region)}
+          style={{ ...regionStyle(region), padding: String((BOOKLET.padding / BOOKLET.page.width) * 100) + '%' }}
           aria-label={region.kind === 'title' ? 'Title area' : region.size + ' activity area'}
         >
           <RegionContents region={region} draft={draft} />
@@ -134,6 +135,8 @@ export default function App() {
   const [tab, setTab] = useState<EditorTab>('details');
   const [mode, setMode] = useState<PreviewMode>('page');
   const [saved, setSaved] = useState(false);
+  const [exporting, setExporting] = useState(false);
+  const [exportError, setExportError] = useState<string | null>(null);
 
   useEffect(() => {
     try {
@@ -146,6 +149,19 @@ export default function App() {
 
   function edit(field: 'title' | 'scripture' | 'bigIdea' | 'verseReference' | 'verseText', value: string) {
     setDraft((previous) => ({ ...previous, [field]: value }));
+  }
+
+  async function handleExport() {
+    if (exporting) return;
+    setExportError(null);
+    setExporting(true);
+    try {
+      await downloadBookletPdf(draft);
+    } catch (error) {
+      setExportError(error instanceof Error ? error.message : 'Could not create the PDF. Please try again.');
+    } finally {
+      setExporting(false);
+    }
   }
 
   function setLayout(layout: LayoutId) {
@@ -181,7 +197,7 @@ export default function App() {
           <button type="button" className={'step ' + (tab === 'layouts' ? 'current' : '')} onClick={() => setTab('layouts')}>
             <span className="step-number">02</span><span><strong>Page layouts</strong><small>Ready to customize</small></span>
           </button>
-          <div className="step step-upcoming"><span className="step-number">03</span><span><strong>Activities & export</strong><small>Coming in future PRs</small></span></div>
+          <div className="step step-upcoming"><span className="step-number">03</span><span><strong>Activity modules</strong><small>Coming in PR 4</small></span></div>
         </div>
         <div className="sidebar-group page-nav">
           <div className="nav-label">BOOKLET PAGES</div>
@@ -192,7 +208,7 @@ export default function App() {
             </button>
           ))}
         </div>
-        <div className="sidebar-foot"><span aria-hidden="true">●</span> Booklet layout release · PR 2</div>
+        <div className="sidebar-foot"><span aria-hidden="true">●</span> Printable booklet release · PR 3</div>
       </aside>
 
       <div className="workspace">
@@ -200,7 +216,7 @@ export default function App() {
           <span className="breadcrumb">WORKSPACE <span>/</span> BOOKLET DESIGN</span>
           <div className="topbar-right">
             <span className="save-indicator" role="status"><span className={saved ? 'dot saved' : 'dot'} />{saved ? 'Saved in this browser' : 'Browser saving unavailable'}</span>
-            <button className="export-button" type="button" disabled title="PDF export is planned for PR 3">Export PDF ↗</button>
+            <button className="export-button export-ready" type="button" disabled={exporting} onClick={handleExport} aria-busy={exporting}>{exporting ? 'Creating PDF…' : 'Download PDF ↗'}</button>
           </div>
         </header>
 
@@ -208,7 +224,8 @@ export default function App() {
           <div className="intro">
             <span className="eyebrow">YOUR NEXT BIBLE STORY RESOURCE</span>
             <h1>Design your <em>little</em> booklet.</h1>
-            <p>Choose the exact page arrangement for your four-page, folded Bible worksheet. Each empty region will hold an activity in a future release.</p>
+            <p>Choose the page arrangement for your folded Bible worksheet, then download a two-sided, print-ready PDF with the correct booklet page order. Activity modules are coming next.</p>
+            {exportError && <p className="pdf-error" role="alert">{exportError}</p>}
           </div>
           <div className="columns">
             <section className="panel" aria-labelledby="editor-heading">
@@ -330,7 +347,7 @@ export default function App() {
                   ))}
                 </nav>
               </div>
-              <p className="preview-disclaimer">ⓘ Section sizes and margins use exact inch-based geometry, shown scaled to fit your screen. These are empty activity areas; printable PDF export arrives in PR 3.</p>
+              <p className="preview-disclaimer">ⓘ This preview scales to your screen; Download PDF creates two landscape US Letter pages in booklet order. Print at 100% / Actual size, double-sided, and flip on the short edge. Activity regions are placeholders.</p>
             </section>
           </div>
         </main>
