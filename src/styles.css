@@ -1,8 +1,11 @@
 @font-face { font-family: 'Mouse Memoirs'; src: url('../fonts/MouseMemoirs-Regular.ttf') format('truetype'); font-weight: 400; font-display: swap; }
-@font-face { font-family: 'Nunito Sans'; src: url('../fonts/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf') format('truetype'); font-weight: 200 900; font-display: swap; }
+@font-face { font-family: 'Nunito'; src: url('../fonts/Nunito-Regular.ttf') format('truetype'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'Nunito'; src: url('../fonts/Nunito-Medium.ttf') format('truetype'); font-weight: 500; font-display: swap; }
+@font-face { font-family: 'Nunito'; src: url('../fonts/Nunito-Bold.ttf') format('truetype'); font-weight: 700; font-display: swap; }
+@font-face { font-family: 'Nunito'; src: url('../fonts/Nunito-ExtraBold.ttf') format('truetype'); font-weight: 800; font-display: swap; }
 @font-face { font-family: 'Zilla Slab'; src: url('../fonts/ZillaSlab-Bold.ttf') format('truetype'); font-weight: 700; font-display: swap; }
 
-:root { font-family: 'Nunito Sans', sans-serif; background: #f5f7f3; color: #1c3f3d; font-synthesis: none; -webkit-font-smoothing: antialiased; }
+:root { font-family: 'Nunito', sans-serif; background: #f5f7f3; color: #1c3f3d; font-synthesis: none; -webkit-font-smoothing: antialiased; }
 * { box-sizing: border-box; }
 body { margin: 0; min-width: 320px; }
 button, input, textarea { font: inherit; }

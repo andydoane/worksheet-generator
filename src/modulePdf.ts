@@ -171,6 +171,11 @@ function drawStory(page: PDFPage, rect: Rect, fonts: ModuleFonts, module: Extrac
   }
   if (!placed) throw new Error('Story text does not fit in the large area. Shorten it or use fewer words.');
 
+  // Center the complete story paragraph below its title and word bank.
+  const low=Math.min(...placed.map(t=>t.y));
+  const high=Math.max(...placed.map(t=>t.y))+bodySize;
+  const offset=storyBox.y+storyBox.height/2-(low+high)/2;
+  placed=placed.map(t=>({...t,y:t.y+offset}));
   placed.forEach(token => {
     if (token.kind === 'blank') {
       page.drawLine({

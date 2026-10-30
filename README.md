@@ -1,5 +1,52 @@
 # Worksheet Studio
 
+## PR 10d — Story and Drawing Layout Refinements
+
+This PR applies the shared layout foundations to all four story-based Large
+modules and includes the visual feedback from PR 10b+c.
+
+### Nunito typography: family correction
+The requested family is **Nunito**, not **Nunito Sans**. The user supplied
+`fonts/Nunito-Medium.ttf`, `fonts/Nunito-Bold.ttf`,
+`fonts/Nunito-ExtraBold.ttf`, and `fonts/Nunito-Regular.ttf` directly to
+the repository. All browser Nunito typography and printed text now reference
+this family. Export embeds full, static vector TrueType font files:
+
+- **Nunito Medium (500)** — body paragraphs, labels, and statements.
+- **Nunito Bold (700)** — instructions and subtitles.
+- **Nunito ExtraBold (800)** — word banks.
+- **Nunito Regular (400)** — retained as a future optional alternative.
+
+Mouse Memoirs titles and Zilla Slab puzzle lettering remain unchanged.
+The original Nunito Sans files remain in the repository for compatibility
+until a separate, deliberately reviewed cleanup; they are **not** loaded by
+the current browser or PDF export. Existing worksheet data remains compatible.
+
+### Large-module print and preview refinements
+- **Finish the Story:** increased browser body size toward the existing PDF
+  13-point preferred scale, matched the bank's actual ExtraBold weight, and
+  vertically centered the calculated paragraph within its available region.
+- **Story Order:** retained measured balanced wraps; increased the inner card
+  text padding and aligned the preview typography with the new medium face.
+- **Sort the Story:** exact user-approved instructions now use **balanced**
+  two-line (or necessary multiline) wrapping in both PDF and preview; story
+  statements remain left-aligned, with consistent padding and vertical centering.
+- **Draw the Story:** all boxes retain the same height; printed frames now
+  reserve a visible 10-point gap above the captions. Captions use a slightly
+  smaller Medium weight and more appropriate height when in a three-column grid.
+
+### Verification
+Run `npm run test && npm run build && npm run sample:pr10d`.
+GitHub Actions builds two print samples for normal and longer captions,
+covering all four story modules. Tests exercise actual Nunito font resources,
+measured subtitle balancing, valid booklet geometry and story layout.
+
+### Still planned
+The separate follow-up Large-module passes cover final line-break parity
+for Finish the Story, Word Search and Verse Cryptogram spaciousness,
+Crossword layout tuning and Spiral Verse writing guidance. We will review
+those before Medium/Small and final save/answer-key release polishing.
+
 A browser-based editor for four-page Bible story worksheet booklets.
 
 ## PR 10b+c — Review fixes, genuine Nunito weights and reusable layout foundations
