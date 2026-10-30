@@ -1,15 +1,19 @@
-import { matchRows, parseStory, storyBank, validateModule, type ActivityModule } from './modules';
+import { matchRows, parseStory, storyBank, validateModule, MODULES, type ActivityModule } from './modules';
+import { isSmallModule } from './smallModules';
+import SmallModulePreview from './SmallModulePreview';
 
 export default function ModulePreview({ module }: { module: ActivityModule }) {
   const errors = validateModule(module);
   if (errors.length) {
     return (
       <div className="module-preview module-incomplete">
-        <strong>{module.type === 'draw-picture' ? 'Draw a Picture' : module.type === 'match-words' ? 'Match the Words' : 'Finish the Story'}</strong>
+        <strong>{MODULES.find(item => item.id === module.type)?.name ?? 'Activity'}</strong>
         <span>Complete this activity in the editor.</span>
       </div>
     );
   }
+
+  if (isSmallModule(module)) return <SmallModulePreview module={module}/>;
 
   if (module.type === 'draw-picture') {
     return (
