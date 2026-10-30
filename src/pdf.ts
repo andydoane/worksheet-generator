@@ -289,10 +289,20 @@ export async function createBookletPdf(draft: PdfDraft, fontFiles: PdfFontFiles)
   document.setCreator('Worksheet Studio');
   document.setProducer('Worksheet Studio / pdf-lib');
 
+  async function embedChecked(name: string, bytes: Uint8Array | ArrayBuffer): Promise<PDFFont> {
+    try {
+      const custom = await document.embedFont(bytes, { subset: false });
+      // Trigger glyph metrics now, so font-format failures have a useful label.
+      custom.widthOfTextAtSize('ABC', 12);
+      return custom;
+    } catch (error) {
+      throw new Error('Could not embed ' + name + ' in the PDF: ' + (error instanceof Error ? error.message : String(error)));
+    }
+  }
   const [title, body, puzzle] = await Promise.all([
-    document.embedFont(fontFiles.mouseMemoirs, { subset: false }),
-    document.embedFont(fontFiles.nunitoSans, { subset: false }),
-    document.embedFont(fontFiles.zillaSlab, { subset: false }),
+    embedChecked('Mouse Memoirs', fontFiles.mouseMemoirs),
+    embedChecked('Nunito Sans', fontFiles.nunitoSans),
+    embedChecked('Zilla Slab', fontFiles.zillaSlab),
   ]);
   const fonts: Fonts = { title, body, puzzle };
 
