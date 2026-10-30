@@ -17,21 +17,21 @@ This first release replaces the "Coming soon" page with a responsive React/TypeS
 
 Install Node.js 22.12 or newer, then run:
 
-1. \`npm install\`
-2. \`npm run dev\`
+1. `npm install`
+2. `npm run dev`
 3. Open the local address shown in your terminal.
 
-Run \`npm run check\` to type-check and \`npm run build\` to type-check and build the static site in \`dist/\`. No server, account, or API key is needed for this initial release.
+Run `npm run check` to type-check and `npm run build` to type-check and build the static site in `dist/`. No server, account, or API key is needed for this initial release.
 
 ## GitHub Pages deployment
 
-The production Vite base path is \`/worksheet-generator/\`, matching the repository's Pages URL.
+The production Vite base path is `/worksheet-generator/`, matching the repository's Pages URL.
 
-The workflow in \`.github/workflows/pages.yml\` checks each pull request and deploys to Pages on a push to \`main\`.
+The workflow in `.github/workflows/pages.yml` checks each pull request and deploys to Pages on a push to `main`.
 
 **One-time setup:** In the GitHub repo, go to **Settings → Pages → Build and deployment → Source** and select **GitHub Actions**. After merging, check the **Actions** tab for the deployment run. The eventual address is https://andydoane.github.io/worksheet-generator/.
 
-This first PR uses \`npm install\` in CI; a future dependency-management change can add a committed package lockfile for reproducible installs.
+This first PR uses `npm install` in CI; a future dependency-management change can add a committed package lockfile for reproducible installs.
 
 ## Planned booklet dimensions
 
@@ -48,10 +48,10 @@ These exact dimensions will be implemented in PR 2 and the PDF export in PR 3.
 
 ## Fonts
 
-Font files already in this repository are loaded from the \`fonts/\` directory:
+Font files already in this repository are loaded from the `fonts/` directory:
 
-- \`MouseMemoirs-Regular.ttf\` — display headings.
-- \`NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf\` — interface and body text.
-- \`ZillaSlab-Bold.ttf\` — puzzle-style lettering in future modules.
+- `MouseMemoirs-Regular.ttf` — display headings.
+- `NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf` — interface and body text.
+- `ZillaSlab-Bold.ttf` — puzzle-style lettering in future modules.
 
 The uploaded font is named **Zilla** Slab (rather than "Villa Slab"). Verify font licenses before republishing or redistributing assets.
