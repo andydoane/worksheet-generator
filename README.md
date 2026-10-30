@@ -2,6 +2,24 @@
 
 A browser-based editor for four-page Bible story worksheet booklets.
 
+## PR 4 — First working activity modules
+
+The **Activities** tab lets you click or select any activity region, choose a compatible module, enter its content, preview the result, and export it directly into the same two-page vector PDF. Each region remembers its own assignment when you refresh. Changing a page layout hides any assignments for slots no longer visible; switching back restores them.
+
+| Module | Region | Inputs | Printed result |
+|---|---|---|---|
+| Draw a Picture | Small (2.4 × 2.6 in) | A short prompt completing 'Draw a picture of...' | Blank drawing frame with the prompt underneath |
+| Match the Words | Medium (4.8 × 2.6 in) | 3–6 lines in `left, right` format | Heading, instructions, two word columns; right words shuffled from source order |
+| Finish the Story | Large (4.8 × 5.2 in) | A paragraph with 6–12 `[bracketed]` single words | Heading, boxed two-row shuffled word bank, story with proportional answer lines |
+
+Select an empty region to choose its module. Only the module compatible with that region's size is offered. **Empty regions** keep their former labeled placeholders; invalid or incomplete modules produce editor validation messages and block PDF export rather than printing misleading activities. The export button displays a page-specific error when PDF content cannot fit.
+
+Matching answer order and story word-bank order are deterministic and stored per region: text edits in unrelated sections won't reshuffle them. Use **Shuffle** in the activity editor to request another arrangement. The typed module registry and validation/parsing helpers are in `src/modules.ts`, the HTML preview in `src/ModulePreview.tsx`, and the PDF renderers in `src/modulePdf.ts`.
+
+**Priority follow-up:** Zilla Slab Bold is working in the browser but the current PDF font parser cannot embed the supplied font. Matching text uses Zilla Slab in the browser and Nunito Sans in exported PDFs. Restoring Zilla Slab in vector PDFs remains a high-priority follow-up, potentially via font normalization or glyph outlines; this PR does not silently rasterize PDFs.
+
+**Still planned:** additional module types, answer keys, custom decorative border assets, and more advanced font support.
+
 ## PR 3 — printable PDF foundation
 
 **PDF export now works.** Enter a worksheet title and story Scripture reference, choose one of six layouts independently for pages 2–4, then click **Download PDF**. The app creates a vector PDF directly in your browser; it does not upload lesson data to a server.
@@ -34,7 +52,7 @@ Each folded booklet page is 5.5 × 8.5 inches with a 0.35-inch outer margin, lea
 - Automated tests for geometry, imposition, PDF page count, and 11 × 8.5-inch dimensions.
 - A downloadable **sample-bifold-booklet** artifact in the GitHub Actions run for each PR.
 
-**Not yet included:** individual activity modules, answer keys, decorative border images, or module-specific typography. Empty activity spaces are intentional until PR 4 and later.
+**The first three modules are now implemented in PR 4.** Answer keys, decorative border images, and the remaining activity types are planned for future pull requests.
 
 ### Visual preview vs exported PDF
 
