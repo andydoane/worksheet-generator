@@ -1,5 +1,10 @@
 import { useEffect, useState } from 'react';
 import { downloadBookletPdf } from './exportPdf';
+import ModulePreview from './ModulePreview';
+import {
+  blankModule, moduleForSize, readAssignments, slotKey, validateModule,
+  type ActivityModule, type ModuleAssignments, type ModuleId,
+} from './modules';
 import {
   BOOKLET, DEFAULT_LAYOUTS, LAYOUTS, SHEETS, getRegions,
   isLayoutId, regionStyle,
@@ -13,9 +18,10 @@ type Draft = {
   verseReference: string;
   verseText: string;
   layouts: Record<2 | 3 | 4, LayoutId>;
+  modules: ModuleAssignments;
 };
 
-type EditorTab = 'details' | 'layouts';
+type EditorTab = 'details' | 'layouts' | 'activities';
 type PreviewMode = 'page' | 'sheet';
 
 const KEY = 'worksheet-studio:draft:v1';
@@ -26,6 +32,7 @@ const blank: Draft = {
   verseReference: '',
   verseText: '',
   layouts: { ...DEFAULT_LAYOUTS },
+  modules: {},
 };
 
 const pages: { number: PageNumber; label: string }[] = [
@@ -62,6 +69,7 @@ function readDraft(): Draft {
         3: isLayoutId(storedLayouts[3]) ? storedLayouts[3] : DEFAULT_LAYOUTS[3],
         4: isLayoutId(storedLayouts[4]) ? storedLayouts[4] : DEFAULT_LAYOUTS[4],
       },
+      modules: readAssignments(value.modules),
     };
   } catch {
     // Storage can be unavailable, and old user content could be malformed.
@@ -69,7 +77,7 @@ function readDraft(): Draft {
   }
 }
 
-function RegionContents({ region, draft }: { region: Region; draft: Draft }) {
+function RegionContents({ region, draft, module }: { region: Region; draft: Draft; module?: ActivityModule }) {
   if (region.kind === 'title') {
     return (
       <div className="cover-content">
@@ -80,6 +88,8 @@ function RegionContents({ region, draft }: { region: Region; draft: Draft }) {
     );
   }
 
+  if (module && moduleForSize(region.size).some((item) => item.id === module.type)) return <ModulePreview module={module} />;
+
   return (
     <div className="region-content">
       <span className="region-tag">{region.size.toUpperCase()}</span>
@@ -89,23 +99,31 @@ function RegionContents({ region, draft }: { region: Region; draft: Draft }) {
   );
 }
 
-function BookletPage({ page, draft }: { page: PageNumber; draft: Draft }) {
+function BookletPage({
+  page, draft, selectedId, onSelect,
+}: {
+  page: PageNumber;
+  draft: Draft;
+  selectedId?: string;
+  onSelect: (page: PageNumber, regionId: string) => void;
+}) {
   const layoutId = page === 1 ? DEFAULT_LAYOUTS[2] : draft.layouts[page];
   const regions = getRegions(page, layoutId);
-
   return (
     <div className="booklet-page" aria-label={'Booklet page ' + page + ' layout'}>
       <div className="booklet-page-number" aria-hidden="true">{page}</div>
-      {regions.map((region) => (
-        <div
-          className={'booklet-region ' + (region.kind === 'title' ? 'title-region' : 'activity-region') + ' size-' + region.size}
-          key={region.id}
-          style={{ ...regionStyle(region), padding: String((BOOKLET.padding / BOOKLET.page.width) * 100) + '%' }}
-          aria-label={region.kind === 'title' ? 'Title area' : region.size + ' activity area'}
-        >
-          <RegionContents region={region} draft={draft} />
-        </div>
-      ))}
+      {regions.map((region) => {
+        const style = { ...regionStyle(region), padding: String((BOOKLET.padding / BOOKLET.page.width) * 100) + '%' };
+        const className = 'booklet-region ' + (region.kind === 'title' ? 'title-region' : 'activity-region') +
+          ' size-' + region.size + (region.id === selectedId ? ' selected-region' : '');
+        const content = <RegionContents region={region} draft={draft} module={draft.modules[slotKey(page, region.id)]} />;
+        return region.kind === 'title'
+          ? <div key={region.id} className={className} style={style} aria-label="Fixed title area">{content}</div>
+          : <button type="button" key={region.id} className={className} style={style}
+              aria-label={'Edit ' + region.size + ' activity on page ' + page}
+              aria-pressed={region.id === selectedId}
+              onClick={() => onSelect(page, region.id)}>{content}</button>;
+      })}
     </div>
   );
 }
