@@ -83,12 +83,12 @@ function spiral(page:PDFPage,b:Rect,module:Extract<SpecialtyModule,{type:'spiral
   centered(page,fonts.title,'SPIRAL VERSE',b.x,b.y+b.height-27,b.width,26);
   centered(page,fonts.body,'Copy the verse on the spiral line.',b.x,b.y+b.height-42,b.width,9);
   let size=10.8,rows:string[]|null=null;
-  for(;size>=8;size-=.4){rows=wrapped(fonts.body,module.verse,size,b.width-16);if(rows&&rows.length<=4)break;}
+  for(;size>=8;size-=.4){rows=wrapped(fonts.bodyBold,module.verse,size,b.width-16);if(rows&&rows.length<=4)break;}
   if(!rows||rows.length>4)throw Error('Verse does not fit the reference box. Shorten it.');
   const bankHeight=rows.length*size*1.27+34,bankTop=b.y+b.height-53,bankBottom=bankTop-bankHeight;
   page.drawRectangle({x:b.x,y:bankBottom,width:b.width,height:bankHeight,borderColor:LIGHT,borderWidth:.9});
-  centered(page,fonts.body,module.reference,b.x,bankTop-15,b.width,10.5);
-  rows.forEach((text,i)=>centered(page,fonts.body,text,b.x+6,bankTop-31-i*size*1.27,b.width-12,size));
+  centered(page,fonts.bodyBold,module.reference,b.x,bankTop-15,b.width,10.5);
+  rows.forEach((text,i)=>centered(page,fonts.bodyBold,text,b.x+6,bankTop-31-i*size*1.27,b.width-12,size));
   const bottom=b.y+2,diameter=Math.min(b.width-8,bankBottom-bottom-9);
   if(diameter<120)throw Error('Verse bank leaves insufficient room for a usable spiral.');
   const cx=b.x+b.width/2,cy=bottom+(bankBottom-bottom)/2;

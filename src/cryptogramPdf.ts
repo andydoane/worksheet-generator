@@ -98,6 +98,6 @@ export function drawCryptogramPdf(page:PDFPage,rect:Rect,module:Cryptogram,fonts
   if(data.reference){
     if(width(fonts.body,data.reference,10)>box.width)
       throw Error('Verse reference is too long to fit.');
-    centered(page,fonts.body,data.reference,box.x,box.y+5,box.width,10);
+    centered(page,fonts.bodyBold,data.reference,box.x,box.y+5,box.width,10);
   }
 }

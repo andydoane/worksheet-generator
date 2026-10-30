@@ -16,7 +16,7 @@ import {
 } from './modules.ts';
 
 type Rect = { x: number; y: number; width: number; height: number };
-export type ModuleFonts = { title: PDFFont; body: PDFFont; puzzle: PDFFont };
+export type ModuleFonts = { title: PDFFont; body: PDFFont; bodyBold: PDFFont; bank: PDFFont; puzzle: PDFFont };
 const INCH = 72;
 const INSET = BOOKLET.padding * INCH;
 const INK = rgb(0.13, 0.13, 0.13);
@@ -150,11 +150,11 @@ function drawStory(page: PDFPage, rect: Rect, fonts: ModuleFonts, module: Extrac
   });
 
   const cellWidth = inner.width / columns;
-  const size = fittedSize(fonts.body, bank.map(word => word.toUpperCase()), cellWidth - 6, 11.5, 6.5);
+  const size = fittedSize(fonts.bank, bank.map(word => word.toUpperCase()), cellWidth - 6, 11.5, 6.5);
   bank.forEach((word, index) => {
     const row = Math.floor(index / columns);
     const col = index % columns;
-    centered(page, fonts.body, word.toUpperCase(), inner.x + col * cellWidth, bankTop - 24 - row * 29, cellWidth, size);
+    centered(page, fonts.bank, word.toUpperCase(), inner.x + col * cellWidth, bankTop - 24 - row * 29, cellWidth, size);
   });
 
   const storyBox = {

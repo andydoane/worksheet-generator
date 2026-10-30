@@ -56,12 +56,12 @@ function drawWordSearch(page:PDFPage,rect:Rect,fonts:ModuleFonts,module:Extract<
   const rowStep=Math.min(21,(bankTop-box.y-6)/rows);
   if(rowStep<12)throw Error('Word list does not fit; shorten your words.');
   const fontSize=Math.min(12,...puzzle.labels.map(word=>{
-    for(let s=12;s>=7.5;s-=.5)if(textWidth(fonts.body,word,s)<=colW-7)return s;
+    for(let s=12;s>=7.5;s-=.5)if(textWidth(fonts.bank,word,s)<=colW-7)return s;
     throw Error('Word-list entry is too long to print clearly.');
   }));
   puzzle.labels.forEach((word,i)=>{
     const col=i%columns,row=Math.floor(i/columns);
-    center(page,fonts.body,word,box.x+col*colW,bankTop-row*rowStep,colW,fontSize);
+    center(page,fonts.bank,word,box.x+col*colW,bankTop-row*rowStep,colW,fontSize);
   });
 }
 

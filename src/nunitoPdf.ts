@@ -17,7 +17,9 @@ export async function embedNunitoWeights(document:PDFDocument,source:Uint8Array|
       const weight=NUNITO_WEIGHTS[key];
       const varyingKit={
         create(data:Uint8Array){
-          const variable=fontkit.create(data);
+          const variable=fontkit.create(data) as ReturnType<typeof fontkit.create> & {
+            getVariation?: (axes:Record<string,number>)=>ReturnType<typeof fontkit.create>;
+          };
           if(typeof variable.getVariation!=='function'){
             throw new Error('The Nunito Sans font does not expose its weight axis.');
           }

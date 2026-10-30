@@ -213,10 +213,10 @@ function finishVerse(page:PDFPage,b:Rect,fonts:ModuleFonts,m:FinishVerse):void {
   page.drawRectangle({x:b.x,y:top-bankH,width:b.width,height:bankH,borderColor:MID,borderWidth:.9});
   const cols=Math.ceil(bank.length/2),cw=b.width/cols;
   const size=Math.min(11,...bank.map(word=>{
-    for(let s=11;s>=6.5;s-=.5)if(width(fonts.body,word.toUpperCase(),s)<cw-4)return s;
+    for(let s=11;s>=6.5;s-=.5)if(width(fonts.bank,word.toUpperCase(),s)<cw-4)return s;
     throw new Error('A word-bank entry is too wide for its cell.');
   }));
-  bank.forEach((word,i)=>centered(page,fonts.body,word.toUpperCase(),
+  bank.forEach((word,i)=>centered(page,fonts.bank,word.toUpperCase(),
     {x:b.x+(i%cols)*cw,y:top-bankH,width:cw,height:bankH},top-16-Math.floor(i/cols)*18,size));
   centered(page,fonts.body,m.reference,{x:b.x,y:top-87,width:b.width,height:16},top-bankH-15,10.5);
   drawVerseBody(page,fonts,m.verse,{x:b.x+3,y:b.y+4,width:b.width-6,height:67},top-bankH-38,'box',[]);
