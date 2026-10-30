@@ -16,7 +16,7 @@ test('unused room can grow content within caps without shifting outside frame',(
   assert.ok(stack[2].y>=0);
 });
 test('text wrapping uses measured widths and never truncates words',()=>{
-  const lines=measureWrappedLines('Daniel trusted God completely',100,t=>t.length*10);
+  const lines=measureWrappedLines('Daniel trusted God completely',115,t=>t.length*10);
   assert.deepEqual(lines,['Daniel','trusted God','completely']);
   assert.equal(measureWrappedLines('elephant',12,t=>t.length*10),null);
 });

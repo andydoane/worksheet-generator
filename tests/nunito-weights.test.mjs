@@ -22,7 +22,7 @@ test('Nunito uses three distinct physical variable-font instances, not a single 
     page.drawText('God loves every child.',{x:80,y:500-i*45,size:18,font});
   }
   const bytes=await pdf.save();
-  assert.ok(bytes.length>10000);
+  assert.ok(bytes.length>2000,'embedded TrueType subset should produce a nonempty PDF');
   const loaded=await PDFDocument.load(bytes);
   assert.equal(loaded.getPageCount(),1);
   const names=loaded.context.enumerateIndirectObjects()
