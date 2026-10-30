@@ -21,7 +21,7 @@ export function drawCipherGlyph(page:PDFPage,id:number,x:number,y:number,size:nu
   const glyph=cipherSymbol(id);
   for(const p of glyph.paths) {
     page.drawSvgPath(p.d,{
-      x,y,scale:size/16,
+      x,y:y+size,scale:size/16,
       ...(p.filled ? {color:INK} : {borderColor:INK,borderWidth:1.45}),
     });
   }
