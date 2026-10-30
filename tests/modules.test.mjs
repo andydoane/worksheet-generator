@@ -93,5 +93,5 @@ test('invalid activity inputs are reported before creating a misleading PDF', as
     layouts: { ...DEFAULT_LAYOUTS },
     modules: { '2:top-medium': { type: 'match-words', pairs: '', seed: 1 } },
   };
-  await assert.rejects(() => createBookletPdf(draft, fontFiles()), /Page 2.*Enter 3/);
+  await assert.rejects(async () => createBookletPdf(draft, await fontFiles()), /Page 2.*Enter 3/);
 });
