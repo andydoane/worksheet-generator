@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
-import { PDFDocument } from 'pdf-lib';
+import { PDFDocument, PDFDict, PDFName } from 'pdf-lib';
 import fontkit from '@pdf-lib/fontkit';
 import { createBookletPdf } from '../src/pdf.ts';
 import { DEFAULT_LAYOUTS } from '../src/booklet.ts';
@@ -46,9 +46,14 @@ test('booklet generated with a matching puzzle embeds Zilla Slab', async () => {
       seed: 3,
     }},
   }, await fonts());
-  const resultText = Buffer.from(result).toString('latin1');
-  // PDF font resource names are uncompressed PDF dictionary tokens.
-  assert.match(resultText, /ZillaSlab/i);
   const pdf = await PDFDocument.load(result);
   assert.equal(pdf.getPageCount(), 2);
+  // pdf-lib compresses object streams by default; inspect parsed font
+  // dictionaries rather than searching raw compressed PDF bytes.
+  const embeddedNames = pdf.context.enumerateIndirectObjects()
+    .filter(([, object]) => object instanceof PDFDict)
+    .map(([, object]) => object.get(PDFName.of('BaseFont'))?.toString())
+    .filter(Boolean);
+  assert.ok(embeddedNames.some(name => /ZillaSlab/i.test(name)),
+    'expected Zilla Slab in embedded PDF font resources: ' + embeddedNames.join(', '));
 });
