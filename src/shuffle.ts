@@ -25,3 +25,19 @@ export function shuffledIndices(length: number, content: string, seed: number): 
   return indices;
 }
 
+
+
+/** Prevent matching answers from remaining on their original rows. */
+export function derangedIndices(length: number, content: string, seed: number): number[] {
+  const order = shuffledIndices(length, content, seed);
+  if (length < 2) return order;
+  const fixed = order.flatMap((value, index) => value === index ? [index] : []);
+  if (fixed.length === 1) {
+    const a = fixed[0], b = (a + 1) % length;
+    [order[a], order[b]] = [order[b], order[a]];
+  } else if (fixed.length > 1) {
+    const copy = fixed.map(index => order[index]);
+    fixed.forEach((index, i) => { order[index] = copy[(i + 1) % copy.length]; });
+  }
+  return order;
+}

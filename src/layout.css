@@ -158,3 +158,34 @@
 .small-letter-blank { height:70%; border-bottom:1px solid #222; flex:1; max-width:14px; }
 .small-blank-space { width:clamp(4px,2cqw,8px); flex:none; }
 .small-hyphen { flex:none; font-size:14px; }
+
+
+/* PR 6: Story and verse activity previews. Finish the print polish in final pass. */
+.sv-preview { gap: clamp(3px,1.3cqw,8px); text-align:center; font-family:'Nunito Sans',sans-serif; }
+.sv-instruction { font: 700 clamp(7px,2.3cqw,11px)/1.2 'Nunito Sans',sans-serif; color:#46564f; }
+.sv-order-list { display:flex; flex-direction:column; flex:1; min-height:0; justify-content:space-around; gap:clamp(2px,1cqw,5px); }
+.sv-order-row { display:flex; align-items:center; flex:1; min-height:0; gap:7px; }
+.sv-number-circle { width:clamp(16px,5cqw,23px); aspect-ratio:1; flex:none; border:1px solid #555; border-radius:50%; background:white; }
+.sv-order-text { display:flex; flex:1; min-width:0; min-height:0; align-items:center; justify-content:center; padding:2px 5px; border:1px solid #777; font:600 clamp(7px,2.4cqw,12px)/1.18 'Nunito Sans',sans-serif; overflow-wrap:anywhere; align-self:stretch; }
+.sv-statement-bank { border:1px solid #666; display:flex; flex-direction:column; flex:1; min-height:0; margin-top:3px; }
+.sv-statement { flex:1; min-height:0; display:flex; align-items:center; gap:6px; border-bottom:1px solid #bbb; padding:2px 5px; font:600 clamp(7px,2.35cqw,11px)/1.16 'Nunito Sans',sans-serif; text-align:left; overflow-wrap:anywhere; }
+.sv-statement:last-child { border-bottom:0; }
+.sv-letter { width:clamp(14px,4.7cqw,23px); min-height:clamp(14px,4.7cqw,23px); flex:none; display:flex; justify-content:center; align-items:center; border:1px solid #666; font:700 clamp(8px,2.7cqw,12px)/1 'Zilla Slab',serif; }
+.sv-sort-answers { display:grid; grid-template-columns:1fr 1fr; gap:9px; flex:0 0 clamp(48px,16cqw,78px); font:400 clamp(12px,4cqw,18px)/1 'Mouse Memoirs',sans-serif; }
+.sv-sort-answers > div { display:flex; flex-direction:column; align-items:center; min-height:0; gap:4px; }
+.sv-sort-answers span { border:1px solid #777; background:white; flex:1; width:100%; }
+.sv-drawing-grid { display:grid; grid-template-rows:repeat(2,minmax(0,1fr)); flex:1; min-height:0; gap:7px; }
+.sv-drawing-cell { display:flex; flex-direction:column; min-height:0; min-width:0; }
+.sv-drawing-blank { border:1px solid #888; flex:1; min-height:0; }
+.sv-drawing-label { flex:0 0 auto; display:flex; align-items:center; justify-content:center; text-align:center; min-height:clamp(26px,9cqw,45px); font:800 clamp(7px,2.2cqw,11px)/1.13 'Nunito Sans',sans-serif; overflow-wrap:anywhere; }
+.sv-medium-preview { gap:clamp(4px,1.7cqw,9px); }
+.sv-medium-preview .module-title { font-size:clamp(14px,4.8cqw,24px); }
+.sv-word-bank { width:100%; border:1px solid #777; display:grid; grid-template-rows:repeat(2,minmax(0,1fr)); grid-auto-flow:row; flex:0 0 clamp(36px,12cqw,62px); gap:3px 0; align-items:center; justify-items:center; padding:3px; font:800 clamp(7px,2.3cqw,11px)/1.05 'Nunito Sans',sans-serif; }
+.sv-word-bank span { min-width:0; max-width:100%; overflow-wrap:anywhere; }
+.sv-verse-ref { font:800 clamp(9px,2.6cqw,13px)/1.2 'Nunito Sans',sans-serif; }
+.new-verse-body { text-align:left; font:800 clamp(9px,2.7cqw,13px)/2 'Nunito Sans',sans-serif; white-space:pre-wrap; overflow-wrap:anywhere; flex:1; min-height:0; overflow:hidden; }
+.new-verse-boxes { display:inline-flex; vertical-align:middle; gap:1px; align-items:center; white-space:nowrap; margin:0 2px; }
+.new-letter-box { width:clamp(7px,2.2cqw,11px); height:clamp(10px,3cqw,15px); border:1px solid #666; }
+.new-scramble-letter { display:flex; flex-direction:column; align-items:center; justify-content:flex-end; min-width:clamp(8px,2.5cqw,12px); font:700 clamp(8px,2.5cqw,12px)/1.1 'Zilla Slab',serif; }
+.new-scramble-letter i { width:90%; height:3px; border-top:1px solid #333; margin-bottom:3px; }
+.sv-mistake-paragraph { text-align:left; font:800 clamp(10px,3.2cqw,15px)/1.65 'Nunito Sans',sans-serif; padding:5px; overflow-wrap:anywhere; }

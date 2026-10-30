@@ -1,6 +1,6 @@
 {
   "name": "worksheet-generator",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -8,6 +8,7 @@
     "check": "tsc --noEmit",
     "test": "node --experimental-strip-types --test tests/*.test.mjs",
     "sample:pdf": "node --experimental-strip-types scripts/create-sample-pdf.mjs",
+    "sample:pr6": "node --experimental-strip-types scripts/create-pr6-samples.mjs",
     "build": "npm run check && vite build",
     "preview": "vite preview"
   },
