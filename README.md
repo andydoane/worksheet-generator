@@ -1,5 +1,13 @@
 # Worksheet Studio
 
+## PR 15a — Connect clarity and boxed Connect the Phrase (v0.15.22)
+
+- **Large Connect the Verse:** subtitle is now **“Draw lines from box to box in the order of the verse.”** The existing large measured word boxes, font, 4–35-word capacity, balanced bank and old saved Medium Verse fallback are preserved.
+- **Medium Connect the Phrase** (renamed on-screen from *Connect the Big Idea*): subtitle is now **“Draw lines from box to box in the order of the phrase.”** The editor uses the label **Key Idea or Story Event** and displays **“Add a big idea or a sentence describing the story.”** only as a placeholder, not stored content.
+- Medium Phrase scattered words now use **non-jittered, horizontally level, measured thin-outline rectangles**, like Large Connect the Verse. The shared scatter engine measures each entire word box (including outside stroke and spacing) before placing it. The Medium layout retains its bank, 4–20-word limit, seeded scatter, clearance and coverage expansion, and the print preview and PDF consume the same geometry.
+- The serialized ID **`connect-big-idea`** and field **`idea`** remain untouched, so previously saved drafts work without migration.
+- **QA:** `npm run test && npm run build && npm run sample:pr15a`. Sample `artifacts/sample-pr15a-connect-phrase-boxes.pdf` contains 4-, 12- and 20-word Medium examples plus the Large Verse. Tests verify border clearance, exact user-facing copy, real preview/PDF font widths and legacy data compatibility.
+
 ## PR 14d — Adaptive Medium verse and cipher layouts (v0.15.21)
 
 - **Unscramble the Verse:** raise the bracket limit from six to **eight** while keeping the same saved `{type,reference,verse,seed}` data. Replace greedy row breaks with a measured, word-boundary balanced partition so a long verse does not strand an unnecessarily short last line. The existing 29pt+ handwriting pitch, title placement, punctuated blanks and preview/PDF scene stay intact. Only Unscramble opts into balanced wrapping; Upside Down Verse keeps its previously approved layout.
