@@ -13,7 +13,7 @@ const verseShort={type:'unscramble-verse',reference:'John 3:16',seed:3,
 const verseEight={type:'unscramble-verse',reference:'Isaiah 41:10',seed:5,
  verse:'Do not [fear], for I am [with] you; do not be [dismayed], for I am your [God]. I will [empower] you and [help] you; I will [uphold] you with my right [hand].'};
 const verseLong={type:'unscramble-verse',reference:'Psalm 46:1–3',seed:11,
- verse:'God is our [refuge] and [strength], an ever-present [help] in [trouble]. Therefore we will not [fear], though the [earth] give way and the mountains [fall] into the heart of the [sea].'};
+ verse:'God is our [refuge] and [strength], an ever-present [help] in [trouble]. Therefore we will not [fear], though the [earth] give way and the mountains [fall] into the heart of the [sea]. God remains close to his people through every season.'};
 const words=[
  'God is good.',
  'God calls us to love others.',
