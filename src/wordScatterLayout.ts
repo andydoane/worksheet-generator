@@ -75,7 +75,7 @@ export function scatterWords(options:ScatterOptions):ScatterResult|null{
    const glyphs:ScatterGlyph[]=[];
    let pen=-width/2;
    for(const char of Array.from(entry.word)){
-    glyphs.push({char,x:pen,y:(random()-.5)*.42});
+    glyphs.push({char,x:pen,y:fontSize*.29+(random()-.5)*.42});
     pen+=measure(char,fontSize);
    }
    picked.push({
