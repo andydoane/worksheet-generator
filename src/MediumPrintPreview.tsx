@@ -7,10 +7,10 @@ import {
   type MatchPrintPlan,type MistakesPrintPlan,type MeasureText,
 } from './mediumParityLayout.ts';
 
-type MediumWidths={body:MeasureText;bold:MeasureText;puzzle:MeasureText};
+type MediumWidths={body:MeasureText;bold:MeasureText;puzzle:MeasureText;bank:MeasureText;title:MeasureText};
 let widthsPromise:Promise<MediumWidths>|null=null;
 /** Measure the same static TrueType faces embedded in PDF output. */
-function mediumWidths():Promise<MediumWidths>{
+export function mediumWidths():Promise<MediumWidths>{
   const load=(url:URL)=>fetch(url).then(response=>{
     if(!response.ok)throw Error('Print font could not be loaded');
     return response.arrayBuffer();
@@ -19,11 +19,13 @@ function mediumWidths():Promise<MediumWidths>{
     load(new URL('../fonts/Nunito-Medium.ttf',import.meta.url)),
     load(new URL('../fonts/Nunito-Bold.ttf',import.meta.url)),
     load(new URL('../fonts/ZillaSlab-Bold-pdf.ttf',import.meta.url)),
+    load(new URL('../fonts/Nunito-ExtraBold.ttf',import.meta.url)),
+    load(new URL('../fonts/MouseMemoirs-Regular.ttf',import.meta.url)),
   ]).then(bytes=>{
     const faces=bytes.map(data=>fontkit.create(new Uint8Array(data)));
     const width=(face:typeof faces[number]):MeasureText=>(value,size)=>
       face.layout(value).positions.reduce((sum,pos)=>sum+pos.xAdvance,0)*size/face.unitsPerEm;
-    return {body:width(faces[0]),bold:width(faces[1]),puzzle:width(faces[2])};
+    return {body:width(faces[0]),bold:width(faces[1]),puzzle:width(faces[2]),bank:width(faces[3]),title:width(faces[4])};
   }).catch(error=>{widthsPromise=null;throw error;});
   return widthsPromise;
 }
