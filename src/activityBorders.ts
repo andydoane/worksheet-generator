@@ -1,6 +1,7 @@
 import {BOOKLET,type RegionSize} from './booklet.ts';
 import {COVER_BORDERS,type CoverBorderId} from './coverBorders.ts';
 import type {ModuleId} from './modules.ts';
+import {SMALL_MODULES} from './smallModules.ts';
 
 /** Stable border IDs shared with the cover; each size has its own artwork. */
 export type ActivityBorderId=CoverBorderId;
@@ -49,10 +50,10 @@ export const ACTIVITY_SAFE_AREAS={
  large:{width:4,height:4.35},
 } as const;
 
-/** PR 16b is infrastructure only. Enable module IDs individually after
- * their preview, PDF, and worst-case density tests pass in PRs 16c–16e.
+/** PR 16c enables all eight Small module types. Medium and Large remain
+ * gated until their preview, PDF, and density checks are complete.
  */
-export const BORDER_READY_MODULES:readonly ModuleId[]=[];
+export const BORDER_READY_MODULES:readonly ModuleId[]=['draw-picture',...SMALL_MODULES.map(item=>item.id)];
 export function isActivityBorderReady(moduleId:ModuleId|undefined):boolean{
  return moduleId!==undefined&&BORDER_READY_MODULES.includes(moduleId);
 }
@@ -101,4 +102,22 @@ export function planActivityPrintViewport(size:RegionSize,rect:PrintRect,bordere
   content:{x:rect.x+(rect.width-width)/2,y:rect.y+(rect.height-height)/2,width,height},
   bordered,artworkRotationDegrees:ACTIVITY_BORDER_ROTATION_DEGREES[size],
  };
+}
+
+/** A uniform *isotropic* transformation maps the legacy measured Small
+ * interior into its centered bordered safe zone. Both browser viewBox and
+ * PDF CTM consume the same 2.2x2.4 source and 1.95x2.15 target. This keeps
+ * the existing robust line breaks, handwritten cells, square checkboxes,
+ * and font proportions without introducing separate puzzle algorithms.
+ */
+export function planSmallBorderFit(region:PrintRect){
+ const viewport=planActivityPrintViewport('small',region,true);
+ const source=planActivityPrintViewport('small',region,false).content;
+ const scale=Math.min(viewport.content.width/source.width,viewport.content.height/source.height);
+ const sourceCenterX=source.x+source.width/2,sourceCenterY=source.y+source.height/2;
+ const destinationCenterX=viewport.content.x+viewport.content.width/2;
+ const destinationCenterY=viewport.content.y+viewport.content.height/2;
+ return {scale,translateX:destinationCenterX-sourceCenterX*scale,
+  translateY:destinationCenterY-sourceCenterY*scale,source,viewport,
+  fittedWidth:source.width*scale,fittedHeight:source.height*scale};
 }
