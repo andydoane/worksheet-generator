@@ -135,7 +135,7 @@ function BookletPage({
     <div className="booklet-page" aria-label={'Booklet page ' + page + ' layout'}>
 
       {regions.map((region) => {
-        const style = { ...regionStyle(region), padding: String((BOOKLET.padding / BOOKLET.page.width) * 100) + '%' };
+        const style = { ...regionStyle(region), padding: region.kind==='title'&&draft.coverBorder!=='none'?'0':String((BOOKLET.padding / BOOKLET.page.width) * 100) + '%' };
         const className = 'booklet-region ' + (region.kind === 'title' ? 'title-region' : 'activity-region') +
           ' size-' + region.size + (region.id === selectedId ? ' selected-region' : '');
         const content = <RegionContents region={region} draft={draft} module={draft.modules[slotKey(page, region.id)]} showSolution={showSolution && region.id === selectedId} />;
