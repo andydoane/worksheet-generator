@@ -46,13 +46,13 @@ async function metrics(){
   },
  };
 }
-test('Big Idea accepts twenty words but Verse retains the previous twelve-word limit',()=>{
+test('Big Idea accepts twenty words and Large Verse permits thirty-five',()=>{
  const twenty=modules.at(-1);
  assert.equal(parseConnectionWords(twenty.idea).length,20);
  assert.deepEqual(validateSpecialty(twenty),[]);
  assert.ok(validateSpecialty({...twenty,idea:twenty.idea+' extra'}).length);
  const verse={type:'connect-verse',verse:twenty.idea,seed:3};
- assert.ok(validateSpecialty(verse).some(x=>/4–12 words/u.test(x)));
+ assert.deepEqual(validateSpecialty(verse),[]);
 });
 test('seeded scattering preserves every word, avoids any overlaps and uses full 2D space',async()=>{
  const {pdf}=await metrics();
@@ -98,15 +98,15 @@ test('shared planner uses identical font metrics and geometry in browser and PDF
   assert.equal(CONNECT_BIG_INSTRUCTION,'Connect each word to the next in order.');
  }
 });
-test('Only Big Idea switches to new print renderer, while Verse uses old code until PR 11g',async()=>{
+test('Both connect modules now use measured print renderers',async()=>{
  const [preview,pdf]=await Promise.all([
   readFile(new URL('../src/SpecialtyPreview.tsx',import.meta.url),'utf8'),
   readFile(new URL('../src/specialtyPdf.ts',import.meta.url),'utf8'),
  ]);
  assert.match(preview,/case 'connect-big-idea':return <ConnectBigIdeaPrintPreview/u);
- assert.match(preview,/case 'connect-verse':return <ConnectView/u);
+ assert.match(preview,/case 'connect-verse':return legacyMedium\?<ConnectView/u);
  assert.match(pdf,/case 'connect-big-idea':return connectBigIdea/u);
- assert.match(pdf,/case 'connect-verse':return connect\(page,b,module,fonts\)/u);
+ assert.match(pdf,/connectVerseLarge\(page,b,module,fonts\):connect\(page,b,module,fonts\)/u);
 });
 test('20-word Big Idea exports inside the standard two-sheet US Letter booklet',async()=>{
  const draft={title:'Love One Another',scripture:'John 13',
