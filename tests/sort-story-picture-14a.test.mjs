@@ -131,7 +131,7 @@ test('Sort border, dividers, letter boxes and answer boxes share one physical st
  const printable=await readFile(new URL('../src/storyVersePdf.ts',import.meta.url),'utf8');
  assert.match(preview,/planSortStory/u);
  assert.match(printable,/planSortStory/u);
- assert.match(preview,/strokeWidth={plan.strokeWidth}/u);
+ assert.ok(preview.includes('strokeWidth={plan.strokeWidth}'));
  assert.match(printable,/thickness:stroke/u);
 });
 test('Draw a Picture adds only missing terminal punctuation without changing saved prompts',async()=>{
