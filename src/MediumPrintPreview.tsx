@@ -75,7 +75,7 @@ export function MistakesPrintPreview({module}:{module:CircleMistakes}){
   return <div className="module-preview medium-print-layout sv-preview sv-medium-preview">
     {state===false?<Unavailable/>:state===null?<div className="medium-print-loading">Preparing print-matched paragraph…</div>:
     <MediumSvg label="Circle the Mistakes, print-matched text and handwriting spacing">
-      <text x={MEDIUM_PRINT_WIDTH/2} y="24" fontFamily="Mouse Memoirs"
+      <text x={MEDIUM_PRINT_WIDTH/2} y={state.titleY} fontFamily="Mouse Memoirs"
         fontSize="25" textAnchor="middle" fill="#222">{mistakesTitle(module.count)}</text>
       {state.lines.map((line,i)=><text key={i} x={line.x} y={line.y}
         fontFamily="Nunito" fontWeight="500" fontSize={state.fontSize}
