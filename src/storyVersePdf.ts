@@ -182,6 +182,7 @@ function finishVerse(page:PDFPage,b:Rect,fonts:ModuleFonts,m:FinishVerse):void {
   const measure=(font:PDFFont)=>(text:string,size:number)=>width(font,text,size);
   const plan=planFinishVerse(m,{
     title:measure(fonts.title),body:measure(fonts.body),bank:measure(fonts.bank),
+    bankInkCenter:fonts.bankInkCenter,
   },b.width,b.height);
   if(!plan)throw Error('Finish the Verse does not fit. Use fewer blanks or shorter verse text.');
   centered(page,fonts.title,plan.title,b,b.y+b.height-plan.titleY,plan.titleSize);
@@ -197,7 +198,7 @@ function finishVerse(page:PDFPage,b:Rect,fonts:ModuleFonts,m:FinishVerse):void {
     }else{
       Array.from(word.text).forEach((_,j)=>{
         page.drawRectangle({x:b.x+word.x+j*plan.cell+.3,
-          y:b.y+b.height-(word.y-10)-plan.boxHeight,
+          y:b.y+b.height-(word.y-(plan.boxHeight-2.3))-plan.boxHeight,
           width:plan.cell,height:plan.boxHeight,borderColor:INK,borderWidth:.8});
       });
     }

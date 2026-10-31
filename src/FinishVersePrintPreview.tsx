@@ -10,7 +10,7 @@ export default function FinishVersePrintPreview({module}:{module:FinishVerse}){
  useEffect(()=>{
   let active=true;setPlan(null);
   void mediumWidths().then(widths=>{
-   if(active)setPlan(planFinishVerse(module,{title:widths.title,body:widths.finishBody,bank:widths.bank})??false);
+   if(active)setPlan(planFinishVerse(module,{title:widths.title,body:widths.finishBody,bank:widths.bank,bankInkCenter:widths.bankInkCenter})??false);
   }).catch(()=>{if(active)setPlan(false);});
   return ()=>{active=false;};
  },[module.reference,module.verse,module.seed]);
@@ -33,7 +33,7 @@ export default function FinishVersePrintPreview({module}:{module:FinishVerse}){
       fontWeight="500" fontSize={plan.fontSize} fill="#222">{word.text}</text>
     :<g key={'verse-'+i}>{Array.from(word.text).map((_,j)=>
      <rect key={j} x={word.x+j*plan.cell+.3}
-      y={word.y-10} width={plan.cell} height={plan.boxHeight}
+      y={word.y-(plan.boxHeight-2.3)} width={plan.cell} height={plan.boxHeight}
       fill="white" stroke="#222" strokeWidth=".8"/>)}</g>)}
   </svg>}
  </div>;

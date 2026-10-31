@@ -18,7 +18,7 @@ import {
 } from './modules.ts';
 
 type Rect = { x: number; y: number; width: number; height: number };
-export type ModuleFonts = { title: PDFFont; body: PDFFont; bodyBold: PDFFont; bank: PDFFont; puzzle: PDFFont };
+export type ModuleFonts = { title: PDFFont; body: PDFFont; bodyBold: PDFFont; bank: PDFFont; puzzle: PDFFont; bankInkCenter?:(word:string,size:number)=>number };
 const INCH = 72;
 const INSET = BOOKLET.padding * INCH;
 const INK = rgb(0.13, 0.13, 0.13);

@@ -78,7 +78,7 @@ test('Upside Down uses combined title, abbreviations, and unflipped punctuation'
   assert.ok(p.marks.some(mark=>mark.kind==='letter'&&mark.upside));
   assert.ok(p.marks.some(mark=>mark.kind==='punctuation'&&mark.text==='!')||module===longUpside);
   assert.ok(p.marks.every(mark=>mark.y+p.glyphOffset+p.fontSize<173));
-  assert.ok(p.lineStep>=p.glyphOffset+p.fontSize+1.5,
+  assert.ok(p.lineStep>=p.glyphOffset+p.invertedFontSize+1.5,
    'An inverted word must not collide with the following answer line');
  }
  const names={
@@ -110,7 +110,7 @@ test('Finish balances and centers rows, lowers bank text and draws genuine squar
    assert.ok(Math.abs((start+end)/2-331.2/2)<.01);
   }
   assert.ok(widths.every(w=>w>70));
-  assert.ok(p.bankWords.every(b=>b.y>p.bankTop+14),'Bank words are lowered inside box');
+  assert.ok(p.bankWords.every(b=>b.y>p.bankTop+7&&b.y<p.bankTop+p.bankHeight),'Bank labels remain within the measured box');
  }
 });
 test('Letter reconstruction and square blanks export on two landscape sheets',async()=>{
