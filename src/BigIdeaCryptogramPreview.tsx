@@ -32,10 +32,10 @@ export default function BigIdeaCryptogramPreview({module}:{module:BigIdeaCryptog
  },[module.idea,module.seed]);
  return <div className="module-preview medium-print-layout cipher-medium">
   {state===null?<div className="medium-print-loading">Preparing print-matched cryptogram…</div>:
-   state===false?<div className="medium-print-loading">This Big Idea is too dense for three readable lines.</div>:
+   state===false?<div className="medium-print-loading">This text is too dense for three readable lines.</div>:
   <svg className="medium-print-svg" viewBox={'0 0 '+MEDIUM_PRINT_WIDTH+' '+MEDIUM_PRINT_HEIGHT}
     preserveAspectRatio="xMidYMid meet" role="img"
-    aria-label="Big Idea cryptogram with centered handwriting lines and symbol key">
+    aria-label="Solve the Code with centered handwriting lines and symbol key">
    <text x={MEDIUM_PRINT_WIDTH/2} y={state.titleY} textAnchor="middle"
      fontFamily="Mouse Memoirs" fontSize="25" fill="#242424">SOLVE THE CODE!</text>
    {state.keyCells.map((item,i)=>{
