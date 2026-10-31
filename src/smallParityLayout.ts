@@ -45,8 +45,9 @@ export function planMultipleChoice(module:MultipleChoice,measure:MeasureText,
     const firstBaseline=rowTop+(heights[index]-(actual.length-1)*step)/2+
      aSize*.36;
     const textLines=actual.map((text,i)=>({text,x:textX,y:firstBaseline+i*step}));
-    const inkFirst=textLines[0]?.y-inkCenter(actual[0]??'',aSize)??rowTop+heights[index]/2;
-    const inkLast=textLines.at(-1)?.y-inkCenter(actual.at(-1)??'',aSize)??inkFirst;
+    const inkFirst=textLines[0].y-inkCenter(actual[0],aSize);
+    const inkLast=textLines[textLines.length-1].y-
+      inkCenter(actual[actual.length-1],aSize);
     const center=(inkFirst+inkLast)/2;
     const row={squareX:2,squareY:center-squareSize/2,squareSize,
      fontSize:aSize,lines:textLines};
