@@ -1,6 +1,7 @@
 import { rgb, type PDFFont, type PDFPage } from 'pdf-lib';
 import { BOOKLET } from './booklet.ts';
 import {MODULE_TITLE_PT,measureWrappedLines} from './pdfLayout.ts';
+import {planDrawPicture} from './smallFinishingLayout.ts';
 import {planMatching} from './mediumParityLayout.ts';
 import {planStory} from './storyLayout.ts';
 import { drawSmallModulePdf } from './smallPdf.ts';
@@ -49,31 +50,20 @@ function fittedSize(font: PDFFont, words: readonly string[], maxWidth: number, p
 }
 
 function drawPicture(page: PDFPage, rect: Rect, font: PDFFont, prompt: string): void {
-  const inner = interior(rect);
-  const promptText = 'Draw a picture of ' + prompt.trim();
-  let fontSize = 15;
-  let wrapped: string[] = [];
-  while (fontSize >= 10) {
-    try { wrapped = lines(promptText, font, fontSize, inner.width); } catch { wrapped = []; }
-    if (wrapped.length > 0 && wrapped.length <= 3) break;
-    fontSize -= 1;
-  }
-  if (!wrapped.length || wrapped.length > 3) throw new Error('Drawing prompt does not fit. Please shorten it.');
-
-  const captionHeight = wrapped.length * (fontSize * 1.08) + 12;
-  const drawingHeight = inner.height - captionHeight - 5;
-  if (drawingHeight < 70) throw new Error('Drawing prompt leaves too little space for the picture.');
-
+  const inner=interior(rect);
+  const plan=planDrawPicture(prompt,(text,size)=>measure(font,text,size),inner.width,inner.height);
+  if(!plan)throw Error('Drawing prompt does not fit while preserving the drawing space.');
   page.drawRectangle({
-    x: inner.x, y: inner.y + captionHeight + 5,
-    width: inner.width, height: drawingHeight,
-    borderColor: GREY, borderWidth: 1, color: WHITE,
+    x:inner.x+plan.drawing.x,
+    y:inner.y+inner.height-plan.drawing.y-plan.drawing.height,
+    width:plan.drawing.width,height:plan.drawing.height,
+    borderColor:GREY,borderWidth:1,color:WHITE,
   });
-
-  const firstY = inner.y + captionHeight - fontSize * 1.05;
-  wrapped.forEach((line, index) => {
-    centered(page, font, line, inner.x, firstY - index * fontSize * 1.08, inner.width, fontSize);
-  });
+  for(const line of plan.lines)
+    page.drawText(line.text,{
+      x:inner.x+line.x-measure(font,line.text,plan.fontSize)/2,
+      y:inner.y+inner.height-line.y,size:plan.fontSize,font,color:INK,
+    });
 }
 
 function drawMatching(page: PDFPage, rect: Rect, fonts: ModuleFonts, module: Extract<ActivityModule, { type: 'match-words' }>): void {

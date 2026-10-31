@@ -87,6 +87,20 @@ export function verseInitials(verse: string): string {
     .map((word) => Array.from(word)[0].toUpperCase()).join('');
 }
 
+/** Supports one word or a two-word answer, up to 10 total letters. */
+export function validUnscramblePhrase(text:string):boolean{
+ const parts=text.trim().split(' ');
+ const letters=parts.join('');
+ return parts.length>=1&&parts.length<=2&&letters.length>=3&&letters.length<=10&&
+   parts.every(word=>/^[A-Za-z]{2,10}$/u.test(word)&&new Set(word.toUpperCase()).size>1)&&
+   (parts.length===2||parts[0].length>=3);
+}
+
+/** Scramble each word on its own, retaining exactly one inter-word gap. */
+export function scramblePhrase(phrase:string,seed:number):string{
+ return phrase.trim().split(' ').map((word,i)=>scrambleWord(word,seed+i*97)).join(' ');
+}
+
 /** Return an actually changed word even when a letter index shuffle leaves duplicates in place. */
 export function scrambleWord(word: string, seed: number): string {
   const normalized = word.trim().toUpperCase();
@@ -130,8 +144,9 @@ function checkWordLists(module: OddWords | Checkboxes): string[] {
       errors.push('Use entries of at most 12 characters, including spaces.');
     }
   } else if (words.some((word) =>
-    !/^[\p{L}]+(?:[-'][\p{L}]+)*$/u.test(word) || word.length > 14)) {
-    errors.push('Use individual words no longer than 14 letters.');
+    !/^[\p{L}]+(?:[-'][\p{L}]+)*(?: [\p{L}]+(?:[-'][\p{L}]+)*)?$/u.test(word) ||
+    word.length > 14)) {
+    errors.push('Use one- or two-word entries of at most 14 characters, including spaces.');
   }
   if (!upperUnique(words)) errors.push('Use distinct words so each answer is clear.');
   return errors;
@@ -160,9 +175,8 @@ export function validateSmallModule(module: SmallModule): string[] {
     case 'checkboxes': return checkWordLists(module);
     case 'unscramble-words': {
       const words = [module.first, module.second];
-      return words.every((word) =>
-        /^[A-Za-z]{3,10}$/.test(word.trim()) && new Set(word.trim().toUpperCase()).size > 1)
-        ? [] : ['Enter two words of 3–10 letters each, with at least two different letters.'];
+      return words.every(validUnscramblePhrase)
+        ? [] : ['Enter two answers with 3–10 letters each (one or two words, up to 10 letters total, not counting the space). Each word needs at least two different letters.'];
     }
     case 'who-am-i': {
       const errors: string[] = [];

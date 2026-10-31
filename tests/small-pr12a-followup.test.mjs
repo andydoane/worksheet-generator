@@ -76,8 +76,8 @@ test('Odd Words accepts multiword phrases up to 12 characters (spaces counted)',
  assert.ok(validateSmallModule({...odd,correct:'red sea crossing'}).some(x=>/12 characters/u.test(x)));
  assert.ok(validateSmallModule({...odd,correct:'dry  land'}).length);
  const checkboxes={type:'checkboxes',correct:'red sea',incorrect:'camel',seed:1};
- assert.ok(validateSmallModule(checkboxes).some(x=>/individual words/u.test(x)),
-  'Checkboxes entry validation stays unchanged');
+ assert.deepEqual(validateSmallModule(checkboxes),[],
+  'Two-word checkbox entries are allowed in PR 13a');
 });
 test('Odd Words instruction is balanced and columns remain centered with phrases',async()=>{
  const m=await metrics(),p=planOddWords(odd,m.title,m.puzzle);

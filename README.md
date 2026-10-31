@@ -1,5 +1,32 @@
 # Worksheet Studio
 
+## PR 13a — Small module finishing touches (v0.15.16)
+
+- **Unscramble the Words:** Each of two answers may now be a single word
+  or a two-word phrase (e.g. `RED SEA`). Total length remains a maximum
+  of **10 letters, excluding the separating space**. Each word is
+  scrambled independently; a visible gap separates words and only the
+  actual letters receive writing lines. One shared print-space layout
+  drives the browser SVG and exported vector PDF.
+- **Multiple Choice:** question lines are now measured and
+  **balance-wrapped** without changing the approved answer-group
+  centering or checkbox baseline positioning.
+- **Draw a Picture:** the instruction *Draw a picture of…* uses
+  balanced font-measured wrapping in both preview and PDF. The
+  protected drawing box remains at least 70pt high and is never
+  overlapped by text.
+- **Checkboxes:** each line may contain one or two words, up to **14
+  characters including the space**. The already-approved two-column
+  layout remains preferred; if a valid phrase would overflow its
+  half-width column, the activity switches to a print-matched single
+  column with clear checkboxes rather than clipping the words.
+- **Scope:** no changes to other Small activities, Connect scattering,
+  or the cryptogram renaming planned separately. Existing saved
+  worksheet types and content keys are unchanged.
+- **Verification:** `npm run test && npm run build && npm run sample:pr13a`.
+  Inspect examples with `RED SEA`, `CROSS RIVER`, short and long
+  drawing prompts and maximum 14-character checklist entries.
+
 ## PR 12d — Who Am I? (v0.15.15)
 
 - **Protected regions:** the Small Who Am I activity now reserves the

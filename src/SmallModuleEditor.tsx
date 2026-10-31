@@ -52,11 +52,11 @@ export default function SmallModuleEditor({ module, onChange }: Props) {
     case 'unscramble-words':
       return (
         <div className="activity-inputs">
-          <label htmlFor="un-first">First story word</label>
+          <label htmlFor="un-first">First story answer</label>
           <input id="un-first" value={module.first} onChange={(e) => onChange({ first:e.target.value })} placeholder="NOAH" />
-          <label htmlFor="un-second">Second story word</label>
+          <label htmlFor="un-second">Second story answer</label>
           <input id="un-second" value={module.second} onChange={(e) => onChange({ second:e.target.value })} placeholder="ARK" />
-          <p>Both words are scrambled, with individual writing lines above their letters.</p>
+          <p>Each answer can contain one word or two words (like “red sea”), with up to 10 letters excluding the space. Each word is scrambled independently; children get a line above every letter.</p>
         </div>
       );
     case 'checkboxes':
@@ -66,7 +66,7 @@ export default function SmallModuleEditor({ module, onChange }: Props) {
           <textarea id="check-correct" rows={5} value={module.correct} onChange={(e) => onChange({ correct:e.target.value })} placeholder={'BOAT\nRAINBOW\nWATER'} />
           <label htmlFor="check-incorrect">Unrelated words (up to five)</label>
           <textarea id="check-incorrect" rows={5} value={module.incorrect} onChange={(e) => onChange({ incorrect:e.target.value })} placeholder={'ROAD\nTEMPLE\nSODOM'} />
-          <p>Each word gets an empty checkbox; children check only items that relate to the lesson.</p>
+          <p>Enter one item per line, up to five per list. One or two words per item are allowed (like “dry land”); each item may contain up to 14 characters, counting spaces. Children check only the story items.</p>
         </div>
       );
     case 'who-am-i':
