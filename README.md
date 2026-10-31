@@ -1,5 +1,13 @@
 # Worksheet Studio
 
+## PR 15c — Medium Word Search as two visual Small panels (v0.15.24)
+
+- The activity remains a **single Medium module**, saved as `medium-word-search`. It still generates the exact same seeded **9×9 Word Search** and accepts **1–6 entries**. There are no changes to input validation, stored worksheets, or the existing 12×10 Large Word Search.
+- The Medium print interior is divided into **two equal-width visual halves**, with a slim central divider: left side holds a large, vertically centered 9×9 grid; right side shows the standard **25pt Mouse Memoirs “CROSSWORD” title** above a single-column word list. The **whole heading-plus-list stack** is vertically centered together within the right half, for 1–6 entries.
+- The grid and word bank are centered independently **within their own halves**, rather than centering the combined horizontal unit. The grid is sized to keep its full border inside the left Small-width visual panel.
+- The shared `planMediumWordSearch()` produces physical-point positions, title/font metrics, and divider boundaries used identically by the vector PDF and SVG preview. Both paths use the same measured Mouse Memoirs, Nunito ExtraBold, and Zilla Slab fonts.
+- **QA:** `npm run test && npm run build && npm run sample:pr15c`. The new sample `artifacts/sample-pr15c-medium-search-two-panels.pdf` includes sparse and dense Medium searches next to *actual* Small modules, plus a 12×10 Large control.
+
 ## PR 15b — New 9×9 Medium Word Search (v0.15.23)
 
 - Added **Word Search (Medium)** as a new selectable Medium activity with its own saved module type `medium-word-search`, `words` list and seeded `seed`. Accepts **1–6 different entries**, each containing **2–9 A–Z letters after spaces are removed**, including short phrases such as *Red Sea*.
