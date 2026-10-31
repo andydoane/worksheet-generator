@@ -1,7 +1,7 @@
 import {balancedBankLines} from './balancedBankLines.ts';
 import {MEDIUM_PRINT_WIDTH,MEDIUM_PRINT_HEIGHT,type MeasureText} from './mediumParityLayout.ts';
 import {parseConnectionWords,type ConnectBigIdeaModule} from './specialtyModules.ts';
-import {scatterWords,scaleConnectScatterFont,type ScatteredWord,type ScatterBounds} from './wordScatterLayout.ts';
+import {scatterWords,expandScatterCoverage,scaleConnectScatterFont,type ScatteredWord,type ScatterBounds} from './wordScatterLayout.ts';
 
 export const CONNECT_BIG_TITLE='CONNECT THE BIG IDEA';
 export const CONNECT_BIG_INSTRUCTION='Connect each word to the next in order.';
@@ -44,7 +44,7 @@ export function planConnectBigIdea(module:ConnectBigIdeaModule,metrics:{
   });
   if(!placements)continue;
   return {titleY,subtitleY,subtitleSize,bankTop,bankHeight,bankFontSize:bankSize,
-   bankLines,field,scattered:placements.words,fontSize:placements.fontSize};
+   bankLines,field,scattered:expandScatterCoverage(placements.words,field),fontSize:placements.fontSize};
  }
  return null;
 }
