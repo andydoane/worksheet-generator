@@ -8,7 +8,7 @@ import {
  blankPuzzleModule,isPuzzleModule,generateWordSearch,checkWordSearch,
  validatePuzzle,wordSearchCells,parseSearchEntries,
 } from '../src/puzzleEngines.ts';
-import {planMediumWordSearch} from '../src/mediumWordSearchLayout.ts';
+import {planMediumWordSearch,MEDIUM_SEARCH_TITLE} from '../src/mediumWordSearchLayout.ts';
 import {MEDIUM_PRINT_WIDTH,MEDIUM_PRINT_HEIGHT} from '../src/mediumParityLayout.ts';
 import {moduleForSize,readAssignments,validateModule} from '../src/modules.ts';
 import {createBookletPdf} from '../src/pdf.ts';
@@ -25,19 +25,21 @@ async function fonts(){
   nunitoSans750:await readFile(new URL('../fonts/Nunito-Bold.ttf',import.meta.url)),
   nunitoSans900:await readFile(new URL('../fonts/Nunito-ExtraBold.ttf',import.meta.url)),
   zillaSlab:await readFile(new URL('../fonts/ZillaSlab-Bold-pdf.ttf',import.meta.url)),
+  // The standard Medium 25pt title uses the Mouse Memoirs face above.
  };
 }
 async function metricSets(){
  const files=await fonts(),doc=await PDFDocument.create();doc.registerFontkit(fontkit);
- const [puzzle,bank]=await Promise.all([
+ const [puzzle,bank,title]=await Promise.all([
   doc.embedFont(files.zillaSlab,{subset:false}),
   doc.embedFont(files.nunitoSans900,{subset:false}),
+  doc.embedFont(files.mouseMemoirs,{subset:false}),
  ]);
- const browserPuzzle=fontkit.create(files.zillaSlab),browserBank=fontkit.create(files.nunitoSans900);
+ const browserPuzzle=fontkit.create(files.zillaSlab),browserBank=fontkit.create(files.nunitoSans900),browserTitle=fontkit.create(files.mouseMemoirs);
  const metric=font=>(s,n)=>font.widthOfTextAtSize(s,n);
  const advance=font=>(s,n)=>font.layout(s).glyphs.reduce((sum,g)=>sum+g.advanceWidth,0)*n/font.unitsPerEm;
- return {files,pdf:{puzzle:metric(puzzle),bank:metric(bank)},
-  browser:{puzzle:advance(browserPuzzle),bank:advance(browserBank)}};
+ return {files,pdf:{puzzle:metric(puzzle),bank:metric(bank),title:metric(title)},
+  browser:{puzzle:advance(browserPuzzle),bank:advance(browserBank),title:advance(browserTitle)}};
 }
 test('Medium Word Search is distinct and preserves saved Large IDs and payloads',()=>{
  assert.deepEqual([MEDIUM_WORD_COLS,MEDIUM_WORD_ROWS],[9,9]);
@@ -96,7 +98,7 @@ test('Small and max-length 9×9 puzzles solve and reproduce across seeds',()=>{
   }
  }
 });
-test('Medium plan centers the entire side-by-side unit and one-column bank',async()=>{
+test('Medium plan behaves like two Small panels: left grid, right centered title + bank',async()=>{
  const {pdf,browser}=await metricSets();
  for(const words of cases)for(const seed of [2,9,17]){
   const grid=generateWordSearch({type:'medium-word-search',words,seed});
@@ -108,15 +110,30 @@ test('Medium plan centers the entire side-by-side unit and one-column bank',asyn
   assert.equal(a.letters.length,81);
   assert.equal(a.cell*9,a.gridWidth);
   assert.equal(a.gridWidth,a.gridHeight);
-  assert.ok(a.cell>=17.5,'9x9 grid must use almost all of Medium height');
+  assert.ok(a.cell>=17.3,'9x9 grid must nearly fill the Small-sized left half');
   assert.ok(a.letterSize>=13.2&&a.bankSize>=9);
-  assert.ok(Math.abs(a.unitLeft+a.unitWidth/2-MEDIUM_PRINT_WIDTH/2)<1e-8);
+  assert.equal(MEDIUM_SEARCH_TITLE,'CROSSWORD');
+  assert.equal(a.titleSize,25);
+  assert.equal(a.titleSize,b.titleSize);
+  assert.ok(Math.abs(a.panelWidth-MEDIUM_PRINT_WIDTH/2)<1e-8);
+  assert.ok(Math.abs(a.dividerX-a.panelWidth)<1e-8);
+  assert.ok(Math.abs(a.gridX+a.gridWidth/2-a.panelWidth/2)<1e-8);
   assert.ok(Math.abs(a.gridTop+a.gridHeight/2-MEDIUM_PRINT_HEIGHT/2)<1e-8);
-  assert.ok(Math.abs(a.bankTop+a.bankHeight/2-MEDIUM_PRINT_HEIGHT/2)<1e-8);
-  assert.ok(Math.abs(a.bankX-(a.gridX+a.gridWidth+a.gap))<1e-8);
+  assert.ok(a.gridX+a.gridWidth+2<a.dividerX);
+  assert.ok(a.bankX>=a.dividerX+4);
+  assert.ok(Math.abs(a.bankX+a.bankWidth/2-a.panelWidth*1.5)<1e-8);
+  assert.ok(Math.abs(a.titleX-a.panelWidth*1.5)<1e-8);
+  assert.ok(Math.abs(a.rightStackTop+a.rightStackHeight/2-MEDIUM_PRINT_HEIGHT/2)<1e-8);
+  assert.ok(Math.abs(a.rightStackHeight-(28+8+a.bankHeight))<1e-8);
+  assert.ok(a.rightStackTop>2);
+  assert.ok(a.titleY<a.bankEntries[0].y-a.bankSize);
+  assert.ok(Math.abs(pdf.title(MEDIUM_SEARCH_TITLE,a.titleSize)-
+   browser.title(MEDIUM_SEARCH_TITLE,b.titleSize))<.02);
+  assert.ok(pdf.title(MEDIUM_SEARCH_TITLE,a.titleSize)<a.bankWidth);
   assert.ok(a.gridX-2>=2&&a.gridTop-2>=2);
   assert.ok(a.gridTop+a.gridHeight+2<=MEDIUM_PRINT_HEIGHT-2);
   assert.ok(a.bankX+a.bankWidth<=MEDIUM_PRINT_WIDTH-3);
+  assert.ok(a.dividerTop>0&&a.dividerBottom<MEDIUM_PRINT_HEIGHT);
   assert.ok(a.bankEntries.every(e=>Math.abs(e.x-(a.bankX+a.bankWidth/2))<1e-9));
   for(let i=0;i<a.bankEntries.length;i++){
    const entry=a.bankEntries[i],other=b.bankEntries[i];
@@ -151,6 +168,12 @@ test('Both print renderers use one shared measured Medium plan and editor expose
  assert.match(editor,/Use 2–9 letters/u);
  assert.match(preview,/MediumWordSearchPrintPreview/u);
  assert.doesNotMatch(svg,/>WORD SEARCH</u);
+ assert.match(svg,/MEDIUM_SEARCH_TITLE/u);
+ assert.match(pdf,/MEDIUM_SEARCH_TITLE/u);
+ assert.match(svg,/plan\.dividerX/u);
+ assert.match(pdf,/plan\.dividerX/u);
+ assert.match(svg,/Mouse Memoirs/u);
+ assert.match(pdf,/fonts\.title/u);
 });
 test('Medium, Large and legacy modules export together into two PDF sheets',async()=>{
  const {files}=await metricSets();
