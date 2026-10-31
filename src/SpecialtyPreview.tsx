@@ -26,13 +26,27 @@ function CrosswordView({module}:{module:Extract<SpecialtyModule,{type:'crossword
   </div>;
 }
 function SpiralView({module}:{module:Extract<SpecialtyModule,{type:'spiral-verse'}>}){
-  const path=spiralPoints().map(p=>(p.x*1000).toFixed(1)+','+(p.y*1000).toFixed(1)).join(' ');
+  const pts=spiralPoints(800,spiralTurns(module.verse)).reverse();
+  const path=pts.map(p=>(p.x*1000).toFixed(1)+','+(p.y*1000).toFixed(1)).join(' ');
+  const first=spiralFirstWord(module.verse);
+  const x=Math.min(900,Math.max(70,pts[0].x*1000));
+  const y=Math.min(920,Math.max(80,pts[0].y*1000-16));
+  const labelW=first.length*17+18;
   return <div className="module-preview specialty-preview spiral-preview">
     <div className="module-title">SPIRAL VERSE</div>
-    <div className="specialty-instruction">Copy the verse onto the spiral line.</div>
-    <div className="spiral-bank"><strong>{module.reference}</strong><span>{module.verse}</span></div>
-    <svg className="spiral-svg" viewBox="0 0 1000 1000" role="img" aria-label="Blank spiral writing line">
-      <polyline points={path} fill="none" stroke="currentColor" strokeWidth="2.8" strokeLinecap="round"/>
+    <div className="specialty-instruction">Copy the verse on the spiral line.</div>
+    <div className="spiral-bank"><strong>{module.reference}</strong>
+      <span className="spiral-bank-verse">{module.verse}</span></div>
+    <svg className="spiral-svg" viewBox="35 35 930 930" role="img"
+      aria-label="Writing spiral with a starter word at the outside">
+      <polyline points={path} fill="none" stroke="currentColor"
+        strokeWidth="2.8" strokeLinecap="round"/>
+      {first&&<g>
+        <rect x={Math.max(35,Math.min(965-labelW,x-labelW/2))} y={y-27}
+          width={labelW} height="34" fill="white"/>
+        <text x={x} y={y} fill="#222" textAnchor="middle" fontFamily="Nunito"
+          fontWeight="700" fontSize="24">{first}</text>
+      </g>}
     </svg>
   </div>;
 }

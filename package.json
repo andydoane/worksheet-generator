@@ -1,6 +1,6 @@
 {
   "name": "worksheet-generator",
-  "version": "0.14.0",
+  "version": "0.15.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -33,5 +33,7 @@
     "typescript": "~5.9.3",
     "vite": "8.3.5"
   },
-  "engines": { "node": ">=22.12.0" }
+  "engines": {
+    "node": ">=22.12.0"
+  }
 }

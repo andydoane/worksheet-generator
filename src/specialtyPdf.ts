@@ -1,5 +1,5 @@
 import {
-  rgb, degrees, type PDFFont, type PDFPage, pushGraphicsState,
+  rgb, type PDFFont, type PDFPage, pushGraphicsState,
   popGraphicsState, concatTransformationMatrix,
 } from 'pdf-lib';
 import {BOOKLET} from './booklet.ts';
@@ -97,50 +97,39 @@ function spiral(page:PDFPage,b:Rect,module:Extract<SpecialtyModule,{type:'spiral
     if(rows&&rows.length<=4)break;
   }
   if(!rows||rows.length>4)throw Error('Verse does not fit the reference bank. Shorten it.');
-  const bankHeight=rows.length*size*1.27+35;
+  const verseStep=size*1.27;
+  // The last verse baseline sits just 10pt above the lower border;
+  // the previous bank reserved an entire EXTRA line below it.
+  const bankHeight=36+(rows.length-1)*verseStep;
   const bankTop=b.y+b.height-53,bankBottom=bankTop-bankHeight;
-  page.drawRectangle({x:b.x,y:bankBottom,width:b.width,height:bankHeight,borderColor:LIGHT,borderWidth:.9});
-  centered(page,fonts.bodyBold,module.reference,b.x,bankTop-15,b.width,10.5);
+  page.drawRectangle({x:b.x,y:bankBottom,width:b.width,height:bankHeight,
+    borderColor:LIGHT,borderWidth:.9});
+  centered(page,fonts.bodyBold,module.reference,b.x,bankTop-12,b.width,10.5);
   rows.forEach((text,i)=>centered(page,fonts.bodyBold,text,b.x+6,
-    bankTop-31-i*size*1.27,b.width-12,size));
-  const bottom=b.y+2;
-  const spaceHeight=bankBottom-bottom-10;
-  const diameter=Math.min(b.width-8,spaceHeight);
+    bankTop-26-i*verseStep,b.width-12,size));
+
+  const bottom=b.y+4,spaceHeight=bankBottom-bottom-6;
+  const diameter=Math.min(b.width-6,spaceHeight);
   if(diameter<120)throw Error('Verse bank leaves insufficient room for a writing spiral.');
-  const cx=b.x+b.width/2,cy=bottom+spaceHeight/2+5;
-  const side=diameter*.98;
-  // The writing path STARTS on the outside, spiraling inward.
+  const cx=b.x+b.width/2,cy=bottom+spaceHeight/2+3;
+  // Outer radius .445: 1.08x scaling leaves ~4pt vertical margins.
+  const side=diameter*1.08;
   const points=spiralPoints(800,spiralTurns(module.verse)).reverse()
     .map(p=>({x:cx+(p.x-.5)*side,y:cy-(p.y-.5)*side}));
-  for(let i=1;i<points.length;i++){
+  for(let i=1;i<points.length;i++)
     page.drawLine({start:points[i-1],end:points[i],thickness:1.1,color:INK});
-  }
+
   const first=spiralFirstWord(module.verse);
   if(first){
-    const fontSize=10.2;
-    let distance=7,segment=1;
-    // Draw first word along the outside arc, not in a separate disconnected label.
-    for(const character of first){
-      const advance=sizeOf(fonts.bodyBold,character,fontSize);
-      const at=distance+advance/2;
-      let traversed=0,point=points[0],angle=0;
-      for(let i=1;i<points.length;i++){
-        const a=points[i-1],z=points[i],len=Math.hypot(z.x-a.x,z.y-a.y);
-        if(traversed+len>=at){
-          const t=(at-traversed)/len;
-          point={x:a.x+(z.x-a.x)*t,y:a.y+(z.y-a.y)*t};
-          angle=Math.atan2(z.y-a.y,z.x-a.x);
-          segment=i;
-          break;
-        }
-        traversed+=len;
-      }
-      const nx=-Math.sin(angle),ny=Math.cos(angle);
-      page.drawText(character,{x:point.x+nx*5-advance/2,y:point.y+ny*5,
-        font:fonts.bodyBold,size:fontSize,rotate:degrees(angle*180/Math.PI),color:INK});
-      distance+=advance;
-    }
-    void segment;
+    // A short upright starter word, on a white-backed patch directly at the
+    // path entrance. Rotation of individual PDF glyphs previously caused
+    // overlaps (particularly the W/h in "Who"), so do not rotate letters.
+    const fontSize=10.5,tw=sizeOf(fonts.bodyBold,first,fontSize);
+    const x=Math.max(b.x+6,Math.min(b.x+b.width-tw-6,points[0].x-tw/2));
+    const y=Math.max(bottom+6,Math.min(bankBottom-18,points[0].y+9));
+    page.drawRectangle({x:x-3,y:y-3,width:tw+6,height:fontSize+6,
+      color:rgb(1,1,1)});
+    page.drawText(first,{x,y,font:fonts.bodyBold,size:fontSize,color:INK});
   }
 }
 function upsideDown(page:PDFPage,b:Rect,module:Extract<SpecialtyModule,{type:'upside-down-verse'}>,fonts:ModuleFonts):void{
