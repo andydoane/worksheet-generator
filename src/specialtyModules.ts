@@ -12,7 +12,7 @@ export const SPECIALTY_MODULES=[
   {id:'spiral-verse',name:'Spiral Verse',size:'large',description:'Copy the verse onto a large printable spiral line.'},
   {id:'upside-down-verse',name:'Upside Down Verse',size:'medium',description:'Read vertically flipped letters, then write them upright.'},
   {id:'connect-verse',name:'Connect the Verse',size:'large',description:'Connect up to 35 scattered Scripture words in the correct order.'},
-  {id:'connect-big-idea',name:'Connect the Big Idea',size:'medium',description:'Connect scattered Big Idea words using the word bank.'},
+  {id:'connect-big-idea',name:'Connect the Phrase',size:'medium',description:'Draw lines between boxed words in the order of a key idea or story event.'},
 ] as const;
 
 export function isSpecialtyId(value:unknown):value is SpecialtyId{

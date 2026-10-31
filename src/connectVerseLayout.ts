@@ -5,7 +5,7 @@ import {parseConnectionWords,type ConnectVerseModule} from './specialtyModules.t
 import {scatterWords,scaleConnectScatterFont,type ScatteredWord,type ScatterBounds} from './wordScatterLayout.ts';
 
 export const CONNECT_VERSE_TITLE='CONNECT THE VERSE';
-export const CONNECT_VERSE_INSTRUCTION='Use the verse above to connect the word boxes in order.';
+export const CONNECT_VERSE_INSTRUCTION='Draw lines from box to box in the order of the verse.';
 export const CONNECT_VERSE_BOX_PADDING_X=3;
 export const CONNECT_VERSE_BOX_PADDING_Y=1.5;
 export const CONNECT_VERSE_BOX_STROKE=.8;

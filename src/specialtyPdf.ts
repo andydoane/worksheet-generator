@@ -6,7 +6,7 @@ import {BOOKLET} from './booklet.ts';
 import {MODULE_TITLE_PT} from './pdfLayout.ts';
 import {balancedLines} from './storyVersePdf.ts';
 import {planCrossword,crosswordBlackCells} from './crosswordLayout.ts';
-import {CONNECT_BIG_TITLE,CONNECT_BIG_INSTRUCTION,planConnectBigIdea} from './connectBigIdeaLayout.ts';
+import {CONNECT_BIG_TITLE,CONNECT_BIG_INSTRUCTION,CONNECT_PHRASE_BOX_STROKE,planConnectBigIdea} from './connectBigIdeaLayout.ts';
 import {CONNECT_VERSE_TITLE,CONNECT_VERSE_INSTRUCTION,CONNECT_VERSE_BOX_STROKE,planConnectVerse} from './connectVerseLayout.ts';
 import {drawReconstructionPdf} from './verseReconstructionPdf.ts';
 import type {ModuleFonts} from './modulePdf.ts';
@@ -144,7 +144,7 @@ function connectBigIdea(page:PDFPage,b:Rect,
   bank:(text,size)=>sizeOf(fonts.bank,text,size),
   subtitle:(text,size)=>sizeOf(fonts.body,text,size),
  },b.width,b.height);
- if(!plan)throw Error('The Big Idea words cannot be scattered without overlap. Shorten the phrase.');
+ if(!plan)throw Error('Connect the Phrase words cannot fit without box overlap. Shorten the phrase.');
  const top=b.y+b.height;
  centered(page,fonts.title,CONNECT_BIG_TITLE,b.x,top-plan.titleY,b.width,23);
  centered(page,fonts.body,CONNECT_BIG_INSTRUCTION,b.x,top-plan.subtitleY,
@@ -154,14 +154,21 @@ function connectBigIdea(page:PDFPage,b:Rect,
  plan.bankLines.forEach(line=>centered(page,fonts.bank,line.text,b.x,
   top-line.y,b.width,plan.bankFontSize));
  for(const item of plan.scattered){
-  const rad=item.angle*Math.PI/180;
+  if(!item.box)throw Error('Connect the Phrase expected a measured word box.');
+  // The shared scatter bounds include the entire outlined box, not merely
+  // its letters. Print exactly the same level box and baseline as SVG.
   page.pushOperators(pushGraphicsState(),concatTransformationMatrix(
-   Math.cos(rad),-Math.sin(rad),Math.sin(rad),Math.cos(rad),
-   b.x+item.x,top-item.y));
-  for(const glyph of item.glyphs){
-   page.drawText(glyph.char,{x:glyph.x,y:-glyph.y,font:fonts.puzzle,
-    size:item.fontSize,color:INK});
-  }
+   1,0,0,1,b.x+item.x,top-item.y));
+  page.drawRectangle({
+   x:-item.box.width/2,y:-item.box.height/2,
+   width:item.box.width,height:item.box.height,
+   color:rgb(1,1,1),borderColor:rgb(.27,.27,.27),
+   borderWidth:CONNECT_PHRASE_BOX_STROKE,
+  });
+  page.drawText(item.word,{
+   x:item.glyphs[0]?.x??0,y:-(item.glyphs[0]?.y??0),
+   font:fonts.puzzle,size:item.fontSize,color:INK,
+  });
   page.pushOperators(popGraphicsState());
  }
 }

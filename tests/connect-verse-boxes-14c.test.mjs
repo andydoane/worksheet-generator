@@ -42,8 +42,7 @@ test('4, 20 and 35 words are valid with readable boxed geometry across seeds',as
  const {pdf,browser}=await metrics();
  assert.deepEqual(examples.map(v=>parseConnectionWords(v).length),[4,20,35]);
  assert.equal(CONNECT_SCATTER_FONT_SCALE,.8);
- assert.match(CONNECT_VERSE_INSTRUCTION,/verse above/u);
- assert.match(CONNECT_VERSE_INSTRUCTION,/word boxes/u);
+ assert.equal(CONNECT_VERSE_INSTRUCTION,'Draw lines from box to box in the order of the verse.');
  for(const verse of examples){
   const words=parseConnectionWords(verse);
   const originalMaxFont=words.length>=30?14.5:words.length>=21?15.5:17;
@@ -88,15 +87,15 @@ test('4, 20 and 35 words are valid with readable boxed geometry across seeds',as
   }
  }
 });
-test('Big Idea scatter stays unboxed, jittered and uses unchanged legacy engine',async()=>{
+test('Medium Phrase uses boxed words while raw unboxed scatter still works',async()=>{
  const {pdf}=await metrics();
  const idea='God is with us and gives us strength to love our neighbors and help one another every day together.';
  const module={type:'connect-big-idea',idea,seed:5};
  const plan=planConnectBigIdea(module,{puzzle:pdf.puzzle,bank:pdf.verse,subtitle:pdf.subtitle});
  assert.ok(plan);
- assert.ok(plan.scattered.every(word=>!word.box));
- assert.ok(plan.scattered.some(word=>word.glyphs.some(glyph=>
-  Math.abs(glyph.y-word.fontSize*.29)>.00001)));
+ assert.ok(plan.scattered.every(word=>word.box&&word.angle===0));
+ assert.ok(plan.scattered.every(word=>word.glyphs.every(glyph=>
+  Math.abs(glyph.y-word.fontSize*.29)<.00001)));
  const raw=scatterWords({
   words:['GOD','CARES','FOR','US'],seed:1,key:'God cares for us',field:{
    x:0,y:0,width:320,height:100,
