@@ -1,6 +1,7 @@
 import { rgb, type PDFFont, type PDFPage } from 'pdf-lib';
 import { BOOKLET } from './booklet.ts';
 import {MODULE_TITLE_PT,measureWrappedLines} from './pdfLayout.ts';
+import {planStory} from './storyLayout.ts';
 import { drawSmallModulePdf } from './smallPdf.ts';
 import { isSmallModule } from './smallModules.ts';
 import { isStoryVerseModule } from './storyVerseModules.ts';
@@ -97,44 +98,6 @@ function drawMatching(page: PDFPage, rect: Rect, fonts: ModuleFonts, module: Ext
   });
 }
 
-type StoryToken = { kind: 'text' | 'blank'; value: string };
-type StoryPlacement = { kind: 'text' | 'blank'; text: string; x: number; y: number; width: number };
-
-function tokenizeStory(story: string): StoryToken[] {
-  const { parts } = parseStory(story);
-  const tokens: StoryToken[] = [];
-  for (const part of parts) {
-    if (part.kind === 'blank') tokens.push({ kind: 'blank', value: part.word });
-    else for (const value of part.text.match(/\s+|[^\s]+/gu) ?? []) tokens.push({ kind: 'text', value });
-  }
-  return tokens;
-}
-
-/** Compute all text positions before drawing, so overflow fails instead of clipping. */
-function positionStory(tokens: StoryToken[], font: PDFFont, size: number, box: Rect): StoryPlacement[] | null {
-  const output: StoryPlacement[] = [];
-  const lineHeight = size * 1.58;
-  let x = box.x;
-  let y = box.y + box.height - size * 1.1;
-  for (const token of tokens) {
-    const isWhitespace = token.kind === 'text' && /^\s+$/u.test(token.value);
-    const tokenWidth = token.kind === 'blank'
-      ? Math.max(16, measure(font, token.value, size) * 1.12)
-      : measure(font, isWhitespace ? ' ' : token.value, size);
-    if (isWhitespace && x === box.x) continue;
-    if (!isWhitespace && tokenWidth > box.width) return null;
-    if (x + tokenWidth > box.x + box.width && x > box.x) {
-      x = box.x;
-      y -= lineHeight;
-      if (isWhitespace) continue;
-    }
-    if (y < box.y + 3) return null;
-    if (!isWhitespace) output.push({ kind: token.kind, text: token.value, x, y, width: tokenWidth });
-    x += tokenWidth;
-  }
-  return output;
-}
-
 function drawStory(page: PDFPage, rect: Rect, fonts: ModuleFonts, module: Extract<ActivityModule, { type: 'finish-story' }>): void {
   const inner = interior(rect);
   centered(page, fonts.title, 'FINISH THE STORY', inner.x, inner.y + inner.height - 28, inner.width, MODULE_TITLE_PT);
@@ -162,31 +125,16 @@ function drawStory(page: PDFPage, rect: Rect, fonts: ModuleFonts, module: Extrac
     width: inner.width - 6,
     height: bankBottom - inner.y - 18,
   };
-  const tokens = tokenizeStory(module.story);
-  let placed: StoryPlacement[] | null = null;
-  let bodySize = 13;
-  for (; bodySize >= 9; bodySize -= .5) {
-    placed = positionStory(tokens, fonts.body, bodySize, storyBox);
-    if (placed) break;
-  }
-  if (!placed) throw new Error('Story text does not fit in the large area. Shorten it or use fewer words.');
-
-  // Center the complete story paragraph below its title and word bank.
-  const low=Math.min(...placed.map(t=>t.y));
-  const high=Math.max(...placed.map(t=>t.y))+bodySize;
-  const offset=storyBox.y+storyBox.height/2-(low+high)/2;
-  placed=placed.map(t=>({...t,y:t.y+offset}));
-  placed.forEach(token => {
-    if (token.kind === 'blank') {
-      page.drawLine({
-        start: { x: token.x, y: token.y - 2 },
-        end: { x: token.x + token.width, y: token.y - 2 },
-        thickness: .95, color: INK,
-      });
-    } else {
-      page.drawText(token.text, { x: token.x, y: token.y, size: bodySize, font: fonts.body, color: INK });
+  const layout=planStory(module.story,(text,size)=>measure(fonts.body,text,size),storyBox.width,storyBox.height);
+  if (!layout) throw new Error('Story text does not fit in the large area. Shorten it or use fewer words.');
+  for(const token of layout.placements){
+    const x=storyBox.x+token.x,y=storyBox.y+storyBox.height-token.y;
+    if(token.kind==='blank'){
+      page.drawLine({start:{x,y:y-2},end:{x:x+token.width,y:y-2},thickness:.95,color:INK});
+    }else{
+      page.drawText(token.text,{x,y,size:layout.fontSize,font:fonts.body,color:INK});
     }
-  });
+  }
 }
 
 /** Single dispatch point for all module PDF renderers. */

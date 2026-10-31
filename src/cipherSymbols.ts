@@ -27,8 +27,10 @@ const glyphs:readonly CipherSymbol[]=[
   {label:'☆',paths:[s('M 8 1 L 10.3 5.9 L 15.5 6.4 L 11.6 10 L 12.7 15 L 8 12.4 L 3.3 15 L 4.4 10 L .5 6.4 L 5.7 5.9 Z')]},
   {label:'♡',paths:[s('M 8 14 C 5 11 1 8 1 5 C 1 1 6 0 8 4 C 10 0 15 1 15 5 C 15 8 11 11 8 14 Z')]},
   {label:'✿',paths:[
-    s('M 8 5 C 3 0 1 3 5 8 C 0 12 3 15 8 11 C 12 16 15 12 11 8 C 16 4 13 1 8 5 Z'),
-    f(ring(8,8,2)),
+    // Five round petals remain distinguishable from the asterisk at 10pt.
+    s(ring(8,3.8,2.6)),s(ring(12,6.6,2.6)),
+    s(ring(10.4,11.5,2.6)),s(ring(5.6,11.5,2.6)),
+    s(ring(4,6.6,2.6)),f(ring(8,8,1.55)),
   ]},
   {label:'♫',paths:[s('M 6 12 V 3 L 13 1 V 10 M 6 3 L 13 1 M 6 5 L 13 3'),
     f('M 6 11 C 3 10 1 12 2 14 C 3 16 7 14 6 12 Z'),

@@ -369,3 +369,36 @@
   display:flex;align-items:flex-start;justify-content:center;
   text-align:center;
 }
+
+
+/* PR 10e: the decoding key and verse rows are grouped, readable, and
+ * distributed through their available print-preview height. */
+.cipher-large {gap:clamp(5px,1.6cqw,10px);}
+.cipher-key-cell {justify-content:flex-start;}
+.cipher-key-symbol {flex:none;min-height:0;}
+.cipher-key-letter {display:flex;flex:1;align-items:center;justify-content:center;
+  font:700 clamp(8px,2.6cqw,12px)/1 'Zilla Slab',serif;}
+.cipher-large .cipher-encoded {
+  align-content:center;
+  justify-content:center;
+  row-gap:clamp(13px,4.5cqw,23px);
+  column-gap:0;
+  overflow:hidden;
+  padding-block:clamp(7px,2cqw,12px);
+}
+.cipher-large .cipher-character {
+  height:clamp(32px,10.1cqw,43px);
+  justify-content:flex-end;
+}
+.cipher-large .cipher-character .cipher-answer-line {
+  border-top:1px solid #222;
+  margin-bottom:8px;
+  height:4px;
+}
+.cipher-large .cipher-space,.cipher-large .cipher-punctuation {
+  height:clamp(32px,10.1cqw,43px);
+}
+.cipher-large .cipher-reference {
+  font:700 clamp(9px,2.7cqw,12px)/1.2 'Nunito',sans-serif;
+  margin-top:auto;
+}
