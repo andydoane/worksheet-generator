@@ -33,12 +33,12 @@ export default function SpecialtyEditor({module,onChange}:{module:SpecialtyModul
     case 'connect-verse':
     case 'connect-big-idea':
       return <div className="activity-inputs">
-        <label htmlFor="connect-text">{module.type==='connect-verse'?'Verse text':'Big Idea text'}</label>
+        <label htmlFor="connect-text">{module.type==='connect-verse'?'Verse text':'Key Idea or Story Event'}</label>
         <textarea id="connect-text" rows={6}
           value={module.type==='connect-verse'?module.verse:module.idea}
           onChange={e=>onChange(module.type==='connect-verse'?{verse:e.target.value}:{idea:e.target.value})}
-          placeholder="God is our refuge and strength."/>
-        <p>Enter {module.type==='connect-big-idea'?'4–20':'4–35'} words. The generator scatters their positions with slight letter jitter and rotation. {module.type==='connect-big-idea'?'The original word order appears in a box for reference.':'The whole verse appears in a bank above the scattered words.'} Use Shuffle to rearrange.</p>
+          placeholder={module.type==='connect-verse'?'God is our refuge and strength.':'Add a big idea or a sentence describing the story.'}/>
+        <p>Enter {module.type==='connect-big-idea'?'4–20':'4–35'} words. The generator scatters level, outlined word boxes without letter jitter. {module.type==='connect-big-idea'?'The original phrase appears in a box for reference.':'The whole verse appears in a bank above the scattered words.'} Use Shuffle to rearrange.</p>
       </div>;
   }
 }
