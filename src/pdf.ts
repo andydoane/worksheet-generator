@@ -173,16 +173,14 @@ function drawCoverTitle(page: PDFPage, rect: PdfRect, fonts: Fonts, draft: PdfDr
   const box = inset(rect, CONTENT_PADDING);
   const title = draft.title.trim() || 'Your story title';
   const reference = draft.scripture.trim() || 'Scripture reference';
-  const overline = fitText(fonts.puzzle, 'BIBLE STORY REVIEW', box.width, 10, 10, 1);
   const subtitle = fitText(fonts.body, reference, box.width, 12, 8, 2);
-  const gapTop = 15;
-  const gapBottom = 11;
+  const gap = 11;
   let fitted: Fitted | undefined;
 
   for (let preferred = 42; preferred >= 14; preferred -= 1) {
     try {
       const candidate = fitText(fonts.title, title, box.width, preferred, preferred, 3);
-      if (overline.height + gapTop + candidate.height + gapBottom + subtitle.height <= box.height) {
+      if (candidate.height + gap + subtitle.height <= box.height) {
         fitted = candidate;
         break;
       }
@@ -194,11 +192,11 @@ function drawCoverTitle(page: PDFPage, rect: PdfRect, fonts: Fonts, draft: PdfDr
     throw new Error('The front-cover title is too long to fit the booklet. Please shorten it.');
   }
 
-  const totalHeight = overline.height + gapTop + fitted.height + gapBottom + subtitle.height;
+  // Center the actual two-item composition, not the old three-item block.
+  const totalHeight = fitted.height + gap + subtitle.height;
   const top = SHEET_HEIGHT - box.y - box.height + (box.height - totalHeight) / 2;
-  drawCenteredLines(page, fonts.puzzle, overline, box.x, top, box.width, MID_GREY);
-  drawCenteredLines(page, fonts.title, fitted, box.x, top + overline.height + gapTop, box.width);
-  drawCenteredLines(page, fonts.body, subtitle, box.x, top + overline.height + gapTop + fitted.height + gapBottom, box.width, DARK_GREY);
+  drawCenteredLines(page, fonts.title, fitted, box.x, top, box.width);
+  drawCenteredLines(page, fonts.body, subtitle, box.x, top + fitted.height + gap, box.width, DARK_GREY);
 }
 
 function drawActivityPlaceholder(page: PDFPage, rect: PdfRect, size: Region['size'], fonts: Fonts): void {

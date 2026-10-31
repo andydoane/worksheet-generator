@@ -5,6 +5,13 @@ import type {MeasureText} from './mediumParityLayout.ts';
  * work in either PDF or SVG and are intentionally independent of module size.
  * PR 11f adopts it for Big Idea; a later PR can reuse it for Large Verse.
  */
+/** Both current Connect activities render scattered words at the same
+ * fraction of their historical target size. Reference word banks are exempt.
+ */
+export const CONNECT_SCATTER_FONT_SCALE=0.8;
+export const scaleConnectScatterFont=(originalSize:number):number=>
+  Math.round(originalSize*CONNECT_SCATTER_FONT_SCALE*1000)/1000;
+
 export type ScatterBounds={x:number;y:number;width:number;height:number};
 export type ScatterGlyph={char:string;x:number;y:number};
 export type ScatteredWord={
@@ -16,6 +23,8 @@ export type ScatterResult={fontSize:number;words:ScatteredWord[]};
 export type ScatterOptions={
  words:string[];seed:number;key:string;field:ScatterBounds;
  measure:MeasureText;maxFont?:number;minFont?:number;gap?:number;
+ /** Optional pre-scale font target, so gap stays large even when letters shrink. */
+ gapReferenceFont?:number;
 };
 function seedState(text:string,seed:number):()=>number{
  let state=(seed>>>0)^2166136261;
@@ -42,7 +51,10 @@ export function scatterWords(options:ScatterOptions):ScatterResult|null{
  const margin=2;
  for(let fontSize=max;fontSize>=min-.01;fontSize-=.5){
   const random=seedState(options.key+'|'+fontSize,options.seed);
-  const gap=(options.gap??2.1)*Math.max(.75,fontSize/11);
+  // Preserve the original printed word clearance instead of reducing the
+  // collision margin when the lettering is scaled to 80%. Historically,
+  // clearance followed the *unscaled* font size, so use that reference.
+  const gap=(options.gap??2.1)*Math.max(.75,(options.gapReferenceFont??fontSize)/11);
   const picked:ScatteredWord[]=[];
   let failed=false;
   for(const entry of ordered){

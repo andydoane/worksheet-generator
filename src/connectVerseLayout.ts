@@ -2,7 +2,7 @@ import {BOOKLET} from './booklet.ts';
 import type {MeasureText} from './mediumParityLayout.ts';
 import {balancedBankLines} from './balancedBankLines.ts';
 import {parseConnectionWords,type ConnectVerseModule} from './specialtyModules.ts';
-import {scatterWords,type ScatteredWord,type ScatterBounds} from './wordScatterLayout.ts';
+import {scatterWords,scaleConnectScatterFont,type ScatteredWord,type ScatterBounds} from './wordScatterLayout.ts';
 
 export const CONNECT_VERSE_TITLE='CONNECT THE VERSE';
 export const CONNECT_VERSE_INSTRUCTION='Connect each word to the next in order.';
@@ -37,10 +37,12 @@ export function planConnectVerse(module:ConnectVerseModule,metrics:{
   const fieldTop=bankTop+bankHeight+11;
   const field:ScatterBounds={x:6,y:fieldTop,width:width-12,height:height-fieldTop-7};
   if(field.height<130)continue;
+  const originalMaxFont=words.length>=30?14.5:words.length>=21?15.5:17;
   const placements=scatterWords({
    words,seed:module.seed,key:module.verse,field,measure:metrics.puzzle,
-   maxFont:words.length>=30?14.5:words.length>=21?15.5:17,
+   maxFont:scaleConnectScatterFont(originalMaxFont),
    minFont:8.5,gap:words.length>25?2.5:3.2,
+   gapReferenceFont:originalMaxFont,
   });
   if(!placements)continue;
   return {titleY,subtitleY,subtitleSize,bankTop,bankHeight,bankFontSize,
