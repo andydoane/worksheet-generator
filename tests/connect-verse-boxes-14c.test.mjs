@@ -42,8 +42,7 @@ test('4, 20 and 35 words are valid with readable boxed geometry across seeds',as
  const {pdf,browser}=await metrics();
  assert.deepEqual(examples.map(v=>parseConnectionWords(v).length),[4,20,35]);
  assert.equal(CONNECT_SCATTER_FONT_SCALE,.8);
- assert.match(CONNECT_VERSE_INSTRUCTION,/verse above/u);
- assert.match(CONNECT_VERSE_INSTRUCTION,/word boxes/u);
+ assert.equal(CONNECT_VERSE_INSTRUCTION,'Draw lines from box to box in the order of the verse.');
  for(const verse of examples){
   const words=parseConnectionWords(verse);
   const originalMaxFont=words.length>=30?14.5:words.length>=21?15.5:17;
