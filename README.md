@@ -1,5 +1,29 @@
 # Worksheet Studio
 
+## PR 11g — Connect Verse moves to Large (v0.15.9)
+
+- **Connect the Verse** is now a Large-only selection for new worksheets,
+  using the collision-aware seeded two-dimensional scatter from PR 11f
+  instead of three rigid columns. It supports 4–35 words and up to 260
+  verse characters, preserves the existing Zilla Slab Bold scattered font,
+  and adapts text size to prevent overlaps.
+- A full-width bordered verse bank uses the same Nunito Bold verse styling
+  as Spiral Verse, and shows the **original word order and punctuation**.
+  Title and subtitle read **CONNECT THE VERSE** and **Connect each word to
+  the next in order.** Browser and PDF share all measured line and letter
+  positions.
+- **Connect the Big Idea:** its previously approved scattering is unchanged;
+  only its bank gains measured, balanced wrapping when it spans two or three
+  lines (no short orphan line). Both renderers use the same line plan.
+- **Saved worksheet compatibility:** Existing Connect the Verse activities
+  in Medium slots are **not moved or deleted**. They remain visible,
+  editable, and exportable with their original Medium rendering. The module
+  type only appears for new selections in Large slots; saved Medium entries
+  receive a clearly labeled legacy option in the editor.
+- **Verification:** `npm run test && npm run build && npm run sample:pr11g`.
+  Inspect the Large 35-word verses, the balanced multi-row Big Idea bank,
+  and the older Medium Connect Verse together in the generated booklet.
+
 ## PR 11f — Connect the Big Idea: scattered layout (v0.15.8)
 
 - **Connect the Big Idea** now has a seeded, collision-aware scattering
