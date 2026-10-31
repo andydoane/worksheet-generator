@@ -1,5 +1,26 @@
 # Worksheet Studio
 
+## PR 11d — Expanded True/False Maze, adaptive Unscramble spacing (v0.15.6)
+
+- **True or False Maze:** A fully generated **41 × 14** grid, with up to
+  65 characters in the statement, measured to fit one centered line.
+  TRUE and FALSE labels are stacked vertically and centered at their
+  respective maze exits. The bottom entrance uses the exact path from
+  `images/maze_arrow.svg`, drawn as a vector in browser and PDF.
+  The activity uses one physical coordinate plan for both renderers.
+- **Unscramble the Verse:** Keep scrambled letters near their answer blanks,
+  while expanding the verse's main line pitch automatically from **29pt**
+  up to **43.5pt** (1.5×) when there are fewer lines and more vertical room.
+  The preview and PDF share that spacing plan.
+- **Bracket selection:** The existing Finish the Story and Finish the Verse
+  selection buttons remain in place. Unscramble the Verse now gets the same
+  double-click **Make selected word a blank** control, with duplicate-word
+  precision, the nine-letter limit, and non-intrusive shake feedback for an
+  invalid selection.
+- **Verification:** `npm run test && npm run build && npm run sample:pr11d`
+  plus manual review of the booklet PDF's two landscape Letter sheets.
+  The remaining Medium-module PRs (11e, 11f, 11g) are not included.
+
 ## PR 11c follow-up — Automatic verse fitting (v0.15.5)
 
 This is a focused refinement of **Finish the Verse**, **Unscramble the Verse**,
