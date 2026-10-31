@@ -1,7 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
 import pkg from '../package.json';
 import {COVER_BORDERS,coverBorderUrl,isCoverBorderId,type CoverBorderId} from './coverBorders.ts';
-import {isActivityBorderReady,readActivityBorders,setActivityBorder,type ActivityBorders,type ActivityBorderId} from './activityBorders.ts';
+import {
+ ACTIVITY_SAFE_AREAS,activityBorderUrl,isActivityBorderReady,
+ readActivityBorders,setActivityBorder,type ActivityBorders,type ActivityBorderId,
+} from './activityBorders.ts';
 import ActivityBorderPicker from './ActivityBorderPicker.tsx';
 import {markWordSelection} from './storySelection.ts';
 import {fieldExceedsLength} from './fieldLengthFeedback.ts';
@@ -99,7 +102,7 @@ function readDraft(): Draft {
   }
 }
 
-function RegionContents({ region, draft, module, showSolution = false }: { region: Region; draft: Draft; module?: ActivityModule; showSolution?: boolean }) {
+function RegionContents({ region, draft, module, slotKeyKey, showSolution = false }: { region: Region; draft: Draft; module?: ActivityModule; slotKeyKey:string; showSolution?: boolean }) {
   if (region.kind === 'title') {
     return (
       <div className={'cover-content'+(draft.coverBorder!=='none'?' cover-content-bordered':'')}>
@@ -112,11 +115,24 @@ function RegionContents({ region, draft, module, showSolution = false }: { regio
     );
   }
 
+  const selectedBorder=module&&isActivityBorderReady(module.type)
+    ?activityBorderUrl(region.size,draft.activityBorders[slotKeyKey])
+    :undefined;
   // Older Medium Connect Verse placements remain visible, editable and
   // printable without moving a saved assignment or changing its layout.
   const legacyMedium=region.size==='medium'&&module?.type==='connect-verse';
-  if (module && (legacyMedium||moduleForSize(region.size).some((item) => item.id === module.type)))
-    return <ModulePreview module={module} showSolution={showSolution} legacyMedium={legacyMedium}/>;
+  if (module && (legacyMedium||moduleForSize(region.size).some((item) => item.id === module.type))) {
+    const preview=<ModulePreview module={module} showSolution={showSolution} legacyMedium={legacyMedium}/>;
+    if(!selectedBorder||region.size!=='small')return preview;
+    const safe=ACTIVITY_SAFE_AREAS.small;
+    return <div className="bordered-small-activity">
+      <img className="bordered-small-art" src={selectedBorder} alt="" aria-hidden="true"/>
+      <div className="bordered-small-safe" style={{
+        width:(safe.width/region.width*100)+'%',
+        height:(safe.height/region.height*100)+'%',
+      }}>{preview}</div>
+    </div>;
+  }
 
   return (
     <div className="region-content">
@@ -142,10 +158,13 @@ function BookletPage({
     <div className="booklet-page" aria-label={'Booklet page ' + page + ' layout'}>
 
       {regions.map((region) => {
-        const style = { ...regionStyle(region), padding: region.kind==='title'&&draft.coverBorder!=='none'?'0':String((BOOKLET.padding / BOOKLET.page.width) * 100) + '%' };
+        const slot=slotKey(page,region.id);
+        const selectedBorder=draft.modules[slot]&&isActivityBorderReady(draft.modules[slot].type)&&
+          region.size==='small'&&!!activityBorderUrl(region.size,draft.activityBorders[slot]);
+        const style = { ...regionStyle(region), padding: (region.kind==='title'&&draft.coverBorder!=='none')||selectedBorder?'0':String((BOOKLET.padding / BOOKLET.page.width) * 100) + '%' };
         const className = 'booklet-region ' + (region.kind === 'title' ? 'title-region' : 'activity-region') +
           ' size-' + region.size + (region.id === selectedId ? ' selected-region' : '');
-        const content = <RegionContents region={region} draft={draft} module={draft.modules[slotKey(page, region.id)]} showSolution={showSolution && region.id === selectedId} />;
+        const content = <RegionContents region={region} draft={draft} slotKeyKey={slot} module={draft.modules[slot]} showSolution={showSolution && region.id === selectedId} />;
         return region.kind === 'title'
           ? <div key={region.id} className={className} style={style} aria-label="Fixed title area">{content}</div>
           : <button type="button" key={region.id} className={className} style={style}
@@ -421,7 +440,7 @@ export default function App() {
                         <img className="cover-border-thumbnail" src={border.url} alt=""/><span>{border.name}</span>
                       </button>)}
                     </div>}
-                    <p>A border reduces the title text area to 4.3 × 2.15 inches.</p>
+                    <p>A border reduces the title text area to 4.3 × 2.1 inches.</p>
                   </div>
                   <div className="field separated">
                     <label htmlFor="bigIdea">Big Idea</label>
