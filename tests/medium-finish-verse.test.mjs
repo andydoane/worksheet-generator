@@ -56,8 +56,9 @@ test('Exodus 15:11 and Isaiah 41:10 fit with print-matched text and full-size ha
   assert.deepEqual(rounded(a.words),rounded(b.words));
   assert.deepEqual(rounded(a.bankWords),rounded(b.bankWords));
   assert.equal(a.title,'FINISH '+module.reference.toUpperCase());
-  assert.equal(a.cell,10.4);
+  assert.equal(a.cell,12.3);
   assert.equal(a.boxHeight,12.3);
+  assert.equal(a.cell,a.boxHeight,'Handwriting boxes must be square');
   assert.ok(a.lines<=7);
   assert.ok(a.words.every(w=>w.y<170));
   assert.equal(a.words.filter(x=>x.kind==='blank').length,parseVerse(module.verse).answers.length);
