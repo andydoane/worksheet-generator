@@ -1,6 +1,7 @@
 import { rgb, type PDFFont, type PDFPage } from 'pdf-lib';
 import { BOOKLET } from './booklet.ts';
 import {MODULE_TITLE_PT,verticalStack,centeredBaseline} from './pdfLayout.ts';
+import {planMistakes} from './mediumParityLayout.ts';
 import type { ModuleFonts } from './modulePdf.ts';
 import {
   boxGrid, linesFromInput, mistakesTitle, orderedStoryEvents, parseVerse,
@@ -252,12 +253,11 @@ function unscrambleVerse(page:PDFPage,b:Rect,fonts:ModuleFonts,m:UnscrambleVerse
 }
 function mistakes(page:PDFPage,b:Rect,fonts:ModuleFonts,m:Extract<StoryVerseModule,{type:'circle-mistakes'}>):void {
   heading(page,fonts,mistakesTitle(m.count),b);
-  const area={x:b.x+7,y:b.y+9,width:b.width-14,height:b.height-46};
-  const fitted=fittedLines(m.text,fonts.body,area.width,area.height-7,14,9.5);
-  const top=b.y+b.height-45;
-  fitted.rows.forEach((line,i)=>page.drawText(line,{
-    x:area.x,y:top-(i+1)*fitted.step,
-    size:fitted.size,font:fonts.body,color:INK,
+  const plan=planMistakes(m.text,(text,size)=>width(fonts.body,text,size),b.width,b.height);
+  if(!plan)throw Error('Circle the Mistakes paragraph cannot fit. Shorten the text.');
+  plan.lines.forEach(line=>page.drawText(line.text,{
+    x:b.x+line.x,y:b.y+b.height-line.y,
+    size:plan.fontSize,font:fonts.body,color:INK,
   }));
 }
 export function drawStoryVersePdf(page:PDFPage,rect:Rect,module:StoryVerseModule,fonts:ModuleFonts):void {

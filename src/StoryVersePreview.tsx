@@ -1,4 +1,5 @@
-import { boxGrid, linesFromInput, mistakesTitle, orderedStoryEvents, parseVerse, sortedStoryBank, verseBank, verseScrambles, type StoryVerseModule } from './storyVerseModules.ts';
+import { boxGrid, linesFromInput, orderedStoryEvents, parseVerse, sortedStoryBank, verseBank, verseScrambles, type StoryVerseModule } from './storyVerseModules.ts';
+import {MistakesPrintPreview} from './MediumPrintPreview.tsx';
 
 function MissingVerse({ verse, mode, scrambled }: {verse:string;mode:'finish'|'unscramble';scrambled?:string[]}) {
   let index=0;
@@ -66,10 +67,6 @@ export default function StoryVersePreview({module}: {module:StoryVerseModule}) {
         <div className="sv-verse-ref">{module.reference}</div>
         <MissingVerse verse={module.verse} mode="unscramble" scrambled={verseScrambles(module)}/>
       </div>;
-    case 'circle-mistakes':
-      return <div className="module-preview sv-preview sv-medium-preview">
-        <div className="module-title">{mistakesTitle(module.count)}</div>
-        <div className="sv-mistake-paragraph">{module.text}</div>
-      </div>;
+    case 'circle-mistakes':return <MistakesPrintPreview module={module}/>;
   }
 }

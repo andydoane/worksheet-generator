@@ -1,5 +1,29 @@
 # Worksheet Studio
 
+## PR 11a — Medium preview/PDF baseline, Match and Circle (v0.15.2)
+
+- **Match the Words:** Both renderers now use one physical-coordinate
+  layout based on actual Zilla Slab and Nunito Bold font metrics. The left
+  entries remain flush left at their 7pt inset; the right entries are
+  right-justified against the matching right inset. Each row shares one
+  common baseline, with size fitting for three to six pairs.
+- **Circle the Mistakes:** The preview and PDF use identical Nunito Medium
+  text rows. The text is smaller (preferred 11.5pt, with measured
+  adaptation) and line spacing is increased to 1.75× for circling errors.
+  The printed text must fit in full; no clipping is allowed.
+- **All nine Medium activities audited:** See
+  [Medium preview/PDF baseline](docs/medium-preview-pdf-audit.md) for
+  confirmed source-level discrepancies, fixed issues and the remaining
+  PR 11b–11g plan. Other activities are intentionally unchanged here.
+- **Tests and print samples:** `npm run test && npm run build &&
+  npm run sample:pr11a`. CI also regenerates the earlier PR 10g Medium
+  samples covering the full nine-module set. Existing folded-booklet
+  geometry and saved content remain unchanged.
+
+**After merging:** Compare the browser preview and exported PDF for Match
+(3 and 6 pairs) and Circle (short and long paragraphs). This PR does not
+claim that the other seven Medium activities now have full parity.
+
 ## PR 10h — Crossword false-square fill and Spiral Verse finish (v0.15.1)
 
 - **Crossword:** In both the live preview and exported PDF, fill non-answer grid

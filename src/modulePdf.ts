@@ -1,6 +1,7 @@
 import { rgb, type PDFFont, type PDFPage } from 'pdf-lib';
 import { BOOKLET } from './booklet.ts';
 import {MODULE_TITLE_PT,measureWrappedLines} from './pdfLayout.ts';
+import {planMatching} from './mediumParityLayout.ts';
 import {planStory} from './storyLayout.ts';
 import { drawSmallModulePdf } from './smallPdf.ts';
 import { isSmallModule } from './smallModules.ts';
@@ -77,25 +78,20 @@ function drawPicture(page: PDFPage, rect: Rect, font: PDFFont, prompt: string): 
 
 function drawMatching(page: PDFPage, rect: Rect, fonts: ModuleFonts, module: Extract<ActivityModule, { type: 'match-words' }>): void {
   const box = interior(rect);
-  const rows = matchRows(module);
-  centered(page, fonts.title, 'MATCH THE WORDS', box.x, box.y + box.height - 25, box.width, MODULE_TITLE_PT);
-  const subtitle = 'Draw a line from each word on the left to its match on the right.';
-  const instructionLines = lines(subtitle, fonts.bodyBold, 9, box.width);
-  instructionLines.forEach((line, index) =>
-    centered(page, fonts.bodyBold, line, box.x, box.y + box.height - 41 - index * 10, box.width, 9, GREY));
-  const start = box.y + box.height - 60 - (instructionLines.length - 1) * 10;
-  const bottom = box.y + 13;
-  const spacing = (start - bottom) / Math.max(1, rows.length - 1);
-  if (spacing < 16) throw new Error('Matching rows need more room; use fewer pairs.');
-  const colWidth = box.width / 2 - 18;
-  const names = rows.flatMap(row => [row.left.toUpperCase(), row.right.toUpperCase()]);
-  // Matching words use embedded Zilla Slab Bold, like the browser preview.
-  const size = fittedSize(fonts.puzzle, names, colWidth, 13.5, 8);
-  rows.forEach((row, index) => {
-    const y = start - index * spacing;
-    page.drawText(row.left.toUpperCase(), { x: box.x + 7, y, size, font: fonts.puzzle, color: INK });
-    page.drawText(row.right.toUpperCase(), { x: box.x + box.width / 2 + 12, y, size, font: fonts.puzzle, color: INK });
-  });
+  const plan=planMatching(matchRows(module),
+    (text,size)=>measure(fonts.bodyBold,text,size),
+    (text,size)=>measure(fonts.puzzle,text,size),box.width,box.height);
+  if(!plan)throw Error('Matching rows do not fit. Use shorter words or fewer pairs.');
+  centered(page,fonts.title,'MATCH THE WORDS',box.x,box.y+box.height-plan.titleY,box.width,MODULE_TITLE_PT);
+  plan.instructions.forEach(line=>
+    centered(page,fonts.bodyBold,line.text,box.x,box.y+box.height-line.y,box.width,plan.instructionSize,GREY));
+  plan.leftRows.forEach(line=>page.drawText(line.text,{
+    x:box.x+line.x,y:box.y+box.height-line.y,font:fonts.puzzle,size:plan.fontSize,color:INK,
+  }));
+  plan.rightRows.forEach(line=>page.drawText(line.text,{
+    x:box.x+line.x-measure(fonts.puzzle,line.text,plan.fontSize),
+    y:box.y+box.height-line.y,font:fonts.puzzle,size:plan.fontSize,color:INK,
+  }));
 }
 
 function drawStory(page: PDFPage, rect: Rect, fonts: ModuleFonts, module: Extract<ActivityModule, { type: 'finish-story' }>): void {
