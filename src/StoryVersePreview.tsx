@@ -44,8 +44,9 @@ export default function StoryVersePreview({module}: {module:StoryVerseModule}) {
       return <div className="module-preview sv-preview">
         <div className="module-title">DRAW THE STORY</div>
         <div className="sv-drawing-grid" style={{gridTemplateColumns:'repeat('+cols+',minmax(0,1fr))'}}>
+          
           {items.map((text,i)=><div className="sv-drawing-cell" key={i}>
-            <span className="sv-drawing-blank"/><span className="sv-drawing-label">{text}</span>
+            <span className="sv-drawing-blank"/><span className="sv-drawing-label" style={{fontSize:cols===3?'8px':'10px'}}>{text}</span>
           </div>)}
         </div>
       </div>;

@@ -1,5 +1,49 @@
 # Worksheet Studio
 
+## PR 10e — Large word-search and cryptogram layout polish
+
+### Additional corrections from PR 10d review
+- **Draw the Story:** all captions now use a single measured font size
+  (selected against the longest caption), instead of individual per-caption
+  shrink-to-fit. The printable caption/box gap is **7pt**, matching the
+  horizontal gap between picture frames; the preview likewise uses a shared
+  font size and a 7px caption gap.
+- **Finish the Story:** the browser now uses **the same token-placement and
+  font-size-fitting algorithm as the vector PDF**, including the physical
+  4.6-inch width and 13-to-9pt adjustment for long text. A canvas measurement
+  using the loaded local Nunito Medium font supplies glyph metrics, then SVG
+  renders the complete result. This prevents CSS paragraph overflow/clipping.
+  User's full Red Sea paragraph is retained as a regression test.
+
+### Word Search
+- 4–12 word entries, with a two-column bank for up to eight words and a
+  three-column bank for nine to twelve.
+- The PDF reserves bank height based on the number of rows, expands the grid
+  when the bank is shorter, and centers evenly spaced ExtraBold labels.
+- Browser preview uses evenly distributed bank rows and the same 800-weight
+  Nunito face. Multi-word labels remain human-readable in the bank and
+  concatenated only in the grid.
+
+### Verse Cryptogram
+- Centered line widths instead of left anchoring each cipher line.
+- Dynamic vertical grouping, with at least **28pt pitch** between encoded
+  lines for a child-sized space above each answer rule.
+- Precisely centered symbols and Zilla letter labels in the decoding key.
+- Nunito Bold reference at the bottom, with protected footer space.
+- The browser preview increases character row space, centers line groups,
+  and continues to render all glyphs as custom SVG paths (not emoji).
+
+### Tests and print samples
+Run `npm run test`, `npm run build`, and `npm run sample:pr10e`.
+There are two full-booklet samples: 4/8/12-word bank comparisons and the
+exact user-provided long Red Sea Finish the Story passage with long drawing
+captions. A separate one-sheet vector **symbol print-size audit** shows all
+26 designs at 10pt (verse) and 13pt (key).
+
+This is the planned Large-module PR 10e; Crossword and Spiral Verse final
+polish are next. JSON saving/loading and answer keys remain part of the
+later initial-release stage.
+
 ## PR 10d — Story and Drawing Layout Refinements
 
 This PR applies the shared layout foundations to all four story-based Large

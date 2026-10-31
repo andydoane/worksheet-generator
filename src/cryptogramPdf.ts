@@ -56,38 +56,65 @@ function layoutWords(words:Cell[][],font:PDFFont,availableWidth:number):Cell[][]
   if(current.length)lines.push(current);
   return lines;
 }
+/** Child-friendly handwriting spacing, with generous room ABOVE each line.
+ * Both content and cipher key are centered within the same print region.
+ * Returns null only when the permitted text cannot be laid out legibly.
+ */
+export function cryptogramBodyGeometry(rowCount:number,top:number,bottom:number):
+  {firstY:number;step:number;totalHeight:number}|null{
+  if(rowCount<1||!Number.isInteger(rowCount)||top<=bottom)return null;
+  const available=top-bottom;
+  const minGap=28,inkHeight=21;
+  if(inkHeight+(rowCount-1)*minGap>available)return null;
+  const step=rowCount===1?0:Math.min(40,(available-inkHeight)/(rowCount-1));
+  const totalHeight=inkHeight+(rowCount-1)*step;
+  const lowestY=bottom+(available-totalHeight)/2+1;
+  return {firstY:lowestY+(rowCount-1)*step,step,totalHeight};
+}
 export function drawCryptogramPdf(page:PDFPage,rect:Rect,module:Cryptogram,fonts:ModuleFonts):void{
   const box=interior(rect),data=generateCryptogram(module);
   const top=box.y+box.height;
   centered(page,fonts.title,'SOLVE THE CODE!',box.x,top-25,box.width,MODULE_TITLE_PT);
   const keyCols=module.type==='verse-cryptogram'?20:18;
-  const keyRows=Math.ceil(data.key.length/keyCols);
-  const keyTop=top-37,keyHeight=28;
+  const keyRows=Math.ceil(data.key.length/keyCols),keyHeight=29;
+  const keyTop=top-38;
   for(let i=0;i<data.key.length;i++){
-    const row=Math.floor(i/keyCols), col=i%keyCols;
+    const row=Math.floor(i/keyCols),col=i%keyCols;
     const colsInRow=Math.min(keyCols,data.key.length-row*keyCols);
     const cellWidth=box.width/colsInRow;
     const cx=box.x+col*cellWidth,cy=keyTop-(row+1)*keyHeight;
-    const symbolSize=Math.min(13,cellWidth-6);
-    page.drawRectangle({x:cx,y:cy,width:cellWidth,height:keyHeight,borderWidth:.65,borderColor:GREY});
-    page.drawLine({start:{x:cx,y:cy+12},end:{x:cx+cellWidth,y:cy+12},thickness:.55,color:GREY});
-    drawCipherGlyph(page,data.key[i].symbol,cx+(cellWidth-symbolSize)/2,cy+13.5,symbolSize);
-    centered(page,fonts.puzzle,data.key[i].letter,cx,cy+2,cellWidth,9.2);
+    const symbolSize=Math.min(13,cellWidth-5);
+    page.drawRectangle({x:cx,y:cy,width:cellWidth,height:keyHeight,
+      borderWidth:.65,borderColor:GREY});
+    page.drawLine({start:{x:cx,y:cy+12},end:{x:cx+cellWidth,y:cy+12},
+      thickness:.55,color:GREY});
+    // The symbol lives inside the top 17pt. The Zilla label is centered
+    // inside the bottom 12pt, rather than sitting on an arbitrary baseline.
+    const symbolBottom=cy+12+(keyHeight-12-symbolSize)/2;
+    drawCipherGlyph(page,data.key[i].symbol,
+      cx+(cellWidth-symbolSize)/2,symbolBottom,symbolSize);
+    const letterSize=9.2;
+    centered(page,fonts.puzzle,data.key[i].letter,cx,
+      cy+(12-letterSize)/2+2,cellWidth,letterSize);
   }
   const bodyTop=keyTop-keyRows*keyHeight-10;
-  const footer=module.type==='verse-cryptogram'?23:4;
-  const lines=layoutWords(splitTokens(data.text,data.mapping),fonts.body,box.width-4);
-  const step=25;
-  const firstY=bodyTop-24;
-  if(firstY-(lines.length-1)*step<box.y+footer+3)
-    throw Error('The cryptogram text does not fit this module. Shorten the text.');
+  const footer=module.type==='verse-cryptogram'?28:6;
+  const bodyBottom=box.y+footer;
+  const lines=layoutWords(splitTokens(data.text,data.mapping),fonts.body,box.width-8);
+  const geometry=cryptogramBodyGeometry(lines.length,bodyTop,bodyBottom);
+  if(!geometry)throw Error(
+    'The cryptogram needs more handwriting room. Shorten the verse or choose fewer words.');
   lines.forEach((line,row)=>{
-    let x=box.x+2;
-    const y=firstY-row*step;
+    const lineWidth=line.reduce((sum,cell)=>sum+characterWidth(cell,fonts.body),0);
+    let x=box.x+(box.width-lineWidth)/2;
+    const y=geometry.firstY-row*geometry.step;
     for(const cell of line){
       const cw=characterWidth(cell,fonts.body);
       if(cell.symbol!==undefined){
-        page.drawLine({start:{x:x+.8,y:y+16},end:{x:x+cw-1,y:y+16},thickness:.8,color:INK});
+        // Leave a full answer-height zone above the symbols. The next
+        // encoded row begins no closer than 28pt below the previous one.
+        page.drawLine({start:{x:x+.8,y:y+18},end:{x:x+cw-1,y:y+18},
+          thickness:.8,color:INK});
         drawCipherGlyph(page,cell.symbol,x+(cw-10)/2,y,10);
       }else if(cell.char!==' '){
         page.drawText(cell.char,{x,y:y+2,font:fonts.body,size:10,color:INK});
@@ -96,8 +123,8 @@ export function drawCryptogramPdf(page:PDFPage,rect:Rect,module:Cryptogram,fonts
     }
   });
   if(data.reference){
-    if(width(fonts.body,data.reference,10)>box.width)
+    if(width(fonts.bodyBold,data.reference,10)>box.width)
       throw Error('Verse reference is too long to fit.');
-    centered(page,fonts.bodyBold,data.reference,box.x,box.y+5,box.width,10);
+    centered(page,fonts.bodyBold,data.reference,box.x,box.y+7,box.width,10);
   }
 }

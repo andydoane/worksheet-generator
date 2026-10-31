@@ -139,20 +139,35 @@ function sort(page:PDFPage,b:Rect,fonts:ModuleFonts,module:Extract<StoryVerseMod
 function drawStory(page:PDFPage,b:Rect,fonts:ModuleFonts,module:Extract<StoryVerseModule,{type:'draw-story'}>):void {
   heading(page,fonts,'DRAW THE STORY',b);
   const grid=boxGrid(module);
-  const top=b.y+b.height-36, bottom=b.y+3;
-  const gutter=7;
+  const top=b.y+b.height-36,bottom=b.y+3;
+  const gutter=7; // The caption-to-frame gap equals the horizontal box gutter.
   const rowHeight=(top-bottom-gutter)/2;
   const colWidth=(b.width-(grid.cols-1)*gutter)/grid.cols;
+  const captionH=grid.cols===3?56:48,frameGap=gutter;
+  if(rowHeight-captionH-frameGap<55)
+    throw Error('Not enough height remains for readable drawing boxes.');
+  // Determine ONE common caption font size for the entire activity,
+  // rather than shrinking five-line captions independently of four-line ones.
+  let captionSize=9.4;
+  while(captionSize>=6.5){
+    const allFit=grid.items.every(text=>{
+      try{
+        fittedLines(text,fonts.body,colWidth-8,captionH-12,captionSize,captionSize);
+        return true;
+      }catch{return false;}
+    });
+    if(allFit)break;
+    captionSize-=.3;
+  }
+  if(captionSize<6.5)throw Error('Drawing captions are too long for the selected layout.');
   grid.items.forEach((text,i)=>{
     const row=Math.floor(i/grid.cols),col=i%grid.cols;
     const x=b.x+col*(colWidth+gutter);
     const y=top-(row+1)*rowHeight-row*gutter;
-    // Equal-sized drawing areas with a deliberate clear gap before captions.
-    const captionH=grid.cols===3?56:48;
-    const frameGap=10;
-    page.drawRectangle({x,y:y+captionH+frameGap,width:colWidth,height:rowHeight-captionH-frameGap,borderWidth:.8,borderColor:MID});
-    drawLines(page,fonts.body,text,{x:x+3,y:y+3,width:colWidth-6,height:captionH-6},
-      y+captionH-3,captionH-6,9.4,7.0);
+    page.drawRectangle({x,y:y+captionH+frameGap,width:colWidth,height:rowHeight-captionH-frameGap,
+      borderWidth:.8,borderColor:MID});
+    drawLines(page,fonts.body,text,{x:x+4,y:y+4,width:colWidth-8,height:captionH-12},
+      y+captionH-4,captionH-12,captionSize,captionSize);
   });
 }
 type VerseToken={kind:'word'|'blank'|'space';value:string};
