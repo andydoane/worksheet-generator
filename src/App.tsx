@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import pkg from '../package.json';
 import {markWordSelection} from './storySelection.ts';
+import {fieldExceedsLength} from './fieldLengthFeedback.ts';
 import { downloadBookletPdf } from './exportPdf';
 import ModulePreview from './ModulePreview';
 import SmallModuleEditor from './SmallModuleEditor';
@@ -288,6 +289,19 @@ export default function App() {
   const activeModule = draft.modules[activeKey];
   const showSolution = solutionKey === activeKey;
   const validation = activeModule ? validateModule(activeModule) : [];
+  const activityFieldRef=useRef<HTMLDivElement>(null);
+  // Shared immediate length feedback. The validation panel remains the
+  // source of error explanations; styling identifies the exact input.
+  useEffect(()=>{
+    const root=activityFieldRef.current;
+    if(!root)return;
+    for(const field of root.querySelectorAll<HTMLInputElement|HTMLTextAreaElement>('input[id],textarea[id]')){
+      const exceeded=!!activeModule&&fieldExceedsLength(activeModule,field.id,field.value);
+      field.classList.toggle('over-character-limit',exceeded);
+      if(exceeded)field.setAttribute('aria-invalid','true');
+      else field.removeAttribute('aria-invalid');
+    }
+  },[activeModule,tab,page,selectedRegionId]);
   const selected = pages.find((item) => item.number === page) ?? pages[0];
   const activeSheet = SHEETS.find((sheet) => sheet.pages.includes(page)) ?? SHEETS[0];
   const layoutName = page === 1
@@ -420,7 +434,7 @@ export default function App() {
                   </div>
                 </div>
               ) : (
-                <div className="activity-editor">
+                <div className="activity-editor" ref={activityFieldRef}>
                   <p className="activity-help">Choose a booklet page, then click an activity region in the preview or select a section below.</p>
                   <div className="activity-page-pickers" aria-label="Choose booklet page">
                     {pages.map((item) => <button key={item.number} type="button" onClick={() => selectPage(item.number)}
