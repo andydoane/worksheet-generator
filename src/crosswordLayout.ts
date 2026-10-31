@@ -43,11 +43,12 @@ export function planCrossword(puzzle:CrosswordResult,measure:(text:string,size:n
   width=CROSSWORD_WIDTH,height=CROSSWORD_HEIGHT):CrosswordPlan|null{
   const colWidth=width/2-12;
   const groups=[puzzle.across,puzzle.down];
-  const maxCell=Math.min(25,(width-12)/puzzle.width);
+  const gridTop=8; // Former 40pt title reserve is reclaimed by the grid and clues.
+  const maxCell=Math.min(27,(width-12)/puzzle.width);
   for(let cell=maxCell;cell>=9;cell-=.5){
     const gridHeight=puzzle.height*cell;
-    const clueStart=40+gridHeight+11;
-    const available=(height-3)-(clueStart+28);
+    const clueStart=gridTop+gridHeight+11;
+    const available=height-4-(clueStart+32);
     if(available<=25)continue;
     for(let size=9.2;size>=6.6;size-=.4){
       const step=size*1.25;
@@ -65,7 +66,7 @@ export function planCrossword(puzzle:CrosswordResult,measure:(text:string,size:n
         }
       }
       return {
-        cell,gridX:(width-puzzle.width*cell)/2,gridTop:40,
+        cell,gridX:(width-puzzle.width*cell)/2,gridTop,
         gridWidth:puzzle.width*cell,gridHeight,
         clueFontSize:size,
         acrossHeader:{x:0,y:clueStart+14},
