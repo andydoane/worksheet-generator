@@ -34,7 +34,7 @@ async function widths(){
  return {browser,pdf,files};
 }
 test('Large Connect Verse replaces Medium choice without changing module IDs or saved payloads',()=>{
- assert.equal(moduleForSize('medium').length,8);
+ assert.equal(moduleForSize('medium').length,9);
  assert.equal(moduleForSize('large').length,9);
  assert.ok(moduleForSize('large').some(x=>x.id==='connect-verse'));
  assert.ok(!moduleForSize('medium').some(x=>x.id==='connect-verse'));
