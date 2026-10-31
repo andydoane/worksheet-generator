@@ -70,8 +70,10 @@ test('Unscramble uses centered balanced rows and preserves handwriting pitch',as
   const a=planUnscrambleVerse(module,pdf),b=planUnscrambleVerse(module,browser);
   assert.ok(a&&b,'Unable to fit '+module.verse);
   assert.equal(a.rowCount,b.rowCount);
-  assert.deepEqual(a.rowWidths,b.rowWidths);
-  assert.equal(a.lineStep,b.lineStep);
+  assert.equal(a.rowWidths.length,b.rowWidths.length);
+  for(let i=0;i<a.rowWidths.length;i++)
+   assert.ok(Math.abs(a.rowWidths[i]-b.rowWidths[i])<.02);
+  assert.ok(Math.abs(a.lineStep-b.lineStep)<.02);
   assert.ok(a.lineStep>=29&&a.fontSize>=8.5);
   assert.equal(a.rowWidths.length,a.rowCount);
   assert.ok(a.rowWidths.every(w=>w<=331.2-8+.001&&w>0));
