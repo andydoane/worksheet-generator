@@ -1,7 +1,7 @@
 import {balancedBankLines} from './balancedBankLines.ts';
 import {MEDIUM_PRINT_WIDTH,MEDIUM_PRINT_HEIGHT,type MeasureText} from './mediumParityLayout.ts';
 import {parseConnectionWords,type ConnectBigIdeaModule} from './specialtyModules.ts';
-import {scatterWords,type ScatteredWord,type ScatterBounds} from './wordScatterLayout.ts';
+import {scatterWords,scaleConnectScatterFont,type ScatteredWord,type ScatterBounds} from './wordScatterLayout.ts';
 
 export const CONNECT_BIG_TITLE='CONNECT THE BIG IDEA';
 export const CONNECT_BIG_INSTRUCTION='Connect each word to the next in order.';
@@ -34,12 +34,13 @@ export function planConnectBigIdea(module:ConnectBigIdeaModule,metrics:{
   const fieldTop=bankTop+bankHeight+6;
   const field:ScatterBounds={x:5,y:fieldTop,width:width-10,height:height-fieldTop-5};
   if(field.height<45)continue;
+  // Preserve the original count-based size hierarchy, with the exact same
+  // 80% scale used by Large Connect Verse. The bank stays full size.
+  const originalMaxFont=words.length>=17?11.5:words.length>=13?12.5:13.5;
   const placements=scatterWords({
    words,seed:module.seed,key:module.idea,field,measure:metrics.puzzle,
-   // Dense 17–20 word exercises get smaller lettering up front so the
-   // child can draw lines between them without navigating crowded clusters.
-   maxFont:words.length>=17?11.5:words.length>=13?12.5:13.5,
-   minFont:8.5,gap:2.6,
+   maxFont:scaleConnectScatterFont(originalMaxFont),
+   minFont:8.5,gap:2.6,gapReferenceFont:originalMaxFont,
   });
   if(!placements)continue;
   return {titleY,subtitleY,subtitleSize,bankTop,bankHeight,bankFontSize:bankSize,
