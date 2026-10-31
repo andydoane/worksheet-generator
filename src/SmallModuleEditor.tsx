@@ -72,11 +72,11 @@ export default function SmallModuleEditor({ module, onChange }: Props) {
     case 'who-am-i':
       return (
         <div className="activity-inputs">
-          <label htmlFor="who-clue">Character clue</label>
+          <label htmlFor="who-clue">Character clue (up to 120 characters)</label>
           <textarea id="who-clue" rows={5} value={module.clue} onChange={(e) => onChange({ clue:e.target.value })} placeholder="I was thrown into the lions' den for praying to God." />
           <label htmlFor="who-answer">Character's name</label>
           <input id="who-answer" value={module.answer} onChange={(e) => onChange({ answer:e.target.value })} placeholder="DANIEL" />
-          <p>The answer stays hidden, but children get one writing line per letter.</p>
+          <p>The clue fits the top portion of the activity. The separate Who Am I? question and a writing line for each answer letter stay clear below.</p>
         </div>
       );
   }
