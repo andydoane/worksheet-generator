@@ -12,7 +12,7 @@ const checklist={type:'checkboxes',correct:'RED SEA\nDRY LAND\nBURNING BUSH\nTHE
  incorrect:'PROMISED LAND\nKING DAVID\nGREAT STORM\nBIG FISH\nDESERT ROAD',seed:6};
 const longQuestion='Which person trusted the Lord and built a very large boat to keep his family and the animals safe?';
 const draft={title:'God Makes a Way',scripture:'Exodus 14',
- layouts:{2:'small-small-medium-medium',3:'large-small-small',4:'small-small-medium_medium'},
+ layouts:{2:'small-small-medium-medium',3:'large-small-small',4:'small-small-medium-medium'},
  modules:{
   '2:top-left-small':{type:'unscramble-words',first:'RED SEA',second:'DRY LAND',seed:3},
   '2:top-right-small':{type:'multiple-choice',question:longQuestion,
@@ -22,7 +22,6 @@ const draft={title:'God Makes a Way',scripture:'Exodus 14',
   '4:top-left-small':{type:'unscramble-words',first:'CROSS RIVER',second:'NOAH',seed:8},
   '4:top-right-small':{type:'draw-picture',prompt:'the people crossing the sea'},
  }};
-draft.layouts[4]='small-small-medium-medium';
 await mkdir('artifacts',{recursive:true});
 const pdf=await createBookletPdf(draft,fonts);
 await writeFile('artifacts/sample-pr13a-small-finishing.pdf',pdf);
