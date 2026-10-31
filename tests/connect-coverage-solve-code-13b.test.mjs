@@ -7,7 +7,7 @@ import {
  scatterWords,scatterHasCollision,scatterCoverage,expandScatterCoverage,
  CONNECT_SCATTER_FONT_SCALE,
 } from '../src/wordScatterLayout.ts';
-import {planConnectBigIdea} from '../src/connectBigIdeaLayout.ts';
+import {planConnectBigIdea,CONNECT_PHRASE_BOX_PADDING_X,CONNECT_PHRASE_BOX_PADDING_Y} from '../src/connectBigIdeaLayout.ts';
 import {planConnectVerse} from '../src/connectVerseLayout.ts';
 import {parseConnectionWords,validateSpecialty} from '../src/specialtyModules.ts';
 import {CRYPTOGRAM_MODULES,generateCryptogram,validateCryptogram} from '../src/cryptograms.ts';
@@ -57,7 +57,7 @@ test('Seven-word sample, short and 20-word messages are valid Connect Big Ideas'
  }
  assert.equal(CONNECT_SCATTER_FONT_SCALE,.8);
 });
-test('Affine coverage expansion preserves conservative collision clearance and word typography',async()=>{
+test('Boxed Phrase coverage expansion preserves border clearance and word typography',async()=>{
  const {pdf}=await metrics();
  for(const idea of cases){
   const words=parseConnectionWords(idea);
@@ -68,6 +68,7 @@ test('Affine coverage expansion preserves conservative collision clearance and w
     words,seed,key:idea,field:full.field,measure:pdf.puzzle,
     maxFont:full.fontSize,minFont:full.fontSize,
     gap:2.6,gapReferenceFont:words.length>=17?11.5:words.length>=13?12.5:13.5,
+    boxed:{paddingX:CONNECT_PHRASE_BOX_PADDING_X,paddingY:CONNECT_PHRASE_BOX_PADDING_Y},
    });
    assert.ok(originals);
    const base=scatterCoverage(originals.words,full.field);
@@ -88,6 +89,9 @@ test('Affine coverage expansion preserves conservative collision clearance and w
     assert.equal(word.word,old.word);
     assert.equal(word.fontSize,old.fontSize);
     assert.equal(word.angle,old.angle);
+    assert.equal(word.angle,0);
+    assert.ok(word.box);
+    assert.deepEqual(word.box,old.box);
     assert.deepEqual(word.glyphs,old.glyphs);
     assert.ok(word.bounds.x>=full.field.x-0.0001&&word.bounds.y>=full.field.y-0.0001);
     assert.ok(word.bounds.x+word.bounds.width<=full.field.x+full.field.width+.0001);
@@ -110,7 +114,7 @@ test('Coverage helper cannot change words or create an overlap on hand-picked bo
  assert.equal(scatterHasCollision(expanded,3),false);
  assert.deepEqual(words[0].bounds,{x:22,y:34,width:16,height:12},'input immutable');
 });
-test('Big Idea preview/PDF remain metric-identical and Large Connect Verse has opt-in boxes',async()=>{
+test('Connect Phrase preview/PDF remain metric-identical alongside Large Verse boxes',async()=>{
  const {pdf,browser}=await metrics();
  for(const idea of cases){
   for(const seed of [2,9]){
@@ -137,7 +141,7 @@ test('Big Idea preview/PDF remain metric-identical and Large Connect Verse has o
  assert.ok(large.scattered.every(w=>w.box&&w.angle===0));
  assert.ok(raw.words.every(w=>!w.box));
  assert.notDeepEqual(large.scattered,raw.words,
-  'Large Verse intentionally adds measured boxes; Big Idea stays unboxed');
+  'Large Verse uses measured boxes, unlike the raw unboxed engine');
 });
 test('Solve the Code renames only user-facing copy and preserves saved cryptogram ID',async()=>{
  const medium=CRYPTOGRAM_MODULES.find(m=>m.id==='big-idea-cryptogram');
