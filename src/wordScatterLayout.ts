@@ -27,8 +27,7 @@ function seedState(text:string,seed:number):()=>number{
  };
 }
 function intersect(a:ScatterBounds,b:ScatterBounds,gap:number):boolean{
- return a.x<a.width+a.x&&
-  a.x+a.width+gap>b.x&&b.x+b.width+gap>a.x&&
+ return a.x+a.width+gap>b.x&&b.x+b.width+gap>a.x&&
   a.y+a.height+gap>b.y&&b.y+b.height+gap>a.y;
 }
 export function scatterWords(options:ScatterOptions):ScatterResult|null{
