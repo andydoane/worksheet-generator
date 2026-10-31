@@ -1,12 +1,13 @@
 import type {MeasureText} from './mediumParityLayout.ts';
 import {balancedBankLines} from './balancedBankLines.ts';
 import {answerCharacters,type WhoAmI} from './smallModules.ts';
+import {WHO_AM_I_CLUE_MAX} from './whoAmILimits.ts';
 import {SMALL_PRINT_WIDTH,SMALL_PRINT_HEIGHT,type SmallLine} from './smallParityLayout.ts';
 
 /** Shared constraint for the editor and printable layout.
  * Short enough to reserve the lower half for the prompt and writing line.
  */
-export const WHO_AM_I_CLUE_MAX=120;
+export {WHO_AM_I_CLUE_MAX} from './whoAmILimits.ts';
 export const WHO_AM_I_LABEL='WHO AM I?';
 
 export type AnswerMark={
