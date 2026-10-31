@@ -60,9 +60,9 @@ test('Multiple Choice preview and PDF measurements share exact line breaks and i
    shuffledChoices(module).join('|'));
   for(const row of p.rows){
    const top=row.lines[0],bottom=row.lines.at(-1);
-   const inkCenter=((top.y-w.ink(top.text,row.fontSize))+
-    (bottom.y-w.ink(bottom.text,row.fontSize)))/2;
-   assert.ok(Math.abs(inkCenter-(row.squareY+row.squareSize/2))<.001);
+   const referenceInk=w.ink('ANDY',row.fontSize);
+   const stableCenter=((top.y-referenceInk)+(bottom.y-referenceInk))/2;
+   assert.ok(Math.abs(stableCenter-(row.squareY+row.squareSize/2))<.001);
    assert.ok(row.squareY>=0&&row.squareY+row.squareSize<=SMALL_PRINT_HEIGHT);
    assert.ok(row.lines.every(x=>x.y>=0&&x.y<=SMALL_PRINT_HEIGHT));
    assert.ok(row.lines.every(x=>w.title(x.text,row.fontSize)<=SMALL_PRINT_WIDTH-x.x));
