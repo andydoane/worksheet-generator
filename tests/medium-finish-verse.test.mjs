@@ -37,7 +37,7 @@ async function widths(){
  const browser={},pdf={};
  for(const [key,bytes] of Object.entries(sources)){
   const face=fontkit.create(bytes);
-  browser[key]=(s,n)=>face.layout(s).positions.reduce((p,x)=>p+x.xAdvance,0)*n/face.unitsPerEm;
+  browser[key]=(s,n)=>face.layout(s).glyphs.reduce((p,x)=>p+x.advanceWidth,0)*n/face.unitsPerEm;
   const f=await doc.embedFont(bytes,{subset:false});
   pdf[key]=(s,n)=>f.widthOfTextAtSize(s,n);
  }
