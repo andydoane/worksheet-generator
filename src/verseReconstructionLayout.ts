@@ -10,6 +10,7 @@ export type ReconstructionMark={
 export type ReconstructionPlan={
  title:string;titleSize:number;titleY:number;reference?:string;referenceY?:number;
  marks:ReconstructionMark[];cell:number;fontSize:number;invertedFontSize:number;lineStep:number;glyphOffset:number;rowCount:number;
+ rowWidths:number[];
 };
 type Metrics={title:MeasureText;body:MeasureText;puzzle:MeasureText};
 type Segment={kind:'ordinary'|'blank'|'upside';text:string;scramble?:string};
@@ -36,6 +37,49 @@ function segmentsForUnscramble(m:UnscrambleVerse):Segment[]{
  return out;
 }
 const glyphWidth=(g:VerseGlyph,cell:number)=>g.kind==='letter'?cell:cell*.44;
+/** Minimize line-width imbalance across measured word-boundary chunks.
+ * The old greedy wrapping could strand one or two words on the last line.
+ * Preserve the minimum necessary row count and never split a marked blank,
+ * its punctuation, or any other word. The Upside Down planner stays greedy.
+ */
+export function balanceUnscrambleRows<T extends {width:number}>(
+ chunks:readonly T[],space:number,maxWidth:number,rowCount:number,
+):T[][]|null{
+ const n=chunks.length;
+ if(n<rowCount||rowCount<1)return null;
+ const prefix=[0];
+ for(const chunk of chunks)prefix.push(prefix[prefix.length-1]+chunk.width);
+ const span=(from:number,to:number)=>
+  prefix[to]-prefix[from]+(to-from-1)*space;
+ const totalWidth=prefix[n]+Math.max(0,n-rowCount)*space;
+ const target=totalWidth/rowCount;
+ const costs=Array.from({length:rowCount+1},()=>Array<number>(n+1).fill(Infinity));
+ const previous=Array.from({length:rowCount+1},()=>Array<number>(n+1).fill(-1));
+ costs[0][0]=0;
+ for(let rows=1;rows<=rowCount;rows++){
+  for(let end=rows;end<=n-(rowCount-rows);end++){
+   for(let start=rows-1;start<end;start++){
+    const width=span(start,end);
+    if(width>maxWidth+.000001||!Number.isFinite(costs[rows-1][start]))continue;
+    // Penalize tiny final rows naturally, but preserve all the text when
+    // even the optimal layout must have a short word at the end.
+    const delta=width-target;
+    const score=costs[rows-1][start]+delta*delta;
+    if(score<costs[rows][end]){
+     costs[rows][end]=score;previous[rows][end]=start;
+    }
+   }
+  }
+ }
+ if(!Number.isFinite(costs[rowCount][n]))return null;
+ const result:T[][]=[];let end=n;
+ for(let rows=rowCount;rows>=1;rows--){
+  const start=previous[rows][end];
+  if(start<0)return null;
+  result.unshift(chunks.slice(start,end));end=start;
+ }
+ return result;
+}
 function planReconstruction(chunks:Chunk[],metrics:Metrics,mode:'unscramble'|'upside',
  title:string,reference:string|undefined,width:number,height:number):ReconstructionPlan|null{
  let titleSize=25;
@@ -67,6 +111,11 @@ function planReconstruction(chunks:Chunk[],metrics:Metrics,mode:'unscramble'|'up
   }
   if(row.length)rows.push(row);
   if(!rows.length)continue;
+  if(mode==='unscramble'){
+   const balanced=balanceUnscrambleRows(measured,space,width-8,rows.length);
+   if(!balanced)continue;
+   rows.splice(0,rows.length,...balanced);
+  }
   // Keep the handwriting-line pitch independent from glyph placement.
   const glyphOffset=mode==='unscramble'?11.5:6.8;
   const invertedFontSize=mode==='upside'
@@ -82,6 +131,8 @@ function planReconstruction(chunks:Chunk[],metrics:Metrics,mode:'unscramble'|'up
   const step=mode==='unscramble'?Math.min(43.5,availableStep):Math.min(29,availableStep);
   if(step<(mode==='upside'?Math.max(21.2,requiredBelow+2.8):29)-.001)continue;
   if(top+(rows.length-1)*step+requiredBelow>bottom+.001)continue;
+  const rowWidths=rows.map(row=>row.reduce((sum,chunk)=>sum+chunk.width,0)+
+   Math.max(0,row.length-1)*space);
   const marks:ReconstructionMark[]=[];
   for(let line=0;line<rows.length;line++){
    const widthUsed=rows[line].reduce((sum,c)=>sum+c.width,0)+(rows[line].length-1)*space;
@@ -110,7 +161,7 @@ function planReconstruction(chunks:Chunk[],metrics:Metrics,mode:'unscramble'|'up
    }
   }
   return {title,titleSize,titleY,reference,referenceY,marks,cell,fontSize,lineStep:step,
-   glyphOffset,invertedFontSize,rowCount:rows.length};
+   glyphOffset,invertedFontSize,rowCount:rows.length,rowWidths};
  }
  return null;
 }
