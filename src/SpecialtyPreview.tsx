@@ -1,3 +1,4 @@
+import {useId} from 'react';
 import {
   generateCrossword,connectPositions,parseConnectionWords,spiralPoints,
   type SpecialtyModule,

@@ -27,6 +27,7 @@ export function drawCipherGlyph(page:PDFPage,id:number,x:number,y:number,size:nu
     });
   }
 }
+export const CIPHER_WORD_GAP=16; // roughly two ordinary word spaces on paper
 type Cell={char:string;symbol?:number};
 function splitTokens(text:string,mapping:Record<string,number>):Cell[][]{
   // Keep words together; spaces are handled separately by the line wrapper.
@@ -34,6 +35,7 @@ function splitTokens(text:string,mapping:Record<string,number>):Cell[][]{
     /^[A-Za-z]$/u.test(char)?{char,symbol:mapping[char.toUpperCase()]}:{char}));
 }
 function characterWidth(c:Cell,body:PDFFont):number{
+  if(c.char===' ')return CIPHER_WORD_GAP;
   return c.symbol===undefined?Math.max(7,width(body,c.char,10)+2):13;
 }
 /**
@@ -47,10 +49,10 @@ function layoutWords(words:Cell[][],font:PDFFont,availableWidth:number):Cell[][]
   for(const word of words){
     const wordWidth=word.reduce((sum,cell)=>sum+characterWidth(cell,font),0);
     if(wordWidth>availableWidth)throw Error('A cryptogram word is too long to fit; shorten it.');
-    if(current.length&&used+7+wordWidth>availableWidth){
+    if(current.length&&used+CIPHER_WORD_GAP+wordWidth>availableWidth){
       lines.push(current);current=[];used=0;
     }
-    if(current.length){current.push({char:' '});used+=7;}
+    if(current.length){current.push({char:' '});used+=CIPHER_WORD_GAP;}
     current.push(...word);used+=wordWidth;
   }
   if(current.length)lines.push(current);
@@ -97,9 +99,15 @@ export function drawCryptogramPdf(page:PDFPage,rect:Rect,module:Cryptogram,fonts
     centered(page,fonts.puzzle,data.key[i].letter,cx,
       cy+(12-letterSize)/2+2,cellWidth,letterSize);
   }
-  const bodyTop=keyTop-keyRows*keyHeight-10;
-  const footer=module.type==='verse-cryptogram'?28:6;
-  const bodyBottom=box.y+footer;
+  const keyBottom=keyTop-keyRows*keyHeight;
+  if(data.reference){
+    if(width(fonts.bodyBold,data.reference,10)>box.width)
+      throw Error('Verse reference is too long to fit.');
+    // Reference follows the key; it never competes with handwriting space.
+    centered(page,fonts.bodyBold,data.reference,box.x,keyBottom-17,box.width,10);
+  }
+  const bodyTop=keyBottom-(data.reference?30:10);
+  const bodyBottom=box.y+6;
   const lines=layoutWords(splitTokens(data.text,data.mapping),fonts.body,box.width-8);
   const geometry=cryptogramBodyGeometry(lines.length,bodyTop,bodyBottom);
   if(!geometry)throw Error(
@@ -117,14 +125,9 @@ export function drawCryptogramPdf(page:PDFPage,rect:Rect,module:Cryptogram,fonts
           thickness:.8,color:INK});
         drawCipherGlyph(page,cell.symbol,x+(cw-10)/2,y,10);
       }else if(cell.char!==' '){
-        page.drawText(cell.char,{x,y:y+2,font:fonts.body,size:10,color:INK});
+        page.drawText(cell.char,{x,y:y+16,font:fonts.body,size:10,color:INK});
       }
       x+=cw;
     }
   });
-  if(data.reference){
-    if(width(fonts.bodyBold,data.reference,10)>box.width)
-      throw Error('Verse reference is too long to fit.');
-    centered(page,fonts.bodyBold,data.reference,box.x,box.y+7,box.width,10);
-  }
 }

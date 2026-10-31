@@ -43,8 +43,8 @@ export type CrosswordEntry={answer:string;clue:string};
 export function parseCrossword(input:string):CrosswordEntry[]{
   return input.split(/\r?\n/u).filter(s=>s.trim()).map(line=>{
     const at=line.indexOf(',');
-    return at<0?{answer:line.trim().toUpperCase(),clue:''}:
-      {answer:line.slice(0,at).trim().toUpperCase(),clue:line.slice(at+1).trim()};
+    return at<0?{answer:line.trim().toUpperCase().replace(/\s+/gu,''),clue:''}:
+      {answer:line.slice(0,at).trim().toUpperCase().replace(/\s+/gu,''),clue:line.slice(at+1).trim()};
   });
 }
 const words=(value:string):string[]=>value.trim().split(/\s+/u).filter(Boolean);
@@ -59,7 +59,10 @@ export function validateSpecialty(module:SpecialtyModule):string[]{
     case 'crossword':{
       const entries=parseCrossword(module.entries),errors:string[]=[];
       if(entries.length<6||entries.length>10)errors.push('Enter 6–10 answers and clues, one per line.');
-      if(entries.some(e=>!/^[A-Z]{3,12}$/.test(e.answer)))errors.push('Crossword answers must be 3–12 letters A–Z, without spaces.');
+      if(entries.some(e=>!/^[A-Z]{3,12}$/.test(e.answer))||
+         module.entries.split(/\r?\n/u).filter(s=>s.trim()).some(s=>
+           !/^[A-Z]+(?: +[A-Z]+)*$/u.test(s.split(',')[0].trim().toUpperCase())))
+        errors.push('Crossword answers must contain 3–12 A–Z letters; phrases such as Red Sea are allowed.');
       if(entries.some(e=>!e.clue||e.clue.length>85))errors.push('Each clue must contain 1–85 characters, following a comma.');
       if(new Set(entries.map(e=>e.answer)).size!==entries.length)errors.push('Crossword answers must be different.');
       return errors;
@@ -130,6 +133,21 @@ export function generateCrossword(module:CrosswordModule):CrosswordResult{
     }
     const options=k===0?candidates:
       shuffledIndices(candidates.length,entry.answer+module.entries,module.seed+k*17).map(i=>candidates[i]);
+    if(k>0){
+      // Prioritize compact, near-square connected clusters; preserve seeded
+      // randomness for placements with comparable bounding areas.
+      const bounds=(choice:Option)=>{
+        const pts=[...placed.flatMap(p=>[
+          {x:p.x,y:p.y},{x:p.x+(p.direction==='across'?p.entry.answer.length-1:0),
+            y:p.y+(p.direction==='down'?p.entry.answer.length-1:0)}]),
+          choice,{x:choice.x+(choice.direction==='across'?entry.answer.length-1:0),
+            y:choice.y+(choice.direction==='down'?entry.answer.length-1:0)}];
+        const w=Math.max(...pts.map(p=>p.x))-Math.min(...pts.map(p=>p.x))+1;
+        const h=Math.max(...pts.map(p=>p.y))-Math.min(...pts.map(p=>p.y))+1;
+        return Math.floor((w*h+Math.abs(w-h)*2)/12);
+      };
+      options.sort((a,b)=>bounds(a)-bounds(b));
+    }
     for(const option of options){
       if(++checked>90000)break;
       const {x,y,direction}=option,dx=direction==='across'?1:0,dy=direction==='down'?1:0;
@@ -224,9 +242,17 @@ export function connectPositions(module:ConnectVerseModule|ConnectBigIdeaModule)
       jitter:Array.from(w,(_,j)=>(n[j%12]-5.5)*.004)};
   });
 }
-export function spiralPoints(count=400):{x:number;y:number}[]{
+/** Short verses need fewer turns; longer ones provide proportionately more
+ * handwriting track. Turns are based on the actual copied character count. */
+export function spiralTurns(verse:string):number{
+  return Math.max(2.4,Math.min(5.5,2.4+verse.trim().length/260*3.1));
+}
+export function spiralFirstWord(verse:string):string{
+  return verse.trim().split(/\s+/u)[0]?.replace(/^[^\p{L}]+|[^\p{L}]+$/gu,'')??'';
+}
+export function spiralPoints(count=400,turns=5.5):{x:number;y:number}[]{
   return Array.from({length:count},(_,i)=>{
-    const t=i/(count-1),angle=t*Math.PI*11-Math.PI/2;
+    const t=i/(count-1),angle=t*Math.PI*2*turns-Math.PI/2;
     const r=.035+t*.41;
     return {x:.5+Math.cos(angle)*r,y:.5+Math.sin(angle)*r};
   });

@@ -23,6 +23,7 @@ export default function CryptogramPreview({module}:{module:Cryptogram}){
         </div>)}
       </div>)}
     </div>
+    {data.reference&&<div className="cipher-reference">{data.reference}</div>}
     <div className="cipher-encoded">
       {data.text.split(/(\s+)/u).map((token,index)=>
         /^\s+$/u.test(token)
@@ -34,6 +35,5 @@ export default function CryptogramPreview({module}:{module:Cryptogram}){
               :<span className="cipher-character" key={i}><span className="cipher-answer-line"/><CipherGlyph id={id}/></span>;
           })}</span>)}
     </div>
-    {data.reference&&<div className="cipher-reference">{data.reference}</div>}
   </div>;
 }

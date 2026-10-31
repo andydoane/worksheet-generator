@@ -29,7 +29,7 @@ jobs:
       - name: Type-check and build
         run: npm run build
       - name: Generate sample PDFs
-        run: npm run sample:pdf && npm run sample:pr6 && npm run sample:pr7 && npm run sample:pr8b && npm run sample:pr9b && npm run sample:pr10a && npm run sample:pr10bc && npm run sample:pr10d && npm run sample:pr10e
+        run: npm run sample:pdf && npm run sample:pr6 && npm run sample:pr7 && npm run sample:pr8b && npm run sample:pr9b && npm run sample:pr10a && npm run sample:pr10bc && npm run sample:pr10d && npm run sample:pr10e && npm run sample:pr10f
       - name: Upload sample PDF for review
         if: github.event_name == 'pull_request'
         uses: actions/upload-artifact@v4

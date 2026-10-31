@@ -14,7 +14,7 @@ export default function SpecialtyEditor({module,onChange}:{module:SpecialtyModul
         <textarea id="cross-entries" rows={12} value={module.entries}
           onChange={e=>onChange({entries:e.target.value})}
           placeholder={'DAVID, Young shepherd who faced a giant\nGOLIATH, Giant from Gath\nSLING, David used this weapon\nSTONE, David picked five of these\nSAUL, King of Israel\nSHEEP, Animals David watched'}/>
-        <p>One entry per line in <code>ANSWER, clue text</code> format. Answers must be 3–12 A–Z letters and share letters so they can cross. Use Regenerate to arrange them differently.</p>
+        <p>One entry per line in <code>ANSWER, clue text</code> format. Two-word answers such as Red Sea become REDSEA in the grid. Use 3–12 A–Z letters per answer, ignoring spaces; entries must cross. Regenerate for a different compact arrangement.</p>
         {info&&<p className="specialty-status" role="status">{info}</p>}
       </div>;
     }
