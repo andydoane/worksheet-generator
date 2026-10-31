@@ -16,16 +16,13 @@ function crosswordFont(){
 }
 function CrosswordView({module}:{module:Extract<SpecialtyModule,{type:'crossword'}>}){
   const [plan,setPlan]=useState<CrosswordPlan|null>(null);
-  let puzzle;
-  try{puzzle=generateCrossword(module);}catch(error){
-    return <div className="module-preview module-incomplete"><strong>CROSSWORD</strong>
-      <span>{error instanceof Error?error.message:'Unable to place these answers.'}</span></div>;
-  }
   const fingerprint=module.entries+'|'+module.seed;
   useEffect(()=>{
     let active=true;
     setPlan(null);
-    const grid=generateCrossword(module);
+    let grid;
+    try{grid=generateCrossword(module);}
+    catch{return ()=>{active=false;};}
     void crosswordFont().then(face=>{
       const width=(text:string,size:number)=>
         face.layout(text).positions.reduce((sum,p)=>sum+p.xAdvance,0)*size/face.unitsPerEm;
@@ -33,6 +30,11 @@ function CrosswordView({module}:{module:Extract<SpecialtyModule,{type:'crossword
     }).catch(()=>{if(active)setPlan(null);});
     return ()=>{active=false;};
   },[fingerprint]);
+  let puzzle;
+  try{puzzle=generateCrossword(module);}catch(error){
+    return <div className="module-preview module-incomplete"><strong>CROSSWORD</strong>
+      <span>{error instanceof Error?error.message:'Unable to place these answers.'}</span></div>;
+  }
   return <div className="module-preview specialty-preview crossword-preview crossword-print-preview">
     {plan?<svg className="crossword-print-svg" viewBox={'0 0 '+CROSSWORD_WIDTH+' '+CROSSWORD_HEIGHT}
       preserveAspectRatio="xMidYMid meet" aria-label="Crossword grid and clues" role="img">
