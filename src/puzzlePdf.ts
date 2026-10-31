@@ -3,7 +3,7 @@ import { BOOKLET } from './booklet.ts';
 import {MODULE_TITLE_PT} from './pdfLayout.ts';
 import {planMazePrint,MAZE_ARROW_PATH,MAZE_ARROW_VIEW_SIZE} from './mazePrintLayout.ts';
 import {planWordSearch} from './wordSearchLayout.ts';
-import {planMediumWordSearch} from './mediumWordSearchLayout.ts';
+import {planMediumWordSearch,MEDIUM_SEARCH_TITLE} from './mediumWordSearchLayout.ts';
 import type { ModuleFonts } from './modulePdf.ts';
 import {
   generateMaze, generateWordSearch, NORTH, SOUTH, EAST, WEST,
@@ -65,9 +65,17 @@ function drawMediumWordSearch(page:PDFPage,rect:Rect,fonts:ModuleFonts,
  const plan=planMediumWordSearch(puzzle,{
   puzzle:(text,size)=>textWidth(fonts.puzzle,text,size),
   bank:(text,size)=>textWidth(fonts.bank,text,size),
+  title:(text,size)=>textWidth(fonts.title,text,size),
  },box.width,box.height);
  if(!plan)throw Error('Medium Word Search grid and word list cannot fit clearly. Use shorter entries.');
  const top=box.y+box.height;
+ page.drawLine({
+  start:{x:box.x+plan.dividerX,y:top-plan.dividerTop},
+  end:{x:box.x+plan.dividerX,y:top-plan.dividerBottom},
+  thickness:.5,color:FAINT,
+ });
+ center(page,fonts.title,MEDIUM_SEARCH_TITLE,
+  box.x+plan.panelWidth,top-plan.titleY,plan.panelWidth,plan.titleSize);
  page.drawRectangle({
   x:box.x+plan.gridX-2,y:top-plan.gridTop-plan.gridHeight-2,
   width:plan.gridWidth+4,height:plan.gridHeight+4,
