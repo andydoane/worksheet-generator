@@ -71,7 +71,8 @@ export function scatterWords(options:ScatterOptions):ScatterResult|null{
    // (the actual vector stroke extends at most .4pt beyond the rectangle).
    const exteriorWidth=(box?.width??width)+1.2;
    const exteriorHeight=(box?.height??height)+1.2;
-   if(exteriorWidth+2*margin>field.width||exteriorHeight+2*margin>field.height){
+   if((box?exteriorWidth:width)+2*margin>field.width||
+    (box?exteriorHeight:height)+2*margin>field.height){
     failed=true;break;
    }
    let best:{score:number;cx:number;cy:number;angle:number;bounds:ScatterBounds}|null=null;
