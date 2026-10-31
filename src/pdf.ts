@@ -285,7 +285,8 @@ export async function createBookletPdf(draft: PdfDraft, fontFiles: PdfFontFiles)
       } else {
         const assigned: ActivityModule | undefined = draft.modules?.[slotKey(item.bookletPage, item.id)];
         if (assigned) {
-          if (!moduleForSize(item.size).some((definition) => definition.id === assigned.type)) {
+          if (!moduleForSize(item.size).some((definition) => definition.id === assigned.type) &&
+              !(item.size === 'medium' && assigned.type === 'connect-verse')) {
             throw new Error('Page ' + item.bookletPage + ' contains an activity in the wrong size area.');
           }
           try {

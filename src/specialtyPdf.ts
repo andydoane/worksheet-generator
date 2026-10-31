@@ -7,6 +7,7 @@ import {MODULE_TITLE_PT} from './pdfLayout.ts';
 import {balancedLines} from './storyVersePdf.ts';
 import {planCrossword,crosswordBlackCells} from './crosswordLayout.ts';
 import {CONNECT_BIG_TITLE,CONNECT_BIG_INSTRUCTION,planConnectBigIdea} from './connectBigIdeaLayout.ts';
+import {CONNECT_VERSE_TITLE,CONNECT_VERSE_INSTRUCTION,planConnectVerse} from './connectVerseLayout.ts';
 import {drawReconstructionPdf} from './verseReconstructionPdf.ts';
 import type {ModuleFonts} from './modulePdf.ts';
 import {
@@ -165,6 +166,37 @@ function connectBigIdea(page:PDFPage,b:Rect,
   page.pushOperators(popGraphicsState());
  }
 }
+/** Shared measured Large Connect Verse renderer, preserving the established
+ * Zilla Slab letterface while moving to the 35-word scattered field.
+ */
+function connectVerseLarge(page:PDFPage,b:Rect,
+ module:Extract<SpecialtyModule,{type:'connect-verse'}>,fonts:ModuleFonts):void{
+ const plan=planConnectVerse(module,{
+  puzzle:(text,size)=>sizeOf(fonts.puzzle,text,size),
+  verse:(text,size)=>sizeOf(fonts.bodyBold,text,size),
+  subtitle:(text,size)=>sizeOf(fonts.body,text,size),
+ },b.width,b.height);
+ if(!plan)throw Error('Connect the Verse words cannot fit in the Large area. Shorten the verse.');
+ const top=b.y+b.height;
+ centered(page,fonts.title,CONNECT_VERSE_TITLE,b.x,top-plan.titleY,b.width,23);
+ centered(page,fonts.body,CONNECT_VERSE_INSTRUCTION,b.x,top-plan.subtitleY,
+  b.width,plan.subtitleSize);
+ page.drawRectangle({x:b.x+.45,y:top-plan.bankTop-plan.bankHeight,
+  width:b.width-.9,height:plan.bankHeight,borderColor:LIGHT,borderWidth:.9});
+ plan.bankLines.forEach(line=>centered(page,fonts.bodyBold,line.text,
+  b.x,top-line.y,b.width,plan.bankFontSize));
+ for(const item of plan.scattered){
+  const rad=item.angle*Math.PI/180;
+  page.pushOperators(pushGraphicsState(),concatTransformationMatrix(
+   Math.cos(rad),-Math.sin(rad),Math.sin(rad),Math.cos(rad),
+   b.x+item.x,top-item.y));
+  for(const glyph of item.glyphs){
+   page.drawText(glyph.char,{x:glyph.x,y:-glyph.y,font:fonts.puzzle,
+    size:item.fontSize,color:INK});
+  }
+  page.pushOperators(popGraphicsState());
+ }
+}
 export function drawSpecialtyPdf(page:PDFPage,region:Rect,module:SpecialtyModule,fonts:ModuleFonts):void{
   const errors=validateSpecialty(module);
   if(errors.length)throw Error(errors.join(' '));
@@ -173,7 +205,10 @@ export function drawSpecialtyPdf(page:PDFPage,region:Rect,module:SpecialtyModule
     case 'crossword':return crossword(page,b,module,fonts);
     case 'spiral-verse':return spiral(page,b,module,fonts);
     case 'upside-down-verse':return drawReconstructionPdf(page,region,module,fonts);
-    case 'connect-verse':return connect(page,b,module,fonts);
+    // Preserve pre-11g Medium worksheet slots exactly as saved. New
+    // Connect Verse choices are Large only; legacy Medium remains printable.
+    case 'connect-verse':return b.height>300?
+      connectVerseLarge(page,b,module,fonts):connect(page,b,module,fonts);
     case 'connect-big-idea':return connectBigIdea(page,b,module,fonts);
   }
 }

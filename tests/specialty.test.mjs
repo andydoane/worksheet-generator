@@ -34,10 +34,10 @@ const fontFiles=async()=>({
 
 test('all twenty-five modules are registered, preserving eight small regions',()=>{
   assert.equal(moduleForSize('small').length,8);
-  assert.equal(moduleForSize('medium').length,9);
-  assert.equal(moduleForSize('large').length,8);
+  assert.equal(moduleForSize('medium').length,8);
+  assert.equal(moduleForSize('large').length,9);
   for(const m of [crossword,spiral,upside,connect,idea]){
-    assert.ok(moduleForSize(m.type==='crossword'||m.type==='spiral-verse'?'large':'medium')
+    assert.ok(moduleForSize(m.type==='crossword'||m.type==='spiral-verse'||m.type==='connect-verse'?'large':'medium')
       .some(x=>x.id===m.type));
     assert.equal(blankModule(m.type).type,m.type);
     assert.deepEqual(validateModule(m),[],m.type);

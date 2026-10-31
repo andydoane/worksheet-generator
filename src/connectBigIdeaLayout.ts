@@ -1,4 +1,4 @@
-import {measureWrappedLines} from './pdfLayout.ts';
+import {balancedBankLines} from './balancedBankLines.ts';
 import {MEDIUM_PRINT_WIDTH,MEDIUM_PRINT_HEIGHT,type MeasureText} from './mediumParityLayout.ts';
 import {parseConnectionWords,type ConnectBigIdeaModule} from './specialtyModules.ts';
 import {scatterWords,type ScatteredWord,type ScatterBounds} from './wordScatterLayout.ts';
@@ -23,8 +23,8 @@ export function planConnectBigIdea(module:ConnectBigIdeaModule,metrics:{
  if(metrics.subtitle(CONNECT_BIG_INSTRUCTION,subtitleSize)>width-8)return null;
  const bankTop=45;
  for(let bankSize=9.4;bankSize>=8.2;bankSize-=.4){
-  const rows=measureWrappedLines(module.idea.trim().toUpperCase(),width-14,
-    s=>metrics.bank(s,bankSize));
+  const rows=balancedBankLines(module.idea.trim().toUpperCase(),width-14,
+    metrics.bank,bankSize,3);
   if(!rows?.length||rows.length>3)continue;
   const bankLineHeight=12.7;
   const bankHeight=rows.length*bankLineHeight+8;

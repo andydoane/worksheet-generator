@@ -14,7 +14,7 @@ import CryptogramPreview from './CryptogramPreview';
 import {isSpecialtyModule} from './specialtyModules.ts';
 import SpecialtyPreview from './SpecialtyPreview';
 
-export default function ModulePreview({ module, showSolution = false }: { module: ActivityModule; showSolution?: boolean }) {
+export default function ModulePreview({ module, showSolution = false, legacyMedium = false }: { module: ActivityModule; showSolution?: boolean; legacyMedium?: boolean }) {
   const errors = validateModule(module);
   if (errors.length) {
     return (
@@ -29,7 +29,7 @@ export default function ModulePreview({ module, showSolution = false }: { module
   if (isStoryVerseModule(module)) return <StoryVersePreview module={module}/>;
   if (isPuzzleModule(module)) return <PuzzlePreview module={module} showSolution={showSolution}/>;
   if (isCryptogram(module)) return <CryptogramPreview module={module}/>;
-  if (isSpecialtyModule(module)) return <SpecialtyPreview module={module}/>;
+  if (isSpecialtyModule(module)) return <SpecialtyPreview module={module} legacyMedium={legacyMedium}/>;
 
   if (module.type === 'draw-picture') {
     return (

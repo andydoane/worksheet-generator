@@ -100,7 +100,11 @@ function RegionContents({ region, draft, module, showSolution = false }: { regio
     );
   }
 
-  if (module && moduleForSize(region.size).some((item) => item.id === module.type)) return <ModulePreview module={module} showSolution={showSolution} />;
+  // Older Medium Connect Verse placements remain visible, editable and
+  // printable without moving a saved assignment or changing its layout.
+  const legacyMedium=region.size==='medium'&&module?.type==='connect-verse';
+  if (module && (legacyMedium||moduleForSize(region.size).some((item) => item.id === module.type)))
+    return <ModulePreview module={module} showSolution={showSolution} legacyMedium={legacyMedium}/>;
 
   return (
     <div className="region-content">
@@ -434,6 +438,8 @@ export default function App() {
                   <select id="activity-type" value={activeModule?.type ?? ''}
                     onChange={(e) => setModuleType(e.target.value as ModuleId | '')}>
                     <option value="">No activity (placeholder)</option>
+                    {activeRegion?.size==='medium'&&activeModule?.type==='connect-verse'&&
+                      <option value="connect-verse">Connect the Verse (saved Medium)</option>}
                     {activeRegion && moduleForSize(activeRegion.size).map((definition) =>
                       <option key={definition.id} value={definition.id}>{definition.name}</option>)}
                   </select>
@@ -478,6 +484,9 @@ export default function App() {
                   {activeModule && isCryptogram(activeModule) && (
                     <CryptogramEditor module={activeModule} onChange={(patch) => editModule(patch)} />
                   )}
+                  {activeRegion?.size==='medium'&&activeModule?.type==='connect-verse'&&
+                    <p className="activity-section-info">This saved Medium Connect the Verse remains
+                      editable and printable. New Connect the Verse activities use a Large space.</p>}
                   {activeModule && isSpecialtyModule(activeModule) && (
                     <SpecialtyEditor module={activeModule} onChange={(patch) => editModule(patch)} />
                   )}
