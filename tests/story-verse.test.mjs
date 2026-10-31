@@ -90,7 +90,7 @@ test('bracketed words become PDF answer boxes or scrambled words, never plain te
   assert.deepEqual([...verseBank(finish)].sort(),[...parsed.answers].sort());
   assert.deepEqual(verseScrambles(unscramble),verseScrambles(unscramble));
   verseScrambles(unscramble).forEach((x,i)=>assert.notEqual(x,parsed.answers[i].toUpperCase()));
-  assert.ok(validateModule({...finish,verse:'For [God] so loved [world]'}).length>0);
+  assert.ok(validateModule({...finish,verse:'For [God] so loved world'}).length>0);
   assert.ok(validateModule({...unscramble,verse:'For [God] so [loved] [world] [gave] [bad] [extra] [seven]'}).length>0);
   assert.equal(parseVerse('For [God] [bad').malformed,true);
 });
