@@ -93,7 +93,6 @@ function RegionContents({ region, draft, module, showSolution = false }: { regio
   if (region.kind === 'title') {
     return (
       <div className="cover-content">
-        <span className="cover-overline">BIBLE STORY REVIEW</span>
         <span className="cover-title">{draft.title.trim() || 'Your story title'}</span>
         <span className="cover-reference">{draft.scripture.trim() || 'Scripture reference'}</span>
       </div>
