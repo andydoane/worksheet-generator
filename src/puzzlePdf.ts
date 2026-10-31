@@ -69,11 +69,6 @@ function drawMediumWordSearch(page:PDFPage,rect:Rect,fonts:ModuleFonts,
  },box.width,box.height);
  if(!plan)throw Error('Medium Word Search grid and word list cannot fit clearly. Use shorter entries.');
  const top=box.y+box.height;
- page.drawLine({
-  start:{x:box.x+plan.dividerX,y:top-plan.dividerTop},
-  end:{x:box.x+plan.dividerX,y:top-plan.dividerBottom},
-  thickness:.5,color:FAINT,
- });
  center(page,fonts.title,MEDIUM_SEARCH_TITLE,
   box.x+plan.panelWidth,top-plan.titleY,plan.panelWidth,plan.titleSize);
  page.drawRectangle({
