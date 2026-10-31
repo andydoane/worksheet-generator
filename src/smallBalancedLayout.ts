@@ -104,7 +104,7 @@ export function planCheckboxes(module:Checkboxes,title:MeasureText,puzzle:Measur
  width=SMALL_PRINT_WIDTH,height=SMALL_PRINT_HEIGHT):CheckboxPrintPlan|null{
  const words=shuffledWordList(module).map(row=>row.text.toUpperCase());
  if(words.length<2||words.length>10)return null;
- const top=7,bottom=height-6,colWidth=width/2;
+ const top=7,bottom=height-6;
  for(let instructionSize=17;instructionSize>=11;instructionSize-=.5){
   const lines=balancedBankLines(CHECKBOX_INSTRUCTION,width-8,title,instructionSize,3);
   if(!lines)continue;
@@ -113,23 +113,31 @@ export function planCheckboxes(module:Checkboxes,title:MeasureText,puzzle:Measur
    text,x:width/2,y:top+instructionSize+i*headingPitch,
   }));
   const fieldTop=instructionLines.at(-1)!.y+12;
-  const available=bottom-fieldTop,rowsCount=Math.ceil(words.length/2);
+  const available=bottom-fieldTop;
   if(available<35)continue;
-  for(let wordSize=12;wordSize>=6.5;wordSize-=.5){
-   const squareSize=9,textOffset=14;
-   if(words.some(word=>puzzle(word,wordSize)>colWidth-textOffset-5))continue;
-   const minimumPitch=Math.max(17,wordSize*1.4);
-   if(wordSize+(rowsCount-1)*minimumPitch>available)continue;
-   const pitch=rowsCount===1?0:Math.min(22,(available-wordSize)/(rowsCount-1));
-   const total=wordSize+(rowsCount-1)*pitch;
-   const firstY=fieldTop+(available-total)/2+wordSize;
-   const rows=words.map((text,i)=>{
-    const col=i%2,row=Math.floor(i/2),left=col*colWidth+2,y=firstY+row*pitch;
-    return {text,x:left+textOffset,y,squareX:left,
-      squareY:y-wordSize*.36-squareSize/2,squareSize};
-   });
-   if(rows.some(row=>row.squareY<fieldTop||row.squareY+squareSize>bottom))continue;
-   return {instructionSize,instructionLines,wordSize,rows,fieldTop,fieldBottom:bottom};
+  // Prefer the existing two-column presentation. For valid 14-character
+  // phrases that cannot fit a half-width column, fall back to a single
+  // column rather than shrinking the letters below child-readable size.
+  for(const columns of [2,1] as const){
+   const colWidth=width/columns,rowsCount=Math.ceil(words.length/columns);
+   for(let wordSize=12;wordSize>=6.5;wordSize-=.5){
+    const squareSize=9,textOffset=14;
+    if(words.some(word=>puzzle(word,wordSize)>colWidth-textOffset-5))continue;
+    const minimumPitch=Math.max(columns===2?17:10.5,wordSize*1.28);
+    if(wordSize+(rowsCount-1)*minimumPitch>available)continue;
+    const pitch=rowsCount===1?0:Math.min(columns===2?22:14,
+      (available-wordSize)/(rowsCount-1));
+    if(pitch<minimumPitch-.001)continue;
+    const total=wordSize+(rowsCount-1)*pitch;
+    const firstY=fieldTop+(available-total)/2+wordSize;
+    const rows=words.map((text,i)=>{
+     const col=i%columns,row=Math.floor(i/columns),left=col*colWidth+2,y=firstY+row*pitch;
+     return {text,x:left+textOffset,y,squareX:left,
+       squareY:y-wordSize*.36-squareSize/2,squareSize};
+    });
+    if(rows.some(row=>row.squareY<fieldTop||row.squareY+squareSize>bottom))continue;
+    return {instructionSize,instructionLines,wordSize,rows,fieldTop,fieldBottom:bottom};
+   }
   }
  }
  return null;
