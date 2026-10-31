@@ -3,8 +3,7 @@ import {BOOKLET} from './booklet.ts';
 import {MODULE_TITLE_PT} from './pdfLayout.ts';
 import {cipherSymbol} from './cipherSymbols.ts';
 import {generateCryptogram,type Cryptogram,type BigIdeaCryptogram} from './cryptograms.ts';
-import {planBigIdeaCryptogram,BIG_IDEA_CELL_WIDTH,
- BIG_IDEA_ANSWER_LINE_WIDTH,BIG_IDEA_SYMBOL_SIZE} from './bigIdeaCryptogramLayout.ts';
+import {planBigIdeaCryptogram} from './bigIdeaCryptogramLayout.ts';
 import type {ModuleFonts} from './modulePdf.ts';
 
 type Rect={x:number;y:number;width:number;height:number};
@@ -100,10 +99,10 @@ function drawBigIdeaCryptogramPdf(page:PDFPage,rect:Rect,
  for(const item of plan.bodyCells){
   const x=box.x+item.x,line=top-item.lineY;
   if(item.symbol!==undefined){
-   page.drawLine({start:{x:x+.8,y:line},end:{x:x+.8+BIG_IDEA_ANSWER_LINE_WIDTH,y:line},
+   page.drawLine({start:{x:x+.8,y:line},end:{x:x+.8+plan.answerLineWidth,y:line},
     thickness:.8,color:INK});
-   drawCipherGlyph(page,item.symbol,x+(BIG_IDEA_CELL_WIDTH-BIG_IDEA_SYMBOL_SIZE)/2,
-    line-4-BIG_IDEA_SYMBOL_SIZE,BIG_IDEA_SYMBOL_SIZE);
+   drawCipherGlyph(page,item.symbol,x+(plan.cellWidth-plan.symbolSize)/2,
+    line-4-plan.symbolSize,plan.symbolSize);
   }else page.drawText(item.char,{
    x,y:line-1,font:fonts.body,size:10,color:INK,
   });
