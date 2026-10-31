@@ -1,5 +1,13 @@
 # Worksheet Studio
 
+## PR 15b — New 9×9 Medium Word Search (v0.15.23)
+
+- Added **Word Search (Medium)** as a new selectable Medium activity with its own saved module type `medium-word-search`, `words` list and seeded `seed`. Accepts **1–6 different entries**, each containing **2–9 A–Z letters after spaces are removed**, including short phrases such as *Red Sea*.
+- Reused the deterministic, backtracking search generator with dimension parameters: Medium uses **9×9**; existing Large Word Search stays **12×10**, with its previous 4–12 entries and saved `word-search` ID unchanged. The solution verifier and preview-only solution highlighting work for either size.
+- New **title-free, measured Medium layout**: the square 9×9 grid occupies nearly the full **173pt** printable height, with the one-column word list immediately to its right. Labels are individually centered; the bank is vertically centered against the grid, and the **entire grid-plus-bank unit** is centered horizontally. Long labels reduce bank font size only when necessary.
+- The SVG preview and exported vector PDF use the **same top-left print-point scene** and the same embedded Zilla Slab / Nunito ExtraBold font advance metrics. The existing Large Word Search drawing is unchanged.
+- **QA:** `npm run test && npm run build && npm run sample:pr15b` generates `artifacts/sample-pr15b-medium-word-search.pdf`. The new regression suite covers 1-, 3-, and 6-word examples, 9-letter entries, multiple seeds, invalid content, exact no-clipping geometry, preview/PDF parity, booklet export and previously saved Large puzzles.
+
 ## PR 15a — Connect clarity and boxed Connect the Phrase (v0.15.22)
 
 - **Large Connect the Verse:** subtitle is now **“Draw lines from box to box in the order of the verse.”** The existing large measured word boxes, font, 4–35-word capacity, balanced bank and old saved Medium Verse fallback are preserved.
