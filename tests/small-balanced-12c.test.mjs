@@ -93,8 +93,12 @@ test('Checkboxes balances instructions with 14-character entries and centered ro
   assert.ok(p.rows.every(r=>r.squareX>=0&&r.squareY>p.fieldTop-1));
   assert.ok(p.rows.every(r=>r.squareY+r.squareSize<p.fieldBottom+1));
   assert.ok(p.rows.every(r=>pdf.puzzle(r.text,p.wordSize)<=SMALL_PRINT_WIDTH/2-17));
+  const twoColumns=p.rows.some(r=>r.squareX>SMALL_PRINT_WIDTH/2);
   for(let i=0;i<p.rows.length;i++){
-   assert.ok(Math.abs(p.rows[i].squareX-(i%2?SMALL_PRINT_WIDTH/2+2:2))<.001);
+   if(twoColumns)
+    assert.ok(Math.abs(p.rows[i].squareX-(i%2?SMALL_PRINT_WIDTH/2+2:2))<.001);
+   else
+    assert.ok(Math.abs(p.rows[i].squareX-p.rows[0].squareX)<.001);
   }
  }
  assert.deepEqual(validateSmallModule({...shortList,correct:'RED SEA\nSTONE'}),[]);
