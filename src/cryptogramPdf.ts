@@ -2,7 +2,9 @@ import {rgb,type PDFFont,type PDFPage} from 'pdf-lib';
 import {BOOKLET} from './booklet.ts';
 import {MODULE_TITLE_PT} from './pdfLayout.ts';
 import {cipherSymbol} from './cipherSymbols.ts';
-import {generateCryptogram,type Cryptogram} from './cryptograms.ts';
+import {generateCryptogram,type Cryptogram,type BigIdeaCryptogram} from './cryptograms.ts';
+import {planBigIdeaCryptogram,BIG_IDEA_CELL_WIDTH,
+ BIG_IDEA_ANSWER_LINE_WIDTH,BIG_IDEA_SYMBOL_SIZE} from './bigIdeaCryptogramLayout.ts';
 import type {ModuleFonts} from './modulePdf.ts';
 
 type Rect={x:number;y:number;width:number;height:number};
@@ -73,7 +75,43 @@ export function cryptogramBodyGeometry(rowCount:number,top:number,bottom:number)
   const lowestY=bottom+(available-totalHeight)/2+1;
   return {firstY:lowestY+(rowCount-1)*step,step,totalHeight};
 }
+/** Medium Big Idea only: shared physical row and key coordinates with SVG.
+ * Keep the Large Verse Cryptogram's existing PDF renderer untouched.
+ */
+function drawBigIdeaCryptogramPdf(page:PDFPage,rect:Rect,
+ module:BigIdeaCryptogram,fonts:ModuleFonts):void{
+ const box=interior(rect),data=generateCryptogram(module);
+ const plan=planBigIdeaCryptogram(data,(text,size)=>width(fonts.body,text,size),box.width,box.height);
+ if(!plan)throw Error('The Big Idea cryptogram needs too many lines. Use shorter words.');
+ const top=box.y+box.height;
+ centered(page,fonts.title,'SOLVE THE CODE!',box.x,top-plan.titleY,box.width,MODULE_TITLE_PT);
+ for(const item of plan.keyCells){
+  const x=box.x+item.x;
+  const bottom=top-(item.y+plan.keyHeight);
+  page.drawRectangle({x,y:bottom,width:item.width,height:plan.keyHeight,
+   borderWidth:.65,borderColor:GREY});
+  page.drawLine({start:{x,y:top-(item.y+13)},
+    end:{x:x+item.width,y:top-(item.y+13)},thickness:.55,color:GREY});
+  const symbolTop=item.y+(13-plan.keySymbolSize)/2;
+  drawCipherGlyph(page,item.symbol,x+(item.width-plan.keySymbolSize)/2,
+   top-symbolTop-plan.keySymbolSize,plan.keySymbolSize);
+  centered(page,fonts.puzzle,item.letter,x,top-(item.y+20),item.width,plan.keyLetterSize);
+ }
+ for(const item of plan.bodyCells){
+  const x=box.x+item.x,line=top-item.lineY;
+  if(item.symbol!==undefined){
+   page.drawLine({start:{x:x+.8,y:line},end:{x:x+.8+BIG_IDEA_ANSWER_LINE_WIDTH,y:line},
+    thickness:.8,color:INK});
+   drawCipherGlyph(page,item.symbol,x+(BIG_IDEA_CELL_WIDTH-BIG_IDEA_SYMBOL_SIZE)/2,
+    line-4-BIG_IDEA_SYMBOL_SIZE,BIG_IDEA_SYMBOL_SIZE);
+  }else page.drawText(item.char,{
+   x,y:line-1,font:fonts.body,size:10,color:INK,
+  });
+ }
+}
 export function drawCryptogramPdf(page:PDFPage,rect:Rect,module:Cryptogram,fonts:ModuleFonts):void{
+  if(module.type==='big-idea-cryptogram')
+    return drawBigIdeaCryptogramPdf(page,rect,module,fonts);
   const box=interior(rect),data=generateCryptogram(module);
   const top=box.y+box.height;
   centered(page,fonts.title,'SOLVE THE CODE!',box.x,top-25,box.width,MODULE_TITLE_PT);

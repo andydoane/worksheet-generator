@@ -1,5 +1,6 @@
 import {cipherSymbol} from './cipherSymbols.ts';
 import {generateCryptogram, type Cryptogram} from './cryptograms.ts';
+import BigIdeaCryptogramPreview from './BigIdeaCryptogramPreview.tsx';
 
 export function CipherGlyph({id}:{id:number}){
   const glyph=cipherSymbol(id);
@@ -10,6 +11,7 @@ export function CipherGlyph({id}:{id:number}){
   </svg>;
 }
 export default function CryptogramPreview({module}:{module:Cryptogram}){
+  if(module.type==='big-idea-cryptogram')return <BigIdeaCryptogramPreview module={module}/>;
   const data=generateCryptogram(module),columns=module.type==='verse-cryptogram'?20:18;
   const chunks:Array<typeof data.key>=[];
   for(let i=0;i<data.key.length;i+=columns)chunks.push(data.key.slice(i,i+columns));
