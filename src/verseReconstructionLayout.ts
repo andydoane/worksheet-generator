@@ -9,7 +9,7 @@ export type ReconstructionMark={
 };
 export type ReconstructionPlan={
  title:string;titleSize:number;titleY:number;reference?:string;referenceY?:number;
- marks:ReconstructionMark[];cell:number;fontSize:number;lineStep:number;glyphOffset:number;rowCount:number;
+ marks:ReconstructionMark[];cell:number;fontSize:number;invertedFontSize:number;lineStep:number;glyphOffset:number;rowCount:number;
 };
 type Metrics={title:MeasureText;body:MeasureText;puzzle:MeasureText};
 type Segment={kind:'ordinary'|'blank'|'upside';text:string;scramble?:string};
@@ -42,12 +42,10 @@ function planReconstruction(chunks:Chunk[],metrics:Metrics,mode:'unscramble'|'up
  while(titleSize>=15&&metrics.title(title,titleSize)>width-8)titleSize-=.5;
  if(titleSize<15)return null;
  const titleY=25;
- const referenceY=mode==='unscramble'?43:undefined;
- const top=mode==='unscramble'?69:44;
- const bottom=height-7;
+ const referenceY=undefined; // reference is in the title for both reconstruction modules.
+ const top=mode==='unscramble'?53:44;
  for(let cell=(mode==='unscramble'?10.2:12.1);cell>=8.1;cell-=.5){
   const fontSize=mode==='unscramble'?Math.min(10.6,cell+1):Math.min(13,cell+1);
-  const step=mode==='unscramble'?29:24.2;
   const space=mode==='unscramble'?metrics.body(' ',fontSize):cell*.66;
   const measured=chunks.map(chunk=>{
    const items=chunk.segments.map(segment=>{
@@ -68,7 +66,20 @@ function planReconstruction(chunks:Chunk[],metrics:Metrics,mode:'unscramble'|'up
    row.push(chunk);used+=chunk.width;
   }
   if(row.length)rows.push(row);
-  if(!rows.length||top+(rows.length-1)*step+(mode==='unscramble'?16:20)>bottom)continue;
+  if(!rows.length)continue;
+  // Keep the handwriting-line pitch independent from glyph placement.
+  const glyphOffset=mode==='unscramble'?11.5:6.8;
+  const invertedFontSize=mode==='upside'
+    ?Math.max(9.2,Math.min(11.5,fontSize-1.4)):8.2;
+  // Only longer Upside passages reclaim a little of the *internal* bottom
+  // reserve; the booklet's outer 0.1in inset is never changed.
+  const bottom=height-(mode==='upside'&&rows.length>=4?3.5:7);
+  const requiredBelow=glyphOffset+invertedFontSize+2;
+  const availableStep=rows.length===1?29:
+    (bottom-top-requiredBelow)/(rows.length-1);
+  const step=mode==='unscramble'?29:Math.min(29,availableStep);
+  if(step<(mode==='upside'?Math.max(21.2,requiredBelow+2.8):29)-.001)continue;
+  if(top+(rows.length-1)*step+requiredBelow>bottom+.001)continue;
   const marks:ReconstructionMark[]=[];
   for(let line=0;line<rows.length;line++){
    const widthUsed=rows[line].reduce((sum,c)=>sum+c.width,0)+(rows[line].length-1)*space;
@@ -97,14 +108,14 @@ function planReconstruction(chunks:Chunk[],metrics:Metrics,mode:'unscramble'|'up
    }
   }
   return {title,titleSize,titleY,reference,referenceY,marks,cell,fontSize,lineStep:step,
-   glyphOffset:mode==='unscramble'?16:9,rowCount:rows.length};
+   glyphOffset,invertedFontSize,rowCount:rows.length};
  }
  return null;
 }
 export function planUnscrambleVerse(m:UnscrambleVerse,metrics:Metrics,
  width=MEDIUM_PRINT_WIDTH,height=MEDIUM_PRINT_HEIGHT):ReconstructionPlan|null{
  return planReconstruction(chunksFromSegments(segmentsForUnscramble(m)),metrics,'unscramble',
- 'UNSCRAMBLE THE VERSE',m.reference,width,height);
+ 'UNSCRAMBLE '+shortenBibleReference(m.reference).toUpperCase(),undefined,width,height);
 }
 export function planUpsideDownVerse(m:UpsideDownVerseModule,metrics:Metrics,
  width=MEDIUM_PRINT_WIDTH,height=MEDIUM_PRINT_HEIGHT):ReconstructionPlan|null{
