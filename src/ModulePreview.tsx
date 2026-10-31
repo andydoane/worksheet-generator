@@ -4,6 +4,7 @@ import { storyBank, validateModule, MODULES, type ActivityModule } from './modul
 import {planStory,STORY_BODY_WIDTH,STORY_BODY_HEIGHT,STORY_INNER_WIDTH,STORY_INNER_HEIGHT,STORY_BODY_TOP,STORY_BANK_TOP,STORY_BANK_HEIGHT,type StoryPlan} from './storyLayout.ts';
 import { isSmallModule } from './smallModules';
 import SmallModulePreview from './SmallModulePreview';
+import {DrawPicturePrintPreview} from './SmallFinishingPreview.tsx';
 import {MatchingPrintPreview} from './MediumPrintPreview.tsx';
 import { isStoryVerseModule } from './storyVerseModules';
 import StoryVersePreview from './StoryVersePreview';
@@ -31,14 +32,7 @@ export default function ModulePreview({ module, showSolution = false, legacyMedi
   if (isCryptogram(module)) return <CryptogramPreview module={module}/>;
   if (isSpecialtyModule(module)) return <SpecialtyPreview module={module} legacyMedium={legacyMedium}/>;
 
-  if (module.type === 'draw-picture') {
-    return (
-      <div className="module-preview drawing-module">
-        <div className="drawing-box" />
-        <div className="drawing-prompt">Draw a picture of {module.prompt.trim()}</div>
-      </div>
-    );
-  }
+  if (module.type === 'draw-picture') return <DrawPicturePrintPreview prompt={module.prompt}/>;
 
   if (module.type === 'match-words') return <MatchingPrintPreview module={module}/>;
 
