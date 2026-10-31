@@ -79,7 +79,14 @@ test('Short, long and exact-80 statements fit above the two square icons with no
   assert.equal(p.thumbs[1].label,'FALSE');
   assert.ok(p.thumbs[0].x+p.thumbs[0].size<p.thumbs[1].x);
  }
- assert.ok(smallest<18,'At least one longer statement should use adaptive shrink-to-fit');
+ // A full-size Small module may fit 80 narrow Mouse Memoirs characters
+ // at 18pt; verify that the fitting algorithm *does* shrink when space
+ // is tighter rather than imposing an artificial shrink on good layouts.
+ const narrower=planTrueFalse(exact80,m.pdf,SMALL_PRINT_WIDTH*.78,SMALL_PRINT_HEIGHT);
+ assert.ok(narrower,'Should still fit the realistic verse in a narrower area');
+ assert.ok(narrower.statementSize<18,'Adaptive fitting should shrink when required');
+ assert.ok(Math.max(...narrower.statementLines.map(l=>
+  l.y+narrower.statementSize*.18))<narrower.thumbs[0].y);
  assert.equal(planTrueFalse(exact80+'!',m.pdf),null);
 });
 test('SVG paths in vector PDF are exactly the uploaded thumb silhouettes',async()=>{
