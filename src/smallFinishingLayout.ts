@@ -19,7 +19,7 @@ export function planDrawPicture(prompt:string,measure:MeasureText,
  const text='Draw a picture of '+prompt.trim();
  for(let fontSize=15;fontSize>=10;fontSize-=.5){
   const rows=balancedBankLines(text,width,measure,fontSize,3);
-  if(!rows)return null;
+  if(!rows)continue;
   const captionHeight=rows.length*(fontSize*1.08)+12;
   const drawingHeight=height-captionHeight-5;
   if(drawingHeight<70)continue;
