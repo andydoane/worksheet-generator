@@ -99,8 +99,10 @@ function RegionContents({ region, draft, module, showSolution = false }: { regio
     return (
       <div className={'cover-content'+(draft.coverBorder!=='none'?' cover-content-bordered':'')}>
         {coverBorderUrl(draft.coverBorder)&&<img className="cover-border-art" src={coverBorderUrl(draft.coverBorder)} alt="" aria-hidden="true"/>}
-        <span className="cover-title">{draft.title.trim() || 'Your story title'}</span>
-        <span className="cover-reference">{draft.scripture.trim() || 'Scripture reference'}</span>
+        <div className="cover-text-safe">
+          <span className="cover-title">{draft.title.trim() || 'Your story title'}</span>
+          <span className="cover-reference">{draft.scripture.trim() || 'Scripture reference'}</span>
+        </div>
       </div>
     );
   }
