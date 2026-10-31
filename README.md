@@ -1,5 +1,27 @@
 # Worksheet Studio
 
+## PR 11c follow-up — Automatic verse fitting (v0.15.5)
+
+This is a focused refinement of **Finish the Verse**, **Unscramble the Verse**,
+and **Upside Down Verse** only. No other activity layout has been touched.
+
+- **Finish the Verse:** Visually center word-bank glyphs inside their rows using
+  the actual Nunito ExtraBold glyph bounds, rather than manually nudging
+  baselines. Search different line counts and font sizes (up to 16pt), use
+  balanced word-and-blank wrapping, expand line pitch only within a 1.5×
+  cap, keep handwriting boxes square and at least 12.3pt, and vertically
+  center the full title–bank–verse composition.
+- **Unscramble:** Use one abbreviated heading, e.g. `UNSCRAMBLE ISAIAH
+  41:10`, with no separate reference row. Move the scrambled letters
+  upward beneath their associated blanks while preserving the 29pt pitch.
+- **Upside Down:** Inverted Zilla Slab lettering is slightly smaller and
+  closer to its writing line, without reducing blank width. Long passages
+  have responsive line pitch and may reclaim 3.5pt of *internal* bottom
+  reserve (never the physical 0.1in booklet padding).
+- **Verification:** `npm run test && npm run build && npm run
+  sample:pr11c-followup`. Compare the two-sheet sample PDF to the browser
+  preview, especially Isaiah 41:10, Exodus 15:11 and a short verse.
+
 ## PR 11c — Reconstructed verses and Finish layout follow-up (v0.15.4)
 
 - **Finish the Verse:** The word bank text sits slightly lower inside its box.
