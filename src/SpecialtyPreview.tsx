@@ -4,7 +4,7 @@ import {VerseReconstructionPreview} from './VerseReconstructionPreview.tsx';
 import ConnectBigIdeaPrintPreview from './ConnectBigIdeaPrintPreview.tsx';
 import {planCrossword,crosswordBlackCells,CROSSWORD_WIDTH,CROSSWORD_HEIGHT,type CrosswordPlan} from './crosswordLayout.ts';
 import {
-  generateCrossword,connectPositions,parseConnectionWords,spiralPoints,spiralTurns,
+  generateCrossword,connectPositions,spiralPoints,spiralTurns,
   type SpecialtyModule,
 } from './specialtyModules.ts';
 
@@ -83,11 +83,10 @@ function UpsideDownView({module}:{module:Extract<SpecialtyModule,{type:'upside-d
  return <VerseReconstructionPreview module={module}/>;
 }
 function ConnectView({module}:{module:Extract<SpecialtyModule,{type:'connect-verse'}>}){
-  const positions=connectPositions(module),allWords=parseConnectionWords(module.type==='connect-verse'?module.verse:module.idea);
+  const positions=connectPositions(module);
   return <div className="module-preview specialty-preview connect-preview">
     <div className="module-title">CONNECT THE VERSE</div>
     <div className="specialty-instruction">Draw lines from the first word to the second, all the way to the last.</div>
-    {module.type==='connect-big-idea'&&<div className="connect-bank">{allWords.join('  ·  ')}</div>}
     <div className="connect-field">
       {positions.map(pos=><div key={pos.order} className="connect-word" style={{
         left:(pos.x*100)+'%',top:(pos.y*100)+'%',transform:'translate(-50%,-50%) rotate('+pos.angle+'deg)',
