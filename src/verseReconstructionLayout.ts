@@ -77,7 +77,9 @@ function planReconstruction(chunks:Chunk[],metrics:Metrics,mode:'unscramble'|'up
   const requiredBelow=glyphOffset+invertedFontSize+2;
   const availableStep=rows.length===1?29:
     (bottom-top-requiredBelow)/(rows.length-1);
-  const step=mode==='unscramble'?29:Math.min(29,availableStep);
+  // Unscramble retains its comfortable 29pt minimum, but expands toward
+  // 1.5× line spacing when a short verse leaves extra writing space.
+  const step=mode==='unscramble'?Math.min(43.5,availableStep):Math.min(29,availableStep);
   if(step<(mode==='upside'?Math.max(21.2,requiredBelow+2.8):29)-.001)continue;
   if(top+(rows.length-1)*step+requiredBelow>bottom+.001)continue;
   const marks:ReconstructionMark[]=[];

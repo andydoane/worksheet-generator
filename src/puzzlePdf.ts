@@ -1,6 +1,7 @@
 import { rgb, type PDFFont, type PDFPage } from 'pdf-lib';
 import { BOOKLET } from './booklet.ts';
 import {MODULE_TITLE_PT} from './pdfLayout.ts';
+import {planMazePrint,MAZE_ARROW_PATH,MAZE_ARROW_VIEW_SIZE} from './mazePrintLayout.ts';
 import type { ModuleFonts } from './modulePdf.ts';
 import {
   generateMaze, generateWordSearch, NORTH, SOUTH, EAST, WEST,
@@ -71,48 +72,46 @@ function drawWordSearch(page:PDFPage,rect:Rect,fonts:ModuleFonts,module:Extract<
 }
 
 function drawMaze(page:PDFPage,rect:Rect,fonts:ModuleFonts,module:Extract<PuzzleModule,{type:'true-false-maze'}>):void{
-  const box=inside(rect);
-  const maze=generateMaze(module),top=box.y+box.height;
-  center(page,fonts.title,'TRUE OR FALSE TREK!',box.x,top-23,box.width,MODULE_TITLE_PT);
-  center(page,fonts.body,'Exit the maze at the correct answer.',box.x,top-37,box.width,8.7);
-  // Limit statement to two comfortably readable lines above the maze.
-  let statementRows:string[]|null=null,statementSize=10.2;
-  for(;statementSize>=8.5;statementSize-=.5){
-    const rows=wrap(module.statement,fonts.body,statementSize,box.width-6);
-    if(rows&&rows.length<=2){statementRows=rows;break;}
+ const box=inside(rect);
+ const plan=planMazePrint(module.statement,(text,size)=>textWidth(fonts.body,text,size),
+   box.width,box.height);
+ if(!plan)throw Error('The maze statement does not fit on one line.');
+ const maze=generateMaze(module),top=box.y+box.height;
+ center(page,fonts.title,'TRUE OR FALSE TREK!',box.x,top-plan.titleY,box.width,MODULE_TITLE_PT);
+ center(page,fonts.body,'Exit the maze at the correct answer.',
+   box.x,top-plan.subtitleY,box.width,8.7);
+ center(page,fonts.body,module.statement,box.x,top-plan.statementY,box.width,plan.statementSize);
+ const {cell,mazeLeft,mazeTop,mazeWidth}=plan;
+ const startX=box.x+mazeLeft,mazeTopPdf=top-mazeTop;
+ const line=(x1:number,y1:number,x2:number,y2:number)=>
+  page.drawLine({start:{x:x1,y:y1},end:{x:x2,y:y2},thickness:.68,color:BLACK});
+ for(let y=0;y<MAZE_ROWS;y++)for(let x=0;x<MAZE_COLS;x++){
+  const walls=maze.walls[y][x],cx=startX+x*cell,cy=mazeTopPdf-y*cell;
+  if(walls&NORTH)line(cx,cy,cx+cell,cy);
+  if(walls&WEST)line(cx,cy,cx,cy-cell);
+  if(x===MAZE_COLS-1&&(walls&EAST))line(cx+cell,cy,cx+cell,cy-cell);
+  if(y===MAZE_ROWS-1&&(walls&SOUTH))line(cx,cy-cell,cx+cell,cy-cell);
+ }
+ for(const exit of maze.exits){
+  const labelX=box.x+(exit.edge==='left'?plan.exitLeftX:plan.exitRightX);
+  const exitY=mazeTop+(exit.y+.5)*cell;
+  for(const [i,letter]of Array.from(exit.label).entries()){
+   const baselineY=exitY+(i-1.5)*plan.exitLetterPitch+plan.exitLabelSize*.35;
+   page.drawText(letter,{
+    x:labelX-textWidth(fonts.bodyBold,letter,plan.exitLabelSize)/2,
+    y:top-baselineY,font:fonts.bodyBold,size:plan.exitLabelSize,color:BLACK,
+   });
   }
-  if(!statementRows)throw Error('The maze statement is too long. Please shorten it.');
-  statementRows.forEach((line,i)=>center(page,fonts.body,line,box.x,top-52-i*11.5,box.width,statementSize));
-  const mazeTop=top-(statementRows.length===2?72:62);
-  // Leave space for side labels and one bottom answer label.
-  const maxW=box.width-58;
-  const maxH=mazeTop-box.y-18;
-  const size=Math.min(maxW/MAZE_COLS,maxH/MAZE_ROWS);
-  if(size<5.5)throw Error('The maze is too small to print; shorten the statement.');
-  const width=MAZE_COLS*size,height=MAZE_ROWS*size;
-  const startX=box.x+26+(maxW-width)/2;
-  const startY=mazeTop-height;
-  const line=(x1:number,y1:number,x2:number,y2:number)=>{
-    page.drawLine({start:{x:x1,y:y1},end:{x:x2,y:y2},thickness:.68,color:BLACK});
-  };
-  for(let y=0;y<MAZE_ROWS;y++)for(let x=0;x<MAZE_COLS;x++){
-    const w=maze.walls[y][x],cx=startX+x*size,cy=mazeTop-y*size;
-    if(w&NORTH)line(cx,cy,cx+size,cy);
-    if(w&WEST)line(cx,cy,cx,cy-size);
-    if(x===MAZE_COLS-1&&(w&EAST))line(cx+size,cy,cx+size,cy-size);
-    if(y===MAZE_ROWS-1&&(w&SOUTH))line(cx,cy-size,cx+size,cy-size);
-  }
-  const startText='IN';
-  center(page,fonts.body,startText,
-    startX+(maze.entrance.x+.5)*size-14,startY-12,28,7.4);
-  for(const exit of maze.exits){
-    const sizeLabel=7.4;
-    const x=exit.edge==='left'
-      ? startX-textWidth(fonts.body,exit.label,sizeLabel)-4
-      : startX+width+4;
-    const y=mazeTop-(exit.y+.5)*size-2.5;
-    page.drawText(exit.label,{x,y,font:fonts.body,size:sizeLabel,color:BLACK});
-  }
+ }
+ // Original user-uploaded images/maze_arrow.svg path; PDF uses vector ink.
+ // The PDF coordinate system is y-up; flip the SVG's y-down path about the
+ // lower edge of its target square so its arrow tip points up.
+ const scale=plan.arrowSize/MAZE_ARROW_VIEW_SIZE;
+ page.drawSvgPath(MAZE_ARROW_PATH,{
+  x:box.x+plan.arrowX,
+  y:top-plan.arrowY,
+  scale,color:BLACK,
+ });
 }
 
 export function drawPuzzlePdf(page:PDFPage,rect:Rect,module:PuzzleModule,fonts:ModuleFonts):void{

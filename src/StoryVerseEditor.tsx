@@ -1,25 +1,40 @@
 import {useRef,useState} from 'react';
 import {markWordSelection} from './storySelection.ts';
-import {parseVerse,type FinishVerse,type StoryVerseModule} from './storyVerseModules.ts';
+import {parseVerse,type FinishVerse,type UnscrambleVerse,type StoryVerseModule} from './storyVerseModules.ts';
+import {letterOnly} from './versePunctuation.ts';
 
-function FinishVerseEditor({module,onChange}:{module:FinishVerse;onChange:(patch:Partial<StoryVerseModule>)=>void}){
+/** Both bracket-driven verse activities use the same exact-word selection.
+ * No invalid bracket insertion: a selected word must fit the activity's limit.
+ */
+function BracketVerseEditor({module,onChange}:{
+ module:FinishVerse|UnscrambleVerse;
+ onChange:(patch:Partial<StoryVerseModule>)=>void;
+}){
  const inputRef=useRef<HTMLTextAreaElement>(null);
  const [selectionMessage,setSelectionMessage]=useState('');
+ const finishing=module.type==='finish-verse';
+ const maxBlanks=finishing?8:6;
+ const minBlanks=finishing?2:4;
  const blankCount=parseVerse(module.verse).answers.length;
+ function reject(message:string,input:HTMLTextAreaElement){
+  setSelectionMessage(message);
+  input.classList.remove('verse-selection-no');
+  void input.offsetWidth;
+  input.classList.add('verse-selection-no');
+ }
  function markSelection(){
   const input=inputRef.current;
-  if(!input||blankCount>=8)return;
+  if(!input||blankCount>=maxBlanks)return;
   const result=markWordSelection(module.verse,input.selectionStart,input.selectionEnd);
   if(!result)return;
   const selected=result.text.slice(result.selectionStart,result.selectionEnd);
-  if(Array.from(selected).length>9){
-   setSelectionMessage('That word has more than nine characters. Choose a shorter word.');
-   input.classList.remove('verse-selection-no');
-   // Restart the no-shake animation for consecutive rejected selections.
-   void input.offsetWidth;
-   input.classList.add('verse-selection-no');
+  const length=finishing?Array.from(selected).length:letterOnly(selected).length;
+  if(length>9){
+   reject('That word has more than nine '+(finishing?'characters':'letters')+'. Choose a shorter word.',input);
    return;
   }
+  // The normal validator permits only word selections here; blanking a
+  // duplicate uses textarea offsets so it does not affect its other copies.
   setSelectionMessage('');
   onChange({verse:result.text});
   requestAnimationFrame(()=>{
@@ -30,21 +45,24 @@ function FinishVerseEditor({module,onChange}:{module:FinishVerse;onChange:(patch
  return <div className="activity-inputs">
   <label htmlFor="sv-reference">Memory verse reference</label>
   <input id="sv-reference" value={module.reference}
-   onChange={e=>onChange({reference:e.target.value})} placeholder="Isaiah 41:10"/>
+   onChange={e=>onChange({reference:e.target.value})}
+   placeholder={finishing?'Isaiah 41:10':'John 3:16'}/>
   <label htmlFor="sv-verse">Verse with missing words</label>
   <textarea id="sv-verse" rows={8} ref={inputRef} value={module.verse}
    onAnimationEnd={e=>e.currentTarget.classList.remove('verse-selection-no')}
    onChange={e=>{setSelectionMessage('');onChange({verse:e.target.value});}}
-   placeholder={'Fear not, for I am with [you]; be not dismayed, for I am your [God].'}/>
+   placeholder={finishing
+     ?'Fear not, for I am with [you]; be not dismayed, for I am your [God].'
+     :'For [God] so [loved] the [world] that he [gave] his only [Son].'}/>
   <button type="button" className="mark-blank" onMouseDown={e=>e.preventDefault()}
-   onClick={markSelection} disabled={blankCount>=8}>Make selected word a blank</button>
+   onClick={markSelection} disabled={blankCount>=maxBlanks}>Make selected word a blank</button>
   {selectionMessage&&<p className="verse-selection-feedback" role="status">{selectionMessage}</p>}
-  <p>Double-click a word, then select the button. Mark 2–8 words with [brackets];
-   repeated words are marked individually. For longer passages, fewer blanks
-   keep the handwriting boxes comfortably sized.</p>
+  <p>Double-click a word and use the button, or type [brackets] manually.
+   Mark {minBlanks}–{maxBlanks} missing words. Repeated words are marked individually.
+   {finishing?' For longer passages, fewer blanks keep the handwriting boxes comfortably sized.':
+    ' Apostrophes and ending punctuation stay in the answer line.'}</p>
  </div>;
 }
-
 
 export default function StoryVerseEditor({module,onChange}:{
   module: StoryVerseModule;
@@ -75,18 +93,8 @@ export default function StoryVerseEditor({module,onChange}:{
           placeholder={'Daniel prays by his window.\nThe king makes a new law.\nDaniel is thrown to the lions.\nGod sends an angel.'}/>
         <p>One prompt per line; four prompts use a 2×2 grid, while five or six use a 3×2 grid.</p>
       </div>;
-    case 'finish-verse':return <FinishVerseEditor module={module} onChange={onChange}/>;
-    case 'unscramble-verse':
-      return <div className="activity-inputs">
-        <label htmlFor="sv-reference">Memory verse reference</label>
-        <input id="sv-reference" value={module.reference}
-          onChange={e=>onChange({reference:e.target.value})} placeholder="John 3:16"/>
-        <label htmlFor="sv-verse">Verse with missing words</label>
-        <textarea id="sv-verse" rows={8} value={module.verse}
-          onChange={e=>onChange({verse:e.target.value})}
-          placeholder={'For [God] so [loved] the [world] that he [gave] his one and only [Son].'}/>
-        <p>Enclose 4–6 missing words in [square brackets]. Children write the missing words above their scrambled letters.</p>
-      </div>;
+    case 'finish-verse':
+    case 'unscramble-verse':return <BracketVerseEditor module={module} onChange={onChange}/>;
     case 'circle-mistakes':
       return <div className="activity-inputs">
         <label htmlFor="sv-count">Number of mistakes to circle (1–8)</label>

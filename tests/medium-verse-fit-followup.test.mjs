@@ -76,7 +76,7 @@ test('Unscramble combines its reference into the title and brings scrambled lett
  assert.equal(p.reference,undefined);
  assert.equal(p.referenceY,undefined);
  assert.equal(p.glyphOffset,11.5);
- assert.equal(p.lineStep,29);
+ assert.ok(p.lineStep>=29&&p.lineStep<=43.5);
 });
 test('Upside has smaller inverted lettering, closer letters and bounded adaptive pitch',async()=>{
  const m=await metrics();
