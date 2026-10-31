@@ -1,5 +1,11 @@
 # Worksheet Studio
 
+## PR 14d — Adaptive Medium verse and cipher layouts (v0.15.21)
+
+- **Unscramble the Verse:** raise the bracket limit from six to **eight** while keeping the same saved `{type,reference,verse,seed}` data. Replace greedy row breaks with a measured, word-boundary balanced partition so a long verse does not strand an unnecessarily short last line. The existing 29pt+ handwriting pitch, title placement, punctuated blanks and preview/PDF scene stay intact. Only Unscramble opts into balanced wrapping; Upside Down Verse keeps its previously approved layout.
+- **Solve the Code:** adapt the Medium coded-message `cellWidth` from a **13pt minimum to 21.5pt maximum**, choosing the largest size that can be accommodated in at most three print rows. The symbol and handwriting-line widths scale with the selected cell size, and both SVG and PDF render directly from the same measured plan. The cipher key, 28pt minimum line pitch, title, saved `big-idea-cryptogram` IDs and 62-character / 18-unique-letter limits stay unchanged. Large Verse Cryptogram is not modified.
+- **Review:** `npm run test && npm run build && npm run sample:pr14d`. Inspect `artifacts/sample-pr14d-adaptive-medium-layouts.pdf` for four- and eight-blank verses plus short, long and near-limit cryptograms. The new focused tests check balanced row breakpoints, legible minimums, maximum-size input, print bounds, PDF/preview font metrics and saved-data compatibility.
+
 ## PR 14c — Clearer Large Connect the Verse word boxes (v0.15.20)
 
 - Replace the Large Connect the Verse subtitle with **“Use the verse above to connect the word boxes in order.”**
