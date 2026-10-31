@@ -3,8 +3,11 @@ import {MEDIUM_PRINT_WIDTH,MEDIUM_PRINT_HEIGHT,type MeasureText} from './mediumP
 import {parseConnectionWords,type ConnectBigIdeaModule} from './specialtyModules.ts';
 import {scatterWords,expandScatterCoverage,scaleConnectScatterFont,type ScatteredWord,type ScatterBounds} from './wordScatterLayout.ts';
 
-export const CONNECT_BIG_TITLE='CONNECT THE BIG IDEA';
-export const CONNECT_BIG_INSTRUCTION='Connect each word to the next in order.';
+export const CONNECT_BIG_TITLE='CONNECT THE PHRASE';
+export const CONNECT_PHRASE_BOX_PADDING_X=2.25;
+export const CONNECT_PHRASE_BOX_PADDING_Y=1;
+export const CONNECT_PHRASE_BOX_STROKE=.8;
+export const CONNECT_BIG_INSTRUCTION='Draw lines from box to box in the order of the phrase.';
 export type ConnectBigIdeaPrintPlan={
  titleY:number;subtitleY:number;subtitleSize:number;
  bankTop:number;bankHeight:number;bankFontSize:number;
@@ -34,13 +37,14 @@ export function planConnectBigIdea(module:ConnectBigIdeaModule,metrics:{
   const fieldTop=bankTop+bankHeight+6;
   const field:ScatterBounds={x:5,y:fieldTop,width:width-10,height:height-fieldTop-5};
   if(field.height<45)continue;
-  // Preserve the original count-based size hierarchy, with the exact same
-  // 80% scale used by Large Connect Verse. The bank stays full size.
+  // Retain the 80% count-based font target, original clearance and full-size
+  // reference bank. Every measured box exterior is included in collisions.
   const originalMaxFont=words.length>=17?11.5:words.length>=13?12.5:13.5;
   const placements=scatterWords({
    words,seed:module.seed,key:module.idea,field,measure:metrics.puzzle,
    maxFont:scaleConnectScatterFont(originalMaxFont),
    minFont:8.5,gap:2.6,gapReferenceFont:originalMaxFont,
+   boxed:{paddingX:CONNECT_PHRASE_BOX_PADDING_X,paddingY:CONNECT_PHRASE_BOX_PADDING_Y},
   });
   if(!placements)continue;
   return {titleY,subtitleY,subtitleSize,bankTop,bankHeight,bankFontSize:bankSize,
