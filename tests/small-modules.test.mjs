@@ -34,10 +34,10 @@ const all = [
   checks, who,
 ];
 
-test('all eight small module IDs are offered, while existing module sizes are untouched', () => {
+test('all eight small module IDs are offered, and Medium now includes its distinct Word Search', () => {
   assert.equal(SMALL_MODULES.length,7);
   assert.equal(moduleForSize('small').length,8);
-  assert.deepEqual(moduleForSize('medium').map(x=>x.id),['match-words','finish-verse','unscramble-verse','circle-mistakes','true-false-maze','big-idea-cryptogram','upside-down-verse','connect-big-idea']);
+  assert.deepEqual(moduleForSize('medium').map(x=>x.id),['match-words','finish-verse','unscramble-verse','circle-mistakes','medium-word-search','true-false-maze','big-idea-cryptogram','upside-down-verse','connect-big-idea']);
   assert.deepEqual(moduleForSize('large').map(x=>x.id),['finish-story','story-order','sort-story','draw-story','word-search','verse-cryptogram','crossword','spiral-verse','connect-verse']);
   for(const module of all){
     assert.ok(MODULES.some((x)=>x.id===module.type&&x.size==='small'));
