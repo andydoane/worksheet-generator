@@ -9,7 +9,7 @@ export type ReconstructionMark={
 };
 export type ReconstructionPlan={
  title:string;titleSize:number;titleY:number;reference?:string;referenceY?:number;
- marks:ReconstructionMark[];cell:number;fontSize:number;lineStep:number;rowCount:number;
+ marks:ReconstructionMark[];cell:number;fontSize:number;lineStep:number;glyphOffset:number;rowCount:number;
 };
 type Metrics={title:MeasureText;body:MeasureText;puzzle:MeasureText};
 type Segment={kind:'ordinary'|'blank'|'upside';text:string;scramble?:string};
@@ -43,11 +43,11 @@ function planReconstruction(chunks:Chunk[],metrics:Metrics,mode:'unscramble'|'up
  if(titleSize<15)return null;
  const titleY=25;
  const referenceY=mode==='unscramble'?43:undefined;
- const top=mode==='unscramble'?69:53;
+ const top=mode==='unscramble'?69:44;
  const bottom=height-7;
  for(let cell=(mode==='unscramble'?10.2:12.1);cell>=8.1;cell-=.5){
   const fontSize=mode==='unscramble'?Math.min(10.6,cell+1):Math.min(13,cell+1);
-  const step=mode==='unscramble'?29:Math.max(21.5,cell*1.95);
+  const step=mode==='unscramble'?29:24.2;
   const space=mode==='unscramble'?metrics.body(' ',fontSize):cell*.66;
   const measured=chunks.map(chunk=>{
    const items=chunk.segments.map(segment=>{
@@ -68,7 +68,7 @@ function planReconstruction(chunks:Chunk[],metrics:Metrics,mode:'unscramble'|'up
    row.push(chunk);used+=chunk.width;
   }
   if(row.length)rows.push(row);
-  if(!rows.length||top+(rows.length-1)*step+(mode==='unscramble'?16:13)>bottom)continue;
+  if(!rows.length||top+(rows.length-1)*step+(mode==='unscramble'?16:20)>bottom)continue;
   const marks:ReconstructionMark[]=[];
   for(let line=0;line<rows.length;line++){
    const widthUsed=rows[line].reduce((sum,c)=>sum+c.width,0)+(rows[line].length-1)*space;
@@ -96,7 +96,8 @@ function planReconstruction(chunks:Chunk[],metrics:Metrics,mode:'unscramble'|'up
     x+=space;
    }
   }
-  return {title,titleSize,titleY,reference,referenceY,marks,cell,fontSize,lineStep:step,rowCount:rows.length};
+  return {title,titleSize,titleY,reference,referenceY,marks,cell,fontSize,lineStep:step,
+   glyphOffset:mode==='unscramble'?16:9,rowCount:rows.length};
  }
  return null;
 }
