@@ -1,9 +1,10 @@
 import {useEffect,useState} from 'react';
 import {mediumWidths} from './MediumPrintPreview.tsx';
+import WordSearchPrintPreview from './WordSearchPrintPreview.tsx';
 import {MEDIUM_PRINT_WIDTH,MEDIUM_PRINT_HEIGHT} from './mediumParityLayout.ts';
 import {planMazePrint,MAZE_ARROW_PATH,MAZE_ARROW_VIEW_SIZE,type MazePrintPlan} from './mazePrintLayout.ts';
 import {
-  generateMaze, generateWordSearch, wordSearchCells,
+  generateMaze,
   NORTH, EAST, SOUTH, WEST, MAZE_COLS, MAZE_ROWS,
   type PuzzleModule, type MazeGrid,
 } from './puzzleEngines.ts';
@@ -67,20 +68,6 @@ function MazePrintPreview({module,showSolution}:{
  </div>;
 }
 export default function PuzzlePreview({module,showSolution=false}:{module:PuzzleModule;showSolution?:boolean}) {
-  if(module.type==='word-search'){
-    const puzzle=generateWordSearch(module);
-    const selected=showSolution?wordSearchCells(puzzle):new Set<string>();
-    return <div className="module-preview puzzle-word-search">
-      <div className="module-title">WORD SEARCH</div>
-      <div className="puzzle-letter-grid">
-        {puzzle.grid.flatMap((row,y)=>row.map((letter,x)=><span key={x+','+y}
-          className={selected.has(x+','+y)?'puzzle-found-letter':''}>{letter}</span>))}
-      </div>
-      <div className="puzzle-search-bank" style={{
-        gridTemplateColumns:'repeat('+(puzzle.words.length>8?3:2)+',minmax(0,1fr))',
-        gridTemplateRows:'repeat('+Math.ceil(puzzle.words.length/(puzzle.words.length>8?3:2))+',minmax(0,1fr))',
-      }}>{puzzle.labels.map((w,i)=><span key={i}>{w}</span>)}</div>
-    </div>;
-  }
+  if(module.type==='word-search')return <WordSearchPrintPreview module={module} showSolution={showSolution}/>;
   return <MazePrintPreview module={module} showSolution={showSolution}/>;
 }

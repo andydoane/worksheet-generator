@@ -2,10 +2,11 @@ import { rgb, type PDFFont, type PDFPage } from 'pdf-lib';
 import { BOOKLET } from './booklet.ts';
 import {MODULE_TITLE_PT} from './pdfLayout.ts';
 import {planMazePrint,MAZE_ARROW_PATH,MAZE_ARROW_VIEW_SIZE} from './mazePrintLayout.ts';
+import {planWordSearch} from './wordSearchLayout.ts';
 import type { ModuleFonts } from './modulePdf.ts';
 import {
   generateMaze, generateWordSearch, NORTH, SOUTH, EAST, WEST,
-  WORD_COLS, WORD_ROWS, MAZE_COLS, MAZE_ROWS, type PuzzleModule,
+  MAZE_COLS, MAZE_ROWS, type PuzzleModule,
 } from './puzzleEngines.ts';
 
 type Rect={x:number;y:number;width:number;height:number};
@@ -32,43 +33,28 @@ function wrap(text:string,font:PDFFont,size:number,w:number):string[]|null{
 }
 
 function drawWordSearch(page:PDFPage,rect:Rect,fonts:ModuleFonts,module:Extract<PuzzleModule,{type:'word-search'}>):void{
-  const box=inside(rect),puzzle=generateWordSearch(module);
-  center(page,fonts.title,'WORD SEARCH',box.x,box.y+box.height-28,box.width,MODULE_TITLE_PT);
-  const columns=puzzle.words.length>8?3:2,rows=Math.ceil(puzzle.words.length/columns);
-  // A short bank needs fewer lines, so the grid can grow. A longer bank
-  // reserves more vertical space instead of squeezing the last word row.
-  const rowTarget=22;
-  const reservedBank=rows*rowTarget+15;
-  const cell=Math.min((box.width-12)/WORD_COLS,(box.height-52-reservedBank)/WORD_ROWS);
-  if(cell<15)throw Error('Not enough space for a readable word-search grid.');
-  const gridWidth=cell*WORD_COLS,gridHeight=cell*WORD_ROWS;
-  const x0=box.x+(box.width-gridWidth)/2,top=box.y+box.height-43;
-  const bottom=top-gridHeight;
-  page.drawRectangle({x:x0-2,y:bottom-2,width:gridWidth+4,height:gridHeight+4,
-    borderColor:FAINT,borderWidth:.5});
-  for(let y=0;y<WORD_ROWS;y++)for(let x=0;x<WORD_COLS;x++){
-    const letter=puzzle.grid[y][x],size=Math.min(17,cell*.73);
-    const cx=x0+x*cell+(cell-textWidth(fonts.puzzle,letter,size))/2;
-    const cy=top-(y+1)*cell+(cell-size)*.55+size*.12;
-    page.drawText(letter,{x:cx,y:cy,size,font:fonts.puzzle,color:BLACK});
-  }
-  const bankTop=bottom-13,bankBottom=box.y+6;
-  const available=bankTop-bankBottom;
-  if(available<rows*14)throw Error('Word list does not fit; use fewer entries.');
-  const step=Math.min(27,available/rows);
-  const colW=box.width/columns;
-  const fontSize=Math.min(12,...puzzle.labels.map(word=>{
-    for(let s=12;s>=7.5;s-=.5)
-      if(textWidth(fonts.bank,word,s)<=colW-9)return s;
-    throw Error('Word-list entry is too long to print clearly.');
-  }));
-  const bankGroupHeight=step*rows;
-  const bankGroupTop=bankBottom+(available+bankGroupHeight)/2;
-  puzzle.labels.forEach((word,i)=>{
-    const col=i%columns,row=Math.floor(i/columns);
-    const baseline=bankGroupTop-(row+.5)*step-fontSize*.36;
-    center(page,fonts.bank,word,box.x+col*colW,baseline,colW,fontSize);
+ const box=inside(rect),puzzle=generateWordSearch(module);
+ const plan=planWordSearch(puzzle,{
+  puzzle:(text,size)=>textWidth(fonts.puzzle,text,size),
+  bank:(text,size)=>textWidth(fonts.bank,text,size),
+ },box.width,box.height);
+ if(!plan)throw Error('Word Search grid and word bank cannot fit clearly. Use shorter words.');
+ const top=box.y+box.height;
+ page.drawRectangle({
+  x:box.x+plan.gridX-2,y:top-plan.gridTop-plan.gridHeight-2,
+  width:plan.gridWidth+4,height:plan.gridHeight+4,
+  borderColor:FAINT,borderWidth:.5,
+ });
+ for(const letter of plan.letters){
+  page.drawText(letter.char,{x:box.x+letter.x,y:top-letter.y,
+   size:plan.letterSize,font:fonts.puzzle,color:BLACK});
+ }
+ for(const entry of plan.bankEntries){
+  page.drawText(entry.text,{
+   x:box.x+entry.x-textWidth(fonts.bank,entry.text,plan.bankSize)/2,
+   y:top-entry.y,size:plan.bankSize,font:fonts.bank,color:BLACK,
   });
+ }
 }
 
 function drawMaze(page:PDFPage,rect:Rect,fonts:ModuleFonts,module:Extract<PuzzleModule,{type:'true-false-maze'}>):void{

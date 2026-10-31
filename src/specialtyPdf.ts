@@ -46,7 +46,6 @@ function crossword(page:PDFPage,b:Rect,module:Extract<SpecialtyModule,{type:'cro
   const puzzle=generateCrossword(module);
   const plan=planCrossword(puzzle,(text,size)=>sizeOf(fonts.body,text,size),b.width,b.height);
   if(!plan)throw Error('Crossword grid and clues cannot fit. Try shorter clues or regenerate.');
-  centered(page,fonts.title,'CROSSWORD',b.x,b.y+b.height-27,b.width,MODULE_TITLE_PT);
   const top=b.y+b.height-plan.gridTop;
   for(const {x,y} of crosswordBlackCells(puzzle)){
     page.drawRectangle({x:b.x+plan.gridX+x*plan.cell,

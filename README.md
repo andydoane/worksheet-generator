@@ -1,5 +1,12 @@
 # Worksheet Studio
 
+## PR 14b — Title-free Large Word Search and Crossword (v0.15.19)
+
+- **Word Search:** remove the redundant heading and reclaim its height for a larger 12×10 search grid while retaining a clear, measured 2- or 3-column word bank. `planWordSearch()` uses the actual embedded Zilla Slab and Nunito ExtraBold font widths in physical PDF points; the browser now uses exactly the same plan via an SVG, including editor-only solution highlights. The algorithm protects an inset around the grid and avoids clipping bank words even with all 12 entries.
+- **Crossword:** remove the printed heading, shift the grid toward the top of the Large interior, allow up to 27-point squares where the clues fit, and compute the final clue bounds from their actual baseline positions. ACROSS/DOWN and clue typography stay intact. The browser uses actual embedded Nunito font advances, matching the PDF plan.
+- **Scope:** both activities retain their existing IDs, input validation, deterministic puzzle generation, seeds and saved worksheets. No changes to other Large modules.
+- **Review:** `npm run test && npm run build && npm run sample:pr14b`. The two-sheet sample `artifacts/sample-pr14b-title-free-large-puzzles.pdf` includes a 4-word search, 12-word search, and two 10-clue crosswords.
+
 ## PR 14a — Sort the Story editor + consistent print geometry; Draw a Picture punctuation (v0.15.18)
 
 - **Sort the Story:** two independent **True statements** and **False statements** editor textareas replace the manual truth suffix workflow. The underlying saved `statements` field, `sort-story` type and seeded order remain readable, so older localStorage booklets are preserved. All statement text has a 115-character per-line limit, with immediate length feedback.

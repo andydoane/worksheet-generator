@@ -28,7 +28,7 @@ function CrosswordView({module}:{module:Extract<SpecialtyModule,{type:'crossword
     catch{return ()=>{active=false;};}
     void crosswordFont().then(face=>{
       const width=(text:string,size:number)=>
-        face.layout(text).positions.reduce((sum,p)=>sum+p.xAdvance,0)*size/face.unitsPerEm;
+        face.layout(text).glyphs.reduce((sum,g)=>sum+g.advanceWidth,0)*size/face.unitsPerEm;
       if(active)setPlan(planCrossword(grid,width));
     }).catch(()=>{if(active)setPlan(null);});
     return ()=>{active=false;};
@@ -41,8 +41,6 @@ function CrosswordView({module}:{module:Extract<SpecialtyModule,{type:'crossword
   return <div className="module-preview specialty-preview crossword-preview crossword-print-preview">
     {plan?<svg className="crossword-print-svg" viewBox={'0 0 '+CROSSWORD_WIDTH+' '+CROSSWORD_HEIGHT}
       preserveAspectRatio="xMidYMid meet" aria-label="Crossword grid and clues" role="img">
-      <text x={CROSSWORD_WIDTH/2} y="27" fontFamily="Mouse Memoirs" fontSize="25"
-        textAnchor="middle" fill="#222">CROSSWORD</text>
       {crosswordBlackCells(puzzle).map(({x,y})=><rect key={'black-'+x+','+y}
         x={plan.gridX+x*plan.cell} y={plan.gridTop+y*plan.cell}
         width={plan.cell} height={plan.cell} fill="#222"/>)}
