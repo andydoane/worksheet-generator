@@ -32,7 +32,7 @@ async function metrics(){
  }
  return result;
 }
-const longPrompt='Moses and the people walking across the Red Sea on dry ground as the waters stand like walls on each side.';
+const longPrompt='Moses and the people walking across the Red Sea on dry ground as waters stand like walls on each side.';
 const nearMax='Which person trusted the Lord and built a very large boat to keep his family and the animals safe?';
 const checkboxes={type:'checkboxes',correct:'RED SEA\nDRY LAND\nBURNING BUSH\nTHESSALONIANS\nRIVER BANK',
  incorrect:'PROMISED LAND\nKING DAVID\nGREAT STORM\nBIG FISH\nDESERT ROAD',seed:6};
