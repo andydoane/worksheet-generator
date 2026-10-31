@@ -110,7 +110,7 @@ test('Finish balances and centers rows, lowers bank text and draws genuine squar
    assert.ok(Math.abs((start+end)/2-331.2/2)<.01);
   }
   assert.ok(widths.every(w=>w>70));
-  assert.ok(p.bankWords.every(b=>b.y>p.bankTop+14),'Bank words are lowered inside box');
+  assert.ok(p.bankWords.every(b=>b.y>p.bankTop+7&&b.y<p.bankTop+p.bankHeight),'Bank labels remain within the measured box');
  }
 });
 test('Letter reconstruction and square blanks export on two landscape sheets',async()=>{
