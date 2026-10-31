@@ -3,7 +3,8 @@ import {SMALL_PRINT_WIDTH,SMALL_PRINT_HEIGHT,type SmallLine} from './smallParity
 import {balancedBankLines} from './balancedBankLines.ts';
 
 export const TRUE_FALSE_TITLE='TRUE OR FALSE?';
-export const TRUE_FALSE_MAX_CHARACTERS=80;
+import {TRUE_FALSE_MAX_CHARACTERS} from './trueFalseLimits.ts';
+export {TRUE_FALSE_MAX_CHARACTERS} from './trueFalseLimits.ts';
 export const THUMB_VIEW_SIZE=26.458333;
 /** Fixed print-space artwork reservation: never place statement text here. */
 export type ThumbPlacement={x:number;y:number;size:number;label:string;labelX:number;labelY:number};
