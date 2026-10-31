@@ -22,7 +22,7 @@ const data=[
  {type:'true-false',statement:'The Lord helped David defeat the giant Goliath with just a smooth stone.'},
  {type:'first-letters',reference:'1 Samuel 17:47',verse:'All those gathered here will know that it is not by sword or spear that the Lord saves for the battle is the Lord'},
  {type:'odd-words',correct:'DAVID\\nGOLIATH\\nSHEPHERD\\nSTONE\\nSLING',incorrect:'PHARAOH\\nJONAH\\nRAVEN\\nCANAAN\\nMATTHEW',seed:8},
- {type:'unscramble-words',first:'GOLIATH',second:'SMOOTH STONE',seed:6},
+ {type:'unscramble-words',first:'GOLIATH',second:'SMOOTH ROCK',seed:6},
  {type:'checkboxes',correct:'SLING\\nSTONE\\nSHEPHERD\\nGOLIATH\\nISRAEL',incorrect:'GARDEN\\nPHARAOH\\nTEMPLE\\nRAINBOW\\nMANGER',seed:4},
  {type:'who-am-i',clue:'I used a sling and a smooth stone, trusted God, and defeated a giant before becoming king.',answer:'DAVID'},
 ];
