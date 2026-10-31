@@ -88,7 +88,8 @@ test('cover no longer contains extra overline and centers title and scripture to
  ]);
  assert.doesNotMatch(app,/BIBLE STORY REVIEW/u);
  assert.doesNotMatch(pdf,/BIBLE STORY REVIEW/u);
- assert.match(app,/<div className="cover-content">\s*<span className="cover-title">/u);
+ assert.match(app,/className="cover-text-safe"/u);
+ assert.match(app,/className="cover-title"/u);
  assert.match(css,/\.cover-content \{[^}]*justify-content: center/u);
  assert.match(css,/\.booklet-region \.cover-title \{[^}]*margin: 0;/u);
  assert.match(pdf,/const totalHeight = fitted.height \+ gap \+ subtitle.height;/u);
