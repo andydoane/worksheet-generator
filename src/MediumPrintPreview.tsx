@@ -7,7 +7,7 @@ import {
   type MatchPrintPlan,type MistakesPrintPlan,type MeasureText,
 } from './mediumParityLayout.ts';
 
-type MediumWidths={body:MeasureText;bold:MeasureText;puzzle:MeasureText;bank:MeasureText;title:MeasureText};
+type MediumWidths={body:MeasureText;bold:MeasureText;puzzle:MeasureText;bank:MeasureText;title:MeasureText;finishBody:MeasureText};
 let widthsPromise:Promise<MediumWidths>|null=null;
 /** Measure the same static TrueType faces embedded in PDF output. */
 export function mediumWidths():Promise<MediumWidths>{
@@ -25,7 +25,12 @@ export function mediumWidths():Promise<MediumWidths>{
     const faces=bytes.map(data=>fontkit.create(new Uint8Array(data)));
     const width=(face:typeof faces[number]):MeasureText=>(value,size)=>
       face.layout(value).positions.reduce((sum,pos)=>sum+pos.xAdvance,0)*size/face.unitsPerEm;
-    return {body:width(faces[0]),bold:width(faces[1]),puzzle:width(faces[2]),bank:width(faces[3]),title:width(faces[4])};
+    // pdf-lib's custom font embedder sums glyph advanceWidth (rather than
+    // fontkit's positioned xAdvance). Match it exactly for print scenes.
+    const pdfWidth=(face:typeof faces[number]):MeasureText=>(value,size)=>
+      face.layout(value).glyphs.reduce((sum,g)=>sum+g.advanceWidth,0)*size/face.unitsPerEm;
+    return {body:width(faces[0]),bold:width(faces[1]),puzzle:width(faces[2]),
+      finishBody:pdfWidth(faces[0]),bank:pdfWidth(faces[3]),title:pdfWidth(faces[4])};
   }).catch(error=>{widthsPromise=null;throw error;});
   return widthsPromise;
 }
