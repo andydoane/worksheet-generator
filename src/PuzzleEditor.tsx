@@ -1,7 +1,8 @@
 import {generateMaze, generateWordSearch, parseSearchWords, type PuzzleModule} from './puzzleEngines.ts';
 
 export default function PuzzleEditor({module,onChange,showSolution}:{module:PuzzleModule;onChange:(patch:Partial<PuzzleModule>)=>void;showSolution:boolean}) {
-  if(module.type==='word-search') {
+  if(module.type==='word-search'||module.type==='medium-word-search') {
+    const medium=module.type==='medium-word-search',max=medium?6:12;
     const count=parseSearchWords(module.words).length;
     let info='';
     if(count){
@@ -11,14 +12,14 @@ export default function PuzzleEditor({module,onChange,showSolution}:{module:Puzz
       }catch{/* input validation displays below */}
     }
     return <div className="activity-inputs">
-      <label htmlFor="search-words">Words or phrases (4–12)</label>
-      <textarea id="search-words" rows={12} value={module.words} spellCheck={false}
+      <label htmlFor="search-words">Words or phrases ({medium?'1–6':'4–12'})</label>
+      <textarea id="search-words" rows={medium?7:12} value={module.words} spellCheck={false}
         placeholder={'Red Sea\nDry Land\nMoses\nPharaoh\nEgypt\nExodus'}
         onChange={e=>onChange({words:e.target.value})}/>
       <p className="word-search-count" role="status" aria-live="polite">
-        {count} of 12 words{count>12?' — over the limit':''}
+        {count} of {max} words{count>max?' — over the limit':''}
       </p>
-      <p>Type one word or short phrase per line; press Enter for the next entry or paste a list. Spaces appear in the bank, but not in the 12×10 puzzle.</p>
+      <p>Type one word or short phrase per line; press Enter for the next entry or paste a list. Spaces appear in the bank, but not in the {medium?'9×9':'12×10'} puzzle. {medium?'Use 2–9 letters per entry after removing spaces.':'Use 2–12 letters per entry after removing spaces.'}</p>
       {showSolution&&info&&<div className="puzzle-solution-data"><strong>Word positions</strong><pre>{info}</pre></div>}
     </div>;
   }
