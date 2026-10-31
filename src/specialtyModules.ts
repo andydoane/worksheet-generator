@@ -86,7 +86,8 @@ export function validateSpecialty(module:SpecialtyModule):string[]{
     case 'connect-big-idea':{
       const text=specialtyText(module),list=parseConnectionWords(text);
       const errs:string[]=[];
-      if(list.length<4||list.length>12)errs.push('Enter 4–12 words to connect.');
+      const maxWords=module.type==='connect-big-idea'?20:12;
+      if(list.length<4||list.length>maxWords)errs.push('Enter 4–'+maxWords+' words to connect.');
       if(list.some(w=>w.length>12))errs.push('Keep each word at 12 characters or fewer.');
       if(!text.trim()||text.length>125)errs.push('Keep the phrase under 125 characters.');
       if([...text].some(c=>/\p{L}/u.test(c)&&!/[A-Za-z]/.test(c)))
