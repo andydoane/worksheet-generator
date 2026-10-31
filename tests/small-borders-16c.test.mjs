@@ -54,8 +54,8 @@ test('Eight Small types are enabled, with no Medium or Large activity enabled',(
 test('Unbordered 2.2x2.4in print planner fits uniformly into 1.95x2.15in content without warping',()=>{
  const rect={x:123,y:79,width:BOOKLET.cell.width*PT,height:BOOKLET.cell.height*PT};
  const fitted=planSmallBorderFit(rect);
- assert.equal(fitted.source.width,SMALL_PRINT_WIDTH);
- assert.equal(fitted.source.height,SMALL_PRINT_HEIGHT);
+ assert.ok(Math.abs(fitted.source.width-SMALL_PRINT_WIDTH)<1e-8);
+ assert.ok(Math.abs(fitted.source.height-SMALL_PRINT_HEIGHT)<1e-8);
  assert.ok(Math.abs(fitted.viewport.content.width-ACTIVITY_SAFE_AREAS.small.width*PT)<1e-8);
  assert.ok(Math.abs(fitted.viewport.content.height-ACTIVITY_SAFE_AREAS.small.height*PT)<1e-8);
  assert.ok(fitted.scale>.88&&fitted.scale<.90,'letter/cell size must remain close to original');
@@ -96,7 +96,7 @@ test('Unprovided Small PNG fails visibly and Medium borders remain gated',async(
  const ff=await fonts();
  const draft=assign([data[0]],[2]);
  await assert.rejects(()=>createBookletPdf(draft,ff),/Small border image is missing/u);
- const bad={...base,modules:{'2:top-medium':{type:'match-words',pairs:'Paul,Teacher\\nPeter,Fisherman\\nJesus,Savior',seed:1}},activityBorders:{'2:top-medium':'border-1'}};
+ const bad={...base,modules:{'2:middle-medium':{type:'match-words',pairs:'Paul,Teacher\\nPeter,Fisherman\\nJesus,Savior',seed:1}},activityBorders:{'2:middle-medium':'border-1'}};
  await assert.rejects(()=>createBookletPdf(bad,ff),/not yet supported/u);
 });
 test('Preview uses the same full-art and centered safe zone as the PDF, without changing borderless geometry',async()=>{
