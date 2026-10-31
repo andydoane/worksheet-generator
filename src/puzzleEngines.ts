@@ -4,15 +4,19 @@
  */
 export const WORD_COLS = 12;
 export const WORD_ROWS = 10;
+export const MEDIUM_WORD_COLS = 9;
+export const MEDIUM_WORD_ROWS = 9;
 export const MAZE_COLS = 41;
 export const MAZE_ROWS = 14;
 
 export type WordSearch = { type: 'word-search'; words: string; seed: number };
+export type MediumWordSearch = { type: 'medium-word-search'; words: string; seed: number };
 export type TrueFalseMaze = { type: 'true-false-maze'; statement: string; answer: boolean; seed: number };
-export type PuzzleModule = WordSearch | TrueFalseMaze;
+export type PuzzleModule = WordSearch | MediumWordSearch | TrueFalseMaze;
 export type PuzzleId = PuzzleModule['type'];
 export const PUZZLE_MODULES = [
   { id: 'word-search', name: 'Word Search', size: 'large', description: 'A 12 × 10 grid with 4–12 words or short phrases.' },
+  { id: 'medium-word-search', name: 'Word Search (Medium)', size: 'medium', description: 'A 9 × 9 grid with 1–6 words or short phrases.' },
   { id: 'true-false-maze', name: 'True or False Maze', size: 'medium', description: 'A real 41 × 14 maze with TRUE and FALSE exits.' },
 ] as const;
 
@@ -21,20 +25,20 @@ const directions = [
   {dx:1,dy:1,name:'down-right'}, {dx:1,dy:-1,name:'up-right'},
 ] as const;
 export type WordPlacement = { word: string; x: number; y: number; dx: number; dy: number; direction: string };
-export type WordSearchGrid = { grid: string[][]; words: string[]; labels:string[]; placements: WordPlacement[] };
+export type WordSearchGrid = { grid: string[][]; words: string[]; labels:string[]; placements: WordPlacement[]; cols?:number; rows?:number };
 
 export function isPuzzleId(value:unknown):value is PuzzleId {
-  return value === 'word-search' || value === 'true-false-maze';
+  return value === 'word-search' || value === 'medium-word-search' || value === 'true-false-maze';
 }
 export function blankPuzzleModule(type:PuzzleId):PuzzleModule {
-  if(type==='word-search')return {type,words:'',seed:1};
+  if(type==='word-search'||type==='medium-word-search')return {type,words:'',seed:1};
   return {type,statement:'',answer:true,seed:1};
 }
 export function isPuzzleModule(raw:unknown):raw is PuzzleModule {
   if(!raw || typeof raw!=='object')return false;
   const m=raw as Record<string,unknown>;
   if(!Number.isSafeInteger(m.seed)||Number(m.seed)<0)return false;
-  return m.type==='word-search' ? typeof m.words==='string'
+  return m.type==='word-search'||m.type==='medium-word-search' ? typeof m.words==='string'
     : m.type==='true-false-maze' && typeof m.statement==='string' && typeof m.answer==='boolean';
 }
 /** Save user-facing labels independently of the grid's A–Z sequences. */
@@ -48,12 +52,15 @@ export function parseSearchWords(text:string):string[]{
   return parseSearchEntries(text).map(e=>e.word);
 }
 export function validatePuzzle(module:PuzzleModule):string[]{
-  if(module.type==='word-search'){
+  if(module.type==='word-search'||module.type==='medium-word-search'){
+    const medium=module.type==='medium-word-search';
     const entries=parseSearchEntries(module.words),words=entries.map(e=>e.word);
     const errors:string[]=[];
-    if(words.length<4||words.length>12) errors.push('Enter 4–12 words or short phrases, one per line.');
+    if(words.length<(medium?1:4)||words.length>(medium?6:12))
+      errors.push(medium?'Enter 1–6 words or short phrases, one per line.':'Enter 4–12 words or short phrases, one per line.');
     if(entries.some(e=>!(/^[A-Z]+(?: [A-Z]+)*$/u.test(e.label.toUpperCase())))) errors.push('Use only letters A–Z and single spaces between words.');
-    if(words.some(w=>w.length<2||w.length>12)) errors.push('Each word must contain 2–12 letters.');
+    if(words.some(w=>w.length<2||w.length>(medium?9:12)))
+      errors.push(medium?'Each word must contain 2–9 letters after removing spaces.':'Each word must contain 2–12 letters.');
     if(new Set(words).size!==words.length)errors.push('Use different words; duplicate entries would be confusing.');
     return errors;
   }
@@ -80,12 +87,14 @@ function shuffle<T>(items:T[],random:()=>number):T[]{
  * within the search cap. Only forward directions are used. Grid and word
  * placements are independent from other modules' random seeds.
  */
-export function generateWordSearch(module:WordSearch):WordSearchGrid {
+export function generateWordSearch(module:WordSearch|MediumWordSearch):WordSearchGrid {
   const problems=validatePuzzle(module);
   if(problems.length)throw Error(problems.join(' '));
   const entries=parseSearchEntries(module.words), words=entries.map(x=>x.word);
+  const medium=module.type==='medium-word-search';
+  const cols=medium?MEDIUM_WORD_COLS:WORD_COLS,rows=medium?MEDIUM_WORD_ROWS:WORD_ROWS;
   const rng=randomStream(words.join('|'),module.seed);
-  const board:(string|null)[][]=Array.from({length:WORD_ROWS},()=>Array(WORD_COLS).fill(null));
+  const board:(string|null)[][]=Array.from({length:rows},()=>Array(cols).fill(null));
   const placements:WordPlacement[]=[];
   const sorted=[...words].sort((a,b)=>b.length-a.length);
   let attempts=0;
@@ -94,9 +103,9 @@ export function generateWordSearch(module:WordSearch):WordSearchGrid {
     if(attempts>65000)return false;
     const word=sorted[index];
     const candidates:Omit<WordPlacement,'word'>[]=[];
-    for(const dir of directions)for(let y=0;y<WORD_ROWS;y++)for(let x=0;x<WORD_COLS;x++){
+    for(const dir of directions)for(let y=0;y<rows;y++)for(let x=0;x<cols;x++){
       const lastX=x+(word.length-1)*dir.dx,lastY=y+(word.length-1)*dir.dy;
-      if(lastX>=0&&lastX<WORD_COLS&&lastY>=0&&lastY<WORD_ROWS){
+      if(lastX>=0&&lastX<cols&&lastY>=0&&lastY<rows){
         candidates.push({x,y,dx:dir.dx,dy:dir.dy,direction:dir.name});
       }
     }
@@ -121,21 +130,26 @@ export function generateWordSearch(module:WordSearch):WordSearchGrid {
     }
     return false;
   }
-  if(!place(0))throw Error('Could not fit these words in a 12×10 search. Try shorter words or a different list.');
+  if(!place(0))throw Error('Could not fit these words in a '+cols+'×'+rows+' search. Try shorter words or a different list.');
   const grid=board.map(row=>row.map(letter=>letter??String.fromCharCode(65+Math.floor(rng()*26))));
-  const result={grid,words,labels:entries.map(x=>x.label),placements:words.map(word=>placements.find(p=>p.word===word)!)};
+  const result:WordSearchGrid={grid,words,labels:entries.map(x=>x.label),
+    placements:words.map(word=>placements.find(p=>p.word===word)!),
+    ...(medium?{cols,rows}:{})};
   if(!checkWordSearch(result))throw Error('Word-search solution validation failed. Please regenerate.');
   return result;
 }
 export function checkWordSearch(result:WordSearchGrid):boolean{
-  if(result.grid.length!==WORD_ROWS||result.grid.some(row=>row.length!==WORD_COLS))return false;
+  const cols=result.cols??WORD_COLS,rows=result.rows??WORD_ROWS;
+  if(!((cols===WORD_COLS&&rows===WORD_ROWS)||
+       (cols===MEDIUM_WORD_COLS&&rows===MEDIUM_WORD_ROWS)))return false;
+  if(result.grid.length!==rows||result.grid.some(row=>row.length!==cols))return false;
   if(result.placements.length!==result.words.length || result.labels.length!==result.words.length)return false;
   for(const p of result.placements){
     if(!directions.some(d=>d.dx===p.dx&&d.dy===p.dy))return false;
     if(!result.words.includes(p.word))return false;
     for(let i=0;i<p.word.length;i++){
       const x=p.x+i*p.dx,y=p.y+i*p.dy;
-      if(x<0||y<0||x>=WORD_COLS||y>=WORD_ROWS||result.grid[y][x]!==p.word[i])return false;
+      if(x<0||y<0||x>=cols||y>=rows||result.grid[y][x]!==p.word[i])return false;
     }
   }
   return true;
