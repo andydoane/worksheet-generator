@@ -1,5 +1,24 @@
 # Worksheet Studio
 
+## PR 12b — Small True or False (v0.15.13)
+
+- **Use the actual uploaded artwork:** `images/thumbs_up.svg` and
+  `images/thumbs_down.svg` replace hand-drawn placeholders in the browser
+  preview. The PDF renders their **exact path geometry and matching circular
+  outlines as vectors**, not platform-dependent emoji.
+- **Shared preview/PDF layout:** `trueFalsePrintLayout.ts` plans the
+  title, measured and centered statement lines, two square thumb images,
+  and TRUE/FALSE labels in the same physical print coordinates for browser
+  and PDF. The thumbs/labels are reserved **before** fitting text so
+  even long statements cannot overlap them.
+- **80-character maximum** replaces 135 in validation and immediate
+  red/pink character-limit field feedback; all other Small activity
+  validation and layouts remain unchanged.
+- **Review:** `npm run test && npm run build && npm run sample:pr12b`.
+  Test short and 80-character statements in preview and print. Check that
+  the exact uploaded thumbs look correct, their circular outlines are
+  intact and no statement touches either thumb or its label.
+
 ## PR 12a follow-up — Small layout polish and immediate character-limit feedback (v0.15.12)
 
 - **Multiple Choice:** answer squares now align to a **consistent cap-height
