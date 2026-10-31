@@ -1,5 +1,6 @@
 import { PDFDocument, rgb, type PDFFont, type PDFPage } from 'pdf-lib';
 import fontkit from '@pdf-lib/fontkit';
+import {COVER_BORDER_SAFE_WIDTH,COVER_BORDER_SAFE_HEIGHT,isCoverBorderId,type CoverBorderId} from './coverBorders.ts';
 import {glyphInkCenter} from './fontInkCenter.ts';
 import {embedNunitoWeights} from './nunitoPdf.ts';
 import type {ModuleFonts} from './modulePdf.ts';
@@ -26,6 +27,7 @@ const MID_GREY = rgb(0.42, 0.42, 0.42);
 export type PdfDraft = {
   title: string;
   scripture: string;
+  coverBorder?: CoverBorderId;
   layouts: Record<2 | 3 | 4, LayoutId>;
   modules?: ModuleAssignments;
 };
@@ -170,7 +172,14 @@ function drawCenteredLines(
 function drawFrame(_page: PDFPage, _rect: PdfRect): void {}
 
 function drawCoverTitle(page: PDFPage, rect: PdfRect, fonts: Fonts, draft: PdfDraft): void {
-  const box = inset(rect, CONTENT_PADDING);
+  const bordered=isCoverBorderId(draft.coverBorder)&&draft.coverBorder!=='none';
+  const box = bordered?inset(rect,0):inset(rect, CONTENT_PADDING);
+  if(bordered){
+    box.x+=(box.width-COVER_BORDER_SAFE_WIDTH*PT)/2;
+    box.y+=(box.height-COVER_BORDER_SAFE_HEIGHT*PT)/2;
+    box.width=COVER_BORDER_SAFE_WIDTH*PT;
+    box.height=COVER_BORDER_SAFE_HEIGHT*PT;
+  }
   const title = draft.title.trim() || 'Your story title';
   const reference = draft.scripture.trim() || 'Scripture reference';
   const subtitle = fitText(fonts.body, reference, box.width, 12, 8, 2);
@@ -241,7 +250,7 @@ function drawActivityPlaceholder(page: PDFPage, rect: PdfRect, size: Region['siz
  *
  * All text/graphics are vectors. No canvas screenshots or print dialogs.
  */
-export async function createBookletPdf(draft: PdfDraft, fontFiles: PdfFontFiles): Promise<Uint8Array> {
+export async function createBookletPdf(draft: PdfDraft, fontFiles: PdfFontFiles, borderPng?:Uint8Array): Promise<Uint8Array> {
   const document = await PDFDocument.create();
   document.registerFontkit(fontkit);
   document.setTitle((draft.title.trim() || 'Bible Worksheet') + ' - Booklet');
@@ -276,12 +285,16 @@ export async function createBookletPdf(draft: PdfDraft, fontFiles: PdfFontFiles)
     bankInkCenter:(word,size)=>glyphInkCenter(bankFace,word,size),
     titleInkCenter:(word,size)=>glyphInkCenter(titleFace,word,size)};
 
+  const borderEnabled=isCoverBorderId(draft.coverBorder)&&draft.coverBorder!=='none';
+  if(borderEnabled&&!borderPng)throw Error('Selected cover border image is unavailable. Try exporting again.');
+  const borderImage=borderEnabled&&borderPng?await document.embedPng(borderPng):undefined;
   const sheets = getPrintableSheetRegions(draft);
   for (let sheetIndex = 0; sheetIndex < sheets.length; sheetIndex++) {
     const page = document.addPage([SHEET_WIDTH, SHEET_HEIGHT]);
     for (const item of sheets[sheetIndex]) {
       drawFrame(page, item.rect);
       if (item.kind === 'title') {
+        if(borderImage)page.drawImage(borderImage,{x:item.rect.x,y:item.rect.y,width:item.rect.width,height:item.rect.height});
         drawCoverTitle(page, item.rect, fonts, draft);
       } else {
         const assigned: ActivityModule | undefined = draft.modules?.[slotKey(item.bookletPage, item.id)];

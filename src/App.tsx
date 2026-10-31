@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import pkg from '../package.json';
+import {COVER_BORDERS,coverBorderUrl,isCoverBorderId,type CoverBorderId} from './coverBorders.ts';
 import {markWordSelection} from './storySelection.ts';
 import {fieldExceedsLength} from './fieldLengthFeedback.ts';
 import { downloadBookletPdf } from './exportPdf';
@@ -27,6 +28,7 @@ import {
 type Draft = {
   title: string;
   scripture: string;
+  coverBorder: CoverBorderId;
   bigIdea: string;
   verseReference: string;
   verseText: string;
@@ -41,6 +43,7 @@ const KEY = 'worksheet-studio:draft:v1';
 const blank: Draft = {
   title: '',
   scripture: '',
+  coverBorder: 'none',
   bigIdea: '',
   verseReference: '',
   verseText: '',
@@ -74,6 +77,7 @@ function readDraft(): Draft {
     return {
       title: text('title'),
       scripture: text('scripture'),
+      coverBorder: isCoverBorderId(value.coverBorder) ? value.coverBorder : 'none',
       bigIdea: text('bigIdea'),
       verseReference: text('verseReference'),
       verseText: text('verseText'),
@@ -93,9 +97,12 @@ function readDraft(): Draft {
 function RegionContents({ region, draft, module, showSolution = false }: { region: Region; draft: Draft; module?: ActivityModule; showSolution?: boolean }) {
   if (region.kind === 'title') {
     return (
-      <div className="cover-content">
-        <span className="cover-title">{draft.title.trim() || 'Your story title'}</span>
-        <span className="cover-reference">{draft.scripture.trim() || 'Scripture reference'}</span>
+      <div className={'cover-content'+(draft.coverBorder!=='none'?' cover-content-bordered':'')}>
+        {coverBorderUrl(draft.coverBorder)&&<img className="cover-border-art" src={coverBorderUrl(draft.coverBorder)} alt="" aria-hidden="true"/>}
+        <div className="cover-text-safe">
+          <span className="cover-title">{draft.title.trim() || 'Your story title'}</span>
+          <span className="cover-reference">{draft.scripture.trim() || 'Scripture reference'}</span>
+        </div>
       </div>
     );
   }
@@ -130,7 +137,7 @@ function BookletPage({
     <div className="booklet-page" aria-label={'Booklet page ' + page + ' layout'}>
 
       {regions.map((region) => {
-        const style = { ...regionStyle(region), padding: String((BOOKLET.padding / BOOKLET.page.width) * 100) + '%' };
+        const style = { ...regionStyle(region), padding: region.kind==='title'&&draft.coverBorder!=='none'?'0':String((BOOKLET.padding / BOOKLET.page.width) * 100) + '%' };
         const className = 'booklet-region ' + (region.kind === 'title' ? 'title-region' : 'activity-region') +
           ' size-' + region.size + (region.id === selectedId ? ' selected-region' : '');
         const content = <RegionContents region={region} draft={draft} module={draft.modules[slotKey(page, region.id)]} showSolution={showSolution && region.id === selectedId} />;
@@ -175,6 +182,7 @@ export default function App() {
   const [saved, setSaved] = useState(false);
   const [exporting, setExporting] = useState(false);
   const [exportError, setExportError] = useState<string | null>(null);
+  const [borderGalleryOpen,setBorderGalleryOpen]=useState(false);
 
   useEffect(() => {
     try {
@@ -376,6 +384,28 @@ export default function App() {
                   <div className="field">
                     <label htmlFor="scripture">Story Scripture reference</label>
                     <input id="scripture" value={draft.scripture} onChange={(e) => edit('scripture', e.target.value)} placeholder="e.g. 1 Samuel 17" maxLength={120} />
+                  </div>
+                  <div className="field cover-border-field">
+                    <label>Front cover border</label>
+                    <div className="cover-border-choice">
+                      <div className="cover-border-current" aria-hidden="true">
+                        {coverBorderUrl(draft.coverBorder)?<img src={coverBorderUrl(draft.coverBorder)} alt=""/>:<span>No border</span>}
+                      </div>
+                      <div className="cover-border-choice-actions">
+                        <strong>{draft.coverBorder==='none'?'No border':COVER_BORDERS.find(item=>item.id===draft.coverBorder)?.name}</strong>
+                        <button type="button" className="cover-border-trigger" aria-expanded={borderGalleryOpen} aria-controls="cover-border-gallery" onClick={()=>setBorderGalleryOpen(open=>!open)}>{borderGalleryOpen?'Close gallery':'Choose border'}</button>
+                        {draft.coverBorder!=='none'&&<button type="button" className="cover-border-remove" onClick={()=>setDraft(previous=>({...previous,coverBorder:'none'}))}>Remove border</button>}
+                      </div>
+                    </div>
+                    {borderGalleryOpen&&<div className="cover-border-gallery" id="cover-border-gallery" role="group" aria-label="Choose a front cover border">
+                      <button type="button" className={'cover-border-option'+(draft.coverBorder==='none'?' selected':'')} aria-pressed={draft.coverBorder==='none'} onClick={()=>{setDraft(previous=>({...previous,coverBorder:'none'}));setBorderGalleryOpen(false)}}>
+                        <span className="cover-border-thumbnail cover-border-no-art">No border</span><span>None</span>
+                      </button>
+                      {COVER_BORDERS.map(border=><button key={border.id} type="button" className={'cover-border-option'+(draft.coverBorder===border.id?' selected':'')} aria-pressed={draft.coverBorder===border.id} onClick={()=>{setDraft(previous=>({...previous,coverBorder:border.id}));setBorderGalleryOpen(false)}}>
+                        <img className="cover-border-thumbnail" src={border.url} alt=""/><span>{border.name}</span>
+                      </button>)}
+                    </div>}
+                    <p>A border reduces the title text area to 4.3 × 2.15 inches.</p>
                   </div>
                   <div className="field separated">
                     <label htmlFor="bigIdea">Big Idea</label>
