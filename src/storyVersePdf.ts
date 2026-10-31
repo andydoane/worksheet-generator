@@ -252,9 +252,9 @@ function unscrambleVerse(page:PDFPage,b:Rect,fonts:ModuleFonts,m:UnscrambleVerse
     b.y+b.height-72,'scramble',verseScrambles(m));
 }
 function mistakes(page:PDFPage,b:Rect,fonts:ModuleFonts,m:Extract<StoryVerseModule,{type:'circle-mistakes'}>):void {
-  heading(page,fonts,mistakesTitle(m.count),b);
   const plan=planMistakes(m.text,(text,size)=>width(fonts.body,text,size),b.width,b.height);
   if(!plan)throw Error('Circle the Mistakes paragraph cannot fit. Shorten the text.');
+  centered(page,fonts.title,mistakesTitle(m.count),b,b.y+b.height-plan.titleY,MODULE_TITLE_PT);
   plan.lines.forEach(line=>page.drawText(line.text,{
     x:b.x+line.x,y:b.y+b.height-line.y,
     size:plan.fontSize,font:fonts.body,color:INK,
