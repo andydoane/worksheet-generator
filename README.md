@@ -1,5 +1,58 @@
 # Worksheet Studio
 
+## PR 10f — Crossword, Spiral Verse, and finishing Large-module corrections
+
+Completes the requested round of **Large-module-specific refinement** without
+changing the existing 25 types, saved assignments, booklet geometry or fonts.
+
+### Finish the Story screenshot correction
+The preview now renders **the entire activity as one SVG scene** in canonical
+print coordinates: title, exact 64pt word bank, and the fitted paragraph.
+The former approach used independent flexbox title/bank and a separately scaled
+story SVG; that allowed the text to begin underneath the bank and clip rows.
+The browser now measures the real local Nunito Medium font through fontkit,
+the same outlines used in PDF export. Both renderers call the shared
+`planStory` function using identical print width/height and 13-to-9pt fitting.
+The user's **full Red Sea paragraph** is a regression fixture.
+
+### Verse Cryptogram corrections
+- **Double the word gap** (16pt) so individual coded words are distinct.
+- The verse **reference sits directly beneath the decoding key**, with
+  padding, rather than at the bottom.
+- **Punctuation uses the upper writing-line row** (next to answer blanks), not
+  the lower substituted-symbol row. Both preview and print follow this rule.
+- All 26 cipher signs are still **individual monochrome vector outlines**:
+  they are **not pictures, bitmap assets, or color emoji**. They are *not*
+  Unicode text glyphs; switching to an embedded custom character font would
+  be separate work if copyable/searchable characters become essential.
+
+### Crossword
+- Accept 6–10 `ANSWER, clue` entries. A phrase like **Red Sea** is written
+  normally in the editor but becomes **REDSEA** in the generated grid.
+- Preserve connected, crossing-aware backtracking and seeded regeneration.
+  Prefer compact, near-square candidate placements instead of arbitrarily
+  wide crossword arrangements.
+- Determine the **largest available writing square size** after measuring
+  printable Across/Down clues, down to the existing legibility minimum.
+  Avoid two disconnected grids and keep header-to-clue spacing clear.
+
+### Spiral Verse
+- Balance the wrapped verse-bank lines using actual Nunito Bold metrics.
+- Center the entire visible spiral in the area beneath the bank.
+- Use **2.4–5.5 turns** based on verse length. A short verse now has a much
+  shorter writing path than a long verse.
+- Start at the **outside** of the spiral and print the **first word along the
+  curved path** as a handwriting guide, in both SVG preview and vector PDF.
+
+### Verification
+`npm run test && npm run build && npm run sample:pr10f`.
+Tests include 10-clue crosswords with a two-word answer, full Red Sea passage
+layout, responsive spiral length, punctuation and word gaps, and two-sheets
+landscape US Letter output. Two full booklet examples are generated.
+
+Remaining project work moves to Medium/Small polish, then import/export,
+answer keys and final printer calibration for the first weekly release.
+
 ## PR 10e — Large word-search and cryptogram layout polish
 
 ### Additional corrections from PR 10d review

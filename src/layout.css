@@ -402,3 +402,12 @@
   font:700 clamp(9px,2.7cqw,12px)/1.2 'Nunito',sans-serif;
   margin-top:auto;
 }
+
+/* PR 10f: maximize crossword writing squares without sacrificing readable clues. */
+.crossword-preview .crossword-grid {width:96%;max-height:64%;flex:1 1 auto;}
+.crossword-preview .crossword-clues {flex:0 1 auto;min-height:0;gap:10px;}
+.crossword-preview .crossword-clues>div {font:500 clamp(7px,2.1cqw,10px)/1.2 'Nunito',sans-serif;gap:4px;}
+.crossword-preview .crossword-clues strong {padding-bottom:7px;}
+.spiral-bank {font:700 clamp(8px,2.45cqw,12px)/1.25 'Nunito',sans-serif;}
+.spiral-bank .spiral-bank-verse {text-wrap:balance;}
+.spiral-preview .spiral-svg {min-height:0;max-height:100%;align-self:center;}

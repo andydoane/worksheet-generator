@@ -6,7 +6,7 @@ import {createBookletPdf} from '../src/pdf.ts';
 import {moduleForSize,blankModule,readAssignments,validateModule} from '../src/modules.ts';
 import {
   parseCrossword,generateCrossword,checkCrossword,connectPositions,parseConnectionWords,
-  spiralPoints,validateSpecialty,
+  spiralPoints,spiralTurns,spiralFirstWord,validateSpecialty,
 } from '../src/specialtyModules.ts';
 
 const entries=[
@@ -57,7 +57,9 @@ test('crossword parser handles comma-separated answers and clue text',()=>{
   assert.equal(parsed[0].answer,'DAVID');
   assert.equal(parsed[0].clue,'Young shepherd who faced a giant');
   assert.ok(validateSpecialty({...crossword,entries:'ONE, clue\nTWO, clue'}).length);
-  assert.ok(validateSpecialty({...crossword,entries:entries.replace('DAVID','DAVI D')}).length);
+  assert.equal(parseCrossword('Red Sea, Where Moses crossed')[0].answer,'REDSEA');
+  assert.deepEqual(validateSpecialty({...crossword,entries:entries.replace('ISRAEL','Red Sea')}),[]);
+  assert.ok(validateSpecialty({...crossword,entries:entries.replace('DAVID','DAVI 3D')}).length);
   assert.ok(validateSpecialty({...crossword,entries:entries.replace('GOLIATH, Giant from Gath','DAVID, Duplicate')}).length);
 });
 
@@ -131,4 +133,23 @@ test('all five specialty activities export to a vector two-sheet booklet',async(
   await assert.rejects(async()=>createBookletPdf({
     ...draft,modules:{'2:top-medium':crossword},
   },await fontFiles()),/wrong size area/);
+});
+
+
+test('spiral length responds to verse length and starts at the first word',()=>{
+ assert.ok(spiralTurns('Jesus wept.')<spiralTurns('God so loved the world that he gave his one and only Son.'));
+ assert.ok(spiralTurns('A'.repeat(260))<=5.5);
+ assert.equal(spiralFirstWord('  In the beginning'), 'In');
+ assert.equal(spiralPoints(480,spiralTurns('Jesus wept.')).length,480);
+});
+test('nine and ten crossword clues remain connected with multi-word normalization',()=>{
+ const nine={...crossword,entries:entries+'\nRED SEA, Where Israel crossed\nMANGER, Where baby Jesus lay'};
+ const parsed=parseCrossword(nine.entries);
+ assert.equal(parsed[8].answer,'REDSEA');
+ assert.equal(parsed.length,10);
+ assert.deepEqual(validateSpecialty(nine),[]);
+ const generated=generateCrossword(nine);
+ assert.ok(checkCrossword(generated));
+ assert.equal(generated.placements.length,10);
+ assert.ok(generated.width<=21&&generated.height<=21);
 });

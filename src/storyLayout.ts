@@ -50,5 +50,10 @@ export function planStory(story:string,measure:(text:string,size:number)=>number
 /** Physical PDF story region in points: 4.8×5.2 inches, inset 0.1 inches.
  * Share these dimensions with the browser SVG viewBox to avoid CSS text clipping.
  */
-export const STORY_BODY_WIDTH=(4.8-.2)*72-6;
-export const STORY_BODY_HEIGHT=(5.2-.2)*72-42-64-18-5;
+export const STORY_INNER_WIDTH=(4.8-.2)*72;
+export const STORY_INNER_HEIGHT=(5.2-.2)*72;
+export const STORY_BODY_WIDTH=STORY_INNER_WIDTH-6;
+export const STORY_BODY_HEIGHT=STORY_INNER_HEIGHT-42-64-18; // matches modulePdf exactly
+export const STORY_BODY_TOP=STORY_INNER_HEIGHT-5-STORY_BODY_HEIGHT;
+export const STORY_BANK_TOP=42;
+export const STORY_BANK_HEIGHT=64;
