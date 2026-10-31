@@ -451,3 +451,16 @@
 #sv-verse.verse-selection-no {animation:verse-no-shake .26s ease-in-out;outline:2px solid #ba7a57;outline-offset:1px;}
 .verse-selection-feedback {color:#9a4b35!important;font-weight:700;}
 @media (prefers-reduced-motion:reduce) {#sv-verse.verse-selection-no {animation:none;}}
+
+/* Immediate, field-specific character-limit feedback without blocking input. */
+.activity-editor input.over-character-limit,
+.activity-editor textarea.over-character-limit {
+  background: #fff1f0;
+  border-color: #c86d75;
+  box-shadow: inset 0 0 0 1px #e5a1a5;
+}
+.activity-editor input.over-character-limit:focus-visible,
+.activity-editor textarea.over-character-limit:focus-visible {
+  outline: 2px solid #b95766;
+  outline-offset: 1px;
+}
