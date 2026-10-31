@@ -38,9 +38,9 @@ export function drawReconstructionPdf(page:PDFPage,rect:Rect,
    if(module.type==='unscramble-verse'){
     const char=item.scramble??'',size=8.2;
     page.drawText(char,{x:x+(plan.cell-fonts.puzzle.widthOfTextAtSize(char,size))/2,
-      y:y-16,font:fonts.puzzle,size,color:INK});
+      y:y-plan.glyphOffset,font:fonts.puzzle,size,color:INK});
    }else{
-    const size=plan.fontSize,baseline=y-16;
+    const size=plan.fontSize,baseline=y-plan.glyphOffset;
     const dx=(plan.cell-fonts.puzzle.widthOfTextAtSize(item.text,size))/2;
     page.pushOperators(pushGraphicsState(),concatTransformationMatrix(1,0,0,-1,0,2*baseline));
     page.drawText(item.text,{x:x+dx,y:baseline,font:fonts.puzzle,size,color:INK});
