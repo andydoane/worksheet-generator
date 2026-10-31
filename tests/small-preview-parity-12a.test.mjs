@@ -102,9 +102,9 @@ test('Odd Words columns are centered as a group and vertically centered, indepen
 });
 test('Unscramble title is identical without exclamation in preview and PDF',async()=>{
  const [preview,pdf]=await Promise.all([
-  readFile(new URL('../src/SmallModulePreview.tsx',import.meta.url),'utf8'),
+  readFile(new URL('../src/SmallFinishingPreview.tsx',import.meta.url),'utf8'),
   readFile(new URL('../src/smallPdf.ts',import.meta.url),'utf8')]);
- assert.match(preview,/>UNSCRAMBLE THE WORDS<\/div>/u);
+ assert.match(preview,/>UNSCRAMBLE THE WORDS<\/text>/u);
  assert.match(pdf,/'UNSCRAMBLE THE WORDS'/u);
  assert.doesNotMatch(preview,/UNSCRAMBLE THE WORDS!/u);
  assert.doesNotMatch(pdf,/UNSCRAMBLE THE WORDS!/u);
