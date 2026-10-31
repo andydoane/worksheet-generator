@@ -7,7 +7,7 @@ import {MODULE_TITLE_PT} from './pdfLayout.ts';
 import {balancedLines} from './storyVersePdf.ts';
 import {planCrossword,crosswordBlackCells} from './crosswordLayout.ts';
 import {CONNECT_BIG_TITLE,CONNECT_BIG_INSTRUCTION,planConnectBigIdea} from './connectBigIdeaLayout.ts';
-import {CONNECT_VERSE_TITLE,CONNECT_VERSE_INSTRUCTION,planConnectVerse} from './connectVerseLayout.ts';
+import {CONNECT_VERSE_TITLE,CONNECT_VERSE_INSTRUCTION,CONNECT_VERSE_BOX_STROKE,planConnectVerse} from './connectVerseLayout.ts';
 import {drawReconstructionPdf} from './verseReconstructionPdf.ts';
 import type {ModuleFonts} from './modulePdf.ts';
 import {
@@ -185,14 +185,20 @@ function connectVerseLarge(page:PDFPage,b:Rect,
  plan.bankLines.forEach(line=>centered(page,fonts.bodyBold,line.text,
   b.x,top-line.y,b.width,plan.bankFontSize));
  for(const item of plan.scattered){
-  const rad=item.angle*Math.PI/180;
+  if(!item.box)throw Error('Connect Verse expected a measured word box.');
+  // Level boxes let children draw to an unambiguous border. The layout has
+  // reserved the whole stroked rectangle in its collision bounds.
   page.pushOperators(pushGraphicsState(),concatTransformationMatrix(
-   Math.cos(rad),-Math.sin(rad),Math.sin(rad),Math.cos(rad),
-   b.x+item.x,top-item.y));
-  for(const glyph of item.glyphs){
-   page.drawText(glyph.char,{x:glyph.x,y:-glyph.y,font:fonts.puzzle,
-    size:item.fontSize,color:INK});
-  }
+   1,0,0,1,b.x+item.x,top-item.y));
+  page.drawRectangle({
+   x:-item.box.width/2,y:-item.box.height/2,
+   width:item.box.width,height:item.box.height,
+   color:rgb(1,1,1),borderColor:LIGHT,borderWidth:CONNECT_VERSE_BOX_STROKE,
+  });
+  page.drawText(item.word,{
+   x:item.glyphs[0]?.x??0,y:-(item.glyphs[0]?.y??0),
+   font:fonts.puzzle,size:item.fontSize,color:INK,
+  });
   page.pushOperators(popGraphicsState());
  }
 }
