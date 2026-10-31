@@ -29,6 +29,7 @@ export function fieldExceedsLength(module:ActivityModule,id:string,value:string)
   case 'who-clue':return value.trim().length>120;
   case 'who-answer':return (value.match(/\p{L}/gu)??[]).length>14;
   case 'sv-events':return tooLongLine(value,115);
+  case 'sv-true-statements':case 'sv-false-statements':return tooLongLine(value,115);
   case 'sv-statements':return parseStatements(value).some(row=>row.text.length>115);
   case 'sv-draw':return tooLongLine(value,105);
   case 'sv-reference':return value.length>38;
