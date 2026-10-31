@@ -193,7 +193,7 @@ function connectVerseLarge(page:PDFPage,b:Rect,
   page.drawRectangle({
    x:-item.box.width/2,y:-item.box.height/2,
    width:item.box.width,height:item.box.height,
-   color:rgb(1,1,1),borderColor:LIGHT,borderWidth:CONNECT_VERSE_BOX_STROKE,
+   color:rgb(1,1,1),borderColor:rgb(.27,.27,.27),borderWidth:CONNECT_VERSE_BOX_STROKE,
   });
   page.drawText(item.word,{
    x:item.glyphs[0]?.x??0,y:-(item.glyphs[0]?.y??0),
