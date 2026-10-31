@@ -6,7 +6,7 @@ export type Cryptogram=VerseCryptogram|BigIdeaCryptogram;
 export type CryptogramId=Cryptogram['type'];
 export const CRYPTOGRAM_MODULES=[
   {id:'verse-cryptogram',name:'Verse Cryptogram',size:'large',description:'Decode a Scripture verse with a shuffled 26-symbol cipher.'},
-  {id:'big-idea-cryptogram',name:'Big Idea Cryptogram',size:'medium',description:'Decode the Big Idea with the same reusable symbol cipher.'},
+  {id:'big-idea-cryptogram',name:'Solve the Code',size:'medium',description:'Decode a key idea or a short story event with the reusable symbol cipher.'},
 ] as const;
 export function isCryptogramId(id:unknown):id is CryptogramId{
   return id==='verse-cryptogram'||id==='big-idea-cryptogram';
@@ -44,7 +44,7 @@ export function validateCryptogram(module:Cryptogram):string[]{
     errors.push('Use unaccented A–Z letters; punctuation and numbers may remain.');
   if(/\s{3,}/u.test(content))errors.push('Use ordinary single spaces between words.');
   if(module.type==='big-idea-cryptogram'&&letters.length>18)
-    errors.push('This Big Idea has too many different letters for the small key (maximum 18).');
+    errors.push('This sentence has too many different letters for the small key (maximum 18).');
   return errors;
 }
 export type SymbolCode={letter:string;symbol:number};

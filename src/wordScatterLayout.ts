@@ -107,3 +107,83 @@ export function scatterWords(options:ScatterOptions):ScatterResult|null{
 export function scatterHasCollision(words:readonly ScatteredWord[],gap=0):boolean{
  return words.some((item,i)=>words.slice(i+1).some(other=>intersect(item.bounds,other.bounds,gap)));
 }
+
+/** Extent coverage is based on visible conservative word boxes, rather
+ * than their centers. Ratios are relative to the usable scatter field.
+ */
+export function scatterCoverage(words:readonly ScatteredWord[],field:ScatterBounds){
+ if(!words.length)return {width:0,height:0};
+ const left=Math.min(...words.map(w=>w.bounds.x));
+ const right=Math.max(...words.map(w=>w.bounds.x+w.bounds.width));
+ const top=Math.min(...words.map(w=>w.bounds.y));
+ const bottom=Math.max(...words.map(w=>w.bounds.y+w.bounds.height));
+ return {width:(right-left)/field.width,height:(bottom-top)/field.height};
+}
+
+/** Expand a finished collision-free scatter to use more of the canvas.
+ * Each axis transforms all *word centers* by a common affine stretch,
+ * always with scale >= 1. Consequently, every pair's axis-separated
+ * clearance can only grow; no new collision or handwriting obstruction
+ * can be introduced. Original word size, rotation and glyph jitter are
+ * unchanged. Recenter the visible *bounds* within the permitted field.
+ *
+ * Applied opt-in to Medium Connect the Big Idea, NOT Large Connect Verse.
+ */
+export function expandScatterCoverage(words:readonly ScatteredWord[],
+ field:ScatterBounds,target=0.86):ScatteredWord[]{
+ if(words.length<2)return [...words];
+ const output=words.map(word=>({...word,bounds:{...word.bounds}}));
+ for(const axis of ['x','y'] as const){
+  const dimension=axis==='x'?'width':'height';
+  const start=field[axis],span=field[dimension],mid=start+span/2,margin=2;
+  const centers=output.map(w=>w[axis]);
+  const halfSizes=output.map(w=>w.bounds[dimension]/2);
+  if(Math.max(...centers)-Math.min(...centers)<.00001)continue;
+  const positions=(s:number)=>centers.map(c=>mid+(c-mid)*s);
+  const limits=(s:number)=>{
+   const at=positions(s);
+   let lower=-Infinity,upper=Infinity;
+   for(let i=0;i<at.length;i++){
+    lower=Math.max(lower,start+margin+halfSizes[i]-at[i]);
+    upper=Math.min(upper,start+span-margin-halfSizes[i]-at[i]);
+   }
+   return {lower,upper,at,feasible:lower<=upper+.0000001};
+  };
+  const extents=(at:number[])=>({
+   low:Math.min(...at.map((v,i)=>v-halfSizes[i])),
+   high:Math.max(...at.map((v,i)=>v+halfSizes[i])),
+  });
+  const base=limits(1);
+  if(!base.feasible)continue;
+  let hi=2;
+  while(hi<64&&limits(hi).feasible)hi*=2;
+  let lo=1;
+  for(let i=0;i<36;i++){
+   const m=(lo+hi)/2;
+   if(limits(m).feasible)lo=m;else hi=m;
+  }
+  const maxScale=lo;
+  // Find only enough stretch to reach desired coverage, unless the
+  // available dimensions physically prevent the desired target.
+  let minScale=1,maxSearch=maxScale;
+  for(let i=0;i<36;i++){
+   const s=(minScale+maxSearch)/2;
+   const at=positions(s),e=extents(at);
+   if((e.high-e.low)/span<target)minScale=s;else maxSearch=s;
+  }
+  const originalCoverage=(()=>{
+   const e=extents(base.at);return (e.high-e.low)/span;
+  })();
+  if(originalCoverage>=target)continue;
+  const scaled=limits(maxSearch);
+  const edges=extents(scaled.at);
+  const wantedShift=mid-(edges.low+edges.high)/2;
+  const shift=Math.max(scaled.lower,Math.min(scaled.upper,wantedShift));
+  for(let i=0;i<output.length;i++){
+   const newCenter=scaled.at[i]+shift;
+   output[i][axis]=newCenter;
+   output[i].bounds[axis]=newCenter-halfSizes[i];
+  }
+ }
+ return output;
+}

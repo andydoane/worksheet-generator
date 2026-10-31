@@ -17,13 +17,13 @@ export default function CryptogramEditor({module,onChange}:{module:Cryptogram;on
       <input id="crypto-ref" value={module.reference} onChange={e=>onChange({reference:e.target.value})}
         placeholder="Romans 8:28"/>
     </>}
-    <label htmlFor="crypto-content">{module.type==='verse-cryptogram'?'Memory verse':'Big Idea statement'}</label>
+    <label htmlFor="crypto-content">{module.type==='verse-cryptogram'?'Memory verse':'Big Idea or Story Event'}</label>
     <textarea id="crypto-content" rows={module.type==='verse-cryptogram'?7:4}
       value={module.type==='verse-cryptogram'?module.verse:module.idea}
       onChange={e=>onChange(module.type==='verse-cryptogram'?{verse:e.target.value}:{idea:e.target.value})}
       placeholder={module.type==='verse-cryptogram'
         ?'For God so loved the world that he gave his one and only Son.'
-        :'God loves us and calls us to love others.'}/>
+        :'Type a key idea or a short sentence describing a story event.'}/>
     <p>Every letter uses one unique symbol from our 26-piece vector alphabet. Only the letters used in the text appear in the decoding key, sorted A–Z. Punctuation and numbers remain unchanged.</p>
     <details className="cipher-symbol-gallery"><summary>Preview the 26 printable symbols</summary>
       <div className="cipher-symbol-grid">{Array.from({length:CIPHER_SYMBOL_COUNT},(_,i)=><span key={i} title={CIPHER_SYMBOL_LABELS[i]}><CipherGlyph id={i}/></span>)}</div>

@@ -1,5 +1,28 @@
 # Worksheet Studio
 
+## PR 13b — Better Connect the Big Idea scattering + Solve the Code (v0.15.17)
+
+- **Connect the Big Idea:** the existing seeded, 80%-scaled, collision-safe
+  word scatter is now followed by an opt-in **coverage expansion** to
+  increase use of the remaining Medium word-connection area toward
+  86% of each dimension where physically possible. Word centers are
+  stretched independently along both axes (with scale **at least 1**),
+  so preexisting collision clearance only grows. Font size, glyph jitter,
+  rotations, order and reference-bank typography remain unchanged.
+  The **Large Connect the Verse** continues using the original engine
+  without this expansion.
+- **Solve the Code:** the former **Big Idea Cryptogram** Medium activity is
+  renamed in the activity picker. Its editor label is now **Big Idea or
+  Story Event**, with the prompt **Type a key idea or a short sentence
+  describing a story event.** The PDF already printed "SOLVE THE CODE!"
+  and no symbol substitution or 62-character limit changes were needed.
+  The underlying `big-idea-cryptogram` ID and `idea` field are kept
+  for **backward compatibility with saved worksheets**.
+- **Review:** `npm run test && npm run build && npm run sample:pr13b`.
+  Compare two seed variants of *The Lord God is a mighty Savior*, short
+  and 20-word connection activities, and story-event cryptograms in
+  the printable booklet and live SVG preview.
+
 ## PR 13a — Small module finishing touches (v0.15.16)
 
 - **Unscramble the Words:** Each of two answers may now be a single word
