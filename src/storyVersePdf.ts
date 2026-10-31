@@ -4,10 +4,11 @@ import {MODULE_TITLE_PT,verticalStack,centeredBaseline} from './pdfLayout.ts';
 import {planMistakes} from './mediumParityLayout.ts';
 import {planFinishVerse} from './finishVerseLayout.ts';
 import {drawReconstructionPdf} from './verseReconstructionPdf.ts';
+import {planSortStory} from './sortStoryLayout.ts';
 import type { ModuleFonts } from './modulePdf.ts';
 import {
   boxGrid, linesFromInput, mistakesTitle, orderedStoryEvents, parseVerse,
-  sortedStoryBank, verseBank, verseScrambles, type StoryVerseModule,
+  verseBank, verseScrambles, type StoryVerseModule,
   type FinishVerse, type UnscrambleVerse,
 } from './storyVerseModules.ts';
 
@@ -103,41 +104,42 @@ function order(page:PDFPage,b:Rect,fonts:ModuleFonts,module:Extract<StoryVerseMo
   });
 }
 function sort(page:PDFPage,b:Rect,fonts:ModuleFonts,module:Extract<StoryVerseModule,{type:'sort-story'}>):void {
-  heading(page,fonts,'SORT THE STORY',b);
-  const subtitle='Sort the letters into TRUE or FALSE. Circle the incorrect words in false statements.';
-  // Measure the exact requested subtitle; it wraps naturally without clipping.
-  const instructionSize=9.4;
-  const instructions=balancedLines(subtitle,fonts.bodyBold,instructionSize,b.width-12);
-  if(!instructions)throw Error('Sort the Story instructions do not fit.');
-  const instructionTop=b.y+b.height-39;
-  instructions.forEach((line,i)=>centered(page,fonts.bodyBold,line,b,instructionTop-i*11.2,instructionSize));
-  const items=sortedStoryBank(module);
-  const contentTop=instructionTop-instructions.length*11.2-11;
-  const area={x:b.x,y:b.y+4,width:b.width,height:contentTop-b.y-4};
-  // Banks grow when few statements are present; answer boxes remain stable.
-  const [bank,answers]=verticalStack(area,[
-    {height:items.length*23,maxHeight:items.length*38,grow:1},
-    {height:72,maxHeight:89,grow:.25},
-  ],10);
-  const top=bank.y+bank.height,rowH=bank.height/items.length;
-  page.drawRectangle({x:bank.x,y:bank.y,width:bank.width,height:bank.height,borderWidth:.9,borderColor:INK});
-  items.forEach((item,i)=>{
-    const y=top-(i+1)*rowH;
-    if(i)page.drawLine({start:{x:b.x,y:y+rowH},end:{x:b.x+b.width,y:y+rowH},color:MID,thickness:.45});
-    page.drawRectangle({x:b.x+5,y:y+(rowH-18)/2,width:19,height:18,borderColor:MID,borderWidth:.7});
-    centered(page,fonts.puzzle,String.fromCharCode(65+i),{x:b.x+5,y,width:19,height:rowH},y+(rowH-18)/2+5,11);
-    drawLines(page,fonts.body,item.text,{x:b.x+31,y:y+3,width:b.width-39,height:rowH-6},
-      y+rowH-3,rowH-6,10.5,8,'left');
+ const plan=planSortStory(module,{
+  body:(text,size)=>width(fonts.body,text,size),
+  instruction:(text,size)=>width(fonts.bodyBold,text,size),
+ },b.width,b.height);
+ if(!plan)throw Error('Sort the Story statements cannot fit. Shorten the longest sentence.');
+ const top=b.y+b.height;
+ centered(page,fonts.title,'SORT THE STORY',b,top-plan.titleY,MODULE_TITLE_PT);
+ for(const line of plan.instructions){
+  page.drawText(line.text,{x:b.x+line.x-width(fonts.bodyBold,line.text,plan.instructionSize)/2,
+   y:top-line.y,font:fonts.bodyBold,size:plan.instructionSize,color:INK});
+ }
+ const stroke=plan.strokeWidth;
+ const rectangle=(rect:{x:number;y:number;width:number;height:number})=>
+  page.drawRectangle({x:b.x+rect.x,y:top-rect.y-rect.height,
+   width:rect.width,height:rect.height,borderColor:INK,borderWidth:stroke});
+ rectangle(plan.bank);
+ for(const y of plan.separators){
+  page.drawLine({start:{x:b.x+plan.bank.x,y:top-y},
+   end:{x:b.x+plan.bank.x+plan.bank.width,y:top-y},
+   color:INK,thickness:stroke});
+ }
+ for(const row of plan.rows){
+  rectangle(row.letterBox);
+  page.drawText(row.letter,{x:b.x+row.letterX-width(fonts.puzzle,row.letter,11)/2,
+   y:top-row.letterY,font:fonts.puzzle,size:11,color:INK});
+  for(const line of row.lines)page.drawText(line.text,{
+   x:b.x+line.x,y:top-line.y,font:fonts.body,size:row.textSize,color:INK,
   });
-  const gap=10,half=(answers.width-gap)/2;
-  for(let k=0;k<2;k++){
-    const x=answers.x+k*(half+gap);
-    const titleH=23;
-    centered(page,fonts.title,k?'FALSE':'TRUE',{x,y:answers.y,width:half,height:answers.height},
-      centeredBaseline({x,y:answers.y+answers.height-titleH,width:half,height:titleH},18),18);
-    page.drawRectangle({x,y:answers.y+1,width:half,height:answers.height-titleH-2,
-      borderColor:MID,borderWidth:.8});
-  }
+ }
+ for(const answer of plan.answers){
+  page.drawText(answer.label,{
+   x:b.x+answer.labelX-width(fonts.title,answer.label,18)/2,
+   y:top-answer.labelY,font:fonts.title,size:18,color:INK,
+  });
+  rectangle(answer.box);
+ }
 }
 function drawStory(page:PDFPage,b:Rect,fonts:ModuleFonts,module:Extract<StoryVerseModule,{type:'draw-story'}>):void {
   heading(page,fonts,'DRAW THE STORY',b);
