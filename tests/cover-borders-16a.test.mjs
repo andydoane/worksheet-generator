@@ -24,7 +24,7 @@ test('All 11 cover border assets have stable IDs and valid PNG files',async()=>{
  assert.equal(isCoverBorderId('border-12'),false);
  assert.equal(coverBorderUrl('none'),undefined);
  assert.equal(COVER_BORDER_SAFE_WIDTH,4.3);
- assert.equal(COVER_BORDER_SAFE_HEIGHT,2.15);
+ assert.equal(COVER_BORDER_SAFE_HEIGHT,2.1);
  assert.equal(BOOKLET.cell.width*2,4.8);
  assert.equal(BOOKLET.cell.height,2.6);
  for(const [index,border] of COVER_BORDERS.entries()){
