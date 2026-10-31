@@ -4,7 +4,7 @@ import {readFile} from 'node:fs/promises';
 import fontkit from '@pdf-lib/fontkit';
 import {PDFDocument} from 'pdf-lib';
 import {balancedBankLines} from '../src/balancedBankLines.ts';
-import {planDrawPicture,planSmallUnscramble} from '../src/smallFinishingLayout.ts';
+import {planDrawPicture,planSmallUnscramble,picturePromptSentence} from '../src/smallFinishingLayout.ts';
 import {planMultipleChoice,SMALL_PRINT_WIDTH,SMALL_PRINT_HEIGHT} from '../src/smallParityLayout.ts';
 import {planCheckboxes,CHECKBOX_INSTRUCTION} from '../src/smallBalancedLayout.ts';
 import {scrambleWord,scramblePhrase,validUnscramblePhrase,validateSmallModule,shuffledWordList} from '../src/smallModules.ts';
@@ -110,9 +110,9 @@ test('Draw a Picture balances instruction and protects the drawing box in previe
   const p=planDrawPicture(prompt,m.pdf.title),q=planDrawPicture(prompt,m.browser.title);
   assert.ok(p&&q);
   assert.deepEqual(p,q);
-  assert.equal(p.lines.map(l=>l.text).join(' '),'Draw a picture of '+prompt);
+  assert.equal(p.lines.map(l=>l.text).join(' '),picturePromptSentence(prompt));
   assert.deepEqual(p.lines.map(l=>l.text),
-   balancedBankLines('Draw a picture of '+prompt,SMALL_PRINT_WIDTH,m.pdf.title,p.fontSize,3));
+   balancedBankLines(picturePromptSentence(prompt),SMALL_PRINT_WIDTH,m.pdf.title,p.fontSize,3));
   assert.ok(p.lines.length>=1&&p.lines.length<=3);
   assert.ok(p.drawing.height>=70);
   assert.ok(p.lines.every(l=>l.y-p.fontSize>p.drawing.height));
