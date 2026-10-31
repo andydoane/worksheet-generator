@@ -4,10 +4,11 @@ import { type ModuleFonts } from './modulePdf.ts';
 import {planMultipleChoice,planOddWords} from './smallParityLayout.ts';
 import {planFirstLetters,planCheckboxes} from './smallBalancedLayout.ts';
 import {planTrueFalse,TRUE_FALSE_TITLE} from './trueFalsePrintLayout.ts';
+import {planWhoAmI,WHO_AM_I_LABEL} from './whoAmIPrintLayout.ts';
 import {THUMB_SOURCE_VIEW,THUMB_UP_PATH,THUMB_DOWN_PATH,
  THUMB_CIRCLE_RADIUS,THUMB_CIRCLE_STROKE,THUMB_DOWN_PATH_X_OFFSET} from './thumbArtwork.ts';
 import {
-  answerCharacters, scrambleWord,
+  scrambleWord,
   type SmallModule,
 } from './smallModules.ts';
 
@@ -167,17 +168,18 @@ function drawCheckboxes(page:PDFPage,box:Rect,module:Extract<SmallModule,{type:'
   }
 }
 function drawWho(page:PDFPage,box:Rect,module:Extract<SmallModule,{type:'who-am-i'}>,fonts:ModuleFonts):void {
-  paragraph(page,fonts.title,module.clue,box,box.y+box.height-3,19,11,6);
-  label(page,fonts.title,'WHO AM I?',box,box.y+70,24,16);
-  const chars=answerCharacters(module.answer);
-  const cellWidth=Math.min(15,box.width/chars.length);
-  const startX=box.x+(box.width-cellWidth*chars.length)/2;
-  chars.forEach((char,i)=>{
-    const x=startX+i*cellWidth;
-    if(char===' ')return;
-    if(char==='-')centered(page,fonts.body,'-',x+cellWidth/2,box.y+27,13);
-    else page.drawLine({start:{x:x+1,y:box.y+28},end:{x:x+cellWidth-2,y:box.y+28},thickness:1,color:INK});
-  });
+  const plan=planWhoAmI(module,(text,size)=>measure(fonts.title,text,size),box.width,box.height);
+  if(!plan)throw Error('Who Am I clue or answer cannot fit in the Small activity.');
+  const top=box.y+box.height;
+  for(const line of plan.clueLines)
+    centered(page,fonts.title,line.text,box.x+line.x,top-line.y,plan.clueSize);
+  centered(page,fonts.title,WHO_AM_I_LABEL,box.x+box.width/2,top-plan.questionY,plan.questionSize);
+  for(const mark of plan.answerMarks){
+    if(mark.kind==='hyphen')
+      centered(page,fonts.body,'-',box.x+(mark.x+mark.endX)/2,top-mark.y,13);
+    else page.drawLine({start:{x:box.x+mark.x,y:top-mark.y},
+      end:{x:box.x+mark.endX,y:top-mark.y},thickness:1,color:INK});
+  }
 }
 
 export function drawSmallModulePdf(page: PDFPage, region: Rect, module: SmallModule, fonts:ModuleFonts):void {
