@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import pkg from '../package.json';
 import {markWordSelection} from './storySelection.ts';
 import { downloadBookletPdf } from './exportPdf';
 import ModulePreview from './ModulePreview';
@@ -123,7 +124,7 @@ function BookletPage({
   const regions = getRegions(page, layoutId);
   return (
     <div className="booklet-page" aria-label={'Booklet page ' + page + ' layout'}>
-      <div className="booklet-page-number" aria-hidden="true">{page}</div>
+
       {regions.map((region) => {
         const style = { ...regionStyle(region), padding: String((BOOKLET.padding / BOOKLET.page.width) * 100) + '%' };
         const className = 'booklet-region ' + (region.kind === 'title' ? 'title-region' : 'activity-region') +
@@ -323,7 +324,7 @@ export default function App() {
 
       <div className="workspace">
         <header className="topbar">
-          <span className="breadcrumb">WORKSPACE <span>/</span> BOOKLET DESIGN</span>
+          <span className="breadcrumb">WORKSPACE <span>/</span> BOOKLET DESIGN <span>/</span> <strong className="app-version">v{pkg.version}{import.meta.env.VITE_BUILD_SHA?' · '+import.meta.env.VITE_BUILD_SHA.slice(0,7):''}</strong></span>
           <div className="topbar-right">
             <span className="save-indicator" role="status"><span className={saved ? 'dot saved' : 'dot'} />{saved ? 'Saved in this browser' : 'Browser saving unavailable'}</span>
             <button className="export-button export-ready" type="button" disabled={exporting} onClick={handleExport} aria-busy={exporting}>{exporting ? 'Creating PDF…' : 'Download PDF ↗'}</button>

@@ -1,14 +1,15 @@
 import {
-  rgb, degrees, type PDFFont, type PDFPage, pushGraphicsState,
+  rgb, type PDFFont, type PDFPage, pushGraphicsState,
   popGraphicsState, concatTransformationMatrix,
 } from 'pdf-lib';
 import {BOOKLET} from './booklet.ts';
 import {MODULE_TITLE_PT} from './pdfLayout.ts';
 import {balancedLines} from './storyVersePdf.ts';
+import {planCrossword} from './crosswordLayout.ts';
 import type {ModuleFonts} from './modulePdf.ts';
 import {
   generateCrossword,parseConnectionWords,connectPositions,spiralPoints,spiralTurns,spiralFirstWord,validateSpecialty,
-  type SpecialtyModule,type CrosswordPlacement,
+  type SpecialtyModule,
 } from './specialtyModules.ts';
 
 type Rect={x:number;y:number;width:number;height:number};
@@ -37,55 +38,29 @@ function wrapped(font:PDFFont,text:string,size:number,width:number):string[]|nul
   return out;
 }
 /** Fit the clues first, then maximize physical square size with the rest. */
+/** Same physical grid and clue geometry as the browser SVG preview. */
 function crossword(page:PDFPage,b:Rect,module:Extract<SpecialtyModule,{type:'crossword'}>,fonts:ModuleFonts):void{
   const puzzle=generateCrossword(module);
+  const plan=planCrossword(puzzle,(text,size)=>sizeOf(fonts.body,text,size),b.width,b.height);
+  if(!plan)throw Error('Crossword grid and clues cannot fit. Try shorter clues or regenerate.');
   centered(page,fonts.title,'CROSSWORD',b.x,b.y+b.height-27,b.width,MODULE_TITLE_PT);
-  const top=b.y+b.height-40;
-  const colWidth=b.width/2-12;
-  const lists=[puzzle.across,puzzle.down];
-  const fit=(clueHeight:number)=>{
-    for(let size=9.2;size>=6.6;size-=.4){
-      const step=size*1.25;
-      const rows=lists.map(list=>list.map(p=>wrapped(fonts.body,p.number+'. '+p.clue,size,colWidth-4)));
-      if(rows.some(group=>group.some(lines=>!lines)))continue;
-      if(rows.every(group=>group.reduce((sum,lines)=>sum+(lines!.length*step+4),0)<=clueHeight)){
-        return {size,step,rows:rows as string[][][]};
-      }
-    }
-    return null;
-  };
-  const maxCell=Math.min(25,(b.width-12)/puzzle.width);
-  let chosen:{cell:number;format:NonNullable<ReturnType<typeof fit>>}|null=null;
-  for(let cell=maxCell;cell>=9;cell-=.5){
-    const clueTop=top-puzzle.height*cell-11;
-    const clueSpace=clueTop-(b.y+3)-28;
-    if(clueSpace<=25)continue;
-    const format=fit(clueSpace);
-    if(format){chosen={cell,format};break;}
-  }
-  if(!chosen)throw Error('Crossword grid and clues cannot fit. Try shorter clues or regenerate.');
-  const {cell,format}=chosen;
-  const gw=puzzle.width*cell,gh=puzzle.height*cell;
-  const x0=b.x+(b.width-gw)/2,y0=top-gh;
+  const top=b.y+b.height-plan.gridTop;
   for(let y=0;y<puzzle.height;y++)for(let x=0;x<puzzle.width;x++){
     if(!puzzle.cells[y][x])continue;
-    const cx=x0+x*cell,cy=top-(y+1)*cell;
-    page.drawRectangle({x:cx,y:cy,width:cell,height:cell,borderColor:INK,borderWidth:.65});
+    const cx=b.x+plan.gridX+x*plan.cell,cy=top-(y+1)*plan.cell;
+    page.drawRectangle({x:cx,y:cy,width:plan.cell,height:plan.cell,
+      borderColor:INK,borderWidth:.65});
     const number=puzzle.numbers[x+','+y];
-    if(number)page.drawText(String(number),{x:cx+1.4,y:cy+cell-6.4,font:fonts.body,size:5.6,color:INK});
+    if(number)page.drawText(String(number),{x:cx+1.4,y:cy+plan.cell-6.4,
+      font:fonts.body,size:5.6,color:INK});
   }
-  const clueTop=y0-11;
-  for(const [col,name] of ['ACROSS','DOWN'].entries()){
-    const left=b.x+col*(b.width/2+3);
-    centered(page,fonts.title,name,left,clueTop-14,colWidth,17);
-    let cursor=clueTop-32;
-    for(const lines of format.rows[col]){
-      for(const line of lines){
-        page.drawText(line,{x:left+2,y:cursor,size:format.size,font:fonts.body,color:INK});
-        cursor-=format.step;
-      }
-      cursor-=4;
-    }
+  const cw=b.width/2-12;
+  for(const [name,header] of [['ACROSS',plan.acrossHeader],['DOWN',plan.downHeader]] as const){
+    centered(page,fonts.title,name,b.x+header.x,b.y+b.height-header.y,cw,17);
+  }
+  for(const row of [...plan.acrossRows,...plan.downRows]){
+    page.drawText(row.text,{x:b.x+row.x,y:b.y+b.height-row.y,
+      font:fonts.body,size:plan.clueFontSize,color:INK});
   }
 }
 function spiral(page:PDFPage,b:Rect,module:Extract<SpecialtyModule,{type:'spiral-verse'}>,fonts:ModuleFonts):void{
@@ -97,50 +72,39 @@ function spiral(page:PDFPage,b:Rect,module:Extract<SpecialtyModule,{type:'spiral
     if(rows&&rows.length<=4)break;
   }
   if(!rows||rows.length>4)throw Error('Verse does not fit the reference bank. Shorten it.');
-  const bankHeight=rows.length*size*1.27+35;
+  const verseStep=size*1.27;
+  // The last verse baseline sits just 10pt above the lower border;
+  // the previous bank reserved an entire EXTRA line below it.
+  const bankHeight=36+(rows.length-1)*verseStep;
   const bankTop=b.y+b.height-53,bankBottom=bankTop-bankHeight;
-  page.drawRectangle({x:b.x,y:bankBottom,width:b.width,height:bankHeight,borderColor:LIGHT,borderWidth:.9});
-  centered(page,fonts.bodyBold,module.reference,b.x,bankTop-15,b.width,10.5);
+  page.drawRectangle({x:b.x,y:bankBottom,width:b.width,height:bankHeight,
+    borderColor:LIGHT,borderWidth:.9});
+  centered(page,fonts.bodyBold,module.reference,b.x,bankTop-12,b.width,10.5);
   rows.forEach((text,i)=>centered(page,fonts.bodyBold,text,b.x+6,
-    bankTop-31-i*size*1.27,b.width-12,size));
-  const bottom=b.y+2;
-  const spaceHeight=bankBottom-bottom-10;
-  const diameter=Math.min(b.width-8,spaceHeight);
+    bankTop-26-i*verseStep,b.width-12,size));
+
+  const bottom=b.y+4,spaceHeight=bankBottom-bottom-6;
+  const diameter=Math.min(b.width-6,spaceHeight);
   if(diameter<120)throw Error('Verse bank leaves insufficient room for a writing spiral.');
-  const cx=b.x+b.width/2,cy=bottom+spaceHeight/2+5;
-  const side=diameter*.98;
-  // The writing path STARTS on the outside, spiraling inward.
+  const cx=b.x+b.width/2,cy=bottom+spaceHeight/2+3;
+  // Outer radius .445: 1.08x scaling leaves ~4pt vertical margins.
+  const side=diameter*1.08;
   const points=spiralPoints(800,spiralTurns(module.verse)).reverse()
     .map(p=>({x:cx+(p.x-.5)*side,y:cy-(p.y-.5)*side}));
-  for(let i=1;i<points.length;i++){
+  for(let i=1;i<points.length;i++)
     page.drawLine({start:points[i-1],end:points[i],thickness:1.1,color:INK});
-  }
+
   const first=spiralFirstWord(module.verse);
   if(first){
-    const fontSize=10.2;
-    let distance=7,segment=1;
-    // Draw first word along the outside arc, not in a separate disconnected label.
-    for(const character of first){
-      const advance=sizeOf(fonts.bodyBold,character,fontSize);
-      const at=distance+advance/2;
-      let traversed=0,point=points[0],angle=0;
-      for(let i=1;i<points.length;i++){
-        const a=points[i-1],z=points[i],len=Math.hypot(z.x-a.x,z.y-a.y);
-        if(traversed+len>=at){
-          const t=(at-traversed)/len;
-          point={x:a.x+(z.x-a.x)*t,y:a.y+(z.y-a.y)*t};
-          angle=Math.atan2(z.y-a.y,z.x-a.x);
-          segment=i;
-          break;
-        }
-        traversed+=len;
-      }
-      const nx=-Math.sin(angle),ny=Math.cos(angle);
-      page.drawText(character,{x:point.x+nx*5-advance/2,y:point.y+ny*5,
-        font:fonts.bodyBold,size:fontSize,rotate:degrees(angle*180/Math.PI),color:INK});
-      distance+=advance;
-    }
-    void segment;
+    // A short upright starter word, on a white-backed patch directly at the
+    // path entrance. Rotation of individual PDF glyphs previously caused
+    // overlaps (particularly the W/h in "Who"), so do not rotate letters.
+    const fontSize=10.5,tw=sizeOf(fonts.bodyBold,first,fontSize);
+    const x=Math.max(b.x+6,Math.min(b.x+b.width-tw-6,points[0].x-tw/2));
+    const y=Math.max(bottom+6,Math.min(bankBottom-18,points[0].y+9));
+    page.drawRectangle({x:x-3,y:y-3,width:tw+6,height:fontSize+6,
+      color:rgb(1,1,1)});
+    page.drawText(first,{x,y,font:fonts.bodyBold,size:fontSize,color:INK});
   }
 }
 function upsideDown(page:PDFPage,b:Rect,module:Extract<SpecialtyModule,{type:'upside-down-verse'}>,fonts:ModuleFonts):void{
@@ -178,17 +142,17 @@ function upsideDown(page:PDFPage,b:Rect,module:Extract<SpecialtyModule,{type:'up
 }
 function connect(page:PDFPage,b:Rect,module:Extract<SpecialtyModule,{type:'connect-verse'|'connect-big-idea'}>,fonts:ModuleFonts):void{
   centered(page,fonts.title,'CONNECT THE VERSE',b.x,b.y+b.height-25,b.width,23);
-  centered(page,fonts.body,'Connect each word to the next in order.',b.x,b.y+b.height-39,b.width,8.8);
+  centered(page,fonts.bodyBold,'Connect each word to the next in order.',b.x,b.y+b.height-39,b.width,8.8);
   const hasBank=module.type==='connect-big-idea';
   const list=parseConnectionWords(hasBank?module.idea:module.verse);
   let bankBottom=b.y+b.height-49;
   if(hasBank){
-    const bank=module.idea.toUpperCase(),rows=wrapped(fonts.body,bank,9,b.width-16);
+    const bank=module.idea.toUpperCase(),rows=wrapped(fonts.bank,bank,9,b.width-16);
     if(!rows||rows.length>2)throw Error('Big Idea bank needs shorter text.');
     const bankHeight=rows.length*12+9;
     bankBottom=b.y+b.height-47-bankHeight;
     page.drawRectangle({x:b.x,y:bankBottom,width:b.width,height:bankHeight,borderColor:LIGHT,borderWidth:.8});
-    rows.forEach((row,i)=>centered(page,fonts.body,row,b.x+4,bankBottom+bankHeight-14-i*12,b.width-8,9));
+    rows.forEach((row,i)=>centered(page,fonts.bank,row,b.x+4,bankBottom+bankHeight-14-i*12,b.width-8,9));
   }
   const field={x:b.x+3,y:b.y+4,width:b.width-6,height:bankBottom-b.y-12};
   const rows=Math.ceil(list.length/3),cw=field.width/3,rh=field.height/rows;

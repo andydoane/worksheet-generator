@@ -1,38 +1,86 @@
-import {useId} from 'react';
+import {useEffect,useState} from 'react';
+import fontkit from '@pdf-lib/fontkit';
+import {planCrossword,CROSSWORD_WIDTH,CROSSWORD_HEIGHT,type CrosswordPlan} from './crosswordLayout.ts';
 import {
-  generateCrossword,connectPositions,parseConnectionWords,spiralPoints,
+  generateCrossword,connectPositions,parseConnectionWords,spiralPoints,spiralTurns,spiralFirstWord,
   type SpecialtyModule,
 } from './specialtyModules.ts';
 
+let crosswordFace:Promise<ReturnType<typeof fontkit.create>>|null=null;
+function crosswordFont(){
+  if(!crosswordFace)crosswordFace=fetch(new URL('../fonts/Nunito-Medium.ttf',import.meta.url))
+    .then(r=>{if(!r.ok)throw Error('Nunito Medium');return r.arrayBuffer();})
+    .then(bytes=>fontkit.create(new Uint8Array(bytes)))
+    .catch(error=>{crosswordFace=null;throw error;});
+  return crosswordFace;
+}
 function CrosswordView({module}:{module:Extract<SpecialtyModule,{type:'crossword'}>}){
+  const [plan,setPlan]=useState<CrosswordPlan|null>(null);
+  const fingerprint=module.entries+'|'+module.seed;
+  useEffect(()=>{
+    let active=true;
+    setPlan(null);
+    let grid;
+    try{grid=generateCrossword(module);}
+    catch{return ()=>{active=false;};}
+    void crosswordFont().then(face=>{
+      const width=(text:string,size:number)=>
+        face.layout(text).positions.reduce((sum,p)=>sum+p.xAdvance,0)*size/face.unitsPerEm;
+      if(active)setPlan(planCrossword(grid,width));
+    }).catch(()=>{if(active)setPlan(null);});
+    return ()=>{active=false;};
+  },[fingerprint]);
   let puzzle;
   try{puzzle=generateCrossword(module);}catch(error){
     return <div className="module-preview module-incomplete"><strong>CROSSWORD</strong>
       <span>{error instanceof Error?error.message:'Unable to place these answers.'}</span></div>;
   }
-  return <div className="module-preview specialty-preview crossword-preview">
-    <div className="module-title">CROSSWORD</div>
-    <svg className="crossword-grid" viewBox={'0 0 '+(puzzle.width*20)+' '+(puzzle.height*20)}
-      role="img" aria-label={'Blank numbered crossword grid with '+puzzle.width+' columns'}>
+  return <div className="module-preview specialty-preview crossword-preview crossword-print-preview">
+    {plan?<svg className="crossword-print-svg" viewBox={'0 0 '+CROSSWORD_WIDTH+' '+CROSSWORD_HEIGHT}
+      preserveAspectRatio="xMidYMid meet" aria-label="Crossword grid and clues" role="img">
+      <text x={CROSSWORD_WIDTH/2} y="27" fontFamily="Mouse Memoirs" fontSize="25"
+        textAnchor="middle" fill="#222">CROSSWORD</text>
       {puzzle.cells.flatMap((row,y)=>row.map((letter,x)=>letter?<g key={x+','+y}>
-        <rect x={x*20+.4} y={y*20+.4} width={19.2} height={19.2} fill="#fff" stroke="#333" strokeWidth=".7"/>
-        {puzzle.numbers[x+','+y]&&<text x={x*20+2} y={y*20+6} fontSize="6">{puzzle.numbers[x+','+y]}</text>}
+        <rect x={plan.gridX+x*plan.cell} y={plan.gridTop+y*plan.cell}
+          width={plan.cell} height={plan.cell} fill="white" stroke="#222" strokeWidth=".65"/>
+        {puzzle.numbers[x+','+y]&&<text x={plan.gridX+x*plan.cell+1.4}
+          y={plan.gridTop+y*plan.cell+6.4} fontFamily="Nunito" fontSize="5.6" fill="#222">
+            {puzzle.numbers[x+','+y]}</text>}
       </g>:null))}
-    </svg>
-    <div className="crossword-clues">
-      <div><strong>Across</strong>{puzzle.across.map(p=><span key={p.number}>{p.number}. {p.clue}</span>)}</div>
-      <div><strong>Down</strong>{puzzle.down.map(p=><span key={p.number}>{p.number}. {p.clue}</span>)}</div>
-    </div>
+      {(['ACROSS','DOWN'] as const).map((name,i)=><text key={name}
+        x={(i?plan.downHeader.x:plan.acrossHeader.x)+(CROSSWORD_WIDTH/2-12)/2}
+        y={i?plan.downHeader.y:plan.acrossHeader.y} fontSize="17"
+        fontFamily="Mouse Memoirs" textAnchor="middle" fill="#222">{name}</text>)}
+      {[...plan.acrossRows,...plan.downRows].map((line,i)=><text key={i}
+        x={line.x} y={line.y} fontFamily="Nunito" fontWeight="500"
+        fontSize={plan.clueFontSize} fill="#222">{line.text}</text>)}
+    </svg>:<div className="crossword-preview-loading" aria-live="polite">
+      Preparing print-matched crossword…
+    </div>}
   </div>;
 }
 function SpiralView({module}:{module:Extract<SpecialtyModule,{type:'spiral-verse'}>}){
-  const path=spiralPoints().map(p=>(p.x*1000).toFixed(1)+','+(p.y*1000).toFixed(1)).join(' ');
+  const pts=spiralPoints(800,spiralTurns(module.verse)).reverse();
+  const path=pts.map(p=>(p.x*1000).toFixed(1)+','+(p.y*1000).toFixed(1)).join(' ');
+  const first=spiralFirstWord(module.verse);
+  const x=Math.min(900,Math.max(70,pts[0].x*1000));
+  const y=Math.min(920,Math.max(80,pts[0].y*1000-16));
+  const labelW=first.length*17+18;
   return <div className="module-preview specialty-preview spiral-preview">
     <div className="module-title">SPIRAL VERSE</div>
-    <div className="specialty-instruction">Copy the verse onto the spiral line.</div>
-    <div className="spiral-bank"><strong>{module.reference}</strong><span>{module.verse}</span></div>
-    <svg className="spiral-svg" viewBox="0 0 1000 1000" role="img" aria-label="Blank spiral writing line">
-      <polyline points={path} fill="none" stroke="currentColor" strokeWidth="2.8" strokeLinecap="round"/>
+    <div className="specialty-instruction">Copy the verse on the spiral line.</div>
+    <div className="spiral-bank"><strong>{module.reference}</strong>
+      <span className="spiral-bank-verse">{module.verse}</span></div>
+    <svg className="spiral-svg" viewBox="35 35 930 930" role="img"
+      aria-label="Writing spiral with a starter word at the outside">
+      <polyline points={path} fill="none" stroke="currentColor"
+        strokeWidth="2.8" strokeLinecap="round"/>
+      {first&&<g>
+        <rect x={Math.max(35,Math.min(965-labelW,x-labelW/2))} y={y-27}
+          width={labelW} height="34" fill="white"/>
+        <text x={x} y={y} fill="#222" textAnchor="middle" fontFamily="Nunito"
+          fontWeight="700" fontSize="24">{first}</text>
+      </g>}
     </svg>
   </div>;
 }

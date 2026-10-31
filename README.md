@@ -1,5 +1,59 @@
 # Worksheet Studio
 
+## PR 10g — Final Large cleanup and Medium typography preflight
+
+### Version and page furniture
+- Display **v0.15.0** beside `WORKSPACE / BOOKLET DESIGN`. GitHub
+  production and PR builds also show the first seven characters of the
+  build commit via `VITE_BUILD_SHA`, so it is clear which deployment is
+  being tested even across revisions that share one release version.
+- Remove `PAGE 1`, `PAGE 2`, etc. from both the PDF **and** interactive
+  booklet preview. The physical sheet size, bleed-safe padding, folding
+  and 4|1 / 2|3 imposition are unchanged.
+
+### Final Large-module refinements
+- **Crossword:** PDF and preview now use **the exact same pure layout planner**
+  for word-square size, grid position, clue font size, wrapped clues and
+  Across/Down heading positions. Browser fontkit uses the same local
+  Nunito Medium TrueType glyph metrics as pdf-lib; no separate CSS grid
+  approximation.
+- **Spiral Verse:** tighten the verse bank vertically, especially below
+  the last line; enlarge and center the available spiral in its panel.
+  Keep the existing length-adaptive spiral turns, awaiting physical-print
+  feedback on the preferred density. Replace rotated letters on a curved
+  PDF path (which caused W/h overlap) with a **short upright first-word
+  guide at the spiral's outer entrance**, on a white backing so it cannot
+  intersect the writing line. The browser preview shows the same starter
+  word.
+
+### Medium-module font and clipping preflight
+The audit found stale `Nunito Sans` browser references, unsupported
+weights and inconsistent print instructions. These are now normalized
+against the same static fonts already used by the exported worksheet:
+
+- **Nunito Medium 500** for body paragraphs, including Finish/Unscramble
+  the Verse and Circle the Mistakes.
+- **Nunito Bold 700** for subtitles and Scripture references in the
+  verse activities, Match instructions, Connect instructions, and specialty
+  activity headings.
+- **Nunito ExtraBold 800** for the Finish the Verse word bank and the
+  Connect the Big Idea reference bank.
+- Shared Medium preview containers now have explicit height limits to
+  avoid drawing outside the visible activity area.
+
+These are typography **foundation** fixes, not a claim that all nine
+Medium modules have reached final layout parity. Please still report
+module-specific alignment and space-usage issues during Medium testing.
+
+### Test and review
+`npm run test && npm run build && npm run sample:pr10g`.
+New automated tests compare fontkit versus pdf-lib Crossword layouts,
+check short and long spiral structure, assert the app version display,
+verify that the page labels are removed, and exercise mixed Medium
+print exports. Two additional print booklets illustrate a dense
+Crossword, the cleaned-up Spiral Verse, and all nine Medium activity
+types across representative input examples.
+
 ## PR 10f — Crossword, Spiral Verse, and finishing Large-module corrections
 
 Completes the requested round of **Large-module-specific refinement** without

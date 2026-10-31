@@ -241,12 +241,12 @@ function finishVerse(page:PDFPage,b:Rect,fonts:ModuleFonts,m:FinishVerse):void {
   }));
   bank.forEach((word,i)=>centered(page,fonts.bank,word.toUpperCase(),
     {x:b.x+(i%cols)*cw,y:top-bankH,width:cw,height:bankH},top-16-Math.floor(i/cols)*18,size));
-  centered(page,fonts.body,m.reference,{x:b.x,y:top-87,width:b.width,height:16},top-bankH-15,10.5);
+  centered(page,fonts.bodyBold,m.reference,{x:b.x,y:top-87,width:b.width,height:16},top-bankH-15,10.5);
   drawVerseBody(page,fonts,m.verse,{x:b.x+3,y:b.y+4,width:b.width-6,height:67},top-bankH-38,'box',[]);
 }
 function unscrambleVerse(page:PDFPage,b:Rect,fonts:ModuleFonts,m:UnscrambleVerse):void {
   heading(page,fonts,'UNSCRAMBLE THE VERSE',b);
-  centered(page,fonts.body,m.reference,b,b.y+b.height-43,11);
+  centered(page,fonts.bodyBold,m.reference,b,b.y+b.height-43,11);
   drawVerseBody(page,fonts,m.verse,{x:b.x+3,y:b.y+4,width:b.width-6,height:b.height-58},
     b.y+b.height-72,'scramble',verseScrambles(m));
 }

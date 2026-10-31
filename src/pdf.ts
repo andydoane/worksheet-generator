@@ -235,20 +235,6 @@ function drawActivityPlaceholder(page: PDFPage, rect: PdfRect, size: Region['siz
   });
 }
 
-function drawHalfPageLabel(page: PDFPage, bookletPage: PageNumber, half: 0 | 1, fonts: Fonts): void {
-  // Label sits inside the 0.35-inch trim margin, outside activity areas.
-  const x = (half * BOOKLET.page.width + BOOKLET.page.width / 2) * PT;
-  const label = 'PAGE ' + bookletPage;
-  const fontSize = 8;
-  page.drawText(label, {
-    x: x - width(fonts.body, label, fontSize) / 2,
-    y: 0.18 * PT,
-    size: fontSize,
-    font: fonts.body,
-    color: MID_GREY,
-  });
-}
-
 /**
  * Generates exactly two landscape letter PDF pages:
  *   1. Outside: booklet page 4 (left) and page 1 (right)
@@ -310,7 +296,7 @@ export async function createBookletPdf(draft: PdfDraft, fontFiles: PdfFontFiles)
       }
     }
     const sheet = SHEETS[sheetIndex];
-    sheet.pages.forEach((bookletPage, half) => drawHalfPageLabel(page, bookletPage, half as 0 | 1, fonts));
+
   }
 
   return document.save();
