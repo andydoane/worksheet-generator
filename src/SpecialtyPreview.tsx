@@ -1,8 +1,8 @@
 import {useEffect,useState} from 'react';
 import fontkit from '@pdf-lib/fontkit';
-import {planCrossword,CROSSWORD_WIDTH,CROSSWORD_HEIGHT,type CrosswordPlan} from './crosswordLayout.ts';
+import {planCrossword,crosswordBlackCells,CROSSWORD_WIDTH,CROSSWORD_HEIGHT,type CrosswordPlan} from './crosswordLayout.ts';
 import {
-  generateCrossword,connectPositions,parseConnectionWords,spiralPoints,spiralTurns,spiralFirstWord,
+  generateCrossword,connectPositions,parseConnectionWords,spiralPoints,spiralTurns,
   type SpecialtyModule,
 } from './specialtyModules.ts';
 
@@ -40,6 +40,9 @@ function CrosswordView({module}:{module:Extract<SpecialtyModule,{type:'crossword
       preserveAspectRatio="xMidYMid meet" aria-label="Crossword grid and clues" role="img">
       <text x={CROSSWORD_WIDTH/2} y="27" fontFamily="Mouse Memoirs" fontSize="25"
         textAnchor="middle" fill="#222">CROSSWORD</text>
+      {crosswordBlackCells(puzzle).map(({x,y})=><rect key={'black-'+x+','+y}
+        x={plan.gridX+x*plan.cell} y={plan.gridTop+y*plan.cell}
+        width={plan.cell} height={plan.cell} fill="#222"/>)}
       {puzzle.cells.flatMap((row,y)=>row.map((letter,x)=>letter?<g key={x+','+y}>
         <rect x={plan.gridX+x*plan.cell} y={plan.gridTop+y*plan.cell}
           width={plan.cell} height={plan.cell} fill="white" stroke="#222" strokeWidth=".65"/>
@@ -62,25 +65,15 @@ function CrosswordView({module}:{module:Extract<SpecialtyModule,{type:'crossword
 function SpiralView({module}:{module:Extract<SpecialtyModule,{type:'spiral-verse'}>}){
   const pts=spiralPoints(800,spiralTurns(module.verse)).reverse();
   const path=pts.map(p=>(p.x*1000).toFixed(1)+','+(p.y*1000).toFixed(1)).join(' ');
-  const first=spiralFirstWord(module.verse);
-  const x=Math.min(900,Math.max(70,pts[0].x*1000));
-  const y=Math.min(920,Math.max(80,pts[0].y*1000-16));
-  const labelW=first.length*17+18;
   return <div className="module-preview specialty-preview spiral-preview">
     <div className="module-title">SPIRAL VERSE</div>
     <div className="specialty-instruction">Copy the verse on the spiral line.</div>
     <div className="spiral-bank"><strong>{module.reference}</strong>
       <span className="spiral-bank-verse">{module.verse}</span></div>
     <svg className="spiral-svg" viewBox="35 35 930 930" role="img"
-      aria-label="Writing spiral with a starter word at the outside">
+      aria-label="Blank spiral line for copying the verse">
       <polyline points={path} fill="none" stroke="currentColor"
         strokeWidth="2.8" strokeLinecap="round"/>
-      {first&&<g>
-        <rect x={Math.max(35,Math.min(965-labelW,x-labelW/2))} y={y-27}
-          width={labelW} height="34" fill="white"/>
-        <text x={x} y={y} fill="#222" textAnchor="middle" fontFamily="Nunito"
-          fontWeight="700" fontSize="24">{first}</text>
-      </g>}
     </svg>
   </div>;
 }
