@@ -1,6 +1,7 @@
 import { PDFDocument, rgb, type PDFFont, type PDFPage } from 'pdf-lib';
 import fontkit from '@pdf-lib/fontkit';
 import {COVER_BORDER_SAFE_WIDTH,COVER_BORDER_SAFE_HEIGHT,isCoverBorderId,type CoverBorderId} from './coverBorders.ts';
+import {isActivityBorderReady,readActivityBorders,type ActivityBorders} from './activityBorders.ts';
 import {glyphInkCenter} from './fontInkCenter.ts';
 import {embedNunitoWeights} from './nunitoPdf.ts';
 import type {ModuleFonts} from './modulePdf.ts';
@@ -28,6 +29,7 @@ export type PdfDraft = {
   title: string;
   scripture: string;
   coverBorder?: CoverBorderId;
+  activityBorders?: ActivityBorders;
   layouts: Record<2 | 3 | 4, LayoutId>;
   modules?: ModuleAssignments;
 };
@@ -288,6 +290,7 @@ export async function createBookletPdf(draft: PdfDraft, fontFiles: PdfFontFiles,
   const borderEnabled=isCoverBorderId(draft.coverBorder)&&draft.coverBorder!=='none';
   if(borderEnabled&&!borderPng)throw Error('Selected cover border image is unavailable. Try exporting again.');
   const borderImage=borderEnabled&&borderPng?await document.embedPng(borderPng):undefined;
+  const selections=readActivityBorders(draft.activityBorders);
   const sheets = getPrintableSheetRegions(draft);
   for (let sheetIndex = 0; sheetIndex < sheets.length; sheetIndex++) {
     const page = document.addPage([SHEET_WIDTH, SHEET_HEIGHT]);
@@ -297,7 +300,14 @@ export async function createBookletPdf(draft: PdfDraft, fontFiles: PdfFontFiles,
         if(borderImage)page.drawImage(borderImage,{x:item.rect.x,y:item.rect.y,width:item.rect.width,height:item.rect.height});
         drawCoverTitle(page, item.rect, fonts, draft);
       } else {
-        const assigned: ActivityModule | undefined = draft.modules?.[slotKey(item.bookletPage, item.id)];
+        const key=slotKey(item.bookletPage,item.id);
+        const assigned: ActivityModule | undefined = draft.modules?.[key];
+        // No module renderer has earned bordered-layout support in PR 16b.
+        // Reject stale or programmatic selections rather than exporting art
+        // over an unfitted module. Later PRs enable IDs and draw with the
+        // corresponding centered safe-area viewport.
+        if(selections[key]&&!isActivityBorderReady(assigned?.type))
+          throw Error('Page '+item.bookletPage+' ('+item.id+'): Activity borders are not yet supported for this module. Remove the border before exporting.');
         if (assigned) {
           if (!moduleForSize(item.size).some((definition) => definition.id === assigned.type) &&
               !(item.size === 'medium' && assigned.type === 'connect-verse')) {

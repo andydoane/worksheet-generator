@@ -474,5 +474,32 @@
 .cover-border-no-art {display:flex;align-items:center;justify-content:center;background:#f7f8f5;color:#667a6c;font-weight:600;}
 
 .cover-text-safe {display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:clamp(5px,1.6cqw,9px);width:100%;height:100%;min-width:0;overflow:hidden;}
-.cover-content-bordered .cover-text-safe {position:relative;z-index:1;width:89.583333333%;height:82.6923076923%;overflow:hidden;}
+ .cover-content-bordered .cover-text-safe {position:relative;z-index:1;width:89.583333333%;height:80.7692307692%;overflow:hidden;}
 .cover-content-bordered .cover-title,.cover-content-bordered .cover-reference {max-width:100%;}
+
+/* PR 16b: per-region activity border gallery foundation. The chooser remains
+ * locked until each renderer is certified for its compact content area. */
+.activity-border-editor {display:grid;gap:8px;padding:12px 0;border-top:1px solid #e2ece4;border-bottom:1px solid #e2ece4;}
+.activity-border-heading {font-size:12px;font-weight:900;color:#294840;}
+.activity-border-current {width:105px;height:auto;max-height:112px;}
+.activity-border-gallery .cover-border-thumbnail {aspect-ratio:inherit;height:auto;}
+.activity-border-gallery .cover-border-option:disabled {opacity:.72;cursor:not-allowed;}
+.activity-border-gallery .cover-border-option:disabled:hover {border-color:#e2e9e2;}
+.activity-border-pending {margin:0;font:600 11px/1.5 'Nunito',sans-serif;color:#647f70;}
+@media (max-width:440px) {
+ .activity-border-editor .cover-border-choice {gap:8px;}
+ .activity-border-current {width:86px;}
+ .activity-border-gallery {grid-template-columns:repeat(2,minmax(0,1fr));}
+}
+
+.activity-border-current,.activity-border-thumbnail {position:relative;overflow:hidden;}
+.activity-border-thumbnail img {display:block;width:100%;height:100%;object-fit:fill;}
+/* Large PNG files are rotated 90° in storage. Reorient to portrait without
+ * changing their aspect or line weight, in both current selection and gallery. */
+.activity-border-current.has-rotated-art img,
+.activity-border-thumbnail.has-rotated-art img {
+ position:absolute;top:50%;left:50%;
+ width:108.333333%;height:92.307692%;
+ transform:translate(-50%,-50%) rotate(90deg);
+ object-fit:fill;
+}

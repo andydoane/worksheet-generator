@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import pkg from '../package.json';
 import {COVER_BORDERS,coverBorderUrl,isCoverBorderId,type CoverBorderId} from './coverBorders.ts';
+import {isActivityBorderReady,readActivityBorders,setActivityBorder,type ActivityBorders,type ActivityBorderId} from './activityBorders.ts';
+import ActivityBorderPicker from './ActivityBorderPicker.tsx';
 import {markWordSelection} from './storySelection.ts';
 import {fieldExceedsLength} from './fieldLengthFeedback.ts';
 import { downloadBookletPdf } from './exportPdf';
@@ -34,6 +36,7 @@ type Draft = {
   verseText: string;
   layouts: Record<2 | 3 | 4, LayoutId>;
   modules: ModuleAssignments;
+  activityBorders: ActivityBorders;
 };
 
 type EditorTab = 'details' | 'layouts' | 'activities';
@@ -49,6 +52,7 @@ const blank: Draft = {
   verseText: '',
   layouts: { ...DEFAULT_LAYOUTS },
   modules: {},
+  activityBorders: {},
 };
 
 const pages: { number: PageNumber; label: string }[] = [
@@ -87,6 +91,7 @@ function readDraft(): Draft {
         4: isLayoutId(storedLayouts[4]) ? storedLayouts[4] : DEFAULT_LAYOUTS[4],
       },
       modules: readAssignments(value.modules),
+      activityBorders: readActivityBorders(value.activityBorders),
     };
   } catch {
     // Storage can be unavailable, and old user content could be malformed.
@@ -249,8 +254,19 @@ export default function App() {
         modules[activeKey] = {type,verse:previous.verseText,seed:1};
       } else if (type) modules[activeKey] = blankModule(type);
       else delete modules[activeKey];
-      return { ...previous, modules };
+      const activityBorders=isActivityBorderReady(type||undefined)
+        ?previous.activityBorders
+        :setActivityBorder(previous.activityBorders,activeKey,'none');
+      return { ...previous, modules,activityBorders };
     });
+  }
+
+  function chooseActivityBorder(id:ActivityBorderId){
+    if(!activeKey||!activeModule||!isActivityBorderReady(activeModule.type))return;
+    setDraft(previous=>({
+      ...previous,
+      activityBorders:setActivityBorder(previous.activityBorders,activeKey,id),
+    }));
   }
 
   function editModule(update: Partial<ActivityModule>) {
@@ -486,6 +502,11 @@ export default function App() {
                     {activeRegion && moduleForSize(activeRegion.size).map((definition) =>
                       <option key={definition.id} value={definition.id}>{definition.name}</option>)}
                   </select>
+                  {activeRegion&&<ActivityBorderPicker key={activeKey}
+                    slotKey={activeKey} size={activeRegion.size}
+                    value={draft.activityBorders[activeKey]??'none'}
+                    enabled={isActivityBorderReady(activeModule?.type)}
+                    onChange={chooseActivityBorder}/>}
                   {activeModule?.type === 'draw-picture' && (
                     <div className="activity-inputs">
                       <label htmlFor="draw-prompt">Draw a picture of…</label>

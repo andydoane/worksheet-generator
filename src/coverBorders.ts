@@ -27,4 +27,4 @@ export function coverBorderUrl(id:CoverBorderId|undefined):string|undefined{
 }
 /** All measurements in inches relative to the unpadded 4.8x2.6 cover region. */
 export const COVER_BORDER_SAFE_WIDTH=4.3;
-export const COVER_BORDER_SAFE_HEIGHT=2.15;
+export const COVER_BORDER_SAFE_HEIGHT=2.1;
