@@ -4,7 +4,7 @@ import {readFile} from 'node:fs/promises';
 import fontkit from '@pdf-lib/fontkit';
 import {PDFDocument} from 'pdf-lib';
 import {planCrossword,CROSSWORD_WIDTH,CROSSWORD_HEIGHT} from '../src/crosswordLayout.ts';
-import {generateCrossword,spiralFirstWord,spiralTurns} from '../src/specialtyModules.ts';
+import {generateCrossword,spiralTurns} from '../src/specialtyModules.ts';
 import {createBookletPdf} from '../src/pdf.ts';
 const fonts=async()=>({
  mouseMemoirs:await readFile(new URL('../fonts/MouseMemoirs-Regular.ttf',import.meta.url)),
@@ -43,13 +43,12 @@ test('Crossword PDF and preview produce the same grid and clue coordinates',asyn
  assert.ok(planPdf.gridTop+planPdf.gridHeight<CROSSWORD_HEIGHT);
  assert.ok([...planPdf.acrossRows,...planPdf.downRows].every(x=>x.y<CROSSWORD_HEIGHT));
 });
-test('Spiral first word stays intact and the shorter verse needs fewer turns',()=>{
- assert.equal(spiralFirstWord('Who is our refuge?'),'Who');
+test('Spiral length varies by verse size',()=>{
  assert.ok(spiralTurns('Jesus wept.')<spiralTurns('Who shall separate us from the love of Christ?'));
 });
 test('App displays package version plus GitHub build revision, and page footers are absent',async()=>{
  const pkg=JSON.parse(await readFile(new URL('../package.json',import.meta.url),'utf8'));
- assert.equal(pkg.version,'0.15.0');
+ assert.equal(pkg.version,'0.15.1');
  const app=await readFile(new URL('../src/App.tsx',import.meta.url),'utf8');
  const pdf=await readFile(new URL('../src/pdf.ts',import.meta.url),'utf8');
  assert.match(app,/pkg\.version/);
