@@ -1,5 +1,24 @@
 # Worksheet Studio
 
+## PR 11e — Big Idea Cryptogram print/preview parity (v0.15.7)
+
+- **Medium Big Idea only:** Both preview and PDF now consume a pure shared
+  print-coordinate planner with the same actual Nunito Medium measurements.
+  Word-boundary wrapping and each complete row's centering are identical,
+  rather than relying on separate browser CSS flex wrapping.
+- **More usable three-line layout:** One compact key row, smaller cipher
+  symbols (8.5pt vs. 10pt), a protected 18pt minimum key-to-first-line
+  separation, responsive handwriting-row spacing of at least 28pt,
+  and a reduced internal bottom reserve (5pt).
+- **Handwriting line widths remain unchanged:** 13pt letter pitch and
+  11.2pt writing line. Dense 62-character messages fit on three lines
+  without cramming symbols against the next writing line.
+- **Large Verse Cryptogram unchanged**, as are all other module renderers
+  and the original 62-character Big Idea validation limit.
+- **Acceptance:** `npm run test && npm run build && npm run sample:pr11e`.
+  Inspect the short, medium, and 62-character Big Ideas in the generated
+  two-sheet PDF and compare them to the browser previews.
+
 ## PR 11d — Expanded True/False Maze, adaptive Unscramble spacing (v0.15.6)
 
 - **True or False Maze:** A fully generated **41 × 14** grid, with up to
