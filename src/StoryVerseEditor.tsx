@@ -1,15 +1,26 @@
-import {useRef} from 'react';
+import {useRef,useState} from 'react';
 import {markWordSelection} from './storySelection.ts';
 import {parseVerse,type FinishVerse,type StoryVerseModule} from './storyVerseModules.ts';
 
 function FinishVerseEditor({module,onChange}:{module:FinishVerse;onChange:(patch:Partial<StoryVerseModule>)=>void}){
  const inputRef=useRef<HTMLTextAreaElement>(null);
+ const [selectionMessage,setSelectionMessage]=useState('');
  const blankCount=parseVerse(module.verse).answers.length;
  function markSelection(){
   const input=inputRef.current;
   if(!input||blankCount>=8)return;
   const result=markWordSelection(module.verse,input.selectionStart,input.selectionEnd);
   if(!result)return;
+  const selected=result.text.slice(result.selectionStart,result.selectionEnd);
+  if(Array.from(selected).length>9){
+   setSelectionMessage('That word has more than nine characters. Choose a shorter word.');
+   input.classList.remove('verse-selection-no');
+   // Restart the no-shake animation for consecutive rejected selections.
+   void input.offsetWidth;
+   input.classList.add('verse-selection-no');
+   return;
+  }
+  setSelectionMessage('');
   onChange({verse:result.text});
   requestAnimationFrame(()=>{
    input.focus();
@@ -22,10 +33,12 @@ function FinishVerseEditor({module,onChange}:{module:FinishVerse;onChange:(patch
    onChange={e=>onChange({reference:e.target.value})} placeholder="Isaiah 41:10"/>
   <label htmlFor="sv-verse">Verse with missing words</label>
   <textarea id="sv-verse" rows={8} ref={inputRef} value={module.verse}
-   onChange={e=>onChange({verse:e.target.value})}
+   onAnimationEnd={e=>e.currentTarget.classList.remove('verse-selection-no')}
+   onChange={e=>{setSelectionMessage('');onChange({verse:e.target.value});}}
    placeholder={'Fear not, for I am with [you]; be not dismayed, for I am your [God].'}/>
   <button type="button" className="mark-blank" onMouseDown={e=>e.preventDefault()}
    onClick={markSelection} disabled={blankCount>=8}>Make selected word a blank</button>
+  {selectionMessage&&<p className="verse-selection-feedback" role="status">{selectionMessage}</p>}
   <p>Double-click a word, then select the button. Mark 2–8 words with [brackets];
    repeated words are marked individually. For longer passages, fewer blanks
    keep the handwriting boxes comfortably sized.</p>

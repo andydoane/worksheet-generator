@@ -1,5 +1,6 @@
 import { shuffledIndices } from './shuffle.ts';
 import { scrambleWord } from './smallModules.ts';
+import {letterOnly,validBracketedAnswer} from './versePunctuation.ts';
 
 export type StoryOrder = { type: 'story-order'; events: string; seed: number };
 export type SortStory = { type: 'sort-story'; statements: string; seed: number };
@@ -100,7 +101,7 @@ export function verseBank(module: FinishVerse): string[] {
   return shuffledIndices(answers.length, module.verse, module.seed).map(i=>answers[i]);
 }
 export function verseScrambles(module: UnscrambleVerse): string[] {
-  return parseVerse(module.verse).answers.map((word,index)=>scrambleWord(word,module.seed+index*29));
+  return parseVerse(module.verse).answers.map((word,index)=>scrambleWord(letterOnly(word),module.seed+index*29));
 }
 export function mistakesTitle(count:number):string {
   const names=['','ONE','TWO','THREE','FOUR','FIVE','SIX','SEVEN','EIGHT'];
@@ -113,7 +114,10 @@ function validateVerse(module:FinishVerse|UnscrambleVerse):string[] {
   if(!module.reference.trim() || module.reference.length>38) problems.push('Enter a verse reference no longer than 38 characters.');
   if(parsed.answers.length<min || parsed.answers.length>max) problems.push('Mark '+min+'–'+max+' missing words using [square brackets].');
   if(parsed.malformed) problems.push('Each missing verse word needs matching [square brackets].');
-  if(parsed.answers.some(x=>!(/^[\p{L}]+(?:['’-][\p{L}]+)*$/u.test(x))||x.length>9)) problems.push('Bracketed answers must be single words of at most 9 characters.');
+  if(parsed.answers.some(x=>module.type==='finish-verse'
+      ? (!/^[\p{L}]+(?:['’-][\p{L}]+)*$/u.test(x)||x.length>9)
+      : !validBracketedAnswer(x)))
+    problems.push('Bracketed answers must contain at most 9 letters (punctuation is allowed in Unscramble).');
   const maxLength=module.type==='finish-verse'?300:240;
   if(module.verse.length>maxLength) problems.push('Keep the marked verse under '+maxLength+' characters for the medium region.');
   if(!parsed.parts.some(x=>x.kind==='text' && x.value.trim())) problems.push('Include some ordinary verse text outside the blanks.');

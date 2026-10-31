@@ -445,3 +445,9 @@
 .matching-module .module-subtitle {font-weight:700;}
 .connect-preview .specialty-instruction {font-weight:700;}
 .connect-preview .connect-bank {font-weight:800;}
+
+/* PR 11c: gentle refusal when a selected verse word exceeds nine characters. */
+@keyframes verse-no-shake {0%,100% {transform:translateX(0)} 22%,66% {transform:translateX(-3px)} 44%,88% {transform:translateX(3px)}}
+#sv-verse.verse-selection-no {animation:verse-no-shake .26s ease-in-out;outline:2px solid #ba7a57;outline-offset:1px;}
+.verse-selection-feedback {color:#9a4b35!important;font-weight:700;}
+@media (prefers-reduced-motion:reduce) {#sv-verse.verse-selection-no {animation:none;}}

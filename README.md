@@ -1,5 +1,26 @@
 # Worksheet Studio
 
+## PR 11c — Reconstructed verses and Finish layout follow-up (v0.15.4)
+
+- **Finish the Verse:** The word bank text sits slightly lower inside its box.
+  Verse lines are now individually centered, with balanced word-boundary
+  wrapping to avoid orphaned two-word endings. Handwriting cells are **true
+  12.3pt squares** in browser preview and PDF. Selecting a word longer than
+  nine characters no longer inserts invalid brackets; the textarea briefly
+  shakes and shows a readable hint (with reduced-motion support).
+- **Unscramble the Verse:** Letters alone are scrambled. Apostrophes, commas,
+  periods, question marks, exclamation marks, colons and semicolons stay on
+  the top writing line. A separate lower row holds the scrambled letters.
+- **Upside Down Verse:** Combined book/reference/title, 17 book-name
+  abbreviations, punctuation on the top blanks (never flipped), and adaptive
+  length/fitting up to 160 letters / 240 total characters. The flipped glyph
+  baseline is kept clear of the next writing row.
+- Both reconstruction modules use a shared punctuation interpreter and a
+  single measured print-space layout for preview and PDF.
+- **Verify:** `npm run test && npm run build && npm run sample:pr11c`.
+  Inspect `artifacts/sample-pr11c-verse-reconstruction.pdf` alongside the
+  browser preview, including Isaiah 41:10 and Exodus 15:11.
+
 ## PR 11b — Finish the Verse and Circle follow-up (v0.15.3)
 
 - **Finish the Verse:** An adaptive, print-matched title (`FINISH ISAIAH 41:10`),

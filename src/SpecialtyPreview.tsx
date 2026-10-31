@@ -1,5 +1,6 @@
 import {useEffect,useState} from 'react';
 import fontkit from '@pdf-lib/fontkit';
+import {VerseReconstructionPreview} from './VerseReconstructionPreview.tsx';
 import {planCrossword,crosswordBlackCells,CROSSWORD_WIDTH,CROSSWORD_HEIGHT,type CrosswordPlan} from './crosswordLayout.ts';
 import {
   generateCrossword,connectPositions,parseConnectionWords,spiralPoints,spiralTurns,
@@ -78,16 +79,7 @@ function SpiralView({module}:{module:Extract<SpecialtyModule,{type:'spiral-verse
   </div>;
 }
 function UpsideDownView({module}:{module:Extract<SpecialtyModule,{type:'upside-down-verse'}>}){
-  return <div className="module-preview specialty-preview upside-preview">
-    <div className="module-title">UPSIDE DOWN VERSE</div>
-    <div className="specialty-verse-reference">{module.reference}</div>
-    <div className="upside-words">{module.verse.toUpperCase().split(/(\s+)/u).map((word,i)=>
-      /^\s+$/u.test(word)?<span key={i} className="upside-space"> </span>:
-      <span className="upside-word" key={i}>{Array.from(word).map((char,j)=>
-        <span key={j} className="upside-letter"><i/>
-          <b className={/^[A-Z]$/.test(char)?'upside-flip':''}>{char}</b>
-        </span>)}</span>)}</div>
-  </div>;
+ return <VerseReconstructionPreview module={module}/>;
 }
 function ConnectView({module}:{module:Extract<SpecialtyModule,{type:'connect-verse'|'connect-big-idea'}>}){
   const positions=connectPositions(module),allWords=parseConnectionWords(module.type==='connect-verse'?module.verse:module.idea);

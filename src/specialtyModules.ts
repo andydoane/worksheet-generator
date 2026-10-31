@@ -77,7 +77,7 @@ export function validateSpecialty(module:SpecialtyModule):string[]{
       const errs:string[]=[];
       if(!module.reference.trim()||module.reference.length>42)errs.push('Enter a verse reference of 1–42 characters.');
       const letters=(module.verse.toUpperCase().match(/[A-Z]/g)??[]).length;
-      if(letters<3||letters>65)errs.push('Use a verse with 3–65 letters for the medium area.');
+      if(letters<3||letters>160||module.verse.length>240)errs.push('Use a verse of up to 160 letters and 240 total characters for the medium area.');
       if([...module.verse].some(c=>/\p{L}/u.test(c)&&!/[A-Za-z]/.test(c)))
         errs.push('Use unaccented English letters A–Z; punctuation is allowed.');
       return errs;

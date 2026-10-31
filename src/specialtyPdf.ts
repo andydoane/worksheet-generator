@@ -6,6 +6,7 @@ import {BOOKLET} from './booklet.ts';
 import {MODULE_TITLE_PT} from './pdfLayout.ts';
 import {balancedLines} from './storyVersePdf.ts';
 import {planCrossword,crosswordBlackCells} from './crosswordLayout.ts';
+import {drawReconstructionPdf} from './verseReconstructionPdf.ts';
 import type {ModuleFonts} from './modulePdf.ts';
 import {
   generateCrossword,parseConnectionWords,connectPositions,spiralPoints,spiralTurns,validateSpecialty,
@@ -99,39 +100,6 @@ function spiral(page:PDFPage,b:Rect,module:Extract<SpecialtyModule,{type:'spiral
     page.drawLine({start:points[i-1],end:points[i],thickness:1.1,color:INK});
 
 }
-function upsideDown(page:PDFPage,b:Rect,module:Extract<SpecialtyModule,{type:'upside-down-verse'}>,fonts:ModuleFonts):void{
-  centered(page,fonts.title,'UPSIDE DOWN VERSE',b.x,b.y+b.height-25,b.width,MODULE_TITLE_PT);
-  centered(page,fonts.body,module.reference,b.x,b.y+b.height-42,b.width,10.5);
-  const s=module.verse.trim().toUpperCase();
-  const tokens=s.split(/(\s+)/u);
-  const cell=12.8,maxCols=Math.floor((b.width-6)/cell);
-  if(maxCols<12)throw Error('The Upside Down Verse area is too narrow.');
-  const lines:string[]=[];let line='';
-  for(const token of tokens){
-    if(/^\s+$/u.test(token)){if(line&&!line.endsWith(' '))line+=' ';continue;}
-    if(token.length>maxCols)throw Error('A verse word is too long for this section.');
-    if(line.trim().length+token.length>maxCols){lines.push(line.trimEnd());line=token;}
-    else line+=token;
-  }
-  if(line.trim())lines.push(line.trimEnd());
-  if(lines.length>4)throw Error('Verse is too long for the upside-down writing rows.');
-  const firstY=b.y+b.height-77,step=28;
-  if(firstY-(lines.length-1)*step<b.y+18)throw Error('Upside-down letters need more vertical room.');
-  for(const [row,text] of lines.entries()){
-    const lineW=Array.from(text).length*cell,x0=b.x+(b.width-lineW)/2,y=firstY-row*step;
-    for(const [i,ch] of Array.from(text).entries()){
-      if(ch===' ')continue;
-      const x=x0+i*cell;
-      if(/^[A-Z]$/u.test(ch)){
-        page.drawLine({start:{x:x+1,y:y+18},end:{x:x+cell-1,y:y+18},color:INK,thickness:.85});
-        // Reflect each glyph across its horizontal axis, without reversing order.
-        page.pushOperators(pushGraphicsState(),concatTransformationMatrix(1,0,0,-1,0,2*y+12));
-        centered(page,fonts.puzzle,ch,x,y,cell,13);
-        page.pushOperators(popGraphicsState());
-      }else centered(page,fonts.puzzle,ch,x,y,cell,11);
-    }
-  }
-}
 function connect(page:PDFPage,b:Rect,module:Extract<SpecialtyModule,{type:'connect-verse'|'connect-big-idea'}>,fonts:ModuleFonts):void{
   centered(page,fonts.title,'CONNECT THE VERSE',b.x,b.y+b.height-25,b.width,23);
   centered(page,fonts.bodyBold,'Connect each word to the next in order.',b.x,b.y+b.height-39,b.width,8.8);
@@ -171,7 +139,7 @@ export function drawSpecialtyPdf(page:PDFPage,region:Rect,module:SpecialtyModule
   switch(module.type){
     case 'crossword':return crossword(page,b,module,fonts);
     case 'spiral-verse':return spiral(page,b,module,fonts);
-    case 'upside-down-verse':return upsideDown(page,b,module,fonts);
+    case 'upside-down-verse':return drawReconstructionPdf(page,region,module,fonts);
     case 'connect-verse':
     case 'connect-big-idea':return connect(page,b,module,fonts);
   }

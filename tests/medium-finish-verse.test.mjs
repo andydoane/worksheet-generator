@@ -51,13 +51,25 @@ test('Exodus 15:11 and Isaiah 41:10 fit with print-matched text and full-size ha
   assert.ok(a&&b,'Cannot fit '+module.reference);
   // pdf-lib and fontkit can differ by one floating point ULP; print points
   // agree to the nearest thousandth, far below any visible pixel tolerance.
-  const rounded=value=>JSON.parse(JSON.stringify(value,(_,part)=>
-    typeof part==='number'?Math.round(part*1000)/1000:part));
-  assert.deepEqual(rounded(a.words),rounded(b.words));
-  assert.deepEqual(rounded(a.bankWords),rounded(b.bankWords));
+  // Width accumulation may differ by a handful of thousandths of a point.
+  // Validate every glyph position within 0.01pt, far below print resolution.
+  const close=(left,right)=>{
+   assert.equal(left.length,right.length);
+   for(let i=0;i<left.length;i++){
+    assert.deepEqual(Object.keys(left[i]),Object.keys(right[i]));
+    for(const key of Object.keys(left[i])){
+     if(typeof left[i][key]==='number')
+      assert.ok(Math.abs(left[i][key]-right[i][key])<=.01,key+' drifted');
+     else assert.equal(left[i][key],right[i][key]);
+    }
+   }
+  };
+  close(a.words,b.words);
+  close(a.bankWords,b.bankWords);
   assert.equal(a.title,'FINISH '+module.reference.toUpperCase());
-  assert.equal(a.cell,10.4);
+  assert.equal(a.cell,12.3);
   assert.equal(a.boxHeight,12.3);
+  assert.equal(a.cell,a.boxHeight,'Handwriting boxes must be square');
   assert.ok(a.lines<=7);
   assert.ok(a.words.every(w=>w.y<170));
   assert.equal(a.words.filter(x=>x.kind==='blank').length,parseVerse(module.verse).answers.length);

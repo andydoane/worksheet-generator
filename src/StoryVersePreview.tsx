@@ -1,22 +1,7 @@
-import { boxGrid, linesFromInput, orderedStoryEvents, parseVerse, sortedStoryBank, verseScrambles, type StoryVerseModule } from './storyVerseModules.ts';
+import { boxGrid, orderedStoryEvents, sortedStoryBank, type StoryVerseModule } from './storyVerseModules.ts';
 import {MistakesPrintPreview} from './MediumPrintPreview.tsx';
 import FinishVersePrintPreview from './FinishVersePrintPreview.tsx';
-
-function MissingVerse({ verse, mode, scrambled }: {verse:string;mode:'finish'|'unscramble';scrambled?:string[]}) {
-  let index=0;
-  return <div className={'new-verse-body '+(mode==='unscramble'?'new-verse-scramble':'')}>
-    {parseVerse(verse).parts.map((part,i)=>{
-      if(part.kind==='text')return <span key={i}>{part.value}</span>;
-      const puzzle=scrambled?.[index++]??part.value;
-      if(mode==='finish')return <span key={i} className="new-verse-boxes">
-        {Array.from(part.value).map((_,j)=><span key={j} className="new-letter-box"/>)}
-      </span>;
-      return <span key={i} className="new-verse-boxes">
-        {Array.from(puzzle).map((char,j)=><span key={j} className="new-scramble-letter"><i/>{char}</span>)}
-      </span>;
-    })}
-  </div>;
-}
+import {VerseReconstructionPreview} from './VerseReconstructionPreview.tsx';
 
 export default function StoryVersePreview({module}: {module:StoryVerseModule}) {
   switch(module.type){
@@ -54,12 +39,7 @@ export default function StoryVersePreview({module}: {module:StoryVerseModule}) {
       </div>;
     }
     case 'finish-verse':return <FinishVersePrintPreview module={module}/>;
-    case 'unscramble-verse':
-      return <div className="module-preview sv-preview sv-medium-preview">
-        <div className="module-title">UNSCRAMBLE THE VERSE</div>
-        <div className="sv-verse-ref">{module.reference}</div>
-        <MissingVerse verse={module.verse} mode="unscramble" scrambled={verseScrambles(module)}/>
-      </div>;
+    case 'unscramble-verse':return <VerseReconstructionPreview module={module}/>;
     case 'circle-mistakes':return <MistakesPrintPreview module={module}/>;
   }
 }
