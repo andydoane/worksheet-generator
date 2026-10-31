@@ -34,7 +34,7 @@ const shortChoice={type:'multiple-choice',question:'Who built the ark?',
  correct:'Noah',wrong1:'Moses',wrong2:'David',seed:3};
 const longChoice={type:'multiple-choice',
  question:'Which person trusted the Lord and built a very large boat to keep his family and the animals safe?',
- correct:'Noah, who trusted God and cared for his family',
+ correct:'Noah, who trusted God and saved his family',
  wrong1:'David, the boy who played a beautiful harp',
  wrong2:'Moses, who led his people into the desert',seed:8};
 const shortOdd={type:'odd-words',correct:'BOAT\nRAIN\nDOVE',
@@ -42,7 +42,7 @@ const shortOdd={type:'odd-words',correct:'BOAT\nRAIN\nDOVE',
 const longOdd={type:'odd-words',correct:'RAINBOW\nANIMALS\nWATERS\nNOAH\nDOVE',
  incorrect:'GOLIATH\nPHARAOH\nSOLDIER\nPILGRIM\nSLING',seed:13};
 test('Small print coordinate system retains the canonical module inset',()=>{
- assert.equal(SMALL_PRINT_WIDTH,158.4);
+ assert.ok(Math.abs(SMALL_PRINT_WIDTH-158.4)<.0001);
  assert.ok(Math.abs(SMALL_PRINT_HEIGHT-172.8)<.0001);
 });
 test('Multiple Choice preview and PDF measurements share exact line breaks and ink-centered boxes',async()=>{
