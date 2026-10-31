@@ -1,6 +1,7 @@
 import {useEffect,useState} from 'react';
 import fontkit from '@pdf-lib/fontkit';
 import {VerseReconstructionPreview} from './VerseReconstructionPreview.tsx';
+import ConnectBigIdeaPrintPreview from './ConnectBigIdeaPrintPreview.tsx';
 import {planCrossword,crosswordBlackCells,CROSSWORD_WIDTH,CROSSWORD_HEIGHT,type CrosswordPlan} from './crosswordLayout.ts';
 import {
   generateCrossword,connectPositions,parseConnectionWords,spiralPoints,spiralTurns,
@@ -81,7 +82,7 @@ function SpiralView({module}:{module:Extract<SpecialtyModule,{type:'spiral-verse
 function UpsideDownView({module}:{module:Extract<SpecialtyModule,{type:'upside-down-verse'}>}){
  return <VerseReconstructionPreview module={module}/>;
 }
-function ConnectView({module}:{module:Extract<SpecialtyModule,{type:'connect-verse'|'connect-big-idea'}>}){
+function ConnectView({module}:{module:Extract<SpecialtyModule,{type:'connect-verse'}>}){
   const positions=connectPositions(module),allWords=parseConnectionWords(module.type==='connect-verse'?module.verse:module.idea);
   return <div className="module-preview specialty-preview connect-preview">
     <div className="module-title">CONNECT THE VERSE</div>
@@ -99,7 +100,7 @@ export default function SpecialtyPreview({module}:{module:SpecialtyModule}){
     case 'crossword':return <CrosswordView module={module}/>;
     case 'spiral-verse':return <SpiralView module={module}/>;
     case 'upside-down-verse':return <UpsideDownView module={module}/>;
-    case 'connect-verse':
-    case 'connect-big-idea':return <ConnectView module={module}/>;
+    case 'connect-verse':return <ConnectView module={module}/>;
+    case 'connect-big-idea':return <ConnectBigIdeaPrintPreview module={module}/>;
   }
 }
