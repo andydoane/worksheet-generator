@@ -36,7 +36,10 @@ export function planConnectBigIdea(module:ConnectBigIdeaModule,metrics:{
   if(field.height<45)continue;
   const placements=scatterWords({
    words,seed:module.seed,key:module.idea,field,measure:metrics.puzzle,
-   maxFont:13.5,minFont:8.5,gap:2.1,
+   // Dense 17–20 word exercises get smaller lettering up front so the
+   // child can draw lines between them without navigating crowded clusters.
+   maxFont:words.length>=17?11.5:words.length>=13?12.5:13.5,
+   minFont:8.5,gap:2.6,
   });
   if(!placements)continue;
   return {titleY,subtitleY,subtitleSize,bankTop,bankHeight,bankFontSize:bankSize,
