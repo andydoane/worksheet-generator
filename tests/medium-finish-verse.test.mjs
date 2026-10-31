@@ -29,7 +29,7 @@ const longMistakes={type:'circle-mistakes',count:5,text:(
  'Everyone crossed on dry ground while the Egyptian chariots waited patiently. '+
  'God helped his people reach the other side safely. '+
  'Miriam gathered everyone to sing and thank God for bringing them through the sea. '+
- 'The Israelites spent their next night celebrating what God had done.'
+ 'The people sang to thank God for helping them.'
 ).slice(0,475)};
 async function widths(){
  const a=await assets(),doc=await PDFDocument.create();doc.registerFontkit(fontkit);
