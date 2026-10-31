@@ -115,7 +115,7 @@ function validateVerse(module:FinishVerse|UnscrambleVerse):string[] {
   if(parsed.answers.length<min || parsed.answers.length>max) problems.push('Mark '+min+'–'+max+' missing words using [square brackets].');
   if(parsed.malformed) problems.push('Each missing verse word needs matching [square brackets].');
   if(parsed.answers.some(x=>module.type==='finish-verse'
-      ? !(/^[\p{L}]+(?:['’-][\p{L}]+)*$/u.test(x))||x.length>9)
+      ? (!/^[\p{L}]+(?:['’-][\p{L}]+)*$/u.test(x)||x.length>9)
       : !validBracketedAnswer(x)))
     problems.push('Bracketed answers must contain at most 9 letters (punctuation is allowed in Unscramble).');
   const maxLength=module.type==='finish-verse'?300:240;
