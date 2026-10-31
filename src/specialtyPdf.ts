@@ -6,6 +6,7 @@ import {BOOKLET} from './booklet.ts';
 import {MODULE_TITLE_PT} from './pdfLayout.ts';
 import {balancedLines} from './storyVersePdf.ts';
 import {planCrossword,crosswordBlackCells} from './crosswordLayout.ts';
+import {drawReconstructionPdf} from './verseReconstructionPdf.ts';
 import type {ModuleFonts} from './modulePdf.ts';
 import {
   generateCrossword,parseConnectionWords,connectPositions,spiralPoints,spiralTurns,validateSpecialty,
@@ -171,7 +172,7 @@ export function drawSpecialtyPdf(page:PDFPage,region:Rect,module:SpecialtyModule
   switch(module.type){
     case 'crossword':return crossword(page,b,module,fonts);
     case 'spiral-verse':return spiral(page,b,module,fonts);
-    case 'upside-down-verse':return upsideDown(page,b,module,fonts);
+    case 'upside-down-verse':return drawReconstructionPdf(page,region,module,fonts);
     case 'connect-verse':
     case 'connect-big-idea':return connect(page,b,module,fonts);
   }
