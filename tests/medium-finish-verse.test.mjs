@@ -49,8 +49,12 @@ test('Exodus 15:11 and Isaiah 41:10 fit with print-matched text and full-size ha
   assert.deepEqual(validateStoryVerse(module),[]);
   const a=planFinishVerse(module,browser),b=planFinishVerse(module,pdf);
   assert.ok(a&&b,'Cannot fit '+module.reference);
-  assert.deepEqual(a.words,b.words);
-  assert.deepEqual(a.bankWords,b.bankWords);
+  // pdf-lib and fontkit can differ by one floating point ULP; print points
+  // agree to the nearest thousandth, far below any visible pixel tolerance.
+  const rounded=value=>JSON.parse(JSON.stringify(value,(_,part)=>
+    typeof part==='number'?Math.round(part*1000)/1000:part));
+  assert.deepEqual(rounded(a.words),rounded(b.words));
+  assert.deepEqual(rounded(a.bankWords),rounded(b.bankWords));
   assert.equal(a.title,'FINISH '+module.reference.toUpperCase());
   assert.equal(a.cell,10.4);
   assert.equal(a.boxHeight,12.3);
