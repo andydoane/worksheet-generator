@@ -2,7 +2,7 @@ import {useEffect,useState} from 'react';
 import fontkit from '@pdf-lib/fontkit';
 import {planCrossword,CROSSWORD_WIDTH,CROSSWORD_HEIGHT,type CrosswordPlan} from './crosswordLayout.ts';
 import {
-  generateCrossword,connectPositions,parseConnectionWords,spiralPoints,
+  generateCrossword,connectPositions,parseConnectionWords,spiralPoints,spiralTurns,spiralFirstWord,
   type SpecialtyModule,
 } from './specialtyModules.ts';
 
