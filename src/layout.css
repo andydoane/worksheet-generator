@@ -47,9 +47,9 @@
 .region-tag { color: #3a8873; font-size: clamp(8px, 2.2cqw, 11px); font-weight: 900; letter-spacing: .6px; }
 .region-content strong { color: #49695a; font: 400 clamp(16px, 6.2cqw, 25px)/1 'Mouse Memoirs', sans-serif; }
 .region-content small { font-size: clamp(7px, 2.2cqw, 10px); color: #7b9a86; white-space: nowrap; }
-.cover-content { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; width: 100%; min-width: 0; height: 100%; overflow: hidden; }
+.cover-content { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: clamp(5px, 1.6cqw, 9px); width: 100%; min-width: 0; height: 100%; overflow: hidden; }
 .cover-overline { font-size: clamp(6px, 2cqw, 9px); color: #51907b; font-weight: 900; letter-spacing: 1px; }
-.booklet-region .cover-title { font: 400 clamp(17px, 8cqw, 38px)/1.05 'Mouse Memoirs', sans-serif; color: #225b53; overflow-wrap: anywhere; margin: 7px 0 4px; }
+.booklet-region .cover-title { font: 400 clamp(17px, 8cqw, 38px)/1.05 'Mouse Memoirs', sans-serif; color: #225b53; overflow-wrap: anywhere; margin: 0; }
 .booklet-region .cover-reference { color: #688b7b; font-size: clamp(7px, 2.6cqw, 11px); font-weight: 900; overflow-wrap: anywhere; }
 .sheet-stage { padding: 25px 10px; }
 .print-sheet { width: min(100%, 740px); aspect-ratio: 11 / 8.5; display: flex; border: 1px solid #dce6dc; box-shadow: 0 10px 24px #21412d20; background: white; }
