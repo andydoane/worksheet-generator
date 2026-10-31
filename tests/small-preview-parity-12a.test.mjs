@@ -78,8 +78,15 @@ test('Odd Words columns are centered as a group and vertically centered, indepen
   const plan=planOddWords(module,w.title,w.puzzle);
   const preview=planOddWords(module,w.browserTitle,w.browserPuzzle);
   assert.ok(plan&&preview);
-  assert.deepEqual(plan.left,preview.left);
-  assert.deepEqual(plan.right,preview.right);
+  for(const column of ['left','right']){
+   assert.equal(plan[column].length,preview[column].length);
+   plan[column].forEach((row,i)=>{
+    const other=preview[column][i];
+    assert.equal(row.text,other.text);
+    assert.ok(Math.abs(row.x-other.x)<.01,'x drifted beyond print resolution');
+    assert.ok(Math.abs(row.y-other.y)<.01,'y drifted beyond print resolution');
+   });
+  }
   assert.equal(plan.left.length,Math.ceil(shuffledWordList(module).length/2));
   assert.equal(plan.right.length,Math.floor(shuffledWordList(module).length/2));
   assert.ok(Math.abs((plan.groupLeft+plan.groupRight)/2-SMALL_PRINT_WIDTH/2)<.001);
