@@ -1,5 +1,25 @@
 # Worksheet Studio
 
+## PR 12a — Small module parity baseline (v0.15.11)
+
+- **All eight Small activities audited.** Read
+  [the Small preview/PDF source audit](docs/small-preview-pdf-audit.md)
+  for the verified source-level differences; audit-only activities remain
+  untouched, including Draw a Picture.
+- **Multiple Choice:** shared measured print-coordinate layout in browser
+  and PDF, adaptive question/answer fitting, and each answer square aligned
+  to its answer text's **visible glyph-ink center**, even when wrapped.
+- **What Doesn't Belong:** two columns are measured from Zilla Slab Bold
+  text and horizontally centered together. Their rows are vertically
+  centered in the space beneath the instructions. SVG preview uses the
+  same plan as the PDF export.
+- **Unscramble the Words:** remove the title's exclamation point in both
+  renderers; the already-approved scramble and handwriting cells are not
+  otherwise touched.
+- **Validation:** `npm run test && npm run build && npm run sample:pr12a`.
+  Review short and long multiple-choice questions and 6/10-word column
+  arrangements in the generated two-sheet PDF.
+
 ## Connect word sizing and cover title polish (v0.15.10)
 
 - **Connect the Verse and Connect the Big Idea:** scattered Zilla Slab

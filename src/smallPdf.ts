@@ -1,6 +1,7 @@
 import { rgb, type PDFFont, type PDFPage } from 'pdf-lib';
 import { BOOKLET } from './booklet.ts';
 import { type ModuleFonts } from './modulePdf.ts';
+import {planMultipleChoice,planOddWords} from './smallParityLayout.ts';
 import {
   answerCharacters, scrambleWord, shuffledChoices, shuffledWordList, verseInitials,
   type SmallModule,
@@ -80,16 +81,18 @@ function thumb(page:PDFPage,cx:number,cy:number,up:boolean):void {
 }
 
 function drawMultipleChoice(page:PDFPage,box:Rect,module:Extract<SmallModule,{type:'multiple-choice'}>,fonts:ModuleFonts):void {
-  const top=box.y+box.height-2;
-  const questionBottom=paragraph(page,fonts.title,module.question,box,top,20,14,3);
-  const options=shuffledChoices(module);
-  const firstY=Math.min(questionBottom-27,box.y+103);
-  if(firstY-2*38<box.y+10)throw Error('Question and answers need more room.');
-  options.forEach((option,i)=>{
-    const y=firstY-i*38;
-    square(page,box.x+1,y-3,11);
-    paragraph(page,fonts.title,option,{x:box.x+19,y:y-15,width:box.width-19,height:25},y+14,15,10,2,'left');
-  });
+  const plan=planMultipleChoice(module,(text,size)=>measure(fonts.title,text,size),
+    fonts.titleInkCenter??((_text,size)=>size*.35),box.width,box.height);
+  if(!plan)throw Error('Multiple Choice question and answers do not fit the small area.');
+  const top=box.y+box.height;
+  for(const line of plan.questionLines)
+    centered(page,fonts.title,line.text,box.x+line.x,top-line.y,plan.questionSize);
+  for(const row of plan.rows){
+    square(page,box.x+row.squareX,top-row.squareY-row.squareSize,row.squareSize);
+    for(const line of row.lines)
+      page.drawText(line.text,{x:box.x+line.x,y:top-line.y,
+        font:fonts.title,size:row.fontSize,color:INK});
+  }
 }
 function drawTrueFalse(page:PDFPage,box:Rect,module:Extract<SmallModule,{type:'true-false'}>,fonts:ModuleFonts):void {
   label(page,fonts.title,'TRUE OR FALSE?',box,box.y+box.height-25,24,17);
@@ -110,20 +113,19 @@ function drawFirstLetters(page:PDFPage,box:Rect,module:Extract<SmallModule,{type
   chunks.forEach((text,index)=>centered(page,fonts.puzzle,text,box.x+box.width/2,box.y+box.height-91-index*19,fontSize));
 }
 function drawOddWords(page:PDFPage,box:Rect,module:Extract<SmallModule,{type:'odd-words'}>,fonts:ModuleFonts):void {
-  paragraph(page,fonts.title,"Scribble out the words that don't match the story.",box,box.y+box.height-3,15,11,3);
-  const words=shuffledWordList(module);
-  const colWidth=box.width/2-4;
-  const size=Math.min(13,...words.map(item=>fitSize(fonts.puzzle,item.text.toUpperCase(),colWidth,13,6.5)));
-  words.forEach((item,i)=>{
-    const col=i%2,row=Math.floor(i/2);
-    page.drawText(item.text.toUpperCase(),{
-      x:box.x+col*(box.width/2)+2,
-      y:box.y+box.height-78-row*22,size,font:fonts.puzzle,color:INK,
-    });
-  });
+  const plan=planOddWords(module,
+    (text,size)=>measure(fonts.title,text,size),
+    (text,size)=>measure(fonts.puzzle,text,size),box.width,box.height);
+  if(!plan)throw Error('What Doesn’t Belong words do not fit the small area.');
+  const top=box.y+box.height;
+  for(const line of plan.instructions)
+    centered(page,fonts.title,line.text,box.x+line.x,top-line.y,plan.instructionSize);
+  for(const line of [...plan.left,...plan.right])
+    page.drawText(line.text,{x:box.x+line.x,y:top-line.y,
+      font:fonts.puzzle,size:plan.fontSize,color:INK});
 }
 function drawUnscramble(page:PDFPage,box:Rect,module:Extract<SmallModule,{type:'unscramble-words'}>,fonts:ModuleFonts):void {
-  label(page,fonts.title,'UNSCRAMBLE THE WORDS!',box,box.y+box.height-25,22,14);
+  label(page,fonts.title,'UNSCRAMBLE THE WORDS',box,box.y+box.height-25,22,14);
   [module.first,module.second].forEach((word,i)=>{
     const scrambled=scrambleWord(word,module.seed+i*101);
     const chars=Array.from(scrambled);

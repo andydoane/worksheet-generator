@@ -1,7 +1,8 @@
 import {
-  answerCharacters, scrambleWord, shuffledChoices, shuffledWordList, verseInitials,
+  answerCharacters, scrambleWord, shuffledWordList, verseInitials,
   type SmallModule,
 } from './smallModules.ts';
+import {MultipleChoicePrintPreview,OddWordsPrintPreview} from './SmallParityPreview.tsx';
 
 const THUMB_POINTS = '4,12 10,12 10,7 16,1 19,1 20,4 18,10 26,10 28,13 25,25 22,28 11,28 10,25 4,25';
 function Thumb({ up }: { up: boolean }) {
@@ -20,16 +21,7 @@ function Thumb({ up }: { up: boolean }) {
 
 export default function SmallModulePreview({ module }: { module: SmallModule }) {
   switch (module.type) {
-    case 'multiple-choice':
-      return (
-        <div className="module-preview small-preview small-choice">
-          <div className="small-question">{module.question}</div>
-          <div className="small-answer-list">
-            {shuffledChoices(module).map((choice, i) =>
-              <div className="small-check-row" key={i}><span className="small-square" />{choice}</div>)}
-          </div>
-        </div>
-      );
+    case 'multiple-choice':return <MultipleChoicePrintPreview module={module}/>;
     case 'true-false':
       return (
         <div className="module-preview small-preview small-true-false">
@@ -49,19 +41,11 @@ export default function SmallModulePreview({ module }: { module: SmallModule }) 
         </div>
       );
     }
-    case 'odd-words':
-      return (
-        <div className="module-preview small-preview small-odd-words">
-          <div className="small-instruction">Scribble out the words that don't match the story.</div>
-          <div className="small-word-grid">
-            {shuffledWordList(module).map(({text}, i) => <span className="small-zilla" key={i}>{text.toUpperCase()}</span>)}
-          </div>
-        </div>
-      );
+    case 'odd-words':return <OddWordsPrintPreview module={module}/>;
     case 'unscramble-words':
       return (
         <div className="module-preview small-preview small-unscramble">
-          <div className="small-heading">UNSCRAMBLE THE WORDS!</div>
+          <div className="small-heading">UNSCRAMBLE THE WORDS</div>
           {[module.first, module.second].map((word, index) =>
             <div className="small-scramble-row" key={index}>
               {Array.from(scrambleWord(word, module.seed + index * 101)).map((letter, i) =>
