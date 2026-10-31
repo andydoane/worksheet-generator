@@ -28,8 +28,8 @@ export default function PuzzleEditor({module,onChange,showSolution}:{module:Puzz
     answer='Correct exit: '+maze.correctExit.label+' ('+maze.correctExit.edge+' side), shortest path '+maze.solution.length+' cells.';
   }catch{/* input validation displays below */}
   return <div className="activity-inputs">
-    <label htmlFor="maze-statement">True-or-false statement</label>
-    <textarea id="maze-statement" rows={4} value={module.statement}
+    <label htmlFor="maze-statement">True-or-false statement (up to 65 characters)</label>
+    <textarea id="maze-statement" rows={4} maxLength={65} value={module.statement}
       onChange={e=>onChange({statement:e.target.value})}
       placeholder="God protected Daniel in the lions' den."/>
     <label htmlFor="maze-answer">Correct answer</label>
@@ -37,7 +37,7 @@ export default function PuzzleEditor({module,onChange,showSolution}:{module:Puzz
       onChange={e=>onChange({answer:e.target.value==='true'})}>
       <option value="true">True</option><option value="false">False</option>
     </select>
-    <p>The maze starts at IN on the bottom. Exit left for TRUE, or right for FALSE. Both routes are reachable; the engine prefers shorter, more balanced paths.</p>
+    <p>Follow the arrow into the bottom of the maze. Exit left for TRUE, or right for FALSE. Both routes are reachable; the engine prefers shorter, more balanced paths.</p>
     {showSolution&&answer&&<p className="puzzle-solution-data">{answer} The highlighted green route is visible only in the editor preview.</p>}
   </div>;
 }
