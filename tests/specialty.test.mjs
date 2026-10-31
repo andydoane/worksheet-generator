@@ -110,7 +110,7 @@ test('connecting activities use deterministic positions, nonoverlapping grid slo
   }
 });
 test('specialty text validations reject unprintable lengths and invalid references',()=>{
-  assert.ok(validateModule({...upside,verse:'A'.repeat(66)}).length);
+  assert.ok(validateModule({...upside,verse:'A'.repeat(161)}).length);
   assert.ok(validateModule({...spiral,reference:''}).length);
   assert.ok(validateModule({...connect,verse:'one two'}).length);
   assert.ok(validateModule({...idea,idea:'Émile went to church with us.'}).length);
