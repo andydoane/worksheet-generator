@@ -1,10 +1,11 @@
 import {
-  answerCharacters, scrambleWord,
+  scrambleWord,
   type SmallModule,
 } from './smallModules.ts';
 import {MultipleChoicePrintPreview,OddWordsPrintPreview} from './SmallParityPreview.tsx';
 import TrueFalsePrintPreview from './TrueFalsePrintPreview.tsx';
 import {FirstLettersPrintPreview,CheckboxesPrintPreview} from './SmallBalancedPreview.tsx';
+import WhoAmIPrintPreview from './WhoAmIPrintPreview.tsx';
 
 export default function SmallModulePreview({ module }: { module: SmallModule }) {
   switch (module.type) {
@@ -24,19 +25,6 @@ export default function SmallModulePreview({ module }: { module: SmallModule }) 
         </div>
       );
     case 'checkboxes':return <CheckboxesPrintPreview module={module}/>;
-    case 'who-am-i':
-      return (
-        <div className="module-preview small-preview small-who">
-          <div className="small-clue">{module.clue}</div>
-          <div className="small-heading">WHO AM I?</div>
-          <div className="small-answer-blanks">
-            {answerCharacters(module.answer).map((char, i) => char === ' '
-              ? <span className="small-blank-space" key={i}/>
-              : char === '-'
-                ? <span key={i} className="small-hyphen">-</span>
-                : <span key={i} className="small-letter-blank"/>)}
-          </div>
-        </div>
-      );
+    case 'who-am-i':return <WhoAmIPrintPreview module={module}/>;
   }
 }

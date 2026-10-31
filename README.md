@@ -1,5 +1,24 @@
 # Worksheet Studio
 
+## PR 12d — Who Am I? (v0.15.15)
+
+- **Protected regions:** the Small Who Am I activity now reserves the
+  upper portion for the clue before fitting its text and reserves the
+  lower portion for **WHO AM I?** and handwriting blanks. Neither section
+  can overlap the other. Short clues remain large and are vertically
+  centered in their own section; longer clues shrink to fit.
+- **120-character clue limit:** reduced from 170; the same limit powers
+  validation, immediate pink/red input highlighting and the measured
+  layout planner. Existing **14-letter answer** validation is unchanged.
+  Answer spaces and hyphens remain visible and retain their original
+  positions, with one handwriting line per letter.
+- **Preview/PDF parity:** a shared `whoAmIPrintLayout.ts` plan uses
+  Mouse Memoirs advances and physical print points for all text and
+  answer marks, rendered as SVG in the browser and vector PDF for export.
+- **Review:** `npm run test && npm run build && npm run sample:pr12d`.
+  Inspect short and 120-character clues and single-, multiword and
+  hyphenated answers in the generated two-sheet PDF.
+
 ## PR 12c — Small First Letter Challenge + Checkboxes (v0.15.14)
 
 - **First Letter Challenge:** Instructions now read *Try to say
