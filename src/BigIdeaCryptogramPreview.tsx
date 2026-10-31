@@ -4,8 +4,7 @@ import {generateCryptogram,type BigIdeaCryptogram} from './cryptograms.ts';
 import {mediumWidths} from './MediumPrintPreview.tsx';
 import {MEDIUM_PRINT_WIDTH,MEDIUM_PRINT_HEIGHT} from './mediumParityLayout.ts';
 import {
- planBigIdeaCryptogram,BIG_IDEA_CELL_WIDTH,BIG_IDEA_ANSWER_LINE_WIDTH,
- BIG_IDEA_SYMBOL_SIZE,type BigIdeaPrintPlan,
+ planBigIdeaCryptogram,type BigIdeaPrintPlan,
 } from './bigIdeaCryptogramLayout.ts';
 
 /** Render paths from the same vector symbol definition as the PDF.
@@ -56,11 +55,11 @@ export default function BigIdeaCryptogramPreview({module}:{module:BigIdeaCryptog
     <text key={'punc-'+i} x={item.x} y={item.lineY+1}
      fontFamily="Nunito" fontWeight="500" fontSize="10" fill="#242424">{item.char}</text>:
     <g key={'encoded-'+i}>
-     <line x1={item.x+.8} x2={item.x+BIG_IDEA_ANSWER_LINE_WIDTH+.8}
+     <line x1={item.x+.8} x2={item.x+state.answerLineWidth+.8}
       y1={item.lineY} y2={item.lineY} stroke="#242424" strokeWidth=".8"/>
      <PrintSymbol id={item.symbol}
-      x={item.x+(BIG_IDEA_CELL_WIDTH-BIG_IDEA_SYMBOL_SIZE)/2}
-      y={item.lineY+4} size={BIG_IDEA_SYMBOL_SIZE}/>
+      x={item.x+(state.cellWidth-state.symbolSize)/2}
+      y={item.lineY+4} size={state.symbolSize}/>
     </g>)}
   </svg>}
  </div>;

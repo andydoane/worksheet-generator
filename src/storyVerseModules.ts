@@ -133,7 +133,7 @@ export function mistakesTitle(count:number):string {
 function validateVerse(module:FinishVerse|UnscrambleVerse):string[] {
   const problems:string[]=[];
   const parsed=parseVerse(module.verse);
-  const min=module.type==='finish-verse'?2:4,max=module.type==='finish-verse'?8:6;
+  const min=module.type==='finish-verse'?2:4,max=8;
   if(!module.reference.trim() || module.reference.length>38) problems.push('Enter a verse reference no longer than 38 characters.');
   if(parsed.answers.length<min || parsed.answers.length>max) problems.push('Mark '+min+'–'+max+' missing words using [square brackets].');
   if(parsed.malformed) problems.push('Each missing verse word needs matching [square brackets].');

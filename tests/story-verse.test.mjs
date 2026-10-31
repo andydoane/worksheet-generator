@@ -91,7 +91,7 @@ test('bracketed words become PDF answer boxes or scrambled words, never plain te
   assert.deepEqual(verseScrambles(unscramble),verseScrambles(unscramble));
   verseScrambles(unscramble).forEach((x,i)=>assert.notEqual(x,parsed.answers[i].toUpperCase()));
   assert.ok(validateModule({...finish,verse:'For [God] so loved world'}).length>0);
-  assert.ok(validateModule({...unscramble,verse:'For [God] so [loved] [world] [gave] [bad] [extra] [seven]'}).length>0);
+  assert.ok(validateModule({...unscramble,verse:'For [God] so [loved] [world] [gave] [bad] [extra] [seven] [eight] [nine]'}).length>0);
   assert.equal(parseVerse('For [God] [bad').malformed,true);
 });
 test('Circle the Mistakes renders a number-based title and validates count',()=>{
@@ -137,5 +137,5 @@ test('bad category sizes and invalid verse input cause useful PDF export errors'
     modules:{'2:top-medium':order},
   };
   await assert.rejects(async()=>createBookletPdf(draft,await fonts()),/wrong size area/);
-  await assert.rejects(async()=>createBookletPdf({...draft,modules:{'2:top-medium':{...unscramble,verse:'No [brackets]'}}},await fonts()),/4–6/);
+  await assert.rejects(async()=>createBookletPdf({...draft,modules:{'2:top-medium':{...unscramble,verse:'No [brackets]'}}},await fonts()),/4–8/);
 });

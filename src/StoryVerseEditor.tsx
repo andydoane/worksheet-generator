@@ -14,7 +14,7 @@ function BracketVerseEditor({module,onChange}:{
  const inputRef=useRef<HTMLTextAreaElement>(null);
  const [selectionMessage,setSelectionMessage]=useState('');
  const finishing=module.type==='finish-verse';
- const maxBlanks=finishing?8:6;
+ const maxBlanks=8;
  const minBlanks=finishing?2:4;
  const blankCount=parseVerse(module.verse).answers.length;
  function reject(message:string,input:HTMLTextAreaElement){
