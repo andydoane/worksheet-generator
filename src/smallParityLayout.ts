@@ -1,6 +1,7 @@
 import {BOOKLET} from './booklet.ts';
 import {measureWrappedLines} from './pdfLayout.ts';
 import {balancedBankLines} from './balancedBankLines.ts';
+import {balancedBankLines} from './balancedBankLines.ts';
 import {shuffledChoices,shuffledWordList,type MultipleChoice,type OddWords} from './smallModules.ts';
 import type {MeasureText} from './mediumParityLayout.ts';
 
@@ -29,7 +30,7 @@ export function planMultipleChoice(module:MultipleChoice,measure:MeasureText,
  const answerWidth=width-2*sideInset-squareSize-squareGap;
  let winner:{score:number;plan:MultipleChoicePrintPlan}|null=null;
  for(let qSize=20;qSize>=13;qSize-=.5){
-  const question=measureWrappedLines(module.question,width-5,s=>measure(s,qSize));
+  const question=balancedBankLines(module.question,width-5,measure,qSize,3);
   if(!question||question.length>3||!question.length)continue;
   const qStep=qSize*1.12,qHeight=question.length*qStep+2;
   for(let aSize=15;aSize>=9;aSize-=.5){
