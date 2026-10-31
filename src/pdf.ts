@@ -1,5 +1,6 @@
 import { PDFDocument, rgb, type PDFFont, type PDFPage } from 'pdf-lib';
 import fontkit from '@pdf-lib/fontkit';
+import {glyphInkCenter} from './fontInkCenter.ts';
 import {embedNunitoWeights} from './nunitoPdf.ts';
 import type {ModuleFonts} from './modulePdf.ts';
 import { drawModulePdf } from './modulePdf.ts';
@@ -269,7 +270,10 @@ export async function createBookletPdf(draft: PdfDraft, fontFiles: PdfFontFiles)
   const title=await embedChecked('Mouse Memoirs',fontFiles.mouseMemoirs);
   // Full-glyph fontTools reserialization fixes Zilla's original fontkit error.
   const puzzle=await embedChecked('Zilla Slab Bold',fontFiles.zillaSlab);
-  const fonts: Fonts = {title,body,bodyBold,bank,puzzle};
+  const bankFace=fontkit.create(fontFiles.nunitoSans900 instanceof Uint8Array
+    ?fontFiles.nunitoSans900:new Uint8Array(fontFiles.nunitoSans900));
+  const fonts: Fonts = {title,body,bodyBold,bank,puzzle,
+    bankInkCenter:(word,size)=>glyphInkCenter(bankFace,word,size)};
 
   const sheets = getPrintableSheetRegions(draft);
   for (let sheetIndex = 0; sheetIndex < sheets.length; sheetIndex++) {
