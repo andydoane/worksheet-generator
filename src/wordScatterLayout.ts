@@ -64,11 +64,15 @@ export function scatterWords(options:ScatterOptions):ScatterResult|null{
      const dx=(cx-p.x)/field.width,dy=(cy-p.y)/field.height;
      return Math.sqrt(dx*dx+dy*dy);
     })):1;
-    // Blue-noise-style spacing, with a gentle penalty for clustering near
-    // the extreme edges; avoids accidental grids and column structure.
+    // Keep some distance between words, but avoid the regular lattice
+    // that a pure farthest-point score tends to create.
     const nx=(cx-field.x)/field.width,ny=(cy-field.y)/field.height;
     const edge=Math.min(nx,1-nx,ny,1-ny);
-    const score=Math.min(.55,minDistance)+.09*edge+random()*.009;
+    // Stop rewarding perfectly regular rows and columns once nearby words
+    // have reasonable breathing room. The seeded random component is
+    // deliberately stronger than the capped spacing preference: this
+    // produces genuine irregular scatter rather than a max-distance grid.
+    const score=Math.min(.16,minDistance)*.12+.012*edge+random()*.075;
     if(!best||score>best.score)best={score,cx,cy,angle,bounds};
    }
    if(!best){failed=true;break;}
