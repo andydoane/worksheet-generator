@@ -78,7 +78,7 @@ test('Upside Down uses combined title, abbreviations, and unflipped punctuation'
   assert.ok(p.marks.some(mark=>mark.kind==='letter'&&mark.upside));
   assert.ok(p.marks.some(mark=>mark.kind==='punctuation'&&mark.text==='!')||module===longUpside);
   assert.ok(p.marks.every(mark=>mark.y+p.glyphOffset+p.fontSize<173));
-  assert.ok(p.lineStep>=p.glyphOffset+p.fontSize+1.5,
+  assert.ok(p.lineStep>=p.glyphOffset+p.invertedFontSize+1.5,
    'An inverted word must not collide with the following answer line');
  }
  const names={
