@@ -38,7 +38,7 @@ export default function SpecialtyEditor({module,onChange}:{module:SpecialtyModul
           value={module.type==='connect-verse'?module.verse:module.idea}
           onChange={e=>onChange(module.type==='connect-verse'?{verse:e.target.value}:{idea:e.target.value})}
           placeholder="God is our refuge and strength."/>
-        <p>Enter 4–12 words. The generator scatters their positions with slight letter jitter and rotation. {module.type==='connect-big-idea'?'The original word order appears in a box for reference.':'The first word comes from the beginning of your verse.'} Use Shuffle to rearrange.</p>
+        <p>Enter {module.type==='connect-big-idea'?'4–20':'4–12'} words. The generator scatters their positions with slight letter jitter and rotation. {module.type==='connect-big-idea'?'The original word order appears in a box for reference.':'The first word comes from the beginning of your verse.'} Use Shuffle to rearrange.</p>
       </div>;
   }
 }

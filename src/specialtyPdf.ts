@@ -6,6 +6,7 @@ import {BOOKLET} from './booklet.ts';
 import {MODULE_TITLE_PT} from './pdfLayout.ts';
 import {balancedLines} from './storyVersePdf.ts';
 import {planCrossword,crosswordBlackCells} from './crosswordLayout.ts';
+import {CONNECT_BIG_TITLE,CONNECT_BIG_INSTRUCTION,planConnectBigIdea} from './connectBigIdeaLayout.ts';
 import {drawReconstructionPdf} from './verseReconstructionPdf.ts';
 import type {ModuleFonts} from './modulePdf.ts';
 import {
@@ -132,6 +133,38 @@ function connect(page:PDFPage,b:Rect,module:Extract<SpecialtyModule,{type:'conne
     page.pushOperators(popGraphicsState());
   }
 }
+/** Print the same title, bank and scattered words as the SVG preview.
+ * The engine's input is physical print points, with the Zilla Slab glyphs
+ * measured exactly once by the shared planner.
+ */
+function connectBigIdea(page:PDFPage,b:Rect,
+ module:Extract<SpecialtyModule,{type:'connect-big-idea'}>,fonts:ModuleFonts):void{
+ const plan=planConnectBigIdea(module,{
+  puzzle:(text,size)=>sizeOf(fonts.puzzle,text,size),
+  bank:(text,size)=>sizeOf(fonts.bank,text,size),
+  subtitle:(text,size)=>sizeOf(fonts.body,text,size),
+ },b.width,b.height);
+ if(!plan)throw Error('The Big Idea words cannot be scattered without overlap. Shorten the phrase.');
+ const top=b.y+b.height;
+ centered(page,fonts.title,CONNECT_BIG_TITLE,b.x,top-plan.titleY,b.width,23);
+ centered(page,fonts.body,CONNECT_BIG_INSTRUCTION,b.x,top-plan.subtitleY,
+  b.width,plan.subtitleSize);
+ page.drawRectangle({x:b.x+.45,y:top-plan.bankTop-plan.bankHeight,
+  width:b.width-.9,height:plan.bankHeight,borderColor:LIGHT,borderWidth:.8});
+ plan.bankLines.forEach(line=>centered(page,fonts.bank,line.text,b.x,
+  top-line.y,b.width,plan.bankFontSize));
+ for(const item of plan.scattered){
+  const rad=item.angle*Math.PI/180;
+  page.pushOperators(pushGraphicsState(),concatTransformationMatrix(
+   Math.cos(rad),-Math.sin(rad),Math.sin(rad),Math.cos(rad),
+   b.x+item.x,top-item.y));
+  for(const glyph of item.glyphs){
+   page.drawText(glyph.char,{x:glyph.x,y:-glyph.y,font:fonts.puzzle,
+    size:item.fontSize,color:INK});
+  }
+  page.pushOperators(popGraphicsState());
+ }
+}
 export function drawSpecialtyPdf(page:PDFPage,region:Rect,module:SpecialtyModule,fonts:ModuleFonts):void{
   const errors=validateSpecialty(module);
   if(errors.length)throw Error(errors.join(' '));
@@ -140,7 +173,7 @@ export function drawSpecialtyPdf(page:PDFPage,region:Rect,module:SpecialtyModule
     case 'crossword':return crossword(page,b,module,fonts);
     case 'spiral-verse':return spiral(page,b,module,fonts);
     case 'upside-down-verse':return drawReconstructionPdf(page,region,module,fonts);
-    case 'connect-verse':
-    case 'connect-big-idea':return connect(page,b,module,fonts);
+    case 'connect-verse':return connect(page,b,module,fonts);
+    case 'connect-big-idea':return connectBigIdea(page,b,module,fonts);
   }
 }

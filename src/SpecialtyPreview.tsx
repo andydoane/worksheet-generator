@@ -1,9 +1,10 @@
 import {useEffect,useState} from 'react';
 import fontkit from '@pdf-lib/fontkit';
 import {VerseReconstructionPreview} from './VerseReconstructionPreview.tsx';
+import ConnectBigIdeaPrintPreview from './ConnectBigIdeaPrintPreview.tsx';
 import {planCrossword,crosswordBlackCells,CROSSWORD_WIDTH,CROSSWORD_HEIGHT,type CrosswordPlan} from './crosswordLayout.ts';
 import {
-  generateCrossword,connectPositions,parseConnectionWords,spiralPoints,spiralTurns,
+  generateCrossword,connectPositions,spiralPoints,spiralTurns,
   type SpecialtyModule,
 } from './specialtyModules.ts';
 
@@ -81,12 +82,11 @@ function SpiralView({module}:{module:Extract<SpecialtyModule,{type:'spiral-verse
 function UpsideDownView({module}:{module:Extract<SpecialtyModule,{type:'upside-down-verse'}>}){
  return <VerseReconstructionPreview module={module}/>;
 }
-function ConnectView({module}:{module:Extract<SpecialtyModule,{type:'connect-verse'|'connect-big-idea'}>}){
-  const positions=connectPositions(module),allWords=parseConnectionWords(module.type==='connect-verse'?module.verse:module.idea);
+function ConnectView({module}:{module:Extract<SpecialtyModule,{type:'connect-verse'}>}){
+  const positions=connectPositions(module);
   return <div className="module-preview specialty-preview connect-preview">
     <div className="module-title">CONNECT THE VERSE</div>
     <div className="specialty-instruction">Draw lines from the first word to the second, all the way to the last.</div>
-    {module.type==='connect-big-idea'&&<div className="connect-bank">{allWords.join('  ·  ')}</div>}
     <div className="connect-field">
       {positions.map(pos=><div key={pos.order} className="connect-word" style={{
         left:(pos.x*100)+'%',top:(pos.y*100)+'%',transform:'translate(-50%,-50%) rotate('+pos.angle+'deg)',
@@ -99,7 +99,7 @@ export default function SpecialtyPreview({module}:{module:SpecialtyModule}){
     case 'crossword':return <CrosswordView module={module}/>;
     case 'spiral-verse':return <SpiralView module={module}/>;
     case 'upside-down-verse':return <UpsideDownView module={module}/>;
-    case 'connect-verse':
-    case 'connect-big-idea':return <ConnectView module={module}/>;
+    case 'connect-verse':return <ConnectView module={module}/>;
+    case 'connect-big-idea':return <ConnectBigIdeaPrintPreview module={module}/>;
   }
 }

@@ -1,5 +1,26 @@
 # Worksheet Studio
 
+## PR 11f — Connect the Big Idea: scattered layout (v0.15.8)
+
+- **Connect the Big Idea** now has a seeded, collision-aware scattering
+  engine instead of three fixed columns. Each Zilla Slab word is measured
+  with actual embedded font widths, then placed in free space with small
+  rotation (≤1.3 degrees) and slight letter jitter (±0.21pt).
+- **Automatic sizing and word count:** 4–20 words, down from a preferred
+  13.5pt to a minimum of 8.5pt if needed. The engine preserves the order
+  in the word bank but scatters every instance separately, including repeats.
+- **Preview and PDF parity:** Shared measured print coordinates for the
+  title `CONNECT THE BIG IDEA`, subtitle `Connect each word to the next
+  in order.`, a wrapped reference bank, and all letter positions. This
+  corrects the former wrong title, different subtitle and independent bank
+  wrapping in the browser preview.
+- **Future reuse:** `wordScatterLayout.ts` is independent of module size
+  and can be reused for the 35-word Large Connect the Verse in PR 11g.
+  Connect the Verse itself is **unchanged in this PR**.
+- **Verification:** `npm run test && npm run build && npm run sample:pr11f`.
+  Review the short, medium and 20-word Big Ideas in the generated PDF,
+  and check the live browser preview alongside the PDF.
+
 ## PR 11e — Big Idea Cryptogram print/preview parity (v0.15.7)
 
 - **Medium Big Idea only:** Both preview and PDF now consume a pure shared
