@@ -270,8 +270,11 @@ export async function createBookletPdf(draft: PdfDraft, fontFiles: PdfFontFiles)
   const puzzle=await embedChecked('Zilla Slab Bold',fontFiles.zillaSlab);
   const bankFace=fontkit.create(fontFiles.nunitoSans900 instanceof Uint8Array
     ?fontFiles.nunitoSans900:new Uint8Array(fontFiles.nunitoSans900));
+  const titleFace=fontkit.create(fontFiles.mouseMemoirs instanceof Uint8Array
+    ?fontFiles.mouseMemoirs:new Uint8Array(fontFiles.mouseMemoirs));
   const fonts: Fonts = {title,body,bodyBold,bank,puzzle,
-    bankInkCenter:(word,size)=>glyphInkCenter(bankFace,word,size)};
+    bankInkCenter:(word,size)=>glyphInkCenter(bankFace,word,size),
+    titleInkCenter:(word,size)=>glyphInkCenter(titleFace,word,size)};
 
   const sheets = getPrintableSheetRegions(draft);
   for (let sheetIndex = 0; sheetIndex < sheets.length; sheetIndex++) {
