@@ -91,7 +91,7 @@ test('Odd Words instruction is balanced and columns remain centered with phrases
  const all=[...p.left,...p.right].map(x=>x.text);
  assert.ok(all.includes('RED SEA')&&all.includes('DRY LAND')&&all.includes('BURNING BUSH'));
 });
-test('Immediate exceeded-length feedback tracks module-specific bounds without truncating input',()=>{
+test('Immediate exceeded-length feedback tracks module-specific bounds without truncating input',async()=>{
  const mc={type:'multiple-choice',question:'Q',correct:'Yes',wrong1:'No',wrong2:'Maybe',seed:1};
  assert.equal(fieldExceedsLength(mc,'mc-question','X'.repeat(105)),false);
  assert.equal(fieldExceedsLength(mc,'mc-question','X'.repeat(106)),true);
