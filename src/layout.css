@@ -194,18 +194,7 @@
 
 
 /* PR 7: Word-search letters and the vector-walled true/false maze. */
-.puzzle-word-search { align-items:stretch; justify-content:flex-start; gap:8px; }
-.puzzle-word-search .module-title { flex:none; }
-.puzzle-letter-grid {
-  width:91%; aspect-ratio:12/10; max-height:72%; margin:0 auto; min-height:0;
-  display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); grid-template-rows:repeat(10,minmax(0,1fr));
-  align-items:center; justify-items:center; border:1px solid #aaa; padding:2px;
-  font:700 clamp(10px,3.5cqw,18px)/1 'Zilla Slab',serif; letter-spacing:.01em;
-}
-.puzzle-letter-grid span { display:flex; align-items:center; justify-content:center; width:100%; height:100%; }
-.puzzle-letter-grid .puzzle-found-letter { background:rgba(24,131,82,.22); color:#205c43; font-weight:700; }
-.puzzle-search-bank { width:100%; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:3px 8px; align-items:start; justify-items:center; margin-top:2px; font:900 clamp(7px,2.7cqw,13px)/1.15 'Nunito',sans-serif; }
-.puzzle-search-bank span { max-width:100%; overflow-wrap:anywhere; }
+/* Word Search is now a shared print-space SVG. No independent grid/bank CSS. */
 .puzzle-maze-module { gap:3px; align-items:stretch; }
 .puzzle-maze-module .module-title { font-size:clamp(14px,4.7cqw,23px); }
 .puzzle-maze-subtitle { font:750 clamp(7px,2.3cqw,11px)/1.1 'Nunito',sans-serif; }
