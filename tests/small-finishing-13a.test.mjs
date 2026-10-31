@@ -134,9 +134,12 @@ test('Checkboxes supports multiword entries within 14 characters with no column 
  assert.deepEqual(p.rows.map(r=>r.text),shuffledWordList(checkboxes).map(r=>r.text.toUpperCase()));
  assert.deepEqual(p.instructionLines.map(l=>l.text),
   balancedBankLines(CHECKBOX_INSTRUCTION,SMALL_PRINT_WIDTH-8,m.pdf.title,p.instructionSize,3));
- const oneColumn=p.rows.every(row=>row.squareX===2);
+ const oneColumn=p.rows.every(row=>Math.abs(row.squareX-p.rows[0].squareX)<.001);
  const width=(oneColumn?SMALL_PRINT_WIDTH:SMALL_PRINT_WIDTH/2);
- assert.ok(p.rows.every(row=>row.x+m.pdf.puzzle(row.text,p.wordSize)<=row.squareX+width-3));
+ assert.ok(p.rows.every(row=>
+  row.x+m.pdf.puzzle(row.text,p.wordSize)<=
+   (oneColumn?SMALL_PRINT_WIDTH-3:row.squareX+width-3)));
+ assert.ok(p.wordSize>=8,'Long story phrases should remain readable');
  assert.ok(p.rows.every(row=>row.squareY>=p.fieldTop&&row.squareY+row.squareSize<p.fieldBottom));
 });
 test('Integrated booklet prints all four new Small layouts without changing sheet geometry',async()=>{
