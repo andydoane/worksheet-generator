@@ -75,7 +75,7 @@ test('invalid or duplicate inputs fail helpfully',()=>{
   assert.ok(validatePuzzle({...mazeModule,statement:''}).length>0);
 });
 
-test('true-or-false maze is a fully connected, symmetric 35×14 perfect maze',()=>{
+test('true-or-false maze is a fully connected, symmetric 41×14 perfect maze',()=>{
   for(let seed=0;seed<35;seed++){
     const m=generateMaze({...mazeModule,seed});
     assert.equal(m.walls.length,MAZE_ROWS);
