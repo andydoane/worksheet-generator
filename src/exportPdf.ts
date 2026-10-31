@@ -1,4 +1,5 @@
 import { createBookletPdf, type PdfDraft, type PdfFontFiles } from './pdf.ts';
+import {coverBorderUrl} from './coverBorders.ts';
 
 // Vite packages these local files as versioned static assets for GitHub Pages.
 const FONT_URLS = {
@@ -37,7 +38,9 @@ export async function downloadBookletPdf(draft: PdfDraft): Promise<void> {
     loadFont(FONT_URLS.zillaSlab,'Zilla Slab Bold'),
   ]);
   const files:PdfFontFiles={mouseMemoirs,nunitoSans,nunitoSans750,nunitoSans900,zillaSlab};
-  const bytes = await createBookletPdf(draft, files);
+  const borderUrl=coverBorderUrl(draft.coverBorder);
+  const borderPng=borderUrl?await loadFont(borderUrl,'selected cover border'):undefined;
+  const bytes = await createBookletPdf(draft, files,borderPng);
   // Create an owned ArrayBuffer to avoid SharedArrayBuffer/Blob type mismatches.
   const buffer = new ArrayBuffer(bytes.length);
   new Uint8Array(buffer).set(bytes);
