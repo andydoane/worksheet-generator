@@ -5,10 +5,10 @@ import {
 import {BOOKLET} from './booklet.ts';
 import {MODULE_TITLE_PT} from './pdfLayout.ts';
 import {balancedLines} from './storyVersePdf.ts';
-import {planCrossword} from './crosswordLayout.ts';
+import {planCrossword,crosswordBlackCells} from './crosswordLayout.ts';
 import type {ModuleFonts} from './modulePdf.ts';
 import {
-  generateCrossword,parseConnectionWords,connectPositions,spiralPoints,spiralTurns,spiralFirstWord,validateSpecialty,
+  generateCrossword,parseConnectionWords,connectPositions,spiralPoints,spiralTurns,validateSpecialty,
   type SpecialtyModule,
 } from './specialtyModules.ts';
 
@@ -45,6 +45,10 @@ function crossword(page:PDFPage,b:Rect,module:Extract<SpecialtyModule,{type:'cro
   if(!plan)throw Error('Crossword grid and clues cannot fit. Try shorter clues or regenerate.');
   centered(page,fonts.title,'CROSSWORD',b.x,b.y+b.height-27,b.width,MODULE_TITLE_PT);
   const top=b.y+b.height-plan.gridTop;
+  for(const {x,y} of crosswordBlackCells(puzzle)){
+    page.drawRectangle({x:b.x+plan.gridX+x*plan.cell,
+      y:top-(y+1)*plan.cell,width:plan.cell,height:plan.cell,color:INK});
+  }
   for(let y=0;y<puzzle.height;y++)for(let x=0;x<puzzle.width;x++){
     if(!puzzle.cells[y][x])continue;
     const cx=b.x+plan.gridX+x*plan.cell,cy=top-(y+1)*plan.cell;
@@ -79,7 +83,7 @@ function spiral(page:PDFPage,b:Rect,module:Extract<SpecialtyModule,{type:'spiral
   const bankTop=b.y+b.height-53,bankBottom=bankTop-bankHeight;
   page.drawRectangle({x:b.x,y:bankBottom,width:b.width,height:bankHeight,
     borderColor:LIGHT,borderWidth:.9});
-  centered(page,fonts.bodyBold,module.reference,b.x,bankTop-12,b.width,10.5);
+  centered(page,fonts.bank,module.reference,b.x,bankTop-12,b.width,10.5);
   rows.forEach((text,i)=>centered(page,fonts.bodyBold,text,b.x+6,
     bankTop-26-i*verseStep,b.width-12,size));
 
@@ -94,18 +98,6 @@ function spiral(page:PDFPage,b:Rect,module:Extract<SpecialtyModule,{type:'spiral
   for(let i=1;i<points.length;i++)
     page.drawLine({start:points[i-1],end:points[i],thickness:1.1,color:INK});
 
-  const first=spiralFirstWord(module.verse);
-  if(first){
-    // A short upright starter word, on a white-backed patch directly at the
-    // path entrance. Rotation of individual PDF glyphs previously caused
-    // overlaps (particularly the W/h in "Who"), so do not rotate letters.
-    const fontSize=10.5,tw=sizeOf(fonts.bodyBold,first,fontSize);
-    const x=Math.max(b.x+6,Math.min(b.x+b.width-tw-6,points[0].x-tw/2));
-    const y=Math.max(bottom+6,Math.min(bankBottom-18,points[0].y+9));
-    page.drawRectangle({x:x-3,y:y-3,width:tw+6,height:fontSize+6,
-      color:rgb(1,1,1)});
-    page.drawText(first,{x,y,font:fonts.bodyBold,size:fontSize,color:INK});
-  }
 }
 function upsideDown(page:PDFPage,b:Rect,module:Extract<SpecialtyModule,{type:'upside-down-verse'}>,fonts:ModuleFonts):void{
   centered(page,fonts.title,'UPSIDE DOWN VERSE',b.x,b.y+b.height-25,b.width,MODULE_TITLE_PT);

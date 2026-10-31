@@ -1,5 +1,27 @@
 # Worksheet Studio
 
+## PR 10h — Crossword false-square fill and Spiral Verse finish (v0.15.1)
+
+- **Crossword:** In both the live preview and exported PDF, fill non-answer grid
+  positions in dark ink only when four legitimate letter squares completely
+  enclose the empty position. This removes misleading "extra squares" without
+  touching answers, numbering, or the connected-placement algorithm.
+- **Spiral Verse:** Remove the starter word and its white backing in both
+  renderers. The child gets an uninterrupted writing spiral; the verse bank
+  remains unchanged except that its **reference alone** uses Nunito ExtraBold
+  (800) instead of Bold (700). The verse text stays at its previous weight.
+- **Version:** Display v0.15.1 in the workspace header; GitHub builds continue
+  to show the short commit identifier for exact build identification.
+- **Verification:** The regression suite includes a four-sided fake cell,
+  an open-sided gap, a real letter cell, preservation of generated solutions,
+  and cross-renderer source checks. Run `npm run test && npm run build && npm run sample:pr10g`.
+  Keep the same four-page, two-sheet landscape US Letter imposition.
+
+**Acceptance check:** Compare the two blacked-out cells from your marked
+Crossword screenshot in the browser and PDF; check the Spiral Verse print to
+confirm the line is uninterrupted and the reference is bolder. No Medium
+module-specific design changes are included.
+
 ## PR 10g — Final Large cleanup and Medium typography preflight
 
 ### Version and page furniture

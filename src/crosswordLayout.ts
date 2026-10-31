@@ -12,6 +12,21 @@ export type CrosswordPlan={
   clueFontSize:number;acrossHeader:{x:number;y:number};downHeader:{x:number;y:number};
   acrossRows:CrosswordClueRow[];downRows:CrosswordClueRow[];
 };
+/** Blank positions completely bounded by real letter cells look like extra
+ * crossword squares. Fill just these four-sided interior voids, never
+ * changing the generated answer grid or its numbering.
+ */
+export function crosswordBlackCells(puzzle:Pick<CrosswordResult,'width'|'height'|'cells'>):{x:number;y:number}[]{
+  const black:{x:number;y:number}[]=[];
+  for(let y=1;y<puzzle.height-1;y++)for(let x=1;x<puzzle.width-1;x++){
+    if(puzzle.cells[y][x]!==null)continue;
+    if(puzzle.cells[y-1][x]!==null&&puzzle.cells[y+1][x]!==null&&
+       puzzle.cells[y][x-1]!==null&&puzzle.cells[y][x+1]!==null){
+      black.push({x,y});
+    }
+  }
+  return black;
+}
 export function crosswordWrap(text:string,maxWidth:number,fontSize:number,
   measure:(text:string,size:number)=>number):string[]|null{
   const result:string[]=[];let line='';

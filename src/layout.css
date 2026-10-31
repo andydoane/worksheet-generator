@@ -257,7 +257,7 @@
 .crossword-clues > div {min-width:0;display:flex;flex-direction:column;gap:3px;font:600 clamp(7px,2.4cqw,11px)/1.15 'Nunito',sans-serif;overflow-wrap:anywhere;}
 .crossword-clues strong {font:400 clamp(15px,4.4cqw,21px)/1 'Mouse Memoirs',sans-serif;}
 .spiral-bank {border:1px solid #777;padding:clamp(5px,1.5cqw,9px);display:flex;flex-direction:column;gap:3px;flex:none;font:750 clamp(8px,2.45cqw,12px)/1.25 'Nunito',sans-serif;}
-.spiral-bank strong {font-weight:900;}
+.spiral-bank strong {font-weight:800;}
 .spiral-svg {width:100%;flex:1;min-height:0;margin:0 auto;stroke:#333;}
 .specialty-verse-reference {font:850 clamp(10px,2.7cqw,14px)/1.2 'Nunito',sans-serif;}
 .upside-words {display:flex;flex-wrap:wrap;align-content:flex-start;gap:clamp(8px,2.5cqw,12px) 0;flex:1;min-height:0;overflow:hidden;padding:clamp(8px,2cqw,12px) 3px 0;}

@@ -6,7 +6,7 @@ import {createBookletPdf} from '../src/pdf.ts';
 import {moduleForSize,blankModule,readAssignments,validateModule} from '../src/modules.ts';
 import {
   parseCrossword,generateCrossword,checkCrossword,connectPositions,parseConnectionWords,
-  spiralPoints,spiralTurns,spiralFirstWord,validateSpecialty,
+  spiralPoints,spiralTurns,validateSpecialty,
 } from '../src/specialtyModules.ts';
 
 const entries=[
@@ -136,10 +136,9 @@ test('all five specialty activities export to a vector two-sheet booklet',async(
 });
 
 
-test('spiral length responds to verse length and starts at the first word',()=>{
+test('spiral length responds to verse length',()=>{
  assert.ok(spiralTurns('Jesus wept.')<spiralTurns('God so loved the world that he gave his one and only Son.'));
  assert.ok(spiralTurns('A'.repeat(260))<=5.5);
- assert.equal(spiralFirstWord('  In the beginning'), 'In');
  assert.equal(spiralPoints(480,spiralTurns('Jesus wept.')).length,480);
 });
 test('nine and ten crossword clues remain connected with multi-word normalization',()=>{
