@@ -7,7 +7,7 @@ import {planTrueFalse,TRUE_FALSE_TITLE} from './trueFalsePrintLayout.ts';
 import {THUMB_SOURCE_VIEW,THUMB_UP_PATH,THUMB_DOWN_PATH,
  THUMB_CIRCLE_RADIUS,THUMB_CIRCLE_STROKE,THUMB_DOWN_PATH_X_OFFSET} from './thumbArtwork.ts';
 import {
-  answerCharacters, scrambleWord, shuffledChoices, shuffledWordList, verseInitials,
+  answerCharacters, scrambleWord,
   type SmallModule,
 } from './smallModules.ts';
 
