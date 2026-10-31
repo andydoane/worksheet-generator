@@ -1,6 +1,4 @@
 import {BOOKLET} from './booklet.ts';
-import {measureWrappedLines} from './pdfLayout.ts';
-import {balancedBankLines} from './balancedBankLines.ts';
 import {balancedBankLines} from './balancedBankLines.ts';
 import {shuffledChoices,shuffledWordList,type MultipleChoice,type OddWords} from './smallModules.ts';
 import type {MeasureText} from './mediumParityLayout.ts';
