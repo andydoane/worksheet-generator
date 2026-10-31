@@ -170,8 +170,8 @@ test('Both print renderers use one shared measured Medium plan and editor expose
  assert.doesNotMatch(svg,/>WORD SEARCH</u);
  assert.match(svg,/MEDIUM_SEARCH_TITLE/u);
  assert.match(pdf,/MEDIUM_SEARCH_TITLE/u);
- assert.match(svg,/plan\.dividerX/u);
- assert.match(pdf,/plan\.dividerX/u);
+ assert.doesNotMatch(svg,/plan\.dividerX/u);
+ assert.doesNotMatch(pdf,/plan\.dividerX/u);
  assert.match(svg,/Mouse Memoirs/u);
  assert.match(pdf,/fonts\.title/u);
 });
