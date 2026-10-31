@@ -1,4 +1,37 @@
-import type { StoryVerseModule } from './storyVerseModules.ts';
+import {useRef} from 'react';
+import {markWordSelection} from './storySelection.ts';
+import {parseVerse,type FinishVerse,type StoryVerseModule} from './storyVerseModules.ts';
+
+function FinishVerseEditor({module,onChange}:{module:FinishVerse;onChange:(patch:Partial<StoryVerseModule>)=>void}){
+ const inputRef=useRef<HTMLTextAreaElement>(null);
+ const blankCount=parseVerse(module.verse).answers.length;
+ function markSelection(){
+  const input=inputRef.current;
+  if(!input||blankCount>=8)return;
+  const result=markWordSelection(module.verse,input.selectionStart,input.selectionEnd);
+  if(!result)return;
+  onChange({verse:result.text});
+  requestAnimationFrame(()=>{
+   input.focus();
+   input.setSelectionRange(result.selectionStart,result.selectionEnd);
+  });
+ }
+ return <div className="activity-inputs">
+  <label htmlFor="sv-reference">Memory verse reference</label>
+  <input id="sv-reference" value={module.reference}
+   onChange={e=>onChange({reference:e.target.value})} placeholder="Isaiah 41:10"/>
+  <label htmlFor="sv-verse">Verse with missing words</label>
+  <textarea id="sv-verse" rows={8} ref={inputRef} value={module.verse}
+   onChange={e=>onChange({verse:e.target.value})}
+   placeholder={'Fear not, for I am with [you]; be not dismayed, for I am your [God].'}/>
+  <button type="button" className="mark-blank" onMouseDown={e=>e.preventDefault()}
+   onClick={markSelection} disabled={blankCount>=8}>Make selected word a blank</button>
+  <p>Double-click a word, then select the button. Mark 2–8 words with [brackets];
+   repeated words are marked individually. For longer passages, fewer blanks
+   keep the handwriting boxes comfortably sized.</p>
+ </div>;
+}
+
 
 export default function StoryVerseEditor({module,onChange}:{
   module: StoryVerseModule;
@@ -29,7 +62,7 @@ export default function StoryVerseEditor({module,onChange}:{
           placeholder={'Daniel prays by his window.\nThe king makes a new law.\nDaniel is thrown to the lions.\nGod sends an angel.'}/>
         <p>One prompt per line; four prompts use a 2×2 grid, while five or six use a 3×2 grid.</p>
       </div>;
-    case 'finish-verse':
+    case 'finish-verse':return <FinishVerseEditor module={module} onChange={onChange}/>;
     case 'unscramble-verse':
       return <div className="activity-inputs">
         <label htmlFor="sv-reference">Memory verse reference</label>
@@ -39,7 +72,7 @@ export default function StoryVerseEditor({module,onChange}:{
         <textarea id="sv-verse" rows={8} value={module.verse}
           onChange={e=>onChange({verse:e.target.value})}
           placeholder={'For [God] so [loved] the [world] that he [gave] his one and only [Son].'}/>
-        <p>Enclose {module.type==='finish-verse'?'4–8':'4–6'} missing words in [square brackets]. {module.type==='finish-verse'?'Children fill letter boxes using a shuffled word bank.':'Children write the missing word above its scrambled letters.'}</p>
+        <p>Enclose 4–6 missing words in [square brackets]. Children write the missing words above their scrambled letters.</p>
       </div>;
     case 'circle-mistakes':
       return <div className="activity-inputs">
