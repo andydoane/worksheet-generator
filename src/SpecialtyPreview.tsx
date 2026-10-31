@@ -95,12 +95,12 @@ function ConnectView({module}:{module:Extract<SpecialtyModule,{type:'connect-ver
     </div>
   </div>;
 }
-export default function SpecialtyPreview({module}:{module:SpecialtyModule}){
+export default function SpecialtyPreview({module,legacyMedium=false}:{module:SpecialtyModule;legacyMedium?:boolean}){
   switch(module.type){
     case 'crossword':return <CrosswordView module={module}/>;
     case 'spiral-verse':return <SpiralView module={module}/>;
     case 'upside-down-verse':return <UpsideDownView module={module}/>;
-    case 'connect-verse':return <ConnectVersePrintPreview module={module}/>;
+    case 'connect-verse':return legacyMedium?<ConnectView module={module}/>:<ConnectVersePrintPreview module={module}/>;
     case 'connect-big-idea':return <ConnectBigIdeaPrintPreview module={module}/>;
   }
 }
