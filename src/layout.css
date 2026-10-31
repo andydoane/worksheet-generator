@@ -456,8 +456,8 @@
 
 /* PR 16a: collapsed cover border gallery and reduced print-safe cover text zone. */
 .cover-content {position:relative; isolation:isolate;}
-.cover-content.cover-content-bordered {overflow:visible; width:100%;height:100%;padding:0;}
-.cover-border-art {position:absolute;z-index:0;inset:-4.1666667% -4.1666667%;width:108.3333334%;height:108.3333334%;object-fit:fill;pointer-events:none;}
+.cover-content.cover-content-bordered {overflow:hidden;width:100%;height:100%;padding:0;}
+.cover-border-art {position:absolute;z-index:0;inset:0;width:100%;height:100%;object-fit:fill;pointer-events:none;}
 .cover-content-bordered .cover-title,.cover-content-bordered .cover-reference {position:relative;z-index:1;max-width:89.583333%;overflow-wrap:anywhere;}
 .cover-content-bordered .cover-title {max-height:82%;font-size:clamp(14px,7cqw,34px);}
 .cover-border-field {min-width:0;}
