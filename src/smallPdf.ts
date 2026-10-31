@@ -2,6 +2,9 @@ import { rgb, type PDFFont, type PDFPage } from 'pdf-lib';
 import { BOOKLET } from './booklet.ts';
 import { type ModuleFonts } from './modulePdf.ts';
 import {planMultipleChoice,planOddWords} from './smallParityLayout.ts';
+import {planTrueFalse,TRUE_FALSE_TITLE} from './trueFalsePrintLayout.ts';
+import {THUMB_SOURCE_VIEW,THUMB_UP_PATH,THUMB_DOWN_PATH,
+ THUMB_CIRCLE_RADIUS,THUMB_CIRCLE_STROKE,THUMB_DOWN_PATH_X_OFFSET} from './thumbArtwork.ts';
 import {
   answerCharacters, scrambleWord, shuffledChoices, shuffledWordList, verseInitials,
   type SmallModule,
@@ -64,22 +67,6 @@ function label(page:PDFPage,font:PDFFont,text:string,box:Rect,y:number,preferred
   centered(page,font,text,box.x+box.width/2,y,size);
 }
 
-/** Outline-only thumbs: vector geometry avoids platform-dependent emoji. */
-function thumb(page:PDFPage,cx:number,cy:number,up:boolean):void {
-  page.drawEllipse({x:cx,y:cy,xScale:27,yScale:27,borderColor:GREY,borderWidth:.8});
-  const shape:[[number,number],...[number,number][]]=[
-    [4,12],[10,12],[10,7],[16,1],[19,1],[20,4],[18,10],
-    [26,10],[28,13],[25,25],[22,28],[11,28],[10,25],[4,25],
-  ];
-  function point([x,y]:[number,number]) {
-    return {x:cx+(x-16)*1.15,y:cy+(up?(16-y):(y-16))*1.15};
-  }
-  for(let i=0;i<shape.length;i++){
-    page.drawLine({start:point(shape[i]),end:point(shape[(i+1)%shape.length]),thickness:1.55,color:INK});
-  }
-  page.drawLine({start:point([10,12]),end:point([10,25]),thickness:1.3,color:INK});
-}
-
 function drawMultipleChoice(page:PDFPage,box:Rect,module:Extract<SmallModule,{type:'multiple-choice'}>,fonts:ModuleFonts):void {
   const plan=planMultipleChoice(module,(text,size)=>measure(fonts.title,text,size),
     fonts.titleInkCenter??((_text,size)=>size*.35),box.width,box.height);
@@ -94,14 +81,35 @@ function drawMultipleChoice(page:PDFPage,box:Rect,module:Extract<SmallModule,{ty
         font:fonts.title,size:row.fontSize,color:INK});
   }
 }
+/** Exact uploaded artwork, native vector curves rather than PDF emoji.
+ * PDF drawSvgPath flips the SVG vertical axis automatically; down SVG's
+ * nested Inkscape translations combine to -28.222776 along x.
+ */
 function drawTrueFalse(page:PDFPage,box:Rect,module:Extract<SmallModule,{type:'true-false'}>,fonts:ModuleFonts):void {
-  label(page,fonts.title,'TRUE OR FALSE?',box,box.y+box.height-25,24,17);
-  paragraph(page,fonts.title,module.statement,box,box.y+box.height-42,18,12,4);
-  const cy=box.y+43;
-  thumb(page,box.x+box.width*.29,cy,true);
-  thumb(page,box.x+box.width*.71,cy,false);
-  centered(page,fonts.body,'TRUE',box.x+box.width*.29,box.y+5,10);
-  centered(page,fonts.body,'FALSE',box.x+box.width*.71,box.y+5,10);
+  const plan=planTrueFalse(module.statement,(text,size)=>measure(fonts.title,text,size),
+    box.width,box.height);
+  if(!plan)throw new Error('True or False statement cannot fit in the Small space.');
+  const top=box.y+box.height,artInk=rgb(0,0,0);
+  centered(page,fonts.title,TRUE_FALSE_TITLE,box.x+box.width/2,
+    top-plan.titleY,plan.titleSize);
+  for(const line of plan.statementLines)
+    centered(page,fonts.title,line.text,box.x+line.x,top-line.y,plan.statementSize);
+  plan.thumbs.forEach((thumb,i)=>{
+    const scale=thumb.size/THUMB_SOURCE_VIEW;
+    page.drawSvgPath(i===0?THUMB_UP_PATH:THUMB_DOWN_PATH,{
+      x:box.x+thumb.x-(i===0?0:THUMB_DOWN_PATH_X_OFFSET*scale),
+      y:top-thumb.y,scale,color:artInk,
+    });
+    page.drawEllipse({
+      x:box.x+thumb.x+thumb.size/2,
+      y:top-thumb.y-thumb.size/2,
+      xScale:THUMB_CIRCLE_RADIUS*scale,
+      yScale:THUMB_CIRCLE_RADIUS*scale,
+      borderWidth:THUMB_CIRCLE_STROKE*scale,borderColor:artInk,
+    });
+    centered(page,fonts.bodyBold,thumb.label,box.x+thumb.labelX,
+      top-thumb.labelY,10);
+  });
 }
 function drawFirstLetters(page:PDFPage,box:Rect,module:Extract<SmallModule,{type:'first-letters'}>,fonts:ModuleFonts):void {
   paragraph(page,fonts.title,'Try to say the verse using only the first letters.',box,box.y+box.height-3,15,11,3);

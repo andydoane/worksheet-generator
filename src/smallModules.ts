@@ -3,6 +3,7 @@
  * and deterministic derived data in the HTML preview and exported PDF.
  */
 import { shuffledIndices } from './shuffle.ts';
+import {TRUE_FALSE_MAX_CHARACTERS} from './trueFalseLimits.ts';
 
 export type MultipleChoice = {
   type: 'multiple-choice'; question: string; correct: string; wrong1: string; wrong2: string; seed: number;
@@ -146,7 +147,7 @@ export function validateSmallModule(module: SmallModule): string[] {
       return errors;
     }
     case 'true-false':
-      return within(module.statement, 135) ? [] : ['Enter a true-or-false statement of 1–135 characters.'];
+      return within(module.statement, TRUE_FALSE_MAX_CHARACTERS) ? [] : ['Enter a true-or-false statement of 1–80 characters.'];
     case 'first-letters': {
       const initials = verseInitials(module.verse);
       const errors: string[] = [];

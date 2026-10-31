@@ -3,33 +3,12 @@ import {
   type SmallModule,
 } from './smallModules.ts';
 import {MultipleChoicePrintPreview,OddWordsPrintPreview} from './SmallParityPreview.tsx';
-
-const THUMB_POINTS = '4,12 10,12 10,7 16,1 19,1 20,4 18,10 26,10 28,13 25,25 22,28 11,28 10,25 4,25';
-function Thumb({ up }: { up: boolean }) {
-  return (
-    <span className="small-thumb" aria-label={up ? 'Thumbs up' : 'Thumbs down'}>
-      <svg viewBox="0 0 32 32" role="img" aria-hidden="true">
-        <g transform={up ? undefined : 'translate(32 32) rotate(180)'}>
-          <polygon points={THUMB_POINTS} fill="none" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
-          <line x1="10" y1="12" x2="10" y2="25" stroke="currentColor" strokeWidth="2" />
-        </g>
-      </svg>
-      <span>{up ? 'TRUE' : 'FALSE'}</span>
-    </span>
-  );
-}
+import TrueFalsePrintPreview from './TrueFalsePrintPreview.tsx';
 
 export default function SmallModulePreview({ module }: { module: SmallModule }) {
   switch (module.type) {
     case 'multiple-choice':return <MultipleChoicePrintPreview module={module}/>;
-    case 'true-false':
-      return (
-        <div className="module-preview small-preview small-true-false">
-          <div className="small-heading">TRUE OR FALSE?</div>
-          <div className="small-statement">{module.statement}</div>
-          <div className="small-thumbs"><Thumb up /><Thumb up={false}/></div>
-        </div>
-      );
+    case 'true-false':return <TrueFalsePrintPreview module={module}/>;
     case 'first-letters': {
       const letters = verseInitials(module.verse);
       const chunks = letters.match(/.{1,16}/g) ?? [];
