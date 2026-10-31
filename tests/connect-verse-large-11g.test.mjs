@@ -71,7 +71,7 @@ test('Large verse bank and scattered field match the embedded PDF font measureme
   assert.deepEqual(p,planConnectVerse(data,{puzzle:pdf.puzzle,verse:pdf.verse,subtitle:pdf.subtitle}));
   assert.deepEqual(p.scattered.map(w=>w.word),parseConnectionWords(verse));
   assert.ok(p.bankLines.length>=1&&p.bankLines.length<=5);
-  assert.equal(p.bankLines.map(l=>l.text).join(' '),verse.toUpperCase());
+  assert.equal(p.bankLines.map(l=>l.text).join(' '),verse);
   assert.ok(p.field.height>125);
   assert.equal(scatterHasCollision(p.scattered),false);
   assert.ok(p.scattered.every(w=>w.bounds.x>=p.field.x&&w.bounds.y>=p.field.y));
