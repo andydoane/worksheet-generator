@@ -45,7 +45,7 @@ export default function ConnectBigIdeaPrintPreview({module}:{module:ConnectBigId
     <text x={item.glyphs[0]?.x??0} y={item.glyphs[0]?.y??0}
      fontFamily="Zilla Slab" fontWeight="700" fontSize={item.fontSize}
      fill="#222">{item.word}</text>
-   </g>:null)}}
+   </g>:null)}
   </svg>}
  </div>;
 }
