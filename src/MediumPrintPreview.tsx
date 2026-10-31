@@ -8,7 +8,7 @@ import {
   type MatchPrintPlan,type MistakesPrintPlan,type MeasureText,
 } from './mediumParityLayout.ts';
 
-type MediumWidths={body:MeasureText;bold:MeasureText;puzzle:MeasureText;puzzlePdf:MeasureText;bank:MeasureText;title:MeasureText;finishBody:MeasureText;bankInkCenter:MeasureText};
+type MediumWidths={body:MeasureText;bold:MeasureText;boldPdf:MeasureText;puzzle:MeasureText;puzzlePdf:MeasureText;bank:MeasureText;title:MeasureText;finishBody:MeasureText;bankInkCenter:MeasureText};
 let widthsPromise:Promise<MediumWidths>|null=null;
 /** Measure the same static TrueType faces embedded in PDF output. */
 export function mediumWidths():Promise<MediumWidths>{
@@ -30,7 +30,7 @@ export function mediumWidths():Promise<MediumWidths>{
     // fontkit's positioned xAdvance). Match it exactly for print scenes.
     const pdfWidth=(face:typeof faces[number]):MeasureText=>(value,size)=>
       face.layout(value).glyphs.reduce((sum,g)=>sum+g.advanceWidth,0)*size/face.unitsPerEm;
-    return {body:width(faces[0]),bold:width(faces[1]),puzzle:width(faces[2]),
+    return {body:width(faces[0]),bold:width(faces[1]),boldPdf:pdfWidth(faces[1]),puzzle:width(faces[2]),
       puzzlePdf:pdfWidth(faces[2]),finishBody:pdfWidth(faces[0]),bank:pdfWidth(faces[3]),title:pdfWidth(faces[4]),
       bankInkCenter:(word:string,size:number)=>glyphInkCenter(faces[3],word,size)};
   }).catch(error=>{widthsPromise=null;throw error;});
