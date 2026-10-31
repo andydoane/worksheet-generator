@@ -7,7 +7,7 @@ const fonts={
  nunitoSans900:await readFile(new URL('../fonts/Nunito-ExtraBold.ttf',import.meta.url)),
  zillaSlab:await readFile(new URL('../fonts/ZillaSlab-Bold-pdf.ttf',import.meta.url)),
 };
-const mistakes='The Israelites followed Moses out of Egypt. Pharaoh decided not to chase them. God led them toward the Red Sea, but the people thought they had no way across. Moses waved his staff and the water became a frozen bridge. Everyone crossed on dry ground while the Egyptian chariots waited patiently. God helped his people reach the other side safely. Miriam gathered everyone to sing and thank God for bringing them through the sea. The Israelites spent their next night celebrating what God had done.';
+const mistakes='The Israelites followed Moses out of Egypt. Pharaoh decided not to chase them. God led them toward the Red Sea, but the people thought they had no way across. Moses waved his staff and the water became a frozen bridge. Everyone crossed on dry ground while the Egyptian chariots waited patiently. God helped his people reach the other side safely. Miriam gathered everyone to sing and thank God for bringing them through the sea. The people sang to thank God for helping them.';
 const draft={title:'God Keeps His Promises',scripture:'Exodus 15',
  layouts:{2:'medium-medium-small-small',3:'medium-medium-small-small',4:'medium-medium-small-small'},
  modules:{
