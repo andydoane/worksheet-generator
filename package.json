@@ -1,6 +1,6 @@
 {
   "name": "worksheet-generator",
-  "version": "0.15.24",
+  "version": "0.16.0",
   "private": true,
   "type": "module",
   "scripts": {
