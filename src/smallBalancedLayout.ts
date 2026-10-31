@@ -120,7 +120,9 @@ export function planCheckboxes(module:Checkboxes,title:MeasureText,puzzle:Measur
   // column rather than shrinking the letters below child-readable size.
   for(const columns of [2,1] as const){
    const colWidth=width/columns,rowsCount=Math.ceil(words.length/columns);
-   for(let wordSize=12;wordSize>=6.5;wordSize-=.5){
+   // In two columns keep at least 9pt letters; otherwise prefer a
+   // centered full-width list with roomier type over cramped tiny words.
+   for(let wordSize=12;wordSize>=(columns===2?9:6.5);wordSize-=.5){
     const squareSize=9,textOffset=14;
     if(words.some(word=>puzzle(word,wordSize)>colWidth-textOffset-5))continue;
     const minimumPitch=Math.max(columns===2?17:10.5,wordSize*1.28);
@@ -130,8 +132,12 @@ export function planCheckboxes(module:Checkboxes,title:MeasureText,puzzle:Measur
     if(pitch<minimumPitch-.001)continue;
     const total=wordSize+(rowsCount-1)*pitch;
     const firstY=fieldTop+(available-total)/2+wordSize;
+    const longestWord=Math.max(...words.map(word=>puzzle(word,wordSize)));
+    const oneColumnLeft=(width-textOffset-longestWord)/2;
     const rows=words.map((text,i)=>{
-     const col=i%columns,row=Math.floor(i/columns),left=col*colWidth+2,y=firstY+row*pitch;
+     const col=i%columns,row=Math.floor(i/columns);
+     const left=columns===1?oneColumnLeft:col*colWidth+2;
+     const y=firstY+row*pitch;
      return {text,x:left+textOffset,y,squareX:left,
        squareY:y-wordSize*.36-squareSize/2,squareSize};
     });
