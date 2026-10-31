@@ -247,9 +247,6 @@ export function connectPositions(module:ConnectVerseModule|ConnectBigIdeaModule)
 export function spiralTurns(verse:string):number{
   return Math.max(2.4,Math.min(5.5,2.4+verse.trim().length/260*3.1));
 }
-export function spiralFirstWord(verse:string):string{
-  return verse.trim().split(/\s+/u)[0]?.replace(/^[^\p{L}]+|[^\p{L}]+$/gu,'')??'';
-}
 export function spiralPoints(count=400,turns=5.5):{x:number;y:number}[]{
   return Array.from({length:count},(_,i)=>{
     const t=i/(count-1),angle=t*Math.PI*2*turns-Math.PI/2;
