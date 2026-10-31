@@ -48,7 +48,7 @@ test('Spiral length varies by verse size',()=>{
 });
 test('App displays package version plus GitHub build revision, and page footers are absent',async()=>{
  const pkg=JSON.parse(await readFile(new URL('../package.json',import.meta.url),'utf8'));
- assert.equal(pkg.version,'0.15.24');
+ assert.equal(pkg.version,'0.16.0');
  const app=await readFile(new URL('../src/App.tsx',import.meta.url),'utf8');
  const pdf=await readFile(new URL('../src/pdf.ts',import.meta.url),'utf8');
  assert.match(app,/pkg\.version/);
