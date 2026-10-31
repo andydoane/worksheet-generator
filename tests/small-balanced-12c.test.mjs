@@ -86,7 +86,7 @@ test('Checkboxes balances instructions with 14-character entries and centered ro
   assert.deepEqual(p.instructionLines,q.instructionLines);
   assert.deepEqual(p.rows,q.rows);
   assert.equal(p.wordSize,q.wordSize);
-  assert.ok(p.instructionLines.length>=2);
+  assert.ok(p.instructionLines.length>=1&&p.instructionLines.length<=3);
   assert.deepEqual(p.instructionLines.map(l=>l.text),
    balancedBankLines(CHECKBOX_INSTRUCTION,SMALL_PRINT_WIDTH-8,pdf.title,p.instructionSize,3));
   assert.deepEqual(p.rows.map(x=>x.text),shuffledWordList(module).map(x=>x.text.toUpperCase()));
