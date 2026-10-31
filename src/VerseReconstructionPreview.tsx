@@ -41,10 +41,10 @@ export function VerseReconstructionPreview({module}:{
      :<g key={i}>
        <line x1={m.x+.8} x2={m.x+plan.cell-1}
         y1={m.y+2} y2={m.y+2} stroke="#222" strokeWidth=".8"/>
-       {upside?<text x={m.x+plan.cell/2} y={m.y+16} textAnchor="middle"
+       {upside?<text x={m.x+plan.cell/2} y={m.y+plan.glyphOffset} textAnchor="middle"
           fontFamily="Zilla Slab" fontSize={plan.fontSize} fontWeight="700"
-          fill="#222" transform={'translate(0 '+(2*(m.y+16))+') scale(1 -1)'}>{m.text}</text>
-       :<text x={m.x+plan.cell/2} y={m.y+16} textAnchor="middle"
+          fill="#222" transform={'translate(0 '+(2*(m.y+plan.glyphOffset))+') scale(1 -1)'}>{m.text}</text>
+       :<text x={m.x+plan.cell/2} y={m.y+plan.glyphOffset} textAnchor="middle"
           fontFamily="Zilla Slab" fontSize="8.2" fontWeight="700"
           fill="#222">{m.scramble}</text>}
       </g>)}
