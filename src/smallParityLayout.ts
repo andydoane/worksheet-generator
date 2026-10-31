@@ -1,5 +1,6 @@
 import {BOOKLET} from './booklet.ts';
 import {measureWrappedLines} from './pdfLayout.ts';
+import {balancedBankLines} from './balancedBankLines.ts';
 import {shuffledChoices,shuffledWordList,type MultipleChoice,type OddWords} from './smallModules.ts';
 import type {MeasureText} from './mediumParityLayout.ts';
 
@@ -15,13 +16,17 @@ export type OddWordsPrintPlan={
  left:SmallLine[];right:SmallLine[];groupLeft:number;groupRight:number;
 };
 
-/** Both print renderers use the same fontkit glyph bounds to center the
- * checkbox alongside the visible text ink, including wrapped answers. */
+/** Center each checkbox on a stable *typographic cap-height line box*, not
+ * the unique glyph ink of the particular answer. Descenders (Andy vs ANDY)
+ * must never shift checkbox position. For multi-line answers, the checkbox
+ * centers on the combined first/last baseline interval.
+ */
 export function planMultipleChoice(module:MultipleChoice,measure:MeasureText,
  inkCenter:(text:string,size:number)=>number,
  width=SMALL_PRINT_WIDTH,height=SMALL_PRINT_HEIGHT):MultipleChoicePrintPlan|null{
  const options=shuffledChoices(module);
- const textX=19,answerWidth=width-textX-3,squareSize=11;
+ const squareSize=11,squareGap=6,sideInset=3;
+ const answerWidth=width-2*sideInset-squareSize-squareGap;
  let winner:{score:number;plan:MultipleChoicePrintPlan}|null=null;
  for(let qSize=20;qSize>=13;qSize-=.5){
   const question=measureWrappedLines(module.question,width-5,s=>measure(s,qSize));
@@ -40,16 +45,24 @@ export function planMultipleChoice(module:MultipleChoice,measure:MeasureText,
     text,x:width/2,y:top+qSize+(i*qStep),
    }));
    let rowTop=top+qHeight+9;
+   const maxTextWidth=Math.max(...answerLines.flatMap(lines=>
+    (lines??[]).map(line=>measure(line,aSize))));
+   const groupWidth=squareSize+squareGap+maxTextWidth;
+   const groupLeft=(width-groupWidth)/2;
+   const textX=groupLeft+squareSize+squareGap;
+   // Use the same stable cap-height reference for EVERY row, regardless
+   // of its letters. The old word-dependent glyph midpoint moved 'Andy'
+   // lower than 'ANDY' because of the descender on y.
+   const capCenter=inkCenter('ANDY',aSize);
    const rows:ChoiceRow[]=answerLines.map((lines,index)=>{
     const actual=lines??[];
     const firstBaseline=rowTop+(heights[index]-(actual.length-1)*step)/2+
      aSize*.36;
     const textLines=actual.map((text,i)=>({text,x:textX,y:firstBaseline+i*step}));
-    const inkFirst=textLines[0].y-inkCenter(actual[0],aSize);
-    const inkLast=textLines[textLines.length-1].y-
-      inkCenter(actual[actual.length-1],aSize);
-    const center=(inkFirst+inkLast)/2;
-    const row={squareX:2,squareY:center-squareSize/2,squareSize,
+    const firstCenter=textLines[0].y-capCenter;
+    const lastCenter=textLines[textLines.length-1].y-capCenter;
+    const center=(firstCenter+lastCenter)/2;
+    const row={squareX:groupLeft,squareY:center-squareSize/2,squareSize,
      fontSize:aSize,lines:textLines};
     rowTop+=heights[index]+3.5;
     return row;
@@ -71,7 +84,7 @@ export function planOddWords(module:OddWords,title:MeasureText,puzzle:MeasureTex
  const right=words.filter((_,i)=>i%2===1).map(w=>w.text.toUpperCase());
  let best:OddWordsPrintPlan|null=null;
  for(let headingSize=15;headingSize>=11&&!best;headingSize-=.5){
-  const instructions=measureWrappedLines(instruction,width-3,t=>title(t,headingSize));
+  const instructions=balancedBankLines(instruction,width-3,title,headingSize,3);
   if(!instructions||instructions.length>3)continue;
   const headingStep=headingSize*1.28;
   const fieldTop=6+instructions.length*headingStep+10;

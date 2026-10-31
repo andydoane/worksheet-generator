@@ -46,7 +46,7 @@ export default function SmallModuleEditor({ module, onChange }: Props) {
           <textarea id="odd-correct" rows={5} value={module.correct} onChange={(e) => onChange({ correct:e.target.value })} placeholder={'BOAT\nWATER\nRAINBOW\nNOAH\nDOVE'} />
           <label htmlFor="odd-incorrect">Words NOT from the story (up to five)</label>
           <textarea id="odd-incorrect" rows={5} value={module.incorrect} onChange={(e) => onChange({ incorrect:e.target.value })} placeholder={'SAMSON\nHAT\nDAVID'} />
-          <p>Use one word per line, 6–10 words total. The worksheet shuffles all the words together.</p>
+          <p>Use one entry per line, 6–10 entries total. Phrases such as “red sea” are welcome; each entry may contain up to 12 characters, counting spaces. The worksheet shuffles the entries together.</p>
         </div>
       );
     case 'unscramble-words':

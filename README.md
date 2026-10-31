@@ -1,5 +1,24 @@
 # Worksheet Studio
 
+## PR 12a follow-up — Small layout polish and immediate character-limit feedback (v0.15.12)
+
+- **Multiple Choice:** answer squares now align to a **consistent cap-height
+  typographic center**, so a descender in *Andy* doesn't shift the box
+  compared with *ANDY*. A wrapped answer centers its square on the whole
+  multiline block. The three checkbox/answer rows retain their shared
+  left alignment while the entire group is **centered horizontally**.
+- **What Doesn't Belong:** enter phrases such as *red sea*, *dry land* or
+  *burning bush*, with a **12-character maximum per entry including
+  internal spaces**. The instruction uses balanced measured wrapping;
+  the existing two-column group centering is preserved.
+- **Immediate field feedback:** when an activity field exceeds one of
+  its existing character/entry lengths, the input itself changes to a soft
+  pink/red state while the existing validation messages remain visible.
+  Typing is not truncated; it returns to normal once corrected.
+- **Verification:** `npm run test && npm run build && npm run
+  sample:pr12a-followup`. Inspect short Yes/No/Maybe answers, Andy/ANDY,
+  long multiple-choice answers and multiword story entries in the PDF.
+
 ## PR 12a — Small module parity baseline (v0.15.11)
 
 - **All eight Small activities audited.** Read
