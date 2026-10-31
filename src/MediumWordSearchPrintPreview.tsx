@@ -27,8 +27,6 @@ export default function MediumWordSearchPrintPreview({module,showSolution=false}
   <svg className="medium-print-svg" viewBox={'0 0 '+MEDIUM_PRINT_WIDTH+' '+MEDIUM_PRINT_HEIGHT}
    preserveAspectRatio="xMidYMid meet" role="img"
    aria-label="Medium Word Search, nine by nine grid in left panel and Crossword title over word list in right panel">
-   <line x1={plan.dividerX} y1={plan.dividerTop}
-    x2={plan.dividerX} y2={plan.dividerBottom} stroke="#929292" strokeWidth=".5"/>
    <text x={plan.titleX} y={plan.titleY} textAnchor="middle"
     fontFamily="Mouse Memoirs" fontSize={plan.titleSize} fill="#222">{MEDIUM_SEARCH_TITLE}</text>
    <rect x={plan.gridX-2} y={plan.gridTop-2} width={plan.gridWidth+4}
