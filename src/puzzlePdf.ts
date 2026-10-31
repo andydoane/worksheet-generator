@@ -3,6 +3,7 @@ import { BOOKLET } from './booklet.ts';
 import {MODULE_TITLE_PT} from './pdfLayout.ts';
 import {planMazePrint,MAZE_ARROW_PATH,MAZE_ARROW_VIEW_SIZE} from './mazePrintLayout.ts';
 import {planWordSearch} from './wordSearchLayout.ts';
+import {planMediumWordSearch} from './mediumWordSearchLayout.ts';
 import type { ModuleFonts } from './modulePdf.ts';
 import {
   generateMaze, generateWordSearch, NORTH, SOUTH, EAST, WEST,
@@ -57,6 +58,35 @@ function drawWordSearch(page:PDFPage,rect:Rect,fonts:ModuleFonts,module:Extract<
  }
 }
 
+/** Exactly the same 9x9 print-point scene as MediumWordSearchPrintPreview. */
+function drawMediumWordSearch(page:PDFPage,rect:Rect,fonts:ModuleFonts,
+ module:Extract<PuzzleModule,{type:'medium-word-search'}>):void{
+ const box=inside(rect),puzzle=generateWordSearch(module);
+ const plan=planMediumWordSearch(puzzle,{
+  puzzle:(text,size)=>textWidth(fonts.puzzle,text,size),
+  bank:(text,size)=>textWidth(fonts.bank,text,size),
+ },box.width,box.height);
+ if(!plan)throw Error('Medium Word Search grid and word list cannot fit clearly. Use shorter entries.');
+ const top=box.y+box.height;
+ page.drawRectangle({
+  x:box.x+plan.gridX-2,y:top-plan.gridTop-plan.gridHeight-2,
+  width:plan.gridWidth+4,height:plan.gridHeight+4,
+  borderColor:FAINT,borderWidth:.5,
+ });
+ for(const letter of plan.letters){
+  page.drawText(letter.char,{
+   x:box.x+letter.x,y:top-letter.y,
+   size:plan.letterSize,font:fonts.puzzle,color:BLACK,
+  });
+ }
+ for(const item of plan.bankEntries){
+  page.drawText(item.text,{
+   x:box.x+item.x-textWidth(fonts.bank,item.text,plan.bankSize)/2,
+   y:top-item.y,size:plan.bankSize,font:fonts.bank,color:BLACK,
+  });
+ }
+}
+
 function drawMaze(page:PDFPage,rect:Rect,fonts:ModuleFonts,module:Extract<PuzzleModule,{type:'true-false-maze'}>):void{
  const box=inside(rect);
  const plan=planMazePrint(module.statement,(text,size)=>textWidth(fonts.body,text,size),
@@ -102,5 +132,6 @@ function drawMaze(page:PDFPage,rect:Rect,fonts:ModuleFonts,module:Extract<Puzzle
 
 export function drawPuzzlePdf(page:PDFPage,rect:Rect,module:PuzzleModule,fonts:ModuleFonts):void{
   if(module.type==='word-search')return drawWordSearch(page,rect,fonts,module);
+  if(module.type==='medium-word-search')return drawMediumWordSearch(page,rect,fonts,module);
   return drawMaze(page,rect,fonts,module);
 }

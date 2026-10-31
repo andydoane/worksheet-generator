@@ -33,7 +33,7 @@ test('module registry filters by region size', () => {
   assert.equal(moduleForSize('small').length, 8);
   assert.ok(moduleForSize('small').some((m) => m.id === 'draw-picture'));
   assert.ok(moduleForSize('small').some((m) => m.id === 'who-am-i'));
-  assert.deepEqual(moduleForSize('medium').map((m) => m.id), ['match-words', 'finish-verse', 'unscramble-verse', 'circle-mistakes', 'true-false-maze', 'big-idea-cryptogram', 'upside-down-verse', 'connect-big-idea']);
+  assert.deepEqual(moduleForSize('medium').map((m) => m.id), ['match-words', 'finish-verse', 'unscramble-verse', 'circle-mistakes', 'medium-word-search', 'true-false-maze', 'big-idea-cryptogram', 'upside-down-verse', 'connect-big-idea']);
   assert.deepEqual(moduleForSize('large').map((m) => m.id), ['finish-story', 'story-order', 'sort-story', 'draw-story', 'word-search', 'verse-cryptogram', 'crossword', 'spiral-verse', 'connect-verse']);
   assert.equal(blankModule('match-words').type, 'match-words');
 });
