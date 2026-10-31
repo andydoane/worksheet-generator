@@ -36,6 +36,13 @@ export const ACTIVITY_BORDER_CATALOG={
  medium:COVER_BORDERS,
  large:LARGE_BORDER_URLS.map((url,index)=>({id:`border-${index+1}` as ActivityBorderId,name:`Border ${index+1}`,url})),
 };
+/** Large source PNGs are landscape 5.2x4.8 artwork stored sideways.
+ * Rotate them 90 degrees when placing them on a portrait 4.8x5.2 slot;
+ * never stretch or warp them to compensate.
+ */
+export const ACTIVITY_BORDER_ROTATION_DEGREES={
+ small:0,medium:0,large:90,
+} as const;
 export const ACTIVITY_SAFE_AREAS={
  small:{width:1.95,height:2.15},
  medium:{width:4.3,height:2.1},
@@ -75,7 +82,7 @@ export function setActivityBorder(
  return next;
 }
 export type PrintRect={x:number;y:number;width:number;height:number};
-export type ActivityPrintViewport={artwork:PrintRect;content:PrintRect;bordered:boolean};
+export type ActivityPrintViewport={artwork:PrintRect;content:PrintRect;bordered:boolean;artworkRotationDegrees:0|90};
 /** Shared print-point viewport, with y measured from PDF's bottom.
  * The PNG always occupies the full slot. The inner content rectangle is
  * centered; borderless mode preserves the original 0.1-inch padding.
@@ -92,6 +99,6 @@ export function planActivityPrintViewport(size:RegionSize,rect:PrintRect,bordere
  return {
   artwork:{...rect},
   content:{x:rect.x+(rect.width-width)/2,y:rect.y+(rect.height-height)/2,width,height},
-  bordered,
+  bordered,artworkRotationDegrees:ACTIVITY_BORDER_ROTATION_DEGREES[size],
  };
 }
