@@ -75,7 +75,7 @@ test('Both short and 75-word First Letter layouts fit; PDF/preview exact positio
   assert.ok(Math.max(...p.letterLines.map(l=>l.y))<SMALL_PRINT_HEIGHT-5);
  }
 });
-test('Checkboxes balances instructions with preserved one-word 14-character validation and centered rows',async()=>{
+test('Checkboxes balances instructions with 14-character entries and centered rows',async()=>{
  const {pdf,browser}=await metrics();
  assert.equal(CHECKBOX_INSTRUCTION,'Check off everything that is part of the story.');
  for(const module of [shortList,tenList]){
@@ -97,8 +97,8 @@ test('Checkboxes balances instructions with preserved one-word 14-character vali
    assert.ok(Math.abs(p.rows[i].squareX-(i%2?SMALL_PRINT_WIDTH/2+2:2))<.001);
   }
  }
- assert.ok(validateSmallModule({...shortList,correct:'RED SEA\nSTONE'}).some(x=>/individual words/u.test(x)));
- assert.ok(validateSmallModule({...shortList,correct:'ABCDEFGHIJKLMNOP\nSTONE'}).some(x=>/14 letters/u.test(x)));
+ assert.deepEqual(validateSmallModule({...shortList,correct:'RED SEA\nSTONE'}),[]);
+ assert.ok(validateSmallModule({...shortList,correct:'ABCDEFGHIJKLMNOP\nSTONE'}).some(x=>/14 characters/u.test(x)));
 });
 test('New SVG and PDF renderers use the same two plans and preserve other Small activities',async()=>{
  const [preview,pdf]=await Promise.all([
