@@ -24,7 +24,7 @@ export default function SmallModuleEditor({ module, onChange }: Props) {
     case 'true-false':
       return (
         <div className="activity-inputs">
-          <label htmlFor="tf-statement">True-or-false statement</label>
+          <label htmlFor="tf-statement">True-or-false statement (up to 80 characters)</label>
           <textarea id="tf-statement" rows={4} value={module.statement} onChange={(e) => onChange({ statement:e.target.value })} placeholder="Jesus rose from the dead." />
           <p>The children circle a thumbs-up or thumbs-down icon. Your original specification doesn't require an answer field yet.</p>
         </div>
