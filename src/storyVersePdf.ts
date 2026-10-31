@@ -2,6 +2,7 @@ import { rgb, type PDFFont, type PDFPage } from 'pdf-lib';
 import { BOOKLET } from './booklet.ts';
 import {MODULE_TITLE_PT,verticalStack,centeredBaseline} from './pdfLayout.ts';
 import {planMistakes} from './mediumParityLayout.ts';
+import {planFinishVerse} from './finishVerseLayout.ts';
 import type { ModuleFonts } from './modulePdf.ts';
 import {
   boxGrid, linesFromInput, mistakesTitle, orderedStoryEvents, parseVerse,
@@ -231,19 +232,29 @@ function drawVerseBody(
   }
 }
 function finishVerse(page:PDFPage,b:Rect,fonts:ModuleFonts,m:FinishVerse):void {
-  heading(page,fonts,'FINISH THE VERSE',b);
-  const bank=verseBank(m);
-  const top=b.y+b.height-36,bankH=42;
-  page.drawRectangle({x:b.x,y:top-bankH,width:b.width,height:bankH,borderColor:MID,borderWidth:.9});
-  const cols=Math.ceil(bank.length/2),cw=b.width/cols;
-  const size=Math.min(11,...bank.map(word=>{
-    for(let s=11;s>=6.5;s-=.5)if(width(fonts.bank,word.toUpperCase(),s)<cw-4)return s;
-    throw new Error('A word-bank entry is too wide for its cell.');
+  const measure=(font:PDFFont)=>(text:string,size:number)=>width(font,text,size);
+  const plan=planFinishVerse(m,{
+    title:measure(fonts.title),body:measure(fonts.body),bank:measure(fonts.bank),
+  },b.width,b.height);
+  if(!plan)throw Error('Finish the Verse does not fit. Use fewer blanks or shorter verse text.');
+  centered(page,fonts.title,plan.title,b,b.y+b.height-plan.titleY,plan.titleSize);
+  page.drawRectangle({x:b.x,y:b.y+b.height-plan.bankTop-plan.bankHeight,
+    width:b.width,height:plan.bankHeight,borderColor:MID,borderWidth:.9});
+  plan.bankWords.forEach(word=>page.drawText(word.text,{
+    x:b.x+word.x,y:b.y+b.height-word.y,font:fonts.bank,size:plan.bankFontSize,color:INK,
   }));
-  bank.forEach((word,i)=>centered(page,fonts.bank,word.toUpperCase(),
-    {x:b.x+(i%cols)*cw,y:top-bankH,width:cw,height:bankH},top-16-Math.floor(i/cols)*18,size));
-  centered(page,fonts.bodyBold,m.reference,{x:b.x,y:top-87,width:b.width,height:16},top-bankH-15,10.5);
-  drawVerseBody(page,fonts,m.verse,{x:b.x+3,y:b.y+4,width:b.width-6,height:67},top-bankH-38,'box',[]);
+  plan.words.forEach(word=>{
+    if(word.kind==='text'){
+      page.drawText(word.text,{x:b.x+word.x,y:b.y+b.height-word.y,
+        font:fonts.body,size:plan.fontSize,color:INK});
+    }else{
+      Array.from(word.text).forEach((_,j)=>{
+        page.drawRectangle({x:b.x+word.x+j*plan.cell+1,
+          y:b.y+b.height-(word.y-10)-plan.boxHeight,
+          width:plan.cell-1.6,height:plan.boxHeight,borderColor:INK,borderWidth:.8});
+      });
+    }
+  });
 }
 function unscrambleVerse(page:PDFPage,b:Rect,fonts:ModuleFonts,m:UnscrambleVerse):void {
   heading(page,fonts,'UNSCRAMBLE THE VERSE',b);
