@@ -474,5 +474,5 @@
 .cover-border-no-art {display:flex;align-items:center;justify-content:center;background:#f7f8f5;color:#667a6c;font-weight:600;}
 
 .cover-text-safe {display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:clamp(5px,1.6cqw,9px);width:100%;height:100%;min-width:0;overflow:hidden;}
-.cover-content-bordered .cover-text-safe {position:relative;z-index:1;width:89.583333333%;height:82.6923076923%;overflow:hidden;}
+ .cover-content-bordered .cover-text-safe {position:relative;z-index:1;width:89.583333333%;height:80.7692307692%;overflow:hidden;}
 .cover-content-bordered .cover-title,.cover-content-bordered .cover-reference {max-width:100%;}
