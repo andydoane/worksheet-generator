@@ -5,7 +5,7 @@ import {PDFDocument} from 'pdf-lib';
 import {BOOKLET,DEFAULT_LAYOUTS} from '../src/booklet.ts';
 import {COVER_BORDER_SAFE_WIDTH,COVER_BORDER_SAFE_HEIGHT} from '../src/coverBorders.ts';
 import {
- ACTIVITY_BORDER_CATALOG,ACTIVITY_SAFE_AREAS,BORDER_READY_MODULES,
+ ACTIVITY_BORDER_CATALOG,ACTIVITY_SAFE_AREAS,ACTIVITY_BORDER_ROTATION_DEGREES,BORDER_READY_MODULES,
  activityBorderUrl,isActivityBorderReady,readActivityBorders,setActivityBorder,
  planActivityPrintViewport,
 } from '../src/activityBorders.ts';
@@ -26,8 +26,12 @@ test('Shared 33-asset gallery catalog has 11 real PNGs per size',async()=>{
    assert.deepEqual([...bytes.subarray(0,8)],[137,80,78,71,13,10,26,10]);
    const w=bytes.readUInt32BE(16),h=bytes.readUInt32BE(20);
    assert.ok(w>100&&h>100,size+' border '+i+' must be print resolution');
-   assert.ok(Math.abs(w/h-dimensions[0]/dimensions[1])<.03,size+' '+i+' image ratio');
+   // Large PNGs were uploaded landscape (5.2x4.8), and must be
+   // rotated 90° when used in the 4.8x5.2 portrait module.
+   const ratio=ACTIVITY_BORDER_ROTATION_DEGREES[size]===90?h/w:w/h;
+   assert.ok(Math.abs(ratio-dimensions[0]/dimensions[1])<.03,size+' '+i+' oriented image ratio');
   }
+  assert.equal(ACTIVITY_BORDER_ROTATION_DEGREES[size],size==='large'?90:0);
   assert.equal(activityBorderUrl(size,'none'),undefined);
   assert.equal(activityBorderUrl(size,'border-12'),undefined);
  }
@@ -43,6 +47,7 @@ test('Safe-area rectangles are centered, preserve borderless inset and never ove
   assert.deepEqual(bordered.artwork,rect);
   assert.equal(standard.bordered,false);
   assert.equal(bordered.bordered,true);
+  assert.equal(bordered.artworkRotationDegrees,size==='large'?90:0);
   assert.ok(Math.abs(standard.content.width-(w-BOOKLET.padding*2)*72)<1e-8);
   assert.ok(Math.abs(standard.content.height-(h-BOOKLET.padding*2)*72)<1e-8);
   assert.ok(Math.abs(standard.content.x-rect.x-BOOKLET.padding*72)<1e-7);
@@ -88,6 +93,7 @@ test('16b intentionally gates all activity borders pending compact renderer cert
  assert.match(app,/chooseActivityBorder/);
  assert.match(picker,/disabled=\{!enabled\}/);
  assert.match(picker,/Preview border styles/);
+ assert.match(picker,/has-rotated-art/);
  assert.match(pdf,/isActivityBorderReady\(assigned\?\.type\)/);
  assert.match(css,/activity-border-editor/);
 });
