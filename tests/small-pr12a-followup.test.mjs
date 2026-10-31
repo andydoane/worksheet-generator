@@ -116,7 +116,7 @@ test('Phrase and mixed-case Multiple Choice booklet still exports',async()=>{
  const draft={title:'God Helps Us',scripture:'Exodus 14',
   layouts:{2:'small-small-medium-medium',3:'large-small-small',4:'large-small-small'},
   modules:{
-   '2:top-left-small':{type:'multiple-choice',question:'What is his name?',correct:'Andy',wrong1:'ANDY',wrong2:'Moses',seed:8},
+   '2:top-left-small':{type:'multiple-choice',question:'What is his name?',correct:'Andy',wrong1:'David',wrong2:'Moses',seed:8},
    '2:top-right-small':odd,
   },
  };
