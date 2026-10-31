@@ -32,8 +32,8 @@ export default function FinishVersePrintPreview({module}:{module:FinishVerse}){
     ?<text key={'verse-'+i} x={word.x} y={word.y} fontFamily="Nunito"
       fontWeight="500" fontSize={plan.fontSize} fill="#222">{word.text}</text>
     :<g key={'verse-'+i}>{Array.from(word.text).map((_,j)=>
-     <rect key={j} x={word.x+j*plan.cell+1}
-      y={word.y-10} width={plan.cell-1.6} height={plan.boxHeight}
+     <rect key={j} x={word.x+j*plan.cell+.3}
+      y={word.y-10} width={plan.cell} height={plan.boxHeight}
       fill="white" stroke="#222" strokeWidth=".8"/>)}</g>)}
   </svg>}
  </div>;
