@@ -23,7 +23,7 @@ test('the exact Red Sea story is measured and fully placed, including final ARMY
  assert.ok(plan,'Full passage should fit the large printable area');
  assert.ok(plan.fontSize>=9&&plan.fontSize<=13);
  assert.equal(plan.placements.filter(x=>x.kind==='blank').length,8);
- assert.equal(plan.placements.at(-1).text,'ARMY');
+ assert.equal(plan.placements.filter(p=>p.kind==='blank').at(-1).text,'ARMY');
  assert.ok(plan.placements.every(p=>p.x>=0&&p.x+p.width<=STORY_BODY_WIDTH+.01));
  assert.ok(plan.placements.every(p=>p.y>=0&&p.y<=STORY_BODY_HEIGHT));
 });
