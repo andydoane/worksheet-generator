@@ -8,7 +8,7 @@ import {balancedLines} from './storyVersePdf.ts';
 import type {ModuleFonts} from './modulePdf.ts';
 import {
   generateCrossword,parseConnectionWords,connectPositions,spiralPoints,spiralTurns,spiralFirstWord,validateSpecialty,
-  type SpecialtyModule,type CrosswordPlacement,
+  type SpecialtyModule,
 } from './specialtyModules.ts';
 
 type Rect={x:number;y:number;width:number;height:number};
@@ -167,17 +167,17 @@ function upsideDown(page:PDFPage,b:Rect,module:Extract<SpecialtyModule,{type:'up
 }
 function connect(page:PDFPage,b:Rect,module:Extract<SpecialtyModule,{type:'connect-verse'|'connect-big-idea'}>,fonts:ModuleFonts):void{
   centered(page,fonts.title,'CONNECT THE VERSE',b.x,b.y+b.height-25,b.width,23);
-  centered(page,fonts.body,'Connect each word to the next in order.',b.x,b.y+b.height-39,b.width,8.8);
+  centered(page,fonts.bodyBold,'Connect each word to the next in order.',b.x,b.y+b.height-39,b.width,8.8);
   const hasBank=module.type==='connect-big-idea';
   const list=parseConnectionWords(hasBank?module.idea:module.verse);
   let bankBottom=b.y+b.height-49;
   if(hasBank){
-    const bank=module.idea.toUpperCase(),rows=wrapped(fonts.body,bank,9,b.width-16);
+    const bank=module.idea.toUpperCase(),rows=wrapped(fonts.bank,bank,9,b.width-16);
     if(!rows||rows.length>2)throw Error('Big Idea bank needs shorter text.');
     const bankHeight=rows.length*12+9;
     bankBottom=b.y+b.height-47-bankHeight;
     page.drawRectangle({x:b.x,y:bankBottom,width:b.width,height:bankHeight,borderColor:LIGHT,borderWidth:.8});
-    rows.forEach((row,i)=>centered(page,fonts.body,row,b.x+4,bankBottom+bankHeight-14-i*12,b.width-8,9));
+    rows.forEach((row,i)=>centered(page,fonts.bank,row,b.x+4,bankBottom+bankHeight-14-i*12,b.width-8,9));
   }
   const field={x:b.x+3,y:b.y+4,width:b.width-6,height:bankBottom-b.y-12};
   const rows=Math.ceil(list.length/3),cw=field.width/3,rh=field.height/rows;

@@ -17,6 +17,7 @@
     "sample:pr10d": "node --experimental-strip-types scripts/create-pr10d-samples.mjs",
     "sample:pr10e": "node --experimental-strip-types scripts/create-pr10e-samples.mjs",
     "sample:pr10f": "node --experimental-strip-types scripts/create-pr10f-samples.mjs",
+    "sample:pr10g": "node --experimental-strip-types scripts/create-pr10g-samples.mjs",
     "build": "npm run check && vite build",
     "preview": "vite preview"
   },

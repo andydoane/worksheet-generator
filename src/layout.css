@@ -51,7 +51,6 @@
 .cover-overline { font-size: clamp(6px, 2cqw, 9px); color: #51907b; font-weight: 900; letter-spacing: 1px; }
 .booklet-region .cover-title { font: 400 clamp(17px, 8cqw, 38px)/1.05 'Mouse Memoirs', sans-serif; color: #225b53; overflow-wrap: anywhere; margin: 7px 0 4px; }
 .booklet-region .cover-reference { color: #688b7b; font-size: clamp(7px, 2.6cqw, 11px); font-weight: 900; overflow-wrap: anywhere; }
-.booklet-page-number { position: absolute; bottom: 1.2%; right: 5.6%; color: #9baa9f; font-size: clamp(8px, 2.2cqw, 11px); font-weight: 900; }
 .sheet-stage { padding: 25px 10px; }
 .print-sheet { width: min(100%, 740px); aspect-ratio: 11 / 8.5; display: flex; border: 1px solid #dce6dc; box-shadow: 0 10px 24px #21412d20; background: white; }
 .sheet-half { display: block; width: 50%; height: 100%; flex: none; border: 0; border-radius: 0; padding: 0; background: white; position: relative; min-width: 0; }

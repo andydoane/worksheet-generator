@@ -80,9 +80,9 @@ function drawMatching(page: PDFPage, rect: Rect, fonts: ModuleFonts, module: Ext
   const rows = matchRows(module);
   centered(page, fonts.title, 'MATCH THE WORDS', box.x, box.y + box.height - 25, box.width, MODULE_TITLE_PT);
   const subtitle = 'Draw a line from each word on the left to its match on the right.';
-  const instructionLines = lines(subtitle, fonts.body, 9, box.width);
+  const instructionLines = lines(subtitle, fonts.bodyBold, 9, box.width);
   instructionLines.forEach((line, index) =>
-    centered(page, fonts.body, line, box.x, box.y + box.height - 41 - index * 10, box.width, 9, GREY));
+    centered(page, fonts.bodyBold, line, box.x, box.y + box.height - 41 - index * 10, box.width, 9, GREY));
   const start = box.y + box.height - 60 - (instructionLines.length - 1) * 10;
   const bottom = box.y + 13;
   const spacing = (start - bottom) / Math.max(1, rows.length - 1);
