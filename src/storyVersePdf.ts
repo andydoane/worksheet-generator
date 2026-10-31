@@ -250,9 +250,9 @@ function finishVerse(page:PDFPage,b:Rect,fonts:ModuleFonts,m:FinishVerse):void {
         font:fonts.body,size:plan.fontSize,color:INK});
     }else{
       Array.from(word.text).forEach((_,j)=>{
-        page.drawRectangle({x:b.x+word.x+j*plan.cell+1,
+        page.drawRectangle({x:b.x+word.x+j*plan.cell+.3,
           y:b.y+b.height-(word.y-10)-plan.boxHeight,
-          width:plan.cell-1.6,height:plan.boxHeight,borderColor:INK,borderWidth:.8});
+          width:plan.cell,height:plan.boxHeight,borderColor:INK,borderWidth:.8});
       });
     }
   });
