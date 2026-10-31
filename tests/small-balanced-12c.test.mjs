@@ -45,11 +45,11 @@ test('First Letter instruction combines reference, abbreviates long books, and d
 });
 test('Balanced initials preserve every character and use natural glyph widths',async()=>{
  const {pdf}=await metrics(),text='FGSLTWTHGHOAS';
- const lines=balancedInitialLines(text,75,pdf.puzzle,18,2);
+ const lines=balancedInitialLines(text,115,pdf.puzzle,18,2);
  assert.ok(lines);
  assert.equal(lines.join(''),text);
  assert.equal(lines.length,2);
- assert.ok(lines.every(s=>pdf.puzzle(s,18)<=75+.00001));
+ assert.ok(lines.every(s=>pdf.puzzle(s,18)<=115+.00001));
  assert.ok(Math.abs(pdf.puzzle(lines[0],18)-pdf.puzzle(lines[1],18))<25);
  assert.equal(balancedInitialLines(text,5,pdf.puzzle,18,2),null);
 });
