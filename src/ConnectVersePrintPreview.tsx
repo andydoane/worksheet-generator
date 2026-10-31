@@ -1,7 +1,7 @@
 import {useEffect,useState} from 'react';
 import {mediumWidths} from './MediumPrintPreview.tsx';
 import {LARGE_CONNECT_WIDTH,LARGE_CONNECT_HEIGHT,
- CONNECT_VERSE_TITLE,CONNECT_VERSE_INSTRUCTION,planConnectVerse,
+ CONNECT_VERSE_TITLE,CONNECT_VERSE_INSTRUCTION,CONNECT_VERSE_BOX_STROKE,planConnectVerse,
  type ConnectVersePrintPlan} from './connectVerseLayout.ts';
 import type {ConnectVerseModule} from './specialtyModules.ts';
 
@@ -24,7 +24,7 @@ export default function ConnectVersePrintPreview({module}:{module:ConnectVerseMo
    state===false?<div className="medium-print-loading">This verse cannot fit. Try shorter words or fewer words.</div>:
   <svg className="medium-print-svg" viewBox={'0 0 '+LARGE_CONNECT_WIDTH+' '+LARGE_CONNECT_HEIGHT}
    preserveAspectRatio="xMidYMid meet" role="img"
-   aria-label="Connect the Verse with a complete verse bank and nonoverlapping scattered words">
+   aria-label="Connect the Verse with a reference bank and nonoverlapping boxed words">
    <text x={LARGE_CONNECT_WIDTH/2} y={state.titleY} textAnchor="middle"
     fontFamily="Mouse Memoirs" fontSize="23" fill="#222">{CONNECT_VERSE_TITLE}</text>
    <text x={LARGE_CONNECT_WIDTH/2} y={state.subtitleY} textAnchor="middle"
@@ -35,12 +35,15 @@ export default function ConnectVersePrintPreview({module}:{module:ConnectVerseMo
    {state.bankLines.map((line,i)=><text key={'bank-'+i}
     x={line.x} y={line.y} textAnchor="middle" fontFamily="Nunito"
     fontWeight="700" fontSize={state.bankFontSize} fill="#222">{line.text}</text>)}
-   {state.scattered.map(item=><g key={'word-'+item.order}
-    transform={'translate('+item.x+' '+item.y+') rotate('+item.angle+')'}>
-    {item.glyphs.map((glyph,i)=><text key={i}
-     x={glyph.x} y={glyph.y} fontFamily="Zilla Slab" fontWeight="700"
-     fontSize={item.fontSize} fill="#222">{glyph.char}</text>)}
-   </g>)}
+   {state.scattered.map(item=>item.box?<g key={'word-'+item.order}
+    transform={'translate('+item.x+' '+item.y+')'}>
+    <rect x={-item.box.width/2} y={-item.box.height/2}
+     width={item.box.width} height={item.box.height}
+     fill="white" stroke="#444" strokeWidth={CONNECT_VERSE_BOX_STROKE}/>
+    <text x={item.glyphs[0]?.x??0} y={item.glyphs[0]?.y??0}
+     fontFamily="Zilla Slab" fontWeight="700" fontSize={item.fontSize}
+     fill="#222">{item.word}</text>
+   </g>:null)}
   </svg>}
  </div>;
 }

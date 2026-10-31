@@ -1,5 +1,13 @@
 # Worksheet Studio
 
+## PR 14c — Clearer Large Connect the Verse word boxes (v0.15.20)
+
+- Replace the Large Connect the Verse subtitle with **“Use the verse above to connect the word boxes in order.”**
+- Render each uppercase scattered word as a **single, level Zilla Slab word in a measured thin-line box**. The whole word is printed in one operation, removing per-letter vertical jitter. The complete verse bank retains its original punctuation, font face, balance and size. Use consistent 0.8pt outline strokes in browser and PDF.
+- Extend the existing seeded `scatterWords()` engine with **opt-in measured box padding** (3pt horizontal, 1.5pt vertical). Conservative collision bounds now enclose the **entire stroked rectangle**, and the existing count-based 80% font target and original gap clearance still apply. Boxes are scattered with irregular positions; the printed word and border stay level. Large preview and exported PDF both use the same `planConnectVerse()` scene.
+- **Scope:** only Large Connect the Verse opts into boxes. Medium Connect the Big Idea retains its exact unboxed, jittered scatter behavior and coverage expansion. Older saved Medium Connect the Verse content continues using its legacy renderer. The module ID, seed, and stored verse are unchanged.
+- **Review:** run `npm run test && npm run build && npm run sample:pr14c`; inspect `artifacts/sample-pr14c-connect-verse-boxes.pdf` for 4-, 20- and 35-word cases. Tests assert collision clearance and glyph size/position parity across multiple seeds.
+
 ## PR 14b — Title-free Large Word Search and Crossword (v0.15.19)
 
 - **Word Search:** remove the redundant heading and reclaim its height for a larger 12×10 search grid while retaining a clear, measured 2- or 3-column word bank. `planWordSearch()` uses the actual embedded Zilla Slab and Nunito ExtraBold font widths in physical PDF points; the browser now uses exactly the same plan via an SVG, including editor-only solution highlights. The algorithm protects an inset around the grid and avoids clipping bank words even with all 12 entries.

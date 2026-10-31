@@ -5,7 +5,10 @@ import {parseConnectionWords,type ConnectVerseModule} from './specialtyModules.t
 import {scatterWords,scaleConnectScatterFont,type ScatteredWord,type ScatterBounds} from './wordScatterLayout.ts';
 
 export const CONNECT_VERSE_TITLE='CONNECT THE VERSE';
-export const CONNECT_VERSE_INSTRUCTION='Connect each word to the next in order.';
+export const CONNECT_VERSE_INSTRUCTION='Use the verse above to connect the word boxes in order.';
+export const CONNECT_VERSE_BOX_PADDING_X=3;
+export const CONNECT_VERSE_BOX_PADDING_Y=1.5;
+export const CONNECT_VERSE_BOX_STROKE=.8;
 export const LARGE_CONNECT_WIDTH=(BOOKLET.cell.width*2-BOOKLET.padding*2)*72;
 export const LARGE_CONNECT_HEIGHT=(BOOKLET.cell.height*2-BOOKLET.padding*2)*72;
 export type ConnectVersePrintPlan={
@@ -15,9 +18,9 @@ export type ConnectVersePrintPlan={
  field:ScatterBounds;scattered:ScatteredWord[];fontSize:number;
 };
 
-/** Large print-space scene. The boxed bank follows Spiral Verse's Nunito
- * Bold verse style and presents the original punctuation and word order;
- * only the scattered words are normalized to uppercase.
+/** Large print-space scene: bank keeps original punctuation and word order.
+ * Only Large Connect Verse uses level, measured boxes around scattered words.
+ * Their FULL exterior bounds participate in the seeded collision search.
  */
 export function planConnectVerse(module:ConnectVerseModule,metrics:{
  puzzle:MeasureText;verse:MeasureText;subtitle:MeasureText;
@@ -43,6 +46,7 @@ export function planConnectVerse(module:ConnectVerseModule,metrics:{
    maxFont:scaleConnectScatterFont(originalMaxFont),
    minFont:8.5,gap:words.length>25?2.5:3.2,
    gapReferenceFont:originalMaxFont,
+   boxed:{paddingX:CONNECT_VERSE_BOX_PADDING_X,paddingY:CONNECT_VERSE_BOX_PADDING_Y},
   });
   if(!placements)continue;
   return {titleY,subtitleY,subtitleSize,bankTop,bankHeight,bankFontSize,

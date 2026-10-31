@@ -18,6 +18,8 @@ export type ScatteredWord={
  word:string;order:number;x:number;y:number;angle:number;
  fontSize:number;glyphs:ScatterGlyph[];
  bounds:ScatterBounds;
+ /** Printed word box dimensions. Present only for opt-in boxed layouts. */
+ box?:{width:number;height:number};
 };
 export type ScatterResult={fontSize:number;words:ScatteredWord[]};
 export type ScatterOptions={
@@ -25,6 +27,8 @@ export type ScatterOptions={
  measure:MeasureText;maxFont?:number;minFont?:number;gap?:number;
  /** Optional pre-scale font target, so gap stays large even when letters shrink. */
  gapReferenceFont?:number;
+ /** Box occupies measured ink width plus padding; its full exterior is collision-tested. */
+ boxed?:{paddingX:number;paddingY:number};
 };
 function seedState(text:string,seed:number):()=>number{
  let state=(seed>>>0)^2166136261;
@@ -59,15 +63,26 @@ export function scatterWords(options:ScatterOptions):ScatterResult|null{
   let failed=false;
   for(const entry of ordered){
    const width=measure(entry.word,fontSize),height=fontSize*1.24;
-   if(width+2*margin>field.width||height+2*margin>field.height){failed=true;break;}
+   const box=options.boxed?{
+    width:width+2*options.boxed.paddingX,
+    height:height+2*options.boxed.paddingY,
+   }:undefined;
+   // The conservative bounds include at least .6pt around every border
+   // (the actual vector stroke extends at most .4pt beyond the rectangle).
+   const exteriorWidth=(box?.width??width)+1.2;
+   const exteriorHeight=(box?.height??height)+1.2;
+   if((box?exteriorWidth:width)+2*margin>field.width||
+    (box?exteriorHeight:height)+2*margin>field.height){
+    failed=true;break;
+   }
    let best:{score:number;cx:number;cy:number;angle:number;bounds:ScatterBounds}|null=null;
    // Uniform seeded 2-D proposals with conservative rotated bounding boxes.
    // No columns, slots, or predeclared rows determine positions.
    for(let trial=0;trial<1600;trial++){
-    const angle=(random()-.5)*2.6; // ±1.3 degrees, much less than the old jitter.
+    const angle=options.boxed?0:(random()-.5)*2.6; // boxed words stay level
     const radians=angle*Math.PI/180;
-    const boxWidth=width*Math.cos(radians)+height*Math.abs(Math.sin(radians))+1.2;
-    const boxHeight=height*Math.cos(radians)+width*Math.abs(Math.sin(radians))+1.2;
+    const boxWidth=exteriorWidth*Math.cos(radians)+exteriorHeight*Math.abs(Math.sin(radians));
+    const boxHeight=exteriorHeight*Math.cos(radians)+exteriorWidth*Math.abs(Math.sin(radians));
     const cx=field.x+margin+boxWidth/2+random()*(field.width-2*margin-boxWidth);
     const cy=field.y+margin+boxHeight/2+random()*(field.height-2*margin-boxHeight);
     const bounds={x:cx-boxWidth/2,y:cy-boxHeight/2,width:boxWidth,height:boxHeight};
@@ -91,12 +106,12 @@ export function scatterWords(options:ScatterOptions):ScatterResult|null{
    const glyphs:ScatterGlyph[]=[];
    let pen=-width/2;
    for(const char of Array.from(entry.word)){
-    glyphs.push({char,x:pen,y:fontSize*.29+(random()-.5)*.42});
+    glyphs.push({char,x:pen,y:fontSize*.29+(options.boxed?0:(random()-.5)*.42)});
     pen+=measure(char,fontSize);
    }
    picked.push({
     word:entry.word,order:entry.order,x:best.cx,y:best.cy,angle:best.angle,
-    fontSize,glyphs,bounds:best.bounds,
+    fontSize,glyphs,bounds:best.bounds,...(box?{box}:{}),
    });
   }
   if(!failed)return {fontSize,words:picked.sort((a,b)=>a.order-b.order)};

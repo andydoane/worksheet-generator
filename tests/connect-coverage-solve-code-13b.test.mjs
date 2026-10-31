@@ -110,7 +110,7 @@ test('Coverage helper cannot change words or create an overlap on hand-picked bo
  assert.equal(scatterHasCollision(expanded,3),false);
  assert.deepEqual(words[0].bounds,{x:22,y:34,width:16,height:12},'input immutable');
 });
-test('Big Idea preview/PDF remain metric-identical and Large Connect Verse is unchanged',async()=>{
+test('Big Idea preview/PDF remain metric-identical and Large Connect Verse has opt-in boxes',async()=>{
  const {pdf,browser}=await metrics();
  for(const idea of cases){
   for(const seed of [2,9]){
@@ -134,7 +134,10 @@ test('Big Idea preview/PDF remain metric-identical and Large Connect Verse is un
   maxFont:13.6,minFont:8.5,gap:3.2,gapReferenceFont:17,
  });
  assert.ok(raw);
- assert.deepEqual(large.scattered,raw.words,'Large module must keep old scatter');
+ assert.ok(large.scattered.every(w=>w.box&&w.angle===0));
+ assert.ok(raw.words.every(w=>!w.box));
+ assert.notDeepEqual(large.scattered,raw.words,
+  'Large Verse intentionally adds measured boxes; Big Idea stays unboxed');
 });
 test('Solve the Code renames only user-facing copy and preserves saved cryptogram ID',async()=>{
  const medium=CRYPTOGRAM_MODULES.find(m=>m.id==='big-idea-cryptogram');
