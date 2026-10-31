@@ -82,7 +82,7 @@ function drawBigIdeaCryptogramPdf(page:PDFPage,rect:Rect,
  module:BigIdeaCryptogram,fonts:ModuleFonts):void{
  const box=interior(rect),data=generateCryptogram(module);
  const plan=planBigIdeaCryptogram(data,(text,size)=>width(fonts.body,text,size),box.width,box.height);
- if(!plan)throw Error('The Big Idea cryptogram needs too many lines. Use shorter words.');
+ if(!plan)throw Error('Solve the Code needs too many lines. Use shorter words.');
  const top=box.y+box.height;
  centered(page,fonts.title,'SOLVE THE CODE!',box.x,top-plan.titleY,box.width,MODULE_TITLE_PT);
  for(const item of plan.keyCells){
