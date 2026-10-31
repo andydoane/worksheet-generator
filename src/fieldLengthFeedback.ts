@@ -25,7 +25,7 @@ export function fieldExceedsLength(module:ActivityModule,id:string,value:string)
     return tooLongLine(value,12);
   case 'check-correct':case 'check-incorrect':
     return tooLongLine(value,14);
-  case 'un-first':case 'un-second':return value.trim().replace(/\\s/gu,'').length>10;
+  case 'un-first':case 'un-second':return value.trim().replace(/\s/gu,'').length>10;
   case 'who-clue':return value.trim().length>120;
   case 'who-answer':return (value.match(/\p{L}/gu)??[]).length>14;
   case 'sv-events':return tooLongLine(value,115);
