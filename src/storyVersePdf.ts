@@ -166,8 +166,13 @@ function drawStory(page:PDFPage,b:Rect,fonts:ModuleFonts,module:Extract<StoryVer
     const y=top-(row+1)*rowHeight-row*gutter;
     page.drawRectangle({x,y:y+captionH+frameGap,width:colWidth,height:rowHeight-captionH-frameGap,
       borderWidth:.8,borderColor:MID});
-    drawLines(page,fonts.body,text,{x:x+4,y:y+4,width:colWidth-8,height:captionH-12},
-      y+captionH-4,captionH-12,captionSize,captionSize);
+    // Align caption ink just below the 7pt picture-to-caption gap.
+    // Vertical centering used to make shorter captions appear far away.
+    const rows=wrap(text,fonts.body,captionSize,colWidth-8);
+    if(!rows)throw Error('Drawing caption cannot wrap at the selected font size.');
+    rows.forEach((line,j)=>centered(page,fonts.body,line,
+      {x:x+4,y,width:colWidth-8,height:captionH},
+      y+captionH-captionSize-j*captionSize*1.25,captionSize));
   });
 }
 type VerseToken={kind:'word'|'blank'|'space';value:string};
