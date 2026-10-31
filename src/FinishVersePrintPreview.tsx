@@ -10,7 +10,7 @@ export default function FinishVersePrintPreview({module}:{module:FinishVerse}){
  useEffect(()=>{
   let active=true;setPlan(null);
   void mediumWidths().then(widths=>{
-   if(active)setPlan(planFinishVerse(module,widths)??false);
+   if(active)setPlan(planFinishVerse(module,{title:widths.title,body:widths.finishBody,bank:widths.bank})??false);
   }).catch(()=>{if(active)setPlan(false);});
   return ()=>{active=false;};
  },[module.reference,module.verse,module.seed]);
