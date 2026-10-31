@@ -1,5 +1,23 @@
 # Worksheet Studio
 
+## Connect word sizing and cover title polish (v0.15.10)
+
+- **Connect the Verse and Connect the Big Idea:** scattered Zilla Slab
+  lettering uses one shared `CONNECT_SCATTER_FONT_SCALE = 0.8` setting.
+  All original word-count-based target sizes are multiplied by 80%.
+  The existing 8.5pt readable floor is kept for especially dense exercises.
+  The original printed collision clearance is preserved by measuring the gap
+  against the *unscaled* target, so shrinking the letters doesn't crowd them
+  back together. Seeded scattering, word banks, and saved worksheet content
+  remain unchanged.
+- **Cover title:** The "Bible Story Review" overline is removed from the
+  title region in both the browser preview and PDF. The actual worksheet
+  title and Scripture reference are horizontally centered and **vertically
+  centered together** as one content group. The cover activity is unchanged.
+- **Review:** `npm run test && npm run build && npm run sample:connect-80`.
+  Inspect the booklet cover plus both short and dense Connect activities
+  for clear, usable space between scattered words.
+
 ## PR 11g — Connect Verse moves to Large (v0.15.9)
 
 - **Connect the Verse** is now a Large-only selection for new worksheets,
