@@ -46,7 +46,7 @@ async function metrics(){
   },
  };
 }
-test('Big Idea accepts twenty words and Large Verse permits thirty-five',()=>{
+test('Connect Phrase accepts twenty words and Large Verse permits thirty-five',()=>{
  const twenty=modules.at(-1);
  assert.equal(parseConnectionWords(twenty.idea).length,20);
  assert.deepEqual(validateSpecialty(twenty),[]);
@@ -94,8 +94,8 @@ test('shared planner uses identical font metrics and geometry in browser and PDF
     assert.ok(Math.abs(p.scattered[i][k]-q.scattered[i][k])<.02,k+' mismatched');
    }
   }
-  assert.equal(CONNECT_BIG_TITLE,'CONNECT THE BIG IDEA');
-  assert.equal(CONNECT_BIG_INSTRUCTION,'Connect each word to the next in order.');
+  assert.equal(CONNECT_BIG_TITLE,'CONNECT THE PHRASE');
+  assert.equal(CONNECT_BIG_INSTRUCTION,'Draw lines from box to box in the order of the phrase.');
  }
 });
 test('Both connect modules now use measured print renderers',async()=>{
@@ -108,7 +108,7 @@ test('Both connect modules now use measured print renderers',async()=>{
  assert.match(pdf,/case 'connect-big-idea':return connectBigIdea/u);
  assert.match(pdf,/connectVerseLarge\(page,b,module,fonts\):connect\(page,b,module,fonts\)/u);
 });
-test('20-word Big Idea exports inside the standard two-sheet US Letter booklet',async()=>{
+test('20-word Connect Phrase exports inside the standard two-sheet US Letter booklet',async()=>{
  const draft={title:'Love One Another',scripture:'John 13',
  layouts:{2:'medium-medium-small-small',3:'medium-medium-small-small',4:'medium-medium-small-small'},
  modules:{
