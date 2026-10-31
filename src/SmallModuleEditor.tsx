@@ -36,7 +36,7 @@ export default function SmallModuleEditor({ module, onChange }: Props) {
           <input id="fl-reference" value={module.reference} onChange={(e) => onChange({ reference:e.target.value })} placeholder="John 3:16" />
           <label htmlFor="fl-verse">Full verse text</label>
           <textarea id="fl-verse" rows={6} value={module.verse} onChange={(e) => onChange({ verse:e.target.value })} placeholder="For God so loved the world..." />
-          <p>The worksheet prints the reference and only the first letter of each word in Zilla Slab Bold.</p>
+          <p>The worksheet combines the verse reference with the instructions and prints balanced rows of first letters in Zilla Slab Bold.</p>
         </div>
       );
     case 'odd-words':
