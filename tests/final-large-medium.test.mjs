@@ -59,10 +59,12 @@ test('App displays package version plus GitHub build revision, and page footers 
 test('Medium body, word-bank and reference typefaces stay on actual Nunito weights',async()=>{
  const css=await readFile(new URL('../src/layout.css',import.meta.url),'utf8');
  const pdf=await readFile(new URL('../src/storyVersePdf.ts',import.meta.url),'utf8');
+ const recon=await readFile(new URL('../src/verseReconstructionPdf.ts',import.meta.url),'utf8');
  assert.match(css,/sv-medium-preview \.new-verse-body\s*\{\s*font:500/u);
  assert.match(css,/sv-medium-preview \.sv-word-bank\s*\{font-weight:800/u);
  assert.match(css,/sv-medium-preview \.sv-verse-ref\s*\{font-weight:700/u);
- assert.match(pdf,/centered\(page,fonts\.bodyBold,m\.reference/u);
+ assert.match(pdf,/drawReconstructionPdf\(page,region,m,fonts\)/u);
+ assert.match(recon,/centered\(fonts\.bodyBold,plan\.reference/u);
 });
 test('Mixed Medium modules and spiral make a complete two-sheet print booklet',async()=>{
  const draft={title:'God Cares For Us',scripture:'Psalm 23',layouts:{
