@@ -3,6 +3,7 @@ import { BOOKLET } from './booklet.ts';
 import {MODULE_TITLE_PT,verticalStack,centeredBaseline} from './pdfLayout.ts';
 import {planMistakes} from './mediumParityLayout.ts';
 import {planFinishVerse} from './finishVerseLayout.ts';
+import {drawReconstructionPdf} from './verseReconstructionPdf.ts';
 import type { ModuleFonts } from './modulePdf.ts';
 import {
   boxGrid, linesFromInput, mistakesTitle, orderedStoryEvents, parseVerse,
@@ -256,11 +257,8 @@ function finishVerse(page:PDFPage,b:Rect,fonts:ModuleFonts,m:FinishVerse):void {
     }
   });
 }
-function unscrambleVerse(page:PDFPage,b:Rect,fonts:ModuleFonts,m:UnscrambleVerse):void {
-  heading(page,fonts,'UNSCRAMBLE THE VERSE',b);
-  centered(page,fonts.bodyBold,m.reference,b,b.y+b.height-43,11);
-  drawVerseBody(page,fonts,m.verse,{x:b.x+3,y:b.y+4,width:b.width-6,height:b.height-58},
-    b.y+b.height-72,'scramble',verseScrambles(m));
+function unscrambleVerse(page:PDFPage,region:Rect,fonts:ModuleFonts,m:UnscrambleVerse):void {
+  drawReconstructionPdf(page,region,m,fonts);
 }
 function mistakes(page:PDFPage,b:Rect,fonts:ModuleFonts,m:Extract<StoryVerseModule,{type:'circle-mistakes'}>):void {
   const plan=planMistakes(m.text,(text,size)=>width(fonts.body,text,size),b.width,b.height);
@@ -278,7 +276,7 @@ export function drawStoryVersePdf(page:PDFPage,rect:Rect,module:StoryVerseModule
     case 'sort-story':return sort(page,b,fonts,module);
     case 'draw-story':return drawStory(page,b,fonts,module);
     case 'finish-verse':return finishVerse(page,b,fonts,module);
-    case 'unscramble-verse':return unscrambleVerse(page,b,fonts,module);
+    case 'unscramble-verse':return unscrambleVerse(page,rect,fonts,module);
     case 'circle-mistakes':return mistakes(page,b,fonts,module);
   }
 }
