@@ -77,7 +77,9 @@ test('Upside Down uses combined title, abbreviations, and unflipped punctuation'
   assert.ok(p.rowCount<=6);
   assert.ok(p.marks.some(mark=>mark.kind==='letter'&&mark.upside));
   assert.ok(p.marks.some(mark=>mark.kind==='punctuation'&&mark.text==='!')||module===longUpside);
-  assert.ok(p.marks.every(mark=>mark.y+16<173));
+  assert.ok(p.marks.every(mark=>mark.y+p.glyphOffset+p.fontSize<173));
+  assert.ok(p.lineStep>=p.glyphOffset+p.fontSize+1.5,
+   'An inverted word must not collide with the following answer line');
  }
  const names={
   'Song of Solomon 2:1':'Song 2:1','1 Thessalonians 5:16':'1 Thess. 5:16',
