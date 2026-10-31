@@ -1,9 +1,10 @@
 import {useEffect,useState} from 'react';
 import fontkit from '@pdf-lib/fontkit';
-import { matchRows, storyBank, validateModule, MODULES, type ActivityModule } from './modules';
+import { storyBank, validateModule, MODULES, type ActivityModule } from './modules';
 import {planStory,STORY_BODY_WIDTH,STORY_BODY_HEIGHT,STORY_INNER_WIDTH,STORY_INNER_HEIGHT,STORY_BODY_TOP,STORY_BANK_TOP,STORY_BANK_HEIGHT,type StoryPlan} from './storyLayout.ts';
 import { isSmallModule } from './smallModules';
 import SmallModulePreview from './SmallModulePreview';
+import {MatchingPrintPreview} from './MediumPrintPreview.tsx';
 import { isStoryVerseModule } from './storyVerseModules';
 import StoryVersePreview from './StoryVersePreview';
 import { isPuzzleModule } from './puzzleEngines';
@@ -39,19 +40,7 @@ export default function ModulePreview({ module, showSolution = false }: { module
     );
   }
 
-  if (module.type === 'match-words') {
-    const rows = matchRows(module);
-    return (
-      <div className="module-preview matching-module">
-        <div className="module-title">MATCH THE WORDS</div>
-        <div className="module-subtitle">Draw a line from each word on the left to its match on the right.</div>
-        <div className="match-columns">
-          <div>{rows.map((pair, index) => <div key={index} className="match-word">{pair.left}</div>)}</div>
-          <div>{rows.map((pair, index) => <div key={index} className="match-word">{pair.right}</div>)}</div>
-        </div>
-      </div>
-    );
-  }
+  if (module.type === 'match-words') return <MatchingPrintPreview module={module}/>;
 
   return <StoryPreview module={module}/>;
 }
