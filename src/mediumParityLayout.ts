@@ -46,7 +46,7 @@ export function planMatching(
   };
 }
 
-export type MistakesPrintPlan={fontSize:number;lineStep:number;lines:PrintLine[]};
+export type MistakesPrintPlan={titleY:number;fontSize:number;lineStep:number;lines:PrintLine[]};
 
 /** Smaller copy and generous writing/circling pitch. The whole paragraph must
  * fit; never conceal lines in the browser while the PDF exports more text.
@@ -55,14 +55,17 @@ export function planMistakes(
   text:string,bodyWidth:MeasureText,
   width=MEDIUM_PRINT_WIDTH,height=MEDIUM_PRINT_HEIGHT,
 ):MistakesPrintPlan|null{
-  const left=7,top=45,bottom=height-10,usableWidth=width-left*2;
+  const left=7,usableWidth=width-left*2,titleHeight=23,gap=4;
   for(let size=11.5;size>=8;size-=.5){
     const rows=measureWrappedLines(text,usableWidth,value=>bodyWidth(value,size));
     const lineStep=size*1.75;
-    if(!rows?.length||top+rows.length*lineStep>bottom)continue;
+    const blockHeight=titleHeight+gap+(rows?.length??0)*lineStep;
+    if(!rows?.length||blockHeight>height-16)continue;
+    const blockTop=(height-blockHeight)/2;
+    const titleY=blockTop+titleHeight;
     return {
-      fontSize:size,lineStep,
-      lines:rows.map((line,i)=>({text:line,x:left,y:top+(i+1)*lineStep})),
+      titleY,fontSize:size,lineStep,
+      lines:rows.map((line,i)=>({text:line,x:left,y:titleY+gap+(i+1)*lineStep})),
     };
   }
   return null;

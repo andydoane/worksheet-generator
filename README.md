@@ -1,5 +1,26 @@
 # Worksheet Studio
 
+## PR 11b — Finish the Verse and Circle follow-up (v0.15.3)
+
+- **Finish the Verse:** An adaptive, print-matched title (`FINISH ISAIAH 41:10`),
+  compact one- or two-row word bank, and measured Nunito Medium passage allow
+  substantially longer Scripture text without shrinking the child's writing
+  boxes. Blank boxes remain 10.4pt wide × 12.3pt tall.
+- **Word selection:** The Finish the Verse editor supports double-clicking a
+  word followed by **Make selected word a blank**, reusing the exact
+  occurrence-based selection behavior from Finish the Story. Brackets may
+  still be typed. Mark 2–8 missing words; 300 input characters is the upper
+  validation bound but actual fit is measured and longer passages may need
+  fewer blanks.
+- **Circle the Mistakes:** Up to 475 characters, with the title and body
+  centered vertically as one unit and a reduced title-to-paragraph gap.
+  The 1.75× writing/circling line pitch and Nunito Medium weight remain.
+- **No Match the Words changes.** Shared print-space geometry drives both
+  browser SVG and PDF for the refined modules.
+- **Verification:** `npm run test && npm run build && npm run sample:pr11b`.
+  See the Exodus 15:11, Isaiah 41:10, short verse, and 475-character Circle
+  examples in `artifacts/sample-pr11b-verse-and-circle.pdf`.
+
 ## PR 11a — Medium preview/PDF baseline, Match and Circle (v0.15.2)
 
 - **Match the Words:** Both renderers now use one physical-coordinate

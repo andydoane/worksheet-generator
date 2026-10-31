@@ -1,5 +1,6 @@
-import { boxGrid, linesFromInput, orderedStoryEvents, parseVerse, sortedStoryBank, verseBank, verseScrambles, type StoryVerseModule } from './storyVerseModules.ts';
+import { boxGrid, linesFromInput, orderedStoryEvents, parseVerse, sortedStoryBank, verseScrambles, type StoryVerseModule } from './storyVerseModules.ts';
 import {MistakesPrintPreview} from './MediumPrintPreview.tsx';
+import FinishVersePrintPreview from './FinishVersePrintPreview.tsx';
 
 function MissingVerse({ verse, mode, scrambled }: {verse:string;mode:'finish'|'unscramble';scrambled?:string[]}) {
   let index=0;
@@ -52,15 +53,7 @@ export default function StoryVersePreview({module}: {module:StoryVerseModule}) {
         </div>
       </div>;
     }
-    case 'finish-verse':
-      return <div className="module-preview sv-preview sv-medium-preview">
-        <div className="module-title">FINISH THE VERSE</div>
-        <div className="sv-word-bank" style={{gridTemplateColumns:'repeat('+Math.ceil(verseBank(module).length/2)+',minmax(0,1fr))'}}>
-          {verseBank(module).map((word,i)=><span key={i}>{word.toUpperCase()}</span>)}
-        </div>
-        <div className="sv-verse-ref">{module.reference}</div>
-        <MissingVerse verse={module.verse} mode="finish"/>
-      </div>;
+    case 'finish-verse':return <FinishVersePrintPreview module={module}/>;
     case 'unscramble-verse':
       return <div className="module-preview sv-preview sv-medium-preview">
         <div className="module-title">UNSCRAMBLE THE VERSE</div>

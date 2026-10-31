@@ -109,12 +109,13 @@ export function mistakesTitle(count:number):string {
 function validateVerse(module:FinishVerse|UnscrambleVerse):string[] {
   const problems:string[]=[];
   const parsed=parseVerse(module.verse);
-  const min=4,max=module.type==='finish-verse'?8:6;
+  const min=module.type==='finish-verse'?2:4,max=module.type==='finish-verse'?8:6;
   if(!module.reference.trim() || module.reference.length>38) problems.push('Enter a verse reference no longer than 38 characters.');
   if(parsed.answers.length<min || parsed.answers.length>max) problems.push('Mark '+min+'–'+max+' missing words using [square brackets].');
   if(parsed.malformed) problems.push('Each missing verse word needs matching [square brackets].');
   if(parsed.answers.some(x=>!(/^[\p{L}]+(?:['’-][\p{L}]+)*$/u.test(x))||x.length>9)) problems.push('Bracketed answers must be single words of at most 9 characters.');
-  if(module.verse.length>240) problems.push('Keep the marked verse under 240 characters for the medium region.');
+  const maxLength=module.type==='finish-verse'?300:240;
+  if(module.verse.length>maxLength) problems.push('Keep the marked verse under '+maxLength+' characters for the medium region.');
   if(!parsed.parts.some(x=>x.kind==='text' && x.value.trim())) problems.push('Include some ordinary verse text outside the blanks.');
   return problems;
 }
@@ -148,7 +149,7 @@ export function validateStoryVerse(module:StoryVerseModule):string[] {
     case 'unscramble-verse':return validateVerse(module);
     case 'circle-mistakes':{
       const errors:string[]=[];
-      if(!module.text.trim()||module.text.length>450)errors.push('Enter a mistake-filled paragraph of 1–450 characters.');
+      if(!module.text.trim()||module.text.length>475)errors.push('Enter a mistake-filled paragraph of 1–475 characters.');
       if(!Number.isInteger(module.count)||module.count<1||module.count>8)errors.push('Specify 1–8 mistakes to find.');
       return errors;
     }
