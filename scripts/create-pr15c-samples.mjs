@@ -17,8 +17,8 @@ const draft={
  modules:{
   '2:top-medium':{type:'medium-word-search',words:'Moses',seed:3},
   '2:middle-medium':{type:'medium-word-search',words:three,seed:7},
-  '2:bottom-left-small':{type:'draw-picture',prompt:'Draw the sea opening for Moses.'},
-  '2:bottom-right-small':{type:'draw-picture',prompt:'Draw the people crossing.'},
+  '2:bottom-left-small':{type:'draw-picture',prompt:'the sea opening for Moses.'},
+  '2:bottom-right-small':{type:'draw-picture',prompt:'the people crossing.'},
   '3:top-medium':{type:'medium-word-search',words:six,seed:9},
   '3:bottom-large':{type:'word-search',words:'Joseph\nPharaoh\nMoses\nAaron',seed:11},
   '4:top-medium':{type:'medium-word-search',words:maxSix,seed:12},
