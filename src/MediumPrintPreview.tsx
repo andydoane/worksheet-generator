@@ -1,5 +1,6 @@
 import {useEffect,useState,type ReactNode} from 'react';
 import fontkit from '@pdf-lib/fontkit';
+import {glyphInkCenter} from './fontInkCenter.ts';
 import {matchRows,type MatchWordsModule} from './modules.ts';
 import {mistakesTitle,type CircleMistakes} from './storyVerseModules.ts';
 import {
@@ -7,7 +8,7 @@ import {
   type MatchPrintPlan,type MistakesPrintPlan,type MeasureText,
 } from './mediumParityLayout.ts';
 
-type MediumWidths={body:MeasureText;bold:MeasureText;puzzle:MeasureText;bank:MeasureText;title:MeasureText;finishBody:MeasureText};
+type MediumWidths={body:MeasureText;bold:MeasureText;puzzle:MeasureText;bank:MeasureText;title:MeasureText;finishBody:MeasureText;bankInkCenter:MeasureText};
 let widthsPromise:Promise<MediumWidths>|null=null;
 /** Measure the same static TrueType faces embedded in PDF output. */
 export function mediumWidths():Promise<MediumWidths>{
@@ -30,7 +31,8 @@ export function mediumWidths():Promise<MediumWidths>{
     const pdfWidth=(face:typeof faces[number]):MeasureText=>(value,size)=>
       face.layout(value).glyphs.reduce((sum,g)=>sum+g.advanceWidth,0)*size/face.unitsPerEm;
     return {body:width(faces[0]),bold:width(faces[1]),puzzle:width(faces[2]),
-      finishBody:pdfWidth(faces[0]),bank:pdfWidth(faces[3]),title:pdfWidth(faces[4])};
+      finishBody:pdfWidth(faces[0]),bank:pdfWidth(faces[3]),title:pdfWidth(faces[4]),
+      bankInkCenter:(word,size)=>glyphInkCenter(faces[3],word,size)};
   }).catch(error=>{widthsPromise=null;throw error;});
   return widthsPromise;
 }
