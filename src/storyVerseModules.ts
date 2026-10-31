@@ -62,6 +62,29 @@ export function parseStatements(input: string): MarkedStatement[] {
       {text: line, truth: false};
   });
 }
+/** The editor groups legacy truth-suffixed lines without changing saved data. */
+export function sortStoryEditorGroups(statements:string):{trueStatements:string;falseStatements:string}{
+ const rows=parseStatements(statements);
+ return {
+  trueStatements:rows.filter(row=>row.truth).map(row=>row.text).join('\n'),
+  falseStatements:rows.filter(row=>!row.truth).map(row=>row.text).join('\n'),
+ };
+}
+/** Retain the untouched group's existing positions, so editing one field
+ * does not silently reorder the other statements in old saved worksheets.
+ * Blank editor lines are local editing whitespace, not printed statements.
+ */
+export function updateSortStoryGroup(statements:string,truth:boolean,value:string):string{
+ const replacement=linesFromInput(value);
+ let index=0;
+ const result:string[]=[];
+ for(const row of parseStatements(statements)){
+  if(row.truth!==truth){result.push(row.text+' '+(row.truth?'true':'false'));continue;}
+  if(index<replacement.length)result.push(replacement[index++]+' '+(truth?'true':'false'));
+ }
+ while(index<replacement.length)result.push(replacement[index++]+' '+(truth?'true':'false'));
+ return result.join('\n');
+}
 export function orderedStoryEvents(module: StoryOrder): string[] {
   const events = linesFromInput(module.events);
   return shuffledIndices(events.length, module.events, module.seed).map(i => events[i]);

@@ -12,11 +12,18 @@ export type ScrambleLetter={char:string;x:number;y:number;lineStart:number;lineE
 export type ScrambleRow={letters:ScrambleLetter[];answer:string};
 export type UnscramblePrintPlan={titleY:number;titleSize:number;letterSize:number;rows:ScrambleRow[]};
 
+/** Display-only punctuation: never rewrite the user's saved prompt. */
+export function picturePromptSentence(prompt:string):string{
+ const trimmed=prompt.trim();
+ const ending=/[.!?](?:["'”’)]*)$/u.test(trimmed)?'':'.';
+ return 'Draw a picture of '+trimmed+ending;
+}
+
 /** Match the original protected drawing box, now with balanced measured
  * wrapping shared across SVG preview and vector PDF. Top-left coordinates. */
 export function planDrawPicture(prompt:string,measure:MeasureText,
  width=SMALL_PRINT_WIDTH,height=SMALL_PRINT_HEIGHT):DrawPicturePlan|null{
- const text='Draw a picture of '+prompt.trim();
+ const text=picturePromptSentence(prompt);
  for(let fontSize=15;fontSize>=10;fontSize-=.5){
   const rows=balancedBankLines(text,width,measure,fontSize,3);
   if(!rows)continue;

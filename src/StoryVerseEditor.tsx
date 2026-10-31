@@ -1,6 +1,7 @@
-import {useRef,useState} from 'react';
+import {useEffect,useRef,useState} from 'react';
 import {markWordSelection} from './storySelection.ts';
-import {parseVerse,type FinishVerse,type UnscrambleVerse,type StoryVerseModule} from './storyVerseModules.ts';
+import {parseVerse,sortStoryEditorGroups,updateSortStoryGroup,
+ type FinishVerse,type UnscrambleVerse,type SortStory,type StoryVerseModule} from './storyVerseModules.ts';
 import {letterOnly} from './versePunctuation.ts';
 
 /** Both bracket-driven verse activities use the same exact-word selection.
@@ -64,6 +65,39 @@ function BracketVerseEditor({module,onChange}:{
  </div>;
 }
 
+/** Keep trailing blank lines visible while typing, while saving the existing
+ * truth-suffixed representation for backward-compatible localStorage drafts.
+ */
+function SortStoryEditor({module,onChange}:{
+ module:SortStory;onChange:(patch:Partial<StoryVerseModule>)=>void;
+}){
+ const [fields,setFields]=useState(()=>sortStoryEditorGroups(module.statements));
+ const lastSent=useRef(module.statements);
+ useEffect(()=>{
+  if(module.statements!==lastSent.current){
+   lastSent.current=module.statements;
+   setFields(sortStoryEditorGroups(module.statements));
+  }
+ },[module.statements]);
+ function update(truth:boolean,value:string){
+  setFields(current=>({...current,[truth?'trueStatements':'falseStatements']:value}));
+  const statements=updateSortStoryGroup(module.statements,truth,value);
+  lastSent.current=statements;
+  onChange({statements});
+ }
+ return <div className="activity-inputs">
+  <label htmlFor="sv-true-statements">True statements</label>
+  <textarea id="sv-true-statements" rows={5} value={fields.trueStatements}
+   onChange={e=>update(true,e.target.value)}
+   placeholder={'Daniel prayed to God.\nThe king made a law.'}/>
+  <label htmlFor="sv-false-statements">False statements</label>
+  <textarea id="sv-false-statements" rows={5} value={fields.falseStatements}
+   onChange={e=>update(false,e.target.value)}
+   placeholder={'Daniel stopped praying.\nLions were afraid of the king.'}/>
+  <p>Enter one sentence per line, 4–8 total, with at least one in each field. The worksheet mixes them up and children sort the letters into TRUE and FALSE.</p>
+ </div>;
+}
+
 export default function StoryVerseEditor({module,onChange}:{
   module: StoryVerseModule;
   onChange:(patch:Partial<StoryVerseModule>)=>void;
@@ -77,14 +111,7 @@ export default function StoryVerseEditor({module,onChange}:{
           placeholder={'The king made a law.\nDaniel prayed to God.\nDaniel was arrested.\nDaniel was thrown to the lions.\nGod protected Daniel.'}/>
         <p>One sentence per line. The worksheet will scramble the event order and provide numbered circles.</p>
       </div>;
-    case 'sort-story':
-      return <div className="activity-inputs">
-        <label htmlFor="sv-statements">Story statements (4–8)</label>
-        <textarea id="sv-statements" rows={9} value={module.statements}
-          onChange={e=>onChange({statements:e.target.value})}
-          placeholder={'Daniel prayed to God. true\nDaniel stopped praying. false\nThe king made a law. true\nLions were afraid of the king. false'}/>
-        <p>End every sentence with <code>true</code> or <code>false</code>. Students write each scrambled statement’s letter in the correct box.</p>
-      </div>;
+    case 'sort-story':return <SortStoryEditor module={module} onChange={onChange}/>;
     case 'draw-story':
       return <div className="activity-inputs">
         <label htmlFor="sv-draw">Drawing prompts (4–6)</label>

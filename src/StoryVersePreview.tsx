@@ -1,7 +1,8 @@
-import { boxGrid, orderedStoryEvents, sortedStoryBank, type StoryVerseModule } from './storyVerseModules.ts';
+import { boxGrid, orderedStoryEvents, type StoryVerseModule } from './storyVerseModules.ts';
 import {MistakesPrintPreview} from './MediumPrintPreview.tsx';
 import FinishVersePrintPreview from './FinishVersePrintPreview.tsx';
 import {VerseReconstructionPreview} from './VerseReconstructionPreview.tsx';
+import SortStoryPrintPreview from './SortStoryPrintPreview.tsx';
 
 export default function StoryVersePreview({module}: {module:StoryVerseModule}) {
   switch(module.type){
@@ -15,17 +16,7 @@ export default function StoryVersePreview({module}: {module:StoryVerseModule}) {
           </div>)}
         </div>
       </div>;
-    case 'sort-story':
-      return <div className="module-preview sv-preview">
-        <div className="module-title">SORT THE STORY</div>
-        <div className="sv-instruction sv-sort-instruction">Sort the letters into TRUE or FALSE. Circle the incorrect words in false statements.</div>
-        <div className="sv-statement-bank">
-          {sortedStoryBank(module).map((row,i)=><div className="sv-statement" key={i}>
-            <span className="sv-letter">{String.fromCharCode(65+i)}</span><span>{row.text}</span>
-          </div>)}
-        </div>
-        <div className="sv-sort-answers"><div>TRUE<span/></div><div>FALSE<span/></div></div>
-      </div>;
+    case 'sort-story':return <SortStoryPrintPreview module={module}/>;
     case 'draw-story': {
       const {cols,items}=boxGrid(module);
       return <div className="module-preview sv-preview">

@@ -1,5 +1,12 @@
 # Worksheet Studio
 
+## PR 14a — Sort the Story editor + consistent print geometry; Draw a Picture punctuation (v0.15.18)
+
+- **Sort the Story:** two independent **True statements** and **False statements** editor textareas replace the manual truth suffix workflow. The underlying saved `statements` field, `sort-story` type and seeded order remain readable, so older localStorage booklets are preserved. All statement text has a 115-character per-line limit, with immediate length feedback.
+- **Print-parity layout:** one font-measured `planSortStory()` scene drives the Large SVG preview and vector PDF, including the instruction, lettering, statement line breaks, the statement-bank boundary, and TRUE/FALSE answer boxes. Borders, separators, letter boxes and answer boxes all use one **0.85pt** stroke width. Font sizes adapt to statement length without reducing the answer area.
+- **Draw a Picture:** the shared `planDrawPicture()` normalizes the *printed* instruction to end in a period when the entered prompt lacks final sentence punctuation; `.`, `?` and `!` are preserved. Saved prompt text is not rewritten. Balanced wrapping and the 70pt protected drawing space are unchanged.
+- **Review:** `npm run test && npm run build && npm run sample:pr14a`; inspect `artifacts/sample-pr14a-sort-story-picture.pdf`, including legacy four-statement content, a denser eight-statement bank and Small drawing captions.
+
 ## PR 13b — Better Connect the Big Idea scattering + Solve the Code (v0.15.17)
 
 - **Connect the Big Idea:** the existing seeded, 80%-scaled, collision-safe
