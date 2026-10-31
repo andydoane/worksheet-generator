@@ -16,7 +16,7 @@ const phrases=[
  'The people saw the sea part and walked across on dry land because God helped.',
  'When Moses held up his staff, the sea opened and the people crossed safely.',
 ];
-const exact80='God helped Moses lead his people through the sea and safely into the dry land.';
+const exact80='God helped Moses lead his people through the sea and safely into the dry land...';
 assert.equal(exact80.length,80);
 const files=async()=>({
  mouseMemoirs:await readFile(new URL('../fonts/MouseMemoirs-Regular.ttf',import.meta.url)),
