@@ -5,6 +5,7 @@ import {
 import {BOOKLET} from './booklet.ts';
 import {MODULE_TITLE_PT} from './pdfLayout.ts';
 import {balancedLines} from './storyVersePdf.ts';
+import {planCrossword} from './crosswordLayout.ts';
 import type {ModuleFonts} from './modulePdf.ts';
 import {
   generateCrossword,parseConnectionWords,connectPositions,spiralPoints,spiralTurns,spiralFirstWord,validateSpecialty,
@@ -37,55 +38,29 @@ function wrapped(font:PDFFont,text:string,size:number,width:number):string[]|nul
   return out;
 }
 /** Fit the clues first, then maximize physical square size with the rest. */
+/** Same physical grid and clue geometry as the browser SVG preview. */
 function crossword(page:PDFPage,b:Rect,module:Extract<SpecialtyModule,{type:'crossword'}>,fonts:ModuleFonts):void{
   const puzzle=generateCrossword(module);
+  const plan=planCrossword(puzzle,(text,size)=>sizeOf(fonts.body,text,size),b.width,b.height);
+  if(!plan)throw Error('Crossword grid and clues cannot fit. Try shorter clues or regenerate.');
   centered(page,fonts.title,'CROSSWORD',b.x,b.y+b.height-27,b.width,MODULE_TITLE_PT);
-  const top=b.y+b.height-40;
-  const colWidth=b.width/2-12;
-  const lists=[puzzle.across,puzzle.down];
-  const fit=(clueHeight:number)=>{
-    for(let size=9.2;size>=6.6;size-=.4){
-      const step=size*1.25;
-      const rows=lists.map(list=>list.map(p=>wrapped(fonts.body,p.number+'. '+p.clue,size,colWidth-4)));
-      if(rows.some(group=>group.some(lines=>!lines)))continue;
-      if(rows.every(group=>group.reduce((sum,lines)=>sum+(lines!.length*step+4),0)<=clueHeight)){
-        return {size,step,rows:rows as string[][][]};
-      }
-    }
-    return null;
-  };
-  const maxCell=Math.min(25,(b.width-12)/puzzle.width);
-  let chosen:{cell:number;format:NonNullable<ReturnType<typeof fit>>}|null=null;
-  for(let cell=maxCell;cell>=9;cell-=.5){
-    const clueTop=top-puzzle.height*cell-11;
-    const clueSpace=clueTop-(b.y+3)-28;
-    if(clueSpace<=25)continue;
-    const format=fit(clueSpace);
-    if(format){chosen={cell,format};break;}
-  }
-  if(!chosen)throw Error('Crossword grid and clues cannot fit. Try shorter clues or regenerate.');
-  const {cell,format}=chosen;
-  const gw=puzzle.width*cell,gh=puzzle.height*cell;
-  const x0=b.x+(b.width-gw)/2,y0=top-gh;
+  const top=b.y+b.height-plan.gridTop;
   for(let y=0;y<puzzle.height;y++)for(let x=0;x<puzzle.width;x++){
     if(!puzzle.cells[y][x])continue;
-    const cx=x0+x*cell,cy=top-(y+1)*cell;
-    page.drawRectangle({x:cx,y:cy,width:cell,height:cell,borderColor:INK,borderWidth:.65});
+    const cx=b.x+plan.gridX+x*plan.cell,cy=top-(y+1)*plan.cell;
+    page.drawRectangle({x:cx,y:cy,width:plan.cell,height:plan.cell,
+      borderColor:INK,borderWidth:.65});
     const number=puzzle.numbers[x+','+y];
-    if(number)page.drawText(String(number),{x:cx+1.4,y:cy+cell-6.4,font:fonts.body,size:5.6,color:INK});
+    if(number)page.drawText(String(number),{x:cx+1.4,y:cy+plan.cell-6.4,
+      font:fonts.body,size:5.6,color:INK});
   }
-  const clueTop=y0-11;
-  for(const [col,name] of ['ACROSS','DOWN'].entries()){
-    const left=b.x+col*(b.width/2+3);
-    centered(page,fonts.title,name,left,clueTop-14,colWidth,17);
-    let cursor=clueTop-32;
-    for(const lines of format.rows[col]){
-      for(const line of lines){
-        page.drawText(line,{x:left+2,y:cursor,size:format.size,font:fonts.body,color:INK});
-        cursor-=format.step;
-      }
-      cursor-=4;
-    }
+  const cw=b.width/2-12;
+  for(const [name,header] of [['ACROSS',plan.acrossHeader],['DOWN',plan.downHeader]] as const){
+    centered(page,fonts.title,name,b.x+header.x,b.y+b.height-header.y,cw,17);
+  }
+  for(const row of [...plan.acrossRows,...plan.downRows]){
+    page.drawText(row.text,{x:b.x+row.x,y:b.y+b.height-row.y,
+      font:fonts.body,size:plan.clueFontSize,color:INK});
   }
 }
 function spiral(page:PDFPage,b:Rect,module:Extract<SpecialtyModule,{type:'spiral-verse'}>,fonts:ModuleFonts):void{
