@@ -19,7 +19,7 @@ export function fieldExceedsLength(module:ActivityModule,id:string,value:string)
   case 'mc-question':return value.trim().length>105;
   case 'mc-correct':case 'mc-wrong1':case 'mc-wrong2':
     return value.trim().length>42;
-  case 'tf-statement':return value.trim().length>135;
+  case 'tf-statement':return value.trim().length>80;
   case 'fl-reference':return value.trim().length>32;
   case 'odd-correct':case 'odd-incorrect':
     return tooLongLine(value,12);
