@@ -120,7 +120,15 @@ function checkWordLists(module: OddWords | Checkboxes): string[] {
   if (module.type === 'odd-words' && (words.length < 6 || words.length > 10)) {
     errors.push('What Doesn’t Belong needs 6–10 words total.');
   }
-  if (words.some((word) => !/^[\p{L}]+(?:[-'][\p{L}]+)*$/u.test(word) || word.length > 14)) {
+  if (module.type === 'odd-words') {
+    // One or more words per entry, with each internal space counting
+    // toward the 12-character limit. Keep all words of a phrase together.
+    if (words.some((word) =>
+      !/^[\p{L}]+(?:[ '-][\p{L}]+)*$/u.test(word) || word.length > 12)) {
+      errors.push('Use entries of at most 12 characters, including spaces.');
+    }
+  } else if (words.some((word) =>
+    !/^[\p{L}]+(?:[-'][\p{L}]+)*$/u.test(word) || word.length > 14)) {
     errors.push('Use individual words no longer than 14 letters.');
   }
   if (!upperUnique(words)) errors.push('Use distinct words so each answer is clear.');
