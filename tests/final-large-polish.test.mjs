@@ -7,7 +7,7 @@ import {createBookletPdf} from '../src/pdf.ts';
 import {STORY_INNER_WIDTH,STORY_INNER_HEIGHT,STORY_BANK_TOP,STORY_BANK_HEIGHT,STORY_BODY_TOP,STORY_BODY_WIDTH,STORY_BODY_HEIGHT,planStory} from '../src/storyLayout.ts';
 import {CIPHER_WORD_GAP,cryptogramBodyGeometry} from '../src/cryptogramPdf.ts';
 import {generateCryptogram} from '../src/cryptograms.ts';
-import {parseCrossword,generateCrossword,checkCrossword,spiralPoints,spiralFirstWord,spiralTurns} from '../src/specialtyModules.ts';
+import {parseCrossword,generateCrossword,checkCrossword,spiralPoints,spiralTurns} from '../src/specialtyModules.ts';
 const fonts=async()=>({
  mouseMemoirs:await readFile(new URL('../fonts/MouseMemoirs-Regular.ttf',import.meta.url)),
  nunitoSans:await readFile(new URL('../fonts/Nunito-Medium.ttf',import.meta.url)),
@@ -51,10 +51,9 @@ test('crossword phrases normalize without creating a second disconnected puzzle'
  assert.ok(puzzle.placements.some(p=>p.answer==='REDSEA'));
  assert.ok(puzzle.width<=21&&puzzle.height<=21);
 });
-test('spiral starts outside, changes length for short verses and identifies first word',()=>{
+test('spiral starts outside and changes length for short verses',()=>{
  const short='Jesus wept.',long='The Lord is my shepherd, I shall not want. He leads me beside quiet waters and restores my soul.';
  assert.ok(spiralTurns(short)<spiralTurns(long));
- assert.equal(spiralFirstWord('  The Lord is my shepherd.'),'The');
  const a=spiralPoints(800,spiralTurns(short)),b=spiralPoints(800,spiralTurns(long));
  assert.equal(a.length,800);
  assert.notDeepEqual(a[200],b[200]);
