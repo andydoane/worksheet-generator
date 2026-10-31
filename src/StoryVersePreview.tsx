@@ -3,22 +3,6 @@ import {MistakesPrintPreview} from './MediumPrintPreview.tsx';
 import FinishVersePrintPreview from './FinishVersePrintPreview.tsx';
 import {VerseReconstructionPreview} from './VerseReconstructionPreview.tsx';
 
-function MissingVerse({ verse, mode, scrambled }: {verse:string;mode:'finish'|'unscramble';scrambled?:string[]}) {
-  let index=0;
-  return <div className={'new-verse-body '+(mode==='unscramble'?'new-verse-scramble':'')}>
-    {parseVerse(verse).parts.map((part,i)=>{
-      if(part.kind==='text')return <span key={i}>{part.value}</span>;
-      const puzzle=scrambled?.[index++]??part.value;
-      if(mode==='finish')return <span key={i} className="new-verse-boxes">
-        {Array.from(part.value).map((_,j)=><span key={j} className="new-letter-box"/>)}
-      </span>;
-      return <span key={i} className="new-verse-boxes">
-        {Array.from(puzzle).map((char,j)=><span key={j} className="new-scramble-letter"><i/>{char}</span>)}
-      </span>;
-    })}
-  </div>;
-}
-
 export default function StoryVersePreview({module}: {module:StoryVerseModule}) {
   switch(module.type){
     case 'story-order':
