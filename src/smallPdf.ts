@@ -2,11 +2,12 @@ import { rgb, type PDFFont, type PDFPage } from 'pdf-lib';
 import { BOOKLET } from './booklet.ts';
 import { type ModuleFonts } from './modulePdf.ts';
 import {planMultipleChoice,planOddWords} from './smallParityLayout.ts';
+import {planFirstLetters,planCheckboxes} from './smallBalancedLayout.ts';
 import {planTrueFalse,TRUE_FALSE_TITLE} from './trueFalsePrintLayout.ts';
 import {THUMB_SOURCE_VIEW,THUMB_UP_PATH,THUMB_DOWN_PATH,
  THUMB_CIRCLE_RADIUS,THUMB_CIRCLE_STROKE,THUMB_DOWN_PATH_X_OFFSET} from './thumbArtwork.ts';
 import {
-  answerCharacters, scrambleWord, shuffledChoices, shuffledWordList, verseInitials,
+  answerCharacters, scrambleWord,
   type SmallModule,
 } from './smallModules.ts';
 
@@ -112,13 +113,15 @@ function drawTrueFalse(page:PDFPage,box:Rect,module:Extract<SmallModule,{type:'t
   });
 }
 function drawFirstLetters(page:PDFPage,box:Rect,module:Extract<SmallModule,{type:'first-letters'}>,fonts:ModuleFonts):void {
-  paragraph(page,fonts.title,'Try to say the verse using only the first letters.',box,box.y+box.height-3,15,11,3);
-  label(page,fonts.puzzle,module.reference.trim().toUpperCase(),box,box.y+box.height-69,13,8.5);
-  const initials=verseInitials(module.verse);
-  const chunks=initials.match(/.{1,15}/g)??[];
-  if(chunks.length>5)throw Error('The verse has too many initials to fit; shorten the verse.');
-  const fontSize=Math.min(13,...chunks.map(text=>fitSize(fonts.puzzle,text,box.width,13,9)));
-  chunks.forEach((text,index)=>centered(page,fonts.puzzle,text,box.x+box.width/2,box.y+box.height-91-index*19,fontSize));
+  const plan=planFirstLetters(module,
+    (text,size)=>measure(fonts.title,text,size),
+    (text,size)=>measure(fonts.puzzle,text,size),box.width,box.height);
+  if(!plan)throw Error('First Letter Challenge cannot fit the verse and instruction.');
+  const top=box.y+box.height;
+  for(const line of plan.instructionLines)
+    centered(page,fonts.title,line.text,box.x+line.x,top-line.y,plan.instructionSize);
+  for(const line of plan.letterLines)
+    centered(page,fonts.puzzle,line.text,box.x+line.x,top-line.y,plan.letterSize);
 }
 function drawOddWords(page:PDFPage,box:Rect,module:Extract<SmallModule,{type:'odd-words'}>,fonts:ModuleFonts):void {
   const plan=planOddWords(module,
@@ -149,16 +152,19 @@ function drawUnscramble(page:PDFPage,box:Rect,module:Extract<SmallModule,{type:'
   });
 }
 function drawCheckboxes(page:PDFPage,box:Rect,module:Extract<SmallModule,{type:'checkboxes'}>,fonts:ModuleFonts):void {
-  paragraph(page,fonts.title,'Check off everything that is part of the story.',box,box.y+box.height-3,15,11,3);
-  const words=shuffledWordList(module);
-  const available=box.width/2-17;
-  const size=Math.min(12,...words.map(item=>fitSize(fonts.puzzle,item.text.toUpperCase(),available,12,6.5)));
-  words.forEach((item,i)=>{
-    const x=box.x+(i%2)*box.width/2+2;
-    const y=box.y+box.height-77-Math.floor(i/2)*22;
-    square(page,x,y-2,9);
-    page.drawText(item.text.toUpperCase(),{x:x+14,y,size,font:fonts.puzzle,color:INK});
-  });
+  const plan=planCheckboxes(module,
+    (text,size)=>measure(fonts.title,text,size),
+    (text,size)=>measure(fonts.puzzle,text,size),box.width,box.height);
+  if(!plan)throw Error('Checkboxes entries do not fit the small area.');
+  const top=box.y+box.height;
+  for(const line of plan.instructionLines)
+    centered(page,fonts.title,line.text,box.x+line.x,top-line.y,plan.instructionSize);
+  for(const row of plan.rows){
+    square(page,box.x+row.squareX,top-row.squareY-row.squareSize,row.squareSize);
+    page.drawText(row.text,{
+      x:box.x+row.x,y:top-row.y,size:plan.wordSize,font:fonts.puzzle,color:INK,
+    });
+  }
 }
 function drawWho(page:PDFPage,box:Rect,module:Extract<SmallModule,{type:'who-am-i'}>,fonts:ModuleFonts):void {
   paragraph(page,fonts.title,module.clue,box,box.y+box.height-3,19,11,6);

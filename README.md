@@ -1,5 +1,25 @@
 # Worksheet Studio
 
+## PR 12c — Small First Letter Challenge + Checkboxes (v0.15.14)
+
+- **First Letter Challenge:** Instructions now read *Try to say
+  [shortened reference] using just the first letters.* The existing
+  `shortenBibleReference()` abbreviation map handles longer book names;
+  the old standalone reference line is removed. Instructions use
+  balanced, measured word wrapping. All verse initials are retained
+  in order and balanced into measured rows, with Zilla Slab Bold scaled
+  dynamically to the Small area (up to 75 words).
+- **Checkboxes:** Instructions *Check off everything that is part of the
+  story.* use the established measured balanced wrap helper. Checkbox
+  positions, word widths and vertical fit now come from one print-space
+  plan shared by the browser SVG and PDF.
+- **Scope:** The existing Checkboxes **14-letter single-word** validation
+  rule and 1–5 story / 1–5 unrelated item caps remain intact. No other
+  Small activity or booklet-layout changes.
+- **Acceptance:** `npm run test && npm run build && npm run sample:pr12c`.
+  Check short/75-word verses, longer abbreviated references and short/full
+  Checkboxes lists in the generated PDF and live preview.
+
 ## PR 12b — Small True or False (v0.15.13)
 
 - **Use the actual uploaded artwork:** `images/thumbs_up.svg` and
