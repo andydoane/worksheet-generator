@@ -1,5 +1,8 @@
 import { createBookletPdf, type PdfDraft, type PdfFontFiles } from './pdf.ts';
 import {coverBorderUrl} from './coverBorders.ts';
+import {activityBorderUrl,isActivityBorderReady,readActivityBorders} from './activityBorders.ts';
+import {getPrintableSheetRegions} from './pdf.ts';
+import {slotKey} from './modules.ts';
 
 // Vite packages these local files as versioned static assets for GitHub Pages.
 const FONT_URLS = {
@@ -40,7 +43,22 @@ export async function downloadBookletPdf(draft: PdfDraft): Promise<void> {
   const files:PdfFontFiles={mouseMemoirs,nunitoSans,nunitoSans750,nunitoSans900,zillaSlab};
   const borderUrl=coverBorderUrl(draft.coverBorder);
   const borderPng=borderUrl?await loadFont(borderUrl,'selected cover border'):undefined;
-  const bytes = await createBookletPdf(draft, files,borderPng);
+  // Fetch only the selected, certified Small artwork. Repeat selections share
+  // the same URL/bytes, but are keyed by region in the PDF renderer.
+  const activityPngs:Record<string,Uint8Array>={};
+  const cached=new Map<string,Promise<Uint8Array>>();
+  const activityBorders=readActivityBorders(draft.activityBorders);
+  for(const sheet of getPrintableSheetRegions(draft))for(const region of sheet){
+    const key=slotKey(region.bookletPage,region.id);
+    const module=draft.modules?.[key];
+    const id=activityBorders[key];
+    if(!id||region.size!=='small'||!isActivityBorderReady(module?.type))continue;
+    const url=activityBorderUrl(region.size,id);
+    if(!url)continue;
+    if(!cached.has(url))cached.set(url,loadFont(url,'selected Small activity border'));
+    activityPngs[key]=await cached.get(url)!;
+  }
+  const bytes = await createBookletPdf(draft, files,borderPng,activityPngs);
   // Create an owned ArrayBuffer to avoid SharedArrayBuffer/Blob type mismatches.
   const buffer = new ArrayBuffer(bytes.length);
   new Uint8Array(buffer).set(bytes);
