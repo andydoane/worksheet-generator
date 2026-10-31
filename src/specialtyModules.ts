@@ -11,7 +11,7 @@ export const SPECIALTY_MODULES=[
   {id:'crossword',name:'Crossword',size:'large',description:'A generated crossword with six to ten answer/clue pairs.'},
   {id:'spiral-verse',name:'Spiral Verse',size:'large',description:'Copy the verse onto a large printable spiral line.'},
   {id:'upside-down-verse',name:'Upside Down Verse',size:'medium',description:'Read vertically flipped letters, then write them upright.'},
-  {id:'connect-verse',name:'Connect the Verse',size:'medium',description:'Connect scrambled Scripture words in the correct order.'},
+  {id:'connect-verse',name:'Connect the Verse',size:'large',description:'Connect up to 35 scattered Scripture words in the correct order.'},
   {id:'connect-big-idea',name:'Connect the Big Idea',size:'medium',description:'Connect scattered Big Idea words using the word bank.'},
 ] as const;
 
@@ -86,10 +86,11 @@ export function validateSpecialty(module:SpecialtyModule):string[]{
     case 'connect-big-idea':{
       const text=specialtyText(module),list=parseConnectionWords(text);
       const errs:string[]=[];
-      const maxWords=module.type==='connect-big-idea'?20:12;
+      const maxWords=module.type==='connect-big-idea'?20:35;
       if(list.length<4||list.length>maxWords)errs.push('Enter 4–'+maxWords+' words to connect.');
       if(list.some(w=>w.length>12))errs.push('Keep each word at 12 characters or fewer.');
-      if(!text.trim()||text.length>125)errs.push('Keep the phrase under 125 characters.');
+      const maxLength=module.type==='connect-verse'?260:125;
+      if(!text.trim()||text.length>maxLength)errs.push('Keep the phrase under '+maxLength+' characters.');
       if([...text].some(c=>/\p{L}/u.test(c)&&!/[A-Za-z]/.test(c)))
         errs.push('Use unaccented A–Z words for the scattered text.');
       return errs;
