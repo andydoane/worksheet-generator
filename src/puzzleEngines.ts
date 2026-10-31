@@ -4,7 +4,7 @@
  */
 export const WORD_COLS = 12;
 export const WORD_ROWS = 10;
-export const MAZE_COLS = 35;
+export const MAZE_COLS = 41;
 export const MAZE_ROWS = 14;
 
 export type WordSearch = { type: 'word-search'; words: string; seed: number };
@@ -13,7 +13,7 @@ export type PuzzleModule = WordSearch | TrueFalseMaze;
 export type PuzzleId = PuzzleModule['type'];
 export const PUZZLE_MODULES = [
   { id: 'word-search', name: 'Word Search', size: 'large', description: 'A 12 × 10 grid with 4–12 words or short phrases.' },
-  { id: 'true-false-maze', name: 'True or False Maze', size: 'medium', description: 'A real 35 × 14 maze with TRUE and FALSE exits.' },
+  { id: 'true-false-maze', name: 'True or False Maze', size: 'medium', description: 'A real 41 × 14 maze with TRUE and FALSE exits.' },
 ] as const;
 
 const directions = [
@@ -58,7 +58,7 @@ export function validatePuzzle(module:PuzzleModule):string[]{
     return errors;
   }
   const t=module.statement.trim();
-  return (!t || t.length>130) ? ['Enter a true-or-false statement of 1–130 characters.'] : [];
+  return (!t || t.length>65) ? ['Enter a true-or-false statement of 1–65 characters.'] : [];
 }
 function randomStream(text:string,seed:number):()=>number{
   let state=(seed>>>0)^2166136261;
@@ -192,7 +192,7 @@ export function solveMazePath(walls:number[][],start:MazePoint,end:MazePoint):Ma
   return path.reverse();
 }
 /**
- * Keep the 35×14 randomized depth-first corridor generator, but move the
+ * Keep the 41×14 randomized depth-first corridor generator, but move the
  * entry to the bottom center and make left=TRUE, right=FALSE. To avoid a
  * very long child-sized trek, select the best of 24 deterministic maze
  * candidates, preferring short and reasonably balanced exit routes.
