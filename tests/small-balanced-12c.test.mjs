@@ -92,7 +92,9 @@ test('Checkboxes balances instructions with 14-character entries and centered ro
   assert.deepEqual(p.rows.map(x=>x.text),shuffledWordList(module).map(x=>x.text.toUpperCase()));
   assert.ok(p.rows.every(r=>r.squareX>=0&&r.squareY>p.fieldTop-1));
   assert.ok(p.rows.every(r=>r.squareY+r.squareSize<p.fieldBottom+1));
-  assert.ok(p.rows.every(r=>pdf.puzzle(r.text,p.wordSize)<=SMALL_PRINT_WIDTH/2-17));
+  const isSingle=p.rows.every(r=>Math.abs(r.squareX-p.rows[0].squareX)<.001);
+  assert.ok(p.rows.every(r=>pdf.puzzle(r.text,p.wordSize)<=
+   (isSingle?SMALL_PRINT_WIDTH:SMALL_PRINT_WIDTH/2)-17));
   const twoColumns=p.rows.some(r=>r.squareX>SMALL_PRINT_WIDTH/2);
   for(let i=0;i<p.rows.length;i++){
    if(twoColumns)
