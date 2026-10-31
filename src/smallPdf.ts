@@ -5,12 +5,10 @@ import {planMultipleChoice,planOddWords} from './smallParityLayout.ts';
 import {planFirstLetters,planCheckboxes} from './smallBalancedLayout.ts';
 import {planTrueFalse,TRUE_FALSE_TITLE} from './trueFalsePrintLayout.ts';
 import {planWhoAmI,WHO_AM_I_LABEL} from './whoAmIPrintLayout.ts';
+import {planSmallUnscramble} from './smallFinishingLayout.ts';
 import {THUMB_SOURCE_VIEW,THUMB_UP_PATH,THUMB_DOWN_PATH,
  THUMB_CIRCLE_RADIUS,THUMB_CIRCLE_STROKE,THUMB_DOWN_PATH_X_OFFSET} from './thumbArtwork.ts';
-import {
-  scrambleWord,
-  type SmallModule,
-} from './smallModules.ts';
+import {type SmallModule} from './smallModules.ts';
 
 type Rect = { x: number; y: number; width: number; height: number };
 const INK = rgb(.12, .12, .12);
@@ -137,20 +135,18 @@ function drawOddWords(page:PDFPage,box:Rect,module:Extract<SmallModule,{type:'od
       font:fonts.puzzle,size:plan.fontSize,color:INK});
 }
 function drawUnscramble(page:PDFPage,box:Rect,module:Extract<SmallModule,{type:'unscramble-words'}>,fonts:ModuleFonts):void {
-  label(page,fonts.title,'UNSCRAMBLE THE WORDS',box,box.y+box.height-25,22,14);
-  [module.first,module.second].forEach((word,i)=>{
-    const scrambled=scrambleWord(word,module.seed+i*101);
-    const chars=Array.from(scrambled);
-    const cellWidth=Math.min(17,box.width/chars.length);
-    const size=Math.min(15,fitSize(fonts.puzzle,'W',cellWidth-2,15,10));
-    const startX=box.x+(box.width-chars.length*cellWidth)/2;
-    const baseY=box.y+box.height-88-i*65;
-    chars.forEach((c,index)=>{
-      const x=startX+index*cellWidth;
-      page.drawLine({start:{x:x+1,y:baseY+21},end:{x:x+cellWidth-3,y:baseY+21},thickness:1,color:INK});
-      centered(page,fonts.puzzle,c,x+cellWidth/2,baseY,size);
+  const plan=planSmallUnscramble(module,(text,size)=>measure(fonts.puzzle,text,size),box.width,box.height);
+  if(!plan)throw Error('Unscramble answers cannot fit the Small activity.');
+  const top=box.y+box.height;
+  centered(page,fonts.title,'UNSCRAMBLE THE WORDS',box.x+box.width/2,top-plan.titleY,plan.titleSize);
+  for(const row of plan.rows)for(const letter of row.letters){
+    page.drawLine({
+      start:{x:box.x+letter.lineStart,y:top-letter.lineY},
+      end:{x:box.x+letter.lineEnd,y:top-letter.lineY},
+      thickness:1,color:INK,
     });
-  });
+    centered(page,fonts.puzzle,letter.char,box.x+letter.x,top-letter.y,plan.letterSize);
+  }
 }
 function drawCheckboxes(page:PDFPage,box:Rect,module:Extract<SmallModule,{type:'checkboxes'}>,fonts:ModuleFonts):void {
   const plan=planCheckboxes(module,
