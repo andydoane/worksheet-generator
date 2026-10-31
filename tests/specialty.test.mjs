@@ -32,9 +32,9 @@ const fontFiles=async()=>({
   zillaSlab:await readFile(new URL('../fonts/ZillaSlab-Bold-pdf.ttf',import.meta.url)),
 });
 
-test('all twenty-five modules are registered, preserving eight small regions',()=>{
+test('all twenty-six modules are registered, preserving eight small regions',()=>{
   assert.equal(moduleForSize('small').length,8);
-  assert.equal(moduleForSize('medium').length,8);
+  assert.equal(moduleForSize('medium').length,9);
   assert.equal(moduleForSize('large').length,9);
   for(const m of [crossword,spiral,upside,connect,idea]){
     assert.ok(moduleForSize(m.type==='crossword'||m.type==='spiral-verse'||m.type==='connect-verse'?'large':'medium')
