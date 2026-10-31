@@ -1,5 +1,14 @@
 # Worksheet Studio
 
+## PR 16b — Module border foundation (v0.16.1)
+
+- **Cover correction:** bordered title content uses a centered **4.3 × 2.1 inch** area (previously 4.3 × 2.15). Existing borderless title padding remains unchanged; the browser preview and PDF share the updated geometry.
+- **All 33 local border PNGs** are registered by module size, with stable `border-1` through `border-11` IDs. Medium uses the same assets as the cover; Small and Large use their respective newly uploaded images.
+- **Shared physical-point viewport planner:** each artwork occupies the entire module region; the centered safe rectangles are Small **1.95 × 2.15**, Medium **4.3 × 2.1**, and Large **4 × 4.35 inches**. The `bordered=false` path preserves the existing 0.1-inch default content padding, and no activity renderer is changed in 16b.
+- **Per-region saved choices:** new optional `activityBorders` map is keyed independently of the module data using the existing page/slot IDs; missing, invalid, and legacy values safely default to no border. Editing a slot's module clears its border if the new module is not supported.
+- **Activity editor foundation:** a compact current-selection preview and scrollable thumbnail gallery appear below the module selector. **Selections are disabled until that particular module's layout has been certified for borders in 16c–16e**, and a status message explains why; users can preview the designs now. The PDF rejects any artificially inserted unsupported border selection rather than painting artwork over unfitted content.
+- **QA:** `npm run test && npm run build` plus existing border sample PDFs in CI. Tests verify every uploaded PNG's dimensions/aspect ratio, safe-area boundaries, saved-state compatibility, no-border parity, gating, and PDF fail-safe.
+
 ## PR 15c — Medium Word Search as two visual Small panels (v0.15.24)
 
 - The activity remains a **single Medium module**, saved as `medium-word-search`. It still generates the exact same seeded **9×9 Word Search** and accepts **1–6 entries**. There are no changes to input validation, stored worksheets, or the existing 12×10 Large Word Search.
