@@ -178,60 +178,6 @@ function drawStory(page:PDFPage,b:Rect,fonts:ModuleFonts,module:Extract<StoryVer
       y+captionH-captionSize-j*captionSize*1.25,captionSize));
   });
 }
-type VerseToken={kind:'word'|'blank'|'space';value:string};
-function verseTokens(verse:string):VerseToken[]{
-  const result:VerseToken[]=[];
-  const parsed=parseVerse(verse);
-  for(const part of parsed.parts){
-    if(part.kind==='blank')result.push({kind:'blank',value:part.value});
-    else for(const piece of part.value.match(/\s+|[^\s]+/gu)??[]){
-      result.push({kind:/^\s+$/u.test(piece)?'space':'word',value:piece});
-    }
-  }
-  return result;
-}
-function drawVerseBody(
-  page:PDFPage,fonts:ModuleFonts,verse:string,b:Rect,top:number,
-  variant:'box'|'scramble',scrambles:string[],
-):void{
-  const tokens=verseTokens(verse);
-  const size=variant==='box'?11.4:10.6;
-  const cell=variant==='box'?11:10.5;
-  const step=variant==='box'?21:32;
-  let x=b.x,y=top;
-  let blankIndex=0;
-  const spaces=width(fonts.body,' ',size);
-  for(const token of tokens){
-    const w=token.kind==='blank'?Array.from(token.value).length*cell+3:
-      token.kind==='space'?spaces:width(fonts.body,token.value,size);
-    if(w>b.width)throw new Error('A word is too long for the verse area.');
-    if(token.kind==='space'&&x===b.x)continue;
-    if(x+w>b.x+b.width && x>b.x){
-      x=b.x;y-=step;
-      if(token.kind==='space')continue;
-    }
-    if(y-step*.65<b.y+2)throw new Error('The verse does not fit the medium module. Shorten it.');
-    if(token.kind==='word'){
-      page.drawText(token.value,{x,y:y+(variant==='scramble'?5:0),size,font:fonts.body,color:INK});
-    }else if(token.kind==='blank'){
-      const n=Array.from(token.value).length;
-      const scrambled=variant==='scramble'?Array.from(scrambles[blankIndex]):[];
-      for(let c=0;c<n;c++){
-        const cx=x+c*cell;
-        if(variant==='box'){
-          page.drawRectangle({x:cx+1,y:y-2,width:cell-2,height:12,borderWidth:.8,borderColor:INK});
-        }else{
-          page.drawLine({start:{x:cx+1,y:y+15},end:{x:cx+cell-1,y:y+15},color:INK,thickness:.85});
-          const ch=scrambled[c]??'';
-          const tx=cx+(cell-width(fonts.puzzle,ch,8.2))/2;
-          page.drawText(ch,{x:tx,y:y-2,size:8.2,font:fonts.puzzle,color:INK});
-        }
-      }
-      blankIndex++;
-    }
-    x+=w;
-  }
-}
 function finishVerse(page:PDFPage,b:Rect,fonts:ModuleFonts,m:FinishVerse):void {
   const measure=(font:PDFFont)=>(text:string,size:number)=>width(font,text,size);
   const plan=planFinishVerse(m,{
