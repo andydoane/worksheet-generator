@@ -1,5 +1,13 @@
 # Worksheet Studio
 
+## PR 16g — Border-aware cleanup and balanced cover title (v0.16.6)
+
+- **Large and Medium Word Search:** hide only the built-in grid outline when that slot has a decorative activity border; the letter grid and word bank are untouched. Without an activity border, the grid outline is drawn exactly as before.
+- **Small Draw a Picture:** remove the drawing rectangle stroke only when a decorative activity border is present. Retain its white fill, prompt geometry, and unchanged borderless outline.
+- **Cover title:** a shared measured layout now balances multi-line title wrapping to avoid short orphan lines, retaining the previous 42–14 pt fitting range, three-line limit, 11 pt title/reference gap and centered composition. SVG preview and vector PDF use the same locally embedded Mouse Memoirs/Nunito font metrics, in both full and decorated cover safe areas.
+- **No saved-data changes:** border choices remain per-slot, no activity or seed migration.
+- **Quality gate:** `npm run test && npm run build && npm run sample:pr16g` generates paired mixed-module bordered/borderless booklet PDFs for print comparison. Verify at 100% that decorative borders frame the word-search and drawing regions without internal extra outlines, and that the multi-line cover title is balanced in both preview and export.
+
 ## PR 16f — Full booklet print parity audit (v0.16.5)
 
 This is a **quality-assurance PR only**. It does not change any production module rendering, border selection, puzzle data, page imposition, or the saved-draft format.
