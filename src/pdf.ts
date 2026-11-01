@@ -317,7 +317,7 @@ export async function createBookletPdf(draft: PdfDraft, fontFiles: PdfFontFiles,
           try {
             if(bordered){
               const imageBytes=activityBorderPngs[key];
-              if(!imageBytes)throw Error('Selected '+item.size+' border image is missing; try exporting again.');
+              if(!imageBytes)throw Error('Selected '+item.size[0].toUpperCase()+item.size.slice(1)+' border image is missing; try exporting again.');
               const imageKey=item.size+':'+selections[key];
               let image=activityImages.get(imageKey);
               if(!image){
