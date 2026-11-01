@@ -123,9 +123,11 @@ function RegionContents({ region, draft, module, slotKeyKey, showSolution = fals
   const legacyMedium=region.size==='medium'&&module?.type==='connect-verse';
   if (module && (legacyMedium||moduleForSize(region.size).some((item) => item.id === module.type))) {
     const preview=<ModulePreview module={module} showSolution={showSolution} legacyMedium={legacyMedium}/>;
-    if(!selectedBorder||region.size!=='small')return preview;
-    const safe=ACTIVITY_SAFE_AREAS.small;
-    return <div className="bordered-small-activity">
+    if(!selectedBorder||region.size==='large')return preview;
+    const safe=ACTIVITY_SAFE_AREAS[region.size];
+    // Small and Medium layouts both use their original measured print SVG
+    // scenes with preserveAspectRatio=meet, centered within the safe zone.
+    return <div className="bordered-small-activity bordered-activity">
       <img className="bordered-small-art" src={selectedBorder} alt="" aria-hidden="true"/>
       <div className="bordered-small-safe" style={{
         width:(safe.width/region.width*100)+'%',
@@ -160,7 +162,7 @@ function BookletPage({
       {regions.map((region) => {
         const slot=slotKey(page,region.id);
         const selectedBorder=draft.modules[slot]&&isActivityBorderReady(draft.modules[slot].type)&&
-          region.size==='small'&&!!activityBorderUrl(region.size,draft.activityBorders[slot]);
+          region.size!=='large'&&!!activityBorderUrl(region.size,draft.activityBorders[slot]);
         const style = { ...regionStyle(region), padding: (region.kind==='title'&&draft.coverBorder!=='none')||selectedBorder?'0':String((BOOKLET.padding / BOOKLET.page.width) * 100) + '%' };
         const className = 'booklet-region ' + (region.kind === 'title' ? 'title-region' : 'activity-region') +
           ' size-' + region.size + (region.id === selectedId ? ' selected-region' : '');
