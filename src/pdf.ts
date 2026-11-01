@@ -1,7 +1,7 @@
 import { PDFDocument, rgb, pushGraphicsState, popGraphicsState, concatTransformationMatrix, type PDFFont, type PDFPage } from 'pdf-lib';
 import fontkit from '@pdf-lib/fontkit';
 import {COVER_BORDER_SAFE_WIDTH,COVER_BORDER_SAFE_HEIGHT,isCoverBorderId,type CoverBorderId} from './coverBorders.ts';
-import {isActivityBorderReady,readActivityBorders,planSmallBorderFit,type ActivityBorders} from './activityBorders.ts';
+import {isActivityBorderReady,readActivityBorders,planActivityBorderFit,type ActivityBorders} from './activityBorders.ts';
 import {glyphInkCenter} from './fontInkCenter.ts';
 import {embedNunitoWeights} from './nunitoPdf.ts';
 import type {ModuleFonts} from './modulePdf.ts';
@@ -291,7 +291,7 @@ export async function createBookletPdf(draft: PdfDraft, fontFiles: PdfFontFiles,
   if(borderEnabled&&!borderPng)throw Error('Selected cover border image is unavailable. Try exporting again.');
   const borderImage=borderEnabled&&borderPng?await document.embedPng(borderPng):undefined;
   const selections=readActivityBorders(draft.activityBorders);
-  const smallImages=new Map<string,Awaited<ReturnType<typeof document.embedPng>>>();
+  const activityImages=new Map<string,Awaited<ReturnType<typeof document.embedPng>>>();
   const sheets = getPrintableSheetRegions(draft);
   for (let sheetIndex = 0; sheetIndex < sheets.length; sheetIndex++) {
     const page = document.addPage([SHEET_WIDTH, SHEET_HEIGHT]);
@@ -303,13 +303,12 @@ export async function createBookletPdf(draft: PdfDraft, fontFiles: PdfFontFiles,
       } else {
         const key=slotKey(item.bookletPage,item.id);
         const assigned: ActivityModule | undefined = draft.modules?.[key];
-        // No module renderer has earned bordered-layout support in PR 16b.
-        // Reject stale or programmatic selections rather than exporting art
-        // over an unfitted module. Later PRs enable IDs and draw with the
-        // corresponding centered safe-area viewport.
+        // Unsupported size/type combinations never paint border artwork over
+        // unfitted content. Medium and Small share the same safe-area fitting
+        // model; Large will be enabled after its separate print review.
         if(selections[key]&&!isActivityBorderReady(assigned?.type))
           throw Error('Page '+item.bookletPage+' ('+item.id+'): Activity borders are not yet supported for this module. Remove the border before exporting.');
-        const bordered=!!selections[key]&&item.size==='small';
+        const bordered=!!selections[key]&&item.size!=='large';
         if (assigned) {
           if (!moduleForSize(item.size).some((definition) => definition.id === assigned.type) &&
               !(item.size === 'medium' && assigned.type === 'connect-verse')) {
@@ -318,15 +317,15 @@ export async function createBookletPdf(draft: PdfDraft, fontFiles: PdfFontFiles,
           try {
             if(bordered){
               const imageBytes=activityBorderPngs[key];
-              if(!imageBytes)throw Error('Selected Small border image is missing; try exporting again.');
-              const imageKey='small:'+selections[key];
-              let image=smallImages.get(imageKey);
+              if(!imageBytes)throw Error('Selected '+item.size+' border image is missing; try exporting again.');
+              const imageKey=item.size+':'+selections[key];
+              let image=activityImages.get(imageKey);
               if(!image){
                 image=await document.embedPng(imageBytes);
-                smallImages.set(imageKey,image);
+                activityImages.set(imageKey,image);
               }
               page.drawImage(image,{x:item.rect.x,y:item.rect.y,width:item.rect.width,height:item.rect.height});
-              const fit=planSmallBorderFit(item.rect);
+              const fit=planActivityBorderFit(item.size,item.rect);
               page.pushOperators(pushGraphicsState(),
                 concatTransformationMatrix(fit.scale,0,0,fit.scale,fit.translateX,fit.translateY));
               try { drawModulePdf(page,item.rect,assigned,fonts); }
