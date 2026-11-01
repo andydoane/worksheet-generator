@@ -1,5 +1,18 @@
 # Worksheet Studio
 
+## PR 16f — Full booklet print parity audit (v0.16.5)
+
+This is a **quality-assurance PR only**. It does not change any production module rendering, border selection, puzzle data, page imposition, or the saved-draft format.
+
+- **Complete combinatorial matrix:** `npm run sample:pr16f` generates **11 mixed-border, two-sheet booklets**, one for each style. Each style appears on a **Small, Medium, and Large** activity; neighboring modules deliberately remain borderless. Across the 11 books, **all 26 registered activity types** appear. An additional booklet uses the same activity data with every border disabled.
+- **Actual asset checks:** read the PNG headers of all **33 styles/sizes**; verify source pixel aspect ratios, minimum resolution, stable IDs and the **90° Large rotation**. Title cover checks retain the corrected **4.3 × 2.1 in** safe area.
+- **Physical geometry and no-overlap contracts:** tests enumerate every six-layout template on each booklet page, both imposed sheet sides, and compare browser-region measurements against PDF rectangles. They check centered projected content, real safe-area dimensions (**Small 1.95 × 2.15, Medium 4.3 × 2.1, Large 4 × 4.35 in**), no distortion from anisotropic scaling, and **zero overlap between neighboring content-safe rectangles**.
+- **Representative measured-ink checks:** shared print planners for **12×10 Word Search, 9×9 Medium Word Search, Match the Words, Crossword, Finish the Story and Small Multiple Choice** are evaluated with the actual local font metrics. Assertions check grid/word-bank/clue or checkbox/text separation, placement within print bounds, and role-specific *effective point-size floors*. In particular, the tiny crossword numbers are explicitly acknowledged separately from ordinary text; failing print floors should trigger focused layout work rather than silently shrinking it.
+- **Actual PDF exports:** the tests export mixed-mode documents with styles **1, 6 and 11** and matching all-borderless drafts, check two-sheet dimensions and image presence, confirm puzzle data/seed preservation, and inspect saved choices without migration. CI additionally produces all **11 style PDFs + borderless control**, plus a machine-readable `pr16f-print-audit-manifest.json` and review index.
+- **Preview/print parity scope:** verify the production preview still uses the same safe-area constants/centering and the PDF still uses the isotropic fit and correct Large PNG rotation. These automated tests **do not certify per-pixel browser/PDF identity, every possible content string, or subjective child readability**. Those require the print audit and eventual polish feedback; in particular, dense Crossword clue type deserves manual attention.
+
+Run `npm test && npm run build && npm run sample:pr16f`. Compare the print samples at **100%** against the editor preview before accepting 16g polish changes. The audit is designed to detect regressions without redesigning existing activity layouts.
+
 ## PR 16e — Large module borders (v0.16.4)
 
 - **All nine Large activities** can now select any of the eleven uploaded Large border styles independently per slot: Finish the Story, Story Order, Sort the Story, Draw the Story, 12×10 Word Search, Crossword, Spiral Verse, Verse Cryptogram and Connect the Verse. Small and Medium border selections remain supported.
