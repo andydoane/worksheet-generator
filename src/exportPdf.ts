@@ -43,7 +43,7 @@ export async function downloadBookletPdf(draft: PdfDraft): Promise<void> {
   const files:PdfFontFiles={mouseMemoirs,nunitoSans,nunitoSans750,nunitoSans900,zillaSlab};
   const borderUrl=coverBorderUrl(draft.coverBorder);
   const borderPng=borderUrl?await loadFont(borderUrl,'selected cover border'):undefined;
-  // Fetch only the selected, certified Small artwork. Repeat selections share
+  // Fetch only the selected, certified Small and Medium artwork. Repeat selections share
   // the same URL/bytes, but are keyed by region in the PDF renderer.
   const activityPngs:Record<string,Uint8Array>={};
   const cached=new Map<string,Promise<Uint8Array>>();
@@ -52,10 +52,10 @@ export async function downloadBookletPdf(draft: PdfDraft): Promise<void> {
     const key=slotKey(region.bookletPage,region.id);
     const module=draft.modules?.[key];
     const id=activityBorders[key];
-    if(!id||region.size!=='small'||!isActivityBorderReady(module?.type))continue;
+    if(!id||region.size==='large'||!isActivityBorderReady(module?.type))continue;
     const url=activityBorderUrl(region.size,id);
     if(!url)continue;
-    if(!cached.has(url))cached.set(url,loadFont(url,'selected Small activity border'));
+    if(!cached.has(url))cached.set(url,loadFont(url,'selected '+region.size+' activity border'));
     activityPngs[key]=await cached.get(url)!;
   }
   const bytes = await createBookletPdf(draft, files,borderPng,activityPngs);
