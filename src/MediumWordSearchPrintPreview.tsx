@@ -7,8 +7,8 @@ import {planMediumWordSearch,MEDIUM_SEARCH_TITLE,type MediumWordSearchPlan} from
 /** Same measured 9×9 scene and label positions as the vector PDF.
  * Solution highlighting is editor-only and never appears on printed pages.
  */
-export default function MediumWordSearchPrintPreview({module,showSolution=false}:{
- module:MediumWordSearch;showSolution?:boolean;
+export default function MediumWordSearchPrintPreview({module,showSolution=false,bordered=false}:{
+ module:MediumWordSearch;showSolution?:boolean;bordered?:boolean;
 }){
  const puzzle=useMemo(()=>generateWordSearch(module),[module.words,module.seed]);
  const selected=useMemo(()=>showSolution?wordSearchCells(puzzle):new Set<string>(),
@@ -29,8 +29,8 @@ export default function MediumWordSearchPrintPreview({module,showSolution=false}
    aria-label="Medium Word Search, nine by nine grid in left panel and Crossword title over word list in right panel">
    <text x={plan.titleX} y={plan.titleY} textAnchor="middle"
     fontFamily="Mouse Memoirs" fontSize={plan.titleSize} fill="#222">{MEDIUM_SEARCH_TITLE}</text>
-   <rect x={plan.gridX-2} y={plan.gridTop-2} width={plan.gridWidth+4}
-    height={plan.gridHeight+4} fill="none" stroke="#929292" strokeWidth=".5"/>
+   {!bordered&&<rect x={plan.gridX-2} y={plan.gridTop-2} width={plan.gridWidth+4}
+    height={plan.gridHeight+4} fill="none" stroke="#929292" strokeWidth=".5"/>}
    {plan.letters.map(letter=><g key={letter.col+','+letter.row}>
     {selected.has(letter.col+','+letter.row)&&<rect
      x={plan.gridX+letter.col*plan.cell+.4}
