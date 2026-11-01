@@ -6,7 +6,7 @@ import {
 } from './smallFinishingLayout.ts';
 import type {Unscramble} from './smallModules.ts';
 
-export function DrawPicturePrintPreview({prompt}:{prompt:string}){
+export function DrawPicturePrintPreview({prompt,bordered=false}:{prompt:string;bordered?:boolean}){
  const [plan,setPlan]=useState<DrawPicturePlan|null|false>(null);
  useEffect(()=>{
   let active=true;setPlan(null);
@@ -21,7 +21,7 @@ export function DrawPicturePrintPreview({prompt}:{prompt:string}){
   <svg className="medium-print-svg" viewBox={`0 0 ${SMALL_PRINT_WIDTH} ${SMALL_PRINT_HEIGHT}`}
    preserveAspectRatio="xMidYMid meet" role="img" aria-label="Drawing box with balanced prompt underneath">
    <rect x={plan.drawing.x} y={plan.drawing.y} width={plan.drawing.width}
-    height={plan.drawing.height} stroke="#666" strokeWidth="1" fill="white"/>
+    height={plan.drawing.height} stroke={bordered?'none':'#666'} strokeWidth={bordered?0:1} fill="white"/>
    {plan.lines.map((line,i)=><text key={'prompt-'+i} x={line.x} y={line.y}
     textAnchor="middle" fontFamily="Mouse Memoirs" fontSize={plan.fontSize} fill="#222">{line.text}</text>)}
   </svg>}
