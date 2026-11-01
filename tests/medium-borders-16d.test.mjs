@@ -141,7 +141,7 @@ test('Editor preview and PDF export share Medium artwork, safe area and uniform 
   readFile(new URL('../src/exportPdf.ts',import.meta.url),'utf8'),
  ]);
  assert.match(app,/ACTIVITY_SAFE_AREAS\[region.size\]/u);
- assert.match(app,/region\\.size!=='large'/u);
+ assert.ok(app.includes("region.size!=='large'"));
  assert.match(app,/bordered-small-safe/u);
  assert.match(css,/bordered-small-safe/u);
  assert.match(pdf,/planActivityBorderFit\(item.size,item.rect\)/u);
