@@ -41,7 +41,7 @@ function assign(modules,borderNos){
  });
  return result;
 }
-test('Eight Small types remain enabled alongside Medium, while Large is disabled',()=>{
+test('Eight Small types remain enabled alongside Medium and Large modules',()=>{
  assert.equal(data.length,8);
  assert.equal(MODULES.filter(m=>m.size==='small').length,8);
  for(const m of data){
@@ -49,7 +49,7 @@ test('Eight Small types remain enabled alongside Medium, while Large is disabled
   assert.equal(isActivityBorderReady(m.type),true,m.type);
  }
  for(const m of MODULES.filter(m=>m.size!=='small'))
-  assert.equal(isActivityBorderReady(m.id),m.size==='medium',m.id);
+  assert.equal(isActivityBorderReady(m.id),true,m.id);
 });
 test('Unbordered 2.2x2.4in print planner fits uniformly into 1.95x2.15in content without warping',()=>{
  const rect={x:123,y:79,width:BOOKLET.cell.width*PT,height:BOOKLET.cell.height*PT};
@@ -92,12 +92,12 @@ test('Checkbox, Who Am I and writing modules print inside bordered Small slots',
  const pdf=await PDFDocument.load(bytes);
  assert.equal(pdf.getPageCount(),2);
 });
-test('Unprovided Small PNG fails visibly and Large borders remain gated',async()=>{
+test('Small and Large selected borders both require PNG bytes',async()=>{
  const ff=await fonts();
  const draft=assign([data[0]],[2]);
  await assert.rejects(()=>createBookletPdf(draft,ff),/Small border image is missing/u);
  const bad={...base,layouts:{...base.layouts,2:'large-medium'},modules:{'2:top-large':{type:'finish-story',story:'[Jesus] is the [Lord] and [King] of all the [earth].',seed:1}},activityBorders:{'2:top-large':'border-1'}};
- await assert.rejects(()=>createBookletPdf(bad,ff),/not yet supported/u);
+ await assert.rejects(()=>createBookletPdf(bad,ff),/Large border image is missing/u);
 });
 test('Preview uses the same full-art and centered safe zone as the PDF, without changing borderless geometry',async()=>{
  const [app,css,pdf,exporter]=await Promise.all([
