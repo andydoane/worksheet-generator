@@ -78,9 +78,10 @@ test('Saved borders are separate from module contents, slot-specific and backwar
  assert.deepEqual(updated,{'2:top-left-small':'border-5','3:top-medium':'border-9'});
  assert.deepEqual(setActivityBorder(updated,'2:top-left-small','none'),{'3:top-medium':'border-9'});
 });
-test('16b intentionally gates all activity borders pending compact renderer certification',async()=>{
- assert.deepEqual(BORDER_READY_MODULES,[]);
- for(const module of MODULES)assert.equal(isActivityBorderReady(module.id),false);
+test('16c enables certified Small activities, while Medium and Large remain gated',async()=>{
+ const small=MODULES.filter(module=>module.size==='small');
+ assert.equal(BORDER_READY_MODULES.length,small.length);
+ for(const module of MODULES)assert.equal(isActivityBorderReady(module.id),module.size==='small');
  assert.equal(isActivityBorderReady(undefined),false);
  const [app,picker,pdf,css]=await Promise.all([
   readFile(new URL('../src/App.tsx',import.meta.url),'utf8'),

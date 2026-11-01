@@ -1,5 +1,13 @@
 # Worksheet Studio
 
+## PR 16c — Small module borders (v0.16.2)
+
+- **Enable all eight Small activity types** (Draw a Picture plus seven small-format puzzles), with any of the eleven Small PNG border styles selectable **per activity region** from the compact gallery. Medium and Large activity borders remain disabled pending their own print-layout adaptation.
+- **Shared fitting strategy:** keep the existing measured Small content scene at 2.2 × 2.4 in (the original 0.1-in print inset) and fit it *uniformly* within the centered 1.95 × 2.15 in bordered safe zone. The scale is roughly 88.6%, preserving font proportions, word-bank ordering, line wrapping, answer blanks, square checkboxes and writing space. The original Small modules are never changed when no border is selected.
+- **Live preview:** selected PNG fills exactly its 2.4 × 2.6 in region; the original Small SVG print scene uses `preserveAspectRatio=meet` inside the centered safe viewport.
+- **Exported PDF:** load and cache selected Small PNG bytes; draw the full artwork first and use the matching isotropic PDF graphics transform for the original vector module content, restoring the page graphics state between modules. Existing per-slot saved border choices work without migration; missing assets fail visibly, and unsupported Medium/Large selections still fail closed.
+- **QA:** `npm run test && npm run build && npm run sample:pr16c`. New tests verify all eight Small types, high-density checkbox/first-letter/choice/word-arrangement/drawing examples, exact source/destination transform geometry, mixed-style booklet exports, borderless compatibility, and unsupported-border guards. CI provides a six-type sample, writing/checkbox sample, and borderless control.
+
 ## PR 16b — Module border foundation (v0.16.1)
 
 - **Cover correction:** bordered title content uses a centered **4.3 × 2.1 inch** area (previously 4.3 × 2.15). Existing borderless title padding remains unchanged; the browser preview and PDF share the updated geometry.

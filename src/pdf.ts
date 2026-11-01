@@ -1,7 +1,7 @@
-import { PDFDocument, rgb, type PDFFont, type PDFPage } from 'pdf-lib';
+import { PDFDocument, rgb, pushGraphicsState, popGraphicsState, concatTransformationMatrix, type PDFFont, type PDFPage } from 'pdf-lib';
 import fontkit from '@pdf-lib/fontkit';
 import {COVER_BORDER_SAFE_WIDTH,COVER_BORDER_SAFE_HEIGHT,isCoverBorderId,type CoverBorderId} from './coverBorders.ts';
-import {isActivityBorderReady,readActivityBorders,type ActivityBorders} from './activityBorders.ts';
+import {isActivityBorderReady,readActivityBorders,planSmallBorderFit,type ActivityBorders} from './activityBorders.ts';
 import {glyphInkCenter} from './fontInkCenter.ts';
 import {embedNunitoWeights} from './nunitoPdf.ts';
 import type {ModuleFonts} from './modulePdf.ts';
@@ -252,7 +252,7 @@ function drawActivityPlaceholder(page: PDFPage, rect: PdfRect, size: Region['siz
  *
  * All text/graphics are vectors. No canvas screenshots or print dialogs.
  */
-export async function createBookletPdf(draft: PdfDraft, fontFiles: PdfFontFiles, borderPng?:Uint8Array): Promise<Uint8Array> {
+export async function createBookletPdf(draft: PdfDraft, fontFiles: PdfFontFiles, borderPng?:Uint8Array, activityBorderPngs:Record<string,Uint8Array>={}): Promise<Uint8Array> {
   const document = await PDFDocument.create();
   document.registerFontkit(fontkit);
   document.setTitle((draft.title.trim() || 'Bible Worksheet') + ' - Booklet');
@@ -291,6 +291,7 @@ export async function createBookletPdf(draft: PdfDraft, fontFiles: PdfFontFiles,
   if(borderEnabled&&!borderPng)throw Error('Selected cover border image is unavailable. Try exporting again.');
   const borderImage=borderEnabled&&borderPng?await document.embedPng(borderPng):undefined;
   const selections=readActivityBorders(draft.activityBorders);
+  const smallImages=new Map<string,Awaited<ReturnType<typeof document.embedPng>>>();
   const sheets = getPrintableSheetRegions(draft);
   for (let sheetIndex = 0; sheetIndex < sheets.length; sheetIndex++) {
     const page = document.addPage([SHEET_WIDTH, SHEET_HEIGHT]);
@@ -308,13 +309,29 @@ export async function createBookletPdf(draft: PdfDraft, fontFiles: PdfFontFiles,
         // corresponding centered safe-area viewport.
         if(selections[key]&&!isActivityBorderReady(assigned?.type))
           throw Error('Page '+item.bookletPage+' ('+item.id+'): Activity borders are not yet supported for this module. Remove the border before exporting.');
+        const bordered=!!selections[key]&&item.size==='small';
         if (assigned) {
           if (!moduleForSize(item.size).some((definition) => definition.id === assigned.type) &&
               !(item.size === 'medium' && assigned.type === 'connect-verse')) {
             throw new Error('Page ' + item.bookletPage + ' contains an activity in the wrong size area.');
           }
           try {
-            drawModulePdf(page, item.rect, assigned, fonts);
+            if(bordered){
+              const imageBytes=activityBorderPngs[key];
+              if(!imageBytes)throw Error('Selected Small border image is missing; try exporting again.');
+              const imageKey='small:'+selections[key];
+              let image=smallImages.get(imageKey);
+              if(!image){
+                image=await document.embedPng(imageBytes);
+                smallImages.set(imageKey,image);
+              }
+              page.drawImage(image,{x:item.rect.x,y:item.rect.y,width:item.rect.width,height:item.rect.height});
+              const fit=planSmallBorderFit(item.rect);
+              page.pushOperators(pushGraphicsState(),
+                concatTransformationMatrix(fit.scale,0,0,fit.scale,fit.translateX,fit.translateY));
+              try { drawModulePdf(page,item.rect,assigned,fonts); }
+              finally { page.pushOperators(popGraphicsState()); }
+            }else drawModulePdf(page, item.rect, assigned, fonts);
           } catch (error) {
             throw new Error('Page ' + item.bookletPage + ' (' + assigned.type.replaceAll('-', ' ') + '): ' +
               (error instanceof Error ? error.message : String(error)));
