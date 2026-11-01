@@ -78,10 +78,10 @@ test('Saved borders are separate from module contents, slot-specific and backwar
  assert.deepEqual(updated,{'2:top-left-small':'border-5','3:top-medium':'border-9'});
  assert.deepEqual(setActivityBorder(updated,'2:top-left-small','none'),{'3:top-medium':'border-9'});
 });
-test('16c enables certified Small activities, while Medium and Large remain gated',async()=>{
- const small=MODULES.filter(module=>module.size==='small');
- assert.equal(BORDER_READY_MODULES.length,small.length);
- for(const module of MODULES)assert.equal(isActivityBorderReady(module.id),module.size==='small');
+test('16d enables certified Small and Medium, while Large stays gated',async()=>{
+ const enabled=MODULES.filter(module=>module.size!=='large');
+ assert.equal(BORDER_READY_MODULES.length,enabled.length);
+ for(const module of MODULES)assert.equal(isActivityBorderReady(module.id),module.size!=='large');
  assert.equal(isActivityBorderReady(undefined),false);
  const [app,picker,pdf,css]=await Promise.all([
   readFile(new URL('../src/App.tsx',import.meta.url),'utf8'),
@@ -122,7 +122,7 @@ test('Unsupported saved activity borders fail clearly instead of overlaying unfi
  const empty=await PDFDocument.load(await createBookletPdf({...draft,activityBorders:{}},fonts));
  assert.equal(legacy.getPageCount(),empty.getPageCount());
  await assert.rejects(()=>createBookletPdf({...draft,activityBorders:{'2:top-medium':'border-1'}},fonts),
-  /Activity borders are not yet supported/);
+  /Medium border image is missing/);
  await assert.rejects(()=>createBookletPdf({...draft,activityBorders:{'1:cover-activity':'border-5'}},fonts),
   /Activity borders are not yet supported/);
 });

@@ -2,6 +2,7 @@ import {BOOKLET,type RegionSize} from './booklet.ts';
 import {COVER_BORDERS,type CoverBorderId} from './coverBorders.ts';
 import type {ModuleId} from './modules.ts';
 import {SMALL_MODULES} from './smallModules.ts';
+import {MODULES} from './modules.ts';
 
 /** Stable border IDs shared with the cover; each size has its own artwork. */
 export type ActivityBorderId=CoverBorderId;
@@ -50,10 +51,15 @@ export const ACTIVITY_SAFE_AREAS={
  large:{width:4,height:4.35},
 } as const;
 
-/** PR 16c enables all eight Small module types. Medium and Large remain
- * gated until their preview, PDF, and density checks are complete.
+/** PR 16d enables all Small and Medium module types. Large remains
+ * gated pending its own preview, PDF, and density checks.
+ * The Medium list is derived from the registered module catalog so a new
+ * module cannot accidentally gain an unchecked layout without a test.
  */
-export const BORDER_READY_MODULES:readonly ModuleId[]=['draw-picture',...SMALL_MODULES.map(item=>item.id)];
+export const BORDER_READY_MODULES:readonly ModuleId[]=[
+ 'draw-picture',...SMALL_MODULES.map(item=>item.id),
+ ...MODULES.filter(item=>item.size==='medium').map(item=>item.id),
+];
 export function isActivityBorderReady(moduleId:ModuleId|undefined):boolean{
  return moduleId!==undefined&&BORDER_READY_MODULES.includes(moduleId);
 }
@@ -111,8 +117,19 @@ export function planActivityPrintViewport(size:RegionSize,rect:PrintRect,bordere
  * and font proportions without introducing separate puzzle algorithms.
  */
 export function planSmallBorderFit(region:PrintRect){
- const viewport=planActivityPrintViewport('small',region,true);
- const source=planActivityPrintViewport('small',region,false).content;
+ return planActivityBorderFit('small',region);
+}
+/** Apply the *same* centered isotropic fit to every Medium print scene.
+ * Its source is the original 4.6 × 2.4in measured layout, not a redesigned
+ * puzzle; its target is the 4.3 × 2.1in artwork safe area. The height is
+ * limiting (87.5% scale), leaving extra clearance on each side.
+ */
+export function planMediumBorderFit(region:PrintRect){
+ return planActivityBorderFit('medium',region);
+}
+export function planActivityBorderFit(size:RegionSize,region:PrintRect){
+ const viewport=planActivityPrintViewport(size,region,true);
+ const source=planActivityPrintViewport(size,region,false).content;
  const scale=Math.min(viewport.content.width/source.width,viewport.content.height/source.height);
  const sourceCenterX=source.x+source.width/2,sourceCenterY=source.y+source.height/2;
  const destinationCenterX=viewport.content.x+viewport.content.width/2;
