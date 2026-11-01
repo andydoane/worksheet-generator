@@ -57,7 +57,7 @@ function drawPicture(page: PDFPage, rect: Rect, font: PDFFont, prompt: string, b
     x:inner.x+plan.drawing.x,
     y:inner.y+inner.height-plan.drawing.y-plan.drawing.height,
     width:plan.drawing.width,height:plan.drawing.height,
-    borderColor:GREY,borderWidth:bordered?0:1,color:WHITE,
+    borderColor:bordered?undefined:GREY,borderWidth:bordered?0:1,color:WHITE,
   });
   for(const line of plan.lines)
     page.drawText(line.text,{
