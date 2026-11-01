@@ -15,7 +15,7 @@ import CryptogramPreview from './CryptogramPreview';
 import {isSpecialtyModule} from './specialtyModules.ts';
 import SpecialtyPreview from './SpecialtyPreview';
 
-export default function ModulePreview({ module, showSolution = false, legacyMedium = false }: { module: ActivityModule; showSolution?: boolean; legacyMedium?: boolean }) {
+export default function ModulePreview({ module, showSolution = false, legacyMedium = false, bordered = false }: { module: ActivityModule; showSolution?: boolean; legacyMedium?: boolean; bordered?: boolean }) {
   const errors = validateModule(module);
   if (errors.length) {
     return (
@@ -28,11 +28,11 @@ export default function ModulePreview({ module, showSolution = false, legacyMedi
 
   if (isSmallModule(module)) return <SmallModulePreview module={module}/>;
   if (isStoryVerseModule(module)) return <StoryVersePreview module={module}/>;
-  if (isPuzzleModule(module)) return <PuzzlePreview module={module} showSolution={showSolution}/>;
+  if (isPuzzleModule(module)) return <PuzzlePreview module={module} showSolution={showSolution} bordered={bordered}/>;
   if (isCryptogram(module)) return <CryptogramPreview module={module}/>;
   if (isSpecialtyModule(module)) return <SpecialtyPreview module={module} legacyMedium={legacyMedium}/>;
 
-  if (module.type === 'draw-picture') return <DrawPicturePrintPreview prompt={module.prompt}/>;
+  if (module.type === 'draw-picture') return <DrawPicturePrintPreview prompt={module.prompt} bordered={bordered}/>;
 
   if (module.type === 'match-words') return <MatchingPrintPreview module={module}/>;
 
