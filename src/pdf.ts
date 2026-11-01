@@ -1,4 +1,4 @@
-import { PDFDocument, rgb, pushGraphicsState, popGraphicsState, concatTransformationMatrix, type PDFFont, type PDFPage } from 'pdf-lib';
+import { PDFDocument, rgb, degrees, pushGraphicsState, popGraphicsState, concatTransformationMatrix, type PDFFont, type PDFPage } from 'pdf-lib';
 import fontkit from '@pdf-lib/fontkit';
 import {COVER_BORDER_SAFE_WIDTH,COVER_BORDER_SAFE_HEIGHT,isCoverBorderId,type CoverBorderId} from './coverBorders.ts';
 import {isActivityBorderReady,readActivityBorders,planActivityBorderFit,type ActivityBorders} from './activityBorders.ts';
@@ -303,12 +303,13 @@ export async function createBookletPdf(draft: PdfDraft, fontFiles: PdfFontFiles,
       } else {
         const key=slotKey(item.bookletPage,item.id);
         const assigned: ActivityModule | undefined = draft.modules?.[key];
-        // Unsupported size/type combinations never paint border artwork over
-        // unfitted content. Medium and Small share the same safe-area fitting
-        // model; Large will be enabled after its separate print review.
-        if(selections[key]&&!isActivityBorderReady(assigned?.type))
-          throw Error('Page '+item.bookletPage+' ('+item.id+'): Activity borders are not yet supported for this module. Remove the border before exporting.');
-        const bordered=!!selections[key]&&item.size!=='large';
+        // Never paint a border on a mismatched/legacy placement. Every
+        // certified Small, Medium and Large renderer uses the common inset
+        // and a centered, isotropic content transform.
+        const matched=!!assigned&&moduleForSize(item.size).some(def=>def.id===assigned.type);
+        if(selections[key]&&(!isActivityBorderReady(assigned?.type)||!matched))
+          throw Error('Page '+item.bookletPage+' ('+item.id+'): Activity borders are not supported for this module and region. Remove the border before exporting.');
+        const bordered=!!selections[key]&&matched;
         if (assigned) {
           if (!moduleForSize(item.size).some((definition) => definition.id === assigned.type) &&
               !(item.size === 'medium' && assigned.type === 'connect-verse')) {
@@ -324,7 +325,19 @@ export async function createBookletPdf(draft: PdfDraft, fontFiles: PdfFontFiles,
                 image=await document.embedPng(imageBytes);
                 activityImages.set(imageKey,image);
               }
-              page.drawImage(image,{x:item.rect.x,y:item.rect.y,width:item.rect.width,height:item.rect.height});
+              if(item.size==='large'){
+                // Uploaded Large assets are 5.2:4.8 landscape source images.
+                // PDF coordinates are y-up: -90° is the same visual clockwise
+                // rotation as CSS rotate(90deg) in the y-down preview.
+                page.drawImage(image,{
+                  x:item.rect.x,y:item.rect.y+item.rect.height,
+                  width:item.rect.height,height:item.rect.width,
+                  rotate:degrees(-90),
+                });
+              }else page.drawImage(image,{
+                x:item.rect.x,y:item.rect.y,
+                width:item.rect.width,height:item.rect.height,
+              });
               const fit=planActivityBorderFit(item.size,item.rect);
               page.pushOperators(pushGraphicsState(),
                 concatTransformationMatrix(fit.scale,0,0,fit.scale,fit.translateX,fit.translateY));
