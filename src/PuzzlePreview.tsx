@@ -68,8 +68,8 @@ function MazePrintPreview({module,showSolution}:{
    <MazeDrawing maze={maze} showSolution={showSolution} plan={plan} statement={module.statement}/>}
  </div>;
 }
-export default function PuzzlePreview({module,showSolution=false}:{module:PuzzleModule;showSolution?:boolean}) {
-  if(module.type==='word-search')return <WordSearchPrintPreview module={module} showSolution={showSolution}/>;
-  if(module.type==='medium-word-search')return <MediumWordSearchPrintPreview module={module} showSolution={showSolution}/>;
+export default function PuzzlePreview({module,showSolution=false,bordered=false}:{module:PuzzleModule;showSolution?:boolean;bordered?:boolean}) {
+  if(module.type==='word-search')return <WordSearchPrintPreview module={module} showSolution={showSolution} bordered={bordered}/>;
+  if(module.type==='medium-word-search')return <MediumWordSearchPrintPreview module={module} showSolution={showSolution} bordered={bordered}/>;
   return <MazePrintPreview module={module} showSolution={showSolution}/>;
 }
