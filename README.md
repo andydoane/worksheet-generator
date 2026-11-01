@@ -1,5 +1,13 @@
 # Worksheet Studio
 
+## PR 16d — Medium module borders (v0.16.3)
+
+- **All nine Medium activities** can now select any of the eleven built-in Medium border designs independently per activity slot: Match the Words, Finish the Verse, Unscramble the Verse, Circle the Mistakes, 9×9 Word Search, True or False Maze, Solve the Code, Upside Down Verse and Connect the Phrase. Existing Small border choices stay enabled; Large stays locked for PR 16e.
+- The border PNG fills the full **4.8 × 2.6-inch** module region, while its content stays entirely inside the centered **4.3 × 2.1-inch** safe area. The existing measured Medium layouts use the original **4.6 × 2.4-inch** print view; fit it isotropically at **87.5%** into the safe area, leaving extra horizontal clearance rather than squeezing letters or stretching the 9×9 grid.
+- Browser SVG and PDF export use the same full-border and safe-viewport geometry. The printed PDF embeds the actual Medium PNG first, then draws its original vector scene using a scoped graphics transform. Image bytes are loaded only for selected Small/Medium slots, and repeated artwork is cached by size+style. No border leaves legacy geometry, word placements, random seeds, text layout, and printing unchanged.
+- **Focus QA:** Medium 9×9 Word Search's square grid, right-side title and bank centering; matching's independent left/right columns; verse reconstruction handwriting lines; boxed Connect the Phrase labels; full-density content and PDF preview parity. CI generates two mixed Medium-border booklets plus a borderless control (`npm run sample:pr16d`).
+- **Safety:** invalid saved styles are dropped, missing Medium artwork fails visibly, Large activity selections remain locked, and legacy Medium Connect the Verse placements stay borderless.
+
 ## PR 16c — Small module borders (v0.16.2)
 
 - **Enable all eight Small activity types** (Draw a Picture plus seven small-format puzzles), with any of the eleven Small PNG border styles selectable **per activity region** from the compact gallery. Medium and Large activity borders remain disabled pending their own print-layout adaptation.
