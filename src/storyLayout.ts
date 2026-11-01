@@ -2,8 +2,10 @@ import {parseStory} from './modules.ts';
 
 /** Shared exact token layout for the PDF and browser Finish the Story.
  * Coordinates use a TOP-left origin and a baseline y measured downward.
- * The caller supplies font metrics: PDFFont in export, Canvas 2D in preview.
+ * The caller supplies font metrics: PDFFont in export, fontkit in preview.
  */
+/** Lengthen every writing blank by 50% relative to the previously measured width. */
+export const STORY_BLANK_LENGTH_SCALE=1.5;
 export type StoryGlyph={kind:'text'|'blank';text:string;x:number;y:number;width:number};
 export type StoryPlan={fontSize:number;placements:StoryGlyph[];rows:number};
 type Token={kind:'text'|'blank';value:string};
@@ -27,7 +29,7 @@ export function planStory(story:string,measure:(text:string,size:number)=>number
     for(const t of tokens){
       const white=t.kind==='text'&&/^\s+$/u.test(t.value);
       const tokenWidth=t.kind==='blank'
-        ?Math.max(16,measure(t.value,fontSize)*1.12)
+        ?Math.max(16,measure(t.value,fontSize)*1.12)*STORY_BLANK_LENGTH_SCALE
         :measure(white?' ':t.value,fontSize);
       if(white&&x===0)continue;
       if(!white&&tokenWidth>width){good=false;break;}
