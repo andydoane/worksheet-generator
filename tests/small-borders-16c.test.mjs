@@ -116,3 +116,36 @@ test('Preview uses the same full-art and centered safe zone as the PDF, without 
  assert.match(pdf,/page.drawImage\(image/u);
  assert.match(exporter,/activityBorderUrl\(region.size,id\)/u);
 });
+
+test('Boundary-length inputs have the same PDF fit outcome with and without a Small border',async()=>{
+ const ff=await fonts(),png=await art(11),key=slots[0];
+ // These are the published *editor* maxima, including layouts that already
+ // correctly ask users to shorten the text in the normal borderless mode.
+ const scenarios=[
+  {type:'draw-picture',prompt:'David and his friends traveled through the village to share good news with every family in the town.'},
+  {type:'true-false',statement:'D'.repeat(80)},
+  {type:'multiple-choice',question:'What '.repeat(21).slice(0,105),
+   correct:'stone '.repeat(7).slice(0,42).trim(),wrong1:'shield '.repeat(6).slice(0,42).trim(),
+   wrong2:'sword '.repeat(7).slice(0,42).trim(),seed:6},
+  {type:'first-letters',reference:'1 Corinthians 13:4',verse:Array.from({length:75},()=> 'love').join(' ')},
+  {type:'odd-words',correct:['BETHLEHEM','NAZARETH','GOLIATH','JERUSALEM','DAVID'].join('\\n'),
+   incorrect:['NEBUCHADNEZ','PHARAOH','MATTHEW','CANAAN','JONATHAN'].join('\\n'),seed:8},
+  {type:'unscramble-words',first:'BETHLEHEM',second:'JERUSALEM',seed:12},
+  {type:'checkboxes',correct:['BETHLEHEM','NAZARETH','GOLIATH','JERUSALEM','DAVID'].join('\\n'),
+   incorrect:['NEBUCHADNEZ','PHARAOH','MATTHEW','CANAAN','JONATHAN'].join('\\n'),seed:10},
+  {type:'who-am-i',clue:'Who '.repeat(30).slice(0,120),answer:'NEBUCHADNEZZAR'},
+ ];
+ for(const scenario of scenarios){
+  assert.deepEqual(validateModule(scenario),[],scenario.type+' input validity');
+  const plain={...base,modules:{[key]:scenario}};
+  const selected={...plain,activityBorders:{[key]:'border-11'}};
+  const [noBorder,withBorder]=await Promise.allSettled([
+   createBookletPdf(plain,ff),
+   createBookletPdf(selected,ff,undefined,{[key]:png}),
+  ]);
+  assert.equal(withBorder.status,noBorder.status,
+   scenario.type+' must behave the same in both modes even at validation boundaries');
+  if(noBorder.status==='fulfilled')
+   assert.ok(withBorder.value.length>0,scenario.type+' bordered PDF must be nonempty');
+ }
+});
