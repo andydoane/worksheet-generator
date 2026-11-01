@@ -8,7 +8,7 @@ const fonts={
  zillaSlab:await readFile(new URL('../fonts/ZillaSlab-Bold-pdf.ttf',import.meta.url)),
 };
 const modules=[
- {type:'draw-picture',prompt:'Draw David looking at five stones in his hand before meeting Goliath.'},
+ {type:'draw-picture',prompt:'David looking at five stones in his hand before meeting Goliath.'},
  {type:'multiple-choice',question:'What did David use to defeat the giant when he trusted in the Lord?',correct:'A small stone and a sling',wrong1:'An enormous sharp sword',wrong2:'A heavy protective shield',seed:3},
  {type:'true-false',statement:'The Lord helped David defeat Goliath with just a smooth stone.'},
  {type:'first-letters',reference:'1 Samuel 17:47',verse:'All those gathered here will know that it is not by sword or spear that the Lord saves for the battle is the Lord'},
