@@ -1,5 +1,14 @@
 # Worksheet Studio
 
+## PR 16e — Large module borders (v0.16.4)
+
+- **All nine Large activities** can now select any of the eleven uploaded Large border styles independently per slot: Finish the Story, Story Order, Sort the Story, Draw the Story, 12×10 Word Search, Crossword, Spiral Verse, Verse Cryptogram and Connect the Verse. Small and Medium border selections remain supported.
+- **Exact portrait print geometry:** The artwork occupies the full **4.8 × 5.2 inch** Large region. The existing measured **4.6 × 5.0 inch** content scene is centered and uniformly fitted inside the new **4.0 × 4.35 inch** safe area, preserving text wrapping, writing cells, grids, puzzle seeds and drawing shapes. Width is limiting at **4 / 4.6 = 86.9565%**; it leaves approximately 0.0022 inch extra vertical clearance. Choosing no border retains the exact original 0.1-inch inset and layout.
+- **Upright artwork without distortion:** Large PNG source files are landscape (5.2:4.8). The booklet preview rotates each +90° in screen coordinates, while the vector PDF uses the equivalent −90° in PDF coordinates, mapping its source width to the Large portrait height. No stretching or cropping.
+- **Measured print parity:** Large SVG and HTML previews both use the original logical 4.6 × 5.0-inch scene scaled and centered in the 4.0 × 4.35-inch safe viewport. The PDF prints actual PNG artwork first and scopes the uniform content transform to that module only; images are loaded and cached per chosen size/style.
+- **Safety:** the selector applies only to registered modules in their canonical size. Legacy Medium Connect the Verse slots stay printable and borderless. Missing PNGs fail visibly rather than silently dropping a selected border.
+- **QA:** `npm run test && npm run build && npm run sample:pr16e`. New tests cover 11 landscape PNG signatures/rotation, all nine Large layouts and their content validation, dense story/drawing/word-grid/export examples, geometry/transform parity, preservation of Small/Medium scaling, unsupported saved slots, and borderless controls. CI emits **three multi-activity bordered Large booklets plus a borderless comparison** for print inspection.
+
 ## PR 16d — Medium module borders (v0.16.3)
 
 - **All nine Medium activities** can now select any of the eleven built-in Medium border designs independently per activity slot: Match the Words, Finish the Verse, Unscramble the Verse, Circle the Mistakes, 9×9 Word Search, True or False Maze, Solve the Code, Upside Down Verse and Connect the Phrase. Existing Small border choices stay enabled; Large stays locked for PR 16e.
