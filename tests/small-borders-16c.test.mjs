@@ -108,7 +108,7 @@ test('Preview uses the same full-art and centered safe zone as the PDF, without 
  ]);
  assert.match(app,/bordered-small-activity/u);
  assert.match(app,/activityBorderUrl\(region.size/u);
- assert.match(app,/ACTIVITY_SAFE_AREAS\\[region.size\\]/u);
+ assert.ok(app.includes('ACTIVITY_SAFE_AREAS[region.size]'));
  assert.match(css,/bordered-small-safe/u);
  assert.match(css,/object-fit:fill/u);
  assert.match(pdf,/planActivityBorderFit\(item.size,item.rect\)/u);
