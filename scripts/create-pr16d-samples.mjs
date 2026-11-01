@@ -1,3 +1,4 @@
+import {EXAMPLES} from './pr16d-fixtures.mjs';
 import {readFile,mkdir,writeFile} from 'node:fs/promises';
 import {createBookletPdf} from '../src/pdf.ts';
 import {moduleForSize,validateModule} from '../src/modules.ts';
@@ -9,19 +10,6 @@ const fonts={
  nunitoSans900:await readFile(new URL('../fonts/Nunito-ExtraBold.ttf',import.meta.url)),
  zillaSlab:await readFile(new URL('../fonts/ZillaSlab-Bold-pdf.ttf',import.meta.url)),
 };
-export const EXAMPLES=[
- {type:'medium-word-search',words:'SHEPHERD\nGOLIATH\nISRAEL\nDAVID\nSLING\nSTONE',seed:14},
- {type:'match-words',pairs:'David,Shepherd\nSaul,King\nGoliath,Giant\nSling,Weapon\nIsrael,Nation\nSamuel,Prophet',seed:7},
- {type:'finish-verse',reference:'1 Samuel 17:47',
-  verse:'The battle is the [Lords] and he will [give] you into our [hands] this [day].',seed:11},
- {type:'connect-big-idea',idea:'David trusted in the Lord when he walked toward the giant',seed:13},
- {type:'big-idea-cryptogram',idea:'The Lord gives courage to his people.',seed:19},
- {type:'unscramble-verse',reference:'Psalm 23:1',
-  verse:'The [Lord] is my [shepherd] I shall not [want] his [goodness] follows me.',seed:3},
- {type:'circle-mistakes',text:'David was a king who lived in Egypt. He faced a tiny man named Goliath. David trusted in an iron sword instead of the Lord.',count:3},
- {type:'true-false-maze',statement:'David trusted God when he faced Goliath.',answer:true,seed:8},
- {type:'upside-down-verse',reference:'Psalm 56:3',verse:'When I am afraid I will trust in you.'},
-];
 const slots=['2:top-medium','2:middle-medium','3:top-medium','3:middle-medium','4:top-medium','4:middle-medium'];
 const layouts={2:'medium-medium-small-small',3:'medium-medium-small-small',4:'medium-medium-small-small'};
 const ids=[1,6,11,3,8,10];
