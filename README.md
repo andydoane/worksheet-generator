@@ -1,5 +1,13 @@
 # Worksheet Studio
 
+## PR 16h — Adaptive layout and typography (v0.16.7)
+
+- **Finish the Story:** Writing blanks are 1.5× the former font-metric-measured width, preserving each word's natural proportional length. The existing shared 13–9pt planner automatically wraps and fits longer blanks, consistently in SVG and PDF.
+- **Crossword:** After sizing the grid and clue columns, the shared planner computes the occupied top and bottom (including clue descenders) and centers the complete composition vertically, without shifting individual clues relative to the grid.
+- **Unscramble the Verse:** The title now uses the complete, trimmed Bible-book name (for example, `1 Thessalonians 5:18`) and fits it with the existing font-metric-based 25–15pt title-sizing loop. Upside Down Verse is intentionally unchanged.
+- **Compatibility:** No saved-draft migrations or puzzle generation changes. All three adjustments share print geometry between browser preview and vector PDF, and work with and without decorative activity borders.
+- **Review:** `npm run test && npm run build && npm run sample:pr16h` generates `artifacts/sample-pr16h-plain.pdf` and `artifacts/sample-pr16h-bordered.pdf`. Inspect handwriting space, vertical balance and full headings at actual print size.
+
 ## PR 16g — Border-aware cleanup and balanced cover title (v0.16.6)
 
 - **Large and Medium Word Search:** hide only the built-in grid outline when that slot has a decorative activity border; the letter grid and word bank are untouched. Without an activity border, the grid outline is drawn exactly as before.
