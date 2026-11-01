@@ -128,11 +128,11 @@ test('Boundary-length inputs have the same PDF fit outcome with and without a Sm
    correct:'stone '.repeat(7).slice(0,42).trim(),wrong1:'shield '.repeat(6).slice(0,42).trim(),
    wrong2:'sword '.repeat(7).slice(0,42).trim(),seed:6},
   {type:'first-letters',reference:'1 Corinthians 13:4',verse:Array.from({length:75},()=> 'love').join(' ')},
-  {type:'odd-words',correct:['BETHLEHEM','NAZARETH','GOLIATH','JERUSALEM','DAVID'].join('\\n'),
-   incorrect:['NEBUCHADNEZ','PHARAOH','MATTHEW','CANAAN','JONATHAN'].join('\\n'),seed:8},
+  {type:'odd-words',correct:['BETHLEHEM','NAZARETH','GOLIATH','JERUSALEM','DAVID'].join(String.fromCharCode(10)),
+   incorrect:['NEBUCHADNEZ','PHARAOH','MATTHEW','CANAAN','JONATHAN'].join(String.fromCharCode(10)),seed:8},
   {type:'unscramble-words',first:'BETHLEHEM',second:'JERUSALEM',seed:12},
-  {type:'checkboxes',correct:['BETHLEHEM','NAZARETH','GOLIATH','JERUSALEM','DAVID'].join('\\n'),
-   incorrect:['NEBUCHADNEZ','PHARAOH','MATTHEW','CANAAN','JONATHAN'].join('\\n'),seed:10},
+  {type:'checkboxes',correct:['BETHLEHEM','NAZARETH','GOLIATH','JERUSALEM','DAVID'].join(String.fromCharCode(10)),
+   incorrect:['NEBUCHADNEZ','PHARAOH','MATTHEW','CANAAN','JONATHAN'].join(String.fromCharCode(10)),seed:10},
   {type:'who-am-i',clue:'Who '.repeat(30).slice(0,120),answer:'NEBUCHADNEZZAR'},
  ];
  for(const scenario of scenarios){
