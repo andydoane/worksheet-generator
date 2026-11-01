@@ -81,19 +81,24 @@ test('reference banks do not shrink when scattered words are reduced',async()=>{
  assert.equal(medium.bankFontSize,9.4);
 });
 test('cover no longer contains extra overline and centers title and scripture together',async()=>{
- const [app,css,pdf]=await Promise.all([
+ const [app,css,pdf,preview,layout]=await Promise.all([
   readFile(new URL('../src/App.tsx',import.meta.url),'utf8'),
   readFile(new URL('../src/layout.css',import.meta.url),'utf8'),
   readFile(new URL('../src/pdf.ts',import.meta.url),'utf8'),
+  readFile(new URL('../src/CoverTitlePreview.tsx',import.meta.url),'utf8'),
+  readFile(new URL('../src/coverTitleLayout.ts',import.meta.url),'utf8'),
  ]);
  assert.doesNotMatch(app,/BIBLE STORY REVIEW/u);
  assert.doesNotMatch(pdf,/BIBLE STORY REVIEW/u);
  assert.match(app,/className="cover-text-safe"/u);
- assert.match(app,/className="cover-title"/u);
+ assert.match(app,/CoverTitlePreview title=\{draft.title\}/u);
+ assert.match(preview,/className="cover-title"/u);
  assert.match(css,/\.cover-content \{[^}]*justify-content: center/u);
  assert.match(css,/\.booklet-region \.cover-title \{[^}]*margin: 0;/u);
- assert.match(pdf,/const totalHeight = fitted.height \+ gap \+ subtitle.height;/u);
- assert.match(pdf,/\(box.height - totalHeight\) \/ 2/u);
+ assert.match(pdf,/planCoverText\(/u);
+ assert.match(preview,/planCoverText\(/u);
+ assert.match(layout,/const totalHeight=titleHeight\+gap\+subtitle.height;/u);
+ assert.match(layout,/\(height-totalHeight\)\/2/u);
  const files=await assets();
  const draft={title:'God Cares For His People',scripture:'Isaiah 41:10',
   layouts:{2:'medium-large',3:'large-medium',4:'large-medium'},modules:{}};
