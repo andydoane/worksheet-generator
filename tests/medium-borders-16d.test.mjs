@@ -42,7 +42,7 @@ async function artwork(){
  for(const [i,key]of slots.entries())result[key]=await png([1,6,11,3,8,10][i]);
  return result;
 }
-test('All nine registered Medium activities accept individual border designs and Large stays gated',()=>{
+test('All nine registered Medium activities remain border-ready alongside Large modules',()=>{
  const medium=moduleForSize('medium'),small=moduleForSize('small'),large=moduleForSize('large');
  assert.equal(medium.length,9);
  assert.deepEqual(new Set(EXAMPLES.map(e=>e.type)),new Set(medium.map(e=>e.id)));
@@ -52,7 +52,7 @@ test('All nine registered Medium activities accept individual border designs and
   assert.ok(isActivityBorderReady(example.type),example.type);
  }
  for(const m of small)assert.ok(isActivityBorderReady(m.id),m.id);
- for(const m of large)assert.equal(isActivityBorderReady(m.id),false,m.id);
+ for(const m of large)assert.equal(isActivityBorderReady(m.id),true,m.id);
 });
 test('Medium 4.6×2.4 original viewport maps uniformly inside centered 4.3×2.1 bordered safe area',()=>{
  const rect={x:59,y:87,width:BOOKLET.cell.width*2*72,height:BOOKLET.cell.height*72};
@@ -125,13 +125,13 @@ test('All Medium types generate real bordered PDFs and preserve borderless expor
   assert.ok(bordered.byteLength>normal.byteLength+5000,'PNG art embeds when borders selected');
  }
 });
-test('Medium PDF refuses missing artwork, while unsupported Large borders remain rejected',async()=>{
+test('Medium and Large borders require actual artwork bytes to export',async()=>{
  const files=await fonts();
  await assert.rejects(()=>createBookletPdf(draft([EXAMPLES[0]],true),files),/medium border image is missing/i);
  const bad={...draft([]),layouts:{...layouts,2:'large-medium'},
   modules:{'2:top-large':{type:'finish-story',story:'[David] [trusted] [in] [God] [before] [Goliath].',seed:1}},
   activityBorders:{'2:top-large':'border-1'}};
- await assert.rejects(()=>createBookletPdf(bad,files),/not yet supported/u);
+ await assert.rejects(()=>createBookletPdf(bad,files),/Large border image is missing/u);
 });
 test('Editor preview and PDF export share Medium artwork, safe area and uniform transform',async()=>{
  const [app,css,pdf,exporter]=await Promise.all([
@@ -141,11 +141,11 @@ test('Editor preview and PDF export share Medium artwork, safe area and uniform 
   readFile(new URL('../src/exportPdf.ts',import.meta.url),'utf8'),
  ]);
  assert.match(app,/ACTIVITY_SAFE_AREAS\[region.size\]/u);
- assert.ok(app.includes("region.size!=='large'"));
+ assert.match(app,/planLargeBorderFit/u);
  assert.match(app,/bordered-small-safe/u);
  assert.match(css,/bordered-small-safe/u);
  assert.match(pdf,/planActivityBorderFit\(item.size,item.rect\)/u);
  assert.match(pdf,/concatTransformationMatrix\(fit.scale,0,0,fit.scale/u);
  assert.match(pdf,/item.size\+':'\+selections\[key\]/u);
- assert.match(exporter,/region.size==='large'/u);
+ assert.match(exporter,/moduleForSize\(region.size\)/u);
 });

@@ -51,14 +51,14 @@ export const ACTIVITY_SAFE_AREAS={
  large:{width:4,height:4.35},
 } as const;
 
-/** PR 16d enables all Small and Medium module types. Large remains
- * gated pending its own preview, PDF, and density checks.
- * The Medium list is derived from the registered module catalog so a new
- * module cannot accidentally gain an unchecked layout without a test.
+/** Only module types in the catalog are eligible. PR 16e brings
+ * all nine Large types online alongside the existing Small and Medium ones.
+ * Preview/PDF both use the shared isotropic fit; future types must first
+ * implement equivalent measured print scenes and pass the density tests.
  */
 export const BORDER_READY_MODULES:readonly ModuleId[]=[
  'draw-picture',...SMALL_MODULES.map(item=>item.id),
- ...MODULES.filter(item=>item.size==='medium').map(item=>item.id),
+ ...MODULES.filter(item=>item.size==='medium'||item.size==='large').map(item=>item.id),
 ];
 export function isActivityBorderReady(moduleId:ModuleId|undefined):boolean{
  return moduleId!==undefined&&BORDER_READY_MODULES.includes(moduleId);
@@ -93,7 +93,7 @@ export type ActivityPrintViewport={artwork:PrintRect;content:PrintRect;bordered:
 /** Shared print-point viewport, with y measured from PDF's bottom.
  * The PNG always occupies the full slot. The inner content rectangle is
  * centered; borderless mode preserves the original 0.1-inch padding.
- * No activity renderer is switched to this until it is certified as ready.
+ * Uses the existing 0.1-inch inset as the unbordered scene for all sizes.
  */
 export function planActivityPrintViewport(size:RegionSize,rect:PrintRect,bordered:boolean):ActivityPrintViewport{
  const standard={width:rect.width-BOOKLET.padding*144,height:rect.height-BOOKLET.padding*144};
@@ -137,4 +137,13 @@ export function planActivityBorderFit(size:RegionSize,region:PrintRect){
  return {scale,translateX:destinationCenterX-sourceCenterX*scale,
   translateY:destinationCenterY-sourceCenterY*scale,source,viewport,
   fittedWidth:source.width*scale,fittedHeight:source.height*scale};
+}
+
+/** Large original 4.6×5.0-inch print scene is fitted isotropically inside
+ * 4.0×4.35 inches. Width is limiting: 4/4.6 = ~86.9565%.
+ * The scaled result is vertically centered with about .0011in clearance at
+ * top and bottom, without squashing lettering, drawing frames or grids.
+ */
+export function planLargeBorderFit(region:PrintRect){
+ return planActivityBorderFit('large',region);
 }

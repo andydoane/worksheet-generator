@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import pkg from '../package.json';
 import {COVER_BORDERS,coverBorderUrl,isCoverBorderId,type CoverBorderId} from './coverBorders.ts';
 import {
- ACTIVITY_SAFE_AREAS,activityBorderUrl,isActivityBorderReady,
+ ACTIVITY_SAFE_AREAS,activityBorderUrl,isActivityBorderReady,planLargeBorderFit,
  readActivityBorders,setActivityBorder,type ActivityBorders,type ActivityBorderId,
 } from './activityBorders.ts';
 import ActivityBorderPicker from './ActivityBorderPicker.tsx';
@@ -116,6 +116,7 @@ function RegionContents({ region, draft, module, slotKeyKey, showSolution = fals
   }
 
   const selectedBorder=module&&isActivityBorderReady(module.type)
+    &&moduleForSize(region.size).some(item=>item.id===module.type)
     ?activityBorderUrl(region.size,draft.activityBorders[slotKeyKey])
     :undefined;
   // Older Medium Connect Verse placements remain visible, editable and
@@ -123,16 +124,28 @@ function RegionContents({ region, draft, module, slotKeyKey, showSolution = fals
   const legacyMedium=region.size==='medium'&&module?.type==='connect-verse';
   if (module && (legacyMedium||moduleForSize(region.size).some((item) => item.id === module.type))) {
     const preview=<ModulePreview module={module} showSolution={showSolution} legacyMedium={legacyMedium}/>;
-    if(!selectedBorder||region.size==='large')return preview;
+    if(!selectedBorder)return preview;
     const safe=ACTIVITY_SAFE_AREAS[region.size];
-    // Small and Medium layouts both use their original measured print SVG
-    // scenes with preserveAspectRatio=meet, centered within the safe zone.
+    // Large contains both print-matched SVGs and HTML-based drawing, story,
+    // cipher and connecting layouts. Give them the original 4.6×5.0-inch
+    // logical scene and scale it isotropically, exactly like the PDF CTM.
+    const large=region.size==='large';
+    const largeFit=large?planLargeBorderFit({
+      x:0,y:0,width:region.width*72,height:region.height*72,
+    }):null;
     return <div className="bordered-small-activity bordered-activity">
-      <img className="bordered-small-art" src={selectedBorder} alt="" aria-hidden="true"/>
+      <img className={'bordered-small-art'+(large?' large-border-rotated':'')}
+        src={selectedBorder} alt="" aria-hidden="true"/>
       <div className="bordered-small-safe" style={{
         width:(safe.width/region.width*100)+'%',
         height:(safe.height/region.height*100)+'%',
-      }}>{preview}</div>
+      }}>{largeFit
+        ?<div className="bordered-large-scene" style={{
+          width:(largeFit.source.width/largeFit.viewport.content.width*100)+'%',
+          height:(largeFit.source.height/largeFit.viewport.content.height*100)+'%',
+          transform:'translate(-50%, -50%) scale('+largeFit.scale+')',
+        }}>{preview}</div>
+        :preview}</div>
     </div>;
   }
 
@@ -162,7 +175,8 @@ function BookletPage({
       {regions.map((region) => {
         const slot=slotKey(page,region.id);
         const selectedBorder=draft.modules[slot]&&isActivityBorderReady(draft.modules[slot].type)&&
-          region.size!=='large'&&!!activityBorderUrl(region.size,draft.activityBorders[slot]);
+          moduleForSize(region.size).some(item=>item.id===draft.modules[slot].type)&&
+          !!activityBorderUrl(region.size,draft.activityBorders[slot]);
         const style = { ...regionStyle(region), padding: (region.kind==='title'&&draft.coverBorder!=='none')||selectedBorder?'0':String((BOOKLET.padding / BOOKLET.page.width) * 100) + '%' };
         const className = 'booklet-region ' + (region.kind === 'title' ? 'title-region' : 'activity-region') +
           ' size-' + region.size + (region.id === selectedId ? ' selected-region' : '');
@@ -526,7 +540,8 @@ export default function App() {
                   {activeRegion&&<ActivityBorderPicker key={activeKey}
                     slotKey={activeKey} size={activeRegion.size}
                     value={draft.activityBorders[activeKey]??'none'}
-                    enabled={isActivityBorderReady(activeModule?.type)}
+                    enabled={isActivityBorderReady(activeModule?.type)&&!!activeModule&&
+                      moduleForSize(activeRegion.size).some(item=>item.id===activeModule.type)}
                     onChange={chooseActivityBorder}/>}
                   {activeModule?.type === 'draw-picture' && (
                     <div className="activity-inputs">
