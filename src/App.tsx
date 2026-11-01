@@ -6,6 +6,7 @@ import {
  readActivityBorders,setActivityBorder,type ActivityBorders,type ActivityBorderId,
 } from './activityBorders.ts';
 import ActivityBorderPicker from './ActivityBorderPicker.tsx';
+import CoverTitlePreview from './CoverTitlePreview.tsx';
 import {markWordSelection} from './storySelection.ts';
 import {fieldExceedsLength} from './fieldLengthFeedback.ts';
 import { downloadBookletPdf } from './exportPdf';
@@ -108,8 +109,8 @@ function RegionContents({ region, draft, module, slotKeyKey, showSolution = fals
       <div className={'cover-content'+(draft.coverBorder!=='none'?' cover-content-bordered':'')}>
         {coverBorderUrl(draft.coverBorder)&&<img className="cover-border-art" src={coverBorderUrl(draft.coverBorder)} alt="" aria-hidden="true"/>}
         <div className="cover-text-safe">
-          <span className="cover-title">{draft.title.trim() || 'Your story title'}</span>
-          <span className="cover-reference">{draft.scripture.trim() || 'Scripture reference'}</span>
+          <CoverTitlePreview title={draft.title} reference={draft.scripture}
+            bordered={draft.coverBorder!=='none'}/>
         </div>
       </div>
     );
@@ -123,7 +124,8 @@ function RegionContents({ region, draft, module, slotKeyKey, showSolution = fals
   // printable without moving a saved assignment or changing its layout.
   const legacyMedium=region.size==='medium'&&module?.type==='connect-verse';
   if (module && (legacyMedium||moduleForSize(region.size).some((item) => item.id === module.type))) {
-    const preview=<ModulePreview module={module} showSolution={showSolution} legacyMedium={legacyMedium}/>;
+    const preview=<ModulePreview module={module} showSolution={showSolution}
+      legacyMedium={legacyMedium} bordered={!!selectedBorder}/>;
     if(!selectedBorder)return preview;
     const safe=ACTIVITY_SAFE_AREAS[region.size];
     // Large contains both print-matched SVGs and HTML-based drawing, story,
