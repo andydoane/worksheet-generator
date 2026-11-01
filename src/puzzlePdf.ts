@@ -33,7 +33,7 @@ function wrap(text:string,font:PDFFont,size:number,w:number):string[]|null{
   return rows;
 }
 
-function drawWordSearch(page:PDFPage,rect:Rect,fonts:ModuleFonts,module:Extract<PuzzleModule,{type:'word-search'}>):void{
+function drawWordSearch(page:PDFPage,rect:Rect,fonts:ModuleFonts,module:Extract<PuzzleModule,{type:'word-search'}>,bordered=false):void{
  const box=inside(rect),puzzle=generateWordSearch(module);
  const plan=planWordSearch(puzzle,{
   puzzle:(text,size)=>textWidth(fonts.puzzle,text,size),
@@ -41,7 +41,7 @@ function drawWordSearch(page:PDFPage,rect:Rect,fonts:ModuleFonts,module:Extract<
  },box.width,box.height);
  if(!plan)throw Error('Word Search grid and word bank cannot fit clearly. Use shorter words.');
  const top=box.y+box.height;
- page.drawRectangle({
+ if(!bordered)page.drawRectangle({
   x:box.x+plan.gridX-2,y:top-plan.gridTop-plan.gridHeight-2,
   width:plan.gridWidth+4,height:plan.gridHeight+4,
   borderColor:FAINT,borderWidth:.5,
@@ -60,7 +60,7 @@ function drawWordSearch(page:PDFPage,rect:Rect,fonts:ModuleFonts,module:Extract<
 
 /** Exactly the same 9x9 print-point scene as MediumWordSearchPrintPreview. */
 function drawMediumWordSearch(page:PDFPage,rect:Rect,fonts:ModuleFonts,
- module:Extract<PuzzleModule,{type:'medium-word-search'}>):void{
+ module:Extract<PuzzleModule,{type:'medium-word-search'}>,bordered=false):void{
  const box=inside(rect),puzzle=generateWordSearch(module);
  const plan=planMediumWordSearch(puzzle,{
   puzzle:(text,size)=>textWidth(fonts.puzzle,text,size),
@@ -71,7 +71,7 @@ function drawMediumWordSearch(page:PDFPage,rect:Rect,fonts:ModuleFonts,
  const top=box.y+box.height;
  center(page,fonts.title,MEDIUM_SEARCH_TITLE,
   box.x+plan.panelWidth,top-plan.titleY,plan.panelWidth,plan.titleSize);
- page.drawRectangle({
+ if(!bordered)page.drawRectangle({
   x:box.x+plan.gridX-2,y:top-plan.gridTop-plan.gridHeight-2,
   width:plan.gridWidth+4,height:plan.gridHeight+4,
   borderColor:FAINT,borderWidth:.5,
@@ -133,8 +133,8 @@ function drawMaze(page:PDFPage,rect:Rect,fonts:ModuleFonts,module:Extract<Puzzle
  });
 }
 
-export function drawPuzzlePdf(page:PDFPage,rect:Rect,module:PuzzleModule,fonts:ModuleFonts):void{
-  if(module.type==='word-search')return drawWordSearch(page,rect,fonts,module);
-  if(module.type==='medium-word-search')return drawMediumWordSearch(page,rect,fonts,module);
+export function drawPuzzlePdf(page:PDFPage,rect:Rect,module:PuzzleModule,fonts:ModuleFonts,bordered=false):void{
+  if(module.type==='word-search')return drawWordSearch(page,rect,fonts,module,bordered);
+  if(module.type==='medium-word-search')return drawMediumWordSearch(page,rect,fonts,module,bordered);
   return drawMaze(page,rect,fonts,module);
 }

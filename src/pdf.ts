@@ -3,6 +3,7 @@ import fontkit from '@pdf-lib/fontkit';
 import {COVER_BORDER_SAFE_WIDTH,COVER_BORDER_SAFE_HEIGHT,isCoverBorderId,type CoverBorderId} from './coverBorders.ts';
 import {isActivityBorderReady,readActivityBorders,planActivityBorderFit,type ActivityBorders} from './activityBorders.ts';
 import {glyphInkCenter} from './fontInkCenter.ts';
+import {planCoverText} from './coverTitleLayout.ts';
 import {embedNunitoWeights} from './nunitoPdf.ts';
 import type {ModuleFonts} from './modulePdf.ts';
 import { drawModulePdf } from './modulePdf.ts';
@@ -99,77 +100,6 @@ function width(font: PDFFont, text: string, size: number): number {
   return font.widthOfTextAtSize(text, size);
 }
 
-/** Wraps at spaces, and splits very long unbroken words if necessary. */
-function wrapText(font: PDFFont, content: string, fontSize: number, maxWidth: number): string[] {
-  const words = content.trim().replace(/\s+/g, ' ').split(' ').filter(Boolean);
-  if (!words.length) return [''];
-
-  const pieces: string[] = [];
-  for (const word of words) {
-    if (width(font, word, fontSize) <= maxWidth) {
-      pieces.push(word);
-      continue;
-    }
-    let segment = '';
-    for (const char of word) {
-      if (segment && width(font, segment + char, fontSize) > maxWidth) {
-        pieces.push(segment);
-        segment = char;
-      } else {
-        segment += char;
-      }
-    }
-    if (segment) pieces.push(segment);
-  }
-
-  const lines: string[] = [];
-  let current = '';
-  for (const piece of pieces) {
-    const next = current ? current + ' ' + piece : piece;
-    if (current && width(font, next, fontSize) > maxWidth) {
-      lines.push(current);
-      current = piece;
-    } else {
-      current = next;
-    }
-  }
-  if (current) lines.push(current);
-  return lines;
-}
-
-type Fitted = { lines: string[]; size: number; lineHeight: number; height: number };
-
-function fitText(font: PDFFont, text: string, maxWidth: number, preferred: number, min: number, maxLines: number): Fitted {
-  for (let size = preferred; size >= min; size -= 0.5) {
-    const lines = wrapText(font, text, size, maxWidth);
-    if (lines.length <= maxLines) {
-      const lineHeight = size * 1.12;
-      return { lines, size, lineHeight, height: lines.length * lineHeight };
-    }
-  }
-  throw new Error('The front-cover text is too long to fit. Please shorten the title or Scripture reference.');
-}
-
-function drawCenteredLines(
-  page: PDFPage,
-  font: PDFFont,
-  text: Fitted,
-  x: number,
-  top: number,
-  maxWidth: number,
-  color = BLACK,
-): void {
-  text.lines.forEach((line, index) => {
-    page.drawText(line, {
-      x: x + (maxWidth - width(font, line, text.size)) / 2,
-      y: SHEET_HEIGHT - top - text.size - index * text.lineHeight,
-      size: text.size,
-      font,
-      color,
-    });
-  });
-}
-
 /** Print regions are invisible guides; the preview retains an editor-only selection outline. */
 function drawFrame(_page: PDFPage, _rect: PdfRect): void {}
 
@@ -184,30 +114,19 @@ function drawCoverTitle(page: PDFPage, rect: PdfRect, fonts: Fonts, draft: PdfDr
   }
   const title = draft.title.trim() || 'Your story title';
   const reference = draft.scripture.trim() || 'Scripture reference';
-  const subtitle = fitText(fonts.body, reference, box.width, 12, 8, 2);
-  const gap = 11;
-  let fitted: Fitted | undefined;
-
-  for (let preferred = 42; preferred >= 14; preferred -= 1) {
-    try {
-      const candidate = fitText(fonts.title, title, box.width, preferred, preferred, 3);
-      if (candidate.height + gap + subtitle.height <= box.height) {
-        fitted = candidate;
-        break;
-      }
-    } catch {
-      // Try the next smaller text size.
-    }
-  }
-  if (!fitted) {
-    throw new Error('The front-cover title is too long to fit the booklet. Please shorten it.');
-  }
-
-  // Center the actual two-item composition, not the old three-item block.
-  const totalHeight = fitted.height + gap + subtitle.height;
-  const top = SHEET_HEIGHT - box.y - box.height + (box.height - totalHeight) / 2;
-  drawCenteredLines(page, fonts.title, fitted, box.x, top, box.width);
-  drawCenteredLines(page, fonts.body, subtitle, box.x, top + fitted.height + gap, box.width, DARK_GREY);
+  const plan=planCoverText(title,reference,box.width,box.height,
+    (text,size)=>width(fonts.title,text,size),
+    (text,size)=>width(fonts.body,text,size));
+  if(!plan)throw Error('The front-cover text is too long to fit. Shorten the title or Scripture reference.');
+  // SVG and PDF share the exact title breaks, font sizes and centered baselines.
+  for(const line of plan.titleLines)page.drawText(line.text,{
+    x:box.x+line.x,y:box.y+box.height-line.y,
+    size:line.size,font:fonts.title,color:BLACK,
+  });
+  for(const line of plan.referenceLines)page.drawText(line.text,{
+    x:box.x+line.x,y:box.y+box.height-line.y,
+    size:line.size,font:fonts.body,color:DARK_GREY,
+  });
 }
 
 function drawActivityPlaceholder(page: PDFPage, rect: PdfRect, size: Region['size'], fonts: Fonts): void {
@@ -341,7 +260,7 @@ export async function createBookletPdf(draft: PdfDraft, fontFiles: PdfFontFiles,
               const fit=planActivityBorderFit(item.size,item.rect);
               page.pushOperators(pushGraphicsState(),
                 concatTransformationMatrix(fit.scale,0,0,fit.scale,fit.translateX,fit.translateY));
-              try { drawModulePdf(page,item.rect,assigned,fonts); }
+              try { drawModulePdf(page,item.rect,assigned,fonts,true); }
               finally { page.pushOperators(popGraphicsState()); }
             }else drawModulePdf(page, item.rect, assigned, fonts);
           } catch (error) {

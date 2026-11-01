@@ -49,7 +49,7 @@ function fittedSize(font: PDFFont, words: readonly string[], maxWidth: number, p
   throw new Error('A word or answer is too long for this module. Shorten it and try again.');
 }
 
-function drawPicture(page: PDFPage, rect: Rect, font: PDFFont, prompt: string): void {
+function drawPicture(page: PDFPage, rect: Rect, font: PDFFont, prompt: string, bordered=false): void {
   const inner=interior(rect);
   const plan=planDrawPicture(prompt,(text,size)=>measure(font,text,size),inner.width,inner.height);
   if(!plan)throw Error('Drawing prompt does not fit while preserving the drawing space.');
@@ -57,7 +57,7 @@ function drawPicture(page: PDFPage, rect: Rect, font: PDFFont, prompt: string): 
     x:inner.x+plan.drawing.x,
     y:inner.y+inner.height-plan.drawing.y-plan.drawing.height,
     width:plan.drawing.width,height:plan.drawing.height,
-    borderColor:GREY,borderWidth:1,color:WHITE,
+    borderColor:bordered?undefined:GREY,borderWidth:bordered?0:1,color:WHITE,
   });
   for(const line of plan.lines)
     page.drawText(line.text,{
@@ -124,16 +124,16 @@ function drawStory(page: PDFPage, rect: Rect, fonts: ModuleFonts, module: Extrac
 }
 
 /** Single dispatch point for all module PDF renderers. */
-export function drawModulePdf(page: PDFPage, rect: Rect, module: ActivityModule, fonts: ModuleFonts): void {
+export function drawModulePdf(page: PDFPage, rect: Rect, module: ActivityModule, fonts: ModuleFonts, bordered=false): void {
   const errors = validateModule(module);
   if (errors.length) throw new Error(errors.join(' '));
   if (isSmallModule(module)) return drawSmallModulePdf(page, rect, module, fonts);
   if (isStoryVerseModule(module)) return drawStoryVersePdf(page, rect, module, fonts);
-  if (isPuzzleModule(module)) return drawPuzzlePdf(page, rect, module, fonts);
+  if (isPuzzleModule(module)) return drawPuzzlePdf(page, rect, module, fonts, bordered);
   if (isCryptogram(module)) return drawCryptogramPdf(page, rect, module, fonts);
   if (isSpecialtyModule(module)) return drawSpecialtyPdf(page,rect,module,fonts);
   switch (module.type) {
-    case 'draw-picture': return drawPicture(page, rect, fonts.title, module.prompt);
+    case 'draw-picture': return drawPicture(page, rect, fonts.title, module.prompt, bordered);
     case 'match-words': return drawMatching(page, rect, fonts, module);
     case 'finish-story': return drawStory(page, rect, fonts, module);
   }

@@ -4,8 +4,8 @@ import {generateWordSearch,wordSearchCells,type WordSearch} from './puzzleEngine
 import {planWordSearch,WORD_SEARCH_WIDTH,WORD_SEARCH_HEIGHT,type WordSearchPlan} from './wordSearchLayout.ts';
 
 /** Exact printable Word Search scene, with editor-only solution highlights. */
-export default function WordSearchPrintPreview({module,showSolution=false}:{
- module:WordSearch;showSolution?:boolean;
+export default function WordSearchPrintPreview({module,showSolution=false,bordered=false}:{
+ module:WordSearch;showSolution?:boolean;bordered?:boolean;
 }){
  const puzzle=useMemo(()=>generateWordSearch(module),[module.words,module.seed]);
  const selected=useMemo(()=>showSolution?wordSearchCells(puzzle):new Set<string>(),
@@ -24,8 +24,8 @@ export default function WordSearchPrintPreview({module,showSolution=false}:{
   <svg className="medium-print-svg" viewBox={'0 0 '+WORD_SEARCH_WIDTH+' '+WORD_SEARCH_HEIGHT}
    preserveAspectRatio="xMidYMid meet" role="img"
    aria-label="Word Search grid and word bank with print-matched geometry">
-   <rect x={plan.gridX-2} y={plan.gridTop-2} width={plan.gridWidth+4}
-    height={plan.gridHeight+4} fill="none" stroke="#929292" strokeWidth=".5"/>
+   {!bordered&&<rect x={plan.gridX-2} y={plan.gridTop-2} width={plan.gridWidth+4}
+    height={plan.gridHeight+4} fill="none" stroke="#929292" strokeWidth=".5"/>}
    {plan.letters.map(letter=><g key={letter.col+','+letter.row}>
     {selected.has(letter.col+','+letter.row)&&<rect
      x={plan.gridX+letter.col*plan.cell+.4}
