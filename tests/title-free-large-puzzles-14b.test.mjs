@@ -92,13 +92,15 @@ test('Title-free Word Search uses more space at 4, 8 and 12 entries and never cl
   }
  }
 });
-test('Title-free Crossword starts near the top and protects grid, clue columns and bottom',async()=>{
+test('Title-free Crossword centers grid and clue groups while protecting readability',async()=>{
  const m=await measurements();
  for(const seed of [2,4,8,16]){
   const puzzle=generateCrossword({type:'crossword',entries,seed});
   const a=planCrossword(puzzle,m.crossPdf),b=planCrossword(puzzle,m.crossBrowser);
   assert.ok(a&&b,'Crossword failed seed '+seed);
-  assert.equal(a.gridTop,8);
+  assert.ok(a.gridTop>=0);
+  assert.ok(Math.abs(a.contentTop-(CROSSWORD_HEIGHT-a.contentBottom))<.03);
+  assert.ok(Math.abs(a.gridTop-b.gridTop)<.03);
   assert.ok(a.cell>9);
   assert.ok(Math.abs(a.cell-b.cell)<.001);
   assert.equal(a.clueFontSize,b.clueFontSize);

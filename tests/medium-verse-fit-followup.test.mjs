@@ -72,7 +72,7 @@ test('Unscramble combines its reference into the title and brings scrambled lett
   verse:'[Pray] without [ceasing!] and [rejoice] with [others].'};
  const p=planUnscrambleVerse(data,m);
  assert.ok(p);
- assert.equal(p.title,'UNSCRAMBLE 1 THESS. 5:16');
+ assert.equal(p.title,'UNSCRAMBLE 1 THESSALONIANS 5:16');
  assert.equal(p.reference,undefined);
  assert.equal(p.referenceY,undefined);
  assert.equal(p.glyphOffset,11.5);

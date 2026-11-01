@@ -9,6 +9,8 @@ export const CROSSWORD_HEIGHT=360;
 export type CrosswordClueRow={text:string;x:number;y:number};
 export type CrosswordPlan={
   cell:number;gridX:number;gridTop:number;gridWidth:number;gridHeight:number;
+  /** The occupied grid-and-clues block has equal whitespace above and below. */
+  contentTop:number;contentBottom:number;
   clueFontSize:number;acrossHeader:{x:number;y:number};downHeader:{x:number;y:number};
   acrossRows:CrosswordClueRow[];downRows:CrosswordClueRow[];
 };
@@ -43,7 +45,7 @@ export function planCrossword(puzzle:CrosswordResult,measure:(text:string,size:n
   width=CROSSWORD_WIDTH,height=CROSSWORD_HEIGHT):CrosswordPlan|null{
   const colWidth=width/2-12;
   const groups=[puzzle.across,puzzle.down];
-  const gridTop=8; // Former 40pt title reserve is reclaimed by the grid and clues.
+  const gridTop=8; // Working origin; the completed composition is centered below.
   const maxCell=Math.min(27,(width-12)/puzzle.width);
   for(let cell=maxCell;cell>=9;cell-=.5){
     const gridHeight=puzzle.height*cell;
@@ -65,13 +67,24 @@ export function planCrossword(puzzle:CrosswordResult,measure:(text:string,size:n
           cursor+=4;
         }
       }
+      // Include grid ink, headings and the lowest actual clue baseline.
+      // Use a conservative descender reserve without changing font/box sizes.
+      // The space formerly left below a short puzzle is divided equally above
+      // and below the entire block, not applied to the grid alone.
+      const bottom=Math.max(gridTop+gridHeight,clueStart+17,
+        ...rowGroups.flat().map(row=>row.y+size*.3));
+      const offset=(height-(bottom-gridTop))/2-gridTop;
+      if(offset<-1e-6)continue;
+      const centeredTop=gridTop+offset;
       return {
-        cell,gridX:(width-puzzle.width*cell)/2,gridTop,
+        cell,gridX:(width-puzzle.width*cell)/2,gridTop:centeredTop,
+        contentTop:centeredTop,contentBottom:bottom+offset,
         gridWidth:puzzle.width*cell,gridHeight,
         clueFontSize:size,
-        acrossHeader:{x:0,y:clueStart+14},
-        downHeader:{x:width/2+3,y:clueStart+14},
-        acrossRows:rowGroups[0],downRows:rowGroups[1],
+        acrossHeader:{x:0,y:clueStart+14+offset},
+        downHeader:{x:width/2+3,y:clueStart+14+offset},
+        acrossRows:rowGroups[0].map(row=>({...row,y:row.y+offset})),
+        downRows:rowGroups[1].map(row=>({...row,y:row.y+offset})),
       };
     }
   }
