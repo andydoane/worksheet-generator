@@ -168,7 +168,7 @@ function planReconstruction(chunks:Chunk[],metrics:Metrics,mode:'unscramble'|'up
 export function planUnscrambleVerse(m:UnscrambleVerse,metrics:Metrics,
  width=MEDIUM_PRINT_WIDTH,height=MEDIUM_PRINT_HEIGHT):ReconstructionPlan|null{
  return planReconstruction(chunksFromSegments(segmentsForUnscramble(m)),metrics,'unscramble',
- 'UNSCRAMBLE '+shortenBibleReference(m.reference).toUpperCase(),undefined,width,height);
+ 'UNSCRAMBLE '+m.reference.trim().toUpperCase(),undefined,width,height);
 }
 export function planUpsideDownVerse(m:UpsideDownVerseModule,metrics:Metrics,
  width=MEDIUM_PRINT_WIDTH,height=MEDIUM_PRINT_HEIGHT):ReconstructionPlan|null{
