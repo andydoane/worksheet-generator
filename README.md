@@ -1,5 +1,13 @@
 # Worksheet Studio
 
+## PR 16k — Workspace navigation, reset, and visible validation (v0.16.11)
+
+- The **front-cover title area** is now a keyboard-accessible button in both single-page and print-sheet previews. Click it to open Lesson details on page 1 and focus the worksheet title input; activity-region selection stays unchanged.
+- The top bar now holds the original Mouse Memoirs display-heading design with the new copy **Design your Bible Worksheet.** plus a discreet version/build label. The separate tall introductory banner is removed, reclaiming vertical space for the editor and preview; narrow screens wrap the toolbar actions.
+- A **Start Fresh** button next to Download PDF asks for native browser confirmation before clearing the entire browser-saved worksheet (lesson details, layouts, borders and activities). Cancel preserves all content. After approval, it resets view, selected region, mode, guidance, export error and focuses the blank title field. Automatic saving uses the same v1 storage key.
+- The peach **activity validation** box appears immediately under the selected module's instructions and above input fields, keeping the same messages and visual treatment. The PDF export error remains a separate alert above the panels.
+- Regression tests cover navigation in both preview modes, confirmation ordering, reset state, saved-draft independence, responsive header typography, and validation placement.
+
 ## PR 16j follow-up — Gray samples and mixed-size square symbols (v0.16.10)
 
 - **New manual activity inputs are empty by default.** Keep the PR16j example sentences and word lists, but show them as native gray text-field placeholders instead of saving them as actual activity content. Each field begins blank; typing replaces the example immediately, and clearing re-displays it. Preview, validation, export and saved drafts use only the teacher's entered values.
