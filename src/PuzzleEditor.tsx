@@ -1,7 +1,7 @@
 import {generateMaze, generateWordSearch, parseSearchWords, type PuzzleModule} from './puzzleEngines.ts';
 import {samplePlaceholder} from './moduleGuidance.ts';
 import {PIXEL_SHAPES} from './pixelPictureShapes.ts';
-import {generatePixelPicture,pixelMissingTarget,validatePixelPicture} from './pixelPicture.ts';
+import {generatePixelPicture,validatePixelPicture} from './pixelPicture.ts';
 
 export default function PuzzleEditor({module,onChange,showSolution}:{module:PuzzleModule;onChange:(patch:Partial<PuzzleModule>)=>void;showSolution:boolean}) {
   if(module.type==='pixel-picture'){
@@ -13,15 +13,15 @@ export default function PuzzleEditor({module,onChange,showSolution}:{module:Puzz
         placeholder={samplePlaceholder('pixel-picture','phrase')}
         onChange={e=>onChange({phrase:e.target.value})}/>
       <p className="word-search-count" role="status" aria-live="polite">
-        {module.phrase.trim().length} of 30–85 characters · Target {pixelMissingTarget(module.phrase.trim().length)} different missing letters
+        {module.phrase.trim().length} of 30–85 characters · One repeated letter will be hidden everywhere it occurs
       </p>
       <label htmlFor="pixel-shape">Hidden pixel picture</label>
       <select id="pixel-shape" value={module.shapeId} onChange={e=>onChange({shapeId:e.target.value})}>
         {PIXEL_SHAPES.map(shape=><option key={shape.id} value={shape.id}>{shape.name}</option>)}
       </select>
-      <p>The generator removes one occurrence of each of 4–8 distinct letters, spaced across the phrase. Children fill them in and then color those letters in the 13×13 grid.</p>
+      <p>The generator chooses one letter that repeats in the phrase, preferring an uncommon letter when possible. Every instance of that letter becomes a writing blank. Children fill in that letter, then color squares containing it in the 13×13 grid.</p>
       {showSolution&&key&&<p className="puzzle-solution-data">
-        Teacher key (not printed): {key.missingLetters.join(', ')} · {PIXEL_SHAPES.find(shape=>shape.id===module.shapeId)?.name}
+        Teacher key (not printed): {key.missingLetters[0]} · {PIXEL_SHAPES.find(shape=>shape.id===module.shapeId)?.name}
       </p>}
     </div>;
   }

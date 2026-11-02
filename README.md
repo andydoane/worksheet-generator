@@ -1,5 +1,14 @@
 # Worksheet Studio
 
+## PR 16m — Pixel Picture readability and one-letter reveal (v0.16.13)
+
+- **One letter only:** A 30–85 character phrase is scanned for letters that appear at least twice. The generator prefers uncommon English letters (rather than always E/T), and Regenerate cycles among up to four rare repeated letters. All occurrences of the chosen letter become blanks; the rest remain visible. Existing stored phrases, shape IDs and seeds remain compatible.
+- **Simpler 13×13 reveal:** Every mask `1` square contains only that one missing letter; every mask `0` square contains a different random letter. Children color only one kind of letter to uncover the picture, not a bank of 4–8 letters.
+- **Readability and handwriting:** The complete phrase is rendered in **uppercase Zilla Slab Bold**. Each missing-letter position is drawn as a real **17.5-point underline**, measured independently of phrase font size; long text can shrink without shrinking the writing space. The same physical positions and font metrics are used in the browser and PDF.
+- **Layout:** Remove the printable "Pixel Picture" title. Print only "Fill in the missing letter. Color in the squares containing that letter." above the phrase; center the instructions and phrase together vertically within the left Medium half, while the grid stays on the right.
+- **Pale grid:** Grid letters are printed at **35% opacity** with full-strength grid lines so children can see letters without making the squares appear filled. The teacher's Show Solution tint still works in the preview, never in the PDF.
+- **QA:** Updated one-letter generator, shape, typography, layout, parity and export tests. `sample:pr16m` produces new Star and long-phrase Butterfly print-review PDFs.
+
 ## PR 16l — Pixel Picture (Medium) (v0.16.12)
 
 - **Pixel Picture** is a Medium activity with a measured, print-matched left text panel and right 13×13 grid. A child fills 4–8 missing letters in a Bible fact or big idea, then colors all squares containing those letters to reveal a shape.

@@ -627,7 +627,7 @@ export default function App() {
                   )}
                   {activeModule && 'seed' in activeModule && (
                     <button type="button" className="regenerate-module" onClick={regenerateModule}>
-                      {isCryptogramId(activeModule.type) ? 'Regenerate symbol key' : activeModule.type === 'pixel-picture' ? 'Regenerate missing letters and picture' : activeModule.type === 'crossword' ? 'Regenerate crossword' : isPuzzleId(activeModule.type) ? 'Regenerate puzzle' : 'Shuffle ' + (activeModule.type === 'match-words' ? 'matching answers'
+                      {isCryptogramId(activeModule.type) ? 'Regenerate symbol key' : activeModule.type === 'pixel-picture' ? 'Regenerate missing letter and picture' : activeModule.type === 'crossword' ? 'Regenerate crossword' : isPuzzleId(activeModule.type) ? 'Regenerate puzzle' : 'Shuffle ' + (activeModule.type === 'match-words' ? 'matching answers'
                         : activeModule.type === 'finish-story' ? 'word bank'
                         : activeModule.type === 'multiple-choice' ? 'answer choices'
                         : activeModule.type === 'unscramble-words' || activeModule.type === 'unscramble-verse' ? 'letters'
