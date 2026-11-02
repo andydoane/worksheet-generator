@@ -42,9 +42,9 @@ async function artwork(){
  for(const [i,key]of slots.entries())result[key]=await png([1,6,11,3,8,10][i]);
  return result;
 }
-test('All nine registered Medium activities remain border-ready alongside Large modules',()=>{
+test('All ten registered Medium activities remain border-ready alongside Large modules',()=>{
  const medium=moduleForSize('medium'),small=moduleForSize('small'),large=moduleForSize('large');
- assert.equal(medium.length,9);
+ assert.equal(medium.length,10);
  assert.deepEqual(new Set(EXAMPLES.map(e=>e.type)),new Set(medium.map(e=>e.id)));
  assert.equal(ACTIVITY_BORDER_CATALOG.medium.length,11);
  for(const example of EXAMPLES){
