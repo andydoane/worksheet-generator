@@ -21,12 +21,12 @@ test('All manual examples are placeholders, never saved input or ready-to-print 
   }
   examples++;
   assert.equal(isAutofilledModule(id),false);
-  const values=sample as Record<string,unknown>;
+  const values=sample;
   for(const [field,value] of Object.entries(values)){
    if(field==='type'||typeof value!=='string')continue;
    assert.ok(value.length>0,'empty sample field: '+id+' '+field);
    assert.equal(samplePlaceholder(id,field),value,'sample copy changed: '+id+' '+field);
-   assert.equal((blank as unknown as Record<string,unknown>)[field],'',
+   assert.equal(blank[field],'',
     'sample should not fill real field: '+id+' '+field);
   }
   assert.ok(validateModule(blank).length>0,'blank input must not count as complete: '+id);
