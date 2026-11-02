@@ -89,7 +89,7 @@ test('Grouped statement editor handles additions, deletions, and character feedb
  assert.match(editor,/id="sv-false-statements"/u);
  assert.doesNotMatch(editor,/id="sv-statements"/u);
 });
-test('Sort border, dividers, symbol boxes and answer boxes share one physical stroke',async()=>{
+test('Sort bank border, dividers and TRUE/FALSE boxes retain their shared stroke with borderless symbols',async()=>{
  const {pdf,browser}=await metrics();
  for(const module of [legacy,dense]){
   for(const seed of [1,8,12]){

@@ -1,5 +1,16 @@
 # Worksheet Studio
 
+## PR 16j — Editor guidance, sample activities and final polish (v0.16.9)
+
+- **Sort the Story:** The symbol-wrapper rectangle is removed from preview and exported PDF; each uploaded square image now occupies a larger 21 × 21pt print area. All statement outlines, dividers and TRUE/FALSE writing boxes remain unchanged.
+- **New manual activities:** Selecting an activity for the first time fills it with a valid, editable example plus a one-sentence instruction explaining the required format. Story Order demonstrates five chronological events about the Red Sea. Existing saved modules are not overwritten on load or when navigating sections.
+- **Theme-verse and key-idea activities:** All nine theme-driven activities continue to populate from Lesson details exactly as before; this PR adds instructional text only, no replacement examples.
+- **Validation:** Keep the same core shared PDF validator but improve editor error hints with entered counts and a relevant line/pair number for common formatting problems. A clear error summary shows how many corrections remain.
+- **Selection:** The activity section picker now identifies occupied slots by module name; the editor displays compatible module count, size, print dimensions and accessible guidance.
+- **Migration safety:** The existing v1 localStorage key and draft shape remain. Migration normalization is now a pure tested function for PR1-era drafts, partial/invalid data, layouts, borders and all saved module content.
+- **Deferred:** Apply-to-all is intentionally not part of 16j; keep it for a separate bulk-actions PR.
+- **Review:** `npm run test && npm run build && npm run sample:pr16j` produces plain/bordered QA booklet PDFs from the new starter examples.
+
 ## PR 16i — Large activity interaction improvements (v0.16.8)
 
 - **Sort the Story:** Use one of 30 uploaded square symbol PNGs instead of letter labels, chosen uniquely and deterministically per worksheet. Children copy each row's symbol into the TRUE or FALSE answer area. Print/PDF and preview share the same symbols and physical row geometry. The original saved statement/truth/seed format is untouched.

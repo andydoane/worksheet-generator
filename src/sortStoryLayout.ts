@@ -44,8 +44,10 @@ export function planSortStory(module:SortStory,metrics:Metrics,
  const bankHeight=bankBottom-bankTop;
  if(bankHeight<=0)return null;
  const rowHeight=bankHeight/items.length;
- const letterWidth=19,letterHeight=18;
- if(rowHeight<letterHeight+5)return null;
+ const letterWidth=21,letterHeight=21;
+ // Square artwork must stay within its row; it no longer needs the
+ // surrounding five-point clearance required by the former stroked box.
+ if(rowHeight<letterHeight+1)return null;
  const bank:Rectangle={x:0,y:bankTop,width,height:bankHeight};
  const rows:SortStoryRow[]=[];
  const symbolIds=sortStorySymbolIds(module);

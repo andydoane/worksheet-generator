@@ -1,5 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import pkg from '../package.json';
+import {MODULE_GUIDANCE,newModuleWithExample,isAutofilledModule} from './moduleGuidance.ts';
+import {migrateDraftValue} from './draftMigration.ts';
+import {explainActivityError} from './editorFeedback.ts';
 import {COVER_BORDERS,coverBorderUrl,isCoverBorderId,type CoverBorderId} from './coverBorders.ts';
 import {
  ACTIVITY_SAFE_AREAS,activityBorderUrl,isActivityBorderReady,planLargeBorderFit,
@@ -22,7 +25,7 @@ import CryptogramEditor from './CryptogramEditor';
 import {isSpecialtyModule} from './specialtyModules.ts';
 import SpecialtyEditor from './SpecialtyEditor';
 import {
-  blankModule, moduleForSize, readAssignments, slotKey, validateModule,
+  MODULES, blankModule, moduleForSize, readAssignments, slotKey, validateModule,
   type ActivityModule, type ModuleAssignments, type ModuleId,
 } from './modules';
 import {
@@ -71,32 +74,8 @@ function readDraft(): Draft {
     const stored = window.localStorage.getItem(KEY);
     if (!stored) return blank;
 
-    const data: unknown = JSON.parse(stored);
-    if (!data || typeof data !== 'object') return blank;
-    const value = data as Partial<Draft>;
-    const storedLayouts = value.layouts && typeof value.layouts === 'object'
-      ? value.layouts as Record<number, unknown>
-      : {};
-
-    const text = (key: 'title' | 'scripture' | 'bigIdea' | 'verseReference' | 'verseText') =>
-      typeof value[key] === 'string' ? value[key] : '';
-
-    // PR 1 drafts have no layouts field. Load their text without losing it.
-    return {
-      title: text('title'),
-      scripture: text('scripture'),
-      coverBorder: isCoverBorderId(value.coverBorder) ? value.coverBorder : 'none',
-      bigIdea: text('bigIdea'),
-      verseReference: text('verseReference'),
-      verseText: text('verseText'),
-      layouts: {
-        2: isLayoutId(storedLayouts[2]) ? storedLayouts[2] : DEFAULT_LAYOUTS[2],
-        3: isLayoutId(storedLayouts[3]) ? storedLayouts[3] : DEFAULT_LAYOUTS[3],
-        4: isLayoutId(storedLayouts[4]) ? storedLayouts[4] : DEFAULT_LAYOUTS[4],
-      },
-      modules: readAssignments(value.modules),
-      activityBorders: readActivityBorders(value.activityBorders),
-    };
+    // Old drafts contain no layout/border selections. Keep their text intact.
+    return migrateDraftValue(JSON.parse(stored));
   } catch {
     // Storage can be unavailable, and old user content could be malformed.
     return blank;
@@ -289,7 +268,7 @@ export default function App() {
         modules[activeKey] = {type,reference:previous.verseReference,verse:previous.verseText};
       } else if (type === 'connect-verse') {
         modules[activeKey] = {type,verse:previous.verseText,seed:1};
-      } else if (type) modules[activeKey] = blankModule(type);
+      } else if (type) modules[activeKey] = newModuleWithExample(type);
       else delete modules[activeKey];
       const activityBorders=isActivityBorderReady(type||undefined)
         ?previous.activityBorders
@@ -524,14 +503,17 @@ export default function App() {
                       className={page === item.number ? 'active' : ''} aria-pressed={page === item.number}>Page {item.number}</button>)}
                   </div>
                   <label htmlFor="activity-region">Activity section</label>
-                  <select id="activity-region" value={activeRegion?.id ?? ''}
+                  <select id="activity-region" aria-describedby="activity-region-help" value={activeRegion?.id ?? ''}
                     onChange={(e) => setSelectedRegionId(e.target.value)}>
-                    {available.map((region) =>
-                      <option key={region.id} value={region.id}>{region.size.toUpperCase()} · {region.id.replaceAll('-', ' ')}</option>)}
+                    {available.map((region) => {
+                      const selected=draft.modules[slotKey(page,region.id)];
+                      const name=selected?MODULES.find(item=>item.id===selected.type)?.name??'Saved activity':'Empty';
+                      return <option key={region.id} value={region.id}>{region.size.toUpperCase()} · {region.id.replaceAll('-', ' ')} — {name}</option>;
+                    })}
                   </select>
-                  <p className="activity-section-info">Page {page} · {activeRegion?.width.toFixed(1)} × {activeRegion?.height.toFixed(1)} inches</p>
+                  <p id="activity-region-help" className="activity-section-info">Page {page} · {activeRegion?.size} activity · {activeRegion?.width.toFixed(1)} × {activeRegion?.height.toFixed(1)} inches · {activeRegion?moduleForSize(activeRegion.size).length:0} compatible module choices</p>
                   <label htmlFor="activity-type">Module</label>
-                  <select id="activity-type" value={activeModule?.type ?? ''}
+                  <select id="activity-type" aria-describedby="activity-module-help" value={activeModule?.type ?? ''}
                     onChange={(e) => setModuleType(e.target.value as ModuleId | '')}>
                     <option value="">No activity (placeholder)</option>
                     {activeRegion?.size==='medium'&&activeModule?.type==='connect-verse'&&
@@ -539,6 +521,13 @@ export default function App() {
                     {activeRegion && moduleForSize(activeRegion.size).map((definition) =>
                       <option key={definition.id} value={definition.id}>{definition.name}</option>)}
                   </select>
+                  {activeModule && <div id="activity-module-help" className="activity-guidance" role="note">
+                    <strong>{MODULES.find(item=>item.id===activeModule.type)?.name}</strong>
+                    <p>{MODULE_GUIDANCE[activeModule.type].instruction}</p>
+                    <small>{isAutofilledModule(activeModule.type)
+                      ?'Starts with lesson content. Editing here changes only this activity, not Lesson details.'
+                      :'A complete, editable example is included when you first select this activity. Replace it with your lesson content.'}</small>
+                  </div>}
                   {activeRegion&&<ActivityBorderPicker key={activeKey}
                     slotKey={activeKey} size={activeRegion.size}
                     value={draft.activityBorders[activeKey]??'none'}
@@ -612,8 +601,9 @@ export default function App() {
                     </button>
                   )}
                   {validation.length > 0 && (
-                    <div className="activity-validation" role="status">
-                      {validation.map((error) => <p key={error}>{error}</p>)}
+                    <div className="activity-validation" role="status" aria-live="polite">
+                      <strong>Fix {validation.length} {validation.length===1?'item':'items'} before exporting this activity:</strong>
+                      {validation.map((error) => <p key={error}>{explainActivityError(activeModule!,error)}</p>)}
                     </div>
                   )}
                   {activeModule && validation.length === 0 && <p className="activity-ready">✓ Ready to export in the booklet PDF</p>}

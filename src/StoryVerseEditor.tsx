@@ -94,7 +94,7 @@ function SortStoryEditor({module,onChange}:{
   <textarea id="sv-false-statements" rows={5} value={fields.falseStatements}
    onChange={e=>update(false,e.target.value)}
    placeholder={'Daniel stopped praying.\nLions were afraid of the king.'}/>
-  <p>Enter one sentence per line, 4–8 total, with at least one in each field. The worksheet mixes them up and children sort the letters into TRUE and FALSE.</p>
+  <p>Enter one sentence per line, 4–8 total, with at least one in each field. The worksheet mixes them up and children copy the symbols into TRUE and FALSE.</p>
  </div>;
 }
 
