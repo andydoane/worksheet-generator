@@ -1,4 +1,5 @@
 import {generateMaze, generateWordSearch, parseSearchWords, type PuzzleModule} from './puzzleEngines.ts';
+import {samplePlaceholder} from './moduleGuidance.ts';
 
 export default function PuzzleEditor({module,onChange,showSolution}:{module:PuzzleModule;onChange:(patch:Partial<PuzzleModule>)=>void;showSolution:boolean}) {
   if(module.type==='word-search'||module.type==='medium-word-search') {
@@ -14,7 +15,7 @@ export default function PuzzleEditor({module,onChange,showSolution}:{module:Puzz
     return <div className="activity-inputs">
       <label htmlFor="search-words">Words or phrases ({medium?'1–6':'4–12'})</label>
       <textarea id="search-words" rows={medium?7:12} value={module.words} spellCheck={false}
-        placeholder={'Red Sea\nDry Land\nMoses\nPharaoh\nEgypt\nExodus'}
+        placeholder={samplePlaceholder(module.type,'words')}
         onChange={e=>onChange({words:e.target.value})}/>
       <p className="word-search-count" role="status" aria-live="polite">
         {count} of {max} words{count>max?' — over the limit':''}
@@ -32,7 +33,7 @@ export default function PuzzleEditor({module,onChange,showSolution}:{module:Puzz
     <label htmlFor="maze-statement">True-or-false statement (up to 65 characters)</label>
     <textarea id="maze-statement" rows={4} maxLength={65} value={module.statement}
       onChange={e=>onChange({statement:e.target.value})}
-      placeholder="God protected Daniel in the lions' den."/>
+      placeholder={samplePlaceholder('true-false-maze','statement')}/>
     <label htmlFor="maze-answer">Correct answer</label>
     <select id="maze-answer" value={module.answer?'true':'false'}
       onChange={e=>onChange({answer:e.target.value==='true'})}>
