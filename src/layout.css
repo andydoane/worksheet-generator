@@ -546,3 +546,11 @@
 .bordered-large-scene .word-search-print-svg {
  width:100%;height:100%;
 }
+
+/* PR16j: concise, accessible guidance immediately above activity inputs. */
+.activity-guidance { margin: 12px 0 14px; padding: 10px 12px; border-left: 3px solid #7daf99; background: #f5f9f4; border-radius: 0 7px 7px 0; }
+.activity-guidance strong { display:block; color:#315f4d; font-size:13px; margin-bottom:3px; }
+.activity-guidance p { color:#385c4b; font-size:12px; line-height:1.55; margin:0; }
+.activity-guidance small { display:block; margin-top:5px; color:#728579; font-size:11px; line-height:1.4; }
+.activity-validation strong { display:block; color:#875a29; font-size:12px; margin-bottom:6px; }
+.activity-editor select:focus-visible { outline:3px solid #8bc3a7; outline-offset:2px; }
