@@ -75,6 +75,8 @@ test('Coloring exactly the missing-letter set reveals the requested silhouette',
   for(let y=0;y<13;y++)for(let x=0;x<13;x++)
    assert.equal(key.has(puzzle.grid[y][x]),shape.rows[y][x]==='1',
     shape.id+' cell '+x+','+y);
+  for(const letter of key)assert.ok(puzzle.grid.flat().filter(ch=>ch===letter).length>=2,
+   'every missing letter should appear at least twice in '+shape.id);
   assert.deepEqual(generatePixelPicture(m),puzzle,'fixed seed must produce identical puzzle');
  }
  const later=generatePixelPicture({...medium,seed:medium.seed+1});
