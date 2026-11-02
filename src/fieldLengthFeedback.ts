@@ -39,6 +39,7 @@ export function fieldExceedsLength(module:ActivityModule,id:string,value:string)
   case 'search-words':return lines(value).some(s=>
     s.replace(/\s/gu,'').length>12);
   case 'maze-statement':return value.length>65;
+  case 'pixel-phrase':return value.trim().length>85;
   case 'crypto-ref':return value.length>42;
   case 'crypto-content':return value.trim().length>
     (module.type==='verse-cryptogram'?145:62);

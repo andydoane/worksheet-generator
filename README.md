@@ -1,5 +1,14 @@
 # Worksheet Studio
 
+## PR 16l — Pixel Picture (Medium) (v0.16.12)
+
+- **Pixel Picture** is a Medium activity with a measured, print-matched left text panel and right 13×13 grid. A child fills 4–8 missing letters in a Bible fact or big idea, then colors all squares containing those letters to reveal a shape.
+- **Phrase rules:** 30–85 characters; 4–8 distinct letters selected according to phrase length; each chosen letter is removed from exactly one position, spread across the phrase. The same letter may remain elsewhere in the phrase. One- and two-letter words are not blanked.
+- **All 19 supplied silhouettes** are stored as unchanged 13×13 binary masks. Pixels marked 1 use the missing-letter key; pixels marked 0 contain only other capital letters. The same phrase, shape and seed always produce the same printable puzzle.
+- **Teacher controls:** edit a phrase, choose a shape, regenerate seeded letter choices/grid, toggle teacher-only answer highlighting. Improved gray placeholder examples never count as actual activity content.
+- **Physical fit guarantee:** one pure print-point layout computes both browser SVG and PDF geometry with PDF-identical font metrics. Instructions and phrase wrap exclusively inside the left 2.3-inch panel, and each right-hand cell is a measured square. Unfittable text stops PDF export rather than clipping.
+- **Regression and print review:** 19-mask integrity; 4–8 unique, single-occurrence blanks; seed reproducibility; masked-cell/letter-set parity; left text/pixel right bounds; legacy drafts; two-sheet PDF export; two printable samples in CI: `sample-pr16l-pixel-picture-star.pdf` and `sample-pr16l-pixel-picture-butterfly.pdf`.
+
 ## PR 16k — Workspace navigation, reset, and visible validation (v0.16.11)
 
 - The **front-cover title area** is now a keyboard-accessible button in both single-page and print-sheet previews. Click it to open Lesson details on page 1 and focus the worksheet title input; activity-region selection stays unchanged.

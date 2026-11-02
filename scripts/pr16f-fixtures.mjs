@@ -3,7 +3,7 @@ import {EXAMPLES as MEDIUM_EXAMPLES} from './pr16d-fixtures.mjs';
 
 /** One complete mixed-mode booklet per border style. Every style is exercised
  * on a Small, Medium, and Large module, while its neighboring activity can be
- * unbordered. The changing fixtures cover all 26 registered types over 11
+ * unbordered. The changing fixtures cover all 27 registered types over 11
  * booklets without introducing any new puzzle algorithms. */
 export const SMALL_EXAMPLES=[
  {type:'draw-picture',prompt:'David holding five smooth stones before facing Goliath'},

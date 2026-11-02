@@ -33,7 +33,7 @@ test('All manual examples are placeholders, never saved input or ready-to-print 
   assert.deepEqual(validateModule(newModuleWithExample(id)),[],
    'placeholder content should be a genuinely useful example: '+id);
  }
- assert.equal(examples,17);
+ assert.equal(examples,18);
 });
 test('Story Order displays five chronological Red Sea events without saving or printing them',()=>{
  const sample=samplePlaceholder('story-order','events');
