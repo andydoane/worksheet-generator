@@ -505,8 +505,11 @@ export default function App() {
                   <label htmlFor="activity-region">Activity section</label>
                   <select id="activity-region" aria-describedby="activity-region-help" value={activeRegion?.id ?? ''}
                     onChange={(e) => setSelectedRegionId(e.target.value)}>
-                    {available.map((region) =>
-                      <option key={region.id} value={region.id}>{region.size.toUpperCase()} · {region.id.replaceAll('-', ' ')}</option>)}
+                    {available.map((region) => {
+                      const selected=draft.modules[slotKey(page,region.id)];
+                      const name=selected?MODULES.find(item=>item.id===selected.type)?.name??'Saved activity':'Empty';
+                      return <option key={region.id} value={region.id}>{region.size.toUpperCase()} · {region.id.replaceAll('-', ' ')} — {name}</option>;
+                    })}
                   </select>
                   <p id="activity-region-help" className="activity-section-info">Page {page} · {activeRegion?.size} activity · {activeRegion?.width.toFixed(1)} × {activeRegion?.height.toFixed(1)} inches · {activeRegion?moduleForSize(activeRegion.size).length:0} compatible module choices</p>
                   <label htmlFor="activity-type">Module</label>
