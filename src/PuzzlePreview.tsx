@@ -2,6 +2,7 @@ import {useEffect,useState} from 'react';
 import {mediumWidths} from './MediumPrintPreview.tsx';
 import WordSearchPrintPreview from './WordSearchPrintPreview.tsx';
 import MediumWordSearchPrintPreview from './MediumWordSearchPrintPreview.tsx';
+import PixelPicturePrintPreview from './PixelPicturePrintPreview.tsx';
 import {MEDIUM_PRINT_WIDTH,MEDIUM_PRINT_HEIGHT} from './mediumParityLayout.ts';
 import {planMazePrint,MAZE_ARROW_PATH,MAZE_ARROW_VIEW_SIZE,type MazePrintPlan} from './mazePrintLayout.ts';
 import {
@@ -71,5 +72,6 @@ function MazePrintPreview({module,showSolution}:{
 export default function PuzzlePreview({module,showSolution=false,bordered=false}:{module:PuzzleModule;showSolution?:boolean;bordered?:boolean}) {
   if(module.type==='word-search')return <WordSearchPrintPreview module={module} showSolution={showSolution} bordered={bordered}/>;
   if(module.type==='medium-word-search')return <MediumWordSearchPrintPreview module={module} showSolution={showSolution} bordered={bordered}/>;
+  if(module.type==='pixel-picture')return <PixelPicturePrintPreview module={module} showSolution={showSolution}/>;
   return <MazePrintPreview module={module} showSolution={showSolution}/>;
 }
