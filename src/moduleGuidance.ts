@@ -37,6 +37,8 @@ export const MODULE_GUIDANCE:Record<ModuleId,Guidance>={
   sample:{type:'circle-mistakes',text:'Moses led the Israelites out of Babylon. They crossed the Red Sea in wooden boats. God sent a pillar of cloud to guide them.',count:2}},
  'word-search':{instruction:'Enter 4–12 Bible-story words or short phrases, one per line.',
   sample:{type:'word-search',words:'Moses\nPharaoh\nRed Sea\nEgypt\nCloud\nStaff',seed:1}},
+ 'pixel-picture':{instruction:'Enter a 30–85 character Bible story fact or big idea for children to complete and reveal a 13×13 picture.',
+  sample:{type:'pixel-picture',phrase:'The Egyptians chased after the Israelites.',shapeId:'star',seed:1}},
  'medium-word-search':{instruction:'Enter 1–6 Bible-story words or short phrases of 2–9 letters, one per line.',
   sample:{type:'medium-word-search',words:'Moses\nRed Sea\nEgypt\nCloud',seed:1}},
  'true-false-maze':{instruction:'Write one short statement and choose whether its correct answer is TRUE or FALSE.',
