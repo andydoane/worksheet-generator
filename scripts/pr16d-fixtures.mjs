@@ -10,4 +10,5 @@ export const EXAMPLES=[
  {type:'circle-mistakes',text:'David was a king who lived in Egypt. He faced a tiny man named Goliath. David trusted in an iron sword instead of the Lord.',count:3},
  {type:'true-false-maze',statement:'David trusted God when he faced Goliath.',answer:true,seed:8},
  {type:'upside-down-verse',reference:'Psalm 56:3',verse:'When I am afraid I will trust in you.'},
+ {type:'pixel-picture',phrase:'David trusted God when he faced the giant Goliath.',shapeId:'cross',seed:12},
 ];
