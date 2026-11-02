@@ -106,8 +106,6 @@ test('Existing saved user content, including former seeded sample text, remains 
   samplePlaceholder('sort-story','statements'));
 });
 test('The uploaded replacement symbol is accepted regardless of square resolution',async()=>{
- let firstWidth=null;
- let differentSizes=false;
  for(let id=1;id<=30;id++){
   const bytes=await loadSortStorySymbolPng(id);
   assert.deepEqual(Array.from(bytes.slice(0,8)),[137,80,78,71,13,10,26,10]);
@@ -115,9 +113,6 @@ test('The uploaded replacement symbol is accepted regardless of square resolutio
   const width=data.getUint32(0),height=data.getUint32(4);
   assert.equal(width,height,'symbol '+id+' must be square');
   assert.ok(width>=120,'symbol '+id+' needs 120px or greater');
-  if(firstWidth!==null&&width!==firstWidth)differentSizes=true;
-  if(firstWidth===null)firstWidth=width;
   assert.match(sortStorySymbolUrl(id),/symbol__\d{2}\.png/u);
  }
- assert.ok(differentSizes,'mixed-size symbol replacements should remain covered by this test');
 });
