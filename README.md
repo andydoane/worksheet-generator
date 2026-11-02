@@ -1,5 +1,13 @@
 # Worksheet Studio
 
+## PR 16i — Large activity interaction improvements (v0.16.8)
+
+- **Sort the Story:** Use one of 30 uploaded square symbol PNGs instead of letter labels, chosen uniquely and deterministically per worksheet. Children copy each row's symbol into the TRUE or FALSE answer area. Print/PDF and preview share the same symbols and physical row geometry. The original saved statement/truth/seed format is untouched.
+- **Spiral Verse:** Rotate only the spiral writing path 90° counterclockwise in both the SVG preview and vector PDF; leave the title and verse bank upright.
+- **Crossword:** When a centered grid-plus-clues layout has unused vertical room, assign up to 30pt of that extra space to the gap between the grid and the clue headings/columns, retaining at least 8pt of top and bottom clearance. Dense compositions keep their compact spacing and the expanded group is recentered.
+- **Compatibility:** No new saved-draft fields or changes to puzzle order, verse content, border IDs, or booklet dimensions. Only selected Sort symbols are embedded in PDF output.
+- **Review:** `npm run test && npm run build && npm run sample:pr16i` generates paired `sample-pr16i-plain.pdf` and `sample-pr16i-bordered.pdf` for actual-size print comparison.
+
 ## PR 16h — Adaptive layout and typography (v0.16.7)
 
 - **Finish the Story:** Writing blanks are 1.5× the former font-metric-measured width, preserving each word's natural proportional length. The existing shared 13–9pt planner automatically wraps and fits longer blanks, consistently in SVG and PDF.
