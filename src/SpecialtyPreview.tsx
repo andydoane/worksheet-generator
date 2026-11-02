@@ -5,7 +5,7 @@ import ConnectBigIdeaPrintPreview from './ConnectBigIdeaPrintPreview.tsx';
 import ConnectVersePrintPreview from './ConnectVersePrintPreview.tsx';
 import {planCrossword,crosswordBlackCells,CROSSWORD_WIDTH,CROSSWORD_HEIGHT,type CrosswordPlan} from './crosswordLayout.ts';
 import {
-  generateCrossword,connectPositions,spiralPoints,spiralTurns,
+  generateCrossword,connectPositions,spiralWritingPoints,
   type SpecialtyModule,
 } from './specialtyModules.ts';
 
@@ -64,7 +64,7 @@ function CrosswordView({module}:{module:Extract<SpecialtyModule,{type:'crossword
   </div>;
 }
 function SpiralView({module}:{module:Extract<SpecialtyModule,{type:'spiral-verse'}>}){
-  const pts=spiralPoints(800,spiralTurns(module.verse)).reverse();
+  const pts=spiralWritingPoints(module.verse);
   const path=pts.map(p=>(p.x*1000).toFixed(1)+','+(p.y*1000).toFixed(1)).join(' ');
   return <div className="module-preview specialty-preview spiral-preview">
     <div className="module-title">SPIRAL VERSE</div>
