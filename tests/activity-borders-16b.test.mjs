@@ -83,13 +83,15 @@ test('16e enables all registered Small, Medium and Large modules',async()=>{
  assert.equal(BORDER_READY_MODULES.length,enabled.length);
  for(const module of MODULES)assert.equal(isActivityBorderReady(module.id),true);
  assert.equal(isActivityBorderReady(undefined),false);
- const [app,picker,pdf,css]=await Promise.all([
+ const [app,picker,pdf,css,migration]=await Promise.all([
   readFile(new URL('../src/App.tsx',import.meta.url),'utf8'),
   readFile(new URL('../src/ActivityBorderPicker.tsx',import.meta.url),'utf8'),
   readFile(new URL('../src/pdf.ts',import.meta.url),'utf8'),
   readFile(new URL('../src/layout.css',import.meta.url),'utf8'),
+  readFile(new URL('../src/draftMigration.ts',import.meta.url),'utf8'),
  ]);
- assert.match(app,/readActivityBorders\(value.activityBorders\)/);
+ assert.match(app,/migrateDraftValue\(JSON\.parse\(stored\)\)/);
+ assert.match(migration,/readActivityBorders\(value.activityBorders\)/);
  assert.match(app,/isActivityBorderReady\(activeModule\?\.type\)/);
  assert.match(app,/chooseActivityBorder/);
  assert.match(picker,/disabled=\{!enabled\}/);
