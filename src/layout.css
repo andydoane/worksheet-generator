@@ -554,3 +554,11 @@
 .activity-guidance small { display:block; margin-top:5px; color:#728579; font-size:11px; line-height:1.4; }
 .activity-validation strong { display:block; color:#875a29; font-size:12px; margin-bottom:6px; }
 .activity-editor select:focus-visible { outline:3px solid #8bc3a7; outline-offset:2px; }
+
+/* PR16j follow-up: examples are hints, never editable/saved values. */
+.activity-editor .activity-inputs input::placeholder,
+.activity-editor .activity-inputs textarea::placeholder {
+ color: #88938f;
+ opacity: 1;
+ font-weight: 500;
+}
