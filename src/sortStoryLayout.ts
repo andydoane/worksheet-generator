@@ -44,7 +44,7 @@ export function planSortStory(module:SortStory,metrics:Metrics,
  const bankHeight=bankBottom-bankTop;
  if(bankHeight<=0)return null;
  const rowHeight=bankHeight/items.length;
- const letterWidth=19,letterHeight=18;
+ const letterWidth=21,letterHeight=21;
  if(rowHeight<letterHeight+5)return null;
  const bank:Rectangle={x:0,y:bankTop,width,height:bankHeight};
  const rows:SortStoryRow[]=[];
