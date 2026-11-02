@@ -103,6 +103,15 @@ export function generatePixelPicture(module:PixelPicture):PixelPicturePuzzle{
   const options=ch==='1'?missingLetters:decoys;
   return options[Math.floor(rng()*options.length)];
  }));
+ // Guarantee every discovered letter appears at least twice in the picture,
+ // even with small silhouettes or an unlucky seed.
+ const active=shape.rows.flatMap((row,y)=>Array.from(row,(bit,x)=>
+  bit==='1'?{x,y}:null).filter((cell):cell is {x:number;y:number}=>cell!==null));
+ const order=shuffledIndices(active.length,phrase+'|'+shape.id,module.seed);
+ for(let i=0;i<missingLetters.length;i++)for(let copy=0;copy<2;copy++){
+  const position=active[order[i*2+copy]];
+  grid[position.y][position.x]=missingLetters[i];
+ }
  const maskedPhrase=Array.from(phrase).map((ch,i)=>positions.includes(i)?'_':ch).join('');
  return {maskedPhrase,missingLetters,missingPositions:positions,grid,mask:shape.rows};
 }
