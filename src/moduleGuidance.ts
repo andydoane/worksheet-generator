@@ -1,8 +1,8 @@
 import {blankModule,type ActivityModule,type ModuleId} from './modules.ts';
 
-/** New manually authored activities receive a complete editable example.
- * Never apply these defaults while loading a saved draft or for any
- * theme-verse / big-idea derived module. All sample text is local to selection.
+/** Instruction and demonstration text only. Samples are displayed as native
+ * form placeholders, not stored as user input, so they do not affect
+ * validation, previews, PDF export or saved drafts.
  */
 type Guidance={instruction:string;sample?:Partial<ActivityModule>};
 export const MODULE_GUIDANCE:Record<ModuleId,Guidance>={
@@ -51,11 +51,22 @@ export const MODULE_GUIDANCE:Record<ModuleId,Guidance>={
  'big-idea-cryptogram':{instruction:'The symbol cryptogram starts with the key idea from Lesson details.'},
 };
 
-/** Only a new manual selection receives sample text; saved drafts remain authoritative. */
+/** Explicitly opt into example *values* for test/print fixtures only.
+ * The live editor selects blankModule instead and displays samplePlaceholder.
+ */
 export function newModuleWithExample(type:ModuleId):ActivityModule{
  const empty=blankModule(type);
  const sample=MODULE_GUIDANCE[type].sample;
  return sample?{...empty,...sample} as ActivityModule:empty;
+}
+/** Return the sample for a specific form field without writing it to a draft.
+ * Nontext fields (like seeds, number of mistakes and correct maze exit) have
+ * no text placeholder and keep their normal controls/default values.
+ */
+export function samplePlaceholder(type:ModuleId,field:string):string{
+ const sample=MODULE_GUIDANCE[type].sample as Record<string,unknown>|undefined;
+ const value=sample?.[field];
+ return typeof value==='string'?value:'';
 }
 export function isAutofilledModule(type:ModuleId):boolean{
  return !MODULE_GUIDANCE[type].sample;
