@@ -11,6 +11,8 @@ export type CrosswordPlan={
   cell:number;gridX:number;gridTop:number;gridWidth:number;gridHeight:number;
   /** The occupied grid-and-clues block has equal whitespace above and below. */
   contentTop:number;contentBottom:number;
+  /** Extra grid-to-clue breathing room, allocated only from unused vertical height. */
+  clueGapGrowth:number;
   clueFontSize:number;acrossHeader:{x:number;y:number};downHeader:{x:number;y:number};
   acrossRows:CrosswordClueRow[];downRows:CrosswordClueRow[];
 };
@@ -73,18 +75,26 @@ export function planCrossword(puzzle:CrosswordResult,measure:(text:string,size:n
       // and below the entire block, not applied to the grid alone.
       const bottom=Math.max(gridTop+gridHeight,clueStart+17,
         ...rowGroups.flat().map(row=>row.y+size*.3));
-      const offset=(height-(bottom-gridTop))/2-gridTop;
+      // Reserve at least 8pt on each side, use at most half the remaining
+      // height to separate the grid and clues, and cap the extra gap at 30pt.
+      // Dense crosswords keep their old compact spacing. The ENTIRE expanded
+      // composition is re-centered, retaining the PR16h centered bounds.
+      const spare=height-(bottom-gridTop);
+      const clueGapGrowth=Math.min(30,Math.max(0,(spare-16)*.5));
+      const finalBottom=bottom+clueGapGrowth;
+      const offset=(height-(finalBottom-gridTop))/2-gridTop;
       if(offset<-1e-6)continue;
       const centeredTop=gridTop+offset;
       return {
         cell,gridX:(width-puzzle.width*cell)/2,gridTop:centeredTop,
-        contentTop:centeredTop,contentBottom:bottom+offset,
+        contentTop:centeredTop,contentBottom:finalBottom+offset,
+        clueGapGrowth,
         gridWidth:puzzle.width*cell,gridHeight,
         clueFontSize:size,
-        acrossHeader:{x:0,y:clueStart+14+offset},
-        downHeader:{x:width/2+3,y:clueStart+14+offset},
-        acrossRows:rowGroups[0].map(row=>({...row,y:row.y+offset})),
-        downRows:rowGroups[1].map(row=>({...row,y:row.y+offset})),
+        acrossHeader:{x:0,y:clueStart+14+clueGapGrowth+offset},
+        downHeader:{x:width/2+3,y:clueStart+14+clueGapGrowth+offset},
+        acrossRows:rowGroups[0].map(row=>({...row,y:row.y+clueGapGrowth+offset})), 
+        downRows:rowGroups[1].map(row=>({...row,y:row.y+clueGapGrowth+offset})),
       };
     }
   }

@@ -1,19 +1,20 @@
 import {BOOKLET} from './booklet.ts';
 import {balancedBankLines} from './balancedBankLines.ts';
 import {sortedStoryBank,type SortStory} from './storyVerseModules.ts';
+import {sortStorySymbolIds} from './sortStorySymbols.ts';
 import type {MeasureText} from './mediumParityLayout.ts';
 
 /** Physical print-space scene shared by the Large SVG preview and PDF. */
 export const SORT_STORY_WIDTH=(BOOKLET.cell.width*2-BOOKLET.padding*2)*72;
 export const SORT_STORY_HEIGHT=(BOOKLET.cell.height*2-BOOKLET.padding*2)*72;
 export const SORT_STORY_INSTRUCTION=
- 'Sort the letters into TRUE or FALSE. Circle the incorrect words in false statements.';
+ 'Draw each symbol in the TRUE or FALSE box. Circle incorrect words in false statements.';
 export const SORT_STORY_STROKE=.85;
 
 type TextLine={text:string;x:number;y:number};
 type Rectangle={x:number;y:number;width:number;height:number};
 export type SortStoryRow={
- letter:string;letterBox:Rectangle;letterX:number;letterY:number;
+ symbolId:number;symbolBox:Rectangle;
  textSize:number;lines:TextLine[];
 };
 export type SortStoryPlan={
@@ -47,6 +48,7 @@ export function planSortStory(module:SortStory,metrics:Metrics,
  if(rowHeight<letterHeight+5)return null;
  const bank:Rectangle={x:0,y:bankTop,width,height:bankHeight};
  const rows:SortStoryRow[]=[];
+ const symbolIds=sortStorySymbolIds(module);
  for(let i=0;i<items.length;i++){
   const rowY=bankTop+i*rowHeight;
   let fitted:{textSize:number;lines:string[];step:number}|null=null;
@@ -61,12 +63,10 @@ export function planSortStory(module:SortStory,metrics:Metrics,
   if(!fitted)return null;
   const firstBaseline=rowY+(rowHeight-fitted.lines.length*fitted.step)/2+
    fitted.textSize*.98;
-  const letterBox={x:5,y:rowY+(rowHeight-letterHeight)/2,
+  const symbolBox={x:5,y:rowY+(rowHeight-letterHeight)/2,
    width:letterWidth,height:letterHeight};
   rows.push({
-   letter:String.fromCharCode(65+i),letterBox,
-   letterX:letterBox.x+letterWidth/2,
-   letterY:letterBox.y+letterHeight/2+3.7,
+   symbolId:symbolIds[i],symbolBox,
    textSize:fitted.textSize,
    lines:fitted.lines.map((text,j)=>({text,x:31,y:firstBaseline+j*fitted.step})),
   });

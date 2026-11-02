@@ -11,7 +11,7 @@ import {CONNECT_VERSE_TITLE,CONNECT_VERSE_INSTRUCTION,CONNECT_VERSE_BOX_STROKE,p
 import {drawReconstructionPdf} from './verseReconstructionPdf.ts';
 import type {ModuleFonts} from './modulePdf.ts';
 import {
-  generateCrossword,parseConnectionWords,connectPositions,spiralPoints,spiralTurns,validateSpecialty,
+  generateCrossword,parseConnectionWords,connectPositions,spiralWritingPoints,validateSpecialty,
   type SpecialtyModule,
 } from './specialtyModules.ts';
 
@@ -95,7 +95,7 @@ function spiral(page:PDFPage,b:Rect,module:Extract<SpecialtyModule,{type:'spiral
   const cx=b.x+b.width/2,cy=bottom+spaceHeight/2+3;
   // Outer radius .445: 1.08x scaling leaves ~4pt vertical margins.
   const side=diameter*1.08;
-  const points=spiralPoints(800,spiralTurns(module.verse)).reverse()
+  const points=spiralWritingPoints(module.verse)
     .map(p=>({x:cx+(p.x-.5)*side,y:cy-(p.y-.5)*side}));
   for(let i=1;i<points.length;i++)
     page.drawLine({start:points[i-1],end:points[i],thickness:1.1,color:INK});

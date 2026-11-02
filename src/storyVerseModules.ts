@@ -14,7 +14,7 @@ export type StoryVerseId = StoryVerseModule['type'];
 
 export const STORY_VERSE_MODULES = [
   { id: 'story-order', name: 'Story Order', size: 'large', description: 'Number five to eight shuffled story events.' },
-  { id: 'sort-story', name: 'Sort the Story', size: 'large', description: 'Sort true and false story statements by letter.' },
+  { id: 'sort-story', name: 'Sort the Story', size: 'large', description: 'Draw the matching symbol in the TRUE or FALSE box for each statement.' },
   { id: 'draw-story', name: 'Draw the Story', size: 'large', description: 'Four to six framed story illustrations with captions.' },
   { id: 'finish-verse', name: 'Finish the Verse', size: 'medium', description: 'Fill missing verse words with a word bank and letter boxes.' },
   { id: 'unscramble-verse', name: 'Unscramble the Verse', size: 'medium', description: 'Unscramble letters beneath the missing verse words.' },
