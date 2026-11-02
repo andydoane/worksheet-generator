@@ -38,12 +38,9 @@ export default function SortStoryPrintPreview({module}:{module:SortStory}){
      x1={plan.bank.x} y1={y} x2={plan.bank.x+plan.bank.width} y2={y}
      stroke="#222" strokeWidth={plan.strokeWidth}/>)}
     {plan.rows.map((row,i)=><g key={'row-'+i}>
-     <rect x={row.symbolBox.x} y={row.symbolBox.y}
-      width={row.symbolBox.width} height={row.symbolBox.height}
-      fill="white" stroke="#222" strokeWidth={plan.strokeWidth}/>
      <image href={sortStorySymbolUrl(row.symbolId)}
-      x={row.symbolBox.x+1} y={row.symbolBox.y+.5}
-      width={row.symbolBox.width-2} height={row.symbolBox.height-1}
+      x={row.symbolBox.x} y={row.symbolBox.y}
+      width={row.symbolBox.width} height={row.symbolBox.height}
       preserveAspectRatio="xMidYMid meet"/>
      {row.lines.map((line,j)=><text key={'text-'+j}
       x={line.x} y={line.y} fontFamily="Nunito" fontWeight="500"
