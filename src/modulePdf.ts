@@ -1,4 +1,4 @@
-import { rgb, type PDFFont, type PDFPage } from 'pdf-lib';
+import { rgb, type PDFFont, type PDFPage, type PDFImage } from 'pdf-lib';
 import { BOOKLET } from './booklet.ts';
 import {MODULE_TITLE_PT,measureWrappedLines} from './pdfLayout.ts';
 import {planDrawPicture} from './smallFinishingLayout.ts';
