@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import pkg from '../package.json';
 import {MODULE_GUIDANCE,newModuleWithExample,isAutofilledModule} from './moduleGuidance.ts';
+import {migrateDraftValue} from './draftMigration.ts';
+import {explainActivityError} from './editorFeedback.ts';
 import {COVER_BORDERS,coverBorderUrl,isCoverBorderId,type CoverBorderId} from './coverBorders.ts';
 import {
  ACTIVITY_SAFE_AREAS,activityBorderUrl,isActivityBorderReady,planLargeBorderFit,
@@ -72,32 +74,8 @@ function readDraft(): Draft {
     const stored = window.localStorage.getItem(KEY);
     if (!stored) return blank;
 
-    const data: unknown = JSON.parse(stored);
-    if (!data || typeof data !== 'object') return blank;
-    const value = data as Partial<Draft>;
-    const storedLayouts = value.layouts && typeof value.layouts === 'object'
-      ? value.layouts as Record<number, unknown>
-      : {};
-
-    const text = (key: 'title' | 'scripture' | 'bigIdea' | 'verseReference' | 'verseText') =>
-      typeof value[key] === 'string' ? value[key] : '';
-
-    // PR 1 drafts have no layouts field. Load their text without losing it.
-    return {
-      title: text('title'),
-      scripture: text('scripture'),
-      coverBorder: isCoverBorderId(value.coverBorder) ? value.coverBorder : 'none',
-      bigIdea: text('bigIdea'),
-      verseReference: text('verseReference'),
-      verseText: text('verseText'),
-      layouts: {
-        2: isLayoutId(storedLayouts[2]) ? storedLayouts[2] : DEFAULT_LAYOUTS[2],
-        3: isLayoutId(storedLayouts[3]) ? storedLayouts[3] : DEFAULT_LAYOUTS[3],
-        4: isLayoutId(storedLayouts[4]) ? storedLayouts[4] : DEFAULT_LAYOUTS[4],
-      },
-      modules: readAssignments(value.modules),
-      activityBorders: readActivityBorders(value.activityBorders),
-    };
+    // Old drafts contain no layout/border selections. Keep their text intact.
+    return migrateDraftValue(JSON.parse(stored));
   } catch {
     // Storage can be unavailable, and old user content could be malformed.
     return blank;
@@ -622,7 +600,7 @@ export default function App() {
                   {validation.length > 0 && (
                     <div className="activity-validation" role="status" aria-live="polite">
                       <strong>Fix {validation.length} {validation.length===1?'item':'items'} before exporting this activity:</strong>
-                      {validation.map((error) => <p key={error}>{error}</p>)}
+                      {validation.map((error) => <p key={error}>{explainActivityError(activeModule!,error)}</p>)}
                     </div>
                   )}
                   {activeModule && validation.length === 0 && <p className="activity-ready">✓ Ready to export in the booklet PDF</p>}
