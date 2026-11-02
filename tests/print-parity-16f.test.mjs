@@ -88,11 +88,11 @@ test('11 printable styles exist per size with correct proportions, and cover use
   }
  }
 });
-test('All 26 registered module types occur in real 11-style audit booklets, with intentional None slots',()=>{
+test('All 27 registered module types occur in real 11-style audit booklets, with intentional None slots',()=>{
  const registered=Object.fromEntries(Object.keys(ALL_EXAMPLES).map(size=>[
   size,MODULES.filter(x=>x.size===size).map(x=>x.id).sort(),
  ]));
- assert.equal(Object.values(registered).reduce((sum,list)=>sum+list.length,0),26);
+ assert.equal(Object.values(registered).reduce((sum,list)=>sum+list.length,0),27);
  assert.deepEqual(auditCoverage(),registered);
  for(let n=1;n<=11;n++){
   const draft=makeParityDraft(n);
