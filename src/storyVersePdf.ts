@@ -1,4 +1,4 @@
-import { rgb, type PDFFont, type PDFPage } from 'pdf-lib';
+import { rgb, type PDFFont, type PDFPage, type PDFImage } from 'pdf-lib';
 import { BOOKLET } from './booklet.ts';
 import {MODULE_TITLE_PT,verticalStack,centeredBaseline} from './pdfLayout.ts';
 import {planMistakes} from './mediumParityLayout.ts';
@@ -103,7 +103,7 @@ function order(page:PDFPage,b:Rect,fonts:ModuleFonts,module:Extract<StoryVerseMo
       textRect.y+textRect.height-4,textRect.height-8,12,8.5,'center',true);
   });
 }
-function sort(page:PDFPage,b:Rect,fonts:ModuleFonts,module:Extract<StoryVerseModule,{type:'sort-story'}>):void {
+function sort(page:PDFPage,b:Rect,fonts:ModuleFonts,module:Extract<StoryVerseModule,{type:'sort-story'}>,symbols:ReadonlyMap<number,PDFImage>):void {
  const plan=planSortStory(module,{
   body:(text,size)=>width(fonts.body,text,size),
   instruction:(text,size)=>width(fonts.bodyBold,text,size),
@@ -126,9 +126,12 @@ function sort(page:PDFPage,b:Rect,fonts:ModuleFonts,module:Extract<StoryVerseMod
    color:INK,thickness:stroke});
  }
  for(const row of plan.rows){
-  rectangle(row.letterBox);
-  page.drawText(row.letter,{x:b.x+row.letterX-width(fonts.puzzle,row.letter,11)/2,
-   y:top-row.letterY,font:fonts.puzzle,size:11,color:INK});
+  rectangle(row.symbolBox);
+  const symbol=symbols.get(row.symbolId);
+  if(!symbol)throw Error('Sort the Story symbol '+row.symbolId+' did not load.');
+  page.drawImage(symbol,{x:b.x+row.symbolBox.x+1,
+   y:top-row.symbolBox.y-row.symbolBox.height+.5,
+   width:row.symbolBox.width-2,height:row.symbolBox.height-1});
   for(const line of row.lines)page.drawText(line.text,{
    x:b.x+line.x,y:top-line.y,font:fonts.body,size:row.textSize,color:INK,
   });
@@ -218,11 +221,12 @@ function mistakes(page:PDFPage,b:Rect,fonts:ModuleFonts,m:Extract<StoryVerseModu
     size:plan.fontSize,font:fonts.body,color:INK,
   }));
 }
-export function drawStoryVersePdf(page:PDFPage,rect:Rect,module:StoryVerseModule,fonts:ModuleFonts):void {
+export function drawStoryVersePdf(page:PDFPage,rect:Rect,module:StoryVerseModule,fonts:ModuleFonts,
+ symbols:ReadonlyMap<number,PDFImage>=new Map()):void {
   const b=inset(rect);
   switch(module.type){
     case 'story-order':return order(page,b,fonts,module);
-    case 'sort-story':return sort(page,b,fonts,module);
+    case 'sort-story':return sort(page,b,fonts,module,symbols);
     case 'draw-story':return drawStory(page,b,fonts,module);
     case 'finish-verse':return finishVerse(page,b,fonts,module);
     case 'unscramble-verse':return unscrambleVerse(page,rect,fonts,module);
