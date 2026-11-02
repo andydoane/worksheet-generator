@@ -1,5 +1,13 @@
 # Worksheet Studio
 
+## PR 16j follow-up — Gray samples and mixed-size square symbols (v0.16.10)
+
+- **New manual activity inputs are empty by default.** Keep the PR16j example sentences and word lists, but show them as native gray text-field placeholders instead of saving them as actual activity content. Each field begins blank; typing replaces the example immediately, and clearing re-displays it. Preview, validation, export and saved drafts use only the teacher's entered values.
+- **Theme verses and key ideas still auto-populate** real editable content from Lesson details exactly as before; this PR does not alter those modules.
+- **Existing saved drafts stay unchanged.** In particular, do not automatically erase old fields that happen to match examples: a teacher might have chosen to keep or edit that text. New selections display placeholders only.
+- **Sort the Story** now accepts square PNG artwork with different pixel dimensions, requiring each source be square and at least 120px wide/high. PDF and preview still scale the art into the shared 21 × 21pt layout; no image resizing or manual asset duplication required. This fixes the star replacement for `symbol__29.png` being blocked by a uniform-resolution test.
+- Tests cover all manual sample placeholders, old draft preservation, theme verse behavior, missing input validation, mixed image dimensions, and the live editor's placeholder bindings.
+
 ## PR 16j — Editor guidance, sample activities and final polish (v0.16.9)
 
 - **Sort the Story:** The symbol-wrapper rectangle is removed from preview and exported PDF; each uploaded square image now occupies a larger 21 × 21pt print area. All statement outlines, dividers and TRUE/FALSE writing boxes remain unchanged.
