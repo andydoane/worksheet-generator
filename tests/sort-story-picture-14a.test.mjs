@@ -89,7 +89,7 @@ test('Grouped statement editor handles additions, deletions, and character feedb
  assert.match(editor,/id="sv-false-statements"/u);
  assert.doesNotMatch(editor,/id="sv-statements"/u);
 });
-test('Sort border, dividers, letter boxes and answer boxes share one physical stroke',async()=>{
+test('Sort border, dividers, symbol boxes and answer boxes share one physical stroke',async()=>{
  const {pdf,browser}=await metrics();
  for(const module of [legacy,dense]){
   for(const seed of [1,8,12]){
@@ -115,8 +115,8 @@ test('Sort border, dividers, letter boxes and answer boxes share one physical st
    assert.equal(a.separators.length,a.rows.length-1);
    assert.equal(a.answers.length,2);
    for(const row of a.rows){
-    assert.ok(row.letterBox.y>=a.bank.y);
-    assert.ok(row.letterBox.y+row.letterBox.height<=a.bank.y+a.bank.height+1e-6);
+    assert.ok(row.symbolBox.y>=a.bank.y);
+    assert.ok(row.symbolBox.y+row.symbolBox.height<=a.bank.y+a.bank.height+1e-6);
     assert.ok(row.lines.length>=1);
     assert.ok(row.lines.every(line=>line.x>=0&&line.y>a.bank.y&&line.y<a.bank.y+a.bank.height));
     assert.ok(row.lines.every(line=>pdf.body(line.text,row.textSize)<=SORT_STORY_WIDTH-39+.001));
