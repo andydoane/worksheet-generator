@@ -117,11 +117,11 @@ test('Sort Story symbols grow to 21pt square with no strokes in both SVG preview
  assert.match(svg,/width=\{row\.symbolBox\.width\}/u);
  assert.match(pdf,/width:row\.symbolBox\.width,height:row\.symbolBox\.height/u);
 });
-test('Selector uses new samples only for new activities and shows appropriate guidance and validation',async()=>{
+test('Selector keeps user values blank and shows placeholder guidance and validation',async()=>{
  const [app,css]=await Promise.all([
   readFile(new URL('../src/App.tsx',import.meta.url),'utf8'),
   readFile(new URL('../src/layout.css',import.meta.url),'utf8')]);
- assert.match(app,/newModuleWithExample\(type\)/u);
+ assert.match(app,/modules\[activeKey\] = blankModule\(type\)/u);
  assert.match(app,/migrateDraftValue\(JSON\.parse\(stored\)\)/u);
  assert.match(app,/MODULE_GUIDANCE\[activeModule\.type\]\.instruction/u);
  assert.match(app,/explainActivityError\(activeModule!,error\)/u);
