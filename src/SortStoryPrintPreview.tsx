@@ -5,6 +5,7 @@ import {
  type SortStoryPlan,
 } from './sortStoryLayout.ts';
 import type {SortStory} from './storyVerseModules.ts';
+import {sortStorySymbolUrl} from './sortStorySymbols.ts';
 
 /** Large Sort the Story uses exactly the same measured point coordinates
  * in the SVG preview and the exported vector PDF.
@@ -37,11 +38,13 @@ export default function SortStoryPrintPreview({module}:{module:SortStory}){
      x1={plan.bank.x} y1={y} x2={plan.bank.x+plan.bank.width} y2={y}
      stroke="#222" strokeWidth={plan.strokeWidth}/>)}
     {plan.rows.map((row,i)=><g key={'row-'+i}>
-     <rect x={row.letterBox.x} y={row.letterBox.y}
-      width={row.letterBox.width} height={row.letterBox.height}
-      fill="none" stroke="#222" strokeWidth={plan.strokeWidth}/>
-     <text x={row.letterX} y={row.letterY} fontFamily="Zilla Slab"
-      fontWeight="700" fontSize="11" textAnchor="middle" fill="#222">{row.letter}</text>
+     <rect x={row.symbolBox.x} y={row.symbolBox.y}
+      width={row.symbolBox.width} height={row.symbolBox.height}
+      fill="white" stroke="#222" strokeWidth={plan.strokeWidth}/>
+     <image href={sortStorySymbolUrl(row.symbolId)}
+      x={row.symbolBox.x+1} y={row.symbolBox.y+.5}
+      width={row.symbolBox.width-2} height={row.symbolBox.height-1}
+      preserveAspectRatio="xMidYMid meet"/>
      {row.lines.map((line,j)=><text key={'text-'+j}
       x={line.x} y={line.y} fontFamily="Nunito" fontWeight="500"
       fontSize={row.textSize} fill="#222">{line.text}</text>)}
