@@ -4,6 +4,7 @@ import {COVER_BORDER_SAFE_WIDTH,COVER_BORDER_SAFE_HEIGHT,isCoverBorderId,type Co
 import {isActivityBorderReady,readActivityBorders,planActivityBorderFit,type ActivityBorders} from './activityBorders.ts';
 import {glyphInkCenter} from './fontInkCenter.ts';
 import {planCoverText} from './coverTitleLayout.ts';
+import {sortStorySymbolIds,loadSortStorySymbolPng} from './sortStorySymbols.ts';
 import {embedNunitoWeights} from './nunitoPdf.ts';
 import type {ModuleFonts} from './modulePdf.ts';
 import { drawModulePdf } from './modulePdf.ts';
@@ -211,6 +212,16 @@ export async function createBookletPdf(draft: PdfDraft, fontFiles: PdfFontFiles,
   const borderImage=borderEnabled&&borderPng?await document.embedPng(borderPng):undefined;
   const selections=readActivityBorders(draft.activityBorders);
   const activityImages=new Map<string,Awaited<ReturnType<typeof document.embedPng>>>();
+  // Embed only the distinct symbols used by the selected Sort the Story modules.
+  // This is shared by browser export and Node sample/test runners.
+  const symbolImages=new Map<number,Awaited<ReturnType<typeof document.embedPng>>>();
+  for(const module of Object.values(draft.modules??{})){
+    if(module.type!=='sort-story')continue;
+    for(const id of sortStorySymbolIds(module)){
+      if(!symbolImages.has(id))symbolImages.set(id,
+        await document.embedPng(await loadSortStorySymbolPng(id)));
+    }
+  }
   const sheets = getPrintableSheetRegions(draft);
   for (let sheetIndex = 0; sheetIndex < sheets.length; sheetIndex++) {
     const page = document.addPage([SHEET_WIDTH, SHEET_HEIGHT]);
@@ -260,9 +271,9 @@ export async function createBookletPdf(draft: PdfDraft, fontFiles: PdfFontFiles,
               const fit=planActivityBorderFit(item.size,item.rect);
               page.pushOperators(pushGraphicsState(),
                 concatTransformationMatrix(fit.scale,0,0,fit.scale,fit.translateX,fit.translateY));
-              try { drawModulePdf(page,item.rect,assigned,fonts,true); }
+              try { drawModulePdf(page,item.rect,assigned,fonts,true,symbolImages); }
               finally { page.pushOperators(popGraphicsState()); }
-            }else drawModulePdf(page, item.rect, assigned, fonts);
+            }else drawModulePdf(page, item.rect, assigned, fonts, false, symbolImages);
           } catch (error) {
             throw new Error('Page ' + item.bookletPage + ' (' + assigned.type.replaceAll('-', ' ') + '): ' +
               (error instanceof Error ? error.message : String(error)));
