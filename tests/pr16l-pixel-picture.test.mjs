@@ -93,8 +93,8 @@ test('Shared measured layout bounds all text within the left Small-sized half an
  const examples=[
   medium.phrase,
   'God made a safe path through the Red Sea and led the people out of Egypt.',
-  'The Israelites praised God because he made a way through the Red Sea and kept them safe.',
-  'Pharaoh and his soldiers chased the Israelites, but God protected everyone who trusted him.',
+  'The Israelites praised God because he made a way through the sea and kept them safe.',
+  'Pharaoh chased the Israelites, but God protected everyone who trusted him.',
  ];
  for(const phrase of examples){
   assert.ok(phrase.length>=30&&phrase.length<=85,phrase.length+' '+phrase);
