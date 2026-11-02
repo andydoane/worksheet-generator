@@ -12,11 +12,14 @@ export function drawPixelPicturePdf(page:PDFPage,rect:Rect,module:PixelPicture,f
   width:rect.width-inset*2,height:rect.height-inset*2};
  const puzzle=generatePixelPicture(module);
  const plan=planPixelPicture(puzzle,{
+  title:(s,z)=>fonts.title.widthOfTextAtSize(s,z),
   body:(s,z)=>fonts.body.widthOfTextAtSize(s,z),
   puzzle:(s,z)=>fonts.puzzle.widthOfTextAtSize(s,z),
  },box.width,box.height);
  if(!plan)throw Error('Pixel Picture instructions and phrase cannot fit in the left Medium half; shorten the phrase.');
  const top=box.y+box.height;
+ page.drawText(plan.title,{x:box.x+plan.titleX-fonts.title.widthOfTextAtSize(plan.title,plan.titleSize)/2,
+  y:top-plan.titleY,font:fonts.title,size:plan.titleSize,color:INK});
  for(const line of plan.instructions)page.drawText(line.text,{
   x:box.x+line.x,y:top-line.y,font:fonts.body,size:plan.instructionSize,color:INK});
  for(const glyph of plan.phraseGlyphs){
