@@ -3,6 +3,7 @@ import {markWordSelection} from './storySelection.ts';
 import {parseVerse,sortStoryEditorGroups,updateSortStoryGroup,
  type FinishVerse,type UnscrambleVerse,type SortStory,type StoryVerseModule} from './storyVerseModules.ts';
 import {letterOnly} from './versePunctuation.ts';
+import {samplePlaceholder} from './moduleGuidance.ts';
 
 /** Both bracket-driven verse activities use the same exact-word selection.
  * No invalid bracket insertion: a selected word must fit the activity's limit.
@@ -89,11 +90,11 @@ function SortStoryEditor({module,onChange}:{
   <label htmlFor="sv-true-statements">True statements</label>
   <textarea id="sv-true-statements" rows={5} value={fields.trueStatements}
    onChange={e=>update(true,e.target.value)}
-   placeholder={'Daniel prayed to God.\nThe king made a law.'}/>
+   placeholder={sortStoryEditorGroups(samplePlaceholder('sort-story','statements')).trueStatements}/>
   <label htmlFor="sv-false-statements">False statements</label>
   <textarea id="sv-false-statements" rows={5} value={fields.falseStatements}
    onChange={e=>update(false,e.target.value)}
-   placeholder={'Daniel stopped praying.\nLions were afraid of the king.'}/>
+   placeholder={sortStoryEditorGroups(samplePlaceholder('sort-story','statements')).falseStatements}/>
   <p>Enter one sentence per line, 4–8 total, with at least one in each field. The worksheet mixes them up and children copy the symbols into TRUE and FALSE.</p>
  </div>;
 }
@@ -108,7 +109,7 @@ export default function StoryVerseEditor({module,onChange}:{
         <label htmlFor="sv-events">Story events in chronological order (5–8)</label>
         <textarea id="sv-events" rows={9} value={module.events}
           onChange={e=>onChange({events:e.target.value})}
-          placeholder={'The king made a law.\nDaniel prayed to God.\nDaniel was arrested.\nDaniel was thrown to the lions.\nGod protected Daniel.'}/>
+          placeholder={samplePlaceholder('story-order','events')}/>
         <p>One sentence per line. The worksheet will scramble the event order and provide numbered circles.</p>
       </div>;
     case 'sort-story':return <SortStoryEditor module={module} onChange={onChange}/>;
@@ -117,7 +118,7 @@ export default function StoryVerseEditor({module,onChange}:{
         <label htmlFor="sv-draw">Drawing prompts (4–6)</label>
         <textarea id="sv-draw" rows={8} value={module.prompts}
           onChange={e=>onChange({prompts:e.target.value})}
-          placeholder={'Daniel prays by his window.\nThe king makes a new law.\nDaniel is thrown to the lions.\nGod sends an angel.'}/>
+          placeholder={samplePlaceholder('draw-story','prompts')}/>
         <p>One prompt per line; four prompts use a 2×2 grid, while five or six use a 3×2 grid.</p>
       </div>;
     case 'finish-verse':
@@ -130,7 +131,7 @@ export default function StoryVerseEditor({module,onChange}:{
         <label htmlFor="sv-mistakes">Paragraph containing intentional mistakes</label>
         <textarea id="sv-mistakes" rows={9} value={module.text}
           onChange={e=>onChange({text:e.target.value})}
-          placeholder="Paul sailed to the moon. He and Peter flew on a spaceship."/>
+          placeholder={samplePlaceholder('circle-mistakes','text')}/>
         <p>The heading states how many mistakes to find. Students circle errors in your paragraph.</p>
       </div>;
   }
