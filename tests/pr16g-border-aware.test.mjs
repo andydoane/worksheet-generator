@@ -80,8 +80,8 @@ test('The selected border state reaches both SVG and PDF activity outlines',asyn
  assert.equal([...puzzlePdf.matchAll(/if\(!bordered\)page\.drawRectangle\(/gu)].length,2);
  assert.match(modulePdf,/borderColor:bordered\?undefined:GREY,borderWidth:bordered\?0:1,color:WHITE/u);
  assert.match(modulePdf,/drawPuzzlePdf\(page, rect, module, fonts, bordered\)/u);
- assert.match(pdf,/drawModulePdf\(page,item\.rect,assigned,fonts,true\)/u);
- assert.match(pdf,/drawModulePdf\(page, item\.rect, assigned, fonts\)/u);
+ assert.match(pdf,/drawModulePdf\(page,item\.rect,assigned,fonts,true,symbolImages\)/u);
+ assert.match(pdf,/drawModulePdf\(page, item\.rect, assigned, fonts, false, symbolImages\)/u);
  assert.match(cover,/planCoverText\(/u);
  assert.match(pdf,/planCoverText\(/u);
 });
