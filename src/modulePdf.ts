@@ -124,11 +124,12 @@ function drawStory(page: PDFPage, rect: Rect, fonts: ModuleFonts, module: Extrac
 }
 
 /** Single dispatch point for all module PDF renderers. */
-export function drawModulePdf(page: PDFPage, rect: Rect, module: ActivityModule, fonts: ModuleFonts, bordered=false): void {
+export function drawModulePdf(page: PDFPage, rect: Rect, module: ActivityModule, fonts: ModuleFonts,
+ bordered=false,symbols:ReadonlyMap<number,PDFImage>=new Map()): void {
   const errors = validateModule(module);
   if (errors.length) throw new Error(errors.join(' '));
   if (isSmallModule(module)) return drawSmallModulePdf(page, rect, module, fonts);
-  if (isStoryVerseModule(module)) return drawStoryVersePdf(page, rect, module, fonts);
+  if (isStoryVerseModule(module)) return drawStoryVersePdf(page, rect, module, fonts, symbols);
   if (isPuzzleModule(module)) return drawPuzzlePdf(page, rect, module, fonts, bordered);
   if (isCryptogram(module)) return drawCryptogramPdf(page, rect, module, fonts);
   if (isSpecialtyModule(module)) return drawSpecialtyPdf(page,rect,module,fonts);
