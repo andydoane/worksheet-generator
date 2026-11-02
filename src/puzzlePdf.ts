@@ -4,6 +4,7 @@ import {MODULE_TITLE_PT} from './pdfLayout.ts';
 import {planMazePrint,MAZE_ARROW_PATH,MAZE_ARROW_VIEW_SIZE} from './mazePrintLayout.ts';
 import {planWordSearch} from './wordSearchLayout.ts';
 import {planMediumWordSearch,MEDIUM_SEARCH_TITLE} from './mediumWordSearchLayout.ts';
+import {drawPixelPicturePdf} from './pixelPicturePdf.ts';
 import type { ModuleFonts } from './modulePdf.ts';
 import {
   generateMaze, generateWordSearch, NORTH, SOUTH, EAST, WEST,
@@ -136,5 +137,6 @@ function drawMaze(page:PDFPage,rect:Rect,fonts:ModuleFonts,module:Extract<Puzzle
 export function drawPuzzlePdf(page:PDFPage,rect:Rect,module:PuzzleModule,fonts:ModuleFonts,bordered=false):void{
   if(module.type==='word-search')return drawWordSearch(page,rect,fonts,module,bordered);
   if(module.type==='medium-word-search')return drawMediumWordSearch(page,rect,fonts,module,bordered);
+  if(module.type==='pixel-picture')return drawPixelPicturePdf(page,rect,module,fonts);
   return drawMaze(page,rect,fonts,module);
 }
