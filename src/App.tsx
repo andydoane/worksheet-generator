@@ -140,13 +140,14 @@ function RegionContents({ region, draft, module, slotKeyKey, showSolution = fals
 }
 
 function BookletPage({
-  page, draft, selectedId, onSelect, showSolution = false,
+  page, draft, selectedId, onSelect, onSelectTitle, showSolution = false,
 }: {
   page: PageNumber;
   draft: Draft;
   selectedId?: string;
   showSolution?: boolean;
   onSelect: (page: PageNumber, regionId: string) => void;
+  onSelectTitle: () => void;
 }) {
   const layoutId = page === 1 ? DEFAULT_LAYOUTS[2] : draft.layouts[page];
   const regions = getRegions(page, layoutId);
@@ -163,7 +164,9 @@ function BookletPage({
           ' size-' + region.size + (region.id === selectedId ? ' selected-region' : '');
         const content = <RegionContents region={region} draft={draft} slotKeyKey={slot} module={draft.modules[slot]} showSolution={showSolution && region.id === selectedId} />;
         return region.kind === 'title'
-          ? <div key={region.id} className={className} style={style} aria-label="Fixed title area">{content}</div>
+          ? <button type="button" key={region.id} className={className} style={style}
+              aria-label="Edit worksheet title on front cover" title="Click to edit worksheet title"
+              onClick={onSelectTitle}>{content}</button>
           : <button type="button" key={region.id} className={className} style={style}
               aria-label={'Edit ' + region.size + ' activity on page ' + page}
               aria-pressed={region.id === selectedId}
@@ -195,6 +198,7 @@ function LayoutDiagram({ id }: { id: LayoutId }) {
 export default function App() {
   const [draft, setDraft] = useState<Draft>(readDraft);
   const storyInputRef = useRef<HTMLTextAreaElement>(null);
+  const titleInputRef = useRef<HTMLInputElement>(null);
   const [page, setPage] = useState<PageNumber>(1);
   const [tab, setTab] = useState<EditorTab>('details');
   const [selectedRegionId, setSelectedRegionId] = useState<string>('cover-activity');
@@ -250,6 +254,35 @@ export default function App() {
     setPage(number);
     setSelectedRegionId(regionId);
     setTab('activities');
+  }
+
+  function focusTitleField() {
+    // Focus after React commits the details tab so this also works from
+    // page 1 inside the print-sheet preview.
+    requestAnimationFrame(() => titleInputRef.current?.focus());
+  }
+
+  function selectCoverTitle() {
+    setPage(1);
+    setSelectedRegionId('cover-activity');
+    setTab('details');
+    focusTitleField();
+  }
+
+  function handleStartFresh() {
+    if (exporting) return;
+    // Native confirmation protects the browser-saved worksheet against
+    // accidental erasure without requiring a complex custom modal.
+    if (!window.confirm('Start a new worksheet? This will permanently clear the current lesson details, activities, layouts, and borders saved in this browser. This cannot be undone.')) return;
+    setDraft(structuredClone(blank));
+    setPage(1);
+    setSelectedRegionId('cover-activity');
+    setTab('details');
+    setMode('page');
+    setSolutionKey(null);
+    setExportError(null);
+    setBorderGalleryOpen(false);
+    focusTitleField();
   }
 
   function setModuleType(type: ModuleId | '') {
@@ -381,20 +414,19 @@ export default function App() {
 
       <div className="workspace">
         <header className="topbar">
-          <span className="breadcrumb">WORKSPACE <span>/</span> BOOKLET DESIGN <span>/</span> <strong className="app-version">v{pkg.version}{import.meta.env.VITE_BUILD_SHA?' · '+import.meta.env.VITE_BUILD_SHA.slice(0,7):''}</strong></span>
+          <div className="topbar-heading">
+            <h1>Design your <em>Bible Worksheet.</em></h1>
+            <span className="topbar-version">Worksheet Studio · v{pkg.version}{import.meta.env.VITE_BUILD_SHA?' · '+import.meta.env.VITE_BUILD_SHA.slice(0,7):''}</span>
+          </div>
           <div className="topbar-right">
             <span className="save-indicator" role="status"><span className={saved ? 'dot saved' : 'dot'} />{saved ? 'Saved in this browser' : 'Browser saving unavailable'}</span>
+            <button className="start-fresh-button" type="button" disabled={exporting} onClick={handleStartFresh}>Start Fresh</button>
             <button className="export-button export-ready" type="button" disabled={exporting} onClick={handleExport} aria-busy={exporting}>{exporting ? 'Creating PDF…' : 'Download PDF ↗'}</button>
           </div>
         </header>
 
         <main className="main">
-          <div className="intro">
-            <span className="eyebrow">YOUR NEXT BIBLE STORY RESOURCE</span>
-            <h1>Design your <em>little</em> booklet.</h1>
-            <p>Choose the page arrangement, click any activity area to add a module, and download a booklet with real activities.</p>
-            {exportError && <p className="pdf-error" role="alert">{exportError}</p>}
-          </div>
+          {exportError && <p className="pdf-error" role="alert">{exportError}</p>}
           <div className="columns">
             <section className="panel" aria-labelledby="editor-heading">
               <div className="panel-heading">
@@ -410,7 +442,7 @@ export default function App() {
                 <div className="fields">
                   <div className="field">
                     <label htmlFor="title">Worksheet title</label>
-                    <input id="title" value={draft.title} onChange={(e) => edit('title', e.target.value)} placeholder="e.g. David and Goliath" maxLength={100} />
+                    <input id="title" ref={titleInputRef} value={draft.title} onChange={(e) => edit('title', e.target.value)} placeholder="e.g. David and Goliath" maxLength={100} />
                     <p>Appears as the main heading on the front cover.</p>
                   </div>
                   <div className="field">
@@ -528,6 +560,12 @@ export default function App() {
                       ?'Starts with lesson content. Editing here changes only this activity, not Lesson details.'
                       :'Gray example text is only a placeholder. Start typing to replace it; only your text is saved or printed.'}</small>
                   </div>}
+                  {validation.length > 0 && (
+                    <div className="activity-validation" role="status" aria-live="polite">
+                      <strong>Fix {validation.length} {validation.length===1?'item':'items'} before exporting this activity:</strong>
+                      {validation.map((error) => <p key={error}>{explainActivityError(activeModule!,error)}</p>)}
+                    </div>
+                  )}
                   {activeRegion&&<ActivityBorderPicker key={activeKey}
                     slotKey={activeKey} size={activeRegion.size}
                     value={draft.activityBorders[activeKey]??'none'}
@@ -600,12 +638,6 @@ export default function App() {
                         : 'word order')} ↻
                     </button>
                   )}
-                  {validation.length > 0 && (
-                    <div className="activity-validation" role="status" aria-live="polite">
-                      <strong>Fix {validation.length} {validation.length===1?'item':'items'} before exporting this activity:</strong>
-                      {validation.map((error) => <p key={error}>{explainActivityError(activeModule!,error)}</p>)}
-                    </div>
-                  )}
                   {activeModule && validation.length === 0 && <p className="activity-ready">✓ Ready to export in the booklet PDF</p>}
                   {!activeModule && <p className="activity-section-info">Select a module above to begin.</p>}
                 </div>
@@ -631,12 +663,12 @@ export default function App() {
               </div>
               <div className={'preview-stage ' + (mode === 'sheet' ? 'sheet-stage' : '')}>
                 {mode === 'page' ? (
-                  <BookletPage page={page} draft={draft} selectedId={activeRegion?.id} onSelect={selectRegion} showSolution={showSolution} />
+                  <BookletPage page={page} draft={draft} selectedId={activeRegion?.id} onSelect={selectRegion} onSelectTitle={selectCoverTitle} showSolution={showSolution} />
                 ) : (
                   <div className="print-sheet" aria-label={activeSheet.name}>
                     {activeSheet.pages.map((number) => (
                       <div key={number} className={'sheet-half ' + (number === page ? 'selected-half' : '')}>
-                        <BookletPage page={number} draft={draft} selectedId={number === page ? activeRegion?.id : undefined} onSelect={selectRegion} showSolution={showSolution && number === page} />
+                        <BookletPage page={number} draft={draft} selectedId={number === page ? activeRegion?.id : undefined} onSelect={selectRegion} onSelectTitle={selectCoverTitle} showSolution={showSolution && number === page} />
                       </div>
                     ))}
                   </div>

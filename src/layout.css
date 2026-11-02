@@ -562,3 +562,10 @@
  opacity: 1;
  font-weight: 500;
 }
+
+/* PR16k: the preview cover heading is an actual navigation control. */
+.booklet-region.title-region { cursor: pointer; font-family: inherit; color: inherit; text-align: center; border-radius: 0; }
+.booklet-region.title-region:hover { outline: 2px solid #3b8974; outline-offset: -2px; z-index: 2; }
+.booklet-region.title-region:focus-visible { outline: 3px solid #d6a066; outline-offset: -3px; z-index: 3; }
+/* The peach-colored validation message now precedes the input fields. */
+.activity-validation { margin: 0 0 5px; }

@@ -115,3 +115,29 @@ button:focus-visible { outline: 3px solid #dfaa65; outline-offset: 2px; }
   .preview-bottom { padding: 15px; }
   .preview-disclaimer { margin: 0 15px 17px; }
 }
+
+/* PR16k: make the page title the workspace header and reclaim the intro space. */
+.topbar { min-height: 102px; padding: 16px 42px; gap: 20px; }
+.topbar-heading { min-width: 0; flex: 1 1 auto; }
+.topbar-heading h1 { font: 400 clamp(43px, 4.4vw, 62px)/1 'Mouse Memoirs',sans-serif; color: #164447; margin: 0 0 4px; }
+.topbar-heading h1 em { font-style: normal; color: #d58753; }
+.topbar-version { color: #71877c; font-size: 10px; font-weight: 800; letter-spacing: .5px; }
+.topbar-right { flex-wrap: wrap; gap: 10px; justify-content: flex-end; }
+.start-fresh-button { border: 1px solid #d3e0d7; border-radius: 9px; padding: 11px 14px; font-size: 12px; font-weight: 900; background: #fff; color: #43675a; white-space: nowrap; }
+.start-fresh-button:hover:not(:disabled) { background: #f1f7f1; border-color: #9bbfaa; }
+.start-fresh-button:disabled { opacity: .55; }
+.main { padding-top: 24px; }
+.pdf-error { margin: 0 0 20px; }
+@media (max-width: 1180px) {
+  .topbar { align-items: flex-start; flex-wrap: wrap; padding: 16px 26px; }
+  .topbar-heading { flex-basis: 100%; }
+  .topbar-right { justify-content: flex-start; }
+  .main { padding-top: 20px; }
+}
+@media (max-width: 700px) {
+  .topbar { padding: 13px 16px; gap: 11px; }
+  .topbar-heading h1 { font-size: clamp(36px, 9vw, 47px); }
+  .topbar-right { gap: 8px; margin-left: 0; }
+  .start-fresh-button { padding: 9px 10px; font-size: 11px; }
+  .main { padding-top: 16px; }
+}
