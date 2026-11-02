@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import pkg from '../package.json';
-import {MODULE_GUIDANCE,newModuleWithExample,isAutofilledModule} from './moduleGuidance.ts';
+import {MODULE_GUIDANCE,isAutofilledModule,samplePlaceholder} from './moduleGuidance.ts';
 import {migrateDraftValue} from './draftMigration.ts';
 import {explainActivityError} from './editorFeedback.ts';
 import {COVER_BORDERS,coverBorderUrl,isCoverBorderId,type CoverBorderId} from './coverBorders.ts';
@@ -268,7 +268,7 @@ export default function App() {
         modules[activeKey] = {type,reference:previous.verseReference,verse:previous.verseText};
       } else if (type === 'connect-verse') {
         modules[activeKey] = {type,verse:previous.verseText,seed:1};
-      } else if (type) modules[activeKey] = newModuleWithExample(type);
+      } else if (type) modules[activeKey] = blankModule(type);
       else delete modules[activeKey];
       const activityBorders=isActivityBorderReady(type||undefined)
         ?previous.activityBorders
@@ -526,7 +526,7 @@ export default function App() {
                     <p>{MODULE_GUIDANCE[activeModule.type].instruction}</p>
                     <small>{isAutofilledModule(activeModule.type)
                       ?'Starts with lesson content. Editing here changes only this activity, not Lesson details.'
-                      :'A complete, editable example is included when you first select this activity. Replace it with your lesson content.'}</small>
+                      :'Gray example text is only a placeholder. Start typing to replace it; only your text is saved or printed.'}</small>
                   </div>}
                   {activeRegion&&<ActivityBorderPicker key={activeKey}
                     slotKey={activeKey} size={activeRegion.size}
@@ -538,7 +538,7 @@ export default function App() {
                     <div className="activity-inputs">
                       <label htmlFor="draw-prompt">Draw a picture of…</label>
                       <textarea id="draw-prompt" rows={3} value={activeModule.prompt} maxLength={130}
-                        placeholder="David facing Goliath"
+                        placeholder={samplePlaceholder('draw-picture','prompt')}
                         onChange={(e) => editModule({ prompt: e.target.value })} />
                       <p>The phrase “Draw a picture of” is added automatically.</p>
                     </div>
@@ -547,7 +547,7 @@ export default function App() {
                     <div className="activity-inputs">
                       <label htmlFor="matching-pairs">Matching pairs (3–6)</label>
                       <textarea id="matching-pairs" rows={7} value={activeModule.pairs}
-                        placeholder={'Paul, Pharisee\nPeter, Fisherman\nJesus, Savior'}
+                        placeholder={samplePlaceholder('match-words','pairs')}
                         onChange={(e) => editModule({ pairs: e.target.value })} />
                       <p>Enter one pair per line, with a comma between the two words. Left items stay in order; right items are shuffled.</p>
                     </div>
@@ -556,7 +556,7 @@ export default function App() {
                     <div className="activity-inputs">
                       <label htmlFor="story-text">Story with 6–12 missing words</label>
                       <textarea id="story-text" rows={10} value={activeModule.story} ref={storyInputRef}
-                        placeholder={'[David] was a young [shepherd]. He faced the giant [Goliath] with a [sling] and five [stones]. David trusted in [God].'}
+                        placeholder={samplePlaceholder('finish-story','story')}
                         onChange={(e) => editModule({ story: e.target.value })} />
                       <button type="button" className="mark-blank" onMouseDown={e=>e.preventDefault()}
                         onClick={markSelectedStoryWord}>Make selected word a blank</button>
