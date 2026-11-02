@@ -249,6 +249,10 @@ export function connectPositions(module:ConnectVerseModule|ConnectBigIdeaModule)
 export function spiralTurns(verse:string):number{
   return Math.max(2.4,Math.min(5.5,2.4+verse.trim().length/260*3.1));
 }
+/** Rotate only the handwriting spiral 90° counterclockwise in page coordinates (y down). */
+export function spiralWritingPoints(verse:string,count=800):{x:number;y:number}[]{
+ return spiralPoints(count,spiralTurns(verse)).reverse().map(p=>({x:p.y,y:1-p.x}));
+}
 export function spiralPoints(count=400,turns=5.5):{x:number;y:number}[]{
   return Array.from({length:count},(_,i)=>{
     const t=i/(count-1),angle=t*Math.PI*2*turns-Math.PI/2;
