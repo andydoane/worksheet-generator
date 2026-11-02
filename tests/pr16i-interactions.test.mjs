@@ -30,9 +30,8 @@ async function fonts(){
  });
  return cache;
 }
-test('All 30 uploaded symbol PNGs are square, uniform and sufficiently sharp',async()=>{
+test('All 30 uploaded symbol PNGs are square and print-sharp even with mixed pixel sizes',async()=>{
  assert.equal(SORT_STORY_SYMBOL_COUNT,30);
- let dimensions;
  for(let id=1;id<=30;id++){
   const bytes=await loadSortStorySymbolPng(id);
   assert.deepEqual(Array.from(bytes.slice(0,8)),[137,80,78,71,13,10,26,10]);
@@ -40,8 +39,6 @@ test('All 30 uploaded symbol PNGs are square, uniform and sufficiently sharp',as
   const h=new DataView(bytes.buffer,bytes.byteOffset+20,4).getUint32(0);
   assert.equal(w,h,'not square');
   assert.ok(w>=120);
-  if(dimensions)assert.deepEqual([w,h],dimensions,'different symbol dimensions');
-  dimensions=[w,h];
   assert.match(sortStorySymbolUrl(id),new RegExp('symbol__'+String(id).padStart(2,'0')+'\\.png'));
  }
  assert.throws(()=>sortStorySymbolUrl(31),/Unknown/);
