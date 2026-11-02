@@ -126,12 +126,11 @@ function sort(page:PDFPage,b:Rect,fonts:ModuleFonts,module:Extract<StoryVerseMod
    color:INK,thickness:stroke});
  }
  for(const row of plan.rows){
-  rectangle(row.symbolBox);
   const symbol=symbols.get(row.symbolId);
   if(!symbol)throw Error('Sort the Story symbol '+row.symbolId+' did not load.');
-  page.drawImage(symbol,{x:b.x+row.symbolBox.x+1,
-   y:top-row.symbolBox.y-row.symbolBox.height+.5,
-   width:row.symbolBox.width-2,height:row.symbolBox.height-1});
+  page.drawImage(symbol,{x:b.x+row.symbolBox.x,
+   y:top-row.symbolBox.y-row.symbolBox.height,
+   width:row.symbolBox.width,height:row.symbolBox.height});
   for(const line of row.lines)page.drawText(line.text,{
    x:b.x+line.x,y:top-line.y,font:fonts.body,size:row.textSize,color:INK,
   });
