@@ -25,7 +25,7 @@ import CryptogramEditor from './CryptogramEditor';
 import {isSpecialtyModule} from './specialtyModules.ts';
 import SpecialtyEditor from './SpecialtyEditor';
 import {
-  blankModule, moduleForSize, readAssignments, slotKey, validateModule,
+  MODULES, blankModule, moduleForSize, readAssignments, slotKey, validateModule,
   type ActivityModule, type ModuleAssignments, type ModuleId,
 } from './modules';
 import {
