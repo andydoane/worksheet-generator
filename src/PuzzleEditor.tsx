@@ -1,7 +1,30 @@
 import {generateMaze, generateWordSearch, parseSearchWords, type PuzzleModule} from './puzzleEngines.ts';
 import {samplePlaceholder} from './moduleGuidance.ts';
+import {PIXEL_SHAPES} from './pixelPictureShapes.ts';
+import {generatePixelPicture,pixelMissingTarget,validatePixelPicture} from './pixelPicture.ts';
 
 export default function PuzzleEditor({module,onChange,showSolution}:{module:PuzzleModule;onChange:(patch:Partial<PuzzleModule>)=>void;showSolution:boolean}) {
+  if(module.type==='pixel-picture'){
+    const errors=validatePixelPicture(module);
+    const key=!errors.length?generatePixelPicture(module):null;
+    return <div className="activity-inputs">
+      <label htmlFor="pixel-phrase">Big Idea or story fact (30–85 characters)</label>
+      <textarea id="pixel-phrase" rows={4} value={module.phrase}
+        placeholder={samplePlaceholder('pixel-picture','phrase')}
+        onChange={e=>onChange({phrase:e.target.value})}/>
+      <p className="word-search-count" role="status" aria-live="polite">
+        {module.phrase.trim().length} of 30–85 characters · Target {pixelMissingTarget(module.phrase.trim().length)} different missing letters
+      </p>
+      <label htmlFor="pixel-shape">Hidden pixel picture</label>
+      <select id="pixel-shape" value={module.shapeId} onChange={e=>onChange({shapeId:e.target.value})}>
+        {PIXEL_SHAPES.map(shape=><option key={shape.id} value={shape.id}>{shape.name}</option>)}
+      </select>
+      <p>The generator removes one occurrence of each of 4–8 distinct letters, spaced across the phrase. Children fill them in and then color those letters in the 13×13 grid.</p>
+      {showSolution&&key&&<p className="puzzle-solution-data">
+        Teacher key (not printed): {key.missingLetters.join(', ')} · {PIXEL_SHAPES.find(shape=>shape.id===module.shapeId)?.name}
+      </p>}
+    </div>;
+  }
   if(module.type==='word-search'||module.type==='medium-word-search') {
     const medium=module.type==='medium-word-search',max=medium?6:12;
     const count=parseSearchWords(module.words).length;
