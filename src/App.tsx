@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import pkg from '../package.json';
+import {MODULE_GUIDANCE,newModuleWithExample,isAutofilledModule} from './moduleGuidance.ts';
 import {COVER_BORDERS,coverBorderUrl,isCoverBorderId,type CoverBorderId} from './coverBorders.ts';
 import {
  ACTIVITY_SAFE_AREAS,activityBorderUrl,isActivityBorderReady,planLargeBorderFit,
@@ -289,7 +290,7 @@ export default function App() {
         modules[activeKey] = {type,reference:previous.verseReference,verse:previous.verseText};
       } else if (type === 'connect-verse') {
         modules[activeKey] = {type,verse:previous.verseText,seed:1};
-      } else if (type) modules[activeKey] = blankModule(type);
+      } else if (type) modules[activeKey] = newModuleWithExample(type);
       else delete modules[activeKey];
       const activityBorders=isActivityBorderReady(type||undefined)
         ?previous.activityBorders
@@ -524,14 +525,14 @@ export default function App() {
                       className={page === item.number ? 'active' : ''} aria-pressed={page === item.number}>Page {item.number}</button>)}
                   </div>
                   <label htmlFor="activity-region">Activity section</label>
-                  <select id="activity-region" value={activeRegion?.id ?? ''}
+                  <select id="activity-region" aria-describedby="activity-region-help" value={activeRegion?.id ?? ''}
                     onChange={(e) => setSelectedRegionId(e.target.value)}>
                     {available.map((region) =>
                       <option key={region.id} value={region.id}>{region.size.toUpperCase()} · {region.id.replaceAll('-', ' ')}</option>)}
                   </select>
-                  <p className="activity-section-info">Page {page} · {activeRegion?.width.toFixed(1)} × {activeRegion?.height.toFixed(1)} inches</p>
+                  <p id="activity-region-help" className="activity-section-info">Page {page} · {activeRegion?.size} activity · {activeRegion?.width.toFixed(1)} × {activeRegion?.height.toFixed(1)} inches · {activeRegion?moduleForSize(activeRegion.size).length:0} compatible module choices</p>
                   <label htmlFor="activity-type">Module</label>
-                  <select id="activity-type" value={activeModule?.type ?? ''}
+                  <select id="activity-type" aria-describedby="activity-module-help" value={activeModule?.type ?? ''}
                     onChange={(e) => setModuleType(e.target.value as ModuleId | '')}>
                     <option value="">No activity (placeholder)</option>
                     {activeRegion?.size==='medium'&&activeModule?.type==='connect-verse'&&
@@ -539,6 +540,13 @@ export default function App() {
                     {activeRegion && moduleForSize(activeRegion.size).map((definition) =>
                       <option key={definition.id} value={definition.id}>{definition.name}</option>)}
                   </select>
+                  {activeModule && <div id="activity-module-help" className="activity-guidance" role="note">
+                    <strong>{MODULES.find(item=>item.id===activeModule.type)?.name}</strong>
+                    <p>{MODULE_GUIDANCE[activeModule.type].instruction}</p>
+                    <small>{isAutofilledModule(activeModule.type)
+                      ?'Starts with lesson content. Editing here changes only this activity, not Lesson details.'
+                      :'A complete, editable example is included when you first select this activity. Replace it with your lesson content.'}</small>
+                  </div>}
                   {activeRegion&&<ActivityBorderPicker key={activeKey}
                     slotKey={activeKey} size={activeRegion.size}
                     value={draft.activityBorders[activeKey]??'none'}
@@ -612,7 +620,8 @@ export default function App() {
                     </button>
                   )}
                   {validation.length > 0 && (
-                    <div className="activity-validation" role="status">
+                    <div className="activity-validation" role="status" aria-live="polite">
+                      <strong>Fix {validation.length} {validation.length===1?'item':'items'} before exporting this activity:</strong>
                       {validation.map((error) => <p key={error}>{error}</p>)}
                     </div>
                   )}
