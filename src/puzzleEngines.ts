@@ -2,6 +2,8 @@
  * Deterministic word-search and maze generators. Pure logic, shared by the
  * browser preview, printable vector PDF and automatic solution checking.
  */
+import {validatePixelPicture,type PixelPicture} from './pixelPicture.ts';
+
 export const WORD_COLS = 12;
 export const WORD_ROWS = 10;
 export const MEDIUM_WORD_COLS = 9;
@@ -12,12 +14,13 @@ export const MAZE_ROWS = 14;
 export type WordSearch = { type: 'word-search'; words: string; seed: number };
 export type MediumWordSearch = { type: 'medium-word-search'; words: string; seed: number };
 export type TrueFalseMaze = { type: 'true-false-maze'; statement: string; answer: boolean; seed: number };
-export type PuzzleModule = WordSearch | MediumWordSearch | TrueFalseMaze;
+export type PuzzleModule = WordSearch | MediumWordSearch | TrueFalseMaze | PixelPicture;
 export type PuzzleId = PuzzleModule['type'];
 export const PUZZLE_MODULES = [
   { id: 'word-search', name: 'Word Search', size: 'large', description: 'A 12 × 10 grid with 4–12 words or short phrases.' },
   { id: 'medium-word-search', name: 'Word Search (Medium)', size: 'medium', description: 'A 9 × 9 grid with 1–6 words or short phrases.' },
   { id: 'true-false-maze', name: 'True or False Maze', size: 'medium', description: 'A real 41 × 14 maze with TRUE and FALSE exits.' },
+  { id: 'pixel-picture', name: 'Pixel Picture', size: 'medium', description: 'Complete missing letters, then color a 13 × 13 hidden picture.' },
 ] as const;
 
 const directions = [
@@ -28,16 +31,18 @@ export type WordPlacement = { word: string; x: number; y: number; dx: number; dy
 export type WordSearchGrid = { grid: string[][]; words: string[]; labels:string[]; placements: WordPlacement[]; cols?:number; rows?:number };
 
 export function isPuzzleId(value:unknown):value is PuzzleId {
-  return value === 'word-search' || value === 'medium-word-search' || value === 'true-false-maze';
+  return value === 'word-search' || value === 'medium-word-search' || value === 'true-false-maze' || value === 'pixel-picture';
 }
 export function blankPuzzleModule(type:PuzzleId):PuzzleModule {
   if(type==='word-search'||type==='medium-word-search')return {type,words:'',seed:1};
+  if(type==='pixel-picture')return {type,phrase:'',shapeId:'star',seed:1};
   return {type,statement:'',answer:true,seed:1};
 }
 export function isPuzzleModule(raw:unknown):raw is PuzzleModule {
   if(!raw || typeof raw!=='object')return false;
   const m=raw as Record<string,unknown>;
   if(!Number.isSafeInteger(m.seed)||Number(m.seed)<0)return false;
+  if(m.type==='pixel-picture')return typeof m.phrase==='string'&&typeof m.shapeId==='string';
   return m.type==='word-search'||m.type==='medium-word-search' ? typeof m.words==='string'
     : m.type==='true-false-maze' && typeof m.statement==='string' && typeof m.answer==='boolean';
 }
@@ -52,6 +57,7 @@ export function parseSearchWords(text:string):string[]{
   return parseSearchEntries(text).map(e=>e.word);
 }
 export function validatePuzzle(module:PuzzleModule):string[]{
+  if(module.type==='pixel-picture')return validatePixelPicture(module);
   if(module.type==='word-search'||module.type==='medium-word-search'){
     const medium=module.type==='medium-word-search';
     const entries=parseSearchEntries(module.words),words=entries.map(e=>e.word);
