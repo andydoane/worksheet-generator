@@ -47,6 +47,7 @@ export function contentClaimsForModule(
    const fact=f(text);
    return fact?'fact:'+fact.id:claim('fact-text',text);
   }));
+  case 'story-order':return distinct(textList(module.events).map(text=>claim('phrase',text)));
   case 'draw-picture':return [claim('drawing',module.prompt)];
   case 'draw-story':return distinct(textList(module.prompts).map(t=>claim('drawing',t)));
   case 'unscramble-words':return distinct([module.first,module.second]
