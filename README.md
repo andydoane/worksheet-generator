@@ -1,5 +1,16 @@
 # Worksheet Studio
 
+## PR 17i — Curriculum-aware module selection (v0.16.23)
+
+- **Choose a Bible Story** now offers **Build My Own Worksheet** alongside the existing *Remember the Story* and *Fun & Games* styles. Build My Own starts with the selected approved story's title, Scripture reference, Important Idea, and **BSB memory verse**, but leaves activity regions empty for teacher choices.
+- **Every one of the 27 module types** uses real lesson-prepared content when added or substituted in a story-based worksheet. In particular, adding **Finish the Verse** or **Unscramble the Verse** to an empty Medium region loads the already teacher-approved **[bracketed] answer words**, not plain memory-verse text. Multiple Choice prefers unused approved questions within the current booklet.
+- The optional `curriculumLessonId` is saved with the existing browser draft and restored by migration. It is resolved **only** against the live, signed-off **approved** lesson catalog; this does not authorize loading review-stage JSON. Manual edits to a module do not modify curriculum, and changing an existing module asks before replacing it.
+- If a lesson is withdrawn or a module's prepared content is missing, new modules stay empty with a visible explanation; no invented content is substituted. **Start from Scratch** and **Explore an Example** keep their existing sample/manual editing behavior, and old draft shapes remain compatible.
+- This PR deliberately does **not** alter the two recipe layouts, add new module algorithms, or change the PDF renderer. Tests use real approved Red Sea data, all 27 module converters, saved-draft round trips, approval gates, and a PDF containing an inserted BSB verse activity.
+
+**Manual smoke test:** Choose Red Sea → Remember the Story → select the empty Medium slot → Finish the Verse and confirm brackets. Replace it with Unscramble the Verse and confirm its distinct preselected blanks. Try Build My Own and several Small, Medium and Large modules; edit one, refresh/Continue and verify the lesson link and edits remain. Confirm cancelling a module-replacement prompt preserves your work. Try Start from Scratch and Explore an Example to verify no lesson-autofill leaks into them.
+
+
 ## PR 17g — Scalable, approval-gated curriculum library (v0.16.21)
 
 - **Data-only lesson PRs:** the frontend now automatically discovers only files named `curriculum/approved/<lesson-id>.lesson.json` through a compile-time Vite import, not `curriculum/review/`. No custom import/registry code is needed for each new approved lesson. This PR deliberately publishes **zero lessons**; the Red Sea story remains pending review.
