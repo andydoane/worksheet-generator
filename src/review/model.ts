@@ -1,5 +1,5 @@
 import {clipToWords,markSelectedWords,type Passage} from './bsb.ts';
-import {convertLessonActivities} from '../lessonActivityConverter.ts';
+import {convertLessonActivities,type LessonActivityData} from '../lessonActivityConverter.ts';
 import {validateModule} from '../modules.ts';
 
 export type Lesson=Record<string,any>;
@@ -137,7 +137,7 @@ export function checkReviewContent(lesson:Lesson):string[]{
   if(m&&m.markedVerse?.replace(/\[([^\[\]]+)\]/gu,'$1')!==memory?.text)
    errors.push(id+' does not reconstruct the exact memory verse.');
  }
- const converted=convertLessonActivities(lesson,{seed:1});
+ const converted=convertLessonActivities(lesson as unknown as LessonActivityData,{seed:1});
  for(const candidate of converted.candidates){
   const problems=validateModule(candidate.module);
   if(problems.length)errors.push(candidate.moduleId+': '+problems.join('; '));
