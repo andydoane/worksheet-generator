@@ -131,6 +131,12 @@ test('Public auto-discovery loads only explicit approved filenames with separate
   ['../curriculum/review/'+id+'.lesson.json']:approved,
  },manifest).length,0,'review path is not a public source');
  assert.equal(PUBLIC_LESSONS.length,0,'this PR registers no actual public lessons');
+ const appCatalog=await readFile(new URL('../src/publishedLessonCatalog.ts',import.meta.url),'utf8');
+ assert.match(appCatalog,/import\.meta\.env\s*\?import\.meta\.glob/u,
+  'Vite must actually run the transformed imports at runtime');
+ assert.doesNotMatch(appCatalog,/^\s*typeof import\.meta\.glob/gmu,
+  'compile-time import.meta.glob is not a runtime browser feature');
+ assert.doesNotMatch(appCatalog,/import\.meta\.glob\(['"]\.\.\/curriculum\/review/u);
 });
 test('Live repository scan writes truthful ready-vs-approved reports without accidentally publishing a lesson',async()=>{
  const report=await inspectCurriculumLibrary();
