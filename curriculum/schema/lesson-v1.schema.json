@@ -305,6 +305,9 @@
           },
           "notes": {
             "type": "string"
+          },
+          "standaloneReady": {
+            "type": "boolean"
           }
         },
         "additionalProperties": true
@@ -1857,6 +1860,35 @@
         },
         "notes": {
           "type": "string"
+        },
+        "teacherSignoff": {
+          "type": "object",
+          "required": [
+            "reviewer",
+            "date"
+          ],
+          "properties": {
+            "reviewer": {
+              "type": "string",
+              "minLength": 1
+            },
+            "date": {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+            },
+            "notes": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "resolvedReviewFlagIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
         }
       },
       "additionalProperties": false
