@@ -1,4 +1,6 @@
 import {validateModule,type ActivityModule,type ModuleId} from './modules.ts';
+import {generateWordSearch} from './puzzleEngines.ts';
+import {generatePixelPicture} from './pixelPicture.ts';
 
 /**
  * PR 17b: pure adapter from the versioned editorial lesson data to existing
@@ -21,6 +23,19 @@ type MultipleChoiceItem=Referenced&{
  sourceQuestionIds?:string[];
 };
 type FactSelection=Referenced&{factId:string;statement:string;isTrue:boolean};
+type LessonWordBank=Referenced&{words:string[]};
+type LessonSortWords=Referenced&{
+ related:string[];unrelated:string[];unrelatedOrigin?:string;
+};
+type LessonCheckboxWords=Referenced&{
+ correct:string[];incorrect:string[];incorrectOrigin?:string;
+};
+type LessonWordPair=Referenced&{id?:string;left:string;right:string};
+type LessonDrawPrompt=Referenced&{prompt:string};
+type LessonWhoAmI=Referenced&{clue:string;answer:string};
+type LessonUnscramble=Referenced&{answers:string[]};
+type LessonPixelPicture=Referenced&{phrase:string;shapeId?:string};
+
 export type LessonActivityData={
  schemaVersion:number;
  id:string;
@@ -32,6 +47,7 @@ export type LessonActivityData={
  reviewFlags?:{id:string;type:string}[];
  facts:LessonFact[];
  storyNotes?:{id:string;order:number;cleanText:string}[];
+ vocabulary?:{entries?:{term:string;sourceIds?:string[]}[]};
  preparedActivities:{
   storyOrder?:StoryOrderItem[];
   finishStory?:FinishStoryItem;
@@ -39,6 +55,16 @@ export type LessonActivityData={
   trueFalse?:FactSelection;
   trueFalseMaze?:FactSelection;
   sortStory?:FactSelection[];
+  drawPicture?:LessonDrawPrompt;
+  oddWords?:LessonSortWords;
+  unscrambleWords?:LessonUnscramble;
+  checkboxes?:LessonCheckboxWords;
+  whoAmI?:LessonWhoAmI;
+  matchWords?:LessonWordPair[];
+  mediumWordSearch?:LessonWordBank;
+  pixelPicture?:LessonPixelPicture;
+  drawStory?:LessonDrawPrompt[];
+  wordSearch?:LessonWordBank;
  };
 };
 export type CoreLessonModuleId=
@@ -47,8 +73,17 @@ export const CORE_LESSON_MODULE_IDS:readonly CoreLessonModuleId[]=[
  'story-order','finish-story','multiple-choice',
  'true-false','true-false-maze','sort-story',
 ];
+/** Ten word, visual and matching adapters added in PR 17e (roadmap PR 5). */
+export type WordVisualLessonModuleId=
+ 'draw-picture'|'odd-words'|'unscramble-words'|'checkboxes'|'who-am-i'|
+ 'match-words'|'medium-word-search'|'pixel-picture'|'draw-story'|'word-search';
+export const WORD_VISUAL_LESSON_MODULE_IDS:readonly WordVisualLessonModuleId[]=[
+ 'draw-picture','odd-words','unscramble-words','checkboxes','who-am-i',
+ 'match-words','medium-word-search','pixel-picture','draw-story','word-search',
+];
+export type LessonModuleId=CoreLessonModuleId|WordVisualLessonModuleId;
 export type ConvertedActivity={
- moduleId:CoreLessonModuleId;
+ moduleId:LessonModuleId;
  contentId:string;
  module:ActivityModule;
  sourceIds:string[];
@@ -58,7 +93,7 @@ export type ConvertedActivity={
  answerKey?:boolean;
 };
 export type ConversionDiagnostic={
- moduleId:CoreLessonModuleId;
+ moduleId:LessonModuleId;
  contentId:string;
  message:string;
 };
@@ -109,10 +144,10 @@ export function convertLessonActivities(
  const prepared=lesson.preparedActivities??{};
  const factsById=new Map((lesson.facts??[]).map(fact=>[fact.id,fact]));
  const originalIds=new Set((lesson.storyNotes??[]).map(note=>note.id));
- function issue(moduleId:CoreLessonModuleId,contentId:string,message:string){
+ function issue(moduleId:LessonModuleId,contentId:string,message:string){
   diagnostics.push({moduleId,contentId,message});
  }
- function add(moduleId:CoreLessonModuleId,contentId:string,module:ActivityModule,
+ function add(moduleId:LessonModuleId,contentId:string,module:ActivityModule,
   sourceIds:string[],origin:string|undefined,review:boolean,answerKey?:boolean){
   const errors=validateModule(module);
   if(errors.length){
@@ -212,6 +247,108 @@ export function convertLessonActivities(
     checked.some(x=>x.teacherReviewRequired===true));
   }
  }else issue('sort-story','sort-story','No prepared Sort the Story facts.');
+ // Word and picture content should share the same authored lesson data.
+ // In particular, vocabulary entries carry Story Note provenance even when
+ // a prepared module's word list only contains the words themselves.
+ const vocab=lesson.vocabulary?.entries??[];
+ const wordRefs=(words:string[])=>refs(...words.map(word=>
+  vocab.find(entry=>entry.term.toLocaleLowerCase()===word.toLocaleLowerCase())?.sourceIds));
+ if(prepared.drawPicture){
+  const item=prepared.drawPicture;
+  add('draw-picture','draw-picture',{type:'draw-picture',prompt:item.prompt},
+   refs(item.sourceIds),item.origin,item.teacherReviewRequired===true);
+ }else issue('draw-picture','draw-picture','No prepared drawing prompt.');
+ if(prepared.oddWords){
+  const item=prepared.oddWords;
+  const suggested=item.unrelatedOrigin==='suggested';
+  add('odd-words','odd-words',{
+   type:'odd-words',correct:item.related.join('\n'),
+   incorrect:item.unrelated.join('\n'),seed,
+  },refs(item.sourceIds,wordRefs(item.related)),
+  suggested?'suggested':item.origin,suggested||item.teacherReviewRequired===true);
+ }else issue('odd-words','odd-words','No prepared story/nonstory vocabulary.');
+ if(prepared.unscrambleWords){
+  const item=prepared.unscrambleWords;
+  if(item.answers.length!==2){
+   issue('unscramble-words','unscramble-words','Exactly two unscramble answers are required.');
+  }else{
+   add('unscramble-words','unscramble-words',{
+    type:'unscramble-words',first:item.answers[0],second:item.answers[1],seed,
+   },refs(item.sourceIds,wordRefs(item.answers)),
+    item.origin,item.teacherReviewRequired===true);
+  }
+ }else issue('unscramble-words','unscramble-words','No prepared unscramble answers.');
+ if(prepared.checkboxes){
+  const item=prepared.checkboxes;
+  const suggested=item.incorrectOrigin==='suggested';
+  add('checkboxes','checkboxes',{
+   type:'checkboxes',correct:item.correct.join('\n'),
+   incorrect:item.incorrect.join('\n'),seed,
+  },refs(item.sourceIds,wordRefs(item.correct)),
+  suggested?'suggested':item.origin,suggested||item.teacherReviewRequired===true);
+ }else issue('checkboxes','checkboxes','No prepared checkbox word bank.');
+ if(prepared.whoAmI){
+  const item=prepared.whoAmI;
+  add('who-am-i','who-am-i',{
+   type:'who-am-i',clue:item.clue,answer:item.answer,
+  },refs(item.sourceIds),item.origin,item.teacherReviewRequired===true);
+ }else issue('who-am-i','who-am-i','No prepared character clue.');
+ if(prepared.matchWords?.length){
+  const items=prepared.matchWords;
+  if(items.some(item=>item.left.includes(',')||item.right.includes(','))){
+   issue('match-words','match-words','Matching pairs cannot contain commas in either entry.');
+  }else{
+   add('match-words','match-words',{
+    type:'match-words',pairs:items.map(item=>item.left+','+item.right).join('\n'),seed,
+   },refs(...items.map(item=>item.sourceIds)),
+    items.some(item=>item.origin==='suggested')?'suggested':'adapted',
+    items.some(item=>item.teacherReviewRequired===true));
+  }
+ }else issue('match-words','match-words','No prepared matching pairs.');
+ function addSearch(moduleId:'word-search'|'medium-word-search',
+  contentId:string,item:LessonWordBank|undefined){
+  if(!item){
+   issue(moduleId,contentId,'No prepared word-search vocabulary.');return;
+  }
+  const module={type:moduleId,words:item.words.join('\n'),seed};
+  const errors=validateModule(module);
+  if(errors.length){issue(moduleId,contentId,errors.join(' '));return;}
+  try{generateWordSearch(module);}
+  catch(error){
+   issue(moduleId,contentId,'Word-search grid cannot be generated: '+
+    (error instanceof Error?error.message:String(error)));return;
+  }
+  add(moduleId,contentId,module,refs(item.sourceIds,wordRefs(item.words)),
+   item.origin,item.teacherReviewRequired===true);
+ }
+ addSearch('medium-word-search','medium-word-search',prepared.mediumWordSearch);
+ if(prepared.pixelPicture){
+  const item=prepared.pixelPicture;
+  const module={
+   type:'pixel-picture' as const,phrase:item.phrase,shapeId:item.shapeId??'star',seed,
+  };
+  const errors=validateModule(module);
+  if(errors.length)issue('pixel-picture','pixel-picture',errors.join(' '));
+  else{
+   try{
+    generatePixelPicture(module);
+    add('pixel-picture','pixel-picture',module,refs(item.sourceIds),
+     item.origin,item.teacherReviewRequired===true);
+   }catch(error){
+    issue('pixel-picture','pixel-picture','Pixel picture generation failed: '+
+     (error instanceof Error?error.message:String(error)));
+   }
+  }
+ }else issue('pixel-picture','pixel-picture','No prepared Pixel Picture phrase.');
+ if(prepared.drawStory?.length){
+  const items=prepared.drawStory;
+  add('draw-story','draw-story',{
+   type:'draw-story',prompts:items.map(item=>item.prompt).join('\n'),
+  },refs(...items.map(item=>item.sourceIds)),
+  items.some(item=>item.origin==='suggested')?'suggested':'adapted',
+  items.some(item=>item.teacherReviewRequired===true));
+ }else issue('draw-story','draw-story','No prepared drawing sequence.');
+ addSearch('word-search','word-search',prepared.wordSearch);
  return result;
 }
 /** Select an individual candidate by exact type and content ID. */
