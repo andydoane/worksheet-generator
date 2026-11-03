@@ -5,6 +5,7 @@ import {migrateDraftValue} from './draftMigration.ts';
 import {hasMeaningfulDraft,exampleWorksheetDraft} from './welcomeFlow.ts';
 import {PUBLIC_LESSONS,approvedForPublic,type PublicLessonEntry} from './publishedLessonCatalog.ts';
 import {buildWorksheetRecipe,type RecipeId} from './worksheetRecipes.ts';
+import {approvedLessonForDraft,buildYourOwnLessonDraft,chooseActivityForDraft} from './curriculumEditor.ts';
 import WelcomeScreen from './WelcomeScreen.tsx';
 import {explainActivityError} from './editorFeedback.ts';
 import {COVER_BORDERS,coverBorderUrl,isCoverBorderId,type CoverBorderId} from './coverBorders.ts';
@@ -29,7 +30,7 @@ import CryptogramEditor from './CryptogramEditor';
 import {isSpecialtyModule} from './specialtyModules.ts';
 import SpecialtyEditor from './SpecialtyEditor';
 import {
-  MODULES, blankModule, moduleForSize, readAssignments, slotKey, validateModule,
+  MODULES, moduleForSize, readAssignments, slotKey, validateModule,
   type ActivityModule, type ModuleAssignments, type ModuleId,
 } from './modules';
 import {
@@ -213,6 +214,7 @@ export default function App() {
   const [saved, setSaved] = useState(false);
   const [exporting, setExporting] = useState(false);
   const [exportError, setExportError] = useState<string | null>(null);
+  const [moduleNotice,setModuleNotice]=useState<string|null>(null);
   const [borderGalleryOpen,setBorderGalleryOpen]=useState(false);
 
   useEffect(() => {
@@ -250,6 +252,7 @@ export default function App() {
   }
 
   function selectPage(number: PageNumber) {
+    setModuleNotice(null);
     setPage(number);
     const layout = number === 1 ? DEFAULT_LAYOUTS[2] : draft.layouts[number];
     const first = getRegions(number, layout).find((region) => region.kind === 'activity');
@@ -257,6 +260,7 @@ export default function App() {
   }
 
   function selectRegion(number: PageNumber, regionId: string) {
+    setModuleNotice(null);
     setPage(number);
     setSelectedRegionId(regionId);
     setTab('activities');
@@ -281,6 +285,7 @@ export default function App() {
     // accidental erasure without requiring a complex custom modal.
     if (!window.confirm('Start a new worksheet? This will permanently clear the current lesson details, activities, layouts, and borders saved in this browser. This cannot be undone.')) return;
     setDraft(structuredClone(blank));
+    setModuleNotice(null);
     setPage(1);
     setSelectedRegionId('cover-activity');
     setTab('details');
@@ -297,6 +302,7 @@ export default function App() {
       'Replace your current saved worksheet? This will overwrite the worksheet saved in this browser. You can cancel to keep working on it.'
     ))return false;
     setDraft(structuredClone(next));
+    setModuleNotice(null);
     setPage(1);
     setSelectedRegionId('cover-activity');
     setTab('details');
@@ -319,29 +325,33 @@ export default function App() {
     }
   }
 
+  function choosePublishedBuildOwn(entry:PublicLessonEntry):string|null{
+    if(!approvedForPublic(entry))return 'This curriculum story has not been approved for public use.';
+    try{
+      startWorksheet(buildYourOwnLessonDraft(entry));
+      return null;
+    }catch(error){
+      return error instanceof Error?error.message:'Could not prepare this lesson-based worksheet.';
+    }
+  }
+
   function setModuleType(type: ModuleId | '') {
-    if (!activeKey) return;
-    setDraft((previous) => {
-      const modules = { ...previous.modules };
-      if (type === 'first-letters') {
-        modules[activeKey] = { type, reference: previous.verseReference, verse: previous.verseText };
-      } else if (type === 'finish-verse' || type === 'unscramble-verse') {
-        modules[activeKey] = { type, reference: previous.verseReference, verse: previous.verseText, seed: 1 };
-      } else if (type === 'verse-cryptogram') {
-        modules[activeKey] = {type,reference:previous.verseReference,verse:previous.verseText,seed:1};
-      } else if (type === 'big-idea-cryptogram' || type === 'connect-big-idea') {
-        modules[activeKey] = {type,idea:previous.bigIdea,seed:1};
-      } else if (type === 'spiral-verse' || type === 'upside-down-verse') {
-        modules[activeKey] = {type,reference:previous.verseReference,verse:previous.verseText};
-      } else if (type === 'connect-verse') {
-        modules[activeKey] = {type,verse:previous.verseText,seed:1};
-      } else if (type) modules[activeKey] = blankModule(type);
+    if (!activeKey||type===activeModule?.type||(!type&&!activeModule))return;
+    // Ask *before* updating state; React may replay state updaters in StrictMode.
+    if(activeModule&&!window.confirm(
+      'Replace '+activeModule.type.replaceAll('-',' ')+' in this region? Changes you made to that activity will be lost. All other activities will stay as they are.'
+    ))return;
+    const selected=type?chooseActivityForDraft(type,draft,activeKey,PUBLIC_LESSONS):null;
+    setDraft(previous=>{
+      const modules={...previous.modules};
+      if(selected)modules[activeKey]=selected.module;
       else delete modules[activeKey];
       const activityBorders=isActivityBorderReady(type||undefined)
         ?previous.activityBorders
         :setActivityBorder(previous.activityBorders,activeKey,'none');
-      return { ...previous, modules,activityBorders };
+      return {...previous,modules,activityBorders};
     });
+    setModuleNotice(selected?.message??'Activity removed from this region.');
   }
 
   function chooseActivityBorder(id:ActivityBorderId){
@@ -394,6 +404,7 @@ export default function App() {
   const activeRegion = available.find((region) => region.id === selectedRegionId) ?? available[0];
   const activeKey = activeRegion ? slotKey(page, activeRegion.id) : '';
   const activeModule = draft.modules[activeKey];
+  const approvedLesson=approvedLessonForDraft(draft,PUBLIC_LESSONS);
   const showSolution = solutionKey === activeKey;
   const validation = activeModule ? validateModule(activeModule) : [];
   const activityFieldRef=useRef<HTMLDivElement>(null);
@@ -423,6 +434,7 @@ export default function App() {
     onStartBlank={()=>startWorksheet(structuredClone(blank))}
     onExploreExample={()=>startWorksheet(exampleWorksheetDraft())}
     onChooseRecipe={choosePublishedRecipe}
+    onBuildOwn={choosePublishedBuildOwn}
   />;
 
   return (
@@ -589,6 +601,14 @@ export default function App() {
                     })}
                   </select>
                   <p id="activity-region-help" className="activity-section-info">Page {page} · {activeRegion?.size} activity · {activeRegion?.width.toFixed(1)} × {activeRegion?.height.toFixed(1)} inches · {activeRegion?moduleForSize(activeRegion.size).length:0} compatible module choices</p>
+                  {approvedLesson&&<p className="activity-section-info" role="status">
+                    <strong>Approved lesson:</strong> {approvedLesson.lesson.lessonDetails.title}.
+                    New activities automatically use this lesson's prepared content; your edits stay independent.
+                  </p>}
+                  {draft.curriculumLessonId&&!approvedLesson&&<p className="activity-validation" role="status">
+                    This draft's original Bible lesson is no longer available in the approved catalog.
+                    Existing activity content is safe; new activities will start empty.
+                  </p>}
                   <label htmlFor="activity-type">Module</label>
                   <select id="activity-type" aria-describedby="activity-module-help" value={activeModule?.type ?? ''}
                     onChange={(e) => setModuleType(e.target.value as ModuleId | '')}>
@@ -598,11 +618,14 @@ export default function App() {
                     {activeRegion && moduleForSize(activeRegion.size).map((definition) =>
                       <option key={definition.id} value={definition.id}>{definition.name}</option>)}
                   </select>
+                  {moduleNotice&&<p className="activity-section-info" role="status" aria-live="polite">{moduleNotice}</p>}
                   {activeModule && <div id="activity-module-help" className="activity-guidance" role="note">
                     <strong>{MODULES.find(item=>item.id===activeModule.type)?.name}</strong>
                     <p>{MODULE_GUIDANCE[activeModule.type].instruction}</p>
-                    <small>{isAutofilledModule(activeModule.type)
-                      ?'Starts with lesson content. Editing here changes only this activity, not Lesson details.'
+                    <small>{approvedLesson
+                      ?'Uses this lesson\'s prepared content when selected. Editing here changes only this activity, not the approved curriculum or other activities.'
+                      :isAutofilledModule(activeModule.type)
+                      ?'Starts with lesson details. Editing here changes only this activity, not Lesson details.'
                       :'Gray example text is only a placeholder. Start typing to replace it; only your text is saved or printed.'}</small>
                   </div>}
                   {validation.length > 0 && (
