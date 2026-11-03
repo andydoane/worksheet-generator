@@ -73,7 +73,6 @@ export function lessonContentPool(lesson:LessonActivityData,seed=1):LessonConten
  const result:LessonContentPool={...base,candidates:base.candidates.map(c=>({
   ...c,claims:contentClaimsForModule(c.module,lesson),
  }))};
- if(!base.publicApproved)return result;
  const data=lesson as LessonWithOptions;
  const seen=new Set(result.candidates.map(c=>c.moduleId+'|'+JSON.stringify(c.module)));
  function add(type:ModuleId,id:string,module:ActivityModule,origin:string|undefined,
