@@ -87,10 +87,21 @@ export default function ReviewApp(){
  }
  async function loadRedSea(){
   try{
-   const url='https://raw.githubusercontent.com/andydoane/worksheet-generator/main/curriculum/review/ot-031-god-parts-the-red-sea.json';
-   const response=await fetch(url,{cache:'no-store'});
-   if(!response.ok)throw Error('GitHub returned '+response.status);
-   acceptLesson(await response.json());
+   // Once a curriculum is approved its review-stage JSON is removed to
+   // prevent duplicate IDs. Prefer the signed-off version, but allow
+   // loading the original review-stage version before first publication.
+   const root='https://raw.githubusercontent.com/andydoane/worksheet-generator/main/curriculum/';
+   const paths=[
+    'approved/ot-031-god-parts-the-red-sea.lesson.json',
+    'review/ot-031-god-parts-the-red-sea.json',
+   ];
+   let data:unknown=null;
+   for(const path of paths){
+    const response=await fetch(root+path,{cache:'no-store'});
+    if(response.ok){data=await response.json();break;}
+   }
+   if(!data)throw Error('Neither approved nor review-stage Red Sea JSON could be fetched.');
+   acceptLesson(data);
   }catch(e){setError('Could not fetch lesson from GitHub. Use file upload instead. '+String((e as Error).message??e));}
  }
  async function loadBsb(e:ChangeEvent<HTMLInputElement>){
