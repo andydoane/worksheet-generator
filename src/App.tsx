@@ -606,7 +606,7 @@ export default function App() {
                     <strong>Approved lesson:</strong> {approvedLesson.lesson.lessonDetails.title}.
                     New activities automatically use this lesson's prepared content; your edits stay independent.
                   </p>}
-                  {draft.curriculumLessonId&&!approvedLesson&&<p className="activity-validation" role="status">
+                  {draft.curriculumLessonId&&!approvedLesson&&<p className="curriculum-context-warning" role="status">
                     This draft's original Bible lesson is no longer available in the approved catalog.
                     Existing activity content is safe; new activities will start empty.
                   </p>}
