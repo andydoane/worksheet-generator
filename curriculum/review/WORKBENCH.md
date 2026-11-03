@@ -19,7 +19,7 @@ the URL. Only repository collaborators have permission to commit changes.
    the Mistakes paragraph and corrections, suggested unrelated vocabulary,
    age-suitability wording, the Important Idea wording, and Scripture.
 3. In **Drawing activities**, check Small scene phrases (used after "Draw a picture of") separately from Large **Draw the Story** complete narrative captions. The buttons can normalize legacy Small "Draw ..." instructions or explicitly copy source-linked, approved Story Order sentences into Large captions. Each caption is editable; the source-note text appears alongside it. Re-run preflight after edits. The original Story Notes never change.
-5. Edit and mark each review task as reviewed. False-fact edits are propagated
+4. Edit and mark each review task as reviewed. False-fact edits are propagated
    to every matching Sort/True-False module reference. The Important Idea
    is likewise kept consistent between its two puzzle activities.
 5. In **BSB memory verse**, look up a single verse or a short verse range in the
