@@ -1,5 +1,13 @@
 # Worksheet Studio
 
+## PR 17a — Pixel Picture title correction + Curriculum v1 foundation (v0.16.15)
+
+- **Pixel Picture** corrects the printed heading from “Pixel Perfect” while retaining the existing measured, centered preview/PDF layout.
+- Adds a versioned lesson data schema, a full **review-stage** Red Sea curriculum JSON, the original conversion report and teacher-review checklist. All 7 original Story Notes, 38 questions, 24 facts, 27 prepared categories and 10 review flags are preserved.
+- Adds `npm run validate:curriculum` and regression tests checking schema shape, stable Story Note order, source provenance, cross-references, teacher-review gates, and title parity.
+- **No public preset is enabled** before teacher signoff; no changes to saved worksheet behavior, UI navigation, or worksheet recipes. The pending source JSON remains outside the Vite app bundle.
+- See [curriculum/README.md](curriculum/README.md) for the format, editorial policy and future-lesson workflow.
+
 ## PR 16n — Pixel Picture balanced print typography (v0.16.14)
 
 - **Restore the print heading** `PIXEL PERFECT` (while retaining the `Pixel Picture` activity name), and vertically center the **heading, instructions, and uppercase phrase as one group** inside the left Medium panel.
