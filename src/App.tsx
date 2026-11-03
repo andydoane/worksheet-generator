@@ -5,6 +5,11 @@ import {migrateDraftValue} from './draftMigration.ts';
 import {hasMeaningfulDraft,exampleWorksheetDraft} from './welcomeFlow.ts';
 import {PUBLIC_LESSONS,approvedForPublic,type PublicLessonEntry} from './publishedLessonCatalog.ts';
 import {buildWorksheetRecipe,type RecipeId} from './worksheetRecipes.ts';
+import {WORKSHEET_RECIPES} from './worksheetRecipes.ts';
+import {
+ createLessonWorksheet,isWorksheetStartId,needsLessonSwitchConfirmation,
+ type WorksheetStartId,
+} from './lessonQuickSwitch.ts';
 import {approvedLessonForDraft,buildYourOwnLessonDraft,canRecreateApprovedActivity,chooseActivityForDraft,isActivityCustomized,originalApprovedActivity,sameActivityContent} from './curriculumEditor.ts';
 import WelcomeScreen from './WelcomeScreen.tsx';
 import {explainActivityError} from './editorFeedback.ts';
@@ -218,6 +223,9 @@ export default function App() {
   const [exporting, setExporting] = useState(false);
   const [exportError, setExportError] = useState<string | null>(null);
   const [moduleNotice,setModuleNotice]=useState<string|null>(null);
+  const [lessonPicker,setLessonPicker]=useState<'presets'|'stories'|'story-presets'|null>(null);
+  const [nextStoryId,setNextStoryId]=useState<string|null>(null);
+  const [lessonPickerError,setLessonPickerError]=useState<string|null>(null);
   const [borderGalleryOpen,setBorderGalleryOpen]=useState(false);
 
   useEffect(() => {
@@ -289,6 +297,9 @@ export default function App() {
     if (!window.confirm('Start a new worksheet? This will permanently clear the current lesson details, activities, layouts, and borders saved in this browser. This cannot be undone.')) return;
     setDraft(structuredClone(blank));
     setModuleNotice(null);
+    setLessonPicker(null);
+    setLessonPickerError(null);
+    setNextStoryId(null);
     setPage(1);
     setSelectedRegionId('cover-activity');
     setTab('details');
@@ -299,13 +310,16 @@ export default function App() {
     focusTitleField();
   }
 
-  function startWorksheet(next:Draft):boolean{
+  function startWorksheet(next:Draft,skipConfirmation=false):boolean{
     if(exporting)return false;
-    if(hasMeaningfulDraft(draft)&&!window.confirm(
+    if(!skipConfirmation&&hasMeaningfulDraft(draft)&&!window.confirm(
       'Replace your current saved worksheet? This will overwrite the worksheet saved in this browser. You can cancel to keep working on it.'
     ))return false;
     setDraft(structuredClone(next));
     setModuleNotice(null);
+    setLessonPicker(null);
+    setLessonPickerError(null);
+    setNextStoryId(null);
     setPage(1);
     setSelectedRegionId('cover-activity');
     setTab('details');
@@ -335,6 +349,41 @@ export default function App() {
       return null;
     }catch(error){
       return error instanceof Error?error.message:'Could not prepare this lesson-based worksheet.';
+    }
+  }
+
+  function openLessonPicker(panel:'presets'|'stories'){
+    setLessonPicker(panel);
+    setNextStoryId(null);
+    setLessonPickerError(null);
+  }
+
+  function chooseQuickLessonWorksheet(startId:WorksheetStartId){
+    if(exporting)return;
+    const entry=lessonPicker==='story-presets'
+      ?PUBLIC_LESSONS.find(item=>item.lesson.id===nextStoryId&&approvedForPublic(item))
+      :approvedLessonForDraft(draft,PUBLIC_LESSONS);
+    if(!entry){
+      setLessonPickerError('That Bible story is not available in the approved library.');
+      return;
+    }
+    if(entry.lesson.id===draft.curriculumLessonId&&startId===draft.worksheetPresetId){
+      setLessonPicker(null);
+      setLessonPickerError(null);
+      return;
+    }
+    try{
+      // Generate the next booklet before asking permission to replace the
+      // existing single-draft worksheet. Failure leaves the old draft intact.
+      const next=createLessonWorksheet(entry,startId);
+      if(needsLessonSwitchConfirmation(draft,PUBLIC_LESSONS)&&!window.confirm(
+        'Replace this customized worksheet? Changes to lesson details, activities, '+
+        'layouts and borders will be lost. You can cancel to keep your current work.'
+      ))return;
+      startWorksheet(next,true);
+    }catch(error){
+      setLessonPickerError(error instanceof Error?error.message:
+        'Could not load this preset. Your current worksheet is unchanged.');
     }
   }
 
@@ -545,6 +594,55 @@ export default function App() {
               </div>
               {tab === 'details' ? (
                 <div className="fields">
+                  {draft.curriculumLessonId&&<section className="lesson-switcher" aria-label="Bible lesson and preset navigation">
+                    <div className="lesson-switcher-heading">
+                      <strong>{approvedLesson?.lesson.lessonDetails.title??'Previously selected Bible story'}</strong>
+                      <small>{draft.worksheetPresetId==='build-own'?'Build My Own Worksheet':
+                        WORKSHEET_RECIPES.find(item=>item.id===draft.worksheetPresetId)?.name??'Custom worksheet'}</small>
+                    </div>
+                    <div className="lesson-switcher-actions">
+                      <button type="button" disabled={!approvedLesson||exporting}
+                        onClick={()=>openLessonPicker('presets')}>
+                        {draft.worksheetPresetId==='build-own'?'Choose a Preset':'Change Preset'}
+                      </button>
+                      <button type="button" disabled={exporting}
+                        onClick={()=>openLessonPicker('stories')}>Change Story</button>
+                    </div>
+                    {lessonPicker&&<div className="lesson-switcher-picker" role="group"
+                      aria-label={lessonPicker==='stories'?'Choose a different Bible story':'Choose worksheet preset'}>
+                      <div className="lesson-switcher-picker-header">
+                        <strong>{lessonPicker==='presets'?'Choose a preset for this story':
+                          lessonPicker==='stories'?'Choose a Bible story':'Choose a worksheet for the new story'}</strong>
+                        <button type="button" onClick={()=>{setLessonPicker(null);setLessonPickerError(null);setNextStoryId(null);}}>Cancel</button>
+                      </div>
+                      {lessonPicker==='stories'
+                        ?<div className="lesson-switcher-options">
+                          {PUBLIC_LESSONS.filter(approvedForPublic).map(entry=><button type="button"
+                            key={entry.lesson.id} onClick={()=>{setNextStoryId(entry.lesson.id);setLessonPickerError(null);setLessonPicker('story-presets');}}>
+                            <strong>{entry.lesson.lessonDetails.title}</strong>
+                            <small>{entry.lesson.lessonDetails.scriptureDisplay??entry.lesson.lessonDetails.scripturePassages?.join(', ')}</small>
+                          </button>)}
+                        </div>
+                        :<div className="lesson-switcher-options">
+                          {lessonPicker==='story-presets'&&<button type="button" className="lesson-picker-back"
+                            onClick={()=>{setLessonPicker('stories');setLessonPickerError(null);}}>‹ Back to stories</button>}
+                          {WORKSHEET_RECIPES.map(recipe=><button type="button" key={recipe.id}
+                            disabled={lessonPicker==='presets'&&draft.worksheetPresetId===recipe.id}
+                            onClick={()=>chooseQuickLessonWorksheet(recipe.id)}>
+                            <strong>{recipe.name}{draft.worksheetPresetId===recipe.id?' · Current':''}</strong>
+                            <small>{recipe.description}</small>
+                          </button>)}
+                          <button type="button" disabled={lessonPicker==='presets'&&draft.worksheetPresetId==='build-own'}
+                            onClick={()=>chooseQuickLessonWorksheet('build-own')}>
+                            <strong>Build My Own Worksheet{draft.worksheetPresetId==='build-own'?' · Current':''}</strong>
+                            <small>Start a fresh booklet using this story's details and choose your own activities.</small>
+                          </button>
+                        </div>}
+                      {lessonPickerError&&<p className="lesson-switcher-error" role="alert">{lessonPickerError}</p>}
+                    </div>}
+                    <small className="lesson-switcher-hint">Choosing another preset or story replaces this one browser-saved worksheet.
+                      Customized work is protected by confirmation.</small>
+                  </section>}
                   <div className="field">
                     <label htmlFor="title">Worksheet title</label>
                     <input id="title" ref={titleInputRef} value={draft.title} onChange={(e) => edit('title', e.target.value)} placeholder="e.g. David and Goliath" maxLength={100} />
