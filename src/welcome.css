@@ -1,0 +1,53 @@
+/* PR17d: welcome-first onboarding. Keeps the existing editor styles intact. */
+.welcome-shell { min-height: 100vh; background: radial-gradient(circle at 12% 8%, #e9f3e6 0, transparent 42%), #f7f9f5; color: #1c3f3d; display: flex; flex-direction: column; }
+.welcome-header { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 24px max(24px, calc((100vw - 1080px)/2)); background: #fff; border-bottom: 1px solid #e0e9e0; }
+.welcome-brand { display: flex; align-items: center; gap: 12px; }
+.welcome-mark { width: 45px; height: 45px; position: relative; background: #d9ecdf; color: #1d5450; border-radius: 12px; display: grid; place-items: center; font: 700 29px 'Zilla Slab', serif; }
+.welcome-mark span { position: absolute; top: 2px; right: 5px; color: #d58f55; font: 13px sans-serif; }
+.welcome-brand strong, .welcome-brand small { display: block; }
+.welcome-brand strong { font-size: 16px; font-weight: 900; }
+.welcome-brand small { font-size: 11px; margin-top: 3px; color: #718e83; }
+.welcome-header-hint { font-weight: 850; font-size: 11px; color: #829a8d; letter-spacing: .5px; }
+.welcome-main { width: min(100% - 40px, 700px); margin: 0 auto; padding: clamp(52px, 8vh, 95px) 0 55px; flex: 1; }
+.welcome-eyebrow { color: #468f76; letter-spacing: 2px; font-size: 10px; font-weight: 900; margin: 0 0 15px; }
+.welcome-main h1 { font: 400 clamp(46px, 6vw, 65px)/1 'Mouse Memoirs', sans-serif; color: #164447; margin: 0 0 14px; }
+.welcome-main h1 em { color: #d48a55; font-style: normal; }
+.welcome-intro { color: #6b8377; font-size: 14px; line-height: 1.85; max-width: 590px; margin: 0 0 34px; }
+.welcome-options { display: grid; gap: 13px; }
+.welcome-choice { appearance: none; width: 100%; display: flex; text-align: left; align-items: center; gap: 18px; padding: 20px 20px; border: 1px solid #dae6dd; border-radius: 15px; background: #fff; color: #214b43; box-shadow: 0 7px 20px rgba(29,65,50,.035); transition: border-color .15s, box-shadow .15s, transform .15s; }
+.welcome-choice:hover { border-color: #88b5a0; box-shadow: 0 9px 24px rgba(29,65,50,.10); transform: translateY(-1px); }
+.welcome-choice-icon { flex: 0 0 56px; height: 56px; display: grid; place-items: center; border-radius: 13px; background: #edf5e8; color: #307f68; font-size: 28px; line-height: 1; }
+.welcome-choice > span:nth-child(2) { flex: 1; min-width: 0; }
+.welcome-choice strong { display: block; font-size: 16px; font-weight: 900; }
+.welcome-choice small { display: block; color: #738b7e; font-size: 12px; font-weight: 550; line-height: 1.6; margin-top: 5px; overflow-wrap: anywhere; }
+.welcome-chevron { color: #7c9a89; font: 400 31px 'Mouse Memoirs', sans-serif; }
+.welcome-resume { border-color: #9cc9ab; background: #f3faf2; }
+.welcome-resume .welcome-choice-icon { background: #d7eddd; }
+.welcome-footnote { margin: 24px 0 0; color: #819789; font-size: 11px; line-height: 1.65; }
+.welcome-footer { text-align: center; border-top: 1px solid #e8eee7; padding: 16px; color: #8aa093; font-size: 11px; }
+.welcome-back { padding: 8px 0; border: 0; background: transparent; color: #3f8a75; font-size: 12px; font-weight: 850; margin-bottom: 34px; }
+.welcome-back:hover { text-decoration: underline; }
+.welcome-empty { background: #fff; border: 1px dashed #bed8c4; border-radius: 17px; text-align: center; padding: 40px 30px; }
+.welcome-empty-icon { display: grid; place-items: center; width: 61px; height: 61px; margin: 0 auto 15px; font-size: 28px; background: #edf5ea; color: #4f8f77; border-radius: 16px; }
+.welcome-empty h2 { margin: 0 0 10px; font-size: 20px; }
+.welcome-empty p { font-size: 13px; color: #6d8576; line-height: 1.75; max-width: 450px; margin: 0 auto 25px; }
+.welcome-empty-actions { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+.welcome-empty-actions button { background: #2e7e69; color: white; border-radius: 10px; border: 1px solid #2e7e69; padding: 12px 17px; font-size: 12px; font-weight: 900; }
+.welcome-empty-actions button.welcome-secondary { background: white; color: #2e7e69; border-color: #bdd9cb; }
+.welcome-error { background: #fff2e7; border: 1px solid #ebbfa4; padding: 14px; border-radius: 10px; color: #91562f; font-size: 12px; line-height: 1.6; }
+.welcome-home-button { background: #fff; color: #376b5b; font-size: 12px; font-weight: 900; border: 1px solid #dce8dd; border-radius: 8px; padding: 10px 12px; }
+.welcome-home-button:hover { background: #f2f8f2; }
+@media (max-width: 700px) {
+ .welcome-header { padding: 16px 20px; }
+ .welcome-header-hint { display: none; }
+ .welcome-main { padding: 48px 0 50px; }
+ .welcome-choice { padding: 15px; gap: 12px; }
+ .welcome-choice-icon { flex-basis: 46px; height: 46px; font-size: 23px; }
+ .welcome-choice strong { font-size: 14px; }
+ .welcome-choice small { font-size: 11px; }
+ .welcome-empty { padding: 30px 18px; }
+}
+@media (prefers-reduced-motion: reduce) {
+ .welcome-choice { transition: none; }
+ .welcome-choice:hover { transform: none; }
+}
