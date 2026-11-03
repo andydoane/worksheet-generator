@@ -10,6 +10,7 @@ import {DEFAULT_LAYOUTS,getRegions} from '../src/booklet.ts';
 import {moduleForSize,validateModule} from '../src/modules.ts';
 import {createBookletPdf} from '../src/pdf.ts';
 import {validateLesson} from '../scripts/validate-curriculum.mjs';
+import {normalizeLegacySmallDrawingScenes,useMatchingStoryOrderCaptions} from '../src/review/model.ts';
 
 const fromRepo=async path=>readFile(new URL('../'+path,import.meta.url),'utf8');
 const getJson=async path=>JSON.parse(await fromRepo(path));
@@ -69,7 +70,7 @@ test('Review-stage Red Sea lesson is completely absent from the public catalog u
  const flipped=structuredClone(redSea);
  flipped.publication.approved=true;
  assert.equal(approvedForPublic({lesson:flipped,scriptureDistributionCleared:true}),false);
- const approved=structuredClone(redSea);
+ const approved=useMatchingStoryOrderCaptions(normalizeLegacySmallDrawingScenes(redSea));
  approved.publication.approved=true;
  approved.publication.status='approved';
  approved.publication.teacherSignoff={reviewer:'Curriculum author',date:'2026-11-02'};
