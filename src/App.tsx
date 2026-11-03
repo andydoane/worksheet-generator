@@ -5,7 +5,7 @@ import {migrateDraftValue} from './draftMigration.ts';
 import {hasMeaningfulDraft,exampleWorksheetDraft} from './welcomeFlow.ts';
 import {PUBLIC_LESSONS,approvedForPublic,type PublicLessonEntry} from './publishedLessonCatalog.ts';
 import {buildWorksheetRecipe,type RecipeId} from './worksheetRecipes.ts';
-import {approvedLessonForDraft,buildYourOwnLessonDraft,chooseActivityForDraft} from './curriculumEditor.ts';
+import {approvedLessonForDraft,buildYourOwnLessonDraft,chooseActivityForDraft,isActivityCustomized,originalApprovedActivity,sameActivityContent} from './curriculumEditor.ts';
 import WelcomeScreen from './WelcomeScreen.tsx';
 import {explainActivityError} from './editorFeedback.ts';
 import {COVER_BORDERS,coverBorderUrl,isCoverBorderId,type CoverBorderId} from './coverBorders.ts';
@@ -50,6 +50,7 @@ type Draft = {
   modules: ModuleAssignments;
   activityBorders: ActivityBorders;
   curriculumLessonId?:string;
+  activityDefaults?:ModuleAssignments;
 };
 
 type EditorTab = 'details' | 'layouts' | 'activities';
@@ -337,22 +338,61 @@ export default function App() {
   }
 
   function setModuleType(type: ModuleId | '') {
-    if (!activeKey||type===activeModule?.type||(!type&&!activeModule))return;
-    // Ask *before* updating state; React may replay state updaters in StrictMode.
-    if(activeModule&&!window.confirm(
-      'Replace '+activeModule.type.replaceAll('-',' ')+' in this region? Changes you made to that activity will be lost. All other activities will stay as they are.'
+    if(!activeKey||type===activeModule?.type||(!type&&!activeModule))return;
+    const hasEditedContent=isActivityCustomized(draft,activeKey,PUBLIC_LESSONS);
+    const borderWillBeLost=(draft.activityBorders[activeKey]??'none')!=='none'&&
+      !isActivityBorderReady(type||undefined);
+    // A pristine preset can be recreated immediately from its approved lesson.
+    // Prompt only if switching would discard actual edits or a chosen border.
+    // Confirm outside setDraft: React StrictMode may replay state updaters.
+    if((hasEditedContent||borderWillBeLost)&&!window.confirm(
+      'Replace '+(activeModule?.type??'activity').replaceAll('-',' ')+
+      ' in this region? Your customized '+(hasEditedContent?'activity content':'activity border')+
+      ' will be lost. All other activities will stay as they are.'
     ))return;
     const selected=type?chooseActivityForDraft(type,draft,activeKey,PUBLIC_LESSONS):null;
     setDraft(previous=>{
       const modules={...previous.modules};
       if(selected)modules[activeKey]=selected.module;
       else delete modules[activeKey];
+      // Snapshots represent the initial approved/manual content for this
+      // region. Editing a module never changes its saved starting value.
+      const activityDefaults={...previous.activityDefaults};
+      if(selected&&selected.source!=='unavailable')
+        activityDefaults[activeKey]=structuredClone(selected.module);
+      else delete activityDefaults[activeKey];
       const activityBorders=isActivityBorderReady(type||undefined)
         ?previous.activityBorders
         :setActivityBorder(previous.activityBorders,activeKey,'none');
-      return {...previous,modules,activityBorders};
+      const next:Draft={...previous,modules,activityBorders};
+      if(Object.keys(activityDefaults).length)next.activityDefaults=activityDefaults;
+      else delete next.activityDefaults;
+      return next;
     });
     setModuleNotice(selected?.message??'Activity removed from this region.');
+  }
+
+  function restoreOriginalActivity(){
+    if(!activeKey||!activeModule)return;
+    const original=originalApprovedActivity(draft,activeKey,PUBLIC_LESSONS);
+    if(!original){
+      setModuleNotice('No approved original content is available for this activity.');
+      return;
+    }
+    if(sameActivityContent(activeModule,original)){
+      setModuleNotice('This activity already matches its original approved content.');
+      return;
+    }
+    if(!window.confirm(
+      'Restore this activity to its original approved lesson content? '+
+      'Your edits to this activity will be lost. Other activities and borders will remain unchanged.'
+    ))return;
+    setDraft(previous=>{
+      const modules={...previous.modules,[activeKey]:structuredClone(original)};
+      const activityDefaults={...previous.activityDefaults,[activeKey]:structuredClone(original)};
+      return {...previous,modules,activityDefaults};
+    });
+    setModuleNotice('Original approved lesson activity restored. Other activities are unchanged.');
   }
 
   function chooseActivityBorder(id:ActivityBorderId){
@@ -629,6 +669,10 @@ export default function App() {
                       ?'Starts with lesson details. Editing here changes only this activity, not Lesson details.'
                       :'Gray example text is only a placeholder. Start typing to replace it; only your text is saved or printed.'}</small>
                   </div>}
+                  {approvedLesson&&activeModule&&<button type="button"
+                    className="restore-original-activity" onClick={restoreOriginalActivity}>
+                    Restore Original Activity
+                  </button>}
                   {validation.length > 0 && (
                     <div className="activity-validation" role="status" aria-live="polite">
                       <strong>Fix {validation.length} {validation.length===1?'item':'items'} before exporting this activity:</strong>
