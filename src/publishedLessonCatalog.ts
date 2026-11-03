@@ -85,14 +85,17 @@ export function assemblePublicLessonCatalog(
  return result;
 }
 
-// The glob is expanded at build time by Vite. Node-based regression tests do
-// not provide import.meta.glob and intentionally see an empty built-in catalog.
+// Vite transforms the literal glob calls into bundled imports and provides
+// import.meta.env at runtime. Node's native ESM loader has no import.meta.env,
+// so regression tests safely see an empty built-in catalog. Do NOT test for
+// typeof import.meta.glob here: that function is compile-time-only in Vite
+// and need not exist in the browser after the transform.
 const lessonFiles:Record<string,unknown>=
- typeof import.meta.glob==='function'
+ import.meta.env
   ?import.meta.glob('../curriculum/approved/*.lesson.json',{eager:true,import:'default'})
   :{};
 const rightsFiles:Record<string,unknown>=
- typeof import.meta.glob==='function'
+ import.meta.env
   ?import.meta.glob('../curriculum/approved/rights-manifest.json',{eager:true,import:'default'})
   :{};
 export const PUBLIC_LESSONS:readonly PublicLessonEntry[]=
