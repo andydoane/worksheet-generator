@@ -13,6 +13,7 @@ import {
 } from '../src/publishedLessonCatalog.ts';
 import {generateCrossword,checkCrossword} from '../src/specialtyModules.ts';
 import {convertLessonActivities,findLessonCandidate} from '../src/lessonActivityConverter.ts';
+import {buildWorksheetRecipe} from '../src/worksheetRecipes.ts';
 
 const load=async file=>JSON.parse(await readFile(new URL('../'+file,import.meta.url),'utf8'));
 const lesson=await load('tests/fixtures/ot-031-original-review.json');
@@ -194,4 +195,26 @@ test('A future approved data-only lesson is accepted only when schema, actual pu
   assert.equal(duplicate.passed,false);
   assert.ok(duplicate.errors.some(x=>x.code==='duplicate-id'));
  }finally{await rm(root,{recursive:true,force:true});}
+});
+
+test('Public catalog discovers the actual signed-off BSB Red Sea lesson without a code registry entry',async()=>{
+ const approved=await load('curriculum/approved/ot-031-god-parts-the-red-sea.lesson.json');
+ const rights=await load('curriculum/approved/rights-manifest.json');
+ assert.equal(approved.publication.status,'approved');
+ assert.equal(approved.publication.approved,true);
+ assert.equal(approved.publication.teacherSignoff.reviewer,'Andy Doane');
+ assert.equal(approved.lessonDetails.memoryVerse.translation,'BSB');
+ assert.equal(approved.lessonDetails.memoryVerse.reference,'Exodus 15:11');
+ assert.equal(rights.lessons[approved.id].status,'cleared');
+ assert.match(rights.lessons[approved.id].basis,/public domain/u);
+ const files={['../curriculum/approved/'+approved.id+'.lesson.json']:approved};
+ const catalog=assemblePublicLessonCatalog(files,rights);
+ assert.equal(catalog.length,1);
+ assert.equal(catalog[0].lesson.id,approved.id);
+ for(const recipe of ['story-review','fun-and-games']){
+  const result=buildWorksheetRecipe(catalog[0].lesson,recipe,{purpose:'published'});
+  assert.equal(result.selections.length,10);
+  assert.equal(result.openSlots.length,1);
+  assert.equal(result.draft.verseText,approved.lessonDetails.memoryVerse.text);
+ }
 });
