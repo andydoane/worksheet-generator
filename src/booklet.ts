@@ -18,7 +18,8 @@ export type LayoutId =
   | 'small-small-medium-medium'
   | 'medium-small-small-medium'
   | 'medium-medium-small-small'
-  | 'large-small-small';
+  | 'large-small-small'
+  | 'small-small-large';
 
 export type RegionSize = 'small' | 'medium' | 'large';
 export type RegionKind = 'title' | 'activity';
@@ -108,6 +109,16 @@ export const LAYOUTS: readonly LayoutDefinition[] = [
       { id: 'top-large', col: 0, row: 0, cols: 2, rows: 2 },
       { id: 'bottom-left-small', col: 0, row: 2, cols: 1, rows: 1 },
       { id: 'bottom-right-small', col: 1, row: 2, cols: 1, rows: 1 },
+    ],
+  },
+  {
+    id:'small-small-large',
+    name:'Small Pair + Large',
+    description:'Two small on top, large below',
+    cells:[
+      {id:'top-left-small',col:0,row:0,cols:1,rows:1},
+      {id:'top-right-small',col:1,row:0,cols:1,rows:1},
+      {id:'bottom-large',col:0,row:1,cols:2,rows:2},
     ],
   },
 ] as const;

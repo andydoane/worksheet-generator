@@ -12,18 +12,16 @@ export function CipherGlyph({id}:{id:number}){
 }
 export default function CryptogramPreview({module}:{module:Cryptogram}){
   if(module.type==='big-idea-cryptogram')return <BigIdeaCryptogramPreview module={module}/>;
-  const data=generateCryptogram(module),columns=module.type==='verse-cryptogram'?20:18;
-  const chunks:Array<typeof data.key>=[];
-  for(let i=0;i<data.key.length;i+=columns)chunks.push(data.key.slice(i,i+columns));
+  const data=generateCryptogram(module);
   return <div className={'module-preview cipher-module '+(module.type==='verse-cryptogram'?'cipher-large':'cipher-medium')}>
     <div className="module-title">SOLVE THE CODE!</div>
     <div className="cipher-key" aria-label="Symbol and letter decoding key">
-      {chunks.map((chunk,index)=><div className="cipher-key-row" key={index}>
-        {chunk.map(item=><div className="cipher-key-cell" key={item.letter}>
+      <div className="cipher-key-row" style={{gridTemplateColumns:`repeat(${data.key.length},minmax(0,1fr))`}}>
+        {data.key.map(item=><div className="cipher-key-cell" key={item.letter}>
           <span className="cipher-key-symbol"><CipherGlyph id={item.symbol}/></span>
           <span className="cipher-key-letter">{item.letter}</span>
         </div>)}
-      </div>)}
+      </div>
     </div>
     {data.reference&&<div className="cipher-reference">{data.reference}</div>}
     <div className="cipher-encoded">

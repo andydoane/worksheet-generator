@@ -114,15 +114,16 @@ export function drawCryptogramPdf(page:PDFPage,rect:Rect,module:Cryptogram,fonts
   const box=interior(rect),data=generateCryptogram(module);
   const top=box.y+box.height;
   centered(page,fonts.title,'SOLVE THE CODE!',box.x,top-25,box.width,MODULE_TITLE_PT);
-  const keyCols=module.type==='verse-cryptogram'?20:18;
-  const keyRows=Math.ceil(data.key.length/keyCols),keyHeight=29;
+  // One unbroken two-row decoding key (symbols over letters).
+  // Every distinct letter gets its own column, at any count up to 26.
+  const keyCols=data.key.length,keyRows=1,keyHeight=29;
   const keyTop=top-38;
   for(let i=0;i<data.key.length;i++){
     const row=Math.floor(i/keyCols),col=i%keyCols;
     const colsInRow=Math.min(keyCols,data.key.length-row*keyCols);
     const cellWidth=box.width/colsInRow;
     const cx=box.x+col*cellWidth,cy=keyTop-(row+1)*keyHeight;
-    const symbolSize=Math.min(13,cellWidth-5);
+    const symbolSize=Math.min(13,cellWidth*.70);
     page.drawRectangle({x:cx,y:cy,width:cellWidth,height:keyHeight,
       borderWidth:.65,borderColor:GREY});
     page.drawLine({start:{x:cx,y:cy+12},end:{x:cx+cellWidth,y:cy+12},
@@ -132,7 +133,7 @@ export function drawCryptogramPdf(page:PDFPage,rect:Rect,module:Cryptogram,fonts
     const symbolBottom=cy+12+(keyHeight-12-symbolSize)/2;
     drawCipherGlyph(page,data.key[i].symbol,
       cx+(cellWidth-symbolSize)/2,symbolBottom,symbolSize);
-    const letterSize=9.2;
+    const letterSize=Math.min(9.2,cellWidth*.72);
     centered(page,fonts.puzzle,data.key[i].letter,cx,
       cy+(12-letterSize)/2+2,cellWidth,letterSize);
   }

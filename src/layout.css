@@ -211,7 +211,7 @@
 .cipher-module {align-items:stretch;justify-content:flex-start;gap:clamp(4px,1.6cqw,9px);}
 .cipher-module .module-title {flex:none;}
 .cipher-key {display:flex;flex-direction:column;gap:2px;flex:none;}
-.cipher-key-row {display:flex;width:100%;justify-content:center;}
+.cipher-key-row {display:grid;width:100%;justify-content:center;}
 .cipher-key-cell {display:flex;flex-direction:column;align-items:center;justify-content:stretch;
   min-width:0;flex:1;max-width:29px;border:1px solid #858585;background:white;}
 .cipher-key-symbol {display:flex;align-items:center;justify-content:center;width:100%;height:clamp(15px,4.6cqw,22px);border-bottom:1px solid #aaa;}
@@ -575,3 +575,8 @@
 .booklet-region.title-region:focus-visible { outline: 3px solid #d6a066; outline-offset: -3px; z-index: 3; }
 /* The peach-colored validation message now precedes the input fields. */
 .activity-validation { margin: 0 0 5px; }
+
+/* Keep the cryptogram decoding key as a single two-line matrix at 3–26 columns. */
+.cipher-key-row .cipher-key-cell {max-width:none;min-width:0;overflow:hidden;}
+.cipher-key-row .cipher-key-symbol .cipher-glyph {width:min(18px,calc(100% - 2px));height:auto;aspect-ratio:1;}
+.cipher-key-row .cipher-key-letter {font-size:clamp(6px,1.7cqw,11px);min-width:0;}

@@ -1,9 +1,10 @@
 import {getRegions,type LayoutId,type PageNumber,type RegionSize} from './booklet.ts';
 import {EMPTY_DRAFT,type StoredDraft} from './draftMigration.ts';
+import {lessonContentPool,chooseUnusedLessonContent} from './lessonContentPool.ts';
 import {slotKey,moduleForSize,validateModule,type ModuleAssignments} from './modules.ts';
 import {
  convertLessonActivities,findLessonCandidate,
- type ConvertedActivity,type CoreLessonModuleId,type LessonActivityData,
+type ConvertedActivity,type LessonModuleId,type LessonActivityData,
  type ConversionDiagnostic,
 } from './lessonActivityConverter.ts';
 
@@ -19,11 +20,11 @@ export type LessonWorksheetSource=LessonActivityData&{
   memoryVerse?:{reference:string;text:string;translation?:string};
  };
 };
-export type RecipeId='story-review'|'fun-and-games';
+export type RecipeId='preset-1'|'preset-2'|'preset-3'|'story-review'|'fun-and-games';
 export type RecipeStep={
  page:PageNumber;
  regionId:string;
- moduleId:CoreLessonModuleId;
+ moduleId:LessonModuleId;
  /** Zero-based order among the available multiple-choice alternatives. */
  questionIndex?:number;
 };
@@ -34,7 +35,7 @@ export type WorksheetRecipe={
  layouts:Record<2|3|4,LayoutId>;
  steps:readonly RecipeStep[];
 };
-export const WORKSHEET_RECIPES:readonly WorksheetRecipe[]=[
+const LEGACY_RECIPES:readonly WorksheetRecipe[]=[
  {
   id:'story-review',
   name:'Remember the Story',
@@ -72,9 +73,67 @@ export const WORKSHEET_RECIPES:readonly WorksheetRecipe[]=[
   ],
  },
 ] as const;
+/** Author-designed booklet presets, transcribed from Layouts.ods.
+ * Each region is filled with independent, approved curriculum content.
+ * Legacy recipe IDs remain buildable for historical regression fixtures only.
+ */
+export const WORKSHEET_RECIPES:readonly WorksheetRecipe[]=[
+ {
+  id:'preset-1',name:'Preset 1',
+  description:'Story completion, questions, drawing, word and Scripture puzzles.',
+  layouts:{2:'small-small-medium-medium',3:'large-medium',4:'medium-medium-small-small'},
+  steps:[
+   {page:1,regionId:'cover-activity',moduleId:'finish-story'},
+   {page:2,regionId:'top-left-small',moduleId:'multiple-choice'},
+   {page:2,regionId:'top-right-small',moduleId:'draw-picture'},
+   {page:2,regionId:'middle-medium',moduleId:'true-false-maze'},
+   {page:2,regionId:'bottom-medium',moduleId:'medium-word-search'},
+   {page:3,regionId:'top-large',moduleId:'verse-cryptogram'},
+   {page:3,regionId:'bottom-medium',moduleId:'match-words'},
+   {page:4,regionId:'top-medium',moduleId:'unscramble-verse'},
+   {page:4,regionId:'middle-medium',moduleId:'circle-mistakes'},
+   {page:4,regionId:'bottom-left-small',moduleId:'unscramble-words'},
+   {page:4,regionId:'bottom-right-small',moduleId:'draw-picture'},
+  ],
+ },
+ {
+  id:'preset-2',name:'Preset 2',
+  description:'Draw the story, connect the verse, codebreaking, words and clues.',
+  layouts:{2:'large-medium',3:'small-small-large',4:'medium-medium-small-small'},
+  steps:[
+   {page:1,regionId:'cover-activity',moduleId:'draw-story'},
+   {page:2,regionId:'top-large',moduleId:'connect-verse'},
+   {page:2,regionId:'bottom-medium',moduleId:'pixel-picture'},
+   {page:3,regionId:'top-left-small',moduleId:'odd-words'},
+   {page:3,regionId:'top-right-small',moduleId:'multiple-choice'},
+   {page:3,regionId:'bottom-large',moduleId:'word-search'},
+   {page:4,regionId:'top-medium',moduleId:'big-idea-cryptogram'},
+   {page:4,regionId:'middle-medium',moduleId:'finish-verse'},
+   {page:4,regionId:'bottom-left-small',moduleId:'who-am-i'},
+   {page:4,regionId:'bottom-right-small',moduleId:'first-letters'},
+  ],
+ },
+ {
+  id:'preset-3',name:'Preset 3',
+  description:'True/False, Scripture reading, phrase puzzles and story sequence.',
+  layouts:{2:'medium-small-small-medium',3:'large-medium',4:'large-medium'},
+  steps:[
+   {page:1,regionId:'cover-activity',moduleId:'sort-story'},
+   {page:2,regionId:'top-medium',moduleId:'upside-down-verse'},
+   {page:2,regionId:'middle-left-small',moduleId:'true-false'},
+   {page:2,regionId:'middle-right-small',moduleId:'checkboxes'},
+   {page:2,regionId:'bottom-medium',moduleId:'connect-big-idea'},
+   {page:3,regionId:'top-large',moduleId:'spiral-verse'},
+   {page:3,regionId:'bottom-medium',moduleId:'true-false-maze'},
+   {page:4,regionId:'top-large',moduleId:'story-order'},
+   {page:4,regionId:'bottom-medium',moduleId:'unscramble-verse'},
+  ],
+ },
+] as const;
+
 export type RecipeSelection={
  slot:string;page:PageNumber;size:RegionSize;
- moduleId:CoreLessonModuleId;contentId:string;
+ moduleId:LessonModuleId;contentId:string;
  sourceIds:string[];origin:ConvertedActivity['origin'];
  teacherReviewRequired:boolean;answerKey?:boolean;
 };
@@ -85,7 +144,7 @@ export type WorksheetRecipeResult={
  /** An exact independently editable, v1-browser-storage-compatible draft. */
  draft:StoredDraft;
  selections:RecipeSelection[];
- /** Layout cells not filled because PR 17b offers no matching activity yet. */
+ /** Unassigned activity regions (zero for the new numbered presets). */
  openSlots:RecipeOpenSlot[];
  diagnostics:ConversionDiagnostic[];
  /** Never indicate that a review-generated PDF is a published preset. */
@@ -95,7 +154,7 @@ export type WorksheetRecipeResult={
 export type RecipeOptions={purpose:'editorial-review'|'published';seed?:number};
 
 function recipeForId(id:RecipeId):WorksheetRecipe{
- const recipe=WORKSHEET_RECIPES.find(item=>item.id===id);
+ const recipe=[...WORKSHEET_RECIPES,...LEGACY_RECIPES].find(item=>item.id===id);
  if(!recipe)throw Error('Unknown worksheet recipe: '+id);
  return recipe;
 }
@@ -136,7 +195,9 @@ export function buildWorksheetRecipe(
  if(!title||!scripture){
   throw Error('A worksheet recipe needs a lesson title and Scripture reference.');
  }
- const conversion=convertLessonActivities(lesson,{seed});
+ const isLegacy=id==='story-review'||id==='fun-and-games';
+ const pool=isLegacy?null:lessonContentPool(lesson,seed);
+ const conversion=pool??convertLessonActivities(lesson,{seed});
  const regions=regionsFor(recipe);
  const regionBySlot=new Map(regions.map(x=>[x.slot,x]));
  const questionPool=conversion.candidates.filter(c=>c.moduleId==='multiple-choice')
@@ -149,6 +210,7 @@ export function buildWorksheetRecipe(
  const modules:ModuleAssignments={};
  const selections:RecipeSelection[]=[];
  const usedContentIds=new Set<string>();
+ const usedClaims=new Set<string>();
  for(const step of recipe.steps){
   const key=slotKey(step.page,step.regionId);
   const region=regionBySlot.get(key);
@@ -159,7 +221,19 @@ export function buildWorksheetRecipe(
    throw Error('Recipe '+id+' cannot place '+step.moduleId+' in '+region.region.size+' slot '+key+'.');
   }
   let choice:ConvertedActivity|undefined;
-  if(step.moduleId==='multiple-choice'){
+  if(!isLegacy){
+   const choices=pool!.candidates.filter(c=>
+    c.moduleId===step.moduleId&&!usedContentIds.has(c.moduleId+':'+c.contentId));
+   const picked=chooseUnusedLessonContent(choices,usedClaims);
+   if(!picked)throw Error('No approved '+step.moduleId+' content available for '+recipe.name+' at '+key+'.');
+   if(picked.reused.length){
+    throw Error(recipe.name+' needs a distinct '+step.moduleId+
+     ' activity at '+key+', but all approved alternatives repeat: '+
+     picked.reused.join(', ')+'. Review the curriculum data for more choices.');
+   }
+   choice=picked.candidate;
+   picked.candidate.claims.forEach(id=>usedClaims.add(id));
+  }else if(step.moduleId==='multiple-choice'){
    if(step.questionIndex===undefined||step.questionIndex<0||
     !Number.isInteger(step.questionIndex)||step.questionIndex>=questionSteps.length){
     throw Error('Invalid question index in recipe '+id+'.');
@@ -175,10 +249,11 @@ export function buildWorksheetRecipe(
    throw Error('Lesson '+lesson.id+' has no valid '+step.moduleId+
     ' for recipe '+id+(detail?': '+detail:''));
   }
-  if(usedContentIds.has(choice.contentId)){
-   throw Error('Recipe '+id+' repeats activity content '+choice.contentId+'.');
+  const uniqueContentKey=isLegacy?choice.contentId:choice.moduleId+':'+choice.contentId;
+  if(usedContentIds.has(uniqueContentKey)){
+   throw Error('Recipe '+id+' repeats activity content '+uniqueContentKey+'.');
   }
-  usedContentIds.add(choice.contentId);
+  usedContentIds.add(uniqueContentKey);
   const errors=validateModule(choice.module);
   if(errors.length)throw Error('Invalid activity in '+key+': '+errors.join(' '));
   modules[key]=structuredClone(choice.module);

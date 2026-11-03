@@ -3,7 +3,7 @@
  */
 import {readFile,writeFile,mkdir} from 'node:fs/promises';
 import {createBookletPdf} from '../src/pdf.ts';
-import {WORKSHEET_RECIPES,buildWorksheetRecipe} from '../src/worksheetRecipes.ts';
+import {buildWorksheetRecipe} from '../src/worksheetRecipes.ts';
 import {validateLesson} from './validate-curriculum.mjs';
 
 const lesson=JSON.parse(await readFile(new URL(
@@ -21,10 +21,12 @@ const fonts={
  zillaSlab:await readFile(new URL('../fonts/ZillaSlab-Bold-pdf.ttf',import.meta.url)),
 };
 await mkdir('artifacts',{recursive:true});
-for(const recipe of WORKSHEET_RECIPES){
- const output=buildWorksheetRecipe(lesson,recipe.id,{purpose:'editorial-review',seed:1});
+// Preserve historical PR17c artifacts even after new numbered presets replace
+// the two old public choices. These older IDs remain review-only compatible.
+for(const id of ['story-review','fun-and-games']){
+ const output=buildWorksheetRecipe(lesson,id,{purpose:'editorial-review',seed:1});
  const bytes=await createBookletPdf(output.draft,fonts);
- const path='artifacts/sample-pr17c-red-sea-'+recipe.id+'.pdf';
+ const path='artifacts/sample-pr17c-red-sea-'+id+'.pdf';
  await writeFile(path,bytes);
  console.log('Wrote '+path+' ('+bytes.length+' bytes): '+
   output.selections.length+' populated slots, '+output.openSlots.length+

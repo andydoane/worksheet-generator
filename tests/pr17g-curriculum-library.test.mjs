@@ -49,9 +49,10 @@ test('Real current Red Sea review lesson is schema-valid and all 27 types pass a
  assert.equal(crossword.technicalStatus,'ready');
  assert.equal(crossword.contentStatus,'ADAPTATION NEEDED',
   'author content assessment remains separate from tested generator success');
- assert.equal(audit.recipeReadiness.length,2);
+ assert.equal(audit.recipeReadiness.length,3);
  assert.ok(audit.recipeReadiness.every(x=>x.ready));
- assert.ok(audit.recipeReadiness.every(x=>x.selectedModules===10&&x.openSlots===1));
+ assert.deepEqual(audit.recipeReadiness.map(x=>x.selectedModules),[11,10,9]);
+ assert.ok(audit.recipeReadiness.every(x=>x.openSlots===0));
  assert.ok(audit.teacherReviewFlagsOutstanding.length>=4);
  assert.equal(audit.eligibleForPublication,false);
  assert.equal(audit.rightsCleared,false);
@@ -139,7 +140,7 @@ test('Public auto-discovery loads only explicit approved filenames with separate
   'compile-time import.meta.glob is not a runtime browser feature');
  assert.doesNotMatch(appCatalog,/import\.meta\.glob\(['"]\.\.\/curriculum\/review/u);
 });
-test('Live repository scan validates the author-approved BSB Red Sea preset and both recipes',async()=>{
+test('Live repository scan validates all three author-approved BSB Red Sea presets',async()=>{
  const report=await inspectCurriculumLibrary();
  assert.equal(report.passed,true,JSON.stringify(report.errors));
  assert.equal(report.errors.length,0);
@@ -153,10 +154,10 @@ test('Live repository scan validates the author-approved BSB Red Sea preset and 
  assert.match(rendered,/27\/27/u);
  assert.match(rendered,/ADAPTATION NEEDED/u);
  assert.match(rendered,/cleared/u);
- assert.match(rendered,/story-review/u);
- assert.match(rendered,/fun-and-games/u);
+ assert.match(rendered,/preset-1/u);
+ assert.match(rendered,/preset-3/u);
 });
-test('A future approved data-only lesson is accepted only when schema, actual puzzles, both recipes, signoff and independent rights all pass',async()=>{
+test('A future approved data-only lesson is accepted only when schema, actual puzzles, all three presets, signoff and independent rights all pass',async()=>{
  const root=await mkdtemp(join(tmpdir(),'worksheet-library-pr17g-'));
  try{
   await mkdir(join(root,'curriculum','schema'),{recursive:true});
