@@ -145,7 +145,8 @@ export function lessonContentPool(lesson:LessonActivityData,seed=1):LessonConten
   ]).filter(x=>x.length<=12&&/^[A-Za-z]+(?:[ '-][A-Za-z]+)*$/u.test(x));
   for(let i=0;i<Math.min(approvedRelated.length,16);i++){
    if(incorrect.length<2)break;
-   const related=Array.from({length:3},(_,j)=>approvedRelated[(i+j)%approvedRelated.length]);
+   const related=Array.from({length:group.type==='odd-words'?4:3},
+    (_,j)=>approvedRelated[(i+j)%approvedRelated.length]);
    const unrelated=[incorrect[i%incorrect.length],incorrect[(i+1)%incorrect.length]];
    const module={type:group.type,correct:related.join('\n'),
     incorrect:unrelated.join('\n'),seed};
@@ -222,7 +223,14 @@ export function chooseUnusedLessonContent(
 ):{candidate:LessonContentChoice;reused:string[]}|undefined{
  if(!choices.length)return undefined;
  const scored=choices.map((candidate,i)=>({candidate,i,reused:choiceOverlap(candidate,used)}));
- scored.sort((a,b)=>a.reused.length-b.reused.length||a.i-b.i);
+ // Compact word/pair banks leave unused approved material for another
+ // instance later in the same booklet. For every other module retain the
+ // authored/primary order when equally nonconflicting.
+ const splitFriendly=['odd-words','checkboxes','match-words']
+  .includes(choices[0].moduleId);
+ scored.sort((a,b)=>a.reused.length-b.reused.length||
+  (splitFriendly?a.candidate.claims.length-b.candidate.claims.length:0)||
+  a.i-b.i);
  const best=scored[0];
  return {candidate:best.candidate,reused:best.reused};
 }
