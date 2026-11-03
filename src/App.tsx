@@ -5,7 +5,7 @@ import {migrateDraftValue} from './draftMigration.ts';
 import {hasMeaningfulDraft,exampleWorksheetDraft} from './welcomeFlow.ts';
 import {PUBLIC_LESSONS,approvedForPublic,type PublicLessonEntry} from './publishedLessonCatalog.ts';
 import {buildWorksheetRecipe,type RecipeId} from './worksheetRecipes.ts';
-import {approvedLessonForDraft,buildYourOwnLessonDraft,chooseActivityForDraft,isActivityCustomized,originalApprovedActivity,sameActivityContent} from './curriculumEditor.ts';
+import {approvedLessonForDraft,buildYourOwnLessonDraft,canRecreateApprovedActivity,chooseActivityForDraft,isActivityCustomized,originalApprovedActivity,sameActivityContent} from './curriculumEditor.ts';
 import WelcomeScreen from './WelcomeScreen.tsx';
 import {explainActivityError} from './editorFeedback.ts';
 import {COVER_BORDERS,coverBorderUrl,isCoverBorderId,type CoverBorderId} from './coverBorders.ts';
@@ -340,15 +340,21 @@ export default function App() {
   function setModuleType(type: ModuleId | '') {
     if(!activeKey||type===activeModule?.type||(!type&&!activeModule))return;
     const hasEditedContent=isActivityCustomized(draft,activeKey,PUBLIC_LESSONS);
+    const cannotRecreate=!!activeModule&&!hasEditedContent&&
+      !canRecreateApprovedActivity(draft,activeKey,PUBLIC_LESSONS);
     const borderWillBeLost=(draft.activityBorders[activeKey]??'none')!=='none'&&
       !isActivityBorderReady(type||undefined);
     // A pristine preset can be recreated immediately from its approved lesson.
     // Prompt only if switching would discard actual edits or a chosen border.
     // Confirm outside setDraft: React StrictMode may replay state updaters.
-    if((hasEditedContent||borderWillBeLost)&&!window.confirm(
+    if((hasEditedContent||cannotRecreate||borderWillBeLost)&&!window.confirm(
       'Replace '+(activeModule?.type??'activity').replaceAll('-',' ')+
-      ' in this region? Your customized '+(hasEditedContent?'activity content':'activity border')+
-      ' will be lost. All other activities will stay as they are.'
+      ' in this region? '+(hasEditedContent
+        ?'Your edits to this activity will be lost.'
+        :cannotRecreate
+          ?'This activity cannot currently be recreated from the approved lesson.'
+          :'Your customized activity border will be lost.')+
+      ' All other activities will stay as they are.'
     ))return;
     const selected=type?chooseActivityForDraft(type,draft,activeKey,PUBLIC_LESSONS):null;
     setDraft(previous=>{
