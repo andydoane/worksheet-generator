@@ -5,6 +5,7 @@ import {MODULES,blankModule,validateModule} from '../src/modules.ts';
 import {MODULE_GUIDANCE,samplePlaceholder,isAutofilledModule,newModuleWithExample} from '../src/moduleGuidance.ts';
 import {sortStoryEditorGroups} from '../src/storyVerseModules.ts';
 import {migrateDraftValue} from '../src/draftMigration.ts';
+import {createManualModule} from '../src/curriculumEditor.ts';
 import {loadSortStorySymbolPng,sortStorySymbolUrl} from '../src/sortStorySymbols.ts';
 
 test('All manual examples are placeholders, never saved input or ready-to-print data',()=>{
@@ -58,15 +59,25 @@ test('Sort Story shows true/false placeholders independently, not stored stateme
 });
 test('Theme verse and big idea autofill remains in the app and never uses gray sample replacements',async()=>{
  const app=await readFile(new URL('../src/App.tsx',import.meta.url),'utf8');
+ const helper=await readFile(new URL('../src/curriculumEditor.ts',import.meta.url),'utf8');
  for(const id of ['first-letters','finish-verse','unscramble-verse','spiral-verse',
   'upside-down-verse','connect-verse','verse-cryptogram','connect-big-idea','big-idea-cryptogram']){
   assert.equal(MODULE_GUIDANCE[id].sample,undefined);
   assert.equal(isAutofilledModule(id),true);
  }
- assert.match(app,/previous\.verseReference/u);
- assert.match(app,/previous\.verseText/u);
- assert.match(app,/previous\.bigIdea/u);
- assert.match(app,/else if \(type\) modules\[activeKey\] = blankModule\(type\)/u);
+ // Existing manual autofill must survive the editor's approved-lesson upgrade.
+ assert.match(helper,/draft\.verseReference/u);
+ assert.match(helper,/draft\.verseText/u);
+ assert.match(helper,/draft\.bigIdea/u);
+ assert.match(helper,/return blankModule\(type\)/u);
+ const previous=migrateDraftValue({bigIdea:'God saves',verseReference:'Exodus 14:14',
+  verseText:'The LORD will fight for you.'});
+ const verse=createManualModule('finish-verse',previous);
+ assert.equal(verse.verse,previous.verseText);
+ assert.equal(verse.reference,previous.verseReference);
+ assert.equal(createManualModule('big-idea-cryptogram',previous).idea,previous.bigIdea);
+ assert.deepEqual(createManualModule('story-order',previous),blankModule('story-order'));
+ assert.match(app,/chooseActivityForDraft\(type,draft,activeKey,PUBLIC_LESSONS\)/u);
  assert.doesNotMatch(app,/modules\[activeKey\] = newModuleWithExample\(type\)/u);
  assert.match(app,/only your text is saved or printed/u);
 });
