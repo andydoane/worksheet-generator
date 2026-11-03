@@ -35,3 +35,17 @@ export function needsLessonSwitchConfirmation(
   'coverBorder','layouts','modules','activityBorders'] as const;
  return keys.some(key=>!sameActivityContent(draft[key],original[key]));
 }
+
+
+/** Switching Bible stories preserves the selected numbered preset (or Build
+ * My Own) and replaces *all* lesson-specific details and modules atomically.
+ * Older worksheets without a recorded preset must choose a preset explicitly
+ * first; never silently substitute another arrangement.
+ */
+export function createSamePresetForNewStory(
+ draft:Pick<StoredDraft,'worksheetPresetId'>,entry:PublicLessonEntry,
+):StoredDraft{
+ if(!isWorksheetStartId(draft.worksheetPresetId))
+  throw Error('This older worksheet has no recorded preset. Use Change Preset first to select one.');
+ return createLessonWorksheet(entry,draft.worksheetPresetId);
+}
