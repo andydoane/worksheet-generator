@@ -69,7 +69,9 @@ export function clipToWords(text:string,start:number,end:number):string{
  if(!words.length||!Number.isInteger(start)||!Number.isInteger(end)||
     start<0||end<start||end>=words.length)throw Error('Invalid excerpt boundaries.');
  // Preserve all characters BETWEEN the selected words, but no outside punctuation.
- return text.slice(words[start].start,words[end].end);
+ const begin=start===0?0:words[start].start;
+ const finish=end===words.length-1?text.length:words[end+1].start;
+ return text.slice(begin,finish).trim();
 }
 export function markSelectedWords(text:string,selected:number[]):string{
  const words=wordSpans(text);
