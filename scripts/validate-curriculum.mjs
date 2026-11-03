@@ -5,6 +5,7 @@ import {fileURLToPath} from 'node:url';
 const here=dirname(fileURLToPath(import.meta.url));
 const schemaPath=resolve(here,'../curriculum/schema/lesson-v1.schema.json');
 const reviewDir=resolve(here,'../curriculum/review');
+const approvedDir=resolve(here,'../curriculum/approved');
 const knownModules=new Set([
  'draw-picture','multiple-choice','true-false','first-letters','odd-words',
  'unscramble-words','checkboxes','who-am-i','match-words','finish-verse',
@@ -155,8 +156,10 @@ export async function validateCurriculumFiles(paths){
 
 if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url)){
  const args=process.argv.slice(2);
- const paths=args.length?args.map(x=>resolve(x)):
-  (await readdir(reviewDir)).filter(x=>x.endsWith('.json')).map(x=>join(reviewDir,x));
+ const paths=args.length?args.map(x=>resolve(x)):[
+  ...(await readdir(reviewDir)).filter(x=>x.endsWith('.json')).map(x=>join(reviewDir,x)),
+  ...(await readdir(approvedDir)).filter(x=>x.endsWith('.lesson.json')).map(x=>join(approvedDir,x)),
+ ];
  const results=await validateCurriculumFiles(paths);
  for(const result of results){
   if(result.errors.length){
@@ -167,7 +170,7 @@ if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url)){
    console.log('PASS '+data.id+': '+data.storyNotes.length+' notes, '+
     data.questions.length+' questions, '+Object.keys(data.preparedActivities).length+
     ' prepared module categories; publication '+data.publication.status);
-   console.log('  Content statuses are author-reported; puzzle solver/PDF parity require later PRs.');
+   console.log('  Content statuses are author-reported; npm run validate:library checks real engines and recipes.');
   }
  }
  if(results.some(x=>x.errors.length))process.exitCode=1;

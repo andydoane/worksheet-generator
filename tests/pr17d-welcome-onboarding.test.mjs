@@ -77,13 +77,18 @@ test('Review-stage Red Sea lesson is completely absent from the public catalog u
   .filter(f=>f.type==='teacher-approval').map(f=>f.id);
  assert.deepEqual(validateLesson(approved,schema),[]);
  assert.equal(approvedForPublic({lesson:approved,scriptureDistributionCleared:false}),false);
- assert.equal(approvedForPublic({lesson:approved,scriptureDistributionCleared:true}),true);
+ assert.equal(approvedForPublic({lesson:approved,scriptureDistributionCleared:true}),false,
+  'rights must be documented beyond a boolean');
+ assert.equal(approvedForPublic({lesson:approved,scriptureDistributionCleared:true,
+  rightsEvidence:{status:'cleared',basis:'Written permission for this Scripture excerpt',
+   reviewedBy:'Curriculum author',reviewedOn:'2026-11-03'}}),true);
  const result=buildWorksheetRecipe(approved,'story-review',{purpose:'published'});
  assert.equal(result.draft.title,approved.lessonDetails.title);
  assert.equal(result.reviewOnly,true,'draft build never itself certifies public publication');
  const publishedCatalog=await fromRepo('src/publishedLessonCatalog.ts');
  assert.doesNotMatch(publishedCatalog,/import.+curriculum\/review/u);
- assert.match(publishedCatalog,/const PUBLIC_ENTRIES:readonly PublicLessonEntry\[\]=\[\]/u);
+ assert.match(publishedCatalog,/curriculum\/approved\/\*\.lesson\.json/u);
+ assert.doesNotMatch(publishedCatalog,/import\.meta\.glob\(['"]\.\.\/curriculum\/review/u);
 });
 test('A visit always starts at welcome, resume does not overwrite the draft, and replacements require confirmation',async()=>{
  const [app,welcome,css]=await Promise.all([

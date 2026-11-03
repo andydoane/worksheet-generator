@@ -89,6 +89,18 @@ The original Red Sea curriculum remains **review-stage**, excluded from the publ
 
 For independent print/visual QA, `npm run sample:pr17f` produces two complete four-page folded booklets in the GitHub Actions `sample-bifold-booklet` artifact: `sample-pr17f-red-sea-scripture-puzzles.pdf` and `sample-pr17f-red-sea-meaning-and-memory.pdf`. The sample builds and tests use the real review-stage JSON only on the Node side.
 
+## PR 17g: scalable curriculum registration and QA reports
+
+The curriculum library has a separate approved-data directory documented at [approved/README.md](approved/README.md). An approved lesson is added as a data-only JSON file named `approved/<lesson-id>.lesson.json`, plus an explicit rights record in `approved/rights-manifest.json`. Vite auto-discovers only approved lesson data. The public registry refuses any lesson missing actual teacher signoff, resolved teacher-approval flags or separately documented Scripture translation rights clearance.
+
+`npm run validate:library` is a real readiness audit, not a cosmetic JSON check. It scans every lesson in `review/` and `approved/`, runs schema validation, attempts real 27-module conversion, checks resulting payloads against original module validators and applicable puzzle solvers (Crossword, cryptogram, word search, maze, Pixel Picture, verse and specialty activities), and tests both named booklet recipes. It creates human-readable and machine-readable reports under `artifacts/curriculum-readiness-report.{md,json}`. Reports distinguish author-reported content readiness from tested technical readiness and publication clearance.
+
+Review-stage data may be incomplete; invalid/missing modules are reported but never published. Approved files cannot pass CI without consistent signoff/rights evidence and working named recipes; any prepared-but-invalid activity blocks release. Missing optional module categories are transparently marked missing. Duplicate review/approved IDs and orphan rights records are errors.
+
+The Red Sea lesson is still under `review/` and not public. Technical module readiness never constitutes teacher approval or permission to distribute Scripture quotations.
+
+The Crossword across/down clue imbalance is explicitly deferred to a separate UI/algorithm bug fix after the curriculum work.
+
 ### Converting the next lesson
 
 1. Take its ODT (and ODP if available) to the curriculum conversion chat. Use the same v1 schema and the source-preserving Story Note + question workflow.
@@ -96,4 +108,3 @@ For independent print/visual QA, `npm run sample:pr17f` produces two complete fo
 3. Place it in `curriculum/review/` and run `npm run validate:curriculum` and the full `npm test`.
 4. Review outstanding teacher flags. Only later add approved lessons to the public catalog, after importer/module-generation/print tests pass.
 
-No welcome screen, lesson importer, worksheet recipes, or auto-prefilled modules are added by this foundational PR.

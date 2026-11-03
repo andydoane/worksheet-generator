@@ -201,7 +201,7 @@ test('The existing editorial recipes still contain ten slots and one intentional
   assert.equal(result.requiresTeacherReview,true);
  }
  const code=await readFile(new URL('../src/publishedLessonCatalog.ts',import.meta.url),'utf8');
- assert.match(code,/const PUBLIC_ENTRIES:readonly PublicLessonEntry\[\]=\[\]/u);
+ assert.match(code,/curriculum\/approved\/\*\.lesson\.json/u);
  assert.doesNotMatch(code,/curriculum\/review\/ot-031/u);
 });
 test('Two fully filled vector PDF review booklets exercise all eleven new modules, with existing editor schema and no source mutations',async()=>{

@@ -1,13 +1,14 @@
 {
   "name": "worksheet-generator",
-  "version": "0.16.20",
+  "version": "0.16.21",
   "private": true,
   "type": "module",
   "scripts": {
     "dev": "vite",
     "check": "tsc --noEmit",
     "validate:curriculum": "node scripts/validate-curriculum.mjs",
-    "test": "node --experimental-strip-types --test tests/*.test.mjs && npm run validate:curriculum",
+    "validate:library": "node --experimental-strip-types scripts/curriculum-library.mjs",
+    "test": "node --experimental-strip-types --test tests/*.test.mjs && npm run validate:curriculum && npm run validate:library",
     "sample:pdf": "node --experimental-strip-types scripts/create-sample-pdf.mjs",
     "sample:pr6": "node --experimental-strip-types scripts/create-pr6-samples.mjs",
     "sample:pr7": "node --experimental-strip-types scripts/create-pr7-samples.mjs",
@@ -58,7 +59,7 @@
     "sample:pr17d": "node --experimental-strip-types scripts/create-pr17d-onboarding-sample.mjs",
     "sample:pr17e": "node --experimental-strip-types scripts/create-pr17e-word-visual-sample.mjs",
     "sample:pr17f": "node --experimental-strip-types scripts/create-pr17f-verse-specialty-samples.mjs",
-    "build": "npm run check && vite build",
+    "build": "npm run validate:library && npm run check && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
