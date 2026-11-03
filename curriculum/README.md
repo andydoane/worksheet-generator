@@ -37,6 +37,16 @@ Confirm the permissions/attribution requirements for any Bible translation text 
 
 The original conversion referenced the lesson document filename with a `(1)` suffix; source provenance is preserved rather than silently rewritten.
 
+## PR 17b: core lesson activity converter
+
+`src/lessonActivityConverter.ts` now provides `convertLessonActivities(lesson, {seed})`. It is **not an importer or a public lesson catalog**. Node-side tests load the review-stage source file and run the adapter, but the app does not import or expose the unapproved data.
+
+The adapter returns `candidates` and `diagnostics`, with an independent source ID, teacher-review flag, and actual `ActivityModule` payload per candidate. It supports Story Order, Finish the Story, Multiple Choice, Small True or False, True or False Maze, and Sort the Story. One prepared lesson can contain multiple candidates for the same module type (e.g. eight multiple-choice questions). All are checked with the real module validator, and the app's seeded puzzle renderers remain in charge of shuffling and printing.
+
+Canonical truth data from `facts` powers the three True/False-related adapters. The small True/False activity does not store the correct answer itself, so the converter retains it in the candidate's `answerKey` metadata. The shared `sortStory` statements are verified against their canonical `factId` instead of copying potentially stale truth labels. Any discrepancy or invalid content produces a diagnostic rather than a silent rewrite.
+
+Even if an editorial source later becomes approved, the future public catalog will still need to enforce the full schema/teacher-signoff and licensing gates at registration time. This PR does not publish the Red Sea lesson or revise its historical content-readiness report.
+
 ### Converting the next lesson
 
 1. Take its ODT (and ODP if available) to the curriculum conversion chat. Use the same v1 schema and the source-preserving Story Note + question workflow.
