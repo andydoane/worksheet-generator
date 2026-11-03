@@ -191,7 +191,7 @@ export function convertLessonActivities(
   const module:ActivityModule=moduleId==='true-false'
    ?{type:moduleId,statement:fact.statement}
    :{type:moduleId,statement:fact.statement,answer:fact.isTrue,seed};
-  add(moduleId,key,module,refs(item.sourceIds,fact.sourceIds),
+  add(moduleId,moduleId,module,refs(item.sourceIds,fact.sourceIds),
    fact.origin,
    item.teacherReviewRequired===true||fact.teacherReviewRequired===true,
    fact.isTrue);
