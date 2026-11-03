@@ -22,6 +22,15 @@ function initialSaved():Saved|null {
 }
 const displayDate=()=>new Date().toISOString().slice(0,10);
 
+function SourceContext({lesson,ids=[],questionIds=[]}:{lesson:Lesson;ids?:string[];questionIds?:string[]}){
+ const notes=(lesson.storyNotes??[]).filter((n:any)=>ids.includes(n.id));
+ const questions=(lesson.questions??[]).filter((q:any)=>questionIds.includes(q.id));
+ if(!notes.length&&!questions.length)return null;
+ return <details className="review-sources"><summary>Compare with my original curriculum ({notes.length+questions.length} source items)</summary>
+  {questions.map((q:any)=><blockquote key={q.id}><small>{q.id} · {q.source?.section??'Question'}</small><p>{q.question}</p><p><strong>Answer:</strong> {q.answer}</p></blockquote>)}
+  {notes.map((n:any)=><blockquote key={n.id}><small>{n.id} · Story Note {n.order} · page {n.source?.page??'?'}</small><p>{n.originalText}</p></blockquote>)}
+ </details>;
+}
 export default function ReviewApp(){
  const [saved]=useState(initialSaved);
  const [lesson,setLesson]=useState<Lesson|null>(saved?.lesson??null);
@@ -227,7 +236,7 @@ export default function ReviewApp(){
         {mc.choices.map((c:any,i:number)=><label key={i}>
          {c.isCorrect?'Correct answer (from source)':'Suggested incorrect answer '+i}
          <input value={c.text} onChange={e=>change(['preparedActivities','multipleChoice',mcIndex,'choices',i,'text'],e.target.value)}/></label>)}
-        <p className="review-source">Source question IDs: {(mc.sourceQuestionIds??[]).join(', ')||'Not recorded'}.</p>
+        <SourceContext lesson={lesson} ids={mc.sourceIds??[]} questionIds={mc.sourceQuestionIds??[]}/>
        </div>;
       })()}
       {factIndex>=0&&(()=>{
@@ -235,13 +244,14 @@ export default function ReviewApp(){
        return <div className="review-fields">
         <p className="review-warning">Intentionally FALSE. Edits are synchronized to Sort the Story and linked True/False activities.</p>
         <label>False statement<textarea value={f.statement} onChange={e=>change(['facts',factIndex,'statement'],e.target.value)}/></label>
-        <p className="review-source">Source Story Notes: {(f.sourceIds??[]).join(', ')}.</p>
+        <SourceContext lesson={lesson} ids={f.sourceIds??[]}/>
        </div>;
       })()}
       {active.id==='finish-story'&&<div className="review-fields">
        <label>Adapted story paragraph<textarea rows={9} value={lesson.preparedActivities.finishStory.markedParagraph}
         onChange={e=>change(['preparedActivities','finishStory','markedParagraph'],e.target.value)}/></label>
        <p className="review-source">The square-bracketed original emphasis words must be preserved and remain in chronological order.</p>
+       <SourceContext lesson={lesson} ids={lesson.preparedActivities.finishStory.sourceIds??[]}/>
       </div>}
       {active.id==='circle-mistakes'&&<div className="review-fields">
        <label>Deliberately incorrect paragraph<textarea rows={7} value={lesson.preparedActivities.circleMistakes.paragraph}
