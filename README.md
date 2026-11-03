@@ -1,5 +1,14 @@
 # Worksheet Studio
 
+## PR 17g — Scalable, approval-gated curriculum library (v0.16.21)
+
+- **Data-only lesson PRs:** the frontend now automatically discovers only files named `curriculum/approved/<lesson-id>.lesson.json` through a compile-time Vite import, not `curriculum/review/`. No custom import/registry code is needed for each new approved lesson. This PR deliberately publishes **zero lessons**; the Red Sea story remains pending review.
+- **Independent human gates:** public entries require completed teacher signoff, resolved `teacher-approval` flags, and an explicit separately recorded Scripture-rights clearance in `curriculum/approved/rights-manifest.json` (basis, reviewer and review date). A single flipped approval or licensing boolean is insufficient. Both a runtime fail-closed registry check and CI verification enforce these rules.
+- **Real readiness scanner:** `npm run validate:library` reads all review/approved lesson files, validates schema and cross-file ID consistency, uses **all 27 real module validators and puzzle engines**, and tries both `Remember the Story` and `Fun & Games` recipe builds. It distinguishes source-authored content-level readiness from tested technical readiness, missing modules, teacher-review flags, published status, and rights clearance.
+- **Human-readable + JSON reports:** every run writes `artifacts/curriculum-readiness-report.md` and `.json`, uploaded with CI artifacts. Review-stage technical problems are reported rather than implicitly publishing incomplete lessons; approved lessons are blocked for invalid prepared content, missing required recipe modules, schema errors, duplicate IDs, missing permissions, and unresolved teacher approval.
+- **Existing app behavior unchanged:** no changes to the 27 printable module algorithms, Crossword balancing, PDF layout, existing recipe mixes, browser autosave schema, or welcome screen. The known Crossword across/down layout issue remains a separate future bug fix.
+- **QA:** new `tests/pr17g-curriculum-library.test.mjs` checks real Red Sea 27/27 actual readiness, safely empty public registry, rights gates, programmatic approved catalog discovery, malformed data, duplicate IDs, missing recipes, and a simulated future approved **data-only** lesson with full readiness/rights reports.
+
 ## PR 17f — Complete all 27 curriculum activity adapters (v0.16.20)
 
 - **Eleven final lesson-data adapters**: First Letters, Finish Verse, Unscramble Verse, Circle the Mistakes, Big Idea Cryptogram, Upside Down Verse, Connect Big Idea, Verse Cryptogram, Crossword, Spiral Verse, and Connect Verse. Existing module algorithms, preview components, layouts, PDF generators and the two public recipe definitions remain unchanged. Together with PRs 17b and 17e, all **27 app module types** can now be populated from curriculum v1.
