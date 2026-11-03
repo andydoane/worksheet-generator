@@ -57,6 +57,16 @@ The entrypoint `buildWorksheetRecipe(lesson, recipeId, {purpose:'editorial-revie
 
 The test suite uses the **real, unapproved** Red Sea lesson file, and `npm run sample:pr17c` generates both complete four-page folded-booklet examples as vector PDFs in GitHub Actions. The sample PDFs are for author/print review and are not exposed by the app.
 
+## PR 17d: welcome-first onboarding with explicit publication gate
+
+The app now opens to **Welcome** on every visit, with Start from Scratch, Explore an Example, and Continue Your Worksheet (if a meaningful draft is saved in the existing browser storage). Choose a Bible Story opens a real catalog view; while no lessons are approved it displays a clear awaiting-approval message and options to start blank or explore the built-in example.
+
+The onboarding **example** is *not* a curriculum preset: it creates an editable booklet from the existing form placeholder examples (which were already visible in the app). The Red Sea file under `curriculum/review/` stays **outside the frontend bundle** and is not silently published.
+
+The new `src/publishedLessonCatalog.ts` is an explicit publication registry, initially empty. To register a lesson later, the curriculum author must sign off on the editorial review flags and confirm that distribution rights for the quoted Scripture text are cleared. The registry requires both, and `buildWorksheetRecipe` accepts `{purpose:'published'}` only for signed and approved lesson objects. Publishing also requires a deliberate code change to register the reviewed dataset; no one can expose it merely by editing local browser storage or changing a single JSON approval boolean.
+
+Current worksheet recipe layouts still have one deliberately unfilled Medium activity slot. We plan to revisit both recipe contents and the extra Medium slot after the remaining module converters are ready, not as part of onboarding.
+
 ### Converting the next lesson
 
 1. Take its ODT (and ODP if available) to the curriculum conversion chat. Use the same v1 schema and the source-preserving Story Note + question workflow.
