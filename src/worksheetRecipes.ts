@@ -1,10 +1,10 @@
 import {getRegions,type LayoutId,type PageNumber,type RegionSize} from './booklet.ts';
 import {EMPTY_DRAFT,type StoredDraft} from './draftMigration.ts';
-import {lessonContentPool,chooseUnusedLessonContent,type LessonContentChoice} from './lessonContentPool.ts';
+import {lessonContentPool,chooseUnusedLessonContent} from './lessonContentPool.ts';
 import {slotKey,moduleForSize,validateModule,type ModuleAssignments} from './modules.ts';
 import {
  convertLessonActivities,findLessonCandidate,
- type ConvertedActivity,type CoreLessonModuleId,type LessonModuleId,type LessonActivityData,
+type ConvertedActivity,type LessonModuleId,type LessonActivityData,
  type ConversionDiagnostic,
 } from './lessonActivityConverter.ts';
 
@@ -133,7 +133,7 @@ export const WORKSHEET_RECIPES:readonly WorksheetRecipe[]=[
 
 export type RecipeSelection={
  slot:string;page:PageNumber;size:RegionSize;
- moduleId:CoreLessonModuleId;contentId:string;
+ moduleId:LessonModuleId;contentId:string;
  sourceIds:string[];origin:ConvertedActivity['origin'];
  teacherReviewRequired:boolean;answerKey?:boolean;
 };
@@ -144,7 +144,7 @@ export type WorksheetRecipeResult={
  /** An exact independently editable, v1-browser-storage-compatible draft. */
  draft:StoredDraft;
  selections:RecipeSelection[];
- /** Layout cells not filled because PR 17b offers no matching activity yet. */
+ /** Unassigned activity regions (zero for the new numbered presets). */
  openSlots:RecipeOpenSlot[];
  diagnostics:ConversionDiagnostic[];
  /** Never indicate that a review-generated PDF is a published preset. */
@@ -196,7 +196,7 @@ export function buildWorksheetRecipe(
   throw Error('A worksheet recipe needs a lesson title and Scripture reference.');
  }
  const isLegacy=id==='story-review'||id==='fun-and-games';
- const pool=isLegacy?null:lessonContentPool(lesson,{seed}.seed);
+ const pool=isLegacy?null:lessonContentPool(lesson,seed);
  const conversion=pool??convertLessonActivities(lesson,{seed});
  const regions=regionsFor(recipe);
  const regionBySlot=new Map(regions.map(x=>[x.slot,x]));
