@@ -1,5 +1,13 @@
 # Worksheet Studio
 
+## PR 17d — Always-on welcome & safe lesson onboarding (v0.16.18)
+
+- **Every app launch begins at a welcoming screen**, even with previously saved work. Choices are **Choose a Bible Story**, **Start from Scratch**, **Explore an Example**, plus **Continue Your Worksheet** only when the browser's draft contains meaningful work. Returning to Home is available from the existing editor top bar.
+- **Safe single-draft workflow:** a blank autosaved draft does not qualify as a resumable worksheet; actual edited details, module assignments, borders or layout changes do. Starting a blank, example or approved preset requires confirmation before overwriting real saved work; cancellation leaves the draft untouched. The existing v1 browser-storage key, editor, pages and PDF export remain unchanged.
+- **Full example:** Explore an Example opens an 11-slot, four-page Red Sea-themed demonstration based exclusively on **existing form placeholder samples** already shipped in the app—not the unapproved curriculum JSON. Users can edit any module and export the normal booklet; `npm run sample:pr17d` adds `sample-pr17d-onboarding-example.pdf` to the CI review artifact.
+- **Teacher and licensing safeguards:** the public story catalog is intentionally **empty** until signed teacher approval **and** Scripture distribution-rights clearance are recorded. The Choose a Bible Story screen explains that the first lesson is pending review; it will then offer approved stories and the *Remember the Story* / *Fun & Games* recipes, keeping those choices separated from their curriculum source. No `curriculum/review/` imports enter the public bundle.
+- **QA:** new `tests/pr17d-welcome-onboarding.test.mjs` checks welcome-first logic, conditional resume, all 11 example region sizes and real vector PDF printing, story publication gate, protected draft replacement and responsive/accessibility coverage. Tests and build run in CI.
+
 ## PR 17c — Printable worksheet recipes (v0.16.17)
 
 - **Two real curriculum booklet arrangements** are defined in `src/worksheetRecipes.ts`: *Remember the Story* and *Fun & Games*. They select from PR17b's validated six core module kinds, rotate distinct multiple-choice questions deterministically, and assign each module to a size-compatible Small/Medium/Large activity slot on the correct booklet page. Each recipe populates ten slots, leaving one Medium slot empty for a future activity or teacher customization.

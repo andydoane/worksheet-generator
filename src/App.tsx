@@ -2,6 +2,10 @@ import { useEffect, useRef, useState } from 'react';
 import pkg from '../package.json';
 import {MODULE_GUIDANCE,isAutofilledModule,samplePlaceholder} from './moduleGuidance.ts';
 import {migrateDraftValue} from './draftMigration.ts';
+import {hasMeaningfulDraft,exampleWorksheetDraft} from './welcomeFlow.ts';
+import {PUBLIC_LESSONS,approvedForPublic,type PublicLessonEntry} from './publishedLessonCatalog.ts';
+import {buildWorksheetRecipe,type RecipeId} from './worksheetRecipes.ts';
+import WelcomeScreen from './WelcomeScreen.tsx';
 import {explainActivityError} from './editorFeedback.ts';
 import {COVER_BORDERS,coverBorderUrl,isCoverBorderId,type CoverBorderId} from './coverBorders.ts';
 import {
@@ -197,6 +201,8 @@ function LayoutDiagram({ id }: { id: LayoutId }) {
 
 export default function App() {
   const [draft, setDraft] = useState<Draft>(readDraft);
+  // Every new app visit starts on the welcome screen, even with a saved draft.
+  const [view,setView] = useState<'welcome'|'editor'>('welcome');
   const storyInputRef = useRef<HTMLTextAreaElement>(null);
   const titleInputRef = useRef<HTMLInputElement>(null);
   const [page, setPage] = useState<PageNumber>(1);
@@ -283,6 +289,34 @@ export default function App() {
     setExportError(null);
     setBorderGalleryOpen(false);
     focusTitleField();
+  }
+
+  function startWorksheet(next:Draft):boolean{
+    if(exporting)return false;
+    if(hasMeaningfulDraft(draft)&&!window.confirm(
+      'Replace your current saved worksheet? This will overwrite the worksheet saved in this browser. You can cancel to keep working on it.'
+    ))return false;
+    setDraft(structuredClone(next));
+    setPage(1);
+    setSelectedRegionId('cover-activity');
+    setTab('details');
+    setMode('page');
+    setSolutionKey(null);
+    setExportError(null);
+    setBorderGalleryOpen(false);
+    setView('editor');
+    return true;
+  }
+
+  function choosePublishedRecipe(entry:PublicLessonEntry,recipeId:RecipeId):string|null{
+    if(!approvedForPublic(entry))return 'This curriculum story has not been approved for public use.';
+    try{
+      const generated=buildWorksheetRecipe(entry.lesson,recipeId,{purpose:'published'});
+      startWorksheet(generated.draft);
+      return null;
+    }catch(error){
+      return error instanceof Error?error.message:'Could not prepare this worksheet.';
+    }
   }
 
   function setModuleType(type: ModuleId | '') {
@@ -381,6 +415,16 @@ export default function App() {
     ? 'Fixed cover layout'
     : LAYOUTS.find((item) => item.id === draft.layouts[page])?.name ?? 'Page layout';
 
+  if(view==='welcome')return <WelcomeScreen
+    hasSavedDraft={hasMeaningfulDraft(draft)}
+    savedTitle={draft.title}
+    stories={PUBLIC_LESSONS}
+    onResume={()=>setView('editor')}
+    onStartBlank={()=>startWorksheet(structuredClone(blank))}
+    onExploreExample={()=>startWorksheet(exampleWorksheetDraft())}
+    onChooseRecipe={choosePublishedRecipe}
+  />;
+
   return (
     <div className="app-shell">
       <aside className="sidebar">
@@ -419,6 +463,7 @@ export default function App() {
             <span className="topbar-version">Worksheet Studio · v{pkg.version}{import.meta.env.VITE_BUILD_SHA?' · '+import.meta.env.VITE_BUILD_SHA.slice(0,7):''}</span>
           </div>
           <div className="topbar-right">
+            <button className="welcome-home-button" type="button" onClick={()=>setView('welcome')}>Home</button>
             <span className="save-indicator" role="status"><span className={saved ? 'dot saved' : 'dot'} />{saved ? 'Saved in this browser' : 'Browser saving unavailable'}</span>
             <button className="start-fresh-button" type="button" disabled={exporting} onClick={handleStartFresh}>Start Fresh</button>
             <button className="export-button export-ready" type="button" disabled={exporting} onClick={handleExport} aria-busy={exporting}>{exporting ? 'Creating PDF…' : 'Download PDF ↗'}</button>
