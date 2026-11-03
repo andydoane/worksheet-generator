@@ -1,7 +1,7 @@
 import {useEffect,useMemo,useState} from 'react';
 import type {ChangeEvent} from 'react';
 import {parseBsbText,getBsbPassage,wordSpans,clipToWords,markSelectedWords,suggestBlankWords,type BsbIndex,type Passage} from './bsb.ts';
-import {applyBsbVerse,checkReviewContent,createApprovedLesson,editAt,listReviewTasks,updatedRightsManifest,type Lesson} from './model.ts';
+import {applyBsbVerse,checkReviewContent,createApprovedLesson,editAt,listReviewTasks,originalMemoryVerseTranslation,updatedRightsManifest,type Lesson} from './model.ts';
 import {validateModule} from '../modules.ts';
 import './review.css';
 
@@ -21,6 +21,13 @@ function initialSaved():Saved|null {
  return null;
 }
 const displayDate=()=>new Date().toISOString().slice(0,10);
+type WordBankKind='oddWords'|'checkboxes';
+function wordBankText(lesson:Lesson|null,kind:WordBankKind):string{
+ const field=kind==='oddWords'?'unrelated':'incorrect';
+ const words=lesson?.preparedActivities?.[kind]?.[field];
+ return Array.isArray(words)?words.join('\n'):'';
+}
+
 
 function SourceContext({lesson,ids=[],questionIds=[]}:{lesson:Lesson;ids?:string[];questionIds?:string[]}){
  const notes=(lesson.storyNotes??[]).filter((n:any)=>ids.includes(n.id));
@@ -34,6 +41,12 @@ function SourceContext({lesson,ids=[],questionIds=[]}:{lesson:Lesson;ids?:string
 export default function ReviewApp(){
  const [saved]=useState(initialSaved);
  const [lesson,setLesson]=useState<Lesson|null>(saved?.lesson??null);
+ // Keep the raw textarea value (including trailing Enter/newlines) separate
+ // from the normalized word array stored in the curriculum JSON.
+ const [wordBankDrafts,setWordBankDrafts]=useState(()=>({
+  oddWords:wordBankText(saved?.lesson??null,'oddWords'),
+  checkboxes:wordBankText(saved?.lesson??null,'checkboxes'),
+ }));
  const [reviewed,setReviewed]=useState<string[]>(saved?.reviewed??[]);
  const [selectedId,setSelectedId]=useState<string>(saved?.selectedId??'');
  const [error,setError]=useState('');
@@ -74,6 +87,10 @@ export default function ReviewApp(){
    throw Error('This is not a supported curriculum schema-v1 lesson or review session.');
   if(lesson&&!window.confirm('Load another lesson? Current edits will be replaced. Export your review session first if you need to keep it.'))return;
   setLesson(data);
+  setWordBankDrafts({
+   oddWords:wordBankText(data,'oddWords'),
+   checkboxes:wordBankText(data,'checkboxes'),
+  });
   setReviewed(value?.lesson?.schemaVersion===1&&Array.isArray(value.reviewed)?value.reviewed:[]);
   setSelectedId(value?.lesson?.schemaVersion===1&&typeof value.selectedId==='string'?value.selectedId:'');
   setReference(data.lessonDetails.memoryVerse.reference);
@@ -114,8 +131,10 @@ export default function ReviewApp(){
    setReviewed(prev=>prev.filter(x=>x!==active?.id));setError('');
   }catch(e){setError(String((e as Error).message??e));}
  }
- function changeWordList(key:'oddWords'|'checkboxes',field:'unrelated'|'incorrect',value:string){
+ function changeWordList(key:WordBankKind,field:'unrelated'|'incorrect',value:string){
   if(!lesson)return;
+  // A trailing Enter must stay visible until the teacher types the next word.
+  setWordBankDrafts(previous=>({...previous,[key]:value}));
   const next=structuredClone(lesson);
   next.preparedActivities[key][field]=value.split(/\r?\n/u).map(x=>x.trim()).filter(Boolean);
   setLesson(next);setPreflight(null);setReviewed(prev=>prev.filter(x=>x!==active?.id));
@@ -264,12 +283,12 @@ export default function ReviewApp(){
        <p className="review-source">Every incorrect phrase must actually appear in the paragraph.</p>
       </div>}
       {active.id==='odd-words'&&<div className="review-fields">
-       <label>Suggested unrelated words — one per line<textarea rows={7} value={lesson.preparedActivities.oddWords.unrelated.join('\n')}
+       <label>Suggested unrelated words — one per line<textarea rows={7} value={wordBankDrafts.oddWords}
         onChange={e=>changeWordList('oddWords','unrelated',e.target.value)}/></label>
        <p>Original related words: {lesson.preparedActivities.oddWords.related.join(', ')}</p>
       </div>}
       {active.id==='checkboxes'&&<div className="review-fields">
-       <label>Suggested incorrect choices — one per line<textarea rows={7} value={lesson.preparedActivities.checkboxes.incorrect.join('\n')}
+       <label>Suggested incorrect choices — one per line<textarea rows={7} value={wordBankDrafts.checkboxes}
         onChange={e=>changeWordList('checkboxes','incorrect',e.target.value)}/></label>
        <p>Correct choices: {lesson.preparedActivities.checkboxes.correct.join(', ')}</p>
       </div>}
@@ -285,7 +304,7 @@ export default function ReviewApp(){
       {active.id==='bsb-verse'&&<div className="review-fields">
        <div className="review-note">
         <h3>Berean Standard Bible — public domain</h3>
-        <p>Original curriculum uses {lesson.lessonDetails.memoryVerse.translation}. Your approved worksheet will use the exact BSB text you choose. Select an entire verse or a passage spanning verses, then choose the first and last words of the excerpt.</p>
+        <p>Original curriculum uses {originalMemoryVerseTranslation(lesson)}. Your approved worksheet will use the exact BSB text you choose. Select an entire verse or a passage spanning verses, then choose the first and last words of the excerpt.</p>
         <a href="https://berean.bible/terms.htm" target="_blank" rel="noreferrer">Official BSB public-domain terms</a>
        </div>
        {index?<p className="review-success">BSB loaded: {index.books.length} books, {index.count.toLocaleString()} numbered verse records.</p>:<>
