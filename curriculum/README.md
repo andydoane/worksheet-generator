@@ -47,6 +47,16 @@ Canonical truth data from `facts` powers the three True/False-related adapters. 
 
 Even if an editorial source later becomes approved, the future public catalog will still need to enforce the full schema/teacher-signoff and licensing gates at registration time. This PR does not publish the Red Sea lesson or revise its historical content-readiness report.
 
+## PR 17c: worksheet recipes (editorial review only)
+
+`src/worksheetRecipes.ts` declares two named recipes: **Remember the Story** and **Fun & Games**. Their pure builder accepts the output of the schema-v1 lesson data and uses the six validated PR17b core activity types to generate a completely standard, independently editable `StoredDraft` with real booklet page layouts, assignments and lesson text fields. The builder reports the selected question/source IDs, answer keys, review requirements and unfilled spaces separately from the saved-draft payload.
+
+Each recipe uses three Large activities (Story Order, Finish the Story and Sort the Story), one Medium True/False Maze, one Small True/False, and five distinct Small Multiple Choice questions. The two recipes use different layout/priority sequences and different rotating choices, with one remaining Medium slot openly available for customization. No placeholder module masquerades as actual curriculum content.
+
+The entrypoint `buildWorksheetRecipe(lesson, recipeId, {purpose:'editorial-review', seed:1})` **requires explicit review mode**. There is **no public recipe pathway or app UI** in PR17c, no source import from `curriculum/review/` into the deployed bundle, and no browser-draft replacement. Later PRs must enforce the curriculum validation, teacher-approval and Scripture licensing gates *before* registering lessons in a public catalog. Draft construction never implies editorial approval.
+
+The test suite uses the **real, unapproved** Red Sea lesson file, and `npm run sample:pr17c` generates both complete four-page folded-booklet examples as vector PDFs in GitHub Actions. The sample PDFs are for author/print review and are not exposed by the app.
+
 ### Converting the next lesson
 
 1. Take its ODT (and ODP if available) to the curriculum conversion chat. Use the same v1 schema and the source-preserving Story Note + question workflow.
