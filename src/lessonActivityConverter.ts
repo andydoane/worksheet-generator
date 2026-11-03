@@ -66,7 +66,7 @@ export type LessonActivityData={
  reviewFlags?:{id:string;type:string}[];
  facts:LessonFact[];
  storyNotes?:{id:string;order:number;cleanText:string}[];
- vocabulary?:{entries?:{term:string;sourceIds?:string[]}[]};
+ vocabulary?:{entries?:{term:string;sourceIds?:string[];scope?:string}[]};
  lessonDetails?:{
   memoryVerse?:{reference:string;text:string;source?:LessonSourceLocation};
   bigIdeas?:{text:string;source?:LessonSourceLocation}[];
