@@ -11,6 +11,8 @@ export type StoredDraft={
  verseReference:string;verseText:string;
  layouts:Record<2|3|4,LayoutId>;modules:ModuleAssignments;
  activityBorders:ActivityBorders;
+ /** Optional context for approved, lesson-prepopulated activities. Older drafts omit it. */
+ curriculumLessonId?:string;
 };
 export const EMPTY_DRAFT:StoredDraft={
  title:'',scripture:'',coverBorder:'none',bigIdea:'',
@@ -35,5 +37,9 @@ export function migrateDraftValue(data:unknown):StoredDraft{
   },
   modules:readAssignments(value.modules),
   activityBorders:readActivityBorders(value.activityBorders),
+  ...(typeof value.curriculumLessonId==='string'&&
+    /^[a-z0-9]+(?:-[a-z0-9]+)*$/u.test(value.curriculumLessonId)&&
+    value.curriculumLessonId.length<=120
+    ?{curriculumLessonId:value.curriculumLessonId}:{}),
  };
 }
