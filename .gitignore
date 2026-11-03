@@ -7,3 +7,6 @@ artifacts/
 .env
 .env.*
 !.env.example
+
+# Deployed, public-domain Berean text is fetched from its publisher by CI.
+public/review/bsb.txt
