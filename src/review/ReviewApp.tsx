@@ -1,7 +1,7 @@
 import {useEffect,useMemo,useState} from 'react';
 import type {ChangeEvent} from 'react';
 import {parseBsbText,getBsbPassage,wordSpans,clipToWords,markSelectedWords,suggestBlankWords,type BsbIndex,type Passage} from './bsb.ts';
-import {applyBsbVerse,checkReviewContent,createApprovedLesson,editAt,listReviewTasks,originalMemoryVerseTranslation,updatedRightsManifest,type Lesson} from './model.ts';
+import {applyBsbVerse,checkReviewContent,createApprovedLesson,editAt,listReviewTasks,normalizeLegacySmallDrawingScenes,originalMemoryVerseTranslation,useMatchingStoryOrderCaptions,updatedRightsManifest,type Lesson} from './model.ts';
 import {validateModule} from '../modules.ts';
 import './review.css';
 
@@ -150,6 +150,17 @@ export default function ReviewApp(){
   next.preparedActivities[key][field]=value.split(/\r?\n/u).map(x=>x.trim()).filter(Boolean);
   setLesson(next);setPreflight(null);setReviewed(prev=>prev.filter(x=>x!==active?.id));
  }
+ function updateDrawingCopy(mode:'small'|'large'){
+  if(!lesson)return;
+  try{
+   const next=mode==='small'?normalizeLegacySmallDrawingScenes(lesson):
+    useMatchingStoryOrderCaptions(lesson);
+   setLesson(next);
+   setPreflight(null);
+   setReviewed(previous=>previous.filter(id=>id!=='drawing-captions'));
+   setError('');
+  }catch(e){setError(String((e as Error).message??e));}
+ }
  function changeIdea(value:string){
   if(!lesson)return;
   const next=structuredClone(lesson);
@@ -282,6 +293,38 @@ export default function ReviewApp(){
         onChange={e=>change(['preparedActivities','finishStory','markedParagraph'],e.target.value)}/></label>
        <p className="review-source">The square-bracketed original emphasis words must be preserved and remain in chronological order.</p>
        <SourceContext lesson={lesson} ids={lesson.preparedActivities.finishStory.sourceIds??[]}/>
+      </div>}
+      {active.id==='drawing-captions'&&<div className="review-fields">
+       <div className="review-note">
+        <h3>Small Draw a Picture</h3>
+        <p>Store short scene descriptions that work after “Draw a picture of …” — without an instruction prefix or final punctuation.</p>
+        <button type="button" className="review-secondary" onClick={()=>updateDrawingCopy('small')}>
+         Convert legacy Small drawing instructions into scene descriptions
+        </button>
+       </div>
+       {(lesson.drawingPrompts??[]).map((item:any,i:number)=><div key={'scene-'+i}>
+        <label>Small scene {i+1} · {item.id??'scene'}
+         <textarea rows={2} value={item.prompt}
+          onChange={e=>change(['drawingPrompts',i,'prompt'],e.target.value)}/></label>
+        <SourceContext lesson={lesson} ids={item.sourceIds??[]}/>
+       </div>)}
+       {lesson.preparedActivities.drawPicture&&
+        <label>Default Small Draw a Picture prompt
+         <textarea rows={2} value={lesson.preparedActivities.drawPicture.prompt}
+          onChange={e=>change(['preparedActivities','drawPicture','prompt'],e.target.value)}/></label>}
+       <div className="review-note">
+        <h3>Large Draw the Story</h3>
+        <p>Use 4–6 complete, capitalized story-event sentences ending in punctuation. Prefer exact approved Story Order sentences, matched by source-note IDs. Do not begin them with “Draw”.</p>
+        <button type="button" className="review-secondary" onClick={()=>updateDrawingCopy('large')}>
+         Use matching Story Order sentences for the Large captions
+        </button>
+       </div>
+       {(lesson.preparedActivities.drawStory??[]).map((item:any,i:number)=><div key={'caption-'+i}>
+        <label>Large drawing caption {i+1}
+         <textarea rows={2} value={item.prompt}
+          onChange={e=>change(['preparedActivities','drawStory',i,'prompt'],e.target.value)}/></label>
+        <SourceContext lesson={lesson} ids={item.sourceIds??[]}/>
+       </div>)}
       </div>}
       {active.id==='circle-mistakes'&&<div className="review-fields">
        <label>Deliberately incorrect paragraph<textarea rows={7} value={lesson.preparedActivities.circleMistakes.paragraph}
