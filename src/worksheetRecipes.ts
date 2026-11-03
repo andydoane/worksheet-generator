@@ -184,7 +184,7 @@ export function buildWorksheetRecipe(
   modules[key]=structuredClone(choice.module);
   selections.push({
    slot:key,page:step.page,size:region.region.size,
-   moduleId:choice.moduleId,contentId:choice.contentId,
+   moduleId:step.moduleId,contentId:choice.contentId,
    sourceIds:[...choice.sourceIds],origin:choice.origin,
    teacherReviewRequired:choice.teacherReviewRequired,
    ...(choice.answerKey!==undefined?{answerKey:choice.answerKey}:{}),
