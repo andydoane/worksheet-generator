@@ -1,5 +1,16 @@
 # Worksheet Studio
 
+## PR 17l — Drawing scene data and quick lesson/preset switching (v0.16.26)
+
+- The approved Red Sea curriculum now stores **14 drawing scene references** (seven reusable prompts, one default Small, and six Large Draw the Story captions) as **descriptive phrases** without the redundant "Draw ..." imperative. IDs, source references, lesson approval, BSB memory verse and all other curriculum are preserved.
+- The Small Draw a Picture renderer adds "Draw a picture of " exactly once. The large Draw the Story captions use the scene description directly, with no duplicated heading. Older saved sheets with already imperative "Draw ..." prompts are still printable without a double prefix; the same text layout is shared by browser preview and PDF.
+- Only worksheets created from the approved **Choose a Bible Story** route show **Change Preset / Change Story** on **Lesson details**. Build My Own shows "Choose a Preset." The reversible in-editor selection lists the three numbered presets and Build My Own; Change Story lists only the rights-cleared approved catalog, then lets teachers choose a new booklet arrangement. Cancel does nothing to the saved worksheet.
+- Drafts now optionally store `worksheetPresetId` (preset-1/2/3 or build-own) along with the existing lesson context and per-activity baselines. Older drafts safely omit it. A change to any worksheet details, modules, layouts or borders triggers a confirmation before replacement; an untouched and reproducible starting preset may switch immediately. All new lesson data is prepared and validated **before** the saved worksheet is replaced. The application still stores only one browser-local worksheet.
+- Scratch/example worksheets have no story controls. The approved catalog remains the only source for publicly selectable stories. The review workbench, rights manifest and all 27 activity implementations are unchanged.
+- Regression tests verify scene normalization, the original proper names and approvals, older imperative prompts, preset identity across save/resume, non-destructive cancelled pickers, missing lesson gates and customized-draft confirmation.
+
+**Smoke test after merge:** Red Sea → Preset 1: check both Small drawing prompts have exactly one "Draw a picture of". Preset 2: Large Draw the Story shows only scene captions. On Lesson details choose Change Preset → Preset 3 without returning Home. Change Story opens the story list and then preset selection. Modify the worksheet first and confirm the warning appears; Cancel must leave everything intact. Verify a Start from Scratch or Explore Example worksheet shows neither control. Refresh and Continue Your Worksheet to confirm selected preset identity stays visible.
+
 ## PR 17k — Three numbered curriculum presets, unique lesson content and scaled cipher key (v0.16.25)
 
 - The **three complete, numbered presets** replace the thematic Remember the Story and Fun & Games choices shown in the welcome screen. They follow the teacher's `Layouts.ods` specification exactly, including a new **Small Pair + Large** layout for Preset 2, Page 3. Every activity region is filled, and every activity can still be edited or replaced by the teacher.
