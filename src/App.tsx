@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import pkg from '../package.json';
 import {MODULE_GUIDANCE,isAutofilledModule,samplePlaceholder} from './moduleGuidance.ts';
 import {migrateDraftValue} from './draftMigration.ts';
+import {upgradeSavedDrawingCaptions} from './drawingDraftUpgrade.ts';
 import {hasMeaningfulDraft,exampleWorksheetDraft} from './welcomeFlow.ts';
 import {PUBLIC_LESSONS,approvedForPublic,type PublicLessonEntry} from './publishedLessonCatalog.ts';
 import {buildWorksheetRecipe,type RecipeId} from './worksheetRecipes.ts';
@@ -88,7 +89,7 @@ function readDraft(): Draft {
     if (!stored) return blank;
 
     // Old drafts contain no layout/border selections. Keep their text intact.
-    return migrateDraftValue(JSON.parse(stored));
+    return upgradeSavedDrawingCaptions(migrateDraftValue(JSON.parse(stored)),PUBLIC_LESSONS);
   } catch {
     // Storage can be unavailable, and old user content could be malformed.
     return blank;
