@@ -19,7 +19,7 @@ import {buildWorksheetRecipe} from '../src/worksheetRecipes.ts';
 import {validateLesson} from '../scripts/validate-curriculum.mjs';
 
 const getJson=async path=>JSON.parse(await readFile(new URL('../'+path,import.meta.url),'utf8'));
-const lesson=await getJson('curriculum/review/ot-031-god-parts-the-red-sea.json');
+const lesson=await getJson('tests/fixtures/ot-031-original-review.json');
 const schema=await getJson('curriculum/schema/lesson-v1.schema.json');
 const convert=(source=lesson,seed=1)=>convertLessonActivities(source,{seed});
 const converted=convert();
