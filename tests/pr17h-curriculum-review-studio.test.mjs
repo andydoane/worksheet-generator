@@ -4,7 +4,7 @@ import {readFile} from 'node:fs/promises';
 import {parseBsbText,getBsbPassage,wordSpans,clipToWords,markSelectedWords,suggestBlankWords} from '../src/review/bsb.ts';
 import {listReviewTasks,editAt,applyBsbVerse,checkReviewContent,createApprovedLesson,originalMemoryVerseTranslation,updatedRightsManifest} from '../src/review/model.ts';
 
-const raw=await readFile(new URL('../curriculum/review/ot-031-god-parts-the-red-sea.json',import.meta.url),'utf8');
+const raw=await readFile(new URL('../tests/fixtures/ot-031-original-review.json',import.meta.url),'utf8');
 const original=JSON.parse(raw);
 const bsbVerse='Who among the gods is like You, O LORD? Who is like You—majestic in holiness, revered with praises, performing wonders?';
 const bible=parseBsbText('Exodus 15:11\t'+bsbVerse+'\nExodus 15:12\tYou stretched out Your right hand, and the earth swallowed them up.\n',false);

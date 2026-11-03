@@ -13,7 +13,7 @@ import {validateLesson} from '../scripts/validate-curriculum.mjs';
 
 const fromRepo=async path=>readFile(new URL('../'+path,import.meta.url),'utf8');
 const getJson=async path=>JSON.parse(await fromRepo(path));
-const redSea=await getJson('curriculum/review/ot-031-god-parts-the-red-sea.json');
+const redSea=await getJson('tests/fixtures/ot-031-original-review.json');
 const schema=await getJson('curriculum/schema/lesson-v1.schema.json');
 
 test('Blank automatically saved draft does not trigger Continue; every meaningful draft does',()=>{

@@ -10,7 +10,7 @@ import {getRegions,DEFAULT_LAYOUTS} from '../src/booklet.ts';
 import {moduleForSize,validateModule} from '../src/modules.ts';
 import {validateLesson} from './validate-curriculum.mjs';
 const readJson=async path=>JSON.parse(await readFile(new URL('../'+path,import.meta.url),'utf8'));
-const lesson=await readJson('curriculum/review/ot-031-god-parts-the-red-sea.json');
+const lesson=await readJson('tests/fixtures/ot-031-original-review.json');
 const schema=await readJson('curriculum/schema/lesson-v1.schema.json');
 const errors=validateLesson(lesson,schema);
 if(errors.length)throw Error('Invalid curriculum source: '+errors.join('; '));

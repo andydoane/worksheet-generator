@@ -1,8 +1,8 @@
 # Approved Bible lessons — publication checklist
 
 This folder is the only source of public built-in lesson JSON files.
-There are NO approved lessons yet. The first Red Sea lesson remains under
-curriculum/review/ until curriculum-author approval and Scripture rights review.
+God Parts the Red Sea (OT 31) is the first approved lesson, after curriculum-author
+signoff and a separately recorded Berean Standard Bible public-domain rights review.
 
 ## Adding an approved lesson (data-only PR)
 
@@ -43,4 +43,7 @@ curriculum/review/ until curriculum-author approval and Scripture rights review.
 
 ## Current state
 
-Zero approved lessons. Red Sea remains in teacher review.
+One approved lesson: `ot-031-god-parts-the-red-sea.lesson.json`, using Exodus 15:11
+from the public-domain Berean Standard Bible. The original review-stage dataset is
+retained only as the historical fixture `tests/fixtures/ot-031-original-review.json`
+for regression tests; it is not a public lesson and is not scanned for publication.

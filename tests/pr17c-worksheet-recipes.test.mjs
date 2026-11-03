@@ -11,7 +11,7 @@ import {getPrintableSheetRegions,createBookletPdf} from '../src/pdf.ts';
 import {validateLesson} from '../scripts/validate-curriculum.mjs';
 
 const readJson=async name=>JSON.parse(await readFile(new URL('../'+name,import.meta.url),'utf8'));
-const lesson=await readJson('curriculum/review/ot-031-god-parts-the-red-sea.json');
+const lesson=await readJson('tests/fixtures/ot-031-original-review.json');
 const schema=await readJson('curriculum/schema/lesson-v1.schema.json');
 const review={purpose:'editorial-review'};
 const ids=['story-review','fun-and-games'];

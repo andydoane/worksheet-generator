@@ -7,7 +7,7 @@ import {WORKSHEET_RECIPES,buildWorksheetRecipe} from '../src/worksheetRecipes.ts
 import {validateLesson} from './validate-curriculum.mjs';
 
 const lesson=JSON.parse(await readFile(new URL(
- '../curriculum/review/ot-031-god-parts-the-red-sea.json',import.meta.url),'utf8'));
+ '../tests/fixtures/ot-031-original-review.json',import.meta.url),'utf8'));
 const schema=JSON.parse(await readFile(new URL(
  '../curriculum/schema/lesson-v1.schema.json',import.meta.url),'utf8'));
 const errors=validateLesson(lesson,schema);

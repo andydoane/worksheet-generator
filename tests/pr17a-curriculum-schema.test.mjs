@@ -6,7 +6,7 @@ import {validateLesson,validateLessonSchema,validateCurriculumFiles}
  from '../scripts/validate-curriculum.mjs';
 
 const fromRepo=(path)=>readFile(new URL('../'+path,import.meta.url),'utf8');
-const data=JSON.parse(await fromRepo('curriculum/review/ot-031-god-parts-the-red-sea.json'));
+const data=JSON.parse(await fromRepo('tests/fixtures/ot-031-original-review.json'));
 const schema=JSON.parse(await fromRepo('curriculum/schema/lesson-v1.schema.json'));
 const modified=(change)=>{const copy=structuredClone(data);change(copy);return copy;};
 
@@ -97,7 +97,7 @@ test('Teacher approval gate prevents publishing by flipping a single flag',()=>{
  assert.deepEqual(validateLesson(resolved,schema),[]);
 });
 test('CLI-compatible content validation passes without adding the lesson to the live app',async()=>{
- const path=fileURLToPath(new URL('../curriculum/review/ot-031-god-parts-the-red-sea.json',import.meta.url));
+ const path=fileURLToPath(new URL('../tests/fixtures/ot-031-original-review.json',import.meta.url));
  const results=await validateCurriculumFiles([path]);
  assert.equal(results.length,1);
  assert.deepEqual(results[0].errors,[]);

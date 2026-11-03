@@ -1,14 +1,27 @@
-# OT 31 — Teacher Review Checklist
+# OT 31 — Historical Teacher Review Checklist (completed)
 
-Priority decisions before publishing this lesson preset:
+This is the **original** checklist from the preapproval curriculum conversion.
+The curriculum author approved OT 31 on **November 3, 2026**. The signed-off
+lesson is under `curriculum/approved/ot-031-god-parts-the-red-sea.lesson.json`
+and uses the **public-domain Berean Standard Bible (BSB)** for printed Scripture,
+with rights evidence recorded in `curriculum/approved/rights-manifest.json`.
 
-- [ ] **High:** Approve eight multiple-choice exercises and their 16 newly suggested incorrect answers.
-- [ ] **High:** Approve the suggested false statements used in Sort the Story and available to other true/false modules.
-- [ ] **High:** Approve the adapted Finish the Story paragraph; it uses all seven original emphasized words in order.
-- [ ] **Medium:** Approve the Circle the Mistakes paragraph and its six-item correction key.
-- [ ] **Medium:** Review language about the destruction of the Egyptian army for your students.
-- [ ] **Medium (development):** Run the JSON through the future importer and test Crossword connected-grid generation and Pixel Picture rendering in the real application.
-- [ ] **Optional:** Confirm whether the Important Idea should display **“savior.”** as printed on page 5 or **“Savior!”** as used in page-6 prose. The JSON currently uses the page-5 graphic wording.
-- [ ] **Optional:** Supply an ODP presentation if you want slide-by-slide image and Story Note comparison.
+The signed-off lesson resolves teacher-review flags `rf-01`, `rf-02`, `rf-03`
+and `rf-04`, age-suitability flag `rf-05`, and source-wording flag `rf-10`.
+Technical readiness is verified by `npm run validate:library` and GitHub Actions.
 
-**Already source-verified:** Seven original Story Notes (pages 2–5), original important idea (page 5), Exodus 15:11 ESV as printed twice on page 7, and ten dedicated review questions (pages 9–10). This checklist does not prevent use of the lesson's already-prepared content for importer development.
+## Original decisions (recorded for reference)
+
+- [x] Multiple-choice exercises and newly suggested incorrect choices
+- [x] Suggested false statements for sorting and true/false activities
+- [x] Adapted Finish the Story paragraph and original emphasis words
+- [x] Circle the Mistakes paragraph and six-item correction key
+- [x] Age suitability of wording about the Egyptian army
+- [x] Important Idea wording (the original page-5 display)
+- [x] All 27 converted activities checked by the real module generators and validators
+- [ ] Optional: Original ODP slideshow remains unavailable for visual source comparison
+
+**Historical source-verified content:** Seven original Story Notes (pages 2–5),
+the Important Idea (page 5), original curriculum memory verse in ESV (page 7),
+and the original review questions (pages 9–10). Only the approved BSB verse is
+used in publicly generated worksheet presets.
