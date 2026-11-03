@@ -169,3 +169,20 @@ export function originalApprovedActivity(
  const picked=chooseActivityForDraft(current.type,draft,slot,entries);
  return picked.source==='lesson'?structuredClone(picked.module):undefined;
 }
+
+
+/** A pristine preset can be switched away from without warning only if the
+ * approved catalog can produce its current content again. Withdrawn lessons,
+ * changed versions and unavailable activity types must never be silently lost.
+ */
+export function canRecreateApprovedActivity(
+ draft:StoredDraft,slot:string,entries:readonly PublicLessonEntry[],
+):boolean{
+ const current=draft.modules[slot];
+ if(!current)return true;
+ if(!draft.curriculumLessonId)return true;
+ const entry=approvedLessonForDraft(draft,entries);
+ if(!entry)return false;
+ return convertLessonActivities(entry.lesson,{seed:1}).candidates.some(
+  candidate=>candidate.moduleId===current.type&&sameActivityContent(candidate.module,current));
+}
