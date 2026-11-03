@@ -161,7 +161,8 @@ export function buildWorksheetRecipe(
     !Number.isInteger(step.questionIndex)||step.questionIndex>=questionSteps.length){
     throw Error('Invalid question index in recipe '+id+'.');
    }
-   choice=questionPool[(step.questionIndex+seed)%questionPool.length];
+   const recipeOffset=id==='fun-and-games'?3:0;
+   choice=questionPool[(step.questionIndex+seed+recipeOffset)%questionPool.length];
   }else{
    choice=findLessonCandidate(conversion,step.moduleId,step.moduleId);
   }
