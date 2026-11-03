@@ -7,7 +7,7 @@ import {PUBLIC_LESSONS,approvedForPublic,type PublicLessonEntry} from './publish
 import {buildWorksheetRecipe,type RecipeId} from './worksheetRecipes.ts';
 import {WORKSHEET_RECIPES} from './worksheetRecipes.ts';
 import {
- createLessonWorksheet,needsLessonSwitchConfirmation,
+ createLessonWorksheet,isWorksheetStartId,needsLessonSwitchConfirmation,
  type WorksheetStartId,
 } from './lessonQuickSwitch.ts';
 import {approvedLessonForDraft,buildYourOwnLessonDraft,canRecreateApprovedActivity,chooseActivityForDraft,isActivityCustomized,originalApprovedActivity,sameActivityContent} from './curriculumEditor.ts';
@@ -628,7 +628,7 @@ export default function App() {
                             onClick={()=>{setLessonPicker('stories');setLessonPickerError(null);}}>‹ Back to stories</button>}
                           {WORKSHEET_RECIPES.map(recipe=><button type="button" key={recipe.id}
                             disabled={lessonPicker==='presets'&&draft.worksheetPresetId===recipe.id}
-                            onClick={()=>chooseQuickLessonWorksheet(recipe.id)}>
+                            onClick={()=>{if(isWorksheetStartId(recipe.id))chooseQuickLessonWorksheet(recipe.id);}}>
                             <strong>{recipe.name}{draft.worksheetPresetId===recipe.id?' · Current':''}</strong>
                             <small>{recipe.description}</small>
                           </button>)}
