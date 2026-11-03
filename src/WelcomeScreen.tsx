@@ -12,9 +12,11 @@ export type WelcomeScreenProps={
  onExploreExample:()=>void;
  /** Return a helpful error if a recipe cannot be created. */
  onChooseRecipe:(lesson:PublicLessonEntry,recipe:RecipeId)=>string|null;
+ /** Start with lesson details and choose each activity yourself. */
+ onBuildOwn:(lesson:PublicLessonEntry)=>string|null;
 };
 export default function WelcomeScreen({
- hasSavedDraft,savedTitle,stories,onResume,onStartBlank,onExploreExample,onChooseRecipe,
+ hasSavedDraft,savedTitle,stories,onResume,onStartBlank,onExploreExample,onChooseRecipe,onBuildOwn,
 }:WelcomeScreenProps){
  const [screen,setScreen]=useState<Screen>('home');
  const [selectedId,setSelectedId]=useState<string|null>(null);
@@ -45,7 +47,7 @@ export default function WelcomeScreen({
      <div className="welcome-options">
       <button type="button" className="welcome-choice" onClick={enterStories}>
        <span className="welcome-choice-icon" aria-hidden="true">▤</span>
-       <span><strong>Choose a Bible Story</strong><small>Start with an approved lesson and a ready-made activity mix.</small></span>
+       <span><strong>Choose a Bible Story</strong><small>Start with an approved lesson. Choose activities yourself or use a ready-made mix.</small></span>
        <span className="welcome-chevron" aria-hidden="true">›</span>
       </button>
       <button type="button" className="welcome-choice" onClick={onStartBlank}>
@@ -97,7 +99,7 @@ export default function WelcomeScreen({
      <button type="button" className="welcome-back" onClick={goBack}>‹ Back to Bible Stories</button>
      <p className="welcome-eyebrow">STEP 2 · CHOOSE A WORKSHEET STYLE</p>
      <h1 id="welcome-title">{selected.lesson.lessonDetails.title}</h1>
-     <p className="welcome-intro">Choose a starting arrangement. Once the booklet opens, you can edit every activity, change layouts, and download a PDF.</p>
+     <p className="welcome-intro">Choose a ready-made worksheet style, or build your own by selecting activities. Either way, each new activity can load prepared content from this approved Bible story.</p>
      <div className="welcome-options">
       {WORKSHEET_RECIPES.map(recipe=><button type="button" className="welcome-choice"
        key={recipe.id} onClick={()=>setError(onChooseRecipe(selected,recipe.id))}>
@@ -105,6 +107,12 @@ export default function WelcomeScreen({
        <span><strong>{recipe.name}</strong><small>{recipe.description}</small></span>
        <span className="welcome-chevron" aria-hidden="true">›</span>
       </button>)}
+      <button type="button" className="welcome-choice" onClick={()=>setError(onBuildOwn(selected))}>
+       <span className="welcome-choice-icon" aria-hidden="true">✎</span>
+       <span><strong>Build My Own Worksheet</strong>
+        <small>Start with this lesson's details and an empty booklet. Add any compatible activity to fill it with approved story content automatically.</small></span>
+       <span className="welcome-chevron" aria-hidden="true">›</span>
+      </button>
      </div>
      {error&&<p className="welcome-error" role="alert">{error}</p>}
     </>}

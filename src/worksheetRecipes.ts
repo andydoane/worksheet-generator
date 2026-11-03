@@ -201,6 +201,8 @@ export function buildWorksheetRecipe(
   verseText:lesson.lessonDetails.memoryVerse?.text??'',
   layouts:{...recipe.layouts},
   modules,
+  // Review-only sample data never becomes a public lesson context.
+  ...(options.purpose==='published'?{curriculumLessonId:lesson.id}:{}),
  };
  return {
   lessonId:lesson.id,recipeId:id,draft,selections,openSlots,

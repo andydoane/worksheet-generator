@@ -99,6 +99,7 @@
 .regenerate-module { background: #ecf6ee; border: 1px solid #badac4; color: #2d7362; font-weight: 900; font-size: 12px; border-radius: 7px; padding: 10px 12px; }
 .regenerate-module:hover { background: #e0efe2; }
 .activity-validation { background: #fff4e9; border: 1px solid #e8c6a2; padding: 10px; border-radius: 8px; }
+.curriculum-context-warning { background: #fff4e9; border: 1px solid #e8c6a2; padding: 10px; border-radius: 8px; color: #875a29; font-size: 12px; line-height: 1.5; margin: 8px 0; }
 .activity-validation p { color: #875a29; margin: 3px 0; font-size: 11px; line-height: 1.5; }
 .activity-ready { font-size: 12px; color: #26794b; font-weight: 800; }
 /* Content uses a scale-independent column/row layout inside existing 0.1-in padding. */
