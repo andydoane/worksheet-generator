@@ -128,6 +128,43 @@ export function lessonContentPool(lesson:LessonActivityData,seed=1):LessonConten
   }
  }
 
+ // Distinct combinations of already reviewed story/nonstory word banks.
+ // No new distractors are invented; the curriculum author approved these.
+ const wordSources=[
+  {type:'odd-words' as const,source:data.preparedActivities.oddWords},
+  {type:'checkboxes' as const,source:data.preparedActivities.checkboxes},
+ ];
+ for(const group of wordSources){
+  const list=group.source;
+  if(!list)continue;
+  const correct=group.type==='odd-words'?list.related:list.correct;
+  const incorrect=group.type==='odd-words'?list.unrelated:list.incorrect;
+  const approvedRelated=distinct([
+   ...correct,...(data.vocabulary?.entries??[])
+    .filter(x=>x.scope!=='application').map(x=>x.term),
+  ]).filter(x=>x.length<=12&&/^[A-Za-z]+(?:[ '-][A-Za-z]+)*$/u.test(x));
+  for(let i=0;i<Math.min(approvedRelated.length,16);i++){
+   if(incorrect.length<2)break;
+   const related=Array.from({length:3},(_,j)=>approvedRelated[(i+j)%approvedRelated.length]);
+   const unrelated=[incorrect[i%incorrect.length],incorrect[(i+1)%incorrect.length]];
+   const module={type:group.type,correct:related.join('\n'),
+    incorrect:unrelated.join('\n'),seed};
+   add(group.type,'reviewed-word-bank:'+i,module,'adapted');
+  }
+ }
+ // The six original matching pairs can form two different small matching
+ // exercises, instead of always repeating the whole matching set.
+ const match=data.preparedActivities.matchWords??[];
+ if(match.length>=6){
+  for(let offset=0;offset<match.length;offset+=3){
+   const part=match.slice(offset,offset+3);
+   if(part.length<3)continue;
+   add('match-words','pairs:'+offset,{
+    type:'match-words',pairs:part.map(p=>p.left+','+p.right).join('\n'),seed,
+   },'adapted',part.flatMap(p=>p.sourceIds??[]));
+  }
+ }
+
  // Different two-word scramble sets, from approved lesson vocabulary only.
  // Avoid application-only vocabulary for the story review activities.
  const vocab=distinct((data.vocabulary?.entries??[])
