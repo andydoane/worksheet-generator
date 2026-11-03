@@ -109,6 +109,7 @@ test('Manual authoring avoids shared content even across different module types'
   ['true-false','true-false-maze'],
   ['big-idea-cryptogram','connect-big-idea'],
   ['connect-big-idea','big-idea-cryptogram'],
+  ['story-order','big-idea-cryptogram'],
   ['draw-picture','draw-picture'],
   ['multiple-choice','multiple-choice'],
   ['who-am-i','who-am-i'],
