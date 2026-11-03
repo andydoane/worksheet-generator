@@ -1,5 +1,13 @@
 # Worksheet Studio
 
+## PR 17e — Convert word, matching, drawing and picture lesson activities (v0.16.19)
+
+- **Ten new lesson-to-activity adapters**: Draw a Picture, What Doesn't Belong?, Unscramble the Words, Checkboxes, Who Am I?, Match the Words, Word Search (Medium), Pixel Picture, Draw the Story, and Word Search (Large). The existing six core activity kinds remain unchanged. The Red Sea file supplies actual authored/story-derived data for all ten.
+- **Reuse and editorial provenance**: converters preserve chronological drawing prompts, canonical Story Note references, and vocabulary origin metadata. Unrelated/incorrect word banks are marked as newly suggested content and **require teacher review**; valid source vocabulary remains tied back to Story Notes. No invented clue, word or phrase is silently inserted.
+- **Real validation and puzzle solvability**: every typed payload passes the existing module validator, and both word-search sizes and Pixel Picture additionally pass their actual generation engines before they are offered as candidates. Unsupported/malformed source values generate diagnostics instead of partial/truncated activities. Deterministic seeds keep PDF and preview results reproducible.
+- **No changes to the preset recipes or welcome screen**: Remember the Story and Fun & Games retain their intentionally unfilled Medium slot until we finish module coverage and collaboratively refine their content. The unapproved Red Sea lesson stays under `curriculum/review/` outside the deployed bundle, and there is no public-catalog registration or change to saved worksheets.
+- **QA**: `tests/pr17e-word-visual-converter.test.mjs` checks all ten new adapters, their source references, teacher review flags, solver outputs, failure diagnostics, repeated conversion, existing recipe compatibility and an actual PDF export. `npm run sample:pr17e` generates `sample-pr17e-red-sea-word-visual-showcase.pdf`, a complete editorial-review-only four-page booklet featuring **all ten new activities plus two existing activities** with no empty placeholders.
+
 ## PR 17d — Always-on welcome & safe lesson onboarding (v0.16.18)
 
 - **Every app launch begins at a welcoming screen**, even with previously saved work. Choices are **Choose a Bible Story**, **Start from Scratch**, **Explore an Example**, plus **Continue Your Worksheet** only when the browser's draft contains meaningful work. Returning to Home is available from the existing editor top bar.
