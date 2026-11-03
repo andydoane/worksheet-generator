@@ -77,6 +77,18 @@ The converter copies authored drawing prompts, matching pairs, character clues a
 
 The GitHub Actions `sample-bifold-booklet` review artifact gains `sample-pr17e-red-sea-word-visual-showcase.pdf`, a four-page booklet with **12 fully populated regions** covering all ten new adapters and two original modules. This sample is editorial QA, not a public preset.
 
+## PR 17f: full 27-module verse and specialty adapter coverage
+
+`convertLessonActivities(lesson, {seed})` can now convert prepared content for **all 27 existing module kinds**. The eleven final mappings add First Letters, Finish Verse, Unscramble Verse, Circle the Mistakes, Big Idea Cryptogram, Upside Down Verse, Connect Big Idea, Verse Cryptogram, Crossword, Spiral Verse and Connect Verse.
+
+This is a data-to-existing-module extension, **not a rewrite of existing module behavior**. Each candidate uses the existing `ActivityModule` type and validator. Source memory verse wording and reference are checked for exact matches, including reconstruction of bracketed verse blanks; source Big Ideas are also checked. Crossword entries must actually generate a connected grid preserving all clues, cryptograms must pass the real cipher validator, and connector/spiral paths must be generateable. Invalid content is reported as a diagnostic, never silently edited.
+
+`ConvertedActivity.sourceLocations` holds the original ODT page and paragraph location when a verse or Important Idea module has no Story Note ID. `mistakeCorrections` separately preserves the Circle the Mistakes review answers and supporting IDs, **without altering the module's printable text/count payload**. All generated mistake content remains marked for the author's approval.
+
+The original Red Sea curriculum remains **review-stage**, excluded from the public UI. Do not add it to `src/publishedLessonCatalog.ts` until teacher signoff and Scripture distribution clearance. The existing *Remember the Story* and *Fun & Games* booklet recipes intentionally retain their empty Medium regions until the user and assistant review the final content mix later.
+
+For independent print/visual QA, `npm run sample:pr17f` produces two complete four-page folded booklets in the GitHub Actions `sample-bifold-booklet` artifact: `sample-pr17f-red-sea-scripture-puzzles.pdf` and `sample-pr17f-red-sea-meaning-and-memory.pdf`. The sample builds and tests use the real review-stage JSON only on the Node side.
+
 ### Converting the next lesson
 
 1. Take its ODT (and ODP if available) to the curriculum conversion chat. Use the same v1 schema and the source-preserving Story Note + question workflow.
