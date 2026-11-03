@@ -7,7 +7,7 @@ import {PUBLIC_LESSONS,approvedForPublic,type PublicLessonEntry} from './publish
 import {buildWorksheetRecipe,type RecipeId} from './worksheetRecipes.ts';
 import {WORKSHEET_RECIPES} from './worksheetRecipes.ts';
 import {
- createLessonWorksheet,isWorksheetStartId,needsLessonSwitchConfirmation,
+ createLessonWorksheet,needsLessonSwitchConfirmation,
  type WorksheetStartId,
 } from './lessonQuickSwitch.ts';
 import {approvedLessonForDraft,buildYourOwnLessonDraft,canRecreateApprovedActivity,chooseActivityForDraft,isActivityCustomized,originalApprovedActivity,sameActivityContent} from './curriculumEditor.ts';
