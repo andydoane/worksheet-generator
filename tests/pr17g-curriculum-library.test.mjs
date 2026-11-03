@@ -108,7 +108,7 @@ test('Scripture rights evidence requires status, independently stated basis, rev
  assert.equal(approvedForPublic({lesson:flipped,scriptureDistributionCleared:true,
   rightsEvidence:exampleRights}),false);
 });
-test('Public auto-discovery loads only explicit approved filenames with separately recorded rights, in stable order',()=>{
+test('Public auto-discovery loads only explicit approved filenames with separately recorded rights, in stable order',async()=>{
  const approved=signed();
  const id=approved.id;
  const manifest={schemaVersion:1,lessons:{[id]:exampleRights}};
