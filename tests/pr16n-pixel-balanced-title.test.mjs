@@ -28,7 +28,7 @@ const moduleFor=(text,seed=1,shapeId='heart')=>({
 const measuredWidth=(text,size,measurePuzzle)=>text.split(' ').reduce((total,word,i)=>
  total+pixelWordWidth(word,size,measurePuzzle)+(i?measurePuzzle(' ',size):0),0);
 
-test('Title Pixel Perfect is fully centered above a balanced, center-aligned instruction block',async()=>{
+test('Title Pixel Picture is fully centered above a balanced, center-aligned instruction block',async()=>{
  const widths=await metrics();
  for(const text of [
   phrase,
@@ -38,7 +38,7 @@ test('Title Pixel Perfect is fully centered above a balanced, center-aligned ins
   const plan=planPixelPicture(generatePixelPicture(moduleFor(text)),widths);
   assert.ok(plan,'layout failed: '+text);
   assert.equal(plan.title,PIXEL_TITLE);
-  assert.equal(plan.title,'PIXEL PERFECT');
+  assert.equal(plan.title,'PIXEL PICTURE');
   assert.equal(plan.titleX,MEDIUM_PRINT_WIDTH/4);
   const headlineWidth=widths.title(plan.title,plan.titleSize);
   assert.ok(plan.titleX-headlineWidth/2>=plan.leftSafeX-.01);
