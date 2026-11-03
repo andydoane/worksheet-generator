@@ -19,8 +19,8 @@ const medium={type:'pixel-picture',phrase:'The Egyptians chased after the Israel
 const face=async file=>fontkit.create(await readFile(new URL('../fonts/'+file,import.meta.url)));
 const width=face=>(text,size)=>face.layout(text).glyphs.reduce((sum,g)=>sum+g.advanceWidth,0)*size/face.unitsPerEm;
 async function measured(){
- const [body,puzzle]=await Promise.all([face('Nunito-Medium.ttf'),face('ZillaSlab-Bold-pdf.ttf')]);
- return {body:width(body),puzzle:width(puzzle)};
+ const [body,puzzle,title]=await Promise.all([face('Nunito-Medium.ttf'),face('ZillaSlab-Bold-pdf.ttf'),face('MouseMemoirs-Regular.ttf')]);
+ return {body:width(body),puzzle:width(puzzle),title:width(title)};
 }
 test('Pixel Picture remains a Medium activity with a blank editor input and a non-counting sample',()=>{
  assert.equal(MODULES.find(m=>m.id==='pixel-picture')?.size,'medium');
@@ -100,7 +100,7 @@ test('Phrase validator retains the 30–85 character bound and requires a repeat
  assert.ok(validatePixelPicture({...medium,phrase:'Abc def ghi jkl mno pqr stu vwx?'}).length);
  assert.deepEqual(validatePixelPicture(medium),[]);
 });
-test('Both instructions and uppercase Zilla phrase form ONE vertically centered left block with fixed-size blanks',async()=>{
+test('Title, instructions and uppercase Zilla phrase form ONE vertically centered left block with fixed-size blanks',async()=>{
  const metrics=await measured();
  const phrases=[
   medium.phrase,
@@ -122,9 +122,12 @@ test('Both instructions and uppercase Zilla phrase form ONE vertically centered 
   assert.equal(plan.blankWidth,firstBlankWidth);
   if(shortSize===null)shortSize=plan.phraseSize;
   else assert.ok(plan.phraseSize<=shortSize,'long phrase font may shrink, blank never does');
+  assert.equal(plan.title,'PIXEL PERFECT');
+  assert.equal(plan.titleX,MEDIUM_PRINT_WIDTH/4);
+  assert.ok(plan.titleY>=plan.groupTop&&plan.titleY<=plan.groupBottom);
   assert.ok(plan.groupTop>=4&&plan.groupBottom<=MEDIUM_PRINT_HEIGHT-4);
   assert.ok(Math.abs((plan.groupTop+plan.groupBottom)/2-MEDIUM_PRINT_HEIGHT/2)<.001,
-   'instruction + phrase block should be vertically centered');
+   'title + instruction + phrase block should be vertically centered');
   assert.equal(plan.phraseGlyphs.filter(g=>g.kind==='blank').length,puzzle.missingPositions.length);
   for(const line of plan.instructions){
    assert.ok(line.x>=0&&line.x+metrics.body(line.text,plan.instructionSize)<left-3,
@@ -143,7 +146,7 @@ test('Both instructions and uppercase Zilla phrase form ONE vertically centered 
    cell.rectY+plan.cell<=MEDIUM_PRINT_HEIGHT));
  }
 });
-test('SVG/PDF render uppercase Zilla glyphs, true fixed underlines, no headline, and exactly 35%-opacity grid letters',async()=>{
+test('SVG/PDF render title, uppercase Zilla glyphs, fixed underlines and exactly 35%-opacity grid letters',async()=>{
  const [preview,pdf,editor,puzzle,app]=await Promise.all([
   readFile(new URL('../src/PixelPicturePrintPreview.tsx',import.meta.url),'utf8'),
   readFile(new URL('../src/pixelPicturePdf.ts',import.meta.url),'utf8'),
@@ -159,8 +162,8 @@ test('SVG/PDF render uppercase Zilla glyphs, true fixed underlines, no headline,
  assert.match(pdf,/opacity:\.35/u);
  assert.match(preview,/x2=\{glyph\.x\+plan\.blankWidth\}/u);
  assert.match(pdf,/glyph\.x\+plan\.blankWidth/u);
- assert.doesNotMatch(preview,/\{plan\.title\}/u);
- assert.doesNotMatch(pdf,/page\.drawText\(plan\.title/u);
+ assert.match(preview,/\{plan\.title\}/u);
+ assert.match(pdf,/page\.drawText\(plan\.title/u);
  assert.match(preview,/showSolution&&cell\.active/u);
  assert.doesNotMatch(pdf,/missingLetters\.join/u);
  assert.match(editor,/key\.missingLetters\[0\]/u);

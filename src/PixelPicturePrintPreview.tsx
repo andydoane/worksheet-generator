@@ -15,8 +15,8 @@ export default function PixelPicturePrintPreview({module,showSolution=false}:{
  const [plan,setPlan]=useState<PixelPlan|null|false>(null);
  useEffect(()=>{
   let active=true;setPlan(null);
-  void mediumWidths().then(({finishBody,puzzlePdf})=>{
-   if(active)setPlan(planPixelPicture(puzzle,{body:finishBody,puzzle:puzzlePdf})??false);
+  void mediumWidths().then(({title,finishBody,puzzlePdf})=>{
+   if(active)setPlan(planPixelPicture(puzzle,{title,body:finishBody,puzzle:puzzlePdf})??false);
   }).catch(()=>{if(active)setPlan(false);});
   return ()=>{active=false;};
  },[puzzle]);
@@ -27,6 +27,8 @@ export default function PixelPicturePrintPreview({module,showSolution=false}:{
    viewBox={'0 0 '+MEDIUM_PRINT_WIDTH+' '+MEDIUM_PRINT_HEIGHT}
    preserveAspectRatio="xMidYMid meet" role="img"
    aria-label="Pixel Picture with one missing-letter phrase on the left and a 13 by 13 letter grid on the right">
+   <text x={plan.titleX} y={plan.titleY} textAnchor="middle"
+    fontFamily="Mouse Memoirs" fontSize={plan.titleSize} fill="#222">{plan.title}</text>
    {plan.instructions.map((line,i)=><text key={'instruction-'+i}
     x={line.x} y={line.y} fontFamily="Nunito" fontWeight="500"
     fontSize={plan.instructionSize} fill="#222">{line.text}</text>)}

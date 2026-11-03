@@ -1,5 +1,13 @@
 # Worksheet Studio
 
+## PR 16n — Pixel Picture balanced print typography (v0.16.14)
+
+- **Restore the print heading** `PIXEL PERFECT` (while retaining the `Pixel Picture` activity name), and vertically center the **heading, instructions, and uppercase phrase as one group** inside the left Medium panel.
+- **Balance both word-wrapped text blocks** using measured embedded-font advances: instructions use Nunito, the phrase uses uppercase Zilla Slab Bold. Every resulting line is **center-justified** within the left half, with no crossover into the 13×13 grid.
+- **Protect handwriting space:** writing lines retain the exact 17.5pt width irrespective of fitted text size. A missing letter next to a word boundary/space gains a 4pt clearance on that exposed side, while internal blanks add no extra gap. All spacing is part of the measured wrapping plan, so AND_ and GU_ are separated from following words without shifting DW_ER internally.
+- **Preview/PDF parity:** the same print-point geometry renders the restored Mouse Memoirs heading and centered lines in both SVG and vector PDF. Retains 35%-opacity grid letters, one-letter reveal logic, deterministic shapes/seeds and existing saved draft payloads.
+- **Regression and print review:** Pixel layout tests include the ANDY / DWYER / GUY boundary example, centered balanced lines, title placement, long phrases, 169-square bounds, and two-sheet PDF export. `sample:pr16n` adds an Andy Y-gap Star and long-phrase Butterfly example to the CI PDF artifacts.
+
 ## PR 16m — Pixel Picture readability and one-letter reveal (v0.16.13)
 
 - **One letter only:** A 30–85 character phrase is scanned for letters that appear at least twice. The generator prefers uncommon English letters (rather than always E/T), and Regenerate cycles among up to four rare repeated letters. All occurrences of the chosen letter become blanks; the rest remain visible. Existing stored phrases, shape IDs and seeds remain compatible.
