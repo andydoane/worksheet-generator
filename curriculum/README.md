@@ -2,6 +2,16 @@
 
 This directory holds **source-preserving curriculum interchange data**, not saved worksheet drafts. Only the signed-off JSON in `curriculum/approved/*.lesson.json` is bundled into the public app after teacher and Scripture-rights review; review-stage files are excluded.
 
+## Drawing content contract for new lesson conversions (PR 17m)
+
+**Small Draw a Picture and Large Draw the Story deliberately use different kinds of data.** Both continue using schema-v1 `prompt` fields so approved/review-stage JSON and existing worksheet module payloads remain compatible.
+
+- `drawingPrompts[].prompt`: concise, concrete **scene phrases**, e.g. `the Israelites walking on dry ground between two walls of water`, with **no** `Draw`/ `Sketch` instruction or final period. These reusable candidates can populate repeated Small activities with different scenes.
+- `preparedActivities.drawPicture.prompt`: the same **scene-phrase** format, preferably an existing approved `drawingPrompts[]` entry. The small module adds `Draw a picture of ` in its measured preview/PDF renderer.
+- `preparedActivities.drawStory[].prompt`: **4–6 complete, capitalized narrative sentences**, each with appropriate final punctuation and at most 105 characters. The Large module already says **Draw the Story** and displays captions **directly**. Prefer using the exact approved `preparedActivities.storyOrder[].text` for each pictured event, matching on stable Story Note `sourceIds` and retaining story order; do not replace the full sentences with scene fragments.
+- Preserve `origin`, `sourceIds`, teacher-review flags, original Story Notes, chronological order and all Scripture records. Distinct source-linked captions must refer to identifiable events; never fabricate a sentence or silently truncate an overlong one.
+- For new curricula, the **Review Studio** has a Drawing activities task with editable fields, source-note comparisons and explicit buttons to normalize legacy Small commands or reuse corresponding Story Order sentences for Large captions. Its preflight rejects incorrect forms. The approved-lesson schema/semantic validator independently rejects malformed drawing text in CI before publication. The original preapproval fixture is intentionally left unchanged as a historical source artifact.
+
 ## Version 1 contract
 
 - The machine-readable JSON Schema is [schema/lesson-v1.schema.json](schema/lesson-v1.schema.json). The developer validation command is `npm run validate:curriculum`.
