@@ -15,7 +15,7 @@ import {generateCrossword,checkCrossword} from '../src/specialtyModules.ts';
 import {convertLessonActivities,findLessonCandidate} from '../src/lessonActivityConverter.ts';
 
 const load=async file=>JSON.parse(await readFile(new URL('../'+file,import.meta.url),'utf8'));
-const lesson=await load('curriculum/review/ot-031-god-parts-the-red-sea.json');
+const lesson=await load('tests/fixtures/ot-031-original-review.json');
 const schema=await load('curriculum/schema/lesson-v1.schema.json');
 const exampleRights={
  status:'cleared',basis:'Written permissions verification for the exact excerpt and intended distribution',
