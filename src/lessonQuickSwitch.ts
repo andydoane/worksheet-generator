@@ -1,4 +1,5 @@
 import type {PublicLessonEntry} from './publishedLessonCatalog.ts';
+import {approvedForPublic} from './publishedLessonCatalog.ts';
 import {approvedLessonForDraft,buildYourOwnLessonDraft,sameActivityContent} from './curriculumEditor.ts';
 import type {StoredDraft} from './draftMigration.ts';
 import {buildWorksheetRecipe,WORKSHEET_RECIPES} from './worksheetRecipes.ts';
@@ -14,6 +15,7 @@ export function isWorksheetStartId(value:unknown):value is WorksheetStartId{
  * No review-stage data or unapproved lesson is ever loaded.
  */
 export function createLessonWorksheet(entry:PublicLessonEntry,startId:WorksheetStartId):StoredDraft{
+ if(!approvedForPublic(entry))throw Error('This Bible story is not approved for public use.');
  const result=startId===BUILD_OWN?buildYourOwnLessonDraft(entry):
   buildWorksheetRecipe(entry.lesson,startId,{purpose:'published'}).draft;
  return {...result,worksheetPresetId:startId};
