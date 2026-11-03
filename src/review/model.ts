@@ -71,6 +71,23 @@ export function editAt(lesson:Lesson,path:(string|number)[],value:string):Lesson
  return next;
 }
 
+/**
+ * Preserve the translation of the author's ORIGINAL lesson separately from
+ * the BSB text selected for the published worksheet. Older workbench exports
+ * did not store this distinction; the Red Sea source is independently known
+ * to be ESV from curriculum/review/ot-031-god-parts-the-red-sea.json.
+ */
+export function originalMemoryVerseTranslation(lesson:Lesson):string{
+ const memory=lesson.lessonDetails?.memoryVerse;
+ const explicit=trim(memory?.originalTranslation)||trim(memory?.bsbSource?.originalTranslation);
+ if(explicit)return explicit;
+ if(memory?.bsbSource){
+  if(lesson.id==='ot-031-god-parts-the-red-sea')return 'ESV';
+  return 'not recorded';
+ }
+ return trim(memory?.translation)||'not recorded';
+}
+
 export function applyBsbVerse(
  lesson:Lesson,passage:Passage,start:number,end:number,
  finishBlanks:number[],unscrambleBlanks:number[],displayReference?:string,
@@ -80,12 +97,14 @@ export function applyBsbVerse(
  const reference=trim(displayReference)||passage.reference;
  const memory=next.lessonDetails?.memoryVerse;
  if(!memory)throw Error('The lesson has no memory verse record.');
+ const originalTranslation=originalMemoryVerseTranslation(lesson);
  if(reference.length>38)throw Error('Memory verse reference must be at most 38 characters.');
  const f=markSelectedWords(text,finishBlanks);
  const u=markSelectedWords(text,unscrambleBlanks);
  const noMarks=(x:string)=>x.replace(/\[([^\[\]]+)\]/gu,'$1');
  if(noMarks(f)!==text||noMarks(u)!==text)throw Error('Marked words must reconstruct the exact BSB excerpt.');
  Object.assign(memory,{reference,text,translation:'BSB',origin:'adapted',
+  ...(originalTranslation!=='not recorded'?{originalTranslation}:{}),
   isExcerpt:text!==passage.text,hasEllipses:false,requiresTextReview:false,
   bsbSource:{reference:passage.reference,sourceUrl:'https://bereanbible.com/bsb.txt',
    publicDomainTerms:'https://berean.bible/terms.htm',startWord:start,endWord:end},
