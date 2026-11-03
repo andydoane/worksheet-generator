@@ -1,5 +1,13 @@
 # Worksheet Studio
 
+## PR 17c — Printable worksheet recipes (v0.16.17)
+
+- **Two real curriculum booklet arrangements** are defined in `src/worksheetRecipes.ts`: *Remember the Story* and *Fun & Games*. They select from PR17b's validated six core module kinds, rotate distinct multiple-choice questions deterministically, and assign each module to a size-compatible Small/Medium/Large activity slot on the correct booklet page. Each recipe populates ten slots, leaving one Medium slot empty for a future activity or teacher customization.
+- **Editable by design:** the builder returns a completely standard `StoredDraft` (no special preset-only fields, no localStorage mutation) containing the Red Sea title, Scripture, Big Idea, memory verse and full slot assignments. Metadata separately tracks chosen question IDs, original source IDs, true/false answer keys and teacher-review requirements.
+- **Review-only safety:** the pure `buildWorksheetRecipe(lesson, id, {purpose:'editorial-review'})` API accepts validated lesson data explicitly; it does not import `curriculum/review/` in the deployed app, register a catalog entry or expose a story picker. Its default/non-review calls are rejected. Generated examples in GitHub Actions are for editorial and print review, **not published presets**.
+- **Fail clearly:** unknown recipe/seed, missing questions or story activities, wrong module size and any invalid module payload throw descriptive errors instead of producing incomplete printed booklets. Duplicate questions are never assigned in one booklet. Existing draft version, stored content, app navigation and PDF rendering stay unchanged.
+- **QA:** `tests/pr17c-worksheet-recipes.test.mjs` checks schema compatibility, deterministic selection, provenance, review gating, printable region geometry, and both real two-sheet vector PDF exports. `npm run sample:pr17c` creates `sample-pr17c-red-sea-story-review.pdf` and `sample-pr17c-red-sea-fun-and-games.pdf` in CI for manual print review.
+
 ## PR 17b — Lesson → activity converter (v0.16.16)
 
 - Adds a **pure, type-checked lesson adapter** in `src/lessonActivityConverter.ts`. It reads editorial v1 prepared content and produces existing printable module payloads for six core types: Story Order, Finish the Story, Multiple Choice, Small True/False, Medium True/False Maze, and Sort the Story.
