@@ -158,7 +158,7 @@ export function checkDrawingCopy(lesson:Lesson):string[]{
  ];
  for(const {item,label} of small){
   const scene=trim(item.prompt);
-  if(!scene||scene.length>105||/^(?:draw|sketch|illustrate)\\b/iu.test(scene)||
+  if(!scene||scene.length>105||/^(?:draw|sketch|illustrate)\b/iu.test(scene)||
      /[.!?]$/u.test(scene))
    errors.push(label+': Small Draw a Picture scene must be a descriptive phrase (no Draw prefix or ending punctuation), at most 105 characters.');
  }
@@ -171,9 +171,9 @@ export function checkDrawingCopy(lesson:Lesson):string[]{
    const sentence=trim(item.prompt);
    const label='preparedActivities.drawStory['+i+']';
    if(!sentence||sentence.length>105||
-     !/^\\p{Lu}/u.test(sentence)||
-     !/[.!?](?:["\\u201d\\u2019])?$/u.test(sentence)||
-     /^(?:draw|sketch|illustrate)\\b/iu.test(sentence))
+     !/^\p{Lu}/u.test(sentence)||
+     !/[.!?](?:["\u201d\u2019])?$/u.test(sentence)||
+     /^(?:draw|sketch|illustrate)\b/iu.test(sentence))
     errors.push(label+': Draw the Story caption must be a complete capitalized narrative sentence ending in punctuation (not an instruction), at most 105 characters.');
    if(used.has(sentence.toLocaleLowerCase()))
     errors.push(label+': duplicate Draw the Story caption.');
@@ -218,9 +218,9 @@ export function useMatchingStoryOrderCaptions(lesson:Lesson):Lesson{
 export function normalizeLegacySmallDrawingScenes(lesson:Lesson):Lesson{
  const next=clone(lesson);
  const clean=(value:string)=>{
-  const scene=trim(value).replace(/^(?:draw\\s+(?:a\\s+picture\\s+of\\s+)?|sketch\\s+)/iu,'')
+  const scene=trim(value).replace(/^(?:draw\s+(?:a\s+picture\s+of\s+)?|sketch\s+)/iu,'')
     .replace(/[.!?]$/u,'').trim();
-  return scene.replace(/^The\\b/u,'the');
+  return scene.replace(/^The\b/u,'the');
  };
  for(const item of next.drawingPrompts??[])item.prompt=clean(item.prompt);
  if(next.preparedActivities?.drawPicture)
