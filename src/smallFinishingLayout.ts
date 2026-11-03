@@ -12,11 +12,15 @@ export type ScrambleLetter={char:string;x:number;y:number;lineStart:number;lineE
 export type ScrambleRow={letters:ScrambleLetter[];answer:string};
 export type UnscramblePrintPlan={titleY:number;titleSize:number;letterSize:number;rows:ScrambleRow[]};
 
-/** Display-only punctuation: never rewrite the user's saved prompt. */
+/** Future curriculum records noun-phrase drawing scenes. The small module
+ * adds the instruction; large Draw the Story uses the raw scene as a caption.
+ * Preserve legacy manually saved imperatives (Draw ... / Sketch ...) without
+ * duplicating instructions or rewriting teacher-edited draft content.
+ */
 export function picturePromptSentence(prompt:string):string{
  const trimmed=prompt.trim();
  const ending=/[.!?](?:["'”’)]*)$/u.test(trimmed)?'':'.';
- return 'Draw a picture of '+trimmed+ending;
+ return (/^(?:draw|sketch)\b/iu.test(trimmed)?trimmed:'Draw a picture of '+trimmed)+ending;
 }
 
 /** Match the original protected drawing box, now with balanced measured
