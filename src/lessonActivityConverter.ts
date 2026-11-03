@@ -24,7 +24,12 @@ type FactSelection=Referenced&{factId:string;statement:string;isTrue:boolean};
 export type LessonActivityData={
  schemaVersion:number;
  id:string;
- publication?:{status:string;approved:boolean};
+ publication?:{
+  status:string;approved:boolean;
+  teacherSignoff?:{reviewer:string;date:string};
+  resolvedReviewFlagIds?:string[];
+ };
+ reviewFlags?:{id:string;type:string}[];
  facts:LessonFact[];
  storyNotes?:{id:string;order:number;cleanText:string}[];
  preparedActivities:{
@@ -86,7 +91,12 @@ export function convertLessonActivities(
  const seed=options.seed??1;
  const result:LessonConversionResult={
   lessonId:lesson.id,candidates,diagnostics,
-  publicApproved:lesson.publication?.approved===true&&lesson.publication?.status==='approved',
+  publicApproved:lesson.publication?.approved===true&&
+  lesson.publication?.status==='approved'&&
+  !!lesson.publication.teacherSignoff?.reviewer?.trim()&&
+  !!lesson.publication.teacherSignoff?.date?.trim()&&
+  (lesson.reviewFlags??[]).filter(flag=>flag.type==='teacher-approval')
+   .every(flag=>lesson.publication?.resolvedReviewFlagIds?.includes(flag.id)),
  };
  if(lesson.schemaVersion!==1){
   diagnostics.push({moduleId:'story-order',contentId:'lesson',message:'Unsupported curriculum schemaVersion (expected 1).'});
