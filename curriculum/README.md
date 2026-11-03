@@ -1,11 +1,11 @@
 # Curriculum lesson presets · v1
 
-This directory is **source-preserving curriculum interchange data**, **not** an editable worksheet draft and **not** currently bundled into the live application.
+This directory holds **source-preserving curriculum interchange data**, not saved worksheet drafts. Only the signed-off JSON in `curriculum/approved/*.lesson.json` is bundled into the public app after teacher and Scripture-rights review; review-stage files are excluded.
 
 ## Version 1 contract
 
 - The machine-readable JSON Schema is [schema/lesson-v1.schema.json](schema/lesson-v1.schema.json). The developer validation command is `npm run validate:curriculum`.
-- One lesson per JSON file, with a stable ID such as `ot-031-god-parts-the-red-sea` and `schemaVersion: 1`. A future converter will map source resources to the current 27 Small/Medium/Large module payloads, layouts and PDF generation.
+- One lesson per JSON file, with a stable ID such as `ot-031-god-parts-the-red-sea` and `schemaVersion: 1`. The completed curriculum converter maps source resources to all 27 current Small/Medium/Large module payloads and the two existing worksheet recipes.
 - Preserve **original Story Notes** verbatim, separately from their `cleanText` adaptations, `order`, `emphasizedWords` and source page/section. The same notes may later feed Story Order, Finish the Story, Sort the Story, and drawing prompts.
 - Preserve questions, truth-labeled facts, vocabulary, memory-verse wording/translation, shared matching/drawing resources, provenance and optional `preparedActivities`. Content unavailable for a module can be absent, with `moduleReadiness` indicating that it is not ready.
 - Every derived text has `origin: "source" | "adapted" | "suggested"`. All intentionally incorrect statements and newly authored distractors require teacher review; maintain the original `reviewFlags` rather than silently discarding them.
@@ -25,17 +25,20 @@ Each lesson has a `publication` block:
 }
 ```
 
-To approve a preset in a later implementation stage, record an explicit `teacherSignoff` with reviewer/date and `resolvedReviewFlagIds` for every `teacher-approval` flag. The validator rejects inconsistent approval states. **Changing one boolean does not bypass the review gate.** Actual bundled-publication checks and catalog entry points will be added with the importer and welcome experience.
+To approve a preset, record an explicit `teacherSignoff` with reviewer/date and `resolvedReviewFlagIds` for every `teacher-approval` flag. The validator rejects inconsistent approval states. **Changing one boolean does not bypass the review gate.** Both the public catalog and GitHub CI enforce those additional approval and rights checks.
 
-Confirm the permissions/attribution requirements for any Bible translation text before distributing publicly. The currently staged Red Sea data contains a short ESV memory verse as quoted by the original curriculum; its inclusion here does not represent a licensing determination.
+Confirm Bible-translation rights separately from teacher review. OT 31 was converted to the public-domain Berean Standard Bible for its printable memory verse; its rights basis, reviewer and date are recorded in `approved/rights-manifest.json`. The historical fixture of the original curriculum conversion includes the original ESV memory verse, but is **not** bundled into the public application.
 
-## First review-stage data package
+## First published lesson and its historical review fixture
 
-- [review/ot-031-god-parts-the-red-sea.json](review/ot-031-god-parts-the-red-sea.json): complete, source-preserving lesson conversion supplied by the curriculum conversion chat. Seven original Story Notes, 38 questions, 24 true/false facts, 27 prepared activity categories, and ten review flags.
+- [approved/ot-031-god-parts-the-red-sea.lesson.json](approved/ot-031-god-parts-the-red-sea.lesson.json): teacher-approved Red Sea curriculum, including all 27 activities and an approved BSB memory verse.
+- [../tests/fixtures/ot-031-original-review.json](../tests/fixtures/ot-031-original-review.json): byte-for-byte historical **preapproval** fixture used only by legacy regression tests and editorial sample generators, not by the application.
 - [review/ot-031-conversion-report.md](review/ot-031-conversion-report.md): original content-level conversion report.
 - [review/ot-031-teacher-review.md](review/ot-031-teacher-review.md): original unresolved curriculum-author checklist.
 
 The original conversion referenced the lesson document filename with a `(1)` suffix; source provenance is preserved rather than silently rewritten.
+
+All following numbered PR sections describe *historical development stages*; earlier remarks saying that the Red Sea lesson was still pending referred to those earlier PRs and no longer describe the current published dataset.
 
 ## PR 17b: core lesson activity converter
 
