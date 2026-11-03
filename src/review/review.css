@@ -71,3 +71,8 @@ a{color:#267d68}
 .review-footer{color:#74877d;text-align:center;font-size:11px;padding:22px;border-top:1px solid #e1e9e2}
 @media(max-width:850px){.review-grid{grid-template-columns:1fr}.review-nav{max-height:260px}.review-header{align-items:start;flex-direction:column;gap:5px}}
 @media(max-width:520px){.review-grid,.review-intro{padding-left:13px;padding-right:13px}.review-panel{padding:16px}.review-pair{grid-template-columns:1fr}.review-header{padding:15px}.review-section-top{display:block}.review-approved{display:inline-block;margin-top:10px}}
+
+.review-sources{padding:13px;border:1px solid #d8e5dc;border-radius:9px;background:#fbfcfa}
+.review-sources summary{font-size:12px;font-weight:800;color:#307b61;cursor:pointer}
+.review-sources blockquote{border-left:3px solid #bbd6c1;margin:14px 0 0;padding:8px 12px;background:white}
+.review-sources blockquote p{margin:4px 0;color:#425d51}
