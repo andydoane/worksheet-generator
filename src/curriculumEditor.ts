@@ -4,6 +4,19 @@ import {convertLessonActivities,type ConvertedActivity} from './lessonActivityCo
 import {EMPTY_DRAFT,type StoredDraft} from './draftMigration.ts';
 import {blankModule,type ActivityModule,type ModuleId,validateModule} from './modules.ts';
 
+/** Prepared conversions are immutable, expensive puzzle inputs. Cache per
+ * approved lesson object; every editor assignment still clones the payload.
+ */
+const approvedConversions=new WeakMap<PublicLessonEntry['lesson'],ReturnType<typeof convertLessonActivities>>();
+function convertedApprovedLesson(entry:PublicLessonEntry){
+ let converted=approvedConversions.get(entry.lesson);
+ if(!converted){
+  converted=convertLessonActivities(entry.lesson,{seed:1});
+  approvedConversions.set(entry.lesson,converted);
+ }
+ return converted;
+}
+
 /**
  * PR17i: The editor only resolves curriculum content from the same
  * approval-and-rights-gated catalog used by the story chooser.
@@ -90,7 +103,7 @@ export function chooseActivityForDraft(
   return {module:blankModule(type),source:'unavailable',
    message:'This worksheet’s Bible story is no longer in the approved library. Enter activity content manually; your existing activities are unchanged.'};
  }
- const converted=convertLessonActivities(entry.lesson,{seed:1});
+ const converted=convertedApprovedLesson(entry);
  const options=converted.candidates.filter(candidate=>
   candidate.moduleId===type&&validateModule(candidate.module).length===0);
  const candidate=chooseUnusedCandidate(options,draft,slot);
@@ -145,7 +158,7 @@ export function isActivityCustomized(
     sameActivityContent(current,blankModule(current.type)))return false;
  const entry=approvedLessonForDraft(draft,entries);
  if(!entry)return true;
- const matching=convertLessonActivities(entry.lesson,{seed:1}).candidates.some(
+ const matching=convertedApprovedLesson(entry).candidates.some(
   candidate=>candidate.moduleId===current.type&&sameActivityContent(candidate.module,current));
  return !matching;
 }
@@ -163,7 +176,7 @@ export function originalApprovedActivity(
  const initial=draft.activityDefaults?.[slot];
  if(initial&&initial.type===current.type)return structuredClone(initial);
  const entry=approvedLessonForDraft(draft,entries)!;
- const existing=convertLessonActivities(entry.lesson,{seed:1}).candidates.find(
+ const existing=convertedApprovedLesson(entry).candidates.find(
   candidate=>candidate.moduleId===current.type&&sameActivityContent(candidate.module,current));
  if(existing)return structuredClone(existing.module);
  const picked=chooseActivityForDraft(current.type,draft,slot,entries);
@@ -183,6 +196,6 @@ export function canRecreateApprovedActivity(
  if(!draft.curriculumLessonId)return true;
  const entry=approvedLessonForDraft(draft,entries);
  if(!entry)return false;
- return convertLessonActivities(entry.lesson,{seed:1}).candidates.some(
+ return convertedApprovedLesson(entry).candidates.some(
   candidate=>candidate.moduleId===current.type&&sameActivityContent(candidate.module,current));
 }
