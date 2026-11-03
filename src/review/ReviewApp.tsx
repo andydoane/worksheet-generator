@@ -59,18 +59,30 @@ export default function ReviewApp(){
    .catch(e=>{if(!cancelled)setBibleError(String(e?.message??e));});
   return ()=>{cancelled=true;};
  },[]);
+ function acceptLesson(value:any){
+  const data=value?.lesson?.schemaVersion===1?value.lesson:value;
+  if(data?.schemaVersion!==1||typeof data.id!=='string'||!data.preparedActivities||!data.lessonDetails?.memoryVerse||!Array.isArray(data.reviewFlags))
+   throw Error('This is not a supported curriculum schema-v1 lesson or review session.');
+  if(lesson&&!window.confirm('Load another lesson? Current edits will be replaced. Export your review session first if you need to keep it.'))return;
+  setLesson(data);
+  setReviewed(value?.lesson?.schemaVersion===1&&Array.isArray(value.reviewed)?value.reviewed:[]);
+  setSelectedId(value?.lesson?.schemaVersion===1&&typeof value.selectedId==='string'?value.selectedId:'');
+  setReference(data.lessonDetails.memoryVerse.reference);
+  setPassage(null);setPreflight(null);setError('');
+ }
  async function loadLesson(e:ChangeEvent<HTMLInputElement>){
   const file=e.target.files?.[0];if(!file)return;
-  try{
-   const value=JSON.parse(await file.text());
-   if(value?.schemaVersion!==1||typeof value.id!=='string'||!value.preparedActivities||!value.lessonDetails?.memoryVerse||!Array.isArray(value.reviewFlags))
-    throw Error('This is not a supported curriculum schema-v1 lesson file.');
-   if(lesson&&!window.confirm('Load another lesson? Your current workbench progress will be replaced. Download a working copy first if needed.'))return;
-   setLesson(value);setReviewed([]);setSelectedId('');
-   setReference(value.lessonDetails.memoryVerse.reference);
-   setPassage(null);setPreflight(null);setError('');
-  }catch(e){setError('Could not load lesson: '+String((e as Error).message??e));}
+  try{acceptLesson(JSON.parse(await file.text()));}
+  catch(e){setError('Could not load lesson: '+String((e as Error).message??e));}
   e.target.value='';
+ }
+ async function loadRedSea(){
+  try{
+   const url='https://raw.githubusercontent.com/andydoane/worksheet-generator/main/curriculum/review/ot-031-god-parts-the-red-sea.json';
+   const response=await fetch(url,{cache:'no-store'});
+   if(!response.ok)throw Error('GitHub returned '+response.status);
+   acceptLesson(await response.json());
+  }catch(e){setError('Could not fetch lesson from GitHub. Use file upload instead. '+String((e as Error).message??e));}
  }
  async function loadBsb(e:ChangeEvent<HTMLInputElement>){
   const file=e.target.files?.[0];if(!file)return;
@@ -176,13 +188,15 @@ export default function ReviewApp(){
    <aside className="review-sidebar">
     <section className="review-panel">
      <h2>1. Load a lesson</h2>
-     <label className="review-upload">Choose curriculum JSON <input type="file" accept=".json,application/json" onChange={loadLesson}/></label>
+     <button type="button" className="review-secondary" onClick={loadRedSea}>Load Red Sea lesson from GitHub</button>
+     <label className="review-upload">Choose curriculum JSON or saved review session <input type="file" accept=".json,application/json" onChange={loadLesson}/></label>
      {lesson&&<><strong>{lesson.lessonDetails.title}</strong><p>{lesson.id}</p>
       <div className="review-meter"><div style={{width:(tasks.length?complete/tasks.length*100:0)+'%'}}/></div>
       <small>{complete} of {tasks.length} decisions reviewed</small>
+      <button type="button" className="review-secondary" onClick={()=>downloadJson(lesson.id+'.review-session.json',{lesson,reviewed,selectedId})}>Download review session (keeps checkmarks)</button>
       <button type="button" className="review-secondary" onClick={()=>downloadJson(lesson.id+'.review.json',lesson)}>Download working JSON</button>
      </>}
-     <small>Progress autosaves in this browser only. To continue on another device, export and import the JSON; review checkmarks will need to be confirmed again.</small>
+     <small>Progress autosaves in this browser only. To continue on another device, download your review session and import it there to keep edits and checkmarks.</small>
     </section>
     {lesson&&<section className="review-panel">
      <h2>2. Review items</h2>
