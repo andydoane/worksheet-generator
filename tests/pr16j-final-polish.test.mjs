@@ -3,7 +3,8 @@ import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import fontkit from '@pdf-lib/fontkit';
 import {PDFDocument} from 'pdf-lib';
-import {MODULES,validateModule} from '../src/modules.ts';
+import {MODULES,blankModule,validateModule} from '../src/modules.ts';
+import {createManualModule} from '../src/curriculumEditor.ts';
 import {MODULE_GUIDANCE,newModuleWithExample,isAutofilledModule} from '../src/moduleGuidance.ts';
 import {EMPTY_DRAFT,migrateDraftValue} from '../src/draftMigration.ts';
 import {explainActivityError} from '../src/editorFeedback.ts';
@@ -121,7 +122,10 @@ test('Selector keeps user values blank and shows placeholder guidance and valida
  const [app,css]=await Promise.all([
   readFile(new URL('../src/App.tsx',import.meta.url),'utf8'),
   readFile(new URL('../src/layout.css',import.meta.url),'utf8')]);
- assert.match(app,/modules\[activeKey\] = blankModule\(type\)/u);
+ // Manual module initialization moved to the pure curriculum editor helper.
+ // A scratch draft still starts empty; the editor no longer needs this inline.
+ assert.deepEqual(createManualModule('story-order',EMPTY_DRAFT),blankModule('story-order'));
+ assert.match(app,/chooseActivityForDraft\(type,draft,activeKey,PUBLIC_LESSONS\)/u);
  assert.match(app,/migrateDraftValue\(JSON\.parse\(stored\)\)/u);
  assert.match(app,/MODULE_GUIDANCE\[activeModule\.type\]\.instruction/u);
  assert.match(app,/explainActivityError\(activeModule!,error\)/u);
