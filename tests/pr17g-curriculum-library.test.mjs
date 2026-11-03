@@ -130,7 +130,7 @@ test('Public auto-discovery loads only explicit approved filenames with separate
  assert.equal(assemblePublicLessonCatalog({
   ['../curriculum/review/'+id+'.lesson.json']:approved,
  },manifest).length,0,'review path is not a public source');
- assert.equal(PUBLIC_LESSONS.length,0,'this PR registers no actual public lessons');
+ assert.equal(PUBLIC_LESSONS.length,0,'Node tests have no Vite glob transform; browser build discovers approved JSON');
  const appCatalog=await readFile(new URL('../src/publishedLessonCatalog.ts',import.meta.url),'utf8');
  assert.match(appCatalog,/import\.meta\.env\s*\?import\.meta\.glob/u,
   'Vite must actually run the transformed imports at runtime');
@@ -138,18 +138,20 @@ test('Public auto-discovery loads only explicit approved filenames with separate
   'compile-time import.meta.glob is not a runtime browser feature');
  assert.doesNotMatch(appCatalog,/import\.meta\.glob\(['"]\.\.\/curriculum\/review/u);
 });
-test('Live repository scan writes truthful ready-vs-approved reports without accidentally publishing a lesson',async()=>{
+test('Live repository scan validates the author-approved BSB Red Sea preset and both recipes',async()=>{
  const report=await inspectCurriculumLibrary();
- assert.equal(report.passed,true);
+ assert.equal(report.passed,true,JSON.stringify(report.errors));
  assert.equal(report.errors.length,0);
  assert.equal(report.lessons.length,1);
- assert.equal(report.lessons[0].source,'review');
- assert.equal(report.lessons[0].eligibleForPublication,false);
+ assert.equal(report.lessons[0].source,'approved');
+ assert.equal(report.lessons[0].eligibleForPublication,true);
+ assert.equal(report.lessons[0].rightsCleared,true);
+ assert.equal(report.lessons[0].teacherReviewFlagsOutstanding.length,0);
  const rendered=renderCurriculumReadinessMarkdown(report);
  assert.match(rendered,/Curriculum library readiness/u);
  assert.match(rendered,/27\/27/u);
  assert.match(rendered,/ADAPTATION NEEDED/u);
- assert.match(rendered,/not cleared/u);
+ assert.match(rendered,/cleared/u);
  assert.match(rendered,/story-review/u);
  assert.match(rendered,/fun-and-games/u);
 });
