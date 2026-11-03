@@ -183,7 +183,7 @@ test('Source code only confirms destructive changes and restores a single activi
   app.indexOf('  function chooseActivityBorder('));
  assert.match(change,/isActivityCustomized\(draft,activeKey,PUBLIC_LESSONS\)/u);
  assert.match(change,/canRecreateApprovedActivity\(draft,activeKey,PUBLIC_LESSONS\)/u);
- assert.match(change,/if\(\(hasEditedContent\|\|cannotRecreate\|\|borderWillBeLost\)\&\&!window\.confirm\(/u);
+ assert.match(change,/if\(\(hasEditedContent\|\|cannotRecreate\|\|borderWillBeLost\)&&!window\.confirm\(/u);
  assert.match(change,/if\(selected\)modules\[activeKey\]=selected\.module/u);
  assert.match(change,/delete activityDefaults\[activeKey\]/u);
  assert.match(change,/originalApprovedActivity\(draft,activeKey,PUBLIC_LESSONS\)/u);
