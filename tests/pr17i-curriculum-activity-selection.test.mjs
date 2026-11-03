@@ -119,7 +119,7 @@ test('Multiple Choice uses distinct approved questions while unused candidates r
  assert.equal(next.source,'lesson','if all questions are used, reusing approved content is safer than inventing it');
 });
 
-test('Unapproved, withdrawn or incomplete lesson content is never fabricated',()=>{
+test('Unapproved, withdrawn or incomplete lesson content is never fabricated',async()=>{
  const draft=buildYourOwnLessonDraft(publicLesson);
  const review=await getJson('tests/fixtures/ot-031-original-review.json');
  const fake={lesson:review,scriptureDistributionCleared:true,rightsEvidence:manifest.lessons[approved.id]};
