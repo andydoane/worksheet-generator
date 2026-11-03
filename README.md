@@ -1,5 +1,13 @@
 # Worksheet Studio
 
+## PR 17b — Lesson → activity converter (v0.16.16)
+
+- Adds a **pure, type-checked lesson adapter** in `src/lessonActivityConverter.ts`. It reads editorial v1 prepared content and produces existing printable module payloads for six core types: Story Order, Finish the Story, Multiple Choice, Small True/False, Medium True/False Maze, and Sort the Story.
+- **Reuse instead of duplication:** Small True/False, Maze, and Sort the Story resolve canonical statement truth from the *same fact bank*. Story Order preserves teaching chronology, Finish the Story preserves the exact bracketed source paragraph, and all eight prepared multiple-choice questions remain separate candidates (one choice per booklet slot).
+- **Provenance and teacher signoff:** Every candidate retains source references, teacher-review requirements, and an optional boolean answer key for the small True/False module. The source JSON stays in `curriculum/review/`, never in the public bundle. No preset picker, auto-arranged pages, or public lesson activation yet.
+- **No silent fixes:** Each candidate is checked against the app's existing `validateModule`; rejected or inconsistent content receives a diagnostic, rather than being truncated, made up or printed wrong. Stable seeds give reproducible results.
+- **QA:** `tests/pr17b-lesson-activity-converter.test.mjs` covers the real Red Sea lesson, all 13 prepared core candidates, source integrity, factual parity, bad input diagnostics, seeded determinism, approval metadata and a real two-sheet vector PDF containing all six core activity types.
+
 ## PR 17a — Pixel Picture title correction + Curriculum v1 foundation (v0.16.15)
 
 - **Pixel Picture** corrects the printed heading from “Pixel Perfect” while retaining the existing measured, centered preview/PDF layout.
