@@ -566,11 +566,14 @@
           },
           "prompt": {
             "type": "string",
-            "minLength": 1
+            "minLength": 1,
+            "description": "A short descriptive scene phrase that makes sense after 'Draw a picture of '. Do not include Draw or Sketch instructions or final sentence punctuation. Keep the original scene provenance.",
+            "maxLength": 105
           }
         },
         "additionalProperties": true
-      }
+      },
+      "description": "A short descriptive scene phrase that makes sense after 'Draw a picture of '. Do not include Draw or Sketch instructions or final sentence punctuation. Keep the original scene provenance."
     },
     "keyPhrases": {
       "type": "array",
@@ -676,10 +679,13 @@
             },
             "prompt": {
               "type": "string",
-              "minLength": 1
+              "minLength": 1,
+              "description": "A short descriptive scene phrase that makes sense after 'Draw a picture of '. Do not include Draw or Sketch instructions or final sentence punctuation. Keep the original scene provenance.",
+              "maxLength": 105
             }
           },
-          "additionalProperties": true
+          "additionalProperties": true,
+          "description": "A short descriptive scene phrase that makes sense after 'Draw a picture of '. Do not include Draw or Sketch instructions or final sentence punctuation. Keep the original scene provenance."
         },
         "multipleChoice": {
           "type": "array",
@@ -1474,11 +1480,16 @@
               },
               "prompt": {
                 "type": "string",
-                "minLength": 1
+                "minLength": 1,
+                "description": "Four to six complete, capitalized narrative story-event sentences with ending punctuation (not 'Draw...' instructions). Prefer exact prepared Story Order sentences with matching Story Note source IDs.",
+                "maxLength": 105
               }
             },
             "additionalProperties": true
-          }
+          },
+          "description": "Four to six complete, capitalized narrative story-event sentences with ending punctuation (not 'Draw...' instructions). Prefer exact prepared Story Order sentences with matching Story Note source IDs.",
+          "minItems": 4,
+          "maxItems": 6
         },
         "wordSearch": {
           "type": "object",
