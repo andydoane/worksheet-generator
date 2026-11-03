@@ -71,7 +71,7 @@ export function assemblePublicLessonCatalog(
  const result:PublicLessonEntry[]=[];
  const seen=new Set<string>();
  for(const [path,data] of Object.entries(files).sort(([a],[b])=>a.localeCompare(b))){
-  const basename=path.match(/\/([a-z0-9]+(?:-[a-z0-9]+)*)\.lesson\.json$/u)?.[1];
+  const basename=path.match(/(?:^|\/)curriculum\/approved\/([a-z0-9]+(?:-[a-z0-9]+)*)\.lesson\.json$/u)?.[1];
   if(!basename||!data||typeof data!=='object'||Array.isArray(data))continue;
   const lesson=data as LessonWorksheetSource;
   if(lesson.id!==basename||seen.has(basename))continue;
