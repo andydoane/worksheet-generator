@@ -1487,8 +1487,8 @@
             },
             "additionalProperties": true
           },
-          "description": "Four to six complete, capitalized narrative story-event sentences with ending punctuation (not 'Draw...' instructions). Prefer exact prepared Story Order sentences with matching Story Note source IDs.",
-          "minItems": 4,
+          "description": "Four to six complete, capitalized narrative story-event sentences with ending punctuation (not 'Draw...' instructions). Prefer exact prepared Story Order sentences with matching Story Note source IDs. Omit or leave an empty array if the lesson cannot support this optional activity; if supplied, the application requires 4–6 distinct captions.",
+          "minItems": 0,
           "maxItems": 6
         },
         "wordSearch": {
