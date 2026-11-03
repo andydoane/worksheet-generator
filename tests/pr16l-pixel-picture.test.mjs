@@ -122,7 +122,7 @@ test('Title, instructions and uppercase Zilla phrase form ONE vertically centere
   assert.equal(plan.blankWidth,firstBlankWidth);
   if(shortSize===null)shortSize=plan.phraseSize;
   else assert.ok(plan.phraseSize<=shortSize,'long phrase font may shrink, blank never does');
-  assert.equal(plan.title,'PIXEL PERFECT');
+  assert.equal(plan.title,'PIXEL PICTURE');
   assert.equal(plan.titleX,MEDIUM_PRINT_WIDTH/4);
   assert.ok(plan.titleY>=plan.groupTop&&plan.titleY<=plan.groupBottom);
   assert.ok(plan.groupTop>=4&&plan.groupBottom<=MEDIUM_PRINT_HEIGHT-4);
