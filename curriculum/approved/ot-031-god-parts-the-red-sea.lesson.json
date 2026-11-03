@@ -1598,7 +1598,7 @@
     },
     {
       "id": "dp-02",
-      "prompt": "pharaoh sending soldiers and chariots to chase the Israelites",
+      "prompt": "Pharaoh sending soldiers and chariots to chase the Israelites",
       "origin": "adapted",
       "sourceIds": [
         "sn-02"
@@ -1614,7 +1614,7 @@
     },
     {
       "id": "dp-04",
-      "prompt": "moses holding up his staff beside the Red Sea",
+      "prompt": "Moses holding up his staff beside the Red Sea",
       "origin": "adapted",
       "sourceIds": [
         "sn-04"
@@ -2356,7 +2356,7 @@
         ]
       },
       {
-        "prompt": "pharaoh sending soldiers and chariots to chase the Israelites",
+        "prompt": "Pharaoh sending soldiers and chariots to chase the Israelites",
         "origin": "adapted",
         "sourceIds": [
           "sn-02"
