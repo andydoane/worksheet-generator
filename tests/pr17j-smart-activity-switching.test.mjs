@@ -187,7 +187,7 @@ test('Source code only confirms destructive changes and restores a single activi
  assert.match(change,/if\(selected\)modules\[activeKey\]=selected\.module/u);
  assert.match(change,/delete activityDefaults\[activeKey\]/u);
  assert.match(change,/originalApprovedActivity\(draft,activeKey,PUBLIC_LESSONS\)/u);
- assert.match(change,/onClick=\{restoreOriginalActivity\}/u)===false;
+ assert.doesNotMatch(change,/onClick=\{restoreOriginalActivity\}/u);
  assert.match(app,/onClick=\{restoreOriginalActivity\}/u);
  assert.match(css,/\.restore-original-activity:focus-visible/u);
  assert.match(recipes,/activityDefaults:structuredClone\(modules\)/u);
