@@ -64,6 +64,8 @@ export function validateLessonSchema(value,schema){
 
 export function validateLesson(lesson,schema){
  const errors=validateLessonSchema(lesson,schema);
+ // Report structural failures without attempting semantic operations on malformed fields.
+ if(errors.length)return errors;
  if(!lesson||typeof lesson!=='object'||Array.isArray(lesson))return errors;
  const notes=Array.isArray(lesson.storyNotes)?lesson.storyNotes:[];
  const questions=Array.isArray(lesson.questions)?lesson.questions:[];
