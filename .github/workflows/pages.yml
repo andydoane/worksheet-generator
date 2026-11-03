@@ -26,6 +26,8 @@ jobs:
         run: npm install --no-audit --no-fund
       - name: Test booklet geometry and PDF output
         run: npm run test
+      - name: Fetch official Berean Standard Bible text for the review workbench
+        run: npm run prepare:bsb
       - name: Type-check and build
         run: npm run build
         env:
