@@ -449,11 +449,13 @@ export function convertLessonActivities(
    return;
   }
   if(!consistentVerse(id,item))return;
-  const module={type:id,reference:item.reference,verse:item.markedVerse,seed};
+  const module=id==='finish-verse'
+   ?{type:'finish-verse' as const,reference:item.reference,verse:item.markedVerse,seed}
+   :{type:'unscramble-verse' as const,reference:item.reference,verse:item.markedVerse,seed};
   const errors=validateModule(module);
   if(errors.length){issue(id,id,errors.join(' '));return;}
   // Use the unchanged rendering engine's answer-bank and letter scrambler.
-  const answers=id==='finish-verse'?verseBank(module):verseScrambles(module);
+  const answers=module.type==='finish-verse'?verseBank(module):verseScrambles(module);
   if(answers.length!==parsed.answers.length){
    issue(id,id,'Verse puzzle answer count does not match its marked blanks.');return;
   }
@@ -488,7 +490,7 @@ export function convertLessonActivities(
   const item=prepared.bigIdeaCryptogram;
   const id='big-idea-cryptogram';
   if(consistentIdea(id,item)){
-   const module={type:id,idea:item.phrase,seed};
+   const module={type:'big-idea-cryptogram' as const,idea:item.phrase,seed};
    const errors=validateModule(module);
    if(errors.length)issue(id,id,errors.join(' '));
    else try{
@@ -511,7 +513,7 @@ export function convertLessonActivities(
  if(prepared.connectBigIdea){
   const item=prepared.connectBigIdea,id='connect-big-idea';
   if(consistentIdea(id,item)){
-   const module={type:id,idea:item.phrase,seed};
+   const module={type:'connect-big-idea' as const,idea:item.phrase,seed};
    const errors=validateModule(module);
    if(errors.length)issue(id,id,errors.join(' '));
    else try{
@@ -526,7 +528,7 @@ export function convertLessonActivities(
  if(prepared.verseCryptogram){
   const item=prepared.verseCryptogram,id='verse-cryptogram';
   if(consistentVerse(id,item)){
-   const module={type:id,reference:item.reference,verse:item.verse,seed};
+   const module={type:'verse-cryptogram' as const,reference:item.reference,verse:item.verse,seed};
    const errors=validateModule(module);
    if(errors.length)issue(id,id,errors.join(' '));
    else try{
@@ -544,7 +546,7 @@ export function convertLessonActivities(
   if(items.some(item=>item.answer.includes(',')||item.clue.includes(','))){
    issue(id,id,'Crossword answers and clues must not contain commas.');
   }else{
-   const module={type:id,entries:items.map(x=>x.answer+', '+x.clue).join('\n'),seed};
+   const module={type:'crossword' as const,entries:items.map(x=>x.answer+', '+x.clue).join('\n'),seed};
    const errors=validateModule(module);
    if(errors.length)issue(id,id,errors.join(' '));
    else try{
@@ -565,7 +567,7 @@ export function convertLessonActivities(
  if(prepared.spiralVerse){
   const item=prepared.spiralVerse,id='spiral-verse';
   if(consistentVerse(id,item)){
-   const module={type:id,reference:item.reference,verse:item.verse};
+   const module={type:'spiral-verse' as const,reference:item.reference,verse:item.verse};
    const errors=validateModule(module);
    if(errors.length)issue(id,id,errors.join(' '));
    else try{
@@ -581,7 +583,7 @@ export function convertLessonActivities(
  if(prepared.connectVerse){
   const item=prepared.connectVerse,id='connect-verse';
   if(consistentVerse(id,item)){
-   const module={type:id,verse:item.verse,seed};
+   const module={type:'connect-verse' as const,verse:item.verse,seed};
    const errors=validateModule(module);
    if(errors.length)issue(id,id,errors.join(' '));
    else try{
