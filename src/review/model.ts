@@ -20,6 +20,10 @@ export function listReviewTasks(lesson:Lesson):ReviewTask[]{
    detail:'Ensure the deliberately false statement is clear, not misleading.',
   });
  }
+ if((p.drawStory?.length??0)>0||(lesson.drawingPrompts?.length??0)>0)
+  tasks.push({id:'drawing-captions',group:'Drawing activities',
+   label:'Small scenes and Draw the Story captions',
+   detail:'Small Draw a Picture scenes are short noun phrases. Large Draw the Story captions are full narrative sentences, preferably copied from the matching Story Order events.'});
  if(p.finishStory)tasks.push({id:'finish-story',group:'Story narrative',
   label:'Finish the Story',detail:'Review the adapted paragraph and seven source emphasis words.'});
  if(p.circleMistakes)tasks.push({id:'circle-mistakes',group:'Story narrative',
@@ -45,7 +49,23 @@ export function editAt(lesson:Lesson,path:(string|number)[],value:string):Lesson
   target=target[key];
  }
  if(typeof target[path.at(-1)!]!=='string')throw Error('Only text fields may be edited.');
+ const oldValue=target[path.at(-1)!];
  target[path.at(-1)!]=value;
+ // Keep the one prepared Small prompt in sync when an identical canonical
+ // reusable scene is edited. Do not change unrelated drawing scenes.
+ if(path[0]==='drawingPrompts'&&path[2]==='prompt'&&
+    next.preparedActivities?.drawPicture?.prompt===oldValue)
+  next.preparedActivities.drawPicture.prompt=value;
+ // If a caption was explicitly sourced from Story Order, keep it aligned with
+ // edits to that event only while it still exactly matches the old sentence.
+ if(path[0]==='preparedActivities'&&path[1]==='storyOrder'&&path[3]==='text'){
+  const event=next.preparedActivities.storyOrder[path[2] as number];
+  for(const caption of next.preparedActivities.drawStory??[]){
+   if(caption.prompt===oldValue&&
+      (caption.sourceIds??[]).some((id:string)=>event.sourceIds?.includes(id)))
+    caption.prompt=value;
+  }
+ }
  if(path[0]==='preparedActivities'&&path[1]==='multipleChoice'){
   const mc=next.preparedActivities.multipleChoice[path[2] as number];
   if(path[3]==='choices'){
@@ -123,8 +143,93 @@ export function applyBsbVerse(
  return next;
 }
 
-export function checkReviewContent(lesson:Lesson):string[]{
+/** Drawing data has two deliberately different contracts:
+ * Small: source-backed noun-phrase scenes for "Draw a picture of ...".
+ * Large: complete narrative sentences that fit under six picture panels.
+ */
+export function checkDrawingCopy(lesson:Lesson):string[]{
  const errors:string[]=[];
+ const p=lesson.preparedActivities??{};
+ const small=[
+  ...(lesson.drawingPrompts??[]).map((item:any,i:number)=>({
+   item,label:'drawingPrompts['+i+']',
+  })),
+  ...(p.drawPicture?[{item:p.drawPicture,label:'preparedActivities.drawPicture'}]:[]),
+ ];
+ for(const {item,label} of small){
+  const scene=trim(item.prompt);
+  if(!scene||scene.length>105||/^(?:draw|sketch|illustrate)\b/iu.test(scene)||
+     /[.!?]$/u.test(scene))
+   errors.push(label+': Small Draw a Picture scene must be a descriptive phrase (no Draw prefix or ending punctuation), at most 105 characters.');
+ }
+ const captions=p.drawStory??[];
+ if(captions.length>0){
+  if(captions.length<4||captions.length>6)
+   errors.push('preparedActivities.drawStory: provide 4–6 complete narrative captions.');
+  const used=new Set<string>();
+  for(const [i,item] of captions.entries()){
+   const sentence=trim(item.prompt);
+   const label='preparedActivities.drawStory['+i+']';
+   if(!sentence||sentence.length>105||
+     !/^\p{Lu}/u.test(sentence)||
+     !/[.!?](?:["\u201d\u2019])?$/u.test(sentence)||
+     /^(?:draw|sketch|illustrate)\b/iu.test(sentence))
+    errors.push(label+': Draw the Story caption must be a complete capitalized narrative sentence ending in punctuation (not an instruction), at most 105 characters.');
+   if(used.has(sentence.toLocaleLowerCase()))
+    errors.push(label+': duplicate Draw the Story caption.');
+   used.add(sentence.toLocaleLowerCase());
+  }
+ }
+ return errors;
+}
+
+/** Opt-in workbench action: derive the *same* authored story sentences as
+ * Story Order by matching stable Story Note IDs, not matching fragile prose.
+ * Missing/ambiguous references block conversion instead of inventing words.
+ */
+export function useMatchingStoryOrderCaptions(lesson:Lesson):Lesson{
+ const next=clone(lesson);
+ const events=next.preparedActivities?.storyOrder??[];
+ const captions=next.preparedActivities?.drawStory??[];
+ if(!captions.length)throw Error('This lesson has no Draw the Story captions.');
+ const chosen=new Set<number>();
+ for(const item of captions){
+  const matches=events.map((event:any,i:number)=>({
+   event,i,
+  })).filter(({event}:any)=>
+   (item.sourceIds??[]).some((id:string)=>event.sourceIds?.includes(id)));
+  if(matches.length!==1||chosen.has(matches[0].i))
+   throw Error('Draw the Story caption needs one unique matching Story Order event and source-note ID. Review these references manually.');
+  const {event,i}=matches[0];
+  if(!trim(event.text)||event.text.length>105)
+   throw Error('Matching Story Order sentence is blank or too long for Draw the Story.');
+  chosen.add(i);
+  item.prompt=event.text;
+  item.origin=event.origin??item.origin;
+  if(event.teacherReviewRequired)item.teacherReviewRequired=true;
+ }
+ return next;
+}
+
+/** Assist imports authored before the short-scene convention existed.
+ * Only changes Small drawing text; leaves Large captions to the separate
+ * explicit Story Order action and leaves all original Story Notes untouched.
+ */
+export function normalizeLegacySmallDrawingScenes(lesson:Lesson):Lesson{
+ const next=clone(lesson);
+ const clean=(value:string)=>{
+  const scene=trim(value).replace(/^(?:draw\s+(?:a\s+picture\s+of\s+)?|sketch\s+)/iu,'')
+    .replace(/[.!?]$/u,'').trim();
+  return scene.replace(/^The\b/u,'the');
+ };
+ for(const item of next.drawingPrompts??[])item.prompt=clean(item.prompt);
+ if(next.preparedActivities?.drawPicture)
+  next.preparedActivities.drawPicture.prompt=clean(next.preparedActivities.drawPicture.prompt);
+ return next;
+}
+
+export function checkReviewContent(lesson:Lesson):string[]{
+ const errors:string[]=[...checkDrawingCopy(lesson)];
  const p=lesson.preparedActivities??{};
  for(const mc of p.multipleChoice??[]){
   const choices=mc.choices??[];

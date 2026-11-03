@@ -8,6 +8,7 @@ import {
  inspectCurriculumLibrary,renderCurriculumReadinessMarkdown,
 } from '../scripts/curriculum-library.mjs';
 import {validateLesson} from '../scripts/validate-curriculum.mjs';
+import {normalizeLegacySmallDrawingScenes,useMatchingStoryOrderCaptions} from '../src/review/model.ts';
 import {
  approvedForPublic,assemblePublicLessonCatalog,isRightsEvidence,PUBLIC_LESSONS,
 } from '../src/publishedLessonCatalog.ts';
@@ -23,7 +24,7 @@ const exampleRights={
  reviewedBy:'Curriculum author',reviewedOn:'2026-11-03',
 };
 const signed=()=>{
- const value=structuredClone(lesson);
+ const value=useMatchingStoryOrderCaptions(normalizeLegacySmallDrawingScenes(lesson));
  value.publication.status='approved';
  value.publication.approved=true;
  value.publication.teacherSignoff={reviewer:'Curriculum author',date:'2026-11-03'};

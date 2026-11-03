@@ -1,4 +1,5 @@
 import type {PublicLessonEntry} from './publishedLessonCatalog.ts';
+import {approvedForPublic} from './publishedLessonCatalog.ts';
 import {approvedLessonForDraft,buildYourOwnLessonDraft,sameActivityContent} from './curriculumEditor.ts';
 import type {StoredDraft} from './draftMigration.ts';
 import {buildWorksheetRecipe,WORKSHEET_RECIPES} from './worksheetRecipes.ts';
@@ -14,6 +15,7 @@ export function isWorksheetStartId(value:unknown):value is WorksheetStartId{
  * No review-stage data or unapproved lesson is ever loaded.
  */
 export function createLessonWorksheet(entry:PublicLessonEntry,startId:WorksheetStartId):StoredDraft{
+ if(!approvedForPublic(entry))throw Error('This Bible story is not approved for public use.');
  const result=startId===BUILD_OWN?buildYourOwnLessonDraft(entry):
   buildWorksheetRecipe(entry.lesson,startId,{purpose:'published'}).draft;
  return {...result,worksheetPresetId:startId};
@@ -34,4 +36,18 @@ export function needsLessonSwitchConfirmation(
  const keys=['title','scripture','bigIdea','verseReference','verseText',
   'coverBorder','layouts','modules','activityBorders'] as const;
  return keys.some(key=>!sameActivityContent(draft[key],original[key]));
+}
+
+
+/** Switching Bible stories preserves the selected numbered preset (or Build
+ * My Own) and replaces *all* lesson-specific details and modules atomically.
+ * Older worksheets without a recorded preset must choose a preset explicitly
+ * first; never silently substitute another arrangement.
+ */
+export function createSamePresetForNewStory(
+ draft:Pick<StoredDraft,'worksheetPresetId'>,entry:PublicLessonEntry,
+):StoredDraft{
+ if(!isWorksheetStartId(draft.worksheetPresetId))
+  throw Error('This older worksheet has no recorded preset. Use Change Preset first to select one.');
+ return createLessonWorksheet(entry,draft.worksheetPresetId);
 }

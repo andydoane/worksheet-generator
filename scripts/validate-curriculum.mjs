@@ -127,6 +127,36 @@ export function validateLesson(lesson,schema){
  }
  if(readiness.length&&readiness.length!==knownModules.size)
   errors.push('moduleReadiness must account for all '+knownModules.size+' current modules');
+ // Approved lesson drawing text contracts are validated independently of
+ // the Review Studio. Historical unapproved handoff fixtures stay unmodified.
+ if(lesson.publication?.approved===true){
+  const p=lesson.preparedActivities??{};
+  const small=[
+   ...(lesson.drawingPrompts??[]).map((item,i)=>({item,path:'drawingPrompts['+i+']'})),
+   ...(p.drawPicture?[{item:p.drawPicture,path:'preparedActivities.drawPicture'}]:[]),
+  ];
+  for(const {item,path} of small){
+   const prompt=String(item.prompt??'').trim();
+   if(!prompt||prompt.length>105||
+      /^(?:draw|sketch|illustrate)\b/iu.test(prompt)||/[.!?]$/u.test(prompt))
+    errors.push(path+': Small Draw a Picture must be a scene phrase without instructions or final punctuation, max 105 characters');
+  }
+  const captions=p.drawStory??[];
+  if(captions.length>0){
+   if(captions.length<4||captions.length>6)
+    errors.push('preparedActivities.drawStory: needs 4–6 narrative captions');
+   const seenCaptions=new Set();
+   for(const [i,item] of captions.entries()){
+    const text=String(item.prompt??'').trim();
+    if(!text||text.length>105||!/^\p{Lu}/u.test(text)||
+       !/[.!?](?:["”’])?$/u.test(text)||/^(?:draw|sketch|illustrate)\b/iu.test(text))
+     errors.push('preparedActivities.drawStory['+i+']: needs a complete capitalized story sentence ending in punctuation (not a Draw command), max 105 characters');
+    if(seenCaptions.has(text.toLocaleLowerCase()))
+     errors.push('preparedActivities.drawStory['+i+']: duplicate narrative caption');
+    seenCaptions.add(text.toLocaleLowerCase());
+   }
+  }
+ }
  const pub=lesson.publication;
  if(pub){
   if(pub.approved!==(pub.status==='approved'))errors.push('publication status and approved must agree');

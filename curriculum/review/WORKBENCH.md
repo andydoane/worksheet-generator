@@ -14,28 +14,29 @@ the URL. Only repository collaborators have permission to commit changes.
 
 1. Open the review URL. Click **Load Red Sea lesson from GitHub**, or choose a
    `curriculum/review/*.json` file saved on your computer.
-2. The tool lists only review tasks: suggested incorrect multiple-choice answers,
+2. The tool lists review tasks, including **drawing-scene and caption review**, suggested incorrect multiple-choice answers,
    deliberately false facts, the adapted Finish the Story paragraph, the Circle
    the Mistakes paragraph and corrections, suggested unrelated vocabulary,
    age-suitability wording, the Important Idea wording, and Scripture.
-3. Edit and mark each review task as reviewed. False-fact edits are propagated
+3. In **Drawing activities**, check Small scene phrases (used after "Draw a picture of") separately from Large **Draw the Story** complete narrative captions. The buttons can normalize legacy Small "Draw ..." instructions or explicitly copy source-linked, approved Story Order sentences into Large captions. Each caption is editable; the source-note text appears alongside it. Re-run preflight after edits. The original Story Notes never change.
+4. Edit and mark each review task as reviewed. False-fact edits are propagated
    to every matching Sort/True-False module reference. The Important Idea
    is likewise kept consistent between its two puzzle activities.
-4. In **BSB memory verse**, look up a single verse or a short verse range in the
+5. In **BSB memory verse**, look up a single verse or a short verse range in the
    official Berean Standard Bible. Choose **first word** and **last word** of
    the exact excerpt, including a second verse if desired. Select the words
    that should be blanks in the two verse-completion puzzles. Click **Apply**
    and then **Mark reviewed**.
-5. **Run preflight checks**. It checks all 27 module candidates and module
+6. **Run preflight checks**. It checks all 27 module candidates and module
    validators. It does not replace the official schema, real puzzle-engine,
    and recipe validation in GitHub CI.
-6. Download a **review session** to carry edits AND checked-off items across
+7. Download a **review session** to carry edits AND checked-off items across
    browsers and devices. Ordinary workbench progress is autosaved in the
    current browser only.
-7. After all decisions and preflight pass, enter your own reviewer name/date,
+8. After all decisions and preflight pass, enter your own reviewer name/date,
    acknowledge official BSB public-domain terms, and import the current
    rights manifest (or explicitly confirm it is still empty).
-8. Download **both** approved JSON and updated rights manifest. In one GitHub
+9. Download **both** approved JSON and updated rights manifest. In one GitHub
    PR, move the old lesson out of `curriculum/review/`, upload the approved
    lesson to `curriculum/approved/<id>.lesson.json`, and replace
    `curriculum/approved/rights-manifest.json`. Never overwrite a manifest

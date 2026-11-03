@@ -4,6 +4,7 @@ import {readFile} from 'node:fs/promises';
 import {fileURLToPath} from 'node:url';
 import {validateLesson,validateLessonSchema,validateCurriculumFiles}
  from '../scripts/validate-curriculum.mjs';
+import {normalizeLegacySmallDrawingScenes,useMatchingStoryOrderCaptions} from '../src/review/model.ts';
 
 const fromRepo=(path)=>readFile(new URL('../'+path,import.meta.url),'utf8');
 const data=JSON.parse(await fromRepo('tests/fixtures/ot-031-original-review.json'));
@@ -94,7 +95,10 @@ test('Teacher approval gate prevents publishing by flipping a single flag',()=>{
   x.publication.resolvedReviewFlagIds=x.reviewFlags
    .filter(f=>f.type==='teacher-approval').map(f=>f.id);
  });
- assert.deepEqual(validateLesson(resolved,schema),[]);
+ assert.ok(validateLesson(resolved,schema).some(e=>e.includes('Small Draw a Picture')),
+  'Outdated drawing instructions block future approval, even with signoff');
+ const normalized=useMatchingStoryOrderCaptions(normalizeLegacySmallDrawingScenes(resolved));
+ assert.deepEqual(validateLesson(normalized,schema),[]);
 });
 test('CLI-compatible content validation passes without adding the lesson to the live app',async()=>{
  const path=fileURLToPath(new URL('../tests/fixtures/ot-031-original-review.json',import.meta.url));
@@ -116,4 +120,22 @@ test('PR 0 title correction reaches the shared print plan and both rendering pat
  assert.doesNotMatch(layout,/PIXEL PERFECT/u);
  assert.match(svg,/\{plan\.title\}/u);
  assert.match(pdf,/page\.drawText\(plan\.title/u);
+});
+
+
+test('Approved drawing-data format is protected by schema and semantic validation',async()=>{
+ const lesson=JSON.parse(await fromRepo('curriculum/approved/ot-031-god-parts-the-red-sea.lesson.json'));
+ assert.deepEqual(validateLesson(lesson,schema),[]);
+ const fragment=structuredClone(lesson);
+ fragment.preparedActivities.drawStory[0].prompt='the Israelites walked through the sea';
+ assert.ok(validateLesson(fragment,schema).some(x=>x.includes('complete capitalized story sentence')));
+ const prefix=structuredClone(lesson);
+ prefix.drawingPrompts[0].prompt='Draw the Israelites walking across the Red Sea.';
+ assert.ok(validateLesson(prefix,schema).some(x=>x.includes('Small Draw a Picture')));
+ const oversized=structuredClone(lesson);
+ oversized.preparedActivities.drawStory[0].prompt='A'.repeat(106);
+ assert.ok(validateLessonSchema(oversized,schema).some(x=>x.includes('drawStory[0].prompt')));
+ const duplicate=structuredClone(lesson);
+ duplicate.preparedActivities.drawStory[1].prompt=duplicate.preparedActivities.drawStory[0].prompt;
+ assert.ok(validateLesson(duplicate,schema).some(x=>x.includes('duplicate narrative caption')));
 });

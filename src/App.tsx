@@ -2,12 +2,13 @@ import { useEffect, useRef, useState } from 'react';
 import pkg from '../package.json';
 import {MODULE_GUIDANCE,isAutofilledModule,samplePlaceholder} from './moduleGuidance.ts';
 import {migrateDraftValue} from './draftMigration.ts';
+import {upgradeSavedDrawingCaptions} from './drawingDraftUpgrade.ts';
 import {hasMeaningfulDraft,exampleWorksheetDraft} from './welcomeFlow.ts';
 import {PUBLIC_LESSONS,approvedForPublic,type PublicLessonEntry} from './publishedLessonCatalog.ts';
 import {buildWorksheetRecipe,type RecipeId} from './worksheetRecipes.ts';
 import {WORKSHEET_RECIPES} from './worksheetRecipes.ts';
 import {
- createLessonWorksheet,isWorksheetStartId,needsLessonSwitchConfirmation,
+ createLessonWorksheet,createSamePresetForNewStory,isWorksheetStartId,needsLessonSwitchConfirmation,
  type WorksheetStartId,
 } from './lessonQuickSwitch.ts';
 import {approvedLessonForDraft,buildYourOwnLessonDraft,canRecreateApprovedActivity,chooseActivityForDraft,isActivityCustomized,originalApprovedActivity,sameActivityContent} from './curriculumEditor.ts';
@@ -88,7 +89,7 @@ function readDraft(): Draft {
     if (!stored) return blank;
 
     // Old drafts contain no layout/border selections. Keep their text intact.
-    return migrateDraftValue(JSON.parse(stored));
+    return upgradeSavedDrawingCaptions(migrateDraftValue(JSON.parse(stored)),PUBLIC_LESSONS);
   } catch {
     // Storage can be unavailable, and old user content could be malformed.
     return blank;
@@ -223,8 +224,7 @@ export default function App() {
   const [exporting, setExporting] = useState(false);
   const [exportError, setExportError] = useState<string | null>(null);
   const [moduleNotice,setModuleNotice]=useState<string|null>(null);
-  const [lessonPicker,setLessonPicker]=useState<'presets'|'stories'|'story-presets'|null>(null);
-  const [nextStoryId,setNextStoryId]=useState<string|null>(null);
+  const [lessonPicker,setLessonPicker]=useState<'presets'|'stories'|null>(null);
   const [lessonPickerError,setLessonPickerError]=useState<string|null>(null);
   const [borderGalleryOpen,setBorderGalleryOpen]=useState(false);
 
@@ -299,7 +299,6 @@ export default function App() {
     setModuleNotice(null);
     setLessonPicker(null);
     setLessonPickerError(null);
-    setNextStoryId(null);
     setPage(1);
     setSelectedRegionId('cover-activity');
     setTab('details');
@@ -319,7 +318,6 @@ export default function App() {
     setModuleNotice(null);
     setLessonPicker(null);
     setLessonPickerError(null);
-    setNextStoryId(null);
     setPage(1);
     setSelectedRegionId('cover-activity');
     setTab('details');
@@ -354,15 +352,12 @@ export default function App() {
 
   function openLessonPicker(panel:'presets'|'stories'){
     setLessonPicker(panel);
-    setNextStoryId(null);
     setLessonPickerError(null);
   }
 
-  function chooseQuickLessonWorksheet(startId:WorksheetStartId){
+  function chooseQuickLessonWorksheet(startId:WorksheetStartId,entryOverride?:PublicLessonEntry){
     if(exporting)return;
-    const entry=lessonPicker==='story-presets'
-      ?PUBLIC_LESSONS.find(item=>item.lesson.id===nextStoryId&&approvedForPublic(item))
-      :approvedLessonForDraft(draft,PUBLIC_LESSONS);
+    const entry=entryOverride??approvedLessonForDraft(draft,PUBLIC_LESSONS);
     if(!entry){
       setLessonPickerError('That Bible story is not available in the approved library.');
       return;
@@ -375,7 +370,9 @@ export default function App() {
     try{
       // Generate the next booklet before asking permission to replace the
       // existing single-draft worksheet. Failure leaves the old draft intact.
-      const next=createLessonWorksheet(entry,startId);
+      const next=entryOverride
+        ?createSamePresetForNewStory(draft,entry)
+        :createLessonWorksheet(entry,startId);
       if(needsLessonSwitchConfirmation(draft,PUBLIC_LESSONS)&&!window.confirm(
         'Replace this customized worksheet? Changes to lesson details, activities, '+
         'layouts and borders will be lost. You can cancel to keep your current work.'
@@ -385,6 +382,17 @@ export default function App() {
       setLessonPickerError(error instanceof Error?error.message:
         'Could not load this preset. Your current worksheet is unchanged.');
     }
+  }
+
+  function chooseQuickStory(entry:PublicLessonEntry){
+    const startId=draft.worksheetPresetId;
+    if(!isWorksheetStartId(startId)){
+      setLessonPickerError(
+        'This older worksheet has no recorded preset. Use Change Preset to choose one before switching Bible stories.'
+      );
+      return;
+    }
+    chooseQuickLessonWorksheet(startId,entry);
   }
 
   function setModuleType(type: ModuleId | '') {
@@ -611,28 +619,25 @@ export default function App() {
                     {lessonPicker&&<div className="lesson-switcher-picker" role="group"
                       aria-label={lessonPicker==='stories'?'Choose a different Bible story':'Choose worksheet preset'}>
                       <div className="lesson-switcher-picker-header">
-                        <strong>{lessonPicker==='presets'?'Choose a preset for this story':
-                          lessonPicker==='stories'?'Choose a Bible story':'Choose a worksheet for the new story'}</strong>
-                        <button type="button" onClick={()=>{setLessonPicker(null);setLessonPickerError(null);setNextStoryId(null);}}>Cancel</button>
+                        <strong>{lessonPicker==='presets'?'Choose a preset for this story':'Choose a Bible story'}</strong>
+                        <button type="button" onClick={()=>{setLessonPicker(null);setLessonPickerError(null);}}>Cancel</button>
                       </div>
                       {lessonPicker==='stories'
                         ?<div className="lesson-switcher-options">
                           {PUBLIC_LESSONS.filter(approvedForPublic).map(entry=><button type="button"
-                            key={entry.lesson.id} onClick={()=>{setNextStoryId(entry.lesson.id);setLessonPickerError(null);setLessonPicker('story-presets');}}>
+                            key={entry.lesson.id} onClick={()=>chooseQuickStory(entry)}>
                             <strong>{entry.lesson.lessonDetails.title}</strong>
                             <small>{entry.lesson.lessonDetails.scriptureDisplay??entry.lesson.lessonDetails.scripturePassages?.join(', ')}</small>
                           </button>)}
                         </div>
                         :<div className="lesson-switcher-options">
-                          {lessonPicker==='story-presets'&&<button type="button" className="lesson-picker-back"
-                            onClick={()=>{setLessonPicker('stories');setLessonPickerError(null);}}>‹ Back to stories</button>}
                           {WORKSHEET_RECIPES.map(recipe=><button type="button" key={recipe.id}
-                            disabled={lessonPicker==='presets'&&draft.worksheetPresetId===recipe.id}
+                            disabled={draft.worksheetPresetId===recipe.id}
                             onClick={()=>{if(isWorksheetStartId(recipe.id))chooseQuickLessonWorksheet(recipe.id);}}>
                             <strong>{recipe.name}{draft.worksheetPresetId===recipe.id?' · Current':''}</strong>
                             <small>{recipe.description}</small>
                           </button>)}
-                          <button type="button" disabled={lessonPicker==='presets'&&draft.worksheetPresetId==='build-own'}
+                          <button type="button" disabled={draft.worksheetPresetId==='build-own'}
                             onClick={()=>chooseQuickLessonWorksheet('build-own')}>
                             <strong>Build My Own Worksheet{draft.worksheetPresetId==='build-own'?' · Current':''}</strong>
                             <small>Start a fresh booklet using this story's details and choose your own activities.</small>

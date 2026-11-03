@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {parseBsbText,getBsbPassage,wordSpans,clipToWords,markSelectedWords,suggestBlankWords} from '../src/review/bsb.ts';
-import {listReviewTasks,editAt,applyBsbVerse,checkReviewContent,createApprovedLesson,originalMemoryVerseTranslation,updatedRightsManifest} from '../src/review/model.ts';
+import {listReviewTasks,editAt,applyBsbVerse,checkDrawingCopy,checkReviewContent,createApprovedLesson,normalizeLegacySmallDrawingScenes,originalMemoryVerseTranslation,useMatchingStoryOrderCaptions,updatedRightsManifest} from '../src/review/model.ts';
 
 const raw=await readFile(new URL('../tests/fixtures/ot-031-original-review.json',import.meta.url),'utf8');
 const original=JSON.parse(raw);
@@ -27,7 +27,7 @@ test('Review tasks focus on generated and adapted content instead of reapproving
  const tasks=listReviewTasks(original);
  assert.equal(tasks.filter(x=>x.group==='Multiple Choice').length,8);
  assert.equal(tasks.filter(x=>x.group==='False facts and sorting').length,11);
- for(const id of ['finish-story','circle-mistakes','bsb-verse','sensitivity','important-idea','checkboxes','odd-words'])
+ for(const id of ['drawing-captions','finish-story','circle-mistakes','bsb-verse','sensitivity','important-idea','checkboxes','odd-words'])
   assert.ok(tasks.some(x=>x.id===id),id);
  assert.equal(tasks.some(x=>x.id==='sn-01'),false);
 });
@@ -66,8 +66,12 @@ test('BSB approval updates all dependent verses, exact bracket reconstructions, 
   'Do not accidentally export original ESV text in published verse records');
  assert.equal(output.publication.approved,false);
  assert.equal(JSON.stringify(original),before);
- const problems=checkReviewContent(output);
- assert.deepEqual(problems,[],problems.join('\n'));
+ const oldProblems=checkReviewContent(output);
+ assert.ok(oldProblems.some(x=>x.includes('Small Draw a Picture')));
+ assert.ok(oldProblems.some(x=>x.includes('Draw the Story')));
+ const fixed=useMatchingStoryOrderCaptions(normalizeLegacySmallDrawingScenes(output));
+ assert.deepEqual(checkReviewContent(fixed),[]);
+ assert.equal(output.publication.approved,false,'Historical fixture stays untouched');
 });
 
 test('Human signoff and independent public-domain evidence remain separate',()=>{
@@ -125,4 +129,51 @@ test('Review page preserves raw multiline drafts for Odd Words and Checkboxes',a
  assert.match(page,/setWordBankDrafts\(previous=>\(\{\.\.\.previous,\[key\]:value\}\)\)/u);
  assert.match(page,/value\.split\(\/\\r\?\\n\/u\)\.map\(x=>x\.trim\(\)\)\.filter\(Boolean\)/u);
  assert.match(page,/Original curriculum uses \{originalMemoryVerseTranslation\(lesson\)\}/u);
+});
+
+
+test('Drawing workbench distinguishes Small scene data from complete Large captions and repairs old imports by source ID',()=>{
+ const before=JSON.stringify(original);
+ const bad=checkDrawingCopy(original);
+ assert.ok(bad.some(x=>x.includes('drawingPrompts')));
+ assert.ok(bad.some(x=>x.includes('preparedActivities.drawStory')));
+ const small=normalizeLegacySmallDrawingScenes(original);
+ assert.equal(small.drawingPrompts[0].prompt,'the Israelites following a tall pillar of cloud toward the Red Sea');
+ assert.equal(small.preparedActivities.drawPicture.prompt,small.drawingPrompts[4].prompt);
+ assert.notEqual(small.preparedActivities.drawStory[0].prompt,small.drawingPrompts[0].prompt);
+ const fixed=useMatchingStoryOrderCaptions(small);
+ assert.deepEqual(checkDrawingCopy(fixed),[]);
+ assert.deepEqual(fixed.preparedActivities.drawStory.map(x=>x.sourceIds[0]),
+  ['sn-01','sn-02','sn-03','sn-05','sn-06','sn-07']);
+ for(const caption of fixed.preparedActivities.drawStory)
+  assert.equal(caption.prompt,original.preparedActivities.storyOrder
+   .find(item=>item.sourceIds.includes(caption.sourceIds[0])).text);
+ assert.equal(JSON.stringify(original),before,'Historical fixture is immutable');
+ const edited=editAt(fixed,['drawingPrompts',4,'prompt'],'the Israelites crossing the sea');
+ assert.equal(edited.preparedActivities.drawPicture.prompt,'the Israelites crossing the sea');
+ const editedStory=editAt(fixed,['preparedActivities','storyOrder',0,'text'],
+  'God led the Israelites through the wilderness.');
+ assert.equal(editedStory.preparedActivities.drawStory[0].prompt,
+  'God led the Israelites through the wilderness.');
+ assert.equal(fixed.preparedActivities.drawStory[0].prompt,
+  original.preparedActivities.storyOrder[0].text);
+ const fragment=structuredClone(fixed);
+ fragment.preparedActivities.drawStory[0].prompt='the Israelites crossing the sea';
+ assert.ok(checkDrawingCopy(fragment).some(x=>x.includes('Draw the Story')));
+ const duplicate=structuredClone(fixed);
+ duplicate.preparedActivities.drawStory[1].prompt=duplicate.preparedActivities.drawStory[0].prompt;
+ assert.ok(checkDrawingCopy(duplicate).some(x=>x.includes('duplicate Draw the Story')));
+ const noMatch=structuredClone(original);
+ noMatch.preparedActivities.drawStory[0].sourceIds=['sn-unrelated'];
+ assert.throws(()=>useMatchingStoryOrderCaptions(noMatch),/unique matching Story Order/u);
+});
+
+test('Review UI exposes drawing caption tasks with explicit, editable Story Order synchronization',async()=>{
+ const page=await readFile(new URL('../src/review/ReviewApp.tsx',import.meta.url),'utf8');
+ assert.match(page,/active\.id==='drawing-captions'/u);
+ assert.match(page,/Use matching Story Order sentences/u);
+ assert.match(page,/normalizeLegacySmallDrawingScenes\(lesson\)/u);
+ assert.match(page,/useMatchingStoryOrderCaptions\(lesson\)/u);
+ assert.match(page,/preparedActivities','drawStory',i,'prompt'/u);
+ assert.match(page,/setPreflight\(null\)/u);
 });

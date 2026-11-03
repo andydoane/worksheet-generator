@@ -21,19 +21,21 @@ test('Drawing content is a reusable scene, not a redundant instruction',()=>{
  const scenes=[
   ...lesson.drawingPrompts.map(x=>x.prompt),
   lesson.preparedActivities.drawPicture.prompt,
-  ...lesson.preparedActivities.drawStory.map(x=>x.prompt),
  ];
- assert.equal(scenes.length,14);
+ assert.equal(scenes.length,8);
  for(const scene of scenes){
   assert.doesNotMatch(scene,/^(?:Draw|Sketch)\b/iu);
   assert.ok(scene.length>3&&scene.length<=105,scene);
-  assert.doesNotMatch(scene,/[.!?]$/u,'Store noun phrases without terminal punctuation');
+  assert.doesNotMatch(scene,/[.!?]$/u,'Small modules store noun phrases without terminal punctuation');
  }
  assert.equal(lesson.drawingPrompts[3].prompt,'Moses holding up his staff beside the Red Sea');
  assert.equal(lesson.drawingPrompts[1].prompt,'Pharaoh sending soldiers and chariots to chase the Israelites');
  assert.equal(lesson.preparedActivities.drawStory.length,6);
- for(const picture of lesson.preparedActivities.drawStory)
-  assert.ok(lesson.drawingPrompts.some(scene=>scene.prompt===picture.prompt));
+ for(const picture of lesson.preparedActivities.drawStory){
+  assert.ok(lesson.preparedActivities.storyOrder.some(event=>
+   picture.sourceIds.some(id=>event.sourceIds.includes(id))&&event.text===picture.prompt));
+  assert.match(picture.prompt,/^[A-Z].*[.!?]$/u);
+ }
  assert.ok(lesson.drawingPrompts.some(scene=>
   scene.prompt===lesson.preparedActivities.drawPicture.prompt));
  assert.equal(lesson.publication.teacherSignoff.reviewer,'Andy Doane');
@@ -146,7 +148,8 @@ test('Quick switch controls appear only for lesson-backed editor drafts and neve
  assert.match(app,/Change Story/u);
  assert.match(app,/Choose a Preset/u);
  assert.match(app,/setLessonPicker\(null\)/u);
- assert.match(app,/setNextStoryId\(null\)/u);
+ assert.doesNotMatch(app,/setNextStoryId|story-presets/u);
+ assert.match(app,/onClick=\{\(\)=>chooseQuickStory\(entry\)\}/u);
  assert.match(app,/needsLessonSwitchConfirmation\(draft,PUBLIC_LESSONS\)/u);
  assert.match(app,/createLessonWorksheet\(entry,startId\)/u);
  assert.match(app,/startWorksheet\(next,true\)/u);
