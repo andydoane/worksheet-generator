@@ -4,6 +4,7 @@ import {readFile} from 'node:fs/promises';
 import {PDFDocument} from 'pdf-lib';
 import {
  CORE_LESSON_MODULE_IDS,WORD_VISUAL_LESSON_MODULE_IDS,
+ VERSE_SPECIALTY_LESSON_MODULE_IDS,
  convertLessonActivities,findLessonCandidate,
 } from '../src/lessonActivityConverter.ts';
 import {
@@ -31,8 +32,9 @@ test('Red Sea review-stage source passes schema, then converts 6 core types with
  assert.equal(converted.publicApproved,false);
  assert.deepEqual(converted.diagnostics,[]);
  assert.deepEqual(new Set(converted.candidates.map(c=>c.moduleId)),
-  new Set([...CORE_LESSON_MODULE_IDS,...WORD_VISUAL_LESSON_MODULE_IDS]));
- assert.equal(converted.candidates.length,23,'8 questions + 5 other core + 10 word/visual activities');
+  new Set([...CORE_LESSON_MODULE_IDS,...WORD_VISUAL_LESSON_MODULE_IDS,
+    ...VERSE_SPECIALTY_LESSON_MODULE_IDS]));
+ assert.equal(converted.candidates.length,34,'8 questions + 26 other module candidates');
  assert.deepEqual(lesson,frozen,'pure converter must not mutate source JSON');
  assert.deepEqual(convertLessonActivities(lesson),converted,'same input must yield same output');
  assert.notDeepEqual(convertLessonActivities(lesson,{seed:5}).candidates,
@@ -42,13 +44,16 @@ test('Every converted module passes existing validators and retains its region s
  for(const candidate of converted.candidates){
   assert.deepEqual(validateModule(candidate.module),[],candidate.contentId);
   const size=
-   ['draw-picture','multiple-choice','true-false','odd-words','unscramble-words','checkboxes','who-am-i'].includes(candidate.moduleId)?'small':
-   ['true-false-maze','match-words','medium-word-search','pixel-picture'].includes(candidate.moduleId)?'medium':'large';
+   ['draw-picture','multiple-choice','true-false','odd-words','unscramble-words','checkboxes','who-am-i','first-letters'].includes(candidate.moduleId)?'small':
+   ['true-false-maze','match-words','medium-word-search','pixel-picture',
+     'finish-verse','unscramble-verse','circle-mistakes','big-idea-cryptogram',
+     'upside-down-verse','connect-big-idea'].includes(candidate.moduleId)?'medium':'large';
   const matches=moduleForSize(size);
   assert.ok(matches.some(module=>module.id===candidate.moduleId),candidate.moduleId);
   assert.ok(candidate.contentId);
   assert.equal(candidate.module.type,candidate.moduleId);
-  assert.ok(candidate.sourceIds.length,'all candidates must retain source references');
+  assert.ok(candidate.sourceIds.length||(candidate.sourceLocations?.length??0)>0,
+    'all candidates must retain Story Note IDs or original ODT source locations');
   assert.ok(candidate.sourceIds.every(id=>[
    ...lesson.storyNotes.map(note=>note.id),...lesson.questions.map(q=>q.id),
    ...lesson.facts.map(f=>f.id),
