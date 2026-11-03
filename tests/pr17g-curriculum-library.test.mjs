@@ -114,7 +114,7 @@ test('Public auto-discovery loads only explicit approved filenames with separate
  const path='../curriculum/approved/'+id+'.lesson.json';
  const files={
   [path]:approved,
-  '../curriculum/review/'+id+'.lesson.json':structuredClone(lesson),
+  ['../curriculum/review/'+id+'.lesson.json']:structuredClone(lesson),
  };
  const registered=assemblePublicLessonCatalog(files,manifest);
  assert.equal(registered.length,1);
@@ -127,7 +127,7 @@ test('Public auto-discovery loads only explicit approved filenames with separate
  assert.equal(assemblePublicLessonCatalog({'../curriculum/approved/different.lesson.json':approved},
   manifest).length,0,'filename/lesson ID mismatch');
  assert.equal(assemblePublicLessonCatalog({
-  '../curriculum/review/'+id+'.lesson.json':approved,
+  ['../curriculum/review/'+id+'.lesson.json']:approved,
  },manifest).length,0,'review path is not a public source');
  assert.equal(PUBLIC_LESSONS.length,0,'this PR registers no actual public lessons');
 });
