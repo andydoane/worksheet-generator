@@ -41,6 +41,8 @@ jobs:
             artifacts/*.pdf
             artifacts/pr16f-print-audit-manifest.json
             artifacts/pr16f-print-audit-index.md
+            artifacts/curriculum-readiness-report.json
+            artifacts/curriculum-readiness-report.md
       - name: Configure GitHub Pages
         if: github.event_name != 'pull_request'
         uses: actions/configure-pages@v5
