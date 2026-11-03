@@ -102,7 +102,7 @@ test('A visit always starts at welcome, resume does not overwrite the draft, and
  const replacement=app.slice(app.indexOf('  function startWorksheet('),
   app.indexOf('  function choosePublishedRecipe('));
  assert.ok(replacement.indexOf('window.confirm(')<replacement.indexOf('setDraft('));
- assert.match(replacement,/if\(hasMeaningfulDraft\(draft\)&&!window\.confirm\(/u);
+ assert.match(replacement,/if\(!skipConfirmation&&hasMeaningfulDraft\(draft\)&&!window\.confirm\(/u);
  assert.match(replacement,/setDraft\(structuredClone\(next\)\)/u);
  assert.match(app,/className="welcome-home-button" type="button" onClick=\{\(\)=>setView\('welcome'\)\}/u);
  assert.match(welcome,/hasSavedDraft&&/u);
