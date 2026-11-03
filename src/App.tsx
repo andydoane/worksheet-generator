@@ -49,6 +49,7 @@ type Draft = {
   layouts: Record<2 | 3 | 4, LayoutId>;
   modules: ModuleAssignments;
   activityBorders: ActivityBorders;
+  curriculumLessonId?:string;
 };
 
 type EditorTab = 'details' | 'layouts' | 'activities';
