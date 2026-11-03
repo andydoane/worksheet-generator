@@ -3,7 +3,8 @@ import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {PDFDocument} from 'pdf-lib';
 import {
- CORE_LESSON_MODULE_IDS,convertLessonActivities,findLessonCandidate,
+ CORE_LESSON_MODULE_IDS,WORD_VISUAL_LESSON_MODULE_IDS,
+ convertLessonActivities,findLessonCandidate,
 } from '../src/lessonActivityConverter.ts';
 import {
  validateModule,parseStory,matchRows,moduleForSize,
@@ -29,8 +30,9 @@ test('Red Sea review-stage source passes schema, then converts 6 core types with
  assert.equal(converted.lessonId,lesson.id);
  assert.equal(converted.publicApproved,false);
  assert.deepEqual(converted.diagnostics,[]);
- assert.deepEqual(new Set(converted.candidates.map(c=>c.moduleId)),new Set(CORE_LESSON_MODULE_IDS));
- assert.equal(converted.candidates.length,13,'8 questions + 5 other core activities');
+ assert.deepEqual(new Set(converted.candidates.map(c=>c.moduleId)),
+  new Set([...CORE_LESSON_MODULE_IDS,...WORD_VISUAL_LESSON_MODULE_IDS]));
+ assert.equal(converted.candidates.length,23,'8 questions + 5 other core + 10 word/visual activities');
  assert.deepEqual(lesson,frozen,'pure converter must not mutate source JSON');
  assert.deepEqual(convertLessonActivities(lesson),converted,'same input must yield same output');
  assert.notDeepEqual(convertLessonActivities(lesson,{seed:5}).candidates,
@@ -39,9 +41,10 @@ test('Red Sea review-stage source passes schema, then converts 6 core types with
 test('Every converted module passes existing validators and retains its region size',()=>{
  for(const candidate of converted.candidates){
   assert.deepEqual(validateModule(candidate.module),[],candidate.contentId);
-  const matches=moduleForSize(
-   candidate.moduleId==='multiple-choice'||candidate.moduleId==='true-false'
-    ?'small':candidate.moduleId==='true-false-maze'?'medium':'large');
+  const size=
+   ['draw-picture','multiple-choice','true-false','odd-words','unscramble-words','checkboxes','who-am-i'].includes(candidate.moduleId)?'small':
+   ['true-false-maze','match-words','medium-word-search','pixel-picture'].includes(candidate.moduleId)?'medium':'large';
+  const matches=moduleForSize(size);
   assert.ok(matches.some(module=>module.id===candidate.moduleId),candidate.moduleId);
   assert.ok(candidate.contentId);
   assert.equal(candidate.module.type,candidate.moduleId);
