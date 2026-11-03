@@ -11,6 +11,7 @@ import {checkDrawingCopy} from '../src/review/model.ts';
 import {createBookletPdf} from '../src/pdf.ts';
 import {contentClaimsForModule} from '../src/lessonContentPool.ts';
 import {migrateDraftValue} from '../src/draftMigration.ts';
+import {upgradeSavedDrawingCaptions} from '../src/drawingDraftUpgrade.ts';
 
 const json=async path=>JSON.parse(await readFile(new URL('../'+path,import.meta.url),'utf8'));
 const lesson=await json('curriculum/approved/ot-031-god-parts-the-red-sea.lesson.json');
@@ -106,4 +107,42 @@ test('Preset 2 with sentence captions remains a printable two-sheet Red Sea book
  const pdf=await PDFDocument.load(bytes);
  assert.equal(pdf.getPageCount(),2);
  assert.ok(bytes.length>25000);
+});
+
+
+test('Resuming an old pristine Draw the Story upgrades captions without overwriting teacher edits',()=>{
+ const approved=lesson.preparedActivities.drawStory;
+ const oldPrompts=approved.map(caption=>lesson.drawingPrompts.find(scene=>
+  caption.sourceIds.some(id=>scene.sourceIds.includes(id))).prompt);
+ const modern=createLessonWorksheet(entry,'preset-2');
+ const original=modern.modules['1:cover-activity'];
+ assert.equal(original.type,'draw-story');
+ for(const prompts of [oldPrompts.join('\n'),oldPrompts.map(x=>'Draw '+x+'.').join('\n')]){
+  const saved=structuredClone(modern);
+  saved.modules['1:cover-activity']={type:'draw-story',prompts};
+  saved.activityDefaults['1:cover-activity']={type:'draw-story',prompts};
+  const updated=upgradeSavedDrawingCaptions(saved,catalog);
+  assert.deepEqual(updated.modules['1:cover-activity'],original);
+  assert.deepEqual(updated.activityDefaults['1:cover-activity'],original);
+  assert.deepEqual(saved.modules['1:cover-activity'],{type:'draw-story',prompts},
+   'Migration never mutates the input draft');
+  assert.equal(needsLessonSwitchConfirmation(updated,catalog),false);
+  assert.equal(updated.worksheetPresetId,'preset-2');
+ }
+ const legacy=structuredClone(modern);
+ legacy.modules['1:cover-activity']={type:'draw-story',prompts:oldPrompts.join('\n')};
+ delete legacy.activityDefaults;
+ const migrated=upgradeSavedDrawingCaptions(legacy,catalog);
+ assert.deepEqual(migrated.modules['1:cover-activity'],original);
+ const custom=structuredClone(legacy);
+ custom.modules['1:cover-activity'].prompts+=' A teacher wrote something new.';
+ assert.strictEqual(upgradeSavedDrawingCaptions(custom,catalog),custom,
+  'Teacher-written drawing captions must never be rewritten');
+ const editedBaseline=structuredClone(legacy);
+ editedBaseline.activityDefaults={'1:cover-activity':original};
+ assert.strictEqual(upgradeSavedDrawingCaptions(editedBaseline,catalog),editedBaseline);
+ assert.strictEqual(upgradeSavedDrawingCaptions(legacy,[]),legacy);
+ const scratch=structuredClone(legacy);
+ delete scratch.curriculumLessonId;
+ assert.strictEqual(upgradeSavedDrawingCaptions(scratch,catalog),scratch);
 });
