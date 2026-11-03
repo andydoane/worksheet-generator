@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {parseBsbText,getBsbPassage,wordSpans,clipToWords,markSelectedWords,suggestBlankWords} from '../src/review/bsb.ts';
-import {listReviewTasks,editAt,applyBsbVerse,checkReviewContent,createApprovedLesson,updatedRightsManifest} from '../src/review/model.ts';
+import {listReviewTasks,editAt,applyBsbVerse,checkReviewContent,createApprovedLesson,originalMemoryVerseTranslation,updatedRightsManifest} from '../src/review/model.ts';
 
 const raw=await readFile(new URL('../curriculum/review/ot-031-god-parts-the-red-sea.json',import.meta.url),'utf8');
 const original=JSON.parse(raw);
@@ -99,4 +99,30 @@ test('Review studio is isolated from the normal public app and only includes app
  assert.match(workflow,/npm run prepare:bsb/u);
  assert.match(catalog,/curriculum\/approved/u);
  assert.doesNotMatch(catalog,/import\.meta\.glob\([^\n]*curriculum\/review/u);
+});
+
+test('Original curriculum ESV label stays accurate after BSB conversion and old exports',()=>{
+ assert.equal(originalMemoryVerseTranslation(original),'ESV');
+ const passage=getBsbPassage(bible,'Exodus 15:11');
+ const blanks=suggestBlankWords(passage.text);
+ const converted=applyBsbVerse(original,passage,0,wordSpans(passage.text).length-1,blanks,blanks);
+ assert.equal(converted.lessonDetails.memoryVerse.translation,'BSB');
+ assert.equal(converted.lessonDetails.memoryVerse.originalTranslation,'ESV');
+ assert.equal(originalMemoryVerseTranslation(converted),'ESV');
+ const oldWorkBenchExport=structuredClone(converted);
+ delete oldWorkBenchExport.lessonDetails.memoryVerse.originalTranslation;
+ assert.equal(originalMemoryVerseTranslation(oldWorkBenchExport),'ESV',
+  'Older exported Red Sea lessons already use BSB but originated from ESV');
+ assert.equal(originalMemoryVerseTranslation({id:'different-lesson',lessonDetails:{
+  memoryVerse:{translation:'BSB',bsbSource:{reference:'John 3:16'}}}}),'not recorded',
+  'Do not invent an unknown source translation');
+});
+
+test('Review page preserves raw multiline drafts for Odd Words and Checkboxes',async()=>{
+ const page=await readFile(new URL('../src/review/ReviewApp.tsx',import.meta.url),'utf8');
+ assert.match(page,/value=\{wordBankDrafts\.oddWords\}/u);
+ assert.match(page,/value=\{wordBankDrafts\.checkboxes\}/u);
+ assert.match(page,/setWordBankDrafts\(previous=>\(\{\.\.\.previous,\[key\]:value\}\)\)/u);
+ assert.match(page,/value\.split\(\/\\r\?\\n\/u\)\.map\(x=>x\.trim\(\)\)\.filter\(Boolean\)/u);
+ assert.match(page,/Original curriculum uses \{originalMemoryVerseTranslation\(lesson\)\}/u);
 });
