@@ -1,17 +1,17 @@
 import type {PublicLessonEntry} from './publishedLessonCatalog.ts';
 import {approvedForPublic} from './publishedLessonCatalog.ts';
-import {convertLessonActivities,type ConvertedActivity} from './lessonActivityConverter.ts';
+import {lessonContentPool,contentClaimsForModule,chooseUnusedLessonContent,type LessonContentChoice,type LessonContentPool} from './lessonContentPool.ts';
 import {EMPTY_DRAFT,type StoredDraft} from './draftMigration.ts';
 import {blankModule,type ActivityModule,type ModuleId,validateModule} from './modules.ts';
 
 /** Prepared conversions are immutable, expensive puzzle inputs. Cache per
  * approved lesson object; every editor assignment still clones the payload.
  */
-const approvedConversions=new WeakMap<PublicLessonEntry['lesson'],ReturnType<typeof convertLessonActivities>>();
+const approvedConversions=new WeakMap<PublicLessonEntry['lesson'],LessonContentPool>();
 function convertedApprovedLesson(entry:PublicLessonEntry){
  let converted=approvedConversions.get(entry.lesson);
  if(!converted){
-  converted=convertLessonActivities(entry.lesson,{seed:1});
+  converted=lessonContentPool(entry.lesson,1);
   approvedConversions.set(entry.lesson,converted);
  }
  return converted;
@@ -75,14 +75,12 @@ export function createManualModule(type:ModuleId,draft:StoredDraft):ActivityModu
 }
 
 function chooseUnusedCandidate(
- options:ConvertedActivity[],draft:StoredDraft,slot:string,
-):ConvertedActivity|undefined{
- // Prefer a question/prompt that is not already used elsewhere in the booklet.
- // Multiple Choice has eight approved alternatives in the first lesson.
+ options:LessonContentChoice[],draft:StoredDraft,slot:string,lesson:PublicLessonEntry['lesson'],
+):{candidate:LessonContentChoice;reused:string[]}|undefined{
  const used=new Set(Object.entries(draft.modules)
   .filter(([key])=>key!==slot)
-  .map(([,module])=>JSON.stringify(module)));
- return options.find(candidate=>!used.has(JSON.stringify(candidate.module)))??options[0];
+  .flatMap(([,module])=>contentClaimsForModule(module,lesson)));
+ return chooseUnusedLessonContent(options,used);
 }
 
 /**
@@ -106,7 +104,8 @@ export function chooseActivityForDraft(
  const converted=convertedApprovedLesson(entry);
  const options=converted.candidates.filter(candidate=>
   candidate.moduleId===type&&validateModule(candidate.module).length===0);
- const candidate=chooseUnusedCandidate(options,draft,slot);
+ const selected=chooseUnusedCandidate(options,draft,slot,entry.lesson);
+ const candidate=selected?.candidate;
  if(!candidate){
   const details=converted.diagnostics
    .filter(issue=>issue.moduleId===type)
@@ -117,7 +116,11 @@ export function chooseActivityForDraft(
  }
  return {module:structuredClone(candidate.module),source:'lesson',
   contentId:candidate.contentId,
-  message:'Pre-filled from '+entry.lesson.lessonDetails.title+'. You can edit this activity without changing the curriculum or any other booklet activity.'};
+  message:'Pre-filled from '+entry.lesson.lessonDetails.title+'. '+
+   (selected?.reused.length
+    ?'Some content is already used elsewhere in this booklet; no nonrepeating approved alternative was available. '
+    :'')+
+   'You can edit this activity without changing the curriculum or any other booklet activity.'};
 }
 
 
