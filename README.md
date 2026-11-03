@@ -1,5 +1,13 @@
 # Worksheet Studio
 
+## PR 17f — Complete all 27 curriculum activity adapters (v0.16.20)
+
+- **Eleven final lesson-data adapters**: First Letters, Finish Verse, Unscramble Verse, Circle the Mistakes, Big Idea Cryptogram, Upside Down Verse, Connect Big Idea, Verse Cryptogram, Crossword, Spiral Verse, and Connect Verse. Existing module algorithms, preview components, layouts, PDF generators and the two public recipe definitions remain unchanged. Together with PRs 17b and 17e, all **27 app module types** can now be populated from curriculum v1.
+- **Faithful text conversion**: Scripture-based modules preserve the exact `lessonDetails.memoryVerse` wording/reference; bracketed verse activities must reconstruct that source verse exactly. Important Idea activities must reproduce the canonical lesson phrase. If data disagrees, the converter issues a diagnostic rather than rewriting content.
+- **Actual puzzle checks**: the two cryptograms run `generateCryptogram`/`checkCryptogram`; Crossword must produce a genuinely connected, checked grid containing all original authored clues, without dropping entries; connection and spiral activities use their existing layout engines. All candidates pass the app's unchanged `validateModule`.
+- **Review safeguards**: for verse and Important Idea modules that have no Story Note ID, `sourceLocations` retains the ODT page/paragraph provenance. Circle the Mistakes carries all six proposed corrections in `mistakeCorrections` metadata and explicitly requires author review. The lesson remains **unpublished** under `curriculum/review/`; the public catalog is still empty, pending teacher signoff and Scripture rights clearance.
+- **Printable QA**: `npm run sample:pr17f` generates two *complete* review booklets: `sample-pr17f-red-sea-scripture-puzzles.pdf` and `sample-pr17f-red-sea-meaning-and-memory.pdf`. Together they cover all eleven new module types in correctly sized regions. Tests verify preserved content, invalid-data diagnostics, real puzzle checkers, compatibility with unchanged recipes, and actual two-sheet vector PDFs.
+
 ## PR 17e — Convert word, matching, drawing and picture lesson activities (v0.16.19)
 
 - **Ten new lesson-to-activity adapters**: Draw a Picture, What Doesn't Belong?, Unscramble the Words, Checkboxes, Who Am I?, Match the Words, Word Search (Medium), Pixel Picture, Draw the Story, and Word Search (Large). The existing six core activity kinds remain unchanged. The Red Sea file supplies actual authored/story-derived data for all ten.

@@ -5,6 +5,7 @@ import {PDFDocument} from 'pdf-lib';
 import {
  convertLessonActivities,findLessonCandidate,
  WORD_VISUAL_LESSON_MODULE_IDS,CORE_LESSON_MODULE_IDS,
+ VERSE_SPECIALTY_LESSON_MODULE_IDS,
 } from '../src/lessonActivityConverter.ts';
 import {validateModule,matchRows,parsePairs,moduleForSize} from '../src/modules.ts';
 import {shuffledWordList,scramblePhrase} from '../src/smallModules.ts';
@@ -38,9 +39,10 @@ test('Exact Red Sea review file produces ten validated word/visual candidates pl
  assert.deepEqual(converted.diagnostics,[]);
  assert.equal(WORD_VISUAL_LESSON_MODULE_IDS.length,10);
  assert.equal(CORE_LESSON_MODULE_IDS.length,6);
- assert.equal(converted.candidates.length,23,'8 questions plus 15 individually prepared module kinds');
+ assert.equal(converted.candidates.length,34,'8 questions plus 26 individually prepared module kinds');
  assert.deepEqual(new Set(converted.candidates.map(c=>c.moduleId)),
-  new Set([...CORE_LESSON_MODULE_IDS,...WORD_VISUAL_LESSON_MODULE_IDS]));
+  new Set([...CORE_LESSON_MODULE_IDS,...WORD_VISUAL_LESSON_MODULE_IDS,
+   ...VERSE_SPECIALTY_LESSON_MODULE_IDS]));
  for(const [id,size] of Object.entries(expectedSizes)){
   const candidate=visual(id);
   assert.ok(candidate,'missing '+id);

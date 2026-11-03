@@ -1,6 +1,9 @@
 import {validateModule,type ActivityModule,type ModuleId} from './modules.ts';
 import {generateWordSearch} from './puzzleEngines.ts';
 import {generatePixelPicture} from './pixelPicture.ts';
+import {parseVerse,verseBank,verseScrambles} from './storyVerseModules.ts';
+import {generateCryptogram,checkCryptogram} from './cryptograms.ts';
+import {generateCrossword,checkCrossword,connectPositions,spiralWritingPoints} from './specialtyModules.ts';
 
 /**
  * PR 17b: pure adapter from the versioned editorial lesson data to existing
@@ -35,6 +38,22 @@ type LessonDrawPrompt=Referenced&{prompt:string};
 type LessonWhoAmI=Referenced&{clue:string;answer:string};
 type LessonUnscramble=Referenced&{answers:string[]};
 type LessonPixelPicture=Referenced&{phrase:string;shapeId?:string};
+export type LessonSourceLocation={
+ filename:string;section:string;page:number;sourceParagraphIndex:number;details?:string;
+};
+type Located=Referenced&{source?:LessonSourceLocation};
+type LessonVerse=Located&{reference:string;verse:string};
+type LessonMarkedVerse=Located&{reference:string;markedVerse:string;sourceVerse:string};
+type LessonPhrase=Located&{phrase:string};
+type LessonMistake=Referenced&{incorrect:string;correction:string};
+type LessonCircleMistakes=Located&{
+ paragraph:string;mistakeCount:number;mistakes:LessonMistake[];
+};
+type LessonCrosswordEntry=Located&{answer:string;clue:string};
+export type LessonMistakeCorrection={
+ incorrect:string;correction:string;sourceIds:string[];
+};
+
 
 export type LessonActivityData={
  schemaVersion:number;
@@ -48,6 +67,10 @@ export type LessonActivityData={
  facts:LessonFact[];
  storyNotes?:{id:string;order:number;cleanText:string}[];
  vocabulary?:{entries?:{term:string;sourceIds?:string[]}[]};
+ lessonDetails?:{
+  memoryVerse?:{reference:string;text:string;source?:LessonSourceLocation};
+  bigIdeas?:{text:string;source?:LessonSourceLocation}[];
+ };
  preparedActivities:{
   storyOrder?:StoryOrderItem[];
   finishStory?:FinishStoryItem;
@@ -65,6 +88,17 @@ export type LessonActivityData={
   pixelPicture?:LessonPixelPicture;
   drawStory?:LessonDrawPrompt[];
   wordSearch?:LessonWordBank;
+  firstLetters?:LessonVerse;
+  finishVerse?:LessonMarkedVerse;
+  unscrambleVerse?:LessonMarkedVerse;
+  circleMistakes?:LessonCircleMistakes;
+  bigIdeaCryptogram?:LessonPhrase;
+  upsideDownVerse?:LessonVerse;
+  connectBigIdea?:LessonPhrase;
+  verseCryptogram?:LessonVerse;
+  crossword?:LessonCrosswordEntry[];
+  spiralVerse?:LessonVerse;
+  connectVerse?:LessonVerse;
  };
 };
 export type CoreLessonModuleId=
@@ -81,12 +115,26 @@ export const WORD_VISUAL_LESSON_MODULE_IDS:readonly WordVisualLessonModuleId[]=[
  'draw-picture','odd-words','unscramble-words','checkboxes','who-am-i',
  'match-words','medium-word-search','pixel-picture','draw-story','word-search',
 ];
-export type LessonModuleId=CoreLessonModuleId|WordVisualLessonModuleId;
+/** Eleven verse and specialty data adapters, completing all 27 module kinds. */
+export type VerseSpecialtyLessonModuleId=
+ 'first-letters'|'finish-verse'|'unscramble-verse'|'circle-mistakes'|
+ 'big-idea-cryptogram'|'upside-down-verse'|'connect-big-idea'|
+ 'verse-cryptogram'|'crossword'|'spiral-verse'|'connect-verse';
+export const VERSE_SPECIALTY_LESSON_MODULE_IDS:readonly VerseSpecialtyLessonModuleId[]=[
+ 'first-letters','finish-verse','unscramble-verse','circle-mistakes',
+ 'big-idea-cryptogram','upside-down-verse','connect-big-idea',
+ 'verse-cryptogram','crossword','spiral-verse','connect-verse',
+];
+export type LessonModuleId=CoreLessonModuleId|WordVisualLessonModuleId|VerseSpecialtyLessonModuleId;
 export type ConvertedActivity={
  moduleId:LessonModuleId;
  contentId:string;
  module:ActivityModule;
  sourceIds:string[];
+ /** Original ODT source location when the module does not cite a Story Note ID. */
+ sourceLocations?:LessonSourceLocation[];
+ /** Teacher correction key for deliberately false Circle the Mistakes prose. */
+ mistakeCorrections?:LessonMistakeCorrection[];
  origin:'source'|'adapted'|'suggested';
  teacherReviewRequired:boolean;
  /** The small True/False module does not store an answer; retain it here. */
@@ -148,7 +196,8 @@ export function convertLessonActivities(
   diagnostics.push({moduleId,contentId,message});
  }
  function add(moduleId:LessonModuleId,contentId:string,module:ActivityModule,
-  sourceIds:string[],origin:string|undefined,review:boolean,answerKey?:boolean){
+  sourceIds:string[],origin:string|undefined,review:boolean,answerKey?:boolean,
+  editorial?:{sourceLocations?:LessonSourceLocation[];mistakeCorrections?:LessonMistakeCorrection[]}){
   const errors=validateModule(module);
   if(errors.length){
    issue(moduleId,contentId,errors.join(' '));return;
@@ -158,6 +207,12 @@ export function convertLessonActivities(
    origin:normalizedOrigin(origin),
    teacherReviewRequired:review||origin==='suggested',
    ...(answerKey!==undefined?{answerKey}:{}),
+   ...(editorial?.sourceLocations?.length?{
+    sourceLocations:editorial.sourceLocations.map(x=>({...x})),
+   }:{}),
+   ...(editorial?.mistakeCorrections?.length?{
+    mistakeCorrections:editorial.mistakeCorrections.map(x=>({...x,sourceIds:[...x.sourceIds]})),
+   }:{}),
   });
  }
  function verifiedFact(item:FactSelection,moduleId:CoreLessonModuleId,contentId:string){
@@ -349,6 +404,198 @@ export function convertLessonActivities(
   items.some(item=>item.teacherReviewRequired===true));
  }else issue('draw-story','draw-story','No prepared drawing sequence.');
  addSearch('word-search','word-search',prepared.wordSearch);
+
+ // PR17f: Scripture and Important Idea are canonical lesson content. Refuse
+ // drifted references or verse wording rather than silently editing theology.
+ const memory=lesson.lessonDetails?.memoryVerse;
+ const importantIdea=lesson.lessonDetails?.bigIdeas?.[0];
+ const location=(item:Located|undefined,fallback:LessonSourceLocation|undefined)=>
+  item?.source??fallback;
+ const editorialLocation=(item:Located|undefined,fallback:LessonSourceLocation|undefined)=>
+  location(item,fallback)?{sourceLocations:[location(item,fallback)!]}:{};
+ function consistentVerse(id:VerseSpecialtyLessonModuleId,entry:LessonVerse|LessonMarkedVerse){
+  if(memory&&(entry.reference!==memory.reference||
+     ('verse' in entry?entry.verse:entry.sourceVerse)!==memory.text)){
+   issue(id,id,'Verse text or reference differs from the canonical lesson memory verse.');
+   return false;
+  }
+  return true;
+ }
+ function consistentIdea(id:VerseSpecialtyLessonModuleId,entry:LessonPhrase){
+  if(importantIdea&&entry.phrase!==importantIdea.text){
+   issue(id,id,'Prepared phrase differs from the source-authored Important Idea.');
+   return false;
+  }
+  return true;
+ }
+ function addPrepared(id:VerseSpecialtyLessonModuleId,module:ActivityModule,
+  entry:Located,fallback:LessonSourceLocation|undefined){
+  add(id,id,module,refs(entry.sourceIds),entry.origin,
+   entry.teacherReviewRequired===true,undefined,editorialLocation(entry,fallback));
+ }
+ if(prepared.firstLetters){
+  const item=prepared.firstLetters;
+  if(consistentVerse('first-letters',item))
+   addPrepared('first-letters',{type:'first-letters',reference:item.reference,verse:item.verse},
+    item,memory?.source);
+ }else issue('first-letters','first-letters','No prepared First Letters verse.');
+ function addMarkedVerse(id:'finish-verse'|'unscramble-verse',
+  item:LessonMarkedVerse|undefined){
+  if(!item){issue(id,id,'No prepared marked verse.');return;}
+  const parsed=parseVerse(item.markedVerse);
+  const reconstructed=item.markedVerse.replace(/\[([^\[\]]*)\]/gu,'$1');
+  if(parsed.malformed||reconstructed!==item.sourceVerse){
+   issue(id,id,'Bracketed verse does not recover the exact source verse, or brackets are malformed.');
+   return;
+  }
+  if(!consistentVerse(id,item))return;
+  const module=id==='finish-verse'
+   ?{type:'finish-verse' as const,reference:item.reference,verse:item.markedVerse,seed}
+   :{type:'unscramble-verse' as const,reference:item.reference,verse:item.markedVerse,seed};
+  const errors=validateModule(module);
+  if(errors.length){issue(id,id,errors.join(' '));return;}
+  // Use the unchanged rendering engine's answer-bank and letter scrambler.
+  const answers=module.type==='finish-verse'?verseBank(module):verseScrambles(module);
+  if(answers.length!==parsed.answers.length){
+   issue(id,id,'Verse puzzle answer count does not match its marked blanks.');return;
+  }
+  addPrepared(id,module,item,memory?.source);
+ }
+ addMarkedVerse('finish-verse',prepared.finishVerse);
+ addMarkedVerse('unscramble-verse',prepared.unscrambleVerse);
+ if(prepared.circleMistakes){
+  const item=prepared.circleMistakes;
+  const mistakes=item.mistakes??[];
+  const unique=new Set(mistakes.map(m=>m.incorrect.toLocaleLowerCase()));
+  if(!Number.isInteger(item.mistakeCount)||
+   item.mistakeCount!==mistakes.length||
+   unique.size!==mistakes.length||
+   mistakes.some(m=>!m.incorrect?.trim()||!m.correction?.trim()||
+    !item.paragraph.includes(m.incorrect))){
+   issue('circle-mistakes','circle-mistakes',
+    'Mistake count, unique incorrect phrases, corrections and paragraph must agree.');
+  }else{
+   add('circle-mistakes','circle-mistakes',{
+    type:'circle-mistakes',text:item.paragraph,count:item.mistakeCount,
+   },refs(item.sourceIds,...mistakes.map(m=>m.sourceIds)),
+    item.origin,true,undefined,{
+     ...editorialLocation(item,undefined),
+     mistakeCorrections:mistakes.map(m=>({
+      incorrect:m.incorrect,correction:m.correction,sourceIds:refs(m.sourceIds),
+     })),
+    });
+  }
+ }else issue('circle-mistakes','circle-mistakes','No prepared mistake-filled paragraph.');
+ if(prepared.bigIdeaCryptogram){
+  const item=prepared.bigIdeaCryptogram;
+  const id='big-idea-cryptogram';
+  if(consistentIdea(id,item)){
+   const module={type:'big-idea-cryptogram' as const,idea:item.phrase,seed};
+   const errors=validateModule(module);
+   if(errors.length)issue(id,id,errors.join(' '));
+   else try{
+    if(!checkCryptogram(generateCryptogram(module)))
+     throw Error('Generated cryptogram failed its solution check.');
+    addPrepared(id,module,item,importantIdea?.source);
+   }catch(error){
+    issue(id,id,'Cryptogram generation failed: '+
+     (error instanceof Error?error.message:String(error)));
+   }
+  }
+ }else issue('big-idea-cryptogram','big-idea-cryptogram','No prepared Big Idea cryptogram.');
+ if(prepared.upsideDownVerse){
+  const item=prepared.upsideDownVerse;
+  if(consistentVerse('upside-down-verse',item))
+   addPrepared('upside-down-verse',{
+    type:'upside-down-verse',reference:item.reference,verse:item.verse,
+   },item,memory?.source);
+ }else issue('upside-down-verse','upside-down-verse','No prepared upside-down verse.');
+ if(prepared.connectBigIdea){
+  const item=prepared.connectBigIdea,id='connect-big-idea';
+  if(consistentIdea(id,item)){
+   const module={type:'connect-big-idea' as const,idea:item.phrase,seed};
+   const errors=validateModule(module);
+   if(errors.length)issue(id,id,errors.join(' '));
+   else try{
+    if(connectPositions(module).length<4)throw Error('Connection puzzle contains too few positions.');
+    addPrepared(id,module,item,importantIdea?.source);
+   }catch(error){
+    issue(id,id,'Connection puzzle generation failed: '+
+     (error instanceof Error?error.message:String(error)));
+   }
+  }
+ }else issue('connect-big-idea','connect-big-idea','No prepared Important Idea connection.');
+ if(prepared.verseCryptogram){
+  const item=prepared.verseCryptogram,id='verse-cryptogram';
+  if(consistentVerse(id,item)){
+   const module={type:'verse-cryptogram' as const,reference:item.reference,verse:item.verse,seed};
+   const errors=validateModule(module);
+   if(errors.length)issue(id,id,errors.join(' '));
+   else try{
+    if(!checkCryptogram(generateCryptogram(module)))
+     throw Error('Generated cryptogram failed its solution check.');
+    addPrepared(id,module,item,memory?.source);
+   }catch(error){
+    issue(id,id,'Cryptogram generation failed: '+
+     (error instanceof Error?error.message:String(error)));
+   }
+  }
+ }else issue('verse-cryptogram','verse-cryptogram','No prepared verse cryptogram.');
+ if(prepared.crossword?.length){
+  const items=prepared.crossword,id='crossword';
+  if(items.some(item=>item.answer.includes(',')||item.clue.includes(','))){
+   issue(id,id,'Crossword answers and clues must not contain commas.');
+  }else{
+   const module={type:'crossword' as const,entries:items.map(x=>x.answer+', '+x.clue).join('\n'),seed};
+   const errors=validateModule(module);
+   if(errors.length)issue(id,id,errors.join(' '));
+   else try{
+    const grid=generateCrossword(module);
+    if(!checkCrossword(grid)||grid.placements.length!==items.length)
+     throw Error('Crossword solution does not contain all source clue entries.');
+    add(id,id,module,refs(...items.map(x=>x.sourceIds)),
+     items.some(x=>x.origin==='suggested')?'suggested':'adapted',
+     items.some(x=>x.teacherReviewRequired===true),undefined,{
+      sourceLocations:items.flatMap(x=>x.source?[x.source]:[]),
+     });
+   }catch(error){
+    issue(id,id,'Crossword grid cannot be generated with all authored entries: '+
+     (error instanceof Error?error.message:String(error)));
+   }
+  }
+ }else issue('crossword','crossword','No prepared Crossword answers and clues.');
+ if(prepared.spiralVerse){
+  const item=prepared.spiralVerse,id='spiral-verse';
+  if(consistentVerse(id,item)){
+   const module={type:'spiral-verse' as const,reference:item.reference,verse:item.verse};
+   const errors=validateModule(module);
+   if(errors.length)issue(id,id,errors.join(' '));
+   else try{
+    if(spiralWritingPoints(module.verse,60).length!==60)
+     throw Error('Spiral handwriting path generation failed.');
+    addPrepared(id,module,item,memory?.source);
+   }catch(error){
+    issue(id,id,'Spiral verse generation failed: '+
+     (error instanceof Error?error.message:String(error)));
+   }
+  }
+ }else issue('spiral-verse','spiral-verse','No prepared Spiral Verse.');
+ if(prepared.connectVerse){
+  const item=prepared.connectVerse,id='connect-verse';
+  if(consistentVerse(id,item)){
+   const module={type:'connect-verse' as const,verse:item.verse,seed};
+   const errors=validateModule(module);
+   if(errors.length)issue(id,id,errors.join(' '));
+   else try{
+    if(connectPositions(module).length<4)
+     throw Error('Verse connection puzzle contains too few words.');
+    addPrepared(id,module,item,memory?.source);
+   }catch(error){
+    issue(id,id,'Verse connection puzzle failed: '+
+     (error instanceof Error?error.message:String(error)));
+   }
+  }
+ }else issue('connect-verse','connect-verse','No prepared Connect Verse.');
  return result;
 }
 /** Select an individual candidate by exact type and content ID. */
