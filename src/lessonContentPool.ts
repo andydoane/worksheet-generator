@@ -137,8 +137,8 @@ export function lessonContentPool(lesson:LessonActivityData,seed=1):LessonConten
  for(const group of wordSources){
   const list=group.source;
   if(!list)continue;
-  const correct=group.type==='odd-words'?list.related:list.correct;
-  const incorrect=group.type==='odd-words'?list.unrelated:list.incorrect;
+  const correct='related' in list?list.related:list.correct;
+  const incorrect='unrelated' in list?list.unrelated:list.incorrect;
   const approvedRelated=distinct([
    ...correct,...(data.vocabulary?.entries??[])
     .filter(x=>x.scope!=='application').map(x=>x.term),
