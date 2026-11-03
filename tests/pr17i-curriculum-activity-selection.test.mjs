@@ -170,7 +170,9 @@ test('Normal editor wires the approved selector without importing unreviewed cur
  ]);
  assert.match(app,/chooseActivityForDraft\(type,draft,activeKey,PUBLIC_LESSONS\)/u);
  assert.match(app,/buildYourOwnLessonDraft\(entry\)/u);
- assert.match(app,/if\(activeModule&&!window\.confirm\(/u);
+ assert.match(app,/isActivityCustomized\(draft,activeKey,PUBLIC_LESSONS\)/u);
+ assert.match(app,/canRecreateApprovedActivity\(draft,activeKey,PUBLIC_LESSONS\)/u);
+ assert.match(app,/if\(\(hasEditedContent\|\|cannotRecreate\|\|borderWillBeLost\)&&!window\.confirm\(/u);
  assert.match(app,/const modules=\{\.\.\.previous\.modules\}/u);
  assert.match(app,/onBuildOwn=\{choosePublishedBuildOwn\}/u);
  assert.match(welcome,/Build My Own Worksheet/u);
