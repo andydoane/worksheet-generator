@@ -1,5 +1,15 @@
 # Worksheet Studio
 
+## PR 17j — Smarter activity switching (v0.16.24)
+
+**Approved lesson worksheet activities now switch instantly when unchanged.** A confirmation appears only when the teacher has edited the module, regenerated its puzzle seed, chosen a border that would be discarded, or the original activity cannot safely be recreated from the current approved catalog. The rest of the booklet is untouched.
+
+For new worksheets the browser-local draft saves an optional `activityDefaults` snapshot for each newly placed module, preserving the **exact** original content (including which multiple-choice question the recipe chose). These snapshots are not part of the PDF and cannot change the approved lesson. Existing saved worksheets without snapshots are still supported: unchanged approved modules are recognized via real converter candidates, whereas uncertain or edited content is protected by a warning. If the teacher reverts an edit to the original value, the unnecessary warning disappears.
+
+For an approved-lesson worksheet, **Restore Original Activity** restores that one region's initial approved content without altering any other activities, borders, or the master curriculum. It asks before overwriting actual edits. If the teacher's lesson has been withdrawn, the restore action does not republish or invent material.
+
+**Manual smoke test:** Choose Red Sea → Fun & Games. On the cover, switch the untouched Sort the Story to Story Order (no popup), then back. Change a word or regenerate a seed and try switching again (confirmation appears); Cancel keeps the edit. Click Restore Original Activity, confirm once, and switch again without a popup. Try a saved/reopened booklet and Finish/Unscramble the Verse to verify BSB bracket choices and all other regions remain unchanged. An untouched activity with a customized border that would be discarded still asks.
+
 ## PR 17i — Curriculum-aware module selection (v0.16.23)
 
 - **Choose a Bible Story** now offers **Build My Own Worksheet** alongside the existing *Remember the Story* and *Fun & Games* styles. Build My Own starts with the selected approved story's title, Scripture reference, Important Idea, and **BSB memory verse**, but leaves activity regions empty for teacher choices.
