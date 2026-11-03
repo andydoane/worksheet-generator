@@ -59,6 +59,7 @@ test('Real current Red Sea review lesson is schema-valid and all 27 types pass a
 test('Missing or invalid prepared modules are clearly reported instead of implicitly considered ready',()=>{
  const changed=structuredClone(lesson);
  delete changed.preparedActivities.finishVerse;
+ changed.moduleReadiness.find(x=>x.moduleId==='finish-verse').status='ADAPTATION NEEDED';
  changed.preparedActivities.circleMistakes.mistakeCount=3;
  const audit=assessCurriculumLesson(changed,schema,{source:'review'});
  assert.ok(audit.schemaErrors.length===0,'optional prepared modules may be absent');
@@ -167,7 +168,7 @@ test('A future approved data-only lesson is accepted only when schema, actual pu
   const written=JSON.parse(await readFile(join(root,'artifacts','curriculum-readiness-report.json'),'utf8'));
   assert.equal(written.lessons[0].eligibleForPublication,true);
   const markdown=await readFile(join(root,'artifacts','curriculum-readiness-report.md'),'utf8');
-  assert.match(markdown,/Scripture rights evidence: cleared/u);
+  assert.match(markdown,/Scripture rights evidence:\*\* cleared/u);
   await writeFile(manifestFile,JSON.stringify({schemaVersion:1,lessons:{}}));
   const withoutRights=await inspectCurriculumLibrary({root});
   assert.equal(withoutRights.passed,false);
