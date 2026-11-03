@@ -14,8 +14,8 @@ test('letter-size bifold margins and safe area agree', () => {
   assert.ok(near(BOOKLET.page.height, BOOKLET.sheet.height));
 });
 
-test('all six layouts exactly tile a 2 by 3 grid without gaps or overlaps', () => {
-  assert.equal(LAYOUTS.length, 6);
+test('all seven layouts exactly tile a 2 by 3 grid without gaps or overlaps', () => {
+  assert.equal(LAYOUTS.length, 7);
   for (const layout of LAYOUTS) {
     const occupied = Array.from({ length: 3 }, () => [0, 0]);
     const ids = new Set();
