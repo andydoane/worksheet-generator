@@ -121,7 +121,7 @@ test('Edited details, modules, layouts, or borders protect the single browser dr
  assert.equal(needsLessonSwitchConfirmation(unavailable,entries),true);
 });
 
-test('All story and preset transitions reconstruct only approved lesson content',()=>{
+test('All story and preset transitions reconstruct only approved lesson content',async()=>{
  const initial=createLessonWorksheet(entry,'preset-1');
  const untouched=JSON.stringify(initial);
  for(const presetId of WORKSHEET_RECIPES.map(x=>x.id)){
