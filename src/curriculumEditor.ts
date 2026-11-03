@@ -106,3 +106,66 @@ export function chooseActivityForDraft(
   contentId:candidate.contentId,
   message:'Pre-filled from '+entry.lesson.lessonDetails.title+'. You can edit this activity without changing the curriculum or any other booklet activity.'};
 }
+
+
+/**
+ * Compare actual printable/editable payloads, not a "has been clicked" flag.
+ * A teacher who changes something and changes it back hasn't lost work.
+ * Key order from migrations and object spreads must not create false edits.
+ */
+export function sameActivityContent(a:unknown,b:unknown):boolean{
+ if(Object.is(a,b))return true;
+ if(a===null||b===null||typeof a!=='object'||typeof b!=='object')return false;
+ if(Array.isArray(a)||Array.isArray(b)){
+  return Array.isArray(a)&&Array.isArray(b)&&a.length===b.length&&
+   a.every((value,i)=>sameActivityContent(value,b[i]));
+ }
+ const left=a as Record<string,unknown>,right=b as Record<string,unknown>;
+ const keys=Object.keys(left);
+ return keys.length===Object.keys(right).length&&
+  keys.every(key=>Object.prototype.hasOwnProperty.call(right,key)&&
+   sameActivityContent(left[key],right[key]));
+}
+
+/**
+ * Legacy drafts have no saved starting snapshot. Exact matches to an approved
+ * candidate (including any of the multiple-choice alternatives) or to the
+ * original scratch defaults are unchanged. Unknown values are treated as
+ * edited; we'd rather show a confirmation than discard teacher work.
+ */
+export function isActivityCustomized(
+ draft:StoredDraft,slot:string,entries:readonly PublicLessonEntry[],
+):boolean{
+ const current=draft.modules[slot];
+ if(!current)return false;
+ const savedStart=draft.activityDefaults?.[slot];
+ if(savedStart)return savedStart.type!==current.type||
+  !sameActivityContent(current,savedStart);
+ if(sameActivityContent(current,createManualModule(current.type,draft))||
+    sameActivityContent(current,blankModule(current.type)))return false;
+ const entry=approvedLessonForDraft(draft,entries);
+ if(!entry)return true;
+ const matching=convertLessonActivities(entry.lesson,{seed:1}).candidates.some(
+  candidate=>candidate.moduleId===current.type&&sameActivityContent(candidate.module,current));
+ return !matching;
+}
+
+/**
+ * Restore the exact activity instance chosen initially, preserving which
+ * multiple-choice question the recipe selected. For an older saved draft
+ * without a snapshot, use an approved candidate (never review-only data).
+ */
+export function originalApprovedActivity(
+ draft:StoredDraft,slot:string,entries:readonly PublicLessonEntry[],
+):ActivityModule|undefined{
+ const current=draft.modules[slot];
+ if(!current||!approvedLessonForDraft(draft,entries))return undefined;
+ const initial=draft.activityDefaults?.[slot];
+ if(initial&&initial.type===current.type)return structuredClone(initial);
+ const entry=approvedLessonForDraft(draft,entries)!;
+ const existing=convertLessonActivities(entry.lesson,{seed:1}).candidates.find(
+  candidate=>candidate.moduleId===current.type&&sameActivityContent(candidate.module,current));
+ if(existing)return structuredClone(existing.module);
+ const picked=chooseActivityForDraft(current.type,draft,slot,entries);
+ return picked.source==='lesson'?structuredClone(picked.module):undefined;
+}
