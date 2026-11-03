@@ -1,28 +1,99 @@
 import type {LessonWorksheetSource} from './worksheetRecipes.ts';
 
 /**
- * Public lessons require TWO explicit gates:
- * - editor-approved curriculum with signed and resolved review flags
- * - cleared distribution rights for the exact Scripture translation excerpt.
+ * PR 17g: public catalog is a DATA registry, not an editorial shortcut.
  *
- * No review-stage JSON is imported here. PR17d launches with an empty public
- * catalog until the curriculum author signs off; later PRs can register only
- * reviewed, rights-cleared lesson files. Do not add curriculum/review imports.
+ * Vite bundles ONLY curriculum/approved/*.lesson.json. It never glob-imports
+ * curriculum/review/. Each added file is accompanied by a separately recorded
+ * Scripture-rights decision; CI validates schema, all puzzle engines and both
+ * printable recipes before deployment. No curriculum is published by this PR.
  */
+export type ScriptureRightsEvidence={
+ status:'cleared';
+ /** Human-readable permission/public-domain/quotation-policy basis. */
+ basis:string;
+ reviewedBy:string;
+ /** YYYY-MM-DD; recorded approval, not an inferred date. */
+ reviewedOn:string;
+};
+export type CurriculumRightsManifest={
+ schemaVersion:1;
+ lessons:Record<string,ScriptureRightsEvidence>;
+};
 export type PublicLessonEntry={
  lesson:LessonWorksheetSource;
  scriptureDistributionCleared:true;
+ rightsEvidence:ScriptureRightsEvidence;
 };
-const PUBLIC_ENTRIES:readonly PublicLessonEntry[]=[];
 
+const hasText=(value:unknown):value is string=>
+ typeof value==='string'&&value.trim().length>0;
+export function isRightsEvidence(value:unknown):value is ScriptureRightsEvidence{
+ if(value===null||typeof value!=='object')return false;
+ const record=value as Record<string,unknown>;
+ return record.status==='cleared'&&hasText(record.basis)&&
+  hasText(record.reviewedBy)&&
+  typeof record.reviewedOn==='string'&&
+  /^\d{4}-\d{2}-\d{2}$/u.test(record.reviewedOn)&&
+  Number.isFinite(Date.parse(record.reviewedOn))&&
+  new Date(record.reviewedOn).toISOString().startsWith(record.reviewedOn);
+}
 export function approvedForPublic(entry:PublicLessonEntry):boolean{
- const {lesson}=entry,pub=lesson.publication;
- if(entry.scriptureDistributionCleared!==true||lesson.schemaVersion!==1||
-  pub?.status!=='approved'||pub.approved!==true||
-  !pub.teacherSignoff?.reviewer?.trim()||!pub.teacherSignoff.date?.trim())return false;
- const resolved=new Set(pub.resolvedReviewFlagIds??[]);
- return (lesson.reviewFlags??[]).filter(flag=>flag.type==='teacher-approval')
+ if(!entry||entry.scriptureDistributionCleared!==true||
+  !isRightsEvidence(entry.rightsEvidence))return false;
+ const {lesson}=entry;
+ if(!lesson||lesson.schemaVersion!==1)return false;
+ const pub=lesson.publication;
+ if(pub?.status!=='approved'||pub.approved!==true||
+  !hasText(pub.teacherSignoff?.reviewer)||
+  !hasText(pub.teacherSignoff?.date))return false;
+ if(!Array.isArray(lesson.reviewFlags)||!Array.isArray(pub.resolvedReviewFlagIds))return false;
+ const resolved=new Set(pub.resolvedReviewFlagIds);
+ return lesson.reviewFlags.filter(flag=>flag.type==='teacher-approval')
   .every(flag=>resolved.has(flag.id));
 }
 
-export const PUBLIC_LESSONS:readonly PublicLessonEntry[]=PUBLIC_ENTRIES.filter(approvedForPublic);
+/**
+ * Pure catalog assembly can be exercised in Node and in the browser. Requiring
+ * an exact slug filename and independent permission evidence prevents a file
+ * with a plausible title or a single flipped approved flag from going public.
+ *
+ * CI does deeper full-schema, engine, recipe and manifest validation. This
+ * runtime check is a second fail-closed defense, not a substitute for CI.
+ */
+export function assemblePublicLessonCatalog(
+ files:Record<string,unknown>,manifest:unknown,
+):readonly PublicLessonEntry[]{
+ if(!manifest||typeof manifest!=='object')return [];
+ const m=manifest as Partial<CurriculumRightsManifest>;
+ if(m.schemaVersion!==1||!m.lessons||typeof m.lessons!=='object'||
+  Array.isArray(m.lessons))return [];
+ const result:PublicLessonEntry[]=[];
+ const seen=new Set<string>();
+ for(const [path,data] of Object.entries(files).sort(([a],[b])=>a.localeCompare(b))){
+  const basename=path.match(/\/([a-z0-9]+(?:-[a-z0-9]+)*)\.lesson\.json$/u)?.[1];
+  if(!basename||!data||typeof data!=='object'||Array.isArray(data))continue;
+  const lesson=data as LessonWorksheetSource;
+  if(lesson.id!==basename||seen.has(basename))continue;
+  seen.add(basename);
+  const rights=m.lessons[basename];
+  const entry={
+   lesson,scriptureDistributionCleared:true as const,rightsEvidence:rights,
+  };
+  if(approvedForPublic(entry))result.push(entry);
+ }
+ return result;
+}
+
+// The glob is expanded at build time by Vite. Node-based regression tests do
+// not provide import.meta.glob and intentionally see an empty built-in catalog.
+const lessonFiles:Record<string,unknown>=
+ typeof import.meta.glob==='function'
+  ?import.meta.glob('../curriculum/approved/*.lesson.json',{eager:true,import:'default'})
+  :{};
+const rightsFiles:Record<string,unknown>=
+ typeof import.meta.glob==='function'
+  ?import.meta.glob('../curriculum/approved/rights-manifest.json',{eager:true,import:'default'})
+  :{};
+export const PUBLIC_LESSONS:readonly PublicLessonEntry[]=
+ assemblePublicLessonCatalog(lessonFiles,Object.values(rightsFiles)[0]);
