@@ -50,6 +50,7 @@ type Draft = {
   modules: ModuleAssignments;
   activityBorders: ActivityBorders;
   curriculumLessonId?:string;
+  worksheetPresetId?:'preset-1'|'preset-2'|'preset-3'|'build-own';
   activityDefaults?:ModuleAssignments;
 };
 
