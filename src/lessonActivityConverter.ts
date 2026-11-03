@@ -443,7 +443,7 @@ export function convertLessonActivities(
   item:LessonMarkedVerse|undefined){
   if(!item){issue(id,id,'No prepared marked verse.');return;}
   const parsed=parseVerse(item.markedVerse);
-  const reconstructed=item.markedVerse.replace(/\\[([^\\[\\]]*)\\]/gu,'$1');
+  const reconstructed=item.markedVerse.replace(/\[([^\[\]]*)\]/gu,'$1');
   if(parsed.malformed||reconstructed!==item.sourceVerse){
    issue(id,id,'Bracketed verse does not recover the exact source verse, or brackets are malformed.');
    return;
@@ -544,7 +544,7 @@ export function convertLessonActivities(
   if(items.some(item=>item.answer.includes(',')||item.clue.includes(','))){
    issue(id,id,'Crossword answers and clues must not contain commas.');
   }else{
-   const module={type:id,entries:items.map(x=>x.answer+', '+x.clue).join('\\n'),seed};
+   const module={type:id,entries:items.map(x=>x.answer+', '+x.clue).join('\n'),seed};
    const errors=validateModule(module);
    if(errors.length)issue(id,id,errors.join(' '));
    else try{
