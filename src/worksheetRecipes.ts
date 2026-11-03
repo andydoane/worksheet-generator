@@ -202,7 +202,10 @@ export function buildWorksheetRecipe(
   layouts:{...recipe.layouts},
   modules,
   // Review-only sample data never becomes a public lesson context.
-  ...(options.purpose==='published'?{curriculumLessonId:lesson.id}:{}),
+  ...(options.purpose==='published'?{
+   curriculumLessonId:lesson.id,
+   activityDefaults:structuredClone(modules),
+  }:{}),
  };
  return {
   lessonId:lesson.id,recipeId:id,draft,selections,openSlots,
