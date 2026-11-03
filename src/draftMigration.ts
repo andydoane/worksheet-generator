@@ -13,6 +13,8 @@ export type StoredDraft={
  activityBorders:ActivityBorders;
  /** Optional context for approved, lesson-prepopulated activities. Older drafts omit it. */
  curriculumLessonId?:string;
+ /** Initial module content by region: used only to protect meaningful teacher edits. */
+ activityDefaults?:ModuleAssignments;
 };
 export const EMPTY_DRAFT:StoredDraft={
  title:'',scripture:'',coverBorder:'none',bigIdea:'',
@@ -26,6 +28,12 @@ export function migrateDraftValue(data:unknown):StoredDraft{
   ?value.layouts as Record<number,unknown>:{};
  const text=(key:'title'|'scripture'|'bigIdea'|'verseReference'|'verseText')=>
   typeof value[key]==='string'?value[key] as string:'';
+ const modules=readAssignments(value.modules);
+ // Ignore stale or mismatched defaults rather than using them to permit
+ // deletion of a different activity after restoring an old saved draft.
+ const candidateDefaults=readAssignments(value.activityDefaults);
+ const activityDefaults:ModuleAssignments=Object.fromEntries(Object.entries(candidateDefaults)
+  .filter(([slot,initial])=>modules[slot]?.type===initial.type));
  return {
   title:text('title'),scripture:text('scripture'),
   coverBorder:isCoverBorderId(value.coverBorder)?value.coverBorder:'none',
@@ -35,11 +43,12 @@ export function migrateDraftValue(data:unknown):StoredDraft{
    3:isLayoutId(savedLayouts[3])?savedLayouts[3]:DEFAULT_LAYOUTS[3],
    4:isLayoutId(savedLayouts[4])?savedLayouts[4]:DEFAULT_LAYOUTS[4],
   },
-  modules:readAssignments(value.modules),
+  modules,
   activityBorders:readActivityBorders(value.activityBorders),
   ...(typeof value.curriculumLessonId==='string'&&
     /^[a-z0-9]+(?:-[a-z0-9]+)*$/u.test(value.curriculumLessonId)&&
     value.curriculumLessonId.length<=120
     ?{curriculumLessonId:value.curriculumLessonId}:{}),
+  ...(Object.keys(activityDefaults).length?{activityDefaults}:{}),
  };
 }
