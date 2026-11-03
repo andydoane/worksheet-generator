@@ -45,6 +45,7 @@ export function buildYourOwnLessonDraft(entry:PublicLessonEntry):StoredDraft{
  return {
   ...structuredClone(EMPTY_DRAFT),
   curriculumLessonId:lesson.id,
+  worksheetPresetId:'build-own',
   title,scripture,
   bigIdea:details.bigIdeas?.[0]?.text??'',
   verseReference:details.memoryVerse?.reference??'',

@@ -1590,7 +1590,7 @@
   "drawingPrompts": [
     {
       "id": "dp-01",
-      "prompt": "Draw the Israelites following a tall pillar of cloud toward the Red Sea.",
+      "prompt": "the Israelites following a tall pillar of cloud toward the Red Sea",
       "origin": "adapted",
       "sourceIds": [
         "sn-01"
@@ -1598,7 +1598,7 @@
     },
     {
       "id": "dp-02",
-      "prompt": "Draw Pharaoh sending soldiers and chariots to chase the Israelites.",
+      "prompt": "Pharaoh sending soldiers and chariots to chase the Israelites",
       "origin": "adapted",
       "sourceIds": [
         "sn-02"
@@ -1606,7 +1606,7 @@
     },
     {
       "id": "dp-03",
-      "prompt": "Draw the Israelites between the Red Sea and the approaching army.",
+      "prompt": "the Israelites between the Red Sea and the approaching army",
       "origin": "adapted",
       "sourceIds": [
         "sn-03"
@@ -1614,7 +1614,7 @@
     },
     {
       "id": "dp-04",
-      "prompt": "Draw Moses holding up his staff beside the Red Sea.",
+      "prompt": "Moses holding up his staff beside the Red Sea",
       "origin": "adapted",
       "sourceIds": [
         "sn-04"
@@ -1622,7 +1622,7 @@
     },
     {
       "id": "dp-05",
-      "prompt": "Draw the Israelites walking on dry ground between two walls of water.",
+      "prompt": "the Israelites walking on dry ground between two walls of water",
       "origin": "adapted",
       "sourceIds": [
         "sn-05"
@@ -1630,7 +1630,7 @@
     },
     {
       "id": "dp-06",
-      "prompt": "Draw the Egyptian chariot wheels stuck as the soldiers panic.",
+      "prompt": "the Egyptian chariot wheels stuck as the soldiers panic",
       "origin": "adapted",
       "sourceIds": [
         "sn-06"
@@ -1638,7 +1638,7 @@
     },
     {
       "id": "dp-07",
-      "prompt": "Draw the sea rushing back over the Egyptian army.",
+      "prompt": "the sea rushing back over the Egyptian army",
       "origin": "adapted",
       "sourceIds": [
         "sn-07"
@@ -1716,7 +1716,7 @@
   ],
   "preparedActivities": {
     "drawPicture": {
-      "prompt": "Draw the Israelites walking on dry ground between two walls of water.",
+      "prompt": "the Israelites walking on dry ground between two walls of water",
       "origin": "adapted",
       "sourceIds": [
         "sn-05"
@@ -2349,42 +2349,42 @@
     ],
     "drawStory": [
       {
-        "prompt": "Draw the Israelites following a tall pillar of cloud toward the Red Sea.",
+        "prompt": "the Israelites following a tall pillar of cloud toward the Red Sea",
         "origin": "adapted",
         "sourceIds": [
           "sn-01"
         ]
       },
       {
-        "prompt": "Draw Pharaoh sending soldiers and chariots to chase the Israelites.",
+        "prompt": "Pharaoh sending soldiers and chariots to chase the Israelites",
         "origin": "adapted",
         "sourceIds": [
           "sn-02"
         ]
       },
       {
-        "prompt": "Draw the Israelites between the Red Sea and the approaching army.",
+        "prompt": "the Israelites between the Red Sea and the approaching army",
         "origin": "adapted",
         "sourceIds": [
           "sn-03"
         ]
       },
       {
-        "prompt": "Draw the Israelites walking on dry ground between two walls of water.",
+        "prompt": "the Israelites walking on dry ground between two walls of water",
         "origin": "adapted",
         "sourceIds": [
           "sn-05"
         ]
       },
       {
-        "prompt": "Draw the Egyptian chariot wheels stuck as the soldiers panic.",
+        "prompt": "the Egyptian chariot wheels stuck as the soldiers panic",
         "origin": "adapted",
         "sourceIds": [
           "sn-06"
         ]
       },
       {
-        "prompt": "Draw the sea rushing back over the Egyptian army.",
+        "prompt": "the sea rushing back over the Egyptian army",
         "origin": "adapted",
         "sourceIds": [
           "sn-07"

@@ -279,6 +279,7 @@ export function buildWorksheetRecipe(
   // Review-only sample data never becomes a public lesson context.
   ...(options.purpose==='published'?{
    curriculumLessonId:lesson.id,
+   ...(!isLegacy?{worksheetPresetId:id as 'preset-1'|'preset-2'|'preset-3'}:{}),
    activityDefaults:structuredClone(modules),
   }:{}),
  };

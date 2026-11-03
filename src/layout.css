@@ -580,3 +580,23 @@
 .cipher-key-row .cipher-key-cell {max-width:none;min-width:0;overflow:hidden;}
 .cipher-key-row .cipher-key-symbol .cipher-glyph {width:min(18px,calc(100% - 2px));height:auto;aspect-ratio:1;}
 .cipher-key-row .cipher-key-letter {font-size:clamp(6px,1.7cqw,11px);min-width:0;}
+
+/* Quick story and numbered preset switching belongs only to lesson-based worksheets. */
+.lesson-switcher {display:grid;gap:10px;border:1px solid #cbded0;background:#f4faf5;border-radius:12px;padding:14px;margin-bottom:15px;}
+.lesson-switcher-heading {display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;}
+.lesson-switcher-heading strong {color:#305847;font-size:14px;}
+.lesson-switcher-heading small {color:#638575;font-size:12px;}
+.lesson-switcher-actions {display:flex;gap:9px;flex-wrap:wrap;}
+.lesson-switcher-actions button {background:#fff;border:1px solid #a5cbb3;border-radius:8px;color:#257257;font:700 12px Nunito,sans-serif;padding:9px 12px;cursor:pointer;}
+.lesson-switcher-actions button:disabled {opacity:.5;cursor:not-allowed;}
+.lesson-switcher-picker {background:white;border:1px solid #bad4c2;border-radius:10px;padding:12px;display:grid;gap:10px;}
+.lesson-switcher-picker-header {display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:13px;color:#305847;}
+.lesson-switcher-picker-header button {background:transparent;border:0;text-decoration:underline;color:#397962;cursor:pointer;}
+.lesson-switcher-options {display:grid;gap:7px;max-height:280px;overflow:auto;}
+.lesson-switcher-options button {display:grid;gap:3px;text-align:left;border:1px solid #d1e2d5;background:#fbfdfa;border-radius:8px;padding:10px;color:#305847;cursor:pointer;}
+.lesson-switcher-options button:hover:not(:disabled),.lesson-switcher-options button:focus-visible {border-color:#6ba881;background:#edf8ef;}
+.lesson-switcher-options button:disabled {opacity:.55;cursor:default;}
+.lesson-switcher-options strong {font-size:12px;}
+.lesson-switcher-options small {font-size:11px;color:#627c6e;line-height:1.45;}
+.lesson-switcher-hint {color:#6f8275;font-size:11px;line-height:1.5;}
+.lesson-switcher-error {color:#8d3b2b;background:#fff2ed;border:1px solid #dfb5a9;padding:10px;border-radius:6px;font-size:12px;}

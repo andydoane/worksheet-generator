@@ -13,6 +13,8 @@ export type StoredDraft={
  activityBorders:ActivityBorders;
  /** Optional context for approved, lesson-prepopulated activities. Older drafts omit it. */
  curriculumLessonId?:string;
+ /** Selected numbered preset or Build My Own; optional on historical drafts. */
+ worksheetPresetId?:'preset-1'|'preset-2'|'preset-3'|'build-own';
  /** Initial module content by region: used only to protect meaningful teacher edits. */
  activityDefaults?:ModuleAssignments;
 };
@@ -49,6 +51,9 @@ export function migrateDraftValue(data:unknown):StoredDraft{
     /^[a-z0-9]+(?:-[a-z0-9]+)*$/u.test(value.curriculumLessonId)&&
     value.curriculumLessonId.length<=120
     ?{curriculumLessonId:value.curriculumLessonId}:{}),
+  ...(typeof value.curriculumLessonId==='string'&&
+    ['preset-1','preset-2','preset-3','build-own'].includes(String(value.worksheetPresetId))
+    ?{worksheetPresetId:value.worksheetPresetId as 'preset-1'|'preset-2'|'preset-3'|'build-own'}:{}),
   ...(Object.keys(activityDefaults).length?{activityDefaults}:{}),
  };
 }
