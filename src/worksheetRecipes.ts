@@ -92,7 +92,7 @@ export type WorksheetRecipeResult={
  reviewOnly:true;
  requiresTeacherReview:boolean;
 };
-export type RecipeOptions={purpose:'editorial-review';seed?:number};
+export type RecipeOptions={purpose:'editorial-review'|'published';seed?:number};
 
 function recipeForId(id:RecipeId):WorksheetRecipe{
  const recipe=WORKSHEET_RECIPES.find(item=>item.id===id);
@@ -107,9 +107,10 @@ function regionsFor(recipe:WorksheetRecipe){
 /**
  * Build a previewable, printable draft using existing module payloads.
  *
- * The user must explicitly request editorial-review mode; PR 17c has NO public
- * catalog/lesson picker. A future PR will add teacher-approved publication
- * gates separately, never infer approval from a successful draft build.
+ * The user must explicitly request editorial-review mode, or a published lesson
+ * with verified curriculum teacher signoff. The separate public catalog also
+ * checks Scripture distribution clearance before exposing any story.
+ * A successful draft build alone never implies editorial approval.
  *
  * Throws (instead of making a partial booklet) when a required candidate,
  * module validation, recipe slot, or other constraint cannot be satisfied.
@@ -118,7 +119,9 @@ function regionsFor(recipe:WorksheetRecipe){
 export function buildWorksheetRecipe(
  lesson:LessonWorksheetSource,id:RecipeId,options:RecipeOptions,
 ):WorksheetRecipeResult{
- if(options?.purpose!=='editorial-review'){
+ if(options?.purpose!=='editorial-review'&&!(
+  options?.purpose==='published'&&convertLessonActivities(lesson).publicApproved
+ )){
   throw Error('Worksheet recipes are for editorial review only until the approved public catalog exists.');
  }
  const seed=options.seed??1;
