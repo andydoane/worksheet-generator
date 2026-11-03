@@ -78,8 +78,8 @@ export function validateLesson(lesson,schema){
  notes.forEach((note,i)=>{
   if(note.order!==i+1)errors.push('storyNotes['+i+']: order must be sequential starting at 1');
   if(note.origin!=='source')errors.push('storyNotes['+i+']: original notes must be source-authored');
-  if(typeof note.originalText==='string'&&typeof note.cleanText==='string'&&
-   !note.originalText.trim()||!note.cleanText?.trim())errors.push('storyNotes['+i+']: missing source or cleaned text');
+  if(typeof note.originalText!=='string'||!note.originalText.trim()||
+   typeof note.cleanText!=='string'||!note.cleanText.trim())errors.push('storyNotes['+i+']: missing source or cleaned text');
  });
  const sourceNames=new Set((lesson.sourceFiles??[]).map(x=>x.filename));
  function checkRefs(item,path){
