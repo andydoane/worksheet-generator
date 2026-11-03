@@ -148,7 +148,8 @@ test('Quick switch controls appear only for lesson-backed editor drafts and neve
  assert.match(app,/Change Story/u);
  assert.match(app,/Choose a Preset/u);
  assert.match(app,/setLessonPicker\(null\)/u);
- assert.match(app,/setNextStoryId\(null\)/u);
+ assert.doesNotMatch(app,/setNextStoryId|story-presets/u);
+ assert.match(app,/onClick=\{\(\)=>chooseQuickStory\(entry\)\}/u);
  assert.match(app,/needsLessonSwitchConfirmation\(draft,PUBLIC_LESSONS\)/u);
  assert.match(app,/createLessonWorksheet\(entry,startId\)/u);
  assert.match(app,/startWorksheet\(next,true\)/u);
