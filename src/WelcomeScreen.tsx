@@ -89,7 +89,7 @@ export default function WelcomeScreen({
       :<StoryPicker stories={stories} variant="welcome"
        onSelect={entry=>{
         setSelectedId(entry.lesson.id);setError(null);setScreen('recipes');
-       }}/>
+       }}/>}
     </>}
     {screen==='recipes'&&selected&&<>
      <button type="button" className="welcome-back" onClick={goBack}>‹ Back to Bible Stories</button>
