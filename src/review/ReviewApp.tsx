@@ -3,6 +3,8 @@ import type {ChangeEvent} from 'react';
 import {parseBsbText,getBsbPassage,wordSpans,clipToWords,markSelectedWords,suggestBlankWords,type BsbIndex,type Passage} from './bsb.ts';
 import {applyBsbVerse,chooseSolveCodePhrase,createApprovedLesson,editAt,listReviewTasks,normalizeLegacySmallDrawingScenes,originalMemoryVerseTranslation,solveCodeChoices,useMatchingStoryOrderCaptions,type Lesson,type ReviewTask} from './model.ts';
 import {validateModule,MODULES} from '../modules.ts';
+import {MatchingPrintPreview} from '../MediumPrintPreview.tsx';
+import {addMatchingPair,editMatchingPair,matchingPairIssues,moveMatchingPair,removeMatchingPair} from './matchingWords.ts';
 import {cryptogramLetters} from '../cryptograms.ts';
 import {buildReviewPreflight,PREPARED_ACTIVITY_KEYS,reviewIssueTarget,type ReviewPreflight} from './preflight.ts';
 import './review.css';
@@ -83,7 +85,8 @@ export default function ReviewApp(){
  },[preflight,tasks]);
  const active=[...tasks,...diagnosticTasks].find(t=>t.id===selectedId)??
   tasks.find(t=>!reviewed.includes(t.id))??tasks[0]??diagnosticTasks[0];
- const activeModuleId=active?.id.startsWith('module:')?active.id.slice('module:'.length):null;
+ const activeModuleId=active?.id.startsWith('module:')?active.id.slice('module:'.length):
+  active?.id==='match-words'?'match-words':null;
  const activePreparedKey=activeModuleId?PREPARED_ACTIVITY_KEYS[activeModuleId as keyof typeof PREPARED_ACTIVITY_KEYS]:undefined;
  useEffect(()=>{
   if(!lesson||!activePreparedKey)return;
@@ -175,6 +178,24 @@ export default function ReviewApp(){
   const next=structuredClone(lesson);
   next.preparedActivities[key][field]=value.split(/\r?\n/u).map(x=>x.trim()).filter(Boolean);
   setLesson(next);setPreflight(null);setReviewed(prev=>prev.filter(x=>x!==active?.id));
+ }
+ function changeMatching(action:()=>Lesson){
+  if(!lesson)return;
+  try{
+   const next=action();
+   setLesson(next);
+   setModuleEditorText(JSON.stringify(next.preparedActivities?.matchWords??[],null,2));
+   setPreflight(null);
+   setReviewed(previous=>previous.filter(id=>id!=='match-words'));
+   setError('');
+  }catch(e){setError(String((e as Error).message??e));}
+ }
+ function deleteMatching(index:number){
+  if(!lesson)return;
+  const pair=lesson.preparedActivities?.matchWords?.[index];
+  if(!window.confirm('Remove matching pair '+(index+1)+
+   (pair?.left?' ('+pair.left+')':'')+'? You can restore it from an exported review session.'))return;
+  changeMatching(()=>removeMatchingPair(lesson,index));
  }
  function updateDrawingCopy(mode:'small'|'large'){
   if(!lesson)return;
@@ -297,6 +318,14 @@ export default function ReviewApp(){
  }
  const mcIndex=active?.id.startsWith('mc:')?lesson?.preparedActivities?.multipleChoice?.findIndex((x:any)=>'mc:'+x.id===active.id):-1;
  const factIndex=active?.id.startsWith('fact:')?lesson?.facts?.findIndex((x:any)=>'fact:'+x.id===active.id):-1;
+ const matchingPairs=Array.isArray(lesson?.preparedActivities?.matchWords)?
+  lesson.preparedActivities.matchWords:[];
+ const matchingIssues=matchingPairIssues(matchingPairs);
+ const matchingPrintable=matchingIssues.length===0?{
+  type:'match-words' as const,
+  pairs:matchingPairs.map((pair:any)=>pair.left+','+pair.right).join('\n'),
+  seed:1,
+ }:null;
  return <main className="review-shell">
   <header className="review-header">
    <div><a href={import.meta.env.BASE_URL} className="review-brand">Worksheet Studio</a><span className="review-tag">Curriculum Review</span></div>
@@ -409,6 +438,76 @@ export default function ReviewApp(){
           onChange={e=>change(['preparedActivities','drawStory',i,'prompt'],e.target.value)}/></label>
         <SourceContext lesson={lesson} ids={item.sourceIds??[]}/>
        </div>)}
+      </div>}
+      {active.id==='match-words'&&<div id="review-field-match-words" tabIndex={-1} className="review-fields">
+       <div className="review-note">
+        <h3>Correct matching pairs · {matchingPairs.length} of 6</h3>
+        <p>Keep each word beside its correct match. Each side must contain a unique entry of 22 characters or fewer. The printable worksheet shuffles the right-hand answers automatically.</p>
+        <p>Edits to existing wording keep the pair's ID and source links but are marked as suggested text requiring your review.</p>
+       </div>
+       {!Array.isArray(lesson.preparedActivities?.matchWords)&&
+        <p className="review-warning">The stored matching data is not a list. Use the Advanced activity JSON section below to replace it with an array before editing the pairs.</p>}
+       {matchingIssues.length>0&&<div className="review-warning" role="status">
+        <strong>Fix these matching-pair issues:</strong>
+        <ul>{matchingIssues.map((item,i)=><li key={i}>{item.message}</li>)}</ul>
+       </div>}
+       <div className="review-match-rows">
+        {matchingPairs.map((pair:any,i:number)=><div className="review-match-row" key={pair.id??i} role="group" aria-label={'Matching pair '+(i+1)}>
+         <div className="review-match-heading">
+          <strong>Pair {i+1}</strong>
+          <small>{pair.id??'No pair ID'} · {pair.origin==='suggested'?'Suggested / needs teacher review':pair.origin??'Origin not recorded'}</small>
+         </div>
+         <div className="review-pair">
+          <label>Left word or phrase
+           <input id={'review-match-'+i+'-left'} value={pair.left??''}
+            aria-invalid={matchingIssues.some(issue=>issue.index===i&&issue.field==='left')}
+            aria-describedby={matchingIssues.some(issue=>issue.index===i)?'review-match-'+i+'-errors':undefined}
+            onChange={e=>changeMatching(()=>editMatchingPair(lesson,i,'left',e.target.value))}/>
+           <small>{String(pair.left??'').trim().length}/22 characters</small>
+          </label>
+          <label>Correct match
+           <input id={'review-match-'+i+'-right'} value={pair.right??''}
+            aria-invalid={matchingIssues.some(issue=>issue.index===i&&issue.field==='right')}
+            aria-describedby={matchingIssues.some(issue=>issue.index===i)?'review-match-'+i+'-errors':undefined}
+            onChange={e=>changeMatching(()=>editMatchingPair(lesson,i,'right',e.target.value))}/>
+           <small>{String(pair.right??'').trim().length}/22 characters</small>
+          </label>
+         </div>
+         {matchingIssues.some(issue=>issue.index===i)&&
+          <ul id={'review-match-'+i+'-errors'} className="review-match-errors">
+           {matchingIssues.filter(issue=>issue.index===i).map((issue,j)=>
+            <li key={j}>{issue.message}</li>)}
+          </ul>}
+         <div className="review-match-actions">
+          <button type="button" className="review-secondary" disabled={i===0}
+           aria-label={'Move pair '+(i+1)+' up'}
+           onClick={()=>changeMatching(()=>moveMatchingPair(lesson,i,-1))}>Move up</button>
+          <button type="button" className="review-secondary" disabled={i===matchingPairs.length-1}
+           aria-label={'Move pair '+(i+1)+' down'}
+           onClick={()=>changeMatching(()=>moveMatchingPair(lesson,i,1))}>Move down</button>
+          <button type="button" className="review-secondary" disabled={matchingPairs.length<=3}
+           aria-label={'Remove pair '+(i+1)}
+           onClick={()=>deleteMatching(i)}>Remove pair</button>
+         </div>
+         <SourceContext lesson={lesson} ids={pair.sourceIds??[]}/>
+        </div>)}
+       </div>
+       <button type="button" className="review-secondary" disabled={matchingPairs.length>=6}
+        onClick={()=>changeMatching(()=>addMatchingPair(lesson))}>+ Add matching pair</button>
+       <div className="review-match-preview">
+        <h3>Print-matched worksheet preview</h3>
+        <p>Correct pairs are shown together above for editing; the printable right column is shuffled.</p>
+        {matchingPrintable?<MatchingPrintPreview module={matchingPrintable}/>:
+         <p className="review-warning">Complete the 3–6 valid pairs to see their printable arrangement.</p>}
+       </div>
+       <details className="review-match-advanced">
+        <summary>Advanced: edit this activity's JSON only</summary>
+        <p>Use only when the paired fields cannot express the edit you need. Apply updates here, then rerun preflight.</p>
+        <label>Matching pairs JSON
+         <textarea id="review-module-json" rows={12} spellCheck={false}
+          value={moduleEditorText} onChange={e=>setModuleEditorText(e.target.value)}/></label>
+        <button type="button" className="review-secondary" onClick={applyModuleJson}>Apply matching-pair JSON</button>
+       </details>
       </div>}
       {active.id==='circle-mistakes'&&<div className="review-fields">
        <label>Deliberately incorrect paragraph<textarea id="review-field-circle-mistakes" rows={7} value={lesson.preparedActivities.circleMistakes.paragraph}
@@ -531,7 +630,7 @@ export default function ReviewApp(){
        </div>
        <p className="review-source">After applying the BSB excerpt, review it here and then mark this section reviewed. No ESV wording will be retained in the exported prepared verse fields.</p>
       </div>}
-      {activeModuleId&&activePreparedKey&&<div className="review-fields">
+      {activeModuleId&&activePreparedKey&&active.id!=='match-words'&&<div className="review-fields">
        <div className="review-note">
         <h3>{MODULES.find(item=>item.id===activeModuleId)?.name??activeModuleId} · prepared activity</h3>
         <p>This activity does not yet have a dedicated visual editor. You can edit its isolated prepared-activity JSON below without changing the rest of the lesson. The schema and puzzle generator will check the result when you rerun preflight.</p>
