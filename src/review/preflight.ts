@@ -1,5 +1,6 @@
 import {MODULES,type ModuleId} from '../modules.ts';
 import {checkReviewContent,type Lesson} from './model.ts';
+import {repairDestinationForModule} from './repairRegistry.ts';
 import {
  buildWorksheetRecipe,WORKSHEET_RECIPES,RecipeContentConflictError,
  type LessonWorksheetSource,
@@ -57,11 +58,6 @@ const issue=(message:string,taskId:string,fieldId:string,moduleId?:ModuleId):Rev
  id:taskId+':'+message,label:moduleId?labelFor(moduleId):'Review content',
  message,taskId,fieldId,...(moduleId?{moduleId}:{}),
 });
-const verseIds=new Set([
- 'first-letters','finish-verse','unscramble-verse',
- 'upside-down-verse','verse-cryptogram','spiral-verse','connect-verse',
-]);
-
 /** Every converter diagnostic maps to a real Review Studio field. Activities
  * without a dedicated teacher-friendly form open the corresponding prepared
  * module in a focused advanced editor, never a nonfunctional error link.
@@ -101,27 +97,8 @@ export function reviewIssueTarget(message:string):ReviewIssue{
  const moduleName=message.match(/^([a-z][a-z-]*):/u)?.[1];
  if(moduleName&&moduleIds.has(moduleName)){
   const id=moduleName as ModuleId;
-  if(id==='big-idea-cryptogram')
-   return issue(message,'solve-code','review-field-solve-code',id);
-  if(id==='finish-story')
-   return issue(message,'finish-story','review-field-finish-story',id);
-  if(id==='circle-mistakes')
-   return issue(message,'circle-mistakes','review-field-circle-mistakes',id);
-  if(id==='draw-picture'||id==='draw-story')
-   return issue(message,'drawing-captions','review-field-drawing',id);
-  if(id==='odd-words')
-   return issue(message,'odd-words','review-field-odd-words',id);
-  if(id==='checkboxes')
-   return issue(message,'checkboxes','review-field-checkboxes',id);
-  if(id==='match-words')
-   return issue(message,'match-words','review-field-match-words',id);
-  if(id==='connect-big-idea')
-   return issue(message,'connect-phrase','review-field-connect-phrase',id);
-  if(id==='word-search'||id==='medium-word-search')
-   return issue(message,id,'review-field-'+id,id);
-  if(verseIds.has(id))
-   return issue(message,'bsb-verse','review-field-bsb',id);
-  return issue(message,'module:'+id,'review-module-json',id);
+  const destination=repairDestinationForModule(id);
+  return issue(message,destination.taskId,destination.fieldId,id);
  }
  return issue(message,'review-general','review-general-details');
 }
@@ -160,11 +137,11 @@ export function buildReviewPreflight(lesson:Lesson):ReviewPreflight{
    const target=reviewIssueTarget(message),id=target.moduleId;
    if(!id)return target;
    const record=lesson.preparedActivities?.[PREPARED_ACTIVITY_KEYS[id]];
-   // A dedicated review form cannot edit a module that has no prepared
-   // content yet. Send those cases to the isolated module-data editor.
-   if(['match-words','connect-big-idea','word-search','medium-word-search'].includes(id)||
-    record&&(!Array.isArray(record)||record.length>0))return target;
-   return {...target,taskId:'module:'+id,fieldId:'review-module-json'};
+   // Some visual editors can create missing records; other editors still
+   // require the isolated JSON form for completely absent prepared content.
+   const present=!!record&&(!Array.isArray(record)||record.length>0);
+   const route=repairDestinationForModule(id,present);
+   return {...target,taskId:route.taskId,fieldId:route.fieldId};
   }).concat(recipeIssues);
  return {convertedCount,totalCount:27,issues};
 }
