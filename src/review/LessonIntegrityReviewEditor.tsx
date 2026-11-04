@@ -23,7 +23,8 @@ export default function LessonIntegrityReviewEditor({lesson,mode,onChange,onErro
  const [filename,setFilename]=useState('');
  const [fileFormat,setFileFormat]=useState<'odt'|'odp'|'pdf'|'docx'|'pptx'>('odt');
  const [advancedKey,setAdvancedKey]=useState<(typeof editableKeys)[number]>('storyNotes');
- const [advancedText,setAdvancedText]=useState('');
+ const [advancedText,setAdvancedText]=useState(()=>
+  JSON.stringify(lesson.storyNotes??[],null,2));
  const issues=lessonIntegrityIssues(lesson).filter(item=>item.area===mode);
  const apply=(fn:()=>Lesson)=>{
   try{onChange(fn());onError('');}
