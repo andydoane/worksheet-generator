@@ -1,6 +1,6 @@
 import {validateModule} from '../modules.ts';
 import {validUnscramblePhrase} from '../smallModules.ts';
-import {generatePixelPicture,PIXEL_MAX_LENGTH,PIXEL_MIN_LENGTH} from '../pixelPicture.ts';
+import {generatePixelPicture,choosePixelShapeId,PIXEL_MAX_LENGTH,PIXEL_MIN_LENGTH} from '../pixelPicture.ts';
 import type {Lesson} from './model.ts';
 
 type SourceChoice={
@@ -19,7 +19,7 @@ function record(lesson:Lesson,key:'whoAmI'|'unscrambleWords'|'pixelPicture'|'fin
  const defaults={
   whoAmI:{clue:'',answer:'',sourceIds:[]},
   unscrambleWords:{answers:['',''],sourceIds:[]},
-  pixelPicture:{phrase:'',shapeId:'star',sourceIds:[]},
+  pixelPicture:{phrase:'',sourceIds:[]},
   finishStory:{markedParagraph:'',sourceIds:[]},
  };
  if(next.preparedActivities[key]===undefined)next.preparedActivities[key]=copy(defaults[key]);
@@ -99,11 +99,40 @@ export function unscrambleProblems(lesson:Lesson):string[]{
   problems.push('Choose two different answers for the worksheet.');
  return problems;
 }
+/** Existing curriculum can contain zero or one answers. Opening either field
+ * must repair that short list without discarding its existing answer.
+ * Longer lists need an explicit keep-two decision before overwriting data.
+ */
+export function repairUnscrambleAnswers(
+ lesson:Lesson,keep?:readonly [number,number],
+):Lesson{
+ const {next,item}=record(lesson,'unscrambleWords');
+ if(item.answers!==undefined&&!Array.isArray(item.answers))
+  throw Error('The answer list is not an array. Use the explicit reset control to replace it.');
+ const answers:Array<unknown>=item.answers??[];
+ if(answers.length>2){
+  if(!keep||keep[0]===keep[1]||keep.some(i=>!Number.isInteger(i)||i<0||i>=answers.length))
+   throw Error('Choose two different existing answers to keep; nothing was removed.');
+  item.answers=keep.map(i=>String(answers[i]??''));
+ }else item.answers=[String(answers[0]??''),String(answers[1]??'')];
+ item.sourceIds=[];flag(item);
+ return next;
+}
+export function resetMalformedUnscramble(lesson:Lesson):Lesson{
+ const {next,item}=record(lesson,'unscrambleWords');
+ if(Array.isArray(item.answers))
+  throw Error('Use the two-answer repair for a list of answers.');
+ item.answers=['',''];item.sourceIds=[];flag(item);
+ return next;
+}
 function editAnswers(lesson:Lesson,index:number,value:string,choice?:WordChoice):Lesson{
  if(index!==0&&index!==1)throw Error('Choose answer 1 or 2.');
- const {next,item}=record(lesson,'unscrambleWords');
- if(!Array.isArray(item.answers)||item.answers.length!==2)
-  throw Error('The two Unscramble answers are not an array. Use Advanced JSON to repair them.');
+ let next=copy(lesson);
+ let item=next.preparedActivities?.unscrambleWords;
+ if(!item||!Array.isArray(item.answers)||item.answers.length!==2){
+  next=repairUnscrambleAnswers(lesson);
+  item=next.preparedActivities.unscrambleWords;
+ }
  if(item.answers[index]===value&&!choice)return next;
  item.answers[index]=value;
  flag(item);
@@ -149,8 +178,9 @@ export function pixelPhraseChoices(lesson:Lesson):PixelPhraseChoice[]{
 }
 export function pixelProblems(lesson:Lesson):string[]{
  const item=lesson.preparedActivities?.pixelPicture;
- const module={type:'pixel-picture' as const,phrase:String(item?.phrase??''),
-  shapeId:String(item?.shapeId??'star'),seed:1};
+ const phrase=String(item?.phrase??'');
+ const module={type:'pixel-picture' as const,phrase,
+  shapeId:choosePixelShapeId(1,phrase),seed:1};
  const problems=validateModule(module);
  if(problems.length)return problems;
  try{generatePixelPicture(module);}
@@ -163,6 +193,7 @@ export function choosePixelPhrase(lesson:Lesson,id:string):Lesson{
  if(!choice)throw Error('Choose an existing valid lesson phrase.');
  const {next,item}=record(lesson,'pixelPicture');
  item.phrase=choice.text;item.origin=choice.origin??'adapted';
+ delete item.shapeId; // The generator owns picture selection, not curriculum.
  item.sourceIds=[...choice.sourceIds];item.teacherReviewRequired=choice.teacherReviewRequired;
  if(choice.source)item.source=copy(choice.source);
  else delete item.source;
@@ -171,15 +202,8 @@ export function choosePixelPhrase(lesson:Lesson,id:string):Lesson{
 export function editPixelPhrase(lesson:Lesson,value:string):Lesson{
  const {next,item}=record(lesson,'pixelPicture');
  if(item.phrase===value)return next;
- item.phrase=value;item.sourceIds=[];flag(item);
- return next;
-}
-export function editPixelShape(lesson:Lesson,shapeId:string):Lesson{
- const {next,item}=record(lesson,'pixelPicture');
- if(item.shapeId===shapeId)return next;
- item.shapeId=shapeId;
- // This changes picture art, not the wording/source of the phrase.
- item.teacherReviewRequired=true;
+ item.phrase=value;delete item.shapeId;
+ item.sourceIds=[];flag(item);
  return next;
 }
 export {PIXEL_MIN_LENGTH,PIXEL_MAX_LENGTH};
