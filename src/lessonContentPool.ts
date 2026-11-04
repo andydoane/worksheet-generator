@@ -227,18 +227,22 @@ export function choiceOverlap(choice:LessonContentChoice,used:ReadonlySet<string
 }
 export function chooseUnusedLessonContent(
  choices:readonly LessonContentChoice[],used:ReadonlySet<string>,
+ options:{preferFullBank?:boolean}={},
 ):{candidate:LessonContentChoice;reused:string[]}|undefined{
  if(!choices.length)return undefined;
  const scored=choices.map((candidate,i)=>({candidate,i,reused:choiceOverlap(candidate,used)}));
- // Never repeat a printed item while an unused alternative exists.
- // Among equally nonconflicting choices, favor the fullest valid activity:
- // the approved banks can contain 10 checkboxes/odd words, 6 matching pairs,
- // and 12 Large or 6 Medium word-search words. Preserve the original
- // authored choice for other module types and for equal-size ties.
+ // Nonrepetition always has priority over size. Numbered presets have one
+ // instance of each type, so fill its region with the largest approved bank.
+ // Build My Own may place the same kind of activity twice: retain smaller
+ // reusable groups there, leaving distinct words/pairs for another instance.
+ const type=choices[0].moduleId;
+ const splitFriendly=['odd-words','checkboxes','match-words'].includes(type);
  const fillFriendly=['odd-words','checkboxes','match-words',
-  'word-search','medium-word-search'].includes(choices[0].moduleId);
+  'word-search','medium-word-search'].includes(type);
+ const sizeOrder=options.preferFullBank&&fillFriendly?-1:
+  !options.preferFullBank&&splitFriendly?1:0;
  scored.sort((a,b)=>a.reused.length-b.reused.length||
-  (fillFriendly?b.candidate.claims.length-a.candidate.claims.length:0)||
+  sizeOrder*(a.candidate.claims.length-b.candidate.claims.length)||
   a.i-b.i);
  const best=scored[0];
  return {candidate:best.candidate,reused:best.reused};
