@@ -1,0 +1,3110 @@
+{
+  "schemaVersion": 1,
+  "schemaStatus": "review-draft; official curriculum validation and app generator tests pending",
+  "id": "ot-027-moses-and-the-burning-bush",
+  "curriculum": {
+    "series": "Old Testament",
+    "lessonNumber": 27
+  },
+  "lessonDetails": {
+    "title": "Moses and the Burning Bush",
+    "scripturePassages": [
+      "Exodus 2",
+      "Exodus 3",
+      "Exodus 4"
+    ],
+    "scriptureDisplay": "Exodus 2–4",
+    "bigIdeas": [
+      {
+        "text": "If God is on our side, we have nothing to fear.",
+        "origin": "adapted",
+        "source": {
+          "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+          "section": "Important Idea",
+          "page": 5,
+          "sourceParagraphIndex": 157,
+          "details": "Text capitalized for display; original all-caps-styled graphic shows this teaching."
+        }
+      }
+    ],
+    "memoryVerse": {
+      "reference": "Romans 8:31",
+      "translation": "BSB",
+      "text": "What then shall we say in response to these things? If God is for us, who can be against us?",
+      "isExcerpt": false,
+      "hasEllipses": false,
+      "requiresTextReview": false,
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 220,
+        "details": "Original lesson quotes ESV, while review-stage worksheet activities use the verified BSB text."
+      },
+      "alsoVerifiedAt": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Verse and Motions",
+        "page": 7,
+        "sourceParagraphIndex": 227
+      },
+      "originalTranslation": "BSB",
+      "bsbSource": {
+        "reference": "Romans 8:31",
+        "sourceUrl": "https://bereanbible.com/bsb.txt",
+        "publicDomainTerms": "https://berean.bible/terms.htm",
+        "startWord": 0,
+        "endWord": 19
+      }
+    }
+  },
+  "sourceFiles": [
+    {
+      "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+      "format": "odt",
+      "role": "primary teaching source",
+      "note": "ODT alone supplied; no ODP. ODT quotes Romans 8:31 in ESV; proposed worksheet verse is full BSB text pending teacher approval."
+    }
+  ],
+  "storyNotes": [
+    {
+      "id": "sn-01",
+      "order": 1,
+      "originalText": "After killing an Egyptian slave master, Moses RAN AWAY to Midian.",
+      "cleanText": "After killing an Egyptian who hurt an Israelite, Moses ran away to Midian.",
+      "emphasizedWords": [
+        "RAN",
+        "AWAY"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "STORY NOTE",
+        "page": 1,
+        "sourceParagraphIndex": 29
+      }
+    },
+    {
+      "id": "sn-02",
+      "order": 2,
+      "originalText": "Forty years later, God spoke to Moses from a burning BUSH.",
+      "cleanText": "Forty years later, God spoke to Moses from a bush that was on fire but did not burn up.",
+      "emphasizedWords": [
+        "BUSH"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "STORY NOTE",
+        "page": 2,
+        "sourceParagraphIndex": 46
+      }
+    },
+    {
+      "id": "sn-03",
+      "order": 3,
+      "originalText": "God said, \"I'm sending YOU to bring my people out of Egypt.\"",
+      "cleanText": "God told Moses that He was sending him to lead His people out of Egypt.",
+      "emphasizedWords": [
+        "YOU"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "STORY NOTE",
+        "page": 2,
+        "sourceParagraphIndex": 63
+      }
+    },
+    {
+      "id": "sn-04",
+      "order": 4,
+      "originalText": "Moses asked, \"How can someone like me do this?\" God promised to be WITH him.",
+      "cleanText": "Moses was worried about the job, but God promised to be with him.",
+      "emphasizedWords": [
+        "WITH"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "STORY NOTE",
+        "page": 3,
+        "sourceParagraphIndex": 76
+      }
+    },
+    {
+      "id": "sn-05",
+      "order": 5,
+      "originalText": "God said, \"My NAME is I Am. Tell the people, 'The God of Abraham, Isaac, and Jacob sent me.'\"",
+      "cleanText": "God told Moses His name was I Am and said He was the God of Abraham, Isaac, and Jacob.",
+      "emphasizedWords": [
+        "NAME"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "STORY NOTE",
+        "page": 3,
+        "sourceParagraphIndex": 94
+      }
+    },
+    {
+      "id": "sn-06",
+      "order": 6,
+      "originalText": "To help the people believe, God gave Moses three MIRACLE signs to do.",
+      "cleanText": "God gave Moses three miracles to help the people believe his message.",
+      "emphasizedWords": [
+        "MIRACLE"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "STORY NOTE",
+        "page": 4,
+        "sourceParagraphIndex": 115
+      }
+    },
+    {
+      "id": "sn-07",
+      "order": 7,
+      "originalText": "God said, \"Your BROTHER Aaron will speak for you.\" So Moses left for Egypt with his family.",
+      "cleanText": "God chose Moses’ brother Aaron to speak for him, and Moses left for Egypt with his family.",
+      "emphasizedWords": [
+        "BROTHER"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "STORY NOTE",
+        "page": 5,
+        "sourceParagraphIndex": 142
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q-01",
+      "question": "Do you remember why they would want to exit Egypt?",
+      "answer": "They were slaves.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "recap",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 9
+      }
+    },
+    {
+      "id": "q-02",
+      "question": "What were these plans?",
+      "answer": "He made them slaves; ordered the baby boys to be tossed into the river.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "recap",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 13
+      }
+    },
+    {
+      "id": "q-03",
+      "question": "Who can remind us what happened to him?",
+      "answer": "He was an Israelite; his mom floated him in a basket boat; Pharaoh’s daughter found him and adopted him.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "recap",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 17
+      }
+    },
+    {
+      "id": "q-04",
+      "question": "With no one looking, what did Moses do?",
+      "answer": "Killed the Egyptian.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Story teaching",
+        "page": 1,
+        "sourceParagraphIndex": 33
+      }
+    },
+    {
+      "id": "q-05",
+      "question": "Who discovered Moses’ secret?",
+      "answer": "Pharaoh.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Story teaching",
+        "page": 1,
+        "sourceParagraphIndex": 35
+      }
+    },
+    {
+      "id": "q-06",
+      "question": "What?",
+      "answer": "A bush that wouldn’t burn up.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Story teaching",
+        "page": 2,
+        "sourceParagraphIndex": 48
+      },
+      "notes": "Requires preceding source paragraph for context; not a stand-alone worksheet question.",
+      "standaloneReady": false
+    },
+    {
+      "id": "q-07",
+      "question": "Who spoke from inside the bush?",
+      "answer": "God.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Story teaching",
+        "page": 2,
+        "sourceParagraphIndex": 50
+      }
+    },
+    {
+      "id": "q-08",
+      "question": "What did God tell Moses to do?",
+      "answer": "Take off his sandals.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Story teaching",
+        "page": 2,
+        "sourceParagraphIndex": 52
+      }
+    },
+    {
+      "id": "q-09",
+      "question": "What job did God have for old Moses?",
+      "answer": "Bring the Israelites out of slavery in Egypt.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Story teaching",
+        "page": 2,
+        "sourceParagraphIndex": 65
+      }
+    },
+    {
+      "id": "q-10",
+      "question": "Sounds simple, right?",
+      "answer": "",
+      "kind": "rhetorical",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Story teaching",
+        "page": 2,
+        "sourceParagraphIndex": 67
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-11",
+      "question": "you know all those Israelites who work for you for free?",
+      "answer": "",
+      "kind": "rhetorical",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Story teaching",
+        "page": 3,
+        "sourceParagraphIndex": 71
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-12",
+      "question": "Does that sound like a simple job?",
+      "answer": "",
+      "kind": "rhetorical",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Story teaching",
+        "page": 3,
+        "sourceParagraphIndex": 71
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-13",
+      "question": "Why pick me for such a big job?",
+      "answer": "",
+      "kind": "quoted-dialogue",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Story teaching",
+        "page": 3,
+        "sourceParagraphIndex": 80
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-14",
+      "question": "What did God say to Moses’ question?",
+      "answer": "I will be with you.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Story teaching",
+        "page": 3,
+        "sourceParagraphIndex": 82
+      }
+    },
+    {
+      "id": "q-15",
+      "question": "What name should I give them?",
+      "answer": "",
+      "kind": "quoted-dialogue",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Story teaching",
+        "page": 3,
+        "sourceParagraphIndex": 96
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-16",
+      "question": "What name was it?",
+      "answer": "I Am.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Story teaching",
+        "page": 3,
+        "sourceParagraphIndex": 98
+      }
+    },
+    {
+      "id": "q-17",
+      "question": "Would the people know who that God was?",
+      "answer": "Yes.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Story teaching",
+        "page": 4,
+        "sourceParagraphIndex": 106
+      }
+    },
+    {
+      "id": "q-18",
+      "question": "What is Moses worried about here?",
+      "answer": "That they wouldn’t believe him.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Story teaching",
+        "page": 4,
+        "sourceParagraphIndex": 110
+      }
+    },
+    {
+      "id": "q-19",
+      "question": "What do you have in your hand?",
+      "answer": "A walking stick.",
+      "kind": "quoted-scripture",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Story teaching",
+        "page": 4,
+        "sourceParagraphIndex": 122
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-20",
+      "question": "What three miracles did God tell Moses to do to make the people believe his message?",
+      "answer": "Turn his staff into a snake; heal a disease on his hand; turn water into blood.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Story teaching",
+        "page": 4,
+        "sourceParagraphIndex": 133
+      }
+    },
+    {
+      "id": "q-21",
+      "question": "Why would these make the people believe?",
+      "answer": "Moses could only do such things if the all-powerful God was with him.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Story teaching",
+        "page": 4,
+        "sourceParagraphIndex": 135
+      }
+    },
+    {
+      "id": "q-22",
+      "question": "Who am I to speak to Pharaoh?",
+      "answer": "",
+      "kind": "quoted-dialogue",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Story teaching",
+        "page": 5,
+        "sourceParagraphIndex": 144
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-23",
+      "question": "What name should I say to them?",
+      "answer": "",
+      "kind": "quoted-dialogue",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Story teaching",
+        "page": 5,
+        "sourceParagraphIndex": 144
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-24",
+      "question": "What if they don’t believe me?",
+      "answer": "",
+      "kind": "quoted-dialogue",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Story teaching",
+        "page": 5,
+        "sourceParagraphIndex": 144
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-25",
+      "question": "How did God feel about that?",
+      "answer": "Angry.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Story teaching",
+        "page": 5,
+        "sourceParagraphIndex": 148
+      }
+    },
+    {
+      "id": "q-26",
+      "question": "What was it?",
+      "answer": "Moses’ brother Aaron was on his way; he would speak for Moses.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Story teaching",
+        "page": 5,
+        "sourceParagraphIndex": 150
+      },
+      "notes": "Requires preceding source paragraph for context; not a stand-alone worksheet question.",
+      "standaloneReady": false
+    },
+    {
+      "id": "q-27",
+      "question": "So how does the story of Moses and the burning bush teach us, strengthen us, encourage us, or give us hope?",
+      "answer": "",
+      "kind": "discussion",
+      "origin": "source",
+      "scope": "application",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Important Idea",
+        "page": 5,
+        "sourceParagraphIndex": 156
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-28",
+      "question": "In a God vs. Pharaoh battle, who would win?",
+      "answer": "God.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "application",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Important Idea",
+        "page": 5,
+        "sourceParagraphIndex": 170
+      }
+    },
+    {
+      "id": "q-29",
+      "question": "If Moses could have seen the wonders God was about to do, do you think he would have been so worried about his mission?",
+      "answer": "Of course not!",
+      "kind": "hypothetical",
+      "origin": "source",
+      "scope": "application",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Important Idea",
+        "page": 6,
+        "sourceParagraphIndex": 176
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-30",
+      "question": "How do I know that?",
+      "answer": "The answer is simple: Jesus!",
+      "kind": "rhetorical",
+      "origin": "source",
+      "scope": "application",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Important Idea",
+        "page": 6,
+        "sourceParagraphIndex": 186
+      },
+      "standaloneReady": false,
+      "notes": "Requires preceding source paragraph for context; not a stand-alone worksheet question."
+    },
+    {
+      "id": "q-31",
+      "question": "What did Jesus save us from?",
+      "answer": "Sin.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "application",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Important Idea",
+        "page": 6,
+        "sourceParagraphIndex": 190
+      }
+    },
+    {
+      "id": "q-32",
+      "question": "Would God give up his precious Son if he wasn’t on our side?",
+      "answer": "No way!",
+      "kind": "rhetorical",
+      "origin": "source",
+      "scope": "application",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Important Idea",
+        "page": 6,
+        "sourceParagraphIndex": 194
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-33",
+      "question": "How did Jesus show his mighty power in his battle with sin?",
+      "answer": "He rose from the dead.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "application",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Important Idea",
+        "page": 6,
+        "sourceParagraphIndex": 200
+      }
+    },
+    {
+      "id": "q-34",
+      "question": "Would God invite us to spend forever with him if he wasn’t on our side?",
+      "answer": "No way!",
+      "kind": "rhetorical",
+      "origin": "source",
+      "scope": "application",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Important Idea",
+        "page": 6,
+        "sourceParagraphIndex": 206
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-35",
+      "question": "Why?",
+      "answer": "Because God is on our side, too!",
+      "kind": "rhetorical",
+      "origin": "source",
+      "scope": "application",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Important Idea",
+        "page": 6,
+        "sourceParagraphIndex": 214
+      },
+      "standaloneReady": false,
+      "notes": "Requires preceding source paragraph for context; not a stand-alone worksheet question."
+    },
+    {
+      "id": "q-36",
+      "question": "What should we say about that?",
+      "answer": "",
+      "kind": "rhetorical",
+      "origin": "source",
+      "scope": "verse-explanation",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 223
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-37",
+      "question": "if God is on our side, who can defeat us?",
+      "answer": "",
+      "kind": "rhetorical",
+      "origin": "source",
+      "scope": "verse-explanation",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 223
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-38",
+      "question": "What do you think the answer to that question is?",
+      "answer": "No one.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "verse-explanation",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 223
+      }
+    },
+    {
+      "id": "q-39",
+      "question": "And how can we know he’s on our side?",
+      "answer": "Because he sent Jesus to save us!",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "verse-explanation",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 223
+      }
+    },
+    {
+      "id": "q-40",
+      "question": "What was so unusual about the bush Moses saw that made the old shepherd walk over and see what was going on?",
+      "answer": "It was on fire, but didn’t burn up.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review-introduction",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Review Activity",
+        "page": 9,
+        "sourceParagraphIndex": 250
+      }
+    },
+    {
+      "id": "q-41",
+      "question": "Why did Moses run away from Egypt?",
+      "answer": "He killed an Egyptian who beat an Israelite; Pharaoh wanted him dead",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Review Questions",
+        "page": 9,
+        "sourceParagraphIndex": 267
+      }
+    },
+    {
+      "id": "q-42",
+      "question": "Where did Moses run away to?",
+      "answer": "Midian",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Review Questions",
+        "page": 9,
+        "sourceParagraphIndex": 268
+      }
+    },
+    {
+      "id": "q-43",
+      "question": "What special thing did Moses see 40 years later?",
+      "answer": "A bush that wouldn’t burn up",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Review Questions",
+        "page": 9,
+        "sourceParagraphIndex": 269
+      }
+    },
+    {
+      "id": "q-44",
+      "question": "Who spoke to Moses from inside the burning bush?",
+      "answer": "God",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Review Questions",
+        "page": 9,
+        "sourceParagraphIndex": 270
+      }
+    },
+    {
+      "id": "q-45",
+      "question": "What message did God have for Moses?",
+      "answer": "I’m sending you to bring my people out of Egypt",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Review Questions",
+        "page": 9,
+        "sourceParagraphIndex": 271
+      }
+    },
+    {
+      "id": "q-46",
+      "question": "What names did God use for himself?",
+      "answer": "I Am, The Lord, The God of Abraham, Isaac, and Jacob",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Review Questions",
+        "page": 9,
+        "sourceParagraphIndex": 272
+      }
+    },
+    {
+      "id": "q-47",
+      "question": "What three miracles did God tell Moses to do in front of the people?",
+      "answer": "Turn his staff into a snake, heal a disease on his hand, turn water into blood",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Review Questions",
+        "page": 9,
+        "sourceParagraphIndex": 273
+      }
+    },
+    {
+      "id": "q-48",
+      "question": "Why did Moses want God to send someone else?",
+      "answer": "He wasn’t a good speaker",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Review Questions",
+        "page": 9,
+        "sourceParagraphIndex": 274
+      }
+    },
+    {
+      "id": "q-49",
+      "question": "Who did God pick to speak for Moses?",
+      "answer": "His brother, Aaron",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 275
+      }
+    },
+    {
+      "id": "q-50",
+      "question": "In the end, what did Moses do?",
+      "answer": "Took his family to Egypt",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 276
+      }
+    }
+  ],
+  "facts": [
+    {
+      "id": "tf-01",
+      "statement": "Moses ran away to Midian after Pharaoh learned what he had done.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-02",
+      "statement": "Pharaoh told Moses to stay in Egypt after he killed the Egyptian.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-03",
+      "statement": "Moses was caring for sheep when he saw a burning bush.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-04",
+      "statement": "Moses poured water on the burning bush.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-02"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-05",
+      "statement": "God told Moses to take off his sandals on holy ground.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-06",
+      "statement": "Pharaoh spoke to Moses from the burning bush.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-02"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-07",
+      "statement": "God told Moses to lead the Israelites out of Egypt.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-08",
+      "statement": "God said Moses would have rescue the Israelites by himself.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-04"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-09",
+      "statement": "God told Moses His name was “I Am”.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-10",
+      "statement": "God told Moses to call Him Pharaoh.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-11",
+      "statement": "God gave Moses three miracle signs to help people believe.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-12",
+      "statement": "God told Moses his staff must never touch the ground.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-06"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-13",
+      "statement": "God chose Aaron to speak for Moses.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-14",
+      "statement": "Moses went to Egypt without his family.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    }
+  ],
+  "vocabulary": {
+    "related": [
+      "MOSES",
+      "AARON",
+      "MIDIAN",
+      "BUSH",
+      "FIRE",
+      "SANDALS",
+      "HOLY",
+      "SHEEP",
+      "PHARAOH",
+      "EGYPT",
+      "ISRAELITES",
+      "STAFF",
+      "SNAKE",
+      "COAT",
+      "HAND",
+      "NILE",
+      "BLOOD",
+      "MIRACLE",
+      "BROTHER",
+      "NAME",
+      "I AM",
+      "LORD",
+      "JETHRO",
+      "RESCUE",
+      "SHEPHERD",
+      "PROMISE",
+      "ABRAHAM",
+      "ISAAC",
+      "JACOB",
+      "FAMILY",
+      "FEAR"
+    ],
+    "unrelated": [
+      "ALTAR",
+      "HARP",
+      "VINEYARD",
+      "TOWER",
+      "TRUMPET",
+      "TEMPLE",
+      "GRAPES",
+      "CHARIOT"
+    ],
+    "entries": [
+      {
+        "id": "v-01",
+        "term": "MOSES",
+        "category": "person",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-02",
+        "term": "AARON",
+        "category": "person",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-03",
+        "term": "MIDIAN",
+        "category": "story-word",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-04",
+        "term": "BUSH",
+        "category": "story-word",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-05",
+        "term": "FIRE",
+        "category": "story-word",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-06",
+        "term": "SANDALS",
+        "category": "story-word",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-07",
+        "term": "HOLY",
+        "category": "story-word",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-08",
+        "term": "SHEEP",
+        "category": "story-word",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-09",
+        "term": "PHARAOH",
+        "category": "person",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-10",
+        "term": "EGYPT",
+        "category": "story-word",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-11",
+        "term": "ISRAELITES",
+        "category": "story-word",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-12",
+        "term": "STAFF",
+        "category": "story-word",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-13",
+        "term": "SNAKE",
+        "category": "story-word",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-14",
+        "term": "COAT",
+        "category": "story-word",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-15",
+        "term": "HAND",
+        "category": "story-word",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-16",
+        "term": "NILE",
+        "category": "story-word",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-17",
+        "term": "BLOOD",
+        "category": "story-word",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-18",
+        "term": "MIRACLE",
+        "category": "story-word",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-19",
+        "term": "BROTHER",
+        "category": "story-word",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-20",
+        "term": "NAME",
+        "category": "story-word",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-21",
+        "term": "I AM",
+        "category": "story-word",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-22",
+        "term": "LORD",
+        "category": "story-word",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-23",
+        "term": "JETHRO",
+        "category": "person",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-24",
+        "term": "RESCUE",
+        "category": "story-word",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-25",
+        "term": "SHEPHERD",
+        "category": "story-word",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-26",
+        "term": "PROMISE",
+        "category": "story-word",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-27",
+        "term": "ABRAHAM",
+        "category": "person",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-28",
+        "term": "ISAAC",
+        "category": "person",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-29",
+        "term": "JACOB",
+        "category": "person",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-30",
+        "term": "FAMILY",
+        "category": "story-word",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-31",
+        "term": "FEAR",
+        "category": "story-word",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-32",
+        "term": "ALTAR",
+        "category": "distractor",
+        "scope": "unrelated",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-33",
+        "term": "HARP",
+        "category": "distractor",
+        "scope": "unrelated",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-34",
+        "term": "VINEYARD",
+        "category": "distractor",
+        "scope": "unrelated",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-35",
+        "term": "TOWER",
+        "category": "distractor",
+        "scope": "unrelated",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-36",
+        "term": "TRUMPET",
+        "category": "distractor",
+        "scope": "unrelated",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-37",
+        "term": "TEMPLE",
+        "category": "distractor",
+        "scope": "unrelated",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-38",
+        "term": "GRAPES",
+        "category": "distractor",
+        "scope": "unrelated",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-39",
+        "term": "CHARIOT",
+        "category": "distractor",
+        "scope": "unrelated",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ]
+  },
+  "characters": [
+    {
+      "id": "ch-01",
+      "name": "Moses",
+      "origin": "source",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "clues": [
+        {
+          "text": "I saw a burning bush and was called by God to lead His people.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-02",
+            "sn-03"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch-02",
+      "name": "Aaron",
+      "origin": "source",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "clues": [
+        {
+          "text": "God chose me to speak for my brother Moses.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-07"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch-03",
+      "name": "Pharaoh",
+      "origin": "source",
+      "sourceIds": [
+        "sn-01",
+        "sn-03"
+      ],
+      "clues": [
+        {
+          "text": "I was the king of Egypt who wanted to kill Moses.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-01"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch-04",
+      "name": "Jethro",
+      "origin": "source",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Story teaching",
+        "page": 2,
+        "sourceParagraphIndex": 39
+      },
+      "clues": [
+        {
+          "text": "Moses took care of my sheep in Midian.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-02"
+          ]
+        }
+      ]
+    }
+  ],
+  "matchingPairs": [
+    {
+      "id": "mp-01",
+      "left": "Moses",
+      "right": "Shepherd",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ]
+    },
+    {
+      "id": "mp-02",
+      "left": "Aaron",
+      "right": "Brother",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ]
+    },
+    {
+      "id": "mp-03",
+      "left": "Pharaoh",
+      "right": "King",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    {
+      "id": "mp-04",
+      "left": "Midian",
+      "right": "Land",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    {
+      "id": "mp-05",
+      "left": "Sandals",
+      "right": "Shoes",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ]
+    },
+    {
+      "id": "mp-06",
+      "left": "Staff",
+      "right": "Stick",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ]
+    }
+  ],
+  "drawingPrompts": [
+    {
+      "id": "dp-01",
+      "prompt": "Moses staring at a burning bush that does not burn up",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ]
+    },
+    {
+      "id": "dp-02",
+      "prompt": "Moses taking off his sandals beside the burning bush",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ]
+    },
+    {
+      "id": "dp-03",
+      "prompt": "Moses watching his walking stick turn into a snake",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ]
+    },
+    {
+      "id": "dp-04",
+      "prompt": "Moses and his family traveling toward Egypt",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ]
+    }
+  ],
+  "keyPhrases": [
+    {
+      "id": "kp-01",
+      "text": "If God is on our side, we have nothing to fear.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Important Idea",
+        "page": 5,
+        "sourceParagraphIndex": 157
+      }
+    },
+    {
+      "id": "kp-02",
+      "text": "God promised to be with Moses.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ]
+    },
+    {
+      "id": "kp-03",
+      "text": "God sent Moses to rescue His people.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ]
+    },
+    {
+      "id": "kp-04",
+      "text": "The burning bush did not burn up.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ]
+    },
+    {
+      "id": "kp-05",
+      "text": "God gave Moses signs to help the people believe.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ]
+    },
+    {
+      "id": "kp-review-1",
+      "text": "God promised to be with Moses when he was afraid.",
+      "origin": "suggested",
+      "sourceIds": [],
+      "teacherReviewRequired": true
+    }
+  ],
+  "theologicalApplications": [
+    {
+      "id": "ta-01",
+      "text": "If God is on our side, we have nothing to fear.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Important Idea",
+        "page": 5,
+        "sourceParagraphIndex": 157
+      }
+    },
+    {
+      "id": "ta-02",
+      "text": "God promised to be with Moses as he went to Pharaoh.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ]
+    },
+    {
+      "id": "ta-03",
+      "text": "God showed His power by giving Moses miracles to help people believe.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ]
+    },
+    {
+      "id": "ta-04",
+      "text": "The lesson connects God being on Moses’ side with God sending Jesus to save us.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Important Idea",
+        "page": 6,
+        "sourceParagraphIndex": 186
+      }
+    }
+  ],
+  "preparedActivities": {
+    "drawPicture": {
+      "prompt": "Moses staring at a burning bush that does not burn up",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ]
+    },
+    "multipleChoice": [
+      {
+        "id": "mc-01",
+        "question": "Why did Moses run away from Egypt?",
+        "correctAnswer": "Pharaoh wanted to kill him.",
+        "choices": [
+          {
+            "text": "Pharaoh wanted to kill him.",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "He needed to find a lost sheep.",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Pharaoh asked him to visit Midian.",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": true,
+        "sourceQuestionIds": [
+          "q-41"
+        ]
+      },
+      {
+        "id": "mc-02",
+        "question": "What was special about the burning bush?",
+        "correctAnswer": "It did not burn up.",
+        "choices": [
+          {
+            "text": "It did not burn up.",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "It burned to ashes.",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "It was really big.",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": true,
+        "sourceQuestionIds": [
+          "q-43"
+        ]
+      },
+      {
+        "id": "mc-03",
+        "question": "What did God tell Moses to take off?",
+        "correctAnswer": "His sandals",
+        "choices": [
+          {
+            "text": "His sandals",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "His coat",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "His hat",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": true,
+        "sourceQuestionIds": [
+          "q-08"
+        ]
+      },
+      {
+        "id": "mc-04",
+        "question": "What did God ask Moses to do?",
+        "correctAnswer": "Lead His people out of Egypt",
+        "choices": [
+          {
+            "text": "Lead His people out of Egypt",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Build a new home for Pharaoh",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Take his sheep into Egypt",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": true,
+        "sourceQuestionIds": [
+          "q-09"
+        ]
+      },
+      {
+        "id": "mc-05",
+        "question": "What happened when Moses threw down his staff?",
+        "correctAnswer": "It turned into a snake.",
+        "choices": [
+          {
+            "text": "It turned into a snake.",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "It turned into a bird.",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "It broke into pieces.",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ],
+        "teacherReviewRequired": true,
+        "sourceQuestionIds": [
+          "q-20"
+        ]
+      },
+      {
+        "id": "mc-06",
+        "question": "Who did God choose to speak for Moses?",
+        "correctAnswer": "Aaron",
+        "choices": [
+          {
+            "text": "Aaron",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Jethro",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Pharaoh",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ],
+        "teacherReviewRequired": true,
+        "sourceQuestionIds": [
+          "q-49"
+        ]
+      }
+    ],
+    "trueFalse": {
+      "statement": "God gave Moses three miracle signs to help people believe.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ],
+      "teacherReviewRequired": false,
+      "factId": "tf-11"
+    },
+    "firstLetters": {
+      "reference": "Romans 8:31",
+      "verse": "What then shall we say in response to these things? If God is for us, who can be against us?",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 220,
+        "details": "Original lesson quotes ESV, while review-stage worksheet activities use the verified BSB text."
+      },
+      "teacherReviewRequired": true
+    },
+    "oddWords": {
+      "related": [
+        "BUSH",
+        "SANDALS",
+        "MIDIAN",
+        "STAFF"
+      ],
+      "unrelated": [
+        "ALTAR",
+        "SONG",
+        "MOUNTAIN",
+        "TOWER",
+        "ANGEL"
+      ],
+      "origin": "adapted",
+      "unrelatedOrigin": "suggested",
+      "teacherReviewRequired": true,
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-06"
+      ]
+    },
+    "unscrambleWords": {
+      "answers": [
+        "BUSH",
+        "SNAKE"
+      ],
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02",
+        "sn-06"
+      ]
+    },
+    "checkboxes": {
+      "correct": [
+        "Moses",
+        "Aaron",
+        "Snake",
+        "Sheep"
+      ],
+      "incorrect": [
+        "ARK",
+        "GIANT",
+        "CROSS",
+        "BOAT",
+        "BIRD"
+      ],
+      "origin": "adapted",
+      "incorrectOrigin": "suggested",
+      "teacherReviewRequired": true,
+      "sourceIds": [
+        "sn-02",
+        "sn-06",
+        "sn-07"
+      ]
+    },
+    "whoAmI": {
+      "clue": "I helped my brother Moses by speaking for him. Who am I?",
+      "answer": "Aaron",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ]
+    },
+    "matchWords": [
+      {
+        "id": "mp-01",
+        "left": "Moses",
+        "right": "Shepherd",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "id": "mp-02",
+        "left": "Aaron",
+        "right": "Brother",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "id": "mp-03",
+        "left": "Pharaoh",
+        "right": "King",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "id": "mp-04",
+        "left": "Israelites",
+        "right": "Slaves",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-05",
+        "left": "Bush",
+        "right": "Fire",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-06",
+        "left": "Staff",
+        "right": "Snake",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-06"
+        ],
+        "teacherReviewRequired": true
+      }
+    ],
+    "finishVerse": {
+      "reference": "Romans 8:31",
+      "markedVerse": "[What] then shall we [say] in [response] to these things? If [God] is for us, [who] can be [against] us?",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 220,
+        "details": "Original lesson quotes ESV, while review-stage worksheet activities use the verified BSB text."
+      },
+      "teacherReviewRequired": true,
+      "sourceVerse": "What then shall we say in response to these things? If God is for us, who can be against us?"
+    },
+    "unscrambleVerse": {
+      "reference": "Romans 8:31",
+      "markedVerse": "[What] then shall we [say] in [response] to these things? If [God] is for us, [who] can be [against] us?",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 220,
+        "details": "Original lesson quotes ESV, while review-stage worksheet activities use the verified BSB text."
+      },
+      "teacherReviewRequired": true,
+      "sourceVerse": "What then shall we say in response to these things? If God is for us, who can be against us?"
+    },
+    "circleMistakes": {
+      "paragraph": "Moses ran away to Israel after Pharaoh wanted to kill him. Years later, Moses was caring for horses. He saw a bush on fire that burned to ashes. God told Moses to put on his sandals because the ground was holy. God sent Moses to bring His people out of the mud. Moses was afraid to speak, so God chose Pharaoh to help him.",
+      "mistakeCount": 6,
+      "mistakes": [
+        {
+          "incorrect": "Israel",
+          "correction": "Midian"
+        },
+        {
+          "incorrect": "horses",
+          "correction": "sheep"
+        },
+        {
+          "incorrect": "burned to ashes",
+          "correction": "did not burn up"
+        },
+        {
+          "incorrect": "put on",
+          "correction": "take off"
+        },
+        {
+          "incorrect": "the mud",
+          "correction": "Egypt"
+        },
+        {
+          "incorrect": "Pharaoh",
+          "correction": "Aaron"
+        }
+      ],
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "mediumWordSearch": {
+      "words": [
+        "MOSES",
+        "BUSH",
+        "STAFF",
+        "SNAKE",
+        "PHARAOH",
+        "AARON"
+      ],
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "trueFalseMaze": {
+      "statement": "God told Moses his staff must never touch the ground.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-06"
+      ],
+      "teacherReviewRequired": true,
+      "factId": "tf-12"
+    },
+    "bigIdeaCryptogram": {
+      "phrase": "If God is on our side, we have nothing to fear.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Important Idea",
+        "page": 5,
+        "sourceParagraphIndex": 157
+      }
+    },
+    "upsideDownVerse": {
+      "reference": "Romans 8:31",
+      "verse": "What then shall we say in response to these things? If God is for us, who can be against us?",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 220,
+        "details": "Original lesson quotes ESV, while review-stage worksheet activities use the verified BSB text."
+      },
+      "teacherReviewRequired": true
+    },
+    "connectBigIdea": {
+      "phrase": "God promised to be with Moses when he was afraid.",
+      "origin": "suggested",
+      "sourceIds": [],
+      "teacherReviewRequired": true
+    },
+    "pixelPicture": {
+      "phrase": "God spoke to Moses from a bush that did not burn up.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ]
+    },
+    "finishStory": {
+      "markedParagraph": "Moses [RAN] away to Midian after he killed an Egyptian. Forty years later, he saw a burning [BUSH] that did not burn up. God spoke to Moses and said, “I am sending [YOU] to lead my people out of Egypt.” Moses was worried, but God promised to be [WITH] him. God said His [NAME] was “I Am.” To help the people [BELIEVE], God gave Moses three [MIRACLE] signs: a [STAFF] turning into a [SNAKE], a sick [HAND] becoming well again, and water turning to [BLOOD]. God said Moses’ [BROTHER] Aaron would speak for him. Moses left for Egypt with his family.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "storyOrder": [
+      {
+        "order": 1,
+        "text": "Moses ran away to Midian after Pharaoh learned that he had killed an Egyptian.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "order": 2,
+        "text": "Forty years later, God spoke to Moses from a bush that burned without burning up.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "order": 3,
+        "text": "God told Moses to lead the Israelites out of Egypt.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "order": 4,
+        "text": "Moses was worried, but God promised to be with him.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "order": 5,
+        "text": "God told Moses His name was “I Am”.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "order": 6,
+        "text": "God gave Moses three signs to show His power to the people.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "order": 7,
+        "text": "God chose Aaron to speak for Moses, and Moses left for Egypt with his family.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      }
+    ],
+    "sortStory": [
+      {
+        "statement": "Moses ran away to Midian after Pharaoh learned what he had done.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": false,
+        "factId": "tf-01"
+      },
+      {
+        "statement": "Moses was caring for sheep when he saw a burning bush.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": false,
+        "factId": "tf-03"
+      },
+      {
+        "statement": "Moses poured water on the burning bush.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": true,
+        "factId": "tf-04"
+      },
+      {
+        "statement": "God told Moses to take off his sandals on holy ground.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": false,
+        "factId": "tf-05"
+      },
+      {
+        "statement": "God told Moses to lead the Israelites out of Egypt.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": false,
+        "factId": "tf-07"
+      },
+      {
+        "statement": "God said Moses would have rescue the Israelites by himself.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-04"
+        ],
+        "teacherReviewRequired": true,
+        "factId": "tf-08"
+      },
+      {
+        "statement": "God told Moses His name was “I Am”.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ],
+        "teacherReviewRequired": false,
+        "factId": "tf-09"
+      },
+      {
+        "statement": "Moses went to Egypt without his family.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-07"
+        ],
+        "teacherReviewRequired": true,
+        "factId": "tf-14"
+      }
+    ],
+    "drawStory": [
+      {
+        "prompt": "God spoke to Moses from a bush that burned without burning up.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "prompt": "God told Moses to lead the Israelites out of Egypt.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "prompt": "Moses was worried, but God promised to be with him.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "prompt": "God told Moses His name was “I Am”.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "prompt": "God gave Moses three signs to show His power to the people.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "prompt": "God chose Aaron to speak for Moses, and Moses left for Egypt with his family.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      }
+    ],
+    "wordSearch": {
+      "words": [
+        "MOSES",
+        "AARON",
+        "MIDIAN",
+        "BUSH",
+        "FIRE",
+        "SANDALS",
+        "STAFF",
+        "SNAKE",
+        "SHEEP",
+        "MIRACLE",
+        "PHARAOH",
+        "Blood"
+      ],
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "verseCryptogram": {
+      "reference": "Romans 8:31",
+      "verse": "What then shall we say in response to these things? If God is for us, who can be against us?",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 220,
+        "details": "Original lesson quotes ESV, while review-stage worksheet activities use the verified BSB text."
+      },
+      "teacherReviewRequired": true
+    },
+    "crossword": [
+      {
+        "answer": "MOSES",
+        "clue": "Who saw the burning bush?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "answer": "MIDIAN",
+        "clue": "Where did Moses run away to?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "answer": "BUSH",
+        "clue": "What was on fire but did not burn up?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "answer": "SANDALS",
+        "clue": "What did God tell Moses to take off?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "answer": "STAFF",
+        "clue": "What did Moses throw down to become a snake?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "answer": "SNAKE",
+        "clue": "What did Moses’ walking stick turn into?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "answer": "AARON",
+        "clue": "Who was chosen to speak for Moses?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "answer": "EGYPT",
+        "clue": "From which country would God rescue His people?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "answer": "SHEEP",
+        "clue": "What animals was Moses caring for?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      }
+    ],
+    "spiralVerse": {
+      "reference": "Romans 8:31",
+      "verse": "What then shall we say in response to these things? If God is for us, who can be against us?",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 220,
+        "details": "Original lesson quotes ESV, while review-stage worksheet activities use the verified BSB text."
+      },
+      "teacherReviewRequired": true
+    },
+    "connectVerse": {
+      "reference": "Romans 8:31",
+      "verse": "What then shall we say in response to these things? If God is for us, who can be against us?",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 27 Lesson (Moses and the Burning Bush).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 220,
+        "details": "Original lesson quotes ESV, while review-stage worksheet activities use the verified BSB text."
+      },
+      "teacherReviewRequired": true
+    }
+  },
+  "moduleReadiness": [
+    {
+      "moduleName": "Draw a Picture",
+      "moduleId": "draw-picture",
+      "size": "Small",
+      "preparedActivityKey": "drawPicture",
+      "status": "READY",
+      "contentValidation": "Draft activity text prepared and locally checked; actual app generator and preset rendering not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Review Studio preflight, all three presets, official curriculum validation and live generator testing still required."
+    },
+    {
+      "moduleName": "Multiple Choice Question",
+      "moduleId": "multiple-choice",
+      "size": "Small",
+      "preparedActivityKey": "multipleChoice",
+      "status": "READY",
+      "contentValidation": "Draft activity text prepared and locally checked; actual app generator and preset rendering not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Review Studio preflight, all three presets, official curriculum validation and live generator testing still required."
+    },
+    {
+      "moduleName": "True or False Questions",
+      "moduleId": "true-false",
+      "size": "Small",
+      "preparedActivityKey": "trueFalse",
+      "status": "READY",
+      "contentValidation": "Draft activity text prepared and locally checked; actual app generator and preset rendering not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Review Studio preflight, all three presets, official curriculum validation and live generator testing still required."
+    },
+    {
+      "moduleName": "First Letter Challenge",
+      "moduleId": "first-letters",
+      "size": "Small",
+      "preparedActivityKey": "firstLetters",
+      "status": "READY",
+      "contentValidation": "Draft activity text prepared and locally checked; actual app generator and preset rendering not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Review Studio preflight, all three presets, official curriculum validation and live generator testing still required."
+    },
+    {
+      "moduleName": "What’s Doesn’t Belong?",
+      "moduleId": "odd-words",
+      "size": "Small",
+      "preparedActivityKey": "oddWords",
+      "status": "READY",
+      "contentValidation": "Draft activity text prepared and locally checked; actual app generator and preset rendering not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Review Studio preflight, all three presets, official curriculum validation and live generator testing still required."
+    },
+    {
+      "moduleName": "Unscramble the Words",
+      "moduleId": "unscramble-words",
+      "size": "Small",
+      "preparedActivityKey": "unscrambleWords",
+      "status": "READY",
+      "contentValidation": "Draft activity text prepared and locally checked; actual app generator and preset rendering not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Review Studio preflight, all three presets, official curriculum validation and live generator testing still required."
+    },
+    {
+      "moduleName": "Checkboxes",
+      "moduleId": "checkboxes",
+      "size": "Small",
+      "preparedActivityKey": "checkboxes",
+      "status": "READY",
+      "contentValidation": "Draft activity text prepared and locally checked; actual app generator and preset rendering not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Review Studio preflight, all three presets, official curriculum validation and live generator testing still required."
+    },
+    {
+      "moduleName": "Who Am I?",
+      "moduleId": "who-am-i",
+      "size": "Small",
+      "preparedActivityKey": "whoAmI",
+      "status": "READY",
+      "contentValidation": "Draft activity text prepared and locally checked; actual app generator and preset rendering not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Review Studio preflight, all three presets, official curriculum validation and live generator testing still required."
+    },
+    {
+      "moduleName": "Match the Words",
+      "moduleId": "match-words",
+      "size": "Medium",
+      "preparedActivityKey": "matchWords",
+      "status": "READY",
+      "contentValidation": "Draft activity text prepared and locally checked; actual app generator and preset rendering not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Review Studio preflight, all three presets, official curriculum validation and live generator testing still required."
+    },
+    {
+      "moduleName": "Finish the Verse",
+      "moduleId": "finish-verse",
+      "size": "Medium",
+      "preparedActivityKey": "finishVerse",
+      "status": "READY",
+      "contentValidation": "Draft activity text prepared and locally checked; actual app generator and preset rendering not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Review Studio preflight, all three presets, official curriculum validation and live generator testing still required."
+    },
+    {
+      "moduleName": "Unscramble the Verse",
+      "moduleId": "unscramble-verse",
+      "size": "Medium",
+      "preparedActivityKey": "unscrambleVerse",
+      "status": "READY",
+      "contentValidation": "Draft activity text prepared and locally checked; actual app generator and preset rendering not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Review Studio preflight, all three presets, official curriculum validation and live generator testing still required."
+    },
+    {
+      "moduleName": "Circle the Mistakes",
+      "moduleId": "circle-mistakes",
+      "size": "Medium",
+      "preparedActivityKey": "circleMistakes",
+      "status": "READY",
+      "contentValidation": "Draft activity text prepared and locally checked; actual app generator and preset rendering not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Review Studio preflight, all three presets, official curriculum validation and live generator testing still required."
+    },
+    {
+      "moduleName": "Word Search (Medium)",
+      "moduleId": "medium-word-search",
+      "size": "Medium",
+      "preparedActivityKey": "mediumWordSearch",
+      "status": "READY",
+      "contentValidation": "Draft activity text prepared and locally checked; actual app generator and preset rendering not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Review Studio preflight, all three presets, official curriculum validation and live generator testing still required."
+    },
+    {
+      "moduleName": "True or False Maze",
+      "moduleId": "true-false-maze",
+      "size": "Medium",
+      "preparedActivityKey": "trueFalseMaze",
+      "status": "READY",
+      "contentValidation": "Draft activity text prepared and locally checked; actual app generator and preset rendering not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Review Studio preflight, all three presets, official curriculum validation and live generator testing still required."
+    },
+    {
+      "moduleName": "Solve the Code",
+      "moduleId": "big-idea-cryptogram",
+      "size": "Medium",
+      "preparedActivityKey": "bigIdeaCryptogram",
+      "status": "READY",
+      "contentValidation": "Draft activity text prepared and locally checked; actual app generator and preset rendering not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Review Studio preflight, all three presets, official curriculum validation and live generator testing still required."
+    },
+    {
+      "moduleName": "Upside Down Verse",
+      "moduleId": "upside-down-verse",
+      "size": "Medium",
+      "preparedActivityKey": "upsideDownVerse",
+      "status": "READY",
+      "contentValidation": "Draft activity text prepared and locally checked; actual app generator and preset rendering not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Review Studio preflight, all three presets, official curriculum validation and live generator testing still required."
+    },
+    {
+      "moduleName": "Connect the Phrase",
+      "moduleId": "connect-big-idea",
+      "size": "Medium",
+      "preparedActivityKey": "connectBigIdea",
+      "status": "READY",
+      "contentValidation": "Draft activity text prepared and locally checked; actual app generator and preset rendering not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Review Studio preflight, all three presets, official curriculum validation and live generator testing still required."
+    },
+    {
+      "moduleName": "Pixel Picture",
+      "moduleId": "pixel-picture",
+      "size": "Medium",
+      "preparedActivityKey": "pixelPicture",
+      "status": "READY",
+      "contentValidation": "Draft activity text prepared and locally checked; actual app generator and preset rendering not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Review Studio preflight, all three presets, official curriculum validation and live generator testing still required."
+    },
+    {
+      "moduleName": "Finish the Story",
+      "moduleId": "finish-story",
+      "size": "Large",
+      "preparedActivityKey": "finishStory",
+      "status": "READY",
+      "contentValidation": "Draft activity text prepared and locally checked; actual app generator and preset rendering not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Review Studio preflight, all three presets, official curriculum validation and live generator testing still required."
+    },
+    {
+      "moduleName": "Story Order",
+      "moduleId": "story-order",
+      "size": "Large",
+      "preparedActivityKey": "storyOrder",
+      "status": "READY",
+      "contentValidation": "Draft activity text prepared and locally checked; actual app generator and preset rendering not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Review Studio preflight, all three presets, official curriculum validation and live generator testing still required."
+    },
+    {
+      "moduleName": "Sort the Story",
+      "moduleId": "sort-story",
+      "size": "Large",
+      "preparedActivityKey": "sortStory",
+      "status": "READY",
+      "contentValidation": "Draft activity text prepared and locally checked; actual app generator and preset rendering not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Review Studio preflight, all three presets, official curriculum validation and live generator testing still required."
+    },
+    {
+      "moduleName": "Draw the Story",
+      "moduleId": "draw-story",
+      "size": "Large",
+      "preparedActivityKey": "drawStory",
+      "status": "READY",
+      "contentValidation": "Draft activity text prepared and locally checked; actual app generator and preset rendering not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Review Studio preflight, all three presets, official curriculum validation and live generator testing still required."
+    },
+    {
+      "moduleName": "Word Search (Large)",
+      "moduleId": "word-search",
+      "size": "Large",
+      "preparedActivityKey": "wordSearch",
+      "status": "READY",
+      "contentValidation": "Draft activity text prepared and locally checked; actual app generator and preset rendering not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Review Studio preflight, all three presets, official curriculum validation and live generator testing still required."
+    },
+    {
+      "moduleName": "Verse Cryptogram",
+      "moduleId": "verse-cryptogram",
+      "size": "Large",
+      "preparedActivityKey": "verseCryptogram",
+      "status": "READY",
+      "contentValidation": "Draft activity text prepared and locally checked; actual app generator and preset rendering not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Review Studio preflight, all three presets, official curriculum validation and live generator testing still required."
+    },
+    {
+      "moduleName": "Crossword",
+      "moduleId": "crossword",
+      "size": "Large",
+      "preparedActivityKey": "crossword",
+      "status": "READY",
+      "contentValidation": "Draft activity text prepared and locally checked; actual app generator and preset rendering not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Review Studio preflight, all three presets, official curriculum validation and live generator testing still required."
+    },
+    {
+      "moduleName": "Spiral Verse",
+      "moduleId": "spiral-verse",
+      "size": "Large",
+      "preparedActivityKey": "spiralVerse",
+      "status": "READY",
+      "contentValidation": "Draft activity text prepared and locally checked; actual app generator and preset rendering not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Review Studio preflight, all three presets, official curriculum validation and live generator testing still required."
+    },
+    {
+      "moduleName": "Connect the Verse",
+      "moduleId": "connect-verse",
+      "size": "Large",
+      "preparedActivityKey": "connectVerse",
+      "status": "READY",
+      "contentValidation": "Draft activity text prepared and locally checked; actual app generator and preset rendering not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Review Studio preflight, all three presets, official curriculum validation and live generator testing still required."
+    }
+  ],
+  "reviewFlags": [
+    {
+      "id": "rf-01",
+      "priority": "high",
+      "type": "scripture-review",
+      "text": "The ODT quotes Romans 8:31 in ESV; the proposed worksheet activities use the full BSB wording, which differs at “in response to these things.” Confirm the passage and Scripture distribution clearance.",
+      "affectedModules": [
+        "first-letters",
+        "finish-verse",
+        "unscramble-verse",
+        "upside-down-verse",
+        "verse-cryptogram",
+        "spiral-verse",
+        "connect-verse"
+      ]
+    },
+    {
+      "id": "rf-02",
+      "priority": "medium",
+      "type": "content-distractors",
+      "text": "Approve the twelve newly suggested wrong Multiple Choice choices. Each question has one correct and two believable wrong answers.",
+      "affectedModules": [
+        "multiple-choice"
+      ]
+    },
+    {
+      "id": "rf-03",
+      "priority": "medium",
+      "type": "false-facts",
+      "text": "Approve the seven suggested false statements. Confirm that the false statements are clearly wrong and age-appropriate.",
+      "affectedModules": [
+        "true-false",
+        "sort-story",
+        "true-false-maze"
+      ]
+    },
+    {
+      "id": "rf-04",
+      "priority": "medium",
+      "type": "odd-words",
+      "text": "Check four plausible unrelated Bible-era words: ALTAR, HARP, VINEYARD and TOWER. None belongs to this lesson.",
+      "affectedModules": [
+        "odd-words"
+      ]
+    },
+    {
+      "id": "rf-05",
+      "priority": "medium",
+      "type": "checkboxes",
+      "text": "Check four different incorrect Checkboxes words: Trumpet, Temple, Grapes and Chariot.",
+      "affectedModules": [
+        "checkboxes"
+      ]
+    },
+    {
+      "id": "rf-06",
+      "priority": "medium",
+      "type": "circle-mistakes",
+      "text": "Review the six intentional errors and corrections. The source includes an Egyptian killed by Moses; the activity avoids depicting the death.",
+      "affectedModules": [
+        "circle-mistakes"
+      ]
+    },
+    {
+      "id": "rf-07",
+      "priority": "medium",
+      "type": "story-adaptations",
+      "text": "Review the simplified story order, Finish the Story paragraph, and Large Draw the Story captions for fidelity to the original theology and chronology.",
+      "affectedModules": [
+        "story-order",
+        "finish-story",
+        "draw-story"
+      ]
+    },
+    {
+      "id": "rf-08",
+      "priority": "medium",
+      "type": "sensitive-violence",
+      "text": "The source states that Moses killed an Egyptian and Pharaoh tried to kill Moses. Review age-appropriate wording and whether this should appear in child-facing activities.",
+      "affectedModules": [
+        "multiple-choice",
+        "story-order",
+        "finish-story",
+        "sort-story",
+        "draw-story"
+      ]
+    },
+    {
+      "id": "rf-09",
+      "priority": "low",
+      "type": "drawing-scenes",
+      "text": "Four Small drawing choices focus on the bush, the sandals, the staff becoming a snake, and the journey back to Egypt. Confirm suitability and variety.",
+      "affectedModules": [
+        "draw-picture"
+      ]
+    },
+    {
+      "id": "rf-10",
+      "priority": "medium",
+      "type": "generator-preflight",
+      "text": "The 27 modules have prepared content, but real puzzle generators and all three numbered presets have not been run here. Verify preflight and printing before approval.",
+      "affectedModules": [
+        "crossword",
+        "pixel-picture",
+        "spiral-verse",
+        "draw-story",
+        "sort-story"
+      ]
+    }
+  ],
+  "publication": {
+    "status": "approved",
+    "approved": true,
+    "notes": "Unapproved curriculum conversion draft; Scripture selection and separate rights clearance require teacher review; no publication or GitHub change.",
+    "teacherSignoff": {
+      "reviewer": "Andrew Doane",
+      "date": "2026-11-04",
+      "notes": "Approved with verified BSB verse through Curriculum Review Studio"
+    },
+    "scriptureRights": {
+      "status": "cleared",
+      "basis": "Berean Standard Bible (BSB), dedicated to the public domain on April 30, 2023. Official terms: https://berean.bible/terms.htm. Scripture text confirmed against https://bereanbible.com/bsb.txt.",
+      "reviewedBy": "Andrew Doane",
+      "reviewedOn": "2026-11-04"
+    },
+    "resolvedReviewFlagIds": []
+  },
+  "validation": {
+    "basis": "Original conversion tests predate teacher-approved BSB; revalidate actual engines and content after export.",
+    "allTextChecksPassed": false,
+    "checks": [
+      {
+        "check": "Seven verbatim source Story Notes preserved",
+        "passed": true
+      },
+      {
+        "check": "Story Notes in original document and chronological order",
+        "passed": true
+      },
+      {
+        "check": "All original ALL-CAPS Story Note words preserved",
+        "passed": true
+      },
+      {
+        "check": "Each recorded teaching/review question exists verbatim in ODT",
+        "passed": true
+      },
+      {
+        "check": "All seven Story Notes have exact source paragraph provenance",
+        "passed": true
+      },
+      {
+        "check": "All 27 activity keys included",
+        "passed": true
+      },
+      {
+        "check": "All 27 module IDs distinct",
+        "passed": true
+      },
+      {
+        "check": "All nested sourceIds resolve to seven source notes",
+        "passed": true
+      },
+      {
+        "check": "SourceIds refer to known Story Notes",
+        "passed": true
+      },
+      {
+        "check": "Target 4–6 Multiple Choice questions",
+        "passed": true
+      },
+      {
+        "check": "Every MC candidate links to a transcribed source question",
+        "passed": true
+      },
+      {
+        "check": "One correct and two different incorrect MC choices",
+        "passed": true
+      },
+      {
+        "check": "MC questions and answers fit text limits",
+        "passed": true
+      },
+      {
+        "check": "All incorrect MC choices are suggested and teacher flagged",
+        "passed": true
+      },
+      {
+        "check": "True/False bank has 12–16 statements",
+        "passed": true
+      },
+      {
+        "check": "True/False is reasonably balanced",
+        "passed": true
+      },
+      {
+        "check": "True/False facts unique and within 80 characters",
+        "passed": true
+      },
+      {
+        "check": "All false facts suggested and flagged",
+        "passed": true
+      },
+      {
+        "check": "Sort has eight distinct facts",
+        "passed": true
+      },
+      {
+        "check": "Sort, Small True/False and Maze have ten different facts",
+        "passed": true
+      },
+      {
+        "check": "Four alternative facts remain unused",
+        "passed": true
+      },
+      {
+        "check": "Prepared fact references agree with pool",
+        "passed": true
+      },
+      {
+        "check": "Maze statement no more than 65 characters",
+        "passed": true
+      },
+      {
+        "check": "Exactly four distinct Small draw scenes",
+        "passed": true
+      },
+      {
+        "check": "Small scenes fit 105 chars and app prefix",
+        "passed": true
+      },
+      {
+        "check": "Matching pairs 6, with one-word labels",
+        "passed": true
+      },
+      {
+        "check": "Circle Mistakes exactly 6 and corrections supplied",
+        "passed": true
+      },
+      {
+        "check": "Circle Mistakes has every wrong phrase once",
+        "passed": true
+      },
+      {
+        "check": "Odd Words and Checkboxes word lists do not overlap",
+        "passed": true
+      },
+      {
+        "check": "Odd Words lists within 6–10 total and 1–5 per category",
+        "passed": true
+      },
+      {
+        "check": "All Odd Words 12 chars or shorter",
+        "passed": true
+      },
+      {
+        "check": "Verse activities use same full BSB text",
+        "passed": true
+      },
+      {
+        "check": "Verse bracket activities reconstruct the exact BSB verse",
+        "passed": true
+      },
+      {
+        "check": "Finish Verse contains 2–8 brackets",
+        "passed": true
+      },
+      {
+        "check": "Unscramble Verse contains 4–8 brackets",
+        "passed": true
+      },
+      {
+        "check": "Story Order contains 5–8 ordered sentences under 115 chars",
+        "passed": true
+      },
+      {
+        "check": "Large Draw Story 4–6 full sentences under 105 chars",
+        "passed": true
+      },
+      {
+        "check": "Draw Story captions exactly reuse Story Order sentences",
+        "passed": true
+      },
+      {
+        "check": "Finish Story under 1100 chars with 6–12 bracketed words",
+        "passed": true
+      },
+      {
+        "check": "Big Idea Cryptogram no more than 62 chars",
+        "passed": true
+      },
+      {
+        "check": "Pixel Picture phrase 30–85 chars",
+        "passed": true
+      },
+      {
+        "check": "Connect Big Idea phrase 4–20 words",
+        "passed": true
+      },
+      {
+        "check": "Medium Word Search 1–6 unique short words",
+        "passed": true
+      },
+      {
+        "check": "Large Word Search 4–12 unique words",
+        "passed": true
+      },
+      {
+        "check": "Crossword 6–10 unique answers and short clues",
+        "passed": true
+      },
+      {
+        "check": "27 module readiness entries mark generators untested",
+        "passed": true
+      },
+      {
+        "check": "Publication unapproved",
+        "passed": true
+      },
+      {
+        "check": "No rights clearance or teacher approval fabricated",
+        "passed": true
+      }
+    ],
+    "actualGeneratorTested": false,
+    "jsonParseTested": true
+  }
+}
