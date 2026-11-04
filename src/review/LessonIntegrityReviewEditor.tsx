@@ -135,8 +135,9 @@ export default function LessonIntegrityReviewEditor({lesson,mode,onChange,onErro
   </div>}
   {issues.length>0&&<div className="review-story-fact-rows">
    {issues.map((entry,i)=>{
-    const options=entry.choiceType==='filename'?sourceNames:
-     entry.choiceType==='questionId'?questionIds:allIds;
+    const options:string[]=(entry.choiceType==='filename'?sourceNames:
+     entry.choiceType==='questionId'?questionIds:allIds)
+      .map((value:unknown)=>String(value??'')).filter(Boolean);
     return <div className="review-story-fact-row" key={entry.path+':'+i}>
      <strong>{entry.path}</strong>
      <p className="review-warning">{entry.message}</p>
