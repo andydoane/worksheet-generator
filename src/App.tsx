@@ -20,6 +20,10 @@ import {
  readActivityBorders,setActivityBorder,type ActivityBorders,type ActivityBorderId,
 } from './activityBorders.ts';
 import ActivityBorderPicker from './ActivityBorderPicker.tsx';
+import {
+ arrangePresetBorders,carryPresetBorderMode,regeneratePresetBorders,
+ reflowPresetBordersOnPage,type PresetBorderMode,type PresetBorderSettings,
+} from './presetBorders.ts';
 import CoverTitlePreview from './CoverTitlePreview.tsx';
 import {markWordSelection} from './storySelection.ts';
 import {fieldExceedsLength} from './fieldLengthFeedback.ts';
@@ -56,6 +60,7 @@ type Draft = {
   layouts: Record<2 | 3 | 4, LayoutId>;
   modules: ModuleAssignments;
   activityBorders: ActivityBorders;
+  borderArrangement?:PresetBorderSettings;
   curriculumLessonId?:string;
   worksheetPresetId?:'preset-1'|'preset-2'|'preset-3'|'build-own';
   activityDefaults?:ModuleAssignments;
@@ -228,6 +233,7 @@ export default function App() {
   const [lessonPicker,setLessonPicker]=useState<'presets'|'stories'|null>(null);
   const [lessonPickerError,setLessonPickerError]=useState<string|null>(null);
   const [borderGalleryOpen,setBorderGalleryOpen]=useState(false);
+  const [borderSettingsOpen,setBorderSettingsOpen]=useState(false);
 
   useEffect(() => {
     try {
@@ -257,10 +263,9 @@ export default function App() {
 
   function setLayout(layout: LayoutId) {
     if (page === 1) return;
-    setDraft((previous) => ({
-      ...previous,
-      layouts: { ...previous.layouts, [page]: layout },
-    }));
+    setDraft(previous=>reflowPresetBordersOnPage({
+      ...previous,layouts:{...previous.layouts,[page]:layout},
+    },page));
   }
 
   function selectPage(number: PageNumber) {
@@ -307,6 +312,7 @@ export default function App() {
     setSolutionKey(null);
     setExportError(null);
     setBorderGalleryOpen(false);
+    setBorderSettingsOpen(false);
     focusTitleField();
   }
 
@@ -326,6 +332,7 @@ export default function App() {
     setSolutionKey(null);
     setExportError(null);
     setBorderGalleryOpen(false);
+    setBorderSettingsOpen(false);
     setView('editor');
     return true;
   }
@@ -352,8 +359,26 @@ export default function App() {
   }
 
   function openLessonPicker(panel:'presets'|'stories'){
+    setBorderSettingsOpen(false);
     setLessonPicker(panel);
     setLessonPickerError(null);
+  }
+  function choosePresetBorderMode(mode:PresetBorderMode){
+    // Choose a new arrangement once, in the user event, not inside a React
+    // state updater that StrictMode may replay.
+    const seed=1+Math.floor(Math.random()*900_000_000);
+    setDraft(previous=>arrangePresetBorders(previous,{
+      mode,style:previous.borderArrangement?.style??'border-1',seed,
+    }));
+  }
+  function chooseUnifiedBorderStyle(style:ActivityBorderId){
+    if(style==='none')return;
+    setDraft(previous=>arrangePresetBorders(previous,{
+      mode:'same',style,seed:previous.borderArrangement?.seed??1,
+    }));
+  }
+  function regenerateAllBorders(){
+    setDraft(previous=>regeneratePresetBorders(previous));
   }
 
   function chooseQuickLessonWorksheet(startId:WorksheetStartId,entryOverride?:PublicLessonEntry){
@@ -373,7 +398,7 @@ export default function App() {
       // existing single-draft worksheet. Failure leaves the old draft intact.
       const next=entryOverride
         ?createSamePresetForNewStory(draft,entry)
-        :createLessonWorksheet(entry,startId);
+        :carryPresetBorderMode(draft,createLessonWorksheet(entry,startId));
       if(needsLessonSwitchConfirmation(draft,PUBLIC_LESSONS)&&!window.confirm(
         'Replace this customized worksheet? Changes to lesson details, activities, '+
         'layouts and borders will be lost. You can cancel to keep your current work.'
