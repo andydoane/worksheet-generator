@@ -741,6 +741,11 @@ export default function ReviewApp(){
       {active.id==='recipe-review'&&<div id="review-field-recipe" tabIndex={-1} className="review-fields">
        <div className="review-note">
         <h3>Numbered preset repairs</h3>
+        <p>{Object.keys(MODULE_REPAIR_REGISTRY).length}/27 activity types have
+         registered repair destinations: {Object.values(MODULE_REPAIR_REGISTRY)
+          .filter(route=>route.editor==='visual').length} activity forms and
+         {Object.values(MODULE_REPAIR_REGISTRY).filter(route=>
+          route.editor==='scripture').length} shared Scripture routes.</p>
         <p>Each numbered booklet requires content that does not repeat in another region.
          Choose the named activity below, select a different approved fact or
          vocabulary bank, then rerun preflight. The three preset layouts are fixed.</p>
