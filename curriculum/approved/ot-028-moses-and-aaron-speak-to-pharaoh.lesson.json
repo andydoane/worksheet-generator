@@ -1,0 +1,3074 @@
+{
+  "schemaVersion": 1,
+  "schemaStatus": "review-draft; official curriculum validator and live generator tests pending",
+  "id": "ot-028-moses-and-aaron-speak-to-pharaoh",
+  "curriculum": {
+    "series": "Old Testament",
+    "lessonNumber": 28
+  },
+  "lessonDetails": {
+    "title": "Moses and Aaron Speak to Pharaoh",
+    "scripturePassages": [
+      "Exodus 5",
+      "Exodus 6",
+      "Exodus 7"
+    ],
+    "scriptureDisplay": "Exodus 5–7 (through the first plague, water to blood)",
+    "bigIdeas": [
+      {
+        "text": "Know that the Lord is God.",
+        "origin": "adapted",
+        "source": {
+          "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+          "section": "Important Idea",
+          "page": 6,
+          "sourceParagraphIndex": 169,
+          "details": "Original display paragraphs 169–171 render in all-caps font; theological proper-noun capitalization normalized."
+        },
+        "teacherReviewRequired": false
+      }
+    ],
+    "memoryVerse": {
+      "reference": "Psalm 100:3",
+      "translation": "BSB",
+      "text": "Know that the LORD is God. It is He who made us, and we are His; we are His people, and the sheep of His pasture.",
+      "isExcerpt": false,
+      "hasEllipses": false,
+      "requiresTextReview": false,
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 208,
+        "details": "Original source prints an ESV excerpt with ellipses; the proposed BSB words are a contiguous excerpt ending before the next clause. Final excerpt and punctuation need teacher confirmation."
+      },
+      "alsoVerifiedAt": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "Verse and Motions",
+        "page": 7,
+        "sourceParagraphIndex": 215
+      },
+      "bsbSource": {
+        "reference": "Psalm 100:3",
+        "sourceUrl": "https://bereanbible.com/bsb.txt",
+        "publicDomainTerms": "https://berean.bible/terms.htm",
+        "startWord": 0,
+        "endWord": 25
+      },
+      "originalCurriculumVerse": {
+        "reference": "Psalm 100:3a",
+        "translation": "ESV",
+        "text": "Know that the Lord, he is God! It is he who made us and we are his...",
+        "alsoPrintedInMotions": "Know that the Lord, he is God! It is he who made us, and we are his..."
+      }
+    }
+  },
+  "sourceFiles": [
+    {
+      "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+      "format": "odt",
+      "role": "primary teaching source",
+      "note": "The original verse is Psalm 100:3a ESV. No ODP slide deck supplied. The lesson ends at the first plague of blood."
+    }
+  ],
+  "storyNotes": [
+    {
+      "id": "sn-01",
+      "order": 1,
+      "originalText": "Moses and Aaron told Pharaoh, \"The LORD says, 'Let my people go.'\" But Pharaoh said, “No!”",
+      "cleanText": "Moses and Aaron told Pharaoh that the Lord said to let His people go, but Pharaoh said no.",
+      "emphasizedWords": [
+        "LORD"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "STORY NOTE",
+        "page": 1,
+        "sourceParagraphIndex": 33
+      }
+    },
+    {
+      "id": "sn-02",
+      "order": 2,
+      "originalText": "Pharaoh made the Israelites work HARDER. They had to find their own straw to make bricks.",
+      "cleanText": "Pharaoh made the Israelites work harder by making them gather straw for bricks.",
+      "emphasizedWords": [
+        "HARDER"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "STORY NOTE",
+        "page": 2,
+        "sourceParagraphIndex": 55
+      }
+    },
+    {
+      "id": "sn-03",
+      "order": 3,
+      "originalText": "Moses told the people, “God will rescue you.” But the Israelites had lost HOPE.",
+      "cleanText": "Moses told the Israelites that God would rescue them, but they had lost hope.",
+      "emphasizedWords": [
+        "HOPE"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "STORY NOTE",
+        "page": 3,
+        "sourceParagraphIndex": 72
+      }
+    },
+    {
+      "id": "sn-04",
+      "order": 4,
+      "originalText": "God told Moses, \"Everyone will know who I am when I do mighty MIRACLES to rescue my people.\"",
+      "cleanText": "God said He would use mighty miracles to show the Egyptians that He is the Lord.",
+      "emphasizedWords": [
+        "MIRACLES"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "STORY NOTE",
+        "page": 3,
+        "sourceParagraphIndex": 89
+      }
+    },
+    {
+      "id": "sn-05",
+      "order": 5,
+      "originalText": "Aaron threw down his staff. God turned it into a SNAKE.",
+      "cleanText": "Aaron threw down his staff, and God turned it into a snake.",
+      "emphasizedWords": [
+        "SNAKE"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "STORY NOTE",
+        "page": 4,
+        "sourceParagraphIndex": 104
+      }
+    },
+    {
+      "id": "sn-06",
+      "order": 6,
+      "originalText": "When Pharaoh's evil magicians did the same TRICK, Pharaoh refused to listen to the Lord.",
+      "cleanText": "Pharaoh’s magicians turned their staffs into snakes too, but Pharaoh still refused to listen.",
+      "emphasizedWords": [
+        "TRICK"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "STORY NOTE",
+        "page": 4,
+        "sourceParagraphIndex": 121
+      }
+    },
+    {
+      "id": "sn-07",
+      "order": 7,
+      "originalText": "God turned Egypt’s water into BLOOD, but Pharaoh would not let God’s people go.",
+      "cleanText": "God turned Egypt’s water into blood, but Pharaoh still would not let His people go.",
+      "emphasizedWords": [
+        "BLOOD"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "STORY NOTE",
+        "page": 5,
+        "sourceParagraphIndex": 142
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q-01",
+      "question": "Do you remember what the word “exodus” means?",
+      "answer": "To exit.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "recap",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 9
+      }
+    },
+    {
+      "id": "q-02",
+      "question": "Why would they want to exit Egypt?",
+      "answer": "They were slaves.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "recap",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 11
+      }
+    },
+    {
+      "id": "q-03",
+      "question": "Do you remember his name?",
+      "answer": "Moses.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "recap",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 13
+      }
+    },
+    {
+      "id": "q-04",
+      "question": "What?",
+      "answer": "To bring his people out of Egypt.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "recap",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 17
+      },
+      "standaloneReady": false,
+      "notes": "Context needed from the preceding teaching sentence."
+    },
+    {
+      "id": "q-05",
+      "question": "Who?",
+      "answer": "His brother, Aaron.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "recap",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 21
+      },
+      "standaloneReady": false,
+      "notes": "Context needed from the preceding teaching sentence."
+    },
+    {
+      "id": "q-06",
+      "question": "Do you recall what that miracle was?",
+      "answer": "To turn a staff into a snake.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "recap",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 23
+      }
+    },
+    {
+      "id": "q-07",
+      "question": "Their God-given mission?",
+      "answer": "To tell Pharaoh to let his Israelite slaves go free.",
+      "kind": "rhetorical",
+      "origin": "source",
+      "scope": "recap",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 27
+      },
+      "standaloneReady": false,
+      "notes": "Preserved as a source teaching prompt, not selected as stand-alone factual Multiple Choice."
+    },
+    {
+      "id": "q-08",
+      "question": "What happened?",
+      "answer": "The teacher introduces the story from Exodus 5.",
+      "kind": "prompt",
+      "origin": "source",
+      "scope": "introduction",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 27
+      },
+      "standaloneReady": false,
+      "notes": "Preserved as a source teaching prompt, not selected as stand-alone factual Multiple Choice."
+    },
+    {
+      "id": "q-09",
+      "question": "What did they say to Pharaoh?",
+      "answer": "Let the Israelites go.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "Story teaching",
+        "page": 1,
+        "sourceParagraphIndex": 35
+      }
+    },
+    {
+      "id": "q-10",
+      "question": "Why wouldn’t Pharaoh want to hear something like that?",
+      "answer": "No one tells a king what to do; the Israelites worked for free.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "Story teaching",
+        "page": 2,
+        "sourceParagraphIndex": 37
+      }
+    },
+    {
+      "id": "q-11",
+      "question": "So what did Pharaoh have to say about Moses and Aaron’s message?",
+      "answer": "He said no and claimed not to know the Lord.",
+      "kind": "prompt",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "Story teaching",
+        "page": 2,
+        "sourceParagraphIndex": 39
+      },
+      "standaloneReady": false,
+      "notes": "Preserved as a source teaching prompt, not selected as stand-alone factual Multiple Choice."
+    },
+    {
+      "id": "q-12",
+      "question": "So did Pharaoh let the Israelites go?",
+      "answer": "No.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "Story teaching",
+        "page": 2,
+        "sourceParagraphIndex": 48
+      }
+    },
+    {
+      "id": "q-13",
+      "question": "What was it?",
+      "answer": "To make the Israelites work harder.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "Story teaching",
+        "page": 2,
+        "sourceParagraphIndex": 57
+      },
+      "standaloneReady": false,
+      "notes": "Context needed from the preceding teaching sentence."
+    },
+    {
+      "id": "q-14",
+      "question": "What?",
+      "answer": "The Israelites would have to get their own straw.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "Story teaching",
+        "page": 2,
+        "sourceParagraphIndex": 61
+      },
+      "standaloneReady": false,
+      "notes": "Context needed from the preceding teaching sentence."
+    },
+    {
+      "id": "q-15",
+      "question": "What was it?",
+      "answer": "God would rescue them from Egypt and bring them to the promised land.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "Story teaching",
+        "page": 3,
+        "sourceParagraphIndex": 74
+      },
+      "standaloneReady": false,
+      "notes": "Context needed from the preceding teaching sentence."
+    },
+    {
+      "id": "q-16",
+      "question": "Why?",
+      "answer": "They had lost all hope.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "Story teaching",
+        "page": 3,
+        "sourceParagraphIndex": 82
+      },
+      "standaloneReady": false,
+      "notes": "Context needed from the preceding teaching sentence."
+    },
+    {
+      "id": "q-17",
+      "question": "But even after these mighty miracles, would Pharaoh listen?",
+      "answer": "No.",
+      "kind": "rhetorical",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "Story teaching",
+        "page": 3,
+        "sourceParagraphIndex": 93
+      },
+      "standaloneReady": false,
+      "notes": "Preserved as a source teaching prompt, not selected as stand-alone factual Multiple Choice."
+    },
+    {
+      "id": "q-18",
+      "question": "Would he let God's people go?",
+      "answer": "No.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "Story teaching",
+        "page": 3,
+        "sourceParagraphIndex": 93
+      }
+    },
+    {
+      "id": "q-19",
+      "question": "The first time Moses and Aaron told Pharaoh to let the Israelites go, what did Pharaoh say?",
+      "answer": "No; I don’t even know the Lord.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "Story teaching",
+        "page": 4,
+        "sourceParagraphIndex": 106
+      }
+    },
+    {
+      "id": "q-20",
+      "question": "What?",
+      "answer": "Throw his staff down and it would turn into a snake.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "Story teaching",
+        "page": 4,
+        "sourceParagraphIndex": 108
+      },
+      "standaloneReady": false,
+      "notes": "Context needed from the preceding teaching sentence."
+    },
+    {
+      "id": "q-21",
+      "question": "So why would it work for Aaron?",
+      "answer": "God promised to do it.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "Story teaching",
+        "page": 4,
+        "sourceParagraphIndex": 112
+      }
+    },
+    {
+      "id": "q-22",
+      "question": "And when Aaron tossed the stick to the ground, what happened?",
+      "answer": "God turned it into a snake.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "Story teaching",
+        "page": 4,
+        "sourceParagraphIndex": 114
+      }
+    },
+    {
+      "id": "q-23",
+      "question": "After seeing such a strange sight, surely stubborn Pharaoh changed his mind, right?",
+      "answer": "No, Pharaoh still refused.",
+      "kind": "rhetorical",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "Story teaching",
+        "page": 4,
+        "sourceParagraphIndex": 116
+      },
+      "standaloneReady": false,
+      "notes": "Preserved as a source teaching prompt, not selected as stand-alone factual Multiple Choice."
+    },
+    {
+      "id": "q-24",
+      "question": "And what were Pharaoh’s men able to do?",
+      "answer": "Turn their staffs into snakes.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "Story teaching",
+        "page": 4,
+        "sourceParagraphIndex": 125
+      }
+    },
+    {
+      "id": "q-25",
+      "question": "What happened?",
+      "answer": "Aaron’s snake swallowed the others up.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "Story teaching",
+        "page": 4,
+        "sourceParagraphIndex": 129
+      },
+      "standaloneReady": false,
+      "notes": "Context needed from the preceding teaching sentence."
+    },
+    {
+      "id": "q-26",
+      "question": "So did any of this change Pharaoh’s stubborn mind?",
+      "answer": "Nope!",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "Story teaching",
+        "page": 4,
+        "sourceParagraphIndex": 131
+      }
+    },
+    {
+      "id": "q-27",
+      "question": "After seeing such a sight, did Pharaoh let God's people go?",
+      "answer": "No.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "Story teaching",
+        "page": 5,
+        "sourceParagraphIndex": 144
+      }
+    },
+    {
+      "id": "q-28",
+      "question": "What happened when Aaron struck the Nile River?",
+      "answer": "Egypt's water turned to blood.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "Story teaching",
+        "page": 5,
+        "sourceParagraphIndex": 146
+      }
+    },
+    {
+      "id": "q-29",
+      "question": "What did he do instead?",
+      "answer": "Ask his magicians to perform the same trick.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "Story teaching",
+        "page": 5,
+        "sourceParagraphIndex": 154
+      }
+    },
+    {
+      "id": "q-30",
+      "question": "So how does the story of Moses and Aaron speaking to Pharaoh teach us, strengthen us, encourage us, or give us hope?",
+      "answer": "Open discussion; various responses.",
+      "kind": "discussion",
+      "origin": "source",
+      "scope": "application",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "Important Idea/Application",
+        "page": 5,
+        "sourceParagraphIndex": 158
+      },
+      "standaloneReady": false,
+      "notes": "Preserved as a source teaching prompt, not selected as stand-alone factual Multiple Choice."
+    },
+    {
+      "id": "q-31",
+      "question": "After seeing those miracles, what lesson will the people learn?",
+      "answer": "I am the Lord.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "application",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "Important Idea/Application",
+        "page": 5,
+        "sourceParagraphIndex": 166
+      }
+    },
+    {
+      "id": "q-32",
+      "question": "What was that lesson?",
+      "answer": "The Lord is God.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "application",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "Important Idea/Application",
+        "page": 6,
+        "sourceParagraphIndex": 180
+      }
+    },
+    {
+      "id": "q-33",
+      "question": "What was that lesson?",
+      "answer": "That the Lord of Israel is God.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "memory-verse",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 210
+      }
+    },
+    {
+      "id": "q-34",
+      "question": "When it says, “It is he who made us and we are his,” what does that mean?",
+      "answer": "As our creator, God is in charge of us. He gets to tell us what is good and right to do.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "memory-verse",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 211
+      }
+    },
+    {
+      "id": "q-35",
+      "question": "Why would we be making bricks?",
+      "answer": "To remember that Pharaoh forced the Israelites to gather straw but still make the same number of mud bricks.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "memory-verse",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 212
+      }
+    },
+    {
+      "id": "q-36",
+      "question": "When Moses and Aaron told Pharaoh to let the Israelites go, what did he say?",
+      "answer": "I won’t listen to the Lord; I don’t even know who he is!",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "Review Activity / Questions",
+        "page": 9,
+        "sourceParagraphIndex": 253
+      }
+    },
+    {
+      "id": "q-37",
+      "question": "How did Pharaoh make the Israelite slaves work harder?",
+      "answer": "They had to gather straw, but still make the same number of bricks",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "Review Activity / Questions",
+        "page": 9,
+        "sourceParagraphIndex": 254
+      }
+    },
+    {
+      "id": "q-38",
+      "question": "When Moses told the people God would rescue them, how did they respond?",
+      "answer": "They didn’t listen because they had lost hope",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "Review Activity / Questions",
+        "page": 9,
+        "sourceParagraphIndex": 255
+      }
+    },
+    {
+      "id": "q-39",
+      "question": "What did God say Pharaoh would do after he saw God’s mighty wonders?",
+      "answer": "He would be stubborn and not let the people go",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "Review Activity / Questions",
+        "page": 9,
+        "sourceParagraphIndex": 256
+      }
+    },
+    {
+      "id": "q-40",
+      "question": "What was the first miracle Aaron did in front of Pharaoh?",
+      "answer": "Turn his staff into a snake",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "Review Activity / Questions",
+        "page": 9,
+        "sourceParagraphIndex": 257
+      }
+    },
+    {
+      "id": "q-41",
+      "question": "What happened when Pharaoh called his evil magicians?",
+      "answer": "They did the same thing with their tricks; Aaron’s snake ate theirs",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "Review Activity / Questions",
+        "page": 9,
+        "sourceParagraphIndex": 258
+      }
+    },
+    {
+      "id": "q-42",
+      "question": "What did Pharaoh do after he saw his magicians do the same trick?",
+      "answer": "He refused to let the Israelites go",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "Review Activity / Questions",
+        "page": 9,
+        "sourceParagraphIndex": 259
+      }
+    },
+    {
+      "id": "q-43",
+      "question": "When Aaron held out his staff by the Nile River, what happened?",
+      "answer": "God turned the water all over into blood",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "Review Activity / Questions",
+        "page": 10,
+        "sourceParagraphIndex": 260
+      }
+    },
+    {
+      "id": "q-44",
+      "question": "What happened when Pharaoh called his evil magicians a second time?",
+      "answer": "They did the same thing with their evil tricks",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "Review Activity / Questions",
+        "page": 10,
+        "sourceParagraphIndex": 261
+      }
+    },
+    {
+      "id": "q-45",
+      "question": "After his magicians turned water into blood, what did Pharaoh do?",
+      "answer": "Refused to let God’s people go",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "Review Activity / Questions",
+        "page": 10,
+        "sourceParagraphIndex": 262
+      }
+    }
+  ],
+  "facts": [
+    {
+      "id": "tf-01",
+      "statement": "Moses and Aaron told Pharaoh to let the Israelites go.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-02",
+      "statement": "Pharaoh agreed to free the Israelites right away.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-03",
+      "statement": "Pharaoh made the Israelites find their own straw for bricks.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-04",
+      "statement": "Pharaoh told the Israelites they could make fewer bricks.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-02"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-05",
+      "statement": "The Israelites had lost hope when Moses promised rescue.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-06",
+      "statement": "God promised to bring His people to the land He had promised.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-07",
+      "statement": "God said Pharaoh would gladly listen to His warnings.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-04"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-08",
+      "statement": "Aaron’s staff turned into a snake before Pharaoh.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-09",
+      "statement": "Pharaoh’s magicians could not make their staffs into snakes.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-06"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-10",
+      "statement": "Aaron’s snake swallowed the magicians’ snakes.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-11",
+      "statement": "The Nile’s water turned into blood when Aaron struck it.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-12",
+      "statement": "Pharaoh freed Israel after the Nile turned into blood.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-13",
+      "statement": "God wanted Egypt to know that He is the Lord.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04",
+        "sn-07"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-14",
+      "statement": "Moses told Pharaoh that Aaron was the king of Egypt.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "teacherReviewRequired": true
+    }
+  ],
+  "vocabulary": {
+    "related": [
+      "Moses",
+      "Aaron",
+      "Pharaoh",
+      "Israelites",
+      "Egypt",
+      "Nile",
+      "Straw",
+      "Bricks",
+      "Staff",
+      "Snake",
+      "Magicians",
+      "Blood",
+      "Miracle",
+      "Plague",
+      "Slaves",
+      "Hope",
+      "Promise",
+      "River",
+      "God",
+      "Lord",
+      "Rescue",
+      "Jesus"
+    ],
+    "unrelated": [
+      "Dove",
+      "Harp",
+      "Sling",
+      "Lion",
+      "Trumpet",
+      "Lamb",
+      "Olives",
+      "Tent"
+    ],
+    "entries": [
+      {
+        "id": "v-01",
+        "term": "Moses",
+        "category": "person",
+        "origin": "source",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05"
+        ]
+      },
+      {
+        "id": "v-02",
+        "term": "Aaron",
+        "category": "person",
+        "origin": "source",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-01",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ]
+      },
+      {
+        "id": "v-03",
+        "term": "Pharaoh",
+        "category": "person",
+        "origin": "source",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-06",
+          "sn-07"
+        ]
+      },
+      {
+        "id": "v-04",
+        "term": "Israelites",
+        "category": "people",
+        "origin": "source",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03"
+        ]
+      },
+      {
+        "id": "v-05",
+        "term": "Egypt",
+        "category": "place",
+        "origin": "source",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-04",
+          "sn-07"
+        ]
+      },
+      {
+        "id": "v-06",
+        "term": "Nile",
+        "category": "place",
+        "origin": "source",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "id": "v-07",
+        "term": "Straw",
+        "category": "object",
+        "origin": "source",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "id": "v-08",
+        "term": "Bricks",
+        "category": "object",
+        "origin": "source",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "id": "v-09",
+        "term": "Staff",
+        "category": "object",
+        "origin": "source",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ]
+      },
+      {
+        "id": "v-10",
+        "term": "Snake",
+        "category": "animal",
+        "origin": "source",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-05",
+          "sn-06"
+        ]
+      },
+      {
+        "id": "v-11",
+        "term": "Magicians",
+        "category": "people",
+        "origin": "source",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "id": "v-12",
+        "term": "Blood",
+        "category": "object",
+        "origin": "source",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "id": "v-13",
+        "term": "Miracle",
+        "category": "concept",
+        "origin": "source",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-04",
+          "sn-05",
+          "sn-07"
+        ]
+      },
+      {
+        "id": "v-14",
+        "term": "Plague",
+        "category": "concept",
+        "origin": "source",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "id": "v-15",
+        "term": "Slaves",
+        "category": "people",
+        "origin": "source",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03"
+        ]
+      },
+      {
+        "id": "v-16",
+        "term": "Hope",
+        "category": "concept",
+        "origin": "source",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "id": "v-17",
+        "term": "Promise",
+        "category": "concept",
+        "origin": "source",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-03",
+          "sn-04"
+        ]
+      },
+      {
+        "id": "v-18",
+        "term": "River",
+        "category": "place",
+        "origin": "source",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "id": "v-19",
+        "term": "God",
+        "category": "person",
+        "origin": "source",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-07"
+        ]
+      },
+      {
+        "id": "v-20",
+        "term": "Lord",
+        "category": "person",
+        "origin": "source",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-01",
+          "sn-04",
+          "sn-07"
+        ]
+      },
+      {
+        "id": "v-21",
+        "term": "Rescue",
+        "category": "action",
+        "origin": "source",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-03",
+          "sn-04"
+        ]
+      },
+      {
+        "id": "v-22",
+        "term": "Jesus",
+        "category": "application",
+        "origin": "source",
+        "scope": "application",
+        "source": {
+          "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+          "section": "Important Idea/Application",
+          "page": 6,
+          "sourceParagraphIndex": 196
+        }
+      },
+      {
+        "id": "v-23",
+        "term": "Dove",
+        "category": "plausible Bible-era distractor",
+        "scope": "unrelated",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-24",
+        "term": "Harp",
+        "category": "plausible Bible-era distractor",
+        "scope": "unrelated",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-25",
+        "term": "Sling",
+        "category": "plausible Bible-era distractor",
+        "scope": "unrelated",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-26",
+        "term": "Lion",
+        "category": "plausible Bible-era distractor",
+        "scope": "unrelated",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-27",
+        "term": "Trumpet",
+        "category": "plausible Bible-era distractor",
+        "scope": "unrelated",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-28",
+        "term": "Lamb",
+        "category": "plausible Bible-era distractor",
+        "scope": "unrelated",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-29",
+        "term": "Olives",
+        "category": "plausible Bible-era distractor",
+        "scope": "unrelated",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-30",
+        "term": "Tent",
+        "category": "plausible Bible-era distractor",
+        "scope": "unrelated",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ]
+  },
+  "characters": [
+    {
+      "id": "ch-01",
+      "name": "Moses",
+      "origin": "source",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04"
+      ],
+      "clues": [
+        {
+          "text": "I brought God’s message to Pharaoh with my brother Aaron.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-01"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch-02",
+      "name": "Aaron",
+      "origin": "source",
+      "sourceIds": [
+        "sn-01",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "clues": [
+        {
+          "text": "I threw down my staff and God turned it into a snake.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-05"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch-03",
+      "name": "Pharaoh",
+      "origin": "source",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-06",
+        "sn-07"
+      ],
+      "clues": [
+        {
+          "text": "I was the king who refused to let the Israelites go.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-01"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch-04",
+      "name": "Israelites",
+      "origin": "source",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03"
+      ],
+      "clues": [
+        {
+          "text": "We were made to work harder and gather straw for bricks.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-02"
+          ]
+        }
+      ]
+    }
+  ],
+  "matchingPairs": [
+    {
+      "id": "mp-01",
+      "left": "Pharaoh",
+      "right": "King",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    {
+      "id": "mp-02",
+      "left": "Nile",
+      "right": "River",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ]
+    },
+    {
+      "id": "mp-03",
+      "left": "Straw",
+      "right": "Bricks",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ]
+    },
+    {
+      "id": "mp-04",
+      "left": "Aaron",
+      "right": "Brother",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-05"
+      ]
+    },
+    {
+      "id": "mp-05",
+      "left": "Miracle",
+      "right": "Wonder",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04",
+        "sn-05"
+      ]
+    },
+    {
+      "id": "mp-06",
+      "left": "Plague",
+      "right": "Punishment",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ]
+    }
+  ],
+  "drawingPrompts": [
+    {
+      "id": "dp-01",
+      "prompt": "Moses and Aaron standing before Pharaoh",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    {
+      "id": "dp-02",
+      "prompt": "Israelite workers gathering straw and making bricks",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ]
+    },
+    {
+      "id": "dp-03",
+      "prompt": "Aaron’s snake swallowing the other snakes in Pharaoh’s palace",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05",
+        "sn-06"
+      ]
+    },
+    {
+      "id": "dp-04",
+      "prompt": "the Nile River turning red as Aaron holds out his staff",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ]
+    }
+  ],
+  "keyPhrases": [
+    {
+      "id": "kp-01",
+      "text": "Know that the Lord is God.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "Important Idea",
+        "page": 6,
+        "sourceParagraphIndex": 169,
+        "details": "Big Idea all-caps display normalized; God capitalized following editorial instruction."
+      }
+    },
+    {
+      "id": "kp-02",
+      "text": "God promised to rescue His people from Egypt.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ]
+    },
+    {
+      "id": "kp-03",
+      "text": "God used mighty miracles so Egypt would know that He is the Lord.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04",
+        "sn-07"
+      ]
+    },
+    {
+      "id": "kp-04",
+      "text": "Pharaoh refused to let the Israelites go.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-07"
+      ]
+    },
+    {
+      "id": "kp-05",
+      "text": "The Lord is powerful and cares for His people.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "Important Idea/Application",
+        "page": 6,
+        "sourceParagraphIndex": 188
+      }
+    },
+    {
+      "id": "kp-review-1",
+      "text": "God turned Aaron's staff into a snake.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "theologicalApplications": [
+    {
+      "id": "ta-01",
+      "text": "The lesson teaches children to know that the Lord is God.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "Important Idea",
+        "page": 6,
+        "sourceParagraphIndex": 169
+      }
+    },
+    {
+      "id": "ta-02",
+      "text": "God planned to show Pharaoh and Egypt His power through miracles.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "Important Idea/Application",
+        "page": 5,
+        "sourceParagraphIndex": 166
+      }
+    },
+    {
+      "id": "ta-03",
+      "text": "The Lord uses His power to rescue His people.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "Important Idea/Application",
+        "page": 6,
+        "sourceParagraphIndex": 188
+      }
+    },
+    {
+      "id": "ta-04",
+      "text": "The lesson points to Jesus as the rescuer of sinners.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+        "section": "Important Idea/Application",
+        "page": 6,
+        "sourceParagraphIndex": 196
+      }
+    }
+  ],
+  "preparedActivities": {
+    "drawPicture": {
+      "prompt": "Moses and Aaron standing before Pharaoh",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    "multipleChoice": [
+      {
+        "id": "mc-01",
+        "question": "What did Moses and Aaron ask Pharaoh?",
+        "correctAnswer": "Let the Israelites go",
+        "choices": [
+          {
+            "text": "Let the Israelites go",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Be nicer to us",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Give us your country",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "source": {
+          "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+          "section": "Story teaching",
+          "page": 1,
+          "sourceParagraphIndex": 35
+        },
+        "sourceIds": [
+          "sn-01"
+        ],
+        "sourceQuestionIds": [
+          "q-09"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-02",
+        "question": "What extra work did Pharaoh give to the Israelites?",
+        "correctAnswer": "Gather their own straw",
+        "choices": [
+          {
+            "text": "Gather their own straw",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Build the pyramids",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Guard the palace",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "source": {
+          "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+          "section": "Story teaching",
+          "page": 2,
+          "sourceParagraphIndex": 57
+        },
+        "sourceIds": [
+          "sn-02"
+        ],
+        "sourceQuestionIds": [
+          "q-37"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-03",
+        "question": "Why did the Israelites ignore Moses’ rescue message?",
+        "correctAnswer": "They had lost hope",
+        "choices": [
+          {
+            "text": "They had lost hope",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "They loved Egypt",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "They did not know Moses",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "source": {
+          "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+          "section": "Story teaching",
+          "page": 3,
+          "sourceParagraphIndex": 82
+        },
+        "sourceIds": [
+          "sn-03"
+        ],
+        "sourceQuestionIds": [
+          "q-38"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-04",
+        "question": "What happened when Aaron threw down his staff?",
+        "correctAnswer": "God turned it into a snake",
+        "choices": [
+          {
+            "text": "God turned it into a snake",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "It became a bird",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "It split into two pieces",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "source": {
+          "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+          "section": "Story teaching",
+          "page": 4,
+          "sourceParagraphIndex": 104
+        },
+        "sourceIds": [
+          "sn-05"
+        ],
+        "sourceQuestionIds": [
+          "q-40"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-05",
+        "question": "What happened when Aaron struck the Nile River?",
+        "correctAnswer": "Its water turned to blood",
+        "choices": [
+          {
+            "text": "Its water turned to blood",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "It dried up completely",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "It filled with sand",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "source": {
+          "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+          "section": "Story teaching",
+          "page": 5,
+          "sourceParagraphIndex": 146
+        },
+        "sourceIds": [
+          "sn-07"
+        ],
+        "sourceQuestionIds": [
+          "q-43"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-06",
+        "question": "What did God want the Egyptians to learn?",
+        "correctAnswer": "That He is the Lord",
+        "choices": [
+          {
+            "text": "That He is the Lord",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "That Pharaoh is a god",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "That Moses is powerful",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "source": {
+          "filename": "OT 28 Lesson (Moses and Aaron Speak to Pharaoh).odt",
+          "section": "Important Idea/Application",
+          "page": 5,
+          "sourceParagraphIndex": 166
+        },
+        "sourceIds": [
+          "sn-04",
+          "sn-07"
+        ],
+        "sourceQuestionIds": [
+          "q-31"
+        ],
+        "teacherReviewRequired": true
+      }
+    ],
+    "trueFalse": {
+      "statement": "The Nile’s water turned into blood when Aaron struck it.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": false,
+      "factId": "tf-11"
+    },
+    "firstLetters": {
+      "reference": "Psalm 100:3",
+      "verse": "Know that the LORD is God. It is He who made us, and we are His; we are His people, and the sheep of His pasture.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "oddWords": {
+      "related": [
+        "PHARAOH",
+        "SNAKE",
+        "NILE",
+        "STRAW"
+      ],
+      "unrelated": [
+        "DOVE",
+        "HARP",
+        "SLING",
+        "LION",
+        "Bat"
+      ],
+      "origin": "adapted",
+      "unrelatedOrigin": "suggested",
+      "teacherReviewRequired": true,
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-05",
+        "sn-07"
+      ]
+    },
+    "unscrambleWords": {
+      "answers": [
+        "SNAKE",
+        "BLOOD"
+      ],
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05",
+        "sn-07"
+      ]
+    },
+    "checkboxes": {
+      "correct": [
+        "Moses",
+        "Aaron",
+        "Bricks",
+        "Blood"
+      ],
+      "incorrect": [
+        "Trumpet",
+        "Lamb",
+        "Olives",
+        "Tent",
+        "Chicken"
+      ],
+      "origin": "adapted",
+      "incorrectOrigin": "suggested",
+      "teacherReviewRequired": true,
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-07"
+      ]
+    },
+    "whoAmI": {
+      "clue": "I spoke for Moses and threw down a staff that God turned into a snake. Who am I?",
+      "answer": "Aaron",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-05"
+      ]
+    },
+    "matchWords": [
+      {
+        "id": "mp-01",
+        "left": "Pharaoh",
+        "right": "King",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "id": "mp-02",
+        "left": "Nile",
+        "right": "River",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "id": "mp-03",
+        "left": "Straw",
+        "right": "Bricks",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "id": "mp-04",
+        "left": "Aaron",
+        "right": "Brother",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01",
+          "sn-05"
+        ]
+      },
+      {
+        "id": "mp-05",
+        "left": "Miracle",
+        "right": "Wonder",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04",
+          "sn-05"
+        ]
+      },
+      {
+        "id": "mp-06",
+        "left": "Plague",
+        "right": "Punishment",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      }
+    ],
+    "finishVerse": {
+      "reference": "Psalm 100:3",
+      "markedVerse": "[Know] that the [LORD] is [God]. It is He who [made] us, and we are His; we are His [people], and the [sheep] of His [pasture].",
+      "sourceVerse": "Know that the LORD is God. It is He who made us, and we are His; we are His people, and the sheep of His pasture.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "unscrambleVerse": {
+      "reference": "Psalm 100:3",
+      "markedVerse": "[Know] that the [LORD] is [God]. It is He who [made] us, and we are His; we are His [people], and the [sheep] of His [pasture].",
+      "sourceVerse": "Know that the LORD is God. It is He who made us, and we are His; we are His people, and the sheep of His pasture.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "circleMistakes": {
+      "paragraph": "Moses and Aaron went to the king of Israel and asked him to free the Israelites. Pharaoh said yes. He told the Israelites to gather their own sand to make bricks. When Moses promised that God would rescue them, the people were full of joy. Aaron’s staff turned into a bird in front of Pharaoh. Later, when Aaron struck the Nile, its water turned into milk.",
+      "mistakeCount": 6,
+      "mistakes": [
+        {
+          "incorrect": "Israel",
+          "correction": "Egypt"
+        },
+        {
+          "incorrect": "said yes",
+          "correction": "said no"
+        },
+        {
+          "incorrect": "sand",
+          "correction": "straw"
+        },
+        {
+          "incorrect": "were full of joy",
+          "correction": "had lost hope"
+        },
+        {
+          "incorrect": "bird",
+          "correction": "snake"
+        },
+        {
+          "incorrect": "milk",
+          "correction": "blood"
+        }
+      ],
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-05",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "mediumWordSearch": {
+      "words": [
+        "MOSES",
+        "AARON",
+        "STRAW",
+        "BRICKS",
+        "SNAKE",
+        "BLOOD"
+      ],
+      "origin": "adapted"
+    },
+    "trueFalseMaze": {
+      "statement": "Pharaoh freed Israel after the Nile turned into blood.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": true,
+      "factId": "tf-12"
+    },
+    "bigIdeaCryptogram": {
+      "phrase": "Aaron threw down his staff, and God turned it into a snake.",
+      "origin": "adapted",
+      "teacherReviewRequired": false,
+      "sourceIds": [
+        "sn-05"
+      ]
+    },
+    "upsideDownVerse": {
+      "reference": "Psalm 100:3",
+      "verse": "Know that the LORD is God. It is He who made us, and we are His; we are His people, and the sheep of His pasture.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "connectBigIdea": {
+      "phrase": "The Lord is powerful and cares for His people.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03",
+        "sn-04"
+      ]
+    },
+    "pixelPicture": {
+      "phrase": "The Lord showed His power through miracles in Egypt.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04",
+        "sn-05",
+        "sn-07"
+      ]
+    },
+    "finishStory": {
+      "markedParagraph": "Moses and Aaron spoke to [PHARAOH]. They said the [LORD] wanted him to let the Israelites go, but he refused. Pharaoh made God’s people work [HARDER] by making them gather their own [STRAW] for bricks. Moses shared God’s promise to rescue them, but they had lost [HOPE]. God told Moses He would do mighty [MIRACLES] so Egypt would know who He is. When Aaron threw down his [STAFF], God turned it into a [SNAKE]. Pharaoh’s magicians did the same [TRICK], but Aaron’s snake swallowed their snakes. Then Aaron struck the [RIVER], and God turned its water into [BLOOD]. Pharaoh still refused to let God’s people [GO].",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "storyOrder": [
+      {
+        "order": 1,
+        "text": "Moses and Aaron told Pharaoh to let the Israelites go, but he said no.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "order": 2,
+        "text": "Pharaoh made the Israelites gather their own straw and make just as many bricks.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "order": 3,
+        "text": "God promised to rescue His people, but the Israelites had lost hope.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "order": 4,
+        "text": "God said He would use mighty miracles to show Egypt that He is the Lord.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "order": 5,
+        "text": "Aaron threw down his staff, and God turned it into a snake.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "order": 6,
+        "text": "Aaron’s snake swallowed the other snakes, but Pharaoh still would not listen.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "order": 7,
+        "text": "God turned the Nile River to blood, but Pharaoh would not free the Israelites.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      }
+    ],
+    "sortStory": [
+      {
+        "statement": "Moses and Aaron told Pharaoh to let the Israelites go.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": false,
+        "factId": "tf-01"
+      },
+      {
+        "statement": "Pharaoh agreed to free the Israelites right away.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": true,
+        "factId": "tf-02"
+      },
+      {
+        "statement": "Pharaoh made the Israelites find their own straw for bricks.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": false,
+        "factId": "tf-03"
+      },
+      {
+        "statement": "Pharaoh told the Israelites they could make fewer bricks.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": true,
+        "factId": "tf-04"
+      },
+      {
+        "statement": "The Israelites had lost hope when Moses promised rescue.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": false,
+        "factId": "tf-05"
+      },
+      {
+        "statement": "God said Pharaoh would gladly listen to His warnings.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-04"
+        ],
+        "teacherReviewRequired": true,
+        "factId": "tf-07"
+      },
+      {
+        "statement": "Aaron’s staff turned into a snake before Pharaoh.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ],
+        "teacherReviewRequired": false,
+        "factId": "tf-08"
+      },
+      {
+        "statement": "Pharaoh’s magicians could not make their staffs into snakes.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-06"
+        ],
+        "teacherReviewRequired": true,
+        "factId": "tf-09"
+      }
+    ],
+    "drawStory": [
+      {
+        "prompt": "Moses and Aaron told Pharaoh to let the Israelites go, but he said no.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "prompt": "Pharaoh made the Israelites gather their own straw and make just as many bricks.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "prompt": "God promised to rescue His people, but the Israelites had lost hope.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "prompt": "Aaron threw down his staff, and God turned it into a snake.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "prompt": "Aaron’s snake swallowed the other snakes, but Pharaoh still would not listen.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "prompt": "God turned the Nile River to blood, but Pharaoh would not free the Israelites.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      }
+    ],
+    "wordSearch": {
+      "words": [
+        "MOSES",
+        "AARON",
+        "PHARAOH",
+        "EGYPT",
+        "STRAW",
+        "BRICKS",
+        "STAFF",
+        "SNAKE",
+        "NILE",
+        "BLOOD",
+        "MIRACLE"
+      ],
+      "origin": "adapted"
+    },
+    "verseCryptogram": {
+      "reference": "Psalm 100:3",
+      "verse": "Know that the LORD is God. It is He who made us, and we are His; we are His people, and the sheep of His pasture.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "crossword": [
+      {
+        "answer": "MOSES",
+        "clue": "Who brought God’s message to Pharaoh with Aaron?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "answer": "AARON",
+        "clue": "Who threw down the staff that became a snake?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "answer": "PHARAOH",
+        "clue": "Who was the stubborn king of Egypt?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "answer": "STRAW",
+        "clue": "What did the Israelites have to gather for bricks?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "answer": "BRICKS",
+        "clue": "What did the Israelite workers make?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "answer": "SNAKE",
+        "clue": "What did Aaron’s staff become?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "answer": "NILE",
+        "clue": "Which river did Aaron strike with his staff?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "answer": "BLOOD",
+        "clue": "What did the Nile’s water turn into?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "answer": "EGYPT",
+        "clue": "What country was Pharaoh in charge of?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "answer": "HOPE",
+        "clue": "What had the Israelites lost?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      }
+    ],
+    "spiralVerse": {
+      "reference": "Psalm 100:3",
+      "verse": "Know that the LORD is God. It is He who made us, and we are His; we are His people, and the sheep of His pasture.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "connectVerse": {
+      "reference": "Psalm 100:3",
+      "verse": "Know that the LORD is God. It is He who made us, and we are His; we are His people, and the sheep of His pasture.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    }
+  },
+  "moduleReadiness": [
+    {
+      "moduleName": "Draw a Picture",
+      "moduleId": "draw-picture",
+      "size": "Small",
+      "preparedActivityKey": "drawPicture",
+      "status": "READY",
+      "contentValidation": "Prepared content passes local text/structure checks; app generator not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Test actual generator and three worksheet presets in Review Studio before approval."
+    },
+    {
+      "moduleName": "Multiple Choice Question",
+      "moduleId": "multiple-choice",
+      "size": "Small",
+      "preparedActivityKey": "multipleChoice",
+      "status": "READY",
+      "contentValidation": "Prepared content passes local text/structure checks; app generator not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Test actual generator and three worksheet presets in Review Studio before approval."
+    },
+    {
+      "moduleName": "True or False Questions",
+      "moduleId": "true-false",
+      "size": "Small",
+      "preparedActivityKey": "trueFalse",
+      "status": "READY",
+      "contentValidation": "Prepared content passes local text/structure checks; app generator not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Test actual generator and three worksheet presets in Review Studio before approval."
+    },
+    {
+      "moduleName": "First Letter Challenge",
+      "moduleId": "first-letters",
+      "size": "Small",
+      "preparedActivityKey": "firstLetters",
+      "status": "READY",
+      "contentValidation": "Prepared content passes local text/structure checks; app generator not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Test actual generator and three worksheet presets in Review Studio before approval."
+    },
+    {
+      "moduleName": "What’s Doesn’t Belong?",
+      "moduleId": "odd-words",
+      "size": "Small",
+      "preparedActivityKey": "oddWords",
+      "status": "READY",
+      "contentValidation": "Prepared content passes local text/structure checks; app generator not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Test actual generator and three worksheet presets in Review Studio before approval."
+    },
+    {
+      "moduleName": "Unscramble the Words",
+      "moduleId": "unscramble-words",
+      "size": "Small",
+      "preparedActivityKey": "unscrambleWords",
+      "status": "READY",
+      "contentValidation": "Prepared content passes local text/structure checks; app generator not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Test actual generator and three worksheet presets in Review Studio before approval."
+    },
+    {
+      "moduleName": "Checkboxes",
+      "moduleId": "checkboxes",
+      "size": "Small",
+      "preparedActivityKey": "checkboxes",
+      "status": "READY",
+      "contentValidation": "Prepared content passes local text/structure checks; app generator not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Test actual generator and three worksheet presets in Review Studio before approval."
+    },
+    {
+      "moduleName": "Who Am I?",
+      "moduleId": "who-am-i",
+      "size": "Small",
+      "preparedActivityKey": "whoAmI",
+      "status": "READY",
+      "contentValidation": "Prepared content passes local text/structure checks; app generator not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Test actual generator and three worksheet presets in Review Studio before approval."
+    },
+    {
+      "moduleName": "Match the Words",
+      "moduleId": "match-words",
+      "size": "Medium",
+      "preparedActivityKey": "matchWords",
+      "status": "READY",
+      "contentValidation": "Prepared content passes local text/structure checks; app generator not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Test actual generator and three worksheet presets in Review Studio before approval."
+    },
+    {
+      "moduleName": "Finish the Verse",
+      "moduleId": "finish-verse",
+      "size": "Medium",
+      "preparedActivityKey": "finishVerse",
+      "status": "READY",
+      "contentValidation": "Prepared content passes local text/structure checks; app generator not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Test actual generator and three worksheet presets in Review Studio before approval."
+    },
+    {
+      "moduleName": "Unscramble the Verse",
+      "moduleId": "unscramble-verse",
+      "size": "Medium",
+      "preparedActivityKey": "unscrambleVerse",
+      "status": "READY",
+      "contentValidation": "Prepared content passes local text/structure checks; app generator not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Test actual generator and three worksheet presets in Review Studio before approval."
+    },
+    {
+      "moduleName": "Circle the Mistakes",
+      "moduleId": "circle-mistakes",
+      "size": "Medium",
+      "preparedActivityKey": "circleMistakes",
+      "status": "READY",
+      "contentValidation": "Prepared content passes local text/structure checks; app generator not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Test actual generator and three worksheet presets in Review Studio before approval."
+    },
+    {
+      "moduleName": "Word Search (Medium)",
+      "moduleId": "medium-word-search",
+      "size": "Medium",
+      "preparedActivityKey": "mediumWordSearch",
+      "status": "READY",
+      "contentValidation": "Prepared content passes local text/structure checks; app generator not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Test actual generator and three worksheet presets in Review Studio before approval."
+    },
+    {
+      "moduleName": "True or False Maze",
+      "moduleId": "true-false-maze",
+      "size": "Medium",
+      "preparedActivityKey": "trueFalseMaze",
+      "status": "READY",
+      "contentValidation": "Prepared content passes local text/structure checks; app generator not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Test actual generator and three worksheet presets in Review Studio before approval."
+    },
+    {
+      "moduleName": "Solve the Code",
+      "moduleId": "big-idea-cryptogram",
+      "size": "Medium",
+      "preparedActivityKey": "bigIdeaCryptogram",
+      "status": "READY",
+      "contentValidation": "Prepared content passes local text/structure checks; app generator not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Test actual generator and three worksheet presets in Review Studio before approval."
+    },
+    {
+      "moduleName": "Upside Down Verse",
+      "moduleId": "upside-down-verse",
+      "size": "Medium",
+      "preparedActivityKey": "upsideDownVerse",
+      "status": "READY",
+      "contentValidation": "Prepared content passes local text/structure checks; app generator not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Test actual generator and three worksheet presets in Review Studio before approval."
+    },
+    {
+      "moduleName": "Connect the Phrase",
+      "moduleId": "connect-big-idea",
+      "size": "Medium",
+      "preparedActivityKey": "connectBigIdea",
+      "status": "READY",
+      "contentValidation": "Prepared content passes local text/structure checks; app generator not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Test actual generator and three worksheet presets in Review Studio before approval."
+    },
+    {
+      "moduleName": "Pixel Picture",
+      "moduleId": "pixel-picture",
+      "size": "Medium",
+      "preparedActivityKey": "pixelPicture",
+      "status": "READY",
+      "contentValidation": "Prepared content passes local text/structure checks; app generator not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Test actual generator and three worksheet presets in Review Studio before approval."
+    },
+    {
+      "moduleName": "Finish the Story",
+      "moduleId": "finish-story",
+      "size": "Large",
+      "preparedActivityKey": "finishStory",
+      "status": "READY",
+      "contentValidation": "Prepared content passes local text/structure checks; app generator not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Test actual generator and three worksheet presets in Review Studio before approval."
+    },
+    {
+      "moduleName": "Story Order",
+      "moduleId": "story-order",
+      "size": "Large",
+      "preparedActivityKey": "storyOrder",
+      "status": "READY",
+      "contentValidation": "Prepared content passes local text/structure checks; app generator not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Test actual generator and three worksheet presets in Review Studio before approval."
+    },
+    {
+      "moduleName": "Sort the Story",
+      "moduleId": "sort-story",
+      "size": "Large",
+      "preparedActivityKey": "sortStory",
+      "status": "READY",
+      "contentValidation": "Prepared content passes local text/structure checks; app generator not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Test actual generator and three worksheet presets in Review Studio before approval."
+    },
+    {
+      "moduleName": "Draw the Story",
+      "moduleId": "draw-story",
+      "size": "Large",
+      "preparedActivityKey": "drawStory",
+      "status": "READY",
+      "contentValidation": "Prepared content passes local text/structure checks; app generator not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Test actual generator and three worksheet presets in Review Studio before approval."
+    },
+    {
+      "moduleName": "Word Search (Large)",
+      "moduleId": "word-search",
+      "size": "Large",
+      "preparedActivityKey": "wordSearch",
+      "status": "READY",
+      "contentValidation": "Prepared content passes local text/structure checks; app generator not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Test actual generator and three worksheet presets in Review Studio before approval."
+    },
+    {
+      "moduleName": "Verse Cryptogram",
+      "moduleId": "verse-cryptogram",
+      "size": "Large",
+      "preparedActivityKey": "verseCryptogram",
+      "status": "ADAPTATION NEEDED",
+      "contentValidation": "Prepared content passes local text/structure checks; app generator not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Test actual generator and three worksheet presets in Review Studio before approval."
+    },
+    {
+      "moduleName": "Crossword",
+      "moduleId": "crossword",
+      "size": "Large",
+      "preparedActivityKey": "crossword",
+      "status": "ADAPTATION NEEDED",
+      "contentValidation": "Prepared content passes local text/structure checks; app generator not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Test actual generator and three worksheet presets in Review Studio before approval."
+    },
+    {
+      "moduleName": "Spiral Verse",
+      "moduleId": "spiral-verse",
+      "size": "Large",
+      "preparedActivityKey": "spiralVerse",
+      "status": "ADAPTATION NEEDED",
+      "contentValidation": "Prepared content passes local text/structure checks; app generator not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Test actual generator and three worksheet presets in Review Studio before approval."
+    },
+    {
+      "moduleName": "Connect the Verse",
+      "moduleId": "connect-verse",
+      "size": "Large",
+      "preparedActivityKey": "connectVerse",
+      "status": "ADAPTATION NEEDED",
+      "contentValidation": "Prepared content passes local text/structure checks; app generator not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Test actual generator and three worksheet presets in Review Studio before approval."
+    }
+  ],
+  "reviewFlags": [
+    {
+      "id": "rf-01",
+      "priority": "high",
+      "type": "scripture-excerpt",
+      "text": "The original ESV excerpt of Psalm 100:3a differs from the proposed BSB excerpt. Confirm the BSB selection, punctuation and excerpt end in Review Studio; Scripture-rights approval is separate.",
+      "affectedModules": [
+        "first-letters",
+        "finish-verse",
+        "unscramble-verse",
+        "upside-down-verse",
+        "verse-cryptogram",
+        "spiral-verse",
+        "connect-verse"
+      ]
+    },
+    {
+      "id": "rf-02",
+      "priority": "high",
+      "type": "multiple-choice",
+      "text": "Review the twelve suggested incorrect choices across six Multiple Choice questions.",
+      "affectedModules": [
+        "multiple-choice"
+      ]
+    },
+    {
+      "id": "rf-03",
+      "priority": "high",
+      "type": "suggested-facts",
+      "text": "Approve the six suggested false statements. Confirm their wording is clearly false without tricky assumptions.",
+      "affectedModules": [
+        "true-false",
+        "sort-story",
+        "true-false-maze"
+      ]
+    },
+    {
+      "id": "rf-04",
+      "priority": "medium",
+      "type": "sensitive-theology",
+      "text": "The original lesson discusses Egyptian magic, possible demons, slavery, and God’s punishment. The cause of the magicians’ tricks is explicitly uncertain in the lesson and is not asserted as fact in prepared activities.",
+      "affectedModules": [
+        "multiple-choice",
+        "finish-story",
+        "story-order",
+        "sort-story"
+      ]
+    },
+    {
+      "id": "rf-05",
+      "priority": "medium",
+      "type": "circle-mistakes",
+      "text": "Review the six deliberate mistakes and corrections for clarity and reading level.",
+      "affectedModules": [
+        "circle-mistakes"
+      ]
+    },
+    {
+      "id": "rf-06",
+      "priority": "medium",
+      "type": "distractors",
+      "text": "Odd Words uses Dove, Harp, Sling and Lion; Checkboxes uses Trumpet, Lamb, Olives and Tent. Check that both distinct groups are clearly unrelated to OT28.",
+      "affectedModules": [
+        "odd-words",
+        "checkboxes"
+      ]
+    },
+    {
+      "id": "rf-07",
+      "priority": "medium",
+      "type": "drawing",
+      "text": "Review four short Small drawing scenes and six full-sentence Large captions (drawStory reuses storyOrder).",
+      "affectedModules": [
+        "draw-picture",
+        "draw-story"
+      ]
+    },
+    {
+      "id": "rf-08",
+      "priority": "medium",
+      "type": "source-adaptation",
+      "text": "Review the child-friendly Story Order, Finish the Story, and phrase activities against the seven preserved original Story Notes.",
+      "affectedModules": [
+        "finish-story",
+        "story-order",
+        "draw-story",
+        "pixel-picture"
+      ]
+    },
+    {
+      "id": "rf-09",
+      "priority": "medium",
+      "type": "big-idea-capitalization",
+      "text": "The original Important Idea text uses font-dependent lowercase lettering. It is editorially normalized to “Know that the Lord is God.”, capitalizing God as requested.",
+      "affectedModules": [
+        "big-idea-cryptogram"
+      ]
+    },
+    {
+      "id": "rf-10",
+      "priority": "medium",
+      "type": "generation-testing",
+      "text": "Run all 27 actual activity preflight checks plus puzzle/grid generators and all three numbered presets; no live generator or preset run is claimed.",
+      "affectedModules": [
+        "draw-picture",
+        "multiple-choice",
+        "true-false",
+        "first-letters",
+        "odd-words",
+        "unscramble-words",
+        "checkboxes",
+        "who-am-i",
+        "match-words",
+        "finish-verse",
+        "unscramble-verse",
+        "circle-mistakes",
+        "medium-word-search",
+        "true-false-maze",
+        "big-idea-cryptogram",
+        "upside-down-verse",
+        "connect-big-idea",
+        "pixel-picture",
+        "finish-story",
+        "story-order",
+        "sort-story",
+        "draw-story",
+        "word-search",
+        "verse-cryptogram",
+        "crossword",
+        "spiral-verse",
+        "connect-verse"
+      ]
+    },
+    {
+      "id": "rf-11",
+      "priority": "medium",
+      "type": "crossword",
+      "text": "All nine crossword clues are prepared but a successful playable grid has not been proven.",
+      "affectedModules": [
+        "crossword"
+      ]
+    },
+    {
+      "id": "rf-12",
+      "priority": "low",
+      "type": "prior-lesson-boundary",
+      "text": "OT28 includes only the Nile turning to blood. Do not populate the other nine plagues from the later lessons.",
+      "affectedModules": [
+        "finish-story",
+        "story-order",
+        "word-search"
+      ]
+    },
+    {
+      "id": "rf-13",
+      "priority": "low",
+      "type": "source-question-bank",
+      "text": "Preserve all original questions, including repetitive and context-dependent prompts. The prepared Multiple Choice list is a separate short selection.",
+      "affectedModules": [
+        "multiple-choice"
+      ]
+    }
+  ],
+  "publication": {
+    "status": "approved",
+    "approved": true,
+    "notes": "Awaiting teacher approval, BSB excerpt selection and separate Scripture rights signoff. No GitHub publication.",
+    "teacherSignoff": {
+      "reviewer": "Andrew Doane",
+      "date": "2026-11-04",
+      "notes": "Approved with verified BSB verse through Curriculum Review Studio"
+    },
+    "scriptureRights": {
+      "status": "cleared",
+      "basis": "Berean Standard Bible (BSB), dedicated to the public domain on April 30, 2023. Official terms: https://berean.bible/terms.htm. Scripture text confirmed against https://bereanbible.com/bsb.txt.",
+      "reviewedBy": "Andrew Doane",
+      "reviewedOn": "2026-11-04"
+    },
+    "resolvedReviewFlagIds": []
+  },
+  "validation": {
+    "basis": "Original conversion tests predate teacher-approved BSB; revalidate actual engines and content after export.",
+    "allTextChecksPassed": false,
+    "checks": [
+      {
+        "check": "Seven story notes preserved verbatim from ODT paragraphs",
+        "passed": true
+      },
+      {
+        "check": "Story note IDs/orders are stable, distinct and chronological",
+        "passed": true
+      },
+      {
+        "check": "Source emphasis words preserved",
+        "passed": true
+      },
+      {
+        "check": "All extracted questions exist in original source paragraph",
+        "passed": true
+      },
+      {
+        "check": "Source questions and review questions separate from MC bank",
+        "passed": true
+      },
+      {
+        "check": "All 27 required prepared activities are included",
+        "passed": true
+      },
+      {
+        "check": "Prepared modules use exactly the 27 unique documented IDs",
+        "passed": true
+      },
+      {
+        "check": "No source reference points to a missing Story Note",
+        "passed": true
+      },
+      {
+        "check": "Multiple Choice target is 4 to 6",
+        "passed": true
+      },
+      {
+        "check": "Each MC has one correct and two distinct wrong choices",
+        "passed": true
+      },
+      {
+        "check": "MC lengths respect child-friendly constraints",
+        "passed": true
+      },
+      {
+        "check": "Suggested MC wrong choices are consistently flagged",
+        "passed": true
+      },
+      {
+        "check": "True/False pool has 12–16 facts and balanced true/false",
+        "passed": true
+      },
+      {
+        "check": "False facts are suggested and require review",
+        "passed": true
+      },
+      {
+        "check": "True/False statements unique and under 80 characters",
+        "passed": true
+      },
+      {
+        "check": "Sort uses eight distinct known fact IDs",
+        "passed": true
+      },
+      {
+        "check": "Sort, Small True/False and Maze use ten separate fact IDs",
+        "passed": true
+      },
+      {
+        "check": "Maze statement is no more than 65 characters",
+        "passed": true
+      },
+      {
+        "check": "Four alternative facts remain unused",
+        "passed": true
+      },
+      {
+        "check": "Exactly four distinct Small drawing scenes under 105 chars",
+        "passed": true
+      },
+      {
+        "check": "Small drawing prompts do not include Draw or punctuation",
+        "passed": true
+      },
+      {
+        "check": "All six matching pairs use one word on both sides",
+        "passed": true
+      },
+      {
+        "check": "Odd Words and Checkboxes do not recycle any entries",
+        "passed": true
+      },
+      {
+        "check": "Odd Words has 4+4 child-friendly short words",
+        "passed": true
+      },
+      {
+        "check": "Checkbox choices have distinct right/wrong sets and review flag",
+        "passed": true
+      },
+      {
+        "check": "Circle Mistakes has exactly 6 intentional errors and fixes",
+        "passed": true
+      },
+      {
+        "check": "Circle Mistakes corrections based on the lesson",
+        "passed": true
+      },
+      {
+        "check": "Seven clear chronological Story Order sentences <=115 characters",
+        "passed": true
+      },
+      {
+        "check": "Large Draw the Story reuses Story Order and has 4-6 captions <=105",
+        "passed": true
+      },
+      {
+        "check": "Large caption source IDs match the corresponding Story Order sentence",
+        "passed": true
+      },
+      {
+        "check": "Finish Story is <=1100 characters with 6–12 bracketed blanks",
+        "passed": true
+      },
+      {
+        "check": "Finish Story uses all 7 original emphasis words",
+        "passed": true
+      },
+      {
+        "check": "Verse bracket activity texts reconstruct exact proposed BSB excerpt",
+        "passed": true
+      },
+      {
+        "check": "Verse answer blanks meet module word and count limits",
+        "passed": true
+      },
+      {
+        "check": "All seven Scripture modules use the same verified BSB excerpt",
+        "passed": true
+      },
+      {
+        "check": "Original ESV verse and a separate BSB proposed excerpt retained",
+        "passed": true
+      },
+      {
+        "check": "Word searches use appropriate unique short words",
+        "passed": true
+      },
+      {
+        "check": "Crossword uses 9 distinct age-level answers and short clues",
+        "passed": true
+      },
+      {
+        "check": "Big Idea and other phrase fields meet length limits",
+        "passed": true
+      },
+      {
+        "check": "All 27 activity generator flags are false",
+        "passed": true
+      },
+      {
+        "check": "Teacher approval and distribution clearance are not asserted",
+        "passed": true
+      },
+      {
+        "check": "No review flags claim resolved approval",
+        "passed": true
+      }
+    ],
+    "actualGeneratorTested": false,
+    "jsonParseTested": true
+  }
+}
