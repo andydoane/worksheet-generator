@@ -1,7 +1,9 @@
+import {useState} from 'react';
 import SmallModulePreview from '../SmallModulePreview.tsx';
 import type {Lesson} from './model.ts';
 import {
- chooseUnscramble,editUnscramble,unscrambleChoices,unscrambleProblems,unscrambleWords,
+ chooseUnscramble,editUnscramble,repairUnscrambleAnswers,resetMalformedUnscramble,
+ unscrambleChoices,unscrambleProblems,unscrambleWords,
 } from './wordPuzzleEditors.ts';
 
 export default function UnscrambleReviewEditor({lesson,onChange,onError}:{
@@ -9,32 +11,76 @@ export default function UnscrambleReviewEditor({lesson,onChange,onError}:{
 }){
  const answers=unscrambleWords(lesson),problems=unscrambleProblems(lesson);
  const choices=unscrambleChoices(lesson),item=lesson.preparedActivities?.unscrambleWords??{};
+ const [keepFirst,setKeepFirst]=useState(0);
+ const [keepSecond,setKeepSecond]=useState(1);
+ const malformed=item.answers!==undefined&&!Array.isArray(item.answers);
+ const tooMany=answers.length>2;
+ const incomplete=!malformed&&!tooMany&&answers.length<2;
  const apply=(fn:()=>Lesson)=>{try{onChange(fn());onError('');}
   catch(e){onError(e instanceof Error?e.message:String(e));}};
+ const keepTwo=()=>{
+  if(keepFirst===keepSecond)return;
+  if(!window.confirm('Keep the two selected answers and remove the other saved answers? Export a review-session backup first if you want to preserve the entire original list.'))return;
+  apply(()=>repairUnscrambleAnswers(lesson,[keepFirst,keepSecond]));
+ };
  return <div id="review-field-unscramble-words" tabIndex={-1} className="review-fields">
   <div className="review-note">
    <h3>Unscramble the Words · two answers</h3>
-   <p>Choose two different lesson vocabulary answers. Each must contain 3–10 letters
-    (one or two words, ignoring the space), and each word must use at least two
-    different letters so it can be scrambled. You can also write a new answer and
-    review its meaning before approving.</p>
-   <p>The generator actually scrambles each answer when printing. Suggested
-    wording is flagged for teacher review; no original lesson vocabulary is modified.</p>
+   <p>Enter your own answers or select two different lesson vocabulary words.
+    Each answer uses 3–10 letters in one or two words and must be possible to scramble.
+    Custom wording is marked suggested and requires teacher review.</p>
+   <p>This editor can also repair a missing or incomplete answer list without
+    making you edit JSON. It never discards extra saved answers without confirmation.</p>
   </div>
-  <div className="review-story-fact-rows">
+  {malformed&&<div className="review-warning" role="status">
+   <strong>Invalid stored answer format</strong>
+   <p>The answers field is not a list. Download a review-session backup before
+    replacing it, or inspect the original value under Advanced JSON.</p>
+   <button type="button" className="review-secondary" onClick={()=>{
+    if(window.confirm('Replace the malformed answer field with two empty editable answers?'))
+     apply(()=>resetMalformedUnscramble(lesson));
+   }}>Reset to two blank answers</button>
+  </div>}
+  {tooMany&&<div className="review-warning" role="status">
+   <strong>{answers.length} answers saved, but the worksheet accepts exactly two.</strong>
+   <p>Select precisely which two to retain. The other entries are preserved in
+    your current lesson until you confirm the change.</p>
+   <div className="review-pair">
+    {([keepFirst,keepSecond] as const).map((value,index)=>
+     <label key={index}>Keep answer {index+1}
+      <select value={value} onChange={e=>index===0?
+       setKeepFirst(Number(e.target.value)):setKeepSecond(Number(e.target.value))}>
+       {answers.map((answer:any,i:number)=>
+        <option key={i} value={i}>{i+1}. {String(answer??'')}</option>)}
+      </select>
+     </label>)}
+   </div>
+   <button type="button" className="review-secondary" disabled={keepFirst===keepSecond}
+    onClick={keepTwo}>Keep these two answers</button>
+  </div>}
+  {incomplete&&<div className="review-note">
+   <strong>Only {answers.length} of 2 answers saved.</strong>
+   <p>Type into either answer field below to repair the short list automatically,
+    or create the missing fields first.</p>
+   <button type="button" className="review-secondary"
+    onClick={()=>apply(()=>repairUnscrambleAnswers(lesson))}>
+    Create two editable answer fields
+   </button>
+  </div>}
+  {!malformed&&!tooMany&&<div className="review-story-fact-rows">
    {[0,1].map(index=><div className="review-story-fact-row" key={index}>
     <strong>Answer {index+1}</strong>
-    <label>Word or phrase
+    <label>Custom word or phrase
      <input value={answers[index]??''} aria-label={'Unscramble answer '+(index+1)}
       onChange={e=>apply(()=>editUnscramble(lesson,index,e.target.value))}/>
      <small>{String(answers[index]??'').replace(/\s+/gu,'').length}/10 letters</small>
     </label>
-    <label>Use an existing lesson vocabulary word
-     <select value={choices.find(x=>x.term===(answers[index]??'').trim().toUpperCase())?.term??''}
+    <label>Or choose an existing lesson vocabulary word
+     <select value={choices.find(x=>x.term===String(answers[index]??'').trim().toUpperCase())?.term??''}
       onChange={e=>{if(e.target.value)apply(()=>chooseUnscramble(lesson,index,e.target.value));}}>
-      <option value="">Choose approved lesson vocabulary…</option>
+      <option value="">Choose lesson vocabulary…</option>
       {choices.map(option=><option key={option.term} value={option.term}
-       disabled={answers[1-index]?.toUpperCase().trim()===option.term}>
+       disabled={String(answers[1-index]??'').toUpperCase().trim()===option.term}>
        {option.term}</option>)}
      </select>
     </label>
@@ -45,7 +91,7 @@ export default function UnscrambleReviewEditor({lesson,onChange,onError}:{
       Use exact vocabulary term and refresh its source notes
      </button>}
    </div>)}
-  </div>
+  </div>}
   <p className="review-source">Saved origin: {item.origin??'not recorded'}
    {item.teacherReviewRequired?' · teacher review required':''}
    {(item.sourceIds??[]).length?' · linked Story Notes: '+item.sourceIds.join(', '):''}</p>
