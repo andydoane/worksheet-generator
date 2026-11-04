@@ -160,7 +160,7 @@ export function reflowPresetBordersOnPage(draft:StoredDraft,page:2|3|4):StoredDr
  * numbered preset or Bible story. Rebuild new-layout placements, never
  * reuse old region keys or carry a teacher's per-slot overrides blindly.
  */
-export function carryPresetBorderMode(previous:StoredDraft,next:StoredDraft):StoredDraft{
+export function carryPresetBorderMode(previous:Pick<StoredDraft,'borderArrangement'>,next:StoredDraft):StoredDraft{
  if(!previous.borderArrangement)return next;
  const selection={...previous.borderArrangement,
   seed:previous.borderArrangement.seed>=999_999_998?1:previous.borderArrangement.seed+1};
