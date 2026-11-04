@@ -52,7 +52,7 @@ test('Adding, deleting and moving matching pairs never break pair relationships 
  assert.deepEqual(fresh.sourceIds,[]);
  assert.equal(fresh.teacherReviewRequired,true);
  assert.equal(new Set(added.preparedActivities.matchWords.map(x=>x.id)).size,6);
- assert.deepEqual(matchingPairIssues(added).map(x=>x.index),[5,5]);
+ assert.deepEqual(matchingPairIssues(added.preparedActivities.matchWords).map(x=>x.index),[5,5]);
  const three=structuredClone(original);
  three.preparedActivities.matchWords=three.preparedActivities.matchWords.slice(0,3);
  assert.throws(()=>removeMatchingPair(three,1),/at least three/u);
