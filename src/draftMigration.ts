@@ -1,5 +1,6 @@
 import {isCoverBorderId,type CoverBorderId} from './coverBorders.ts';
 import {readActivityBorders,type ActivityBorders} from './activityBorders.ts';
+import {readPresetBorderSettings,type PresetBorderSettings} from './presetBorders.ts';
 import {readAssignments,type ModuleAssignments} from './modules.ts';
 import {DEFAULT_LAYOUTS,isLayoutId,type LayoutId} from './booklet.ts';
 
@@ -11,6 +12,8 @@ export type StoredDraft={
  verseReference:string;verseText:string;
  layouts:Record<2|3|4,LayoutId>;modules:ModuleAssignments;
  activityBorders:ActivityBorders;
+ /** Optional automatic preset border mode; old hand-styled drafts remain intact. */
+ borderArrangement?:PresetBorderSettings;
  /** Optional context for approved, lesson-prepopulated activities. Older drafts omit it. */
  curriculumLessonId?:string;
  /** Selected numbered preset or Build My Own; optional on historical drafts. */
@@ -47,6 +50,8 @@ export function migrateDraftValue(data:unknown):StoredDraft{
   },
   modules,
   activityBorders:readActivityBorders(value.activityBorders),
+  ...(readPresetBorderSettings(value.borderArrangement)?
+   {borderArrangement:readPresetBorderSettings(value.borderArrangement)}:{}),
   ...(typeof value.curriculumLessonId==='string'&&
     /^[a-z0-9]+(?:-[a-z0-9]+)*$/u.test(value.curriculumLessonId)&&
     value.curriculumLessonId.length<=120

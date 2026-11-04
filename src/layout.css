@@ -600,3 +600,38 @@
 .lesson-switcher-options small {font-size:11px;color:#627c6e;line-height:1.45;}
 .lesson-switcher-hint {color:#6f8275;font-size:11px;line-height:1.5;}
 .lesson-switcher-error {color:#8d3b2b;background:#fff2ed;border:1px solid #dfb5a9;padding:10px;border-radius:6px;font-size:12px;}
+
+/* PR85: automatic, layout-aware border options live next to Change Preset/Story. */
+.preset-borders-panel{display:grid;gap:12px;background:#fff;border:1px solid #bad4c2;
+ border-radius:10px;padding:14px;min-width:0}
+.preset-borders-panel>p{margin:0;color:#476956;font-size:12px;line-height:1.55}
+.preset-border-modes{display:grid;gap:7px}
+.preset-border-modes label{display:flex;align-items:flex-start;gap:10px;
+ padding:10px 12px;border:1px solid #d4e5d9;border-radius:9px;
+ cursor:pointer;background:#fbfdfa;min-width:0}
+.preset-border-modes label:has(input:checked){border-color:#408b69;background:#eaf7ee}
+.preset-border-modes label:focus-within{outline:2px solid #4b956e;outline-offset:2px}
+.preset-border-modes input{margin:4px 0 0;flex:0 0 auto;accent-color:#257257}
+.preset-border-modes span{display:grid;gap:2px;min-width:0}
+.preset-border-modes strong{font-size:12px;color:#305847;line-height:1.45}
+.preset-border-modes small{font-size:11px;color:#638575;line-height:1.45}
+.preset-border-style{display:grid;gap:7px}
+.preset-border-style>label{font-size:12px;font-weight:800;color:#305847}
+.preset-border-style-control{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.preset-border-style-control select{flex:1 1 145px;min-width:0;font:700 12px Nunito,sans-serif;
+ background:white;border:1px solid #bad4c2;color:#305847;padding:10px 12px;border-radius:8px}
+.preset-border-style-control img{width:112px;max-width:42%;aspect-ratio:4.8/2.6;
+ object-fit:fill;border-radius:5px;border:1px solid #d4e5d9;background:#fff}
+.preset-border-actions{display:grid;gap:6px}
+.preset-border-actions button{width:max-content;max-width:100%;
+ border:1px solid #408b69;border-radius:8px;padding:9px 13px;
+ font:800 12px Nunito,sans-serif;background:#edf8ef;color:#257257;cursor:pointer}
+.preset-border-actions button:hover,.preset-border-actions button:focus-visible{
+ background:#d9f1df;border-color:#267b63}
+.preset-border-actions button:disabled{opacity:.5;cursor:default}
+.preset-border-actions small{font-size:11px;color:#638575;line-height:1.5}
+.preset-borders-panel .preset-border-note{font-size:11px;color:#5a7766;line-height:1.55}
+@media(max-width:480px){
+ .preset-borders-panel{padding:11px}
+ .preset-border-style-control img{width:88px}
+}

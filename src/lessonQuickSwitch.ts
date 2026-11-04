@@ -2,6 +2,7 @@ import type {PublicLessonEntry} from './publishedLessonCatalog.ts';
 import {approvedForPublic} from './publishedLessonCatalog.ts';
 import {approvedLessonForDraft,buildYourOwnLessonDraft,sameActivityContent} from './curriculumEditor.ts';
 import type {StoredDraft} from './draftMigration.ts';
+import {carryPresetBorderMode} from './presetBorders.ts';
 import {buildWorksheetRecipe,WORKSHEET_RECIPES} from './worksheetRecipes.ts';
 
 export const BUILD_OWN='build-own' as const;
@@ -34,7 +35,7 @@ export function needsLessonSwitchConfirmation(
  try{original=createLessonWorksheet(entry,draft.worksheetPresetId);}
  catch{return true;}
  const keys=['title','scripture','bigIdea','verseReference','verseText',
-  'coverBorder','layouts','modules','activityBorders'] as const;
+  'coverBorder','layouts','modules','activityBorders','borderArrangement'] as const;
  return keys.some(key=>!sameActivityContent(draft[key],original[key]));
 }
 
@@ -45,9 +46,9 @@ export function needsLessonSwitchConfirmation(
  * first; never silently substitute another arrangement.
  */
 export function createSamePresetForNewStory(
- draft:Pick<StoredDraft,'worksheetPresetId'>,entry:PublicLessonEntry,
+ draft:Pick<StoredDraft,'worksheetPresetId'|'borderArrangement'>,entry:PublicLessonEntry,
 ):StoredDraft{
  if(!isWorksheetStartId(draft.worksheetPresetId))
   throw Error('This older worksheet has no recorded preset. Use Change Preset first to select one.');
- return createLessonWorksheet(entry,draft.worksheetPresetId);
+ return carryPresetBorderMode(draft,createLessonWorksheet(entry,draft.worksheetPresetId));
 }
