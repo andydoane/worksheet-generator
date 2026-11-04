@@ -17,7 +17,7 @@ const maxFactChars=(kind:FactUse)=>kind==='trueFalse'?80:kind==='trueFalseMaze'?
 const sortedEvents=(lesson:Lesson):StoryEvent[]=>{
  const records=lesson.preparedActivities?.storyOrder;
  if(records===undefined)return [];
- if(!Array.isArray(records))throw Error('Story Order is not an array. Use Advanced JSON for structural repairs.');
+ if(!Array.isArray(records))return [];
  return [...records].sort((a,b)=>Number(a.order)-Number(b.order));
 };
 export const storyEvents=(lesson:Lesson):StoryEvent[]=>sortedEvents(lesson);
@@ -40,6 +40,9 @@ const renumber=(events:StoryEvent[])=>events.forEach((item,i)=>{item.order=i+1;}
  */
 export function storyOrderIssues(lesson:Lesson):FactIssue[]{
  const events=storyEvents(lesson),issues:FactIssue[]=[];
+ if(lesson.preparedActivities?.storyOrder!==undefined&&
+  !Array.isArray(lesson.preparedActivities.storyOrder))
+  issues.push({message:'Stored Story Order is not an array. Use Advanced JSON for this structural issue.'});
  if(events.length<5||events.length>8)
   issues.push({message:'Story Order needs 5–8 chronological events (currently '+events.length+').'});
  const ids=new Set(storyNotes(lesson).map((note:any)=>note.id));
@@ -65,6 +68,13 @@ export function editStoryEvent(lesson:Lesson,index:number,text:string):Lesson{
  const updated=editAt(next,['preparedActivities','storyOrder',index,'text'],text);
  updated.preparedActivities.storyOrder[index].origin='suggested';
  updated.preparedActivities.storyOrder[index].teacherReviewRequired=true;
+ // Mark only captions actually synchronized by editAt as needing review.
+ for(const [i,caption] of (updated.preparedActivities.drawStory??[]).entries()){
+  if(caption.prompt!==(next.preparedActivities.drawStory??[])[i]?.prompt){
+   caption.origin='suggested';
+   caption.teacherReviewRequired=true;
+  }
+ }
  return updated;
 }
 export function moveStoryEvent(lesson:Lesson,index:number,direction:-1|1):Lesson{
@@ -97,16 +107,15 @@ export function replaceStoryEventFromNote(lesson:Lesson,index:number,noteId:stri
  const {next,events}=storyRecord(lesson);
  if(!events[index])throw Error('Story Order event no longer exists.');
  // The new sentence comes from a different source: never retain stale links.
- const before=events[index].text;
- const oldIds=events[index].sourceIds??[];
- const replacement=String(note.originalText??'');
- const changed=editAt(next,['preparedActivities','storyOrder',index,'text'],replacement);
- const event=changed.preparedActivities.storyOrder[index];
+ const event=events[index];
+ // This is a *different* source note. Do not propagate the new wording into
+ // drawing captions with references to the previous source.
+ event.text=String(note.originalText??'');
  event.sourceIds=[note.id];
  event.origin='suggested';
  event.teacherReviewRequired=true;
- if(before!==replacement||oldIds.length!==1||oldIds[0]!==note.id)delete event.source;
- return changed;
+ delete event.source;
+ return next;
 }
 
 /** Canonical facts are the authoritative truth/wording records. All three
@@ -117,9 +126,7 @@ export function factBank(lesson:Lesson,kind:FactUse):SelectedFact[]|SelectedFact
  const value=lesson.preparedActivities?.[kind];
  if(kind==='sortStory'){
   if(value===undefined)return [];
-  if(!Array.isArray(value))
-   throw Error('Sort the Story is not an array. Use Advanced JSON for structural repairs.');
-  return value;
+  return Array.isArray(value)?value:[];
  }
  return value;
 }
@@ -226,6 +233,9 @@ export function factSelectionIssues(lesson:Lesson,kind:FactUse):FactIssue[]{
  const items=kind==='sortStory'?sortSelections(lesson):
   [selectedFact(lesson,kind as 'trueFalse'|'trueFalseMaze')];
  const issues:FactIssue[]=[];
+ if(kind==='sortStory'&&lesson.preparedActivities?.sortStory!==undefined&&
+  !Array.isArray(lesson.preparedActivities.sortStory))
+  issues.push({message:'Stored Sort the Story data is not an array. Use Advanced JSON for this structural issue.'});
  if(kind==='sortStory'&&(items.length<4||items.length>8))
   issues.push({message:'Sort the Story needs 4–8 canonical facts (currently '+items.length+').'});
  const seen=new Set<string>();
