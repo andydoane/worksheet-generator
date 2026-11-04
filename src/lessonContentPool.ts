@@ -184,13 +184,14 @@ export function lessonContentPool(lesson:LessonActivityData,seed=1):LessonConten
 
  // Alternate story word searches use only approved lesson vocabulary.
  // Prefer full-size grids (12 for Large, 6 for Medium) while retaining
- // shorter Large fallbacks if a 12-word grid cannot fit or would repeat
- // vocabulary already printed elsewhere in the booklet.
- // Bound the candidate set so construction stays deterministic and quick.
+ // every valid Large fallback down to four. A full What Doesn't Belong
+ // bank may consume terms needed by the search. Never invent vocabulary.
+ // Bound candidate counts to keep publishing/review deterministic.
  for(const type of ['medium-word-search','word-search'] as const){
-  const counts=type==='medium-word-search'?[6]:[12,11,10];
+  const counts=type==='medium-word-search'?[6]:[12,11,10,9,8,7,6,5,4];
   for(const count of counts){
-   for(let offset=0;offset<Math.min(vocab.length,count===12||count===6?18:9);offset++){
+   const offsets=Math.min(vocab.length,count===12||type==='medium-word-search'?18:count>=10?9:6);
+   for(let offset=0;offset<offsets;offset++){
     const words=Array.from({length:count},(_,i)=>vocab[(offset+i)%vocab.length]);
     if(words.some(x=>!x)||new Set(words).size!==words.length)continue;
     add(type,'word-bank:'+count+':'+offset,{type,words:words.join('\n'),seed},'adapted');
@@ -216,6 +217,36 @@ export function lessonContentPool(lesson:LessonActivityData,seed=1):LessonConten
   }
  }
  return result;
+}
+
+/** Reserve the two vocabulary activities in Preset 2 together.
+ * A greedy choice of the first What Doesn't Belong candidate can starve the
+ * subsequent Large Word Search. Rank only reviewed, valid, nonrepeating
+ * combinations; never change the manual editor's reuse-friendly behavior.
+ */
+export function chooseDistinctPresetWordBanks(
+ oddChoices:readonly LessonContentChoice[],
+ searchChoices:readonly LessonContentChoice[],
+ used:ReadonlySet<string>,
+):{odd:LessonContentChoice;search:LessonContentChoice}|undefined{
+ let best:{odd:LessonContentChoice;search:LessonContentChoice;
+  total:number;searchSize:number;oddIndex:number;searchIndex:number}|undefined;
+ for(const [oddIndex,odd] of oddChoices.entries()){
+  if(odd.moduleId!=='odd-words'||odd.claims.some(value=>used.has(value)))continue;
+  const claimed=new Set([...used,...odd.claims]);
+  for(const [searchIndex,search] of searchChoices.entries()){
+   if(search.moduleId!=='word-search'||search.claims.some(value=>claimed.has(value)))continue;
+   const total=odd.claims.length+search.claims.length;
+   const searchSize=search.claims.length;
+   if(!best||total>best.total||
+    total===best.total&&(searchSize>best.searchSize||
+    searchSize===best.searchSize&&(oddIndex<best.oddIndex||
+      oddIndex===best.oddIndex&&searchIndex<best.searchIndex))){
+    best={odd,search,total,searchSize,oddIndex,searchIndex};
+   }
+  }
+ }
+ return best?{odd:best.odd,search:best.search}:undefined;
 }
 
 /** A conflict is the use of the SAME printed lesson item, regardless of the
