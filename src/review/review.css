@@ -76,3 +76,17 @@ a{color:#267d68}
 .review-sources summary{font-size:12px;font-weight:800;color:#307b61;cursor:pointer}
 .review-sources blockquote{border-left:3px solid #bbd6c1;margin:14px 0 0;padding:8px 12px;background:white}
 .review-sources blockquote p{margin:4px 0;color:#425d51}
+
+/* PR17n: actionable, keyboard-accessible preflight repair cards. */
+.review-errors p,.review-success p{margin:0 0 8px}
+.review-issue-list{list-style:none;padding:0!important;margin:8px 0 0;max-height:380px!important;display:grid;gap:9px}
+.review-issue-list li{margin:0}
+.review-issue-link{display:grid;gap:5px;width:100%;text-align:left;padding:12px;border:1px solid #d7b591;border-radius:9px;background:#fffefb;color:#704629;cursor:pointer;line-height:1.45}
+.review-issue-link strong{font-size:13px;color:#704629}
+.review-issue-link span{font-size:12px}
+.review-issue-link small{font-size:11px;color:#216c54;font-weight:800}
+.review-issue-link:hover,.review-issue-link:focus-visible{background:#fff8ed;border-color:#a37b4e;outline-offset:2px}
+.review-diagnostic-links{margin-top:18px;padding-top:15px;border-top:1px solid #dbe8dd}
+.review-diagnostic-links h3{margin:0 0 12px;color:#365846;font-size:12px}
+.review-fields textarea[spellcheck="false"]{font-family:ui-monospace,monospace;font-size:12px}
+#review-module-json:focus,#review-field-solve-code:focus,#review-field-finish-story:focus{outline:2px solid #4b956e}
