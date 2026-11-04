@@ -15,10 +15,9 @@ import {upgradeSavedDrawingCaptions} from '../src/drawingDraftUpgrade.ts';
 
 const json=async path=>JSON.parse(await readFile(new URL('../'+path,import.meta.url),'utf8'));
 const lesson=await json('curriculum/approved/ot-031-god-parts-the-red-sea.lesson.json');
-const rights=await json('curriculum/approved/rights-manifest.json');
 const catalog=assemblePublicLessonCatalog({
  ['../curriculum/approved/'+lesson.id+'.lesson.json']:lesson,
-},rights);
+});
 assert.equal(catalog.length,1);
 const entry=catalog[0];
 
