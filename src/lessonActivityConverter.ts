@@ -1,6 +1,6 @@
 import {validateModule,type ActivityModule,type ModuleId} from './modules.ts';
 import {generateWordSearch} from './puzzleEngines.ts';
-import {generatePixelPicture} from './pixelPicture.ts';
+import {choosePixelShapeId,generatePixelPicture} from './pixelPicture.ts';
 import {parseVerse,verseBank,verseScrambles} from './storyVerseModules.ts';
 import {generateCryptogram,checkCryptogram} from './cryptograms.ts';
 import {generateCrossword,checkCrossword,connectPositions,spiralWritingPoints} from './specialtyModules.ts';
@@ -385,7 +385,8 @@ export function convertLessonActivities(
  if(prepared.pixelPicture){
   const item=prepared.pixelPicture;
   const module={
-   type:'pixel-picture' as const,phrase:item.phrase,shapeId:item.shapeId??'star',seed,
+   type:'pixel-picture' as const,phrase:item.phrase,
+   shapeId:choosePixelShapeId(seed,item.phrase),seed,
   };
   const errors=validateModule(module);
   if(errors.length)issue('pixel-picture','pixel-picture',errors.join(' '));
