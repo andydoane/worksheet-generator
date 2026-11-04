@@ -46,8 +46,9 @@ test('Every one of the 27 modules has a visual or verified BSB editor and comple
   assert.ok(tasks.has(destination.taskId)||destination.editor==='advanced',
    id+' repair task is not mounted permanently or safely scoped to JSON');
   const mapped=reviewIssueTarget(id+': deliberately invalid test activity');
-  assert.equal(mapped.taskId,destination.taskId,id+' repair routing');
-  assert.equal(mapped.fieldId,destination.fieldId,id+' focus target');
+  const ordinary=repairDestinationForModule(id,true);
+  assert.equal(mapped.taskId,ordinary.taskId,id+' repair routing for existing data');
+  assert.equal(mapped.fieldId,ordinary.fieldId,id+' focus target for existing data');
   const broken=structuredClone(ot32);
   delete broken.preparedActivities[PREPARED_ACTIVITY_KEYS[id]];
   const report=buildReviewPreflight(broken);
