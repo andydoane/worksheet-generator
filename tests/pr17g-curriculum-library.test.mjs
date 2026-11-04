@@ -271,10 +271,13 @@ test('CI approves another one-file lesson only when full schema, puzzles, preset
   assert.equal(noRecipe.passed,false);
   assert.ok(noRecipe.errors.some(x=>x.code==='recipe-not-ready'));
   await writeFile(secondFile,JSON.stringify(second));
+  // The one-file upload flow permits an older pending draft in review/.
+  // Only approved/<id>.lesson.json enters the live public catalog.
   await writeFile(join(root,'curriculum','review',first.id+'.json'),JSON.stringify(lesson));
-  const duplicate=await inspectCurriculumLibrary({root});
-  assert.equal(duplicate.passed,false);
-  assert.ok(duplicate.errors.some(x=>x.code==='duplicate-id'));
+  const withPendingReview=await inspectCurriculumLibrary({root});
+  assert.equal(withPendingReview.passed,true,JSON.stringify(withPendingReview.errors));
+  assert.equal(withPendingReview.lessons.filter(x=>x.source==='approved').length,2);
+  assert.equal(withPendingReview.lessons.filter(x=>x.source==='review').length,1);
  }finally{await rm(root,{recursive:true,force:true});}
 });
 
