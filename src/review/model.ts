@@ -43,7 +43,7 @@ export function listReviewTasks(lesson:Lesson):ReviewTask[]{
  tasks.push({id:'unscramble-words',group:'Word activities',label:'Unscramble the Words',
   detail:'Select two approved vocabulary answers or teacher-authored alternatives.'});
  tasks.push({id:'pixel-picture',group:'Medium puzzle',label:'Pixel Picture',
-  detail:'Choose a story phrase and one of the original 13×13 silhouettes.'});
+  detail:'Choose an approved or teacher-authored phrase; the generator selects a silhouette automatically.'});
  tasks.push({id:'match-words',group:'Word activities',label:'Match the Words',
   detail:'Review 3–6 correct matching pairs. The printed worksheet shuffles only the right column.'});
  tasks.push({id:'crossword',group:'Large puzzles',label:'Crossword',
