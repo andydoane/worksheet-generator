@@ -75,7 +75,7 @@ test('Prefer the fullest valid bank, but never reuse items to inflate a workshee
  const candidate=(id,claims)=>({moduleId:'match-words',contentId:id,claims});
  const full=candidate('all-six',['pair:a','pair:b','pair:c','pair:d','pair:e','pair:f']);
  const compact=candidate('only-three',['pair:a','pair:b','pair:c']);
- assert.equal(chooseUnusedLessonContent([compact,full],new Set()).candidate.contentId,'all-six');
+ assert.equal(chooseUnusedLessonContent([compact,full],new Set(),{preferFullBank:true}).candidate.contentId,'all-six');
  const selected=chooseUnusedLessonContent([full,compact],new Set(['pair:f']));
  assert.equal(selected.candidate.contentId,'only-three',
   'A smaller nonrepeating activity beats a larger one that repeats an answer');
