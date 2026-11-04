@@ -1,0 +1,3047 @@
+{
+  "schemaVersion": 1,
+  "schemaStatus": "review-draft; source and local structural checks only; official importer/generator tests pending",
+  "id": "ot-024-joseph-tests-his-brothers",
+  "curriculum": {
+    "series": "Old Testament",
+    "lessonNumber": 24
+  },
+  "lessonDetails": {
+    "title": "Joseph Tests His Brothers",
+    "scripturePassages": [
+      "Genesis 42",
+      "Luke 6:27",
+      "Colossians 1:21"
+    ],
+    "scriptureDisplay": "Genesis",
+    "bigIdeas": [
+      {
+        "text": "Don’t get revenge. Forgive your enemies.",
+        "origin": "adapted",
+        "source": {
+          "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+          "section": "Important Idea",
+          "page": 5,
+          "sourceParagraphIndex": 153,
+          "details": "The original display-font styling is lowercase; punctuation and capitalization normalized for student worksheets. Source lines include “don’t get revenge. forgive your enemies.”"
+        },
+        "teacherReviewRequired": false
+      }
+    ],
+    "memoryVerse": {
+      "reference": "Luke 6:27",
+      "translation": "BSB",
+      "text": "But to those of you who will listen, I say: Love your enemies, do good to those who hate you,",
+      "isExcerpt": false,
+      "hasEllipses": false,
+      "requiresTextReview": false,
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Memory Verse Activity",
+        "page": 8,
+        "sourceParagraphIndex": 217,
+        "details": "Source is ESV Luke 6:27 with an ellipsis. Worksheet version proposes the complete Berean Standard Bible verse. Verify exact text, trailing comma, and Scripture rights before approval. Original ESV text: But I say to you who hear, “Love your enemies, do good to those who hate you...”"
+      },
+      "alsoVerifiedAt": {
+        "filename": "https://biblehub.com/luke/6-27.htm",
+        "section": "Berean Standard Bible, Luke 6:27",
+        "details": "Web verification of BSB wording (not a license or rights clearance)."
+      },
+      "originalTranslation": "BSB",
+      "bsbSource": {
+        "reference": "Luke 6:27",
+        "sourceUrl": "https://bereanbible.com/bsb.txt",
+        "publicDomainTerms": "https://berean.bible/terms.htm",
+        "startWord": 0,
+        "endWord": 19
+      }
+    }
+  },
+  "sourceFiles": [
+    {
+      "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+      "format": "odt",
+      "role": "primary teaching source",
+      "note": "Original source includes seven Story Notes, teaching and review questions, ten original True/False review statements, and an ESV excerpt of Luke 6:27. The source typo “Simon” is noted rather than used in prepared worksheets."
+    }
+  ],
+  "storyNotes": [
+    {
+      "id": "sn-01",
+      "order": 1,
+      "originalText": "During the famine, Jacob sent ten of his sons to buy GRAIN in Egypt. He kept Benjamin home.",
+      "cleanText": "During the famine, Jacob sent ten sons to buy grain in Egypt. Benjamin stayed home.",
+      "emphasizedWords": [
+        "GRAIN"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "STORY NOTE",
+        "page": 2,
+        "sourceParagraphIndex": 39
+      }
+    },
+    {
+      "id": "sn-02",
+      "order": 2,
+      "originalText": "The brothers bowed before Joseph. They didn’t recognize him, so he pretended to be a STRANGER.",
+      "cleanText": "The brothers bowed before Joseph without recognizing him. Joseph pretended to be a stranger.",
+      "emphasizedWords": [
+        "STRANGER"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "STORY NOTE",
+        "page": 2,
+        "sourceParagraphIndex": 54
+      }
+    },
+    {
+      "id": "sn-03",
+      "order": 3,
+      "originalText": "Joseph said, \"You are SPIES!\" He kept the brothers under guard for three days.",
+      "cleanText": "Joseph said the brothers were spies and kept them in prison for three days.",
+      "emphasizedWords": [
+        "SPIES"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "STORY NOTE",
+        "page": 3,
+        "sourceParagraphIndex": 73
+      }
+    },
+    {
+      "id": "sn-04",
+      "order": 4,
+      "originalText": "Joseph said, \"One of you must stay BEHIND. The rest must bring your brother back to me.\"",
+      "cleanText": "Joseph kept one brother behind and told the others to bring Benjamin back.",
+      "emphasizedWords": [
+        "BEHIND"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "STORY NOTE",
+        "page": 3,
+        "sourceParagraphIndex": 92
+      }
+    },
+    {
+      "id": "sn-05",
+      "order": 5,
+      "originalText": "The brothers said, \"God is PUNISHING us for hurting Joseph.\" When Joseph heard this, he cried.",
+      "cleanText": "The brothers said God was punishing them for hurting Joseph, and Joseph cried.",
+      "emphasizedWords": [
+        "PUNISHING"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "STORY NOTE",
+        "page": 4,
+        "sourceParagraphIndex": 109
+      }
+    },
+    {
+      "id": "sn-06",
+      "order": 6,
+      "originalText": "They returned to tell their father what happened. They all found their MONEY in their bags.",
+      "cleanText": "Joseph’s brothers returned home and found their money in their sacks.",
+      "emphasizedWords": [
+        "MONEY"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "STORY NOTE",
+        "page": 4,
+        "sourceParagraphIndex": 124
+      }
+    },
+    {
+      "id": "sn-07",
+      "order": 7,
+      "originalText": "Jacob refused to let the brothers take BENJAMIN back to Egypt.",
+      "cleanText": "Jacob refused to let Benjamin go back to Egypt with his brothers.",
+      "emphasizedWords": [
+        "BENJAMIN"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "STORY NOTE",
+        "page": 5,
+        "sourceParagraphIndex": 139
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q-01",
+      "question": "What are some ways you’ve ever thought about getting revenge?",
+      "answer": "Various responses.",
+      "kind": "reflection",
+      "scope": "teaching",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 9
+      },
+      "notes": "Question preserved from the source lesson; answer follows the teaching or review material."
+    },
+    {
+      "id": "q-02",
+      "question": "Who can give us the quick version of Joseph’s life story?",
+      "answer": "Father’s favorite son, given a beautiful robe, dreams of ruling his family, sold into slavery by brothers, Potiphar’s wife lied and he ended up in prison for something he didn’t do, interpreted dreams for wine taster and baker.",
+      "kind": "reflection",
+      "scope": "teaching",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 15
+      },
+      "notes": "Question preserved from the source lesson; answer follows the teaching or review material."
+    },
+    {
+      "id": "q-03",
+      "question": "Why?",
+      "answer": "Joseph saved food during the seven food-filled years.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Story / Teaching",
+        "page": 2,
+        "sourceParagraphIndex": 41
+      },
+      "notes": "Question preserved from the source lesson; answer follows the teaching or review material."
+    },
+    {
+      "id": "q-04",
+      "question": "Before they starved to death, what did he ask his sons to do?",
+      "answer": "Go to Egypt to buy some of their grain.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Story / Teaching",
+        "page": 2,
+        "sourceParagraphIndex": 43
+      },
+      "notes": "Question preserved from the source lesson; answer follows the teaching or review material."
+    },
+    {
+      "id": "q-05",
+      "question": "Who did Jacob keep behind?",
+      "answer": "Benjamin.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Story / Teaching",
+        "page": 2,
+        "sourceParagraphIndex": 45
+      },
+      "notes": "Question preserved from the source lesson; answer follows the teaching or review material."
+    },
+    {
+      "id": "q-06",
+      "question": "Why didn’t Jacob want Benjamin to go to Egypt?",
+      "answer": "He was worried he’d be hurt.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Story / Teaching",
+        "page": 2,
+        "sourceParagraphIndex": 47
+      },
+      "notes": "Question preserved from the source lesson; answer follows the teaching or review material."
+    },
+    {
+      "id": "q-07",
+      "question": "Who was in charge of selling grain to the brothers in Egypt?",
+      "answer": "Joseph.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Story / Teaching",
+        "page": 2,
+        "sourceParagraphIndex": 56
+      },
+      "notes": "Question preserved from the source lesson; answer follows the teaching or review material."
+    },
+    {
+      "id": "q-08",
+      "question": "What?",
+      "answer": "Joseph recognized his brothers, but they didn’t recognize him.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Story / Teaching",
+        "page": 2,
+        "sourceParagraphIndex": 56
+      },
+      "notes": "Question preserved from the source lesson; answer follows the teaching or review material."
+    },
+    {
+      "id": "q-09",
+      "question": "What did the brothers do before Joseph?",
+      "answer": "Bowed down to him.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Story / Teaching",
+        "page": 2,
+        "sourceParagraphIndex": 62
+      },
+      "notes": "Question preserved from the source lesson; answer follows the teaching or review material."
+    },
+    {
+      "id": "q-10",
+      "question": "what could Joseph have done to them to get revenge?",
+      "answer": "Various responses.",
+      "kind": "reflection",
+      "scope": "teaching",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Story / Teaching",
+        "page": 3,
+        "sourceParagraphIndex": 75
+      },
+      "notes": "Question preserved from the source lesson; answer follows the teaching or review material."
+    },
+    {
+      "id": "q-11",
+      "question": "Were Joseph’s brothers really spies?",
+      "answer": "No.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Story / Teaching",
+        "page": 3,
+        "sourceParagraphIndex": 77
+      },
+      "notes": "Question preserved from the source lesson; answer follows the teaching or review material."
+    },
+    {
+      "id": "q-12",
+      "question": "Was he trying to get revenge?",
+      "answer": "Nope!",
+      "kind": "rhetorical",
+      "scope": "teaching",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Story / Teaching",
+        "page": 3,
+        "sourceParagraphIndex": 79
+      },
+      "notes": "Question preserved from the source lesson; answer follows the teaching or review material."
+    },
+    {
+      "id": "q-13",
+      "question": "Are my brothers the same old bullies? Or have they changed in the last twenty years?",
+      "answer": "[Joseph was testing whether they had changed.]",
+      "kind": "reflection",
+      "scope": "teaching",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Story / Teaching",
+        "page": 3,
+        "sourceParagraphIndex": 85
+      },
+      "notes": "Question is preserved verbatim from the source paragraph. Open-ended bracketed answer is only a contextual editor note."
+    },
+    {
+      "id": "q-14",
+      "question": "Are my brothers the same old bullies or have they changed?",
+      "answer": "[This is the question Joseph was testing.]",
+      "kind": "reflection",
+      "scope": "teaching",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Story / Teaching",
+        "page": 3,
+        "sourceParagraphIndex": 98
+      },
+      "notes": "Question is preserved verbatim from the source paragraph. Open-ended bracketed answer is only a contextual editor note."
+    },
+    {
+      "id": "q-15",
+      "question": "What was it?",
+      "answer": "To bring their younger brother back to Egypt.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Story / Teaching",
+        "page": 3,
+        "sourceParagraphIndex": 98
+      },
+      "notes": "Question preserved from the source lesson; answer follows the teaching or review material."
+    },
+    {
+      "id": "q-16",
+      "question": "But the real reason?",
+      "answer": "[Joseph wanted to see Benjamin.]",
+      "kind": "rhetorical",
+      "scope": "teaching",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Story / Teaching",
+        "page": 3,
+        "sourceParagraphIndex": 100
+      },
+      "notes": "Question is preserved verbatim from the source paragraph. Open-ended bracketed answer is only a contextual editor note."
+    },
+    {
+      "id": "q-17",
+      "question": "what did Joseph do?",
+      "answer": "Keep one of the brothers behind in jail.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Story / Teaching",
+        "page": 3,
+        "sourceParagraphIndex": 102
+      },
+      "notes": "Question preserved from the source lesson; answer follows the teaching or review material."
+    },
+    {
+      "id": "q-18",
+      "question": "Are these the same old bullies or have they changed?",
+      "answer": "[Joseph hoped to discover whether they had changed.]",
+      "kind": "reflection",
+      "scope": "teaching",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Story / Teaching",
+        "page": 4,
+        "sourceParagraphIndex": 111
+      },
+      "notes": "Question is preserved verbatim from the source paragraph. Open-ended bracketed answer is only a contextual editor note."
+    },
+    {
+      "id": "q-19",
+      "question": "What did the brothers say to each other?",
+      "answer": "God is punishing us because of what we did to Joseph.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Story / Teaching",
+        "page": 4,
+        "sourceParagraphIndex": 113
+      },
+      "notes": "Question preserved from the source lesson; answer follows the teaching or review material."
+    },
+    {
+      "id": "q-20",
+      "question": "Why?",
+      "answer": "Because Joseph spoke in Egyptian; they didn’t think he understood their language.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Story / Teaching",
+        "page": 4,
+        "sourceParagraphIndex": 115
+      },
+      "notes": "Question preserved from the source lesson; answer follows the teaching or review material."
+    },
+    {
+      "id": "q-21",
+      "question": "Why?",
+      "answer": "Because it showed him that his brothers felt sorry for the terrible things they did to him 20 years before.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Story / Teaching",
+        "page": 4,
+        "sourceParagraphIndex": 117
+      },
+      "notes": "Question preserved from the source lesson; answer follows the teaching or review material."
+    },
+    {
+      "id": "q-22",
+      "question": "What did he secretly have done to the brothers?",
+      "answer": "The money they used to buy the grain was hidden in their sacks of grain.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Story / Teaching",
+        "page": 4,
+        "sourceParagraphIndex": 128
+      },
+      "notes": "Question preserved from the source lesson; answer follows the teaching or review material."
+    },
+    {
+      "id": "q-23",
+      "question": "what did they find?",
+      "answer": "There was money in every one of them.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Story / Teaching",
+        "page": 4,
+        "sourceParagraphIndex": 132
+      },
+      "notes": "Question preserved from the source lesson; answer follows the teaching or review material."
+    },
+    {
+      "id": "q-24",
+      "question": "Why was there money in their grain sacks?",
+      "answer": "Because Joseph was doing a secret test!",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Story / Teaching",
+        "page": 4,
+        "sourceParagraphIndex": 134
+      },
+      "notes": "Question preserved from the source lesson; answer follows the teaching or review material."
+    },
+    {
+      "id": "q-25",
+      "question": "But did his brothers know that?",
+      "answer": "No!",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Story / Teaching",
+        "page": 4,
+        "sourceParagraphIndex": 134
+      },
+      "notes": "Question preserved from the source lesson; answer follows the teaching or review material."
+    },
+    {
+      "id": "q-26",
+      "question": "How did they feel?",
+      "answer": "Terrified!",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Story / Teaching",
+        "page": 4,
+        "sourceParagraphIndex": 134
+      },
+      "notes": "Question preserved from the source lesson; answer follows the teaching or review material."
+    },
+    {
+      "id": "q-27",
+      "question": "Why did Jacob believe Joseph was dead?",
+      "answer": "Twenty years before, his sons tricked him into thinking Joseph had been eaten by a wild animal.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Story / Teaching",
+        "page": 5,
+        "sourceParagraphIndex": 141
+      },
+      "notes": "Question preserved from the source lesson; answer follows the teaching or review material."
+    },
+    {
+      "id": "q-28",
+      "question": "What did Jacob say would happen if something ever happened to Benjamin?",
+      "answer": "He’d die a sad old man.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Story / Teaching",
+        "page": 5,
+        "sourceParagraphIndex": 143
+      },
+      "notes": "Question preserved from the source lesson; answer follows the teaching or review material."
+    },
+    {
+      "id": "q-29",
+      "question": "do I send my sons to save Simeon or do I keep Ben safe and sound with me?",
+      "answer": "[Jacob had not made his choice yet.]",
+      "kind": "reflection",
+      "scope": "teaching",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Story / Teaching",
+        "page": 5,
+        "sourceParagraphIndex": 145
+      },
+      "notes": "Question is preserved verbatim from the source paragraph. Open-ended bracketed answer is only a contextual editor note."
+    },
+    {
+      "id": "q-30",
+      "question": "how does the story of Joseph and his brothers teach us, strengthen us, encourage us, or give us hope?",
+      "answer": "",
+      "kind": "reflection",
+      "scope": "teaching",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Story / Teaching",
+        "page": 5,
+        "sourceParagraphIndex": 149
+      },
+      "notes": "Question preserved from the source lesson; answer follows the teaching or review material."
+    },
+    {
+      "id": "q-31",
+      "question": "What could Joseph have done for revenge?",
+      "answer": "Various responses.",
+      "kind": "reflection",
+      "scope": "teaching",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Story / Teaching",
+        "page": 6,
+        "sourceParagraphIndex": 161
+      },
+      "notes": "Question preserved from the source lesson; answer follows the teaching or review material."
+    },
+    {
+      "id": "q-32",
+      "question": "Are my brothers the same old bullies or have they changed?",
+      "answer": "[The lesson answers this in the following story.]",
+      "kind": "reflection",
+      "scope": "teaching",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Story / Teaching",
+        "page": 6,
+        "sourceParagraphIndex": 171
+      },
+      "notes": "Question is preserved verbatim from the source paragraph. Open-ended bracketed answer is only a contextual editor note."
+    },
+    {
+      "id": "q-33",
+      "question": "And, you know what?",
+      "answer": "[The lesson compares Joseph’s forgiveness with God’s forgiveness.]",
+      "kind": "rhetorical",
+      "scope": "teaching",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Story / Teaching",
+        "page": 6,
+        "sourceParagraphIndex": 176
+      },
+      "notes": "Question is preserved verbatim from the source paragraph. Open-ended bracketed answer is only a contextual editor note."
+    },
+    {
+      "id": "q-34",
+      "question": "Who were Jesus’ enemies?",
+      "answer": "[The next passage calls sinners God’s enemies.]",
+      "kind": "reflection",
+      "scope": "teaching",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Story / Teaching",
+        "page": 6,
+        "sourceParagraphIndex": 184
+      },
+      "notes": "Question is preserved verbatim from the source paragraph. Open-ended bracketed answer is only a contextual editor note."
+    },
+    {
+      "id": "q-35",
+      "question": "Do you understand what that means?",
+      "answer": "[The lesson explains Colossians 1:21 in the following sentence.]",
+      "kind": "reflection",
+      "scope": "teaching",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Story / Teaching",
+        "page": 6,
+        "sourceParagraphIndex": 190
+      },
+      "notes": "Question is preserved verbatim from the source paragraph. Open-ended bracketed answer is only a contextual editor note."
+    },
+    {
+      "id": "q-36",
+      "question": "what does Jesus teach us to do?",
+      "answer": "Love them, do good to them.",
+      "kind": "factual",
+      "scope": "memory-verse",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Memory Verse Activity",
+        "page": 8,
+        "sourceParagraphIndex": 219
+      },
+      "notes": "Question preserved from the source lesson; answer follows the teaching or review material."
+    },
+    {
+      "id": "q-37",
+      "question": "who were God’s enemies?",
+      "answer": "Sinners like you and me!",
+      "kind": "factual",
+      "scope": "memory-verse",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Memory Verse Activity",
+        "page": 8,
+        "sourceParagraphIndex": 219
+      },
+      "notes": "Question preserved from the source lesson; answer follows the teaching or review material."
+    },
+    {
+      "id": "q-38",
+      "question": "Why did Jacob send his sons to Egypt?",
+      "answer": "To buy grain, since there was a famine",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Review Questions",
+        "page": 9,
+        "sourceParagraphIndex": 261
+      },
+      "notes": "Question preserved from the source lesson; answer follows the teaching or review material."
+    },
+    {
+      "id": "q-39",
+      "question": "Who was the person selling the grain?",
+      "answer": "Joseph",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Review Questions",
+        "page": 9,
+        "sourceParagraphIndex": 262
+      },
+      "notes": "Question preserved from the source lesson; answer follows the teaching or review material."
+    },
+    {
+      "id": "q-40",
+      "question": "What happened when they saw Joseph?",
+      "answer": "They didn’t recognize him and bowed down; Joseph pretended to be a stranger",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Review Questions",
+        "page": 9,
+        "sourceParagraphIndex": 263
+      },
+      "notes": "Question preserved from the source lesson; answer follows the teaching or review material."
+    },
+    {
+      "id": "q-41",
+      "question": "What did Joseph say and do to his brothers when he first met them?",
+      "answer": "Called them spies; threw them in prison for three days",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Review Questions",
+        "page": 9,
+        "sourceParagraphIndex": 264
+      },
+      "notes": "Question preserved from the source lesson; answer follows the teaching or review material."
+    },
+    {
+      "id": "q-42",
+      "question": "What did Joseph order them to do to prove they weren’t spies?",
+      "answer": "Return with their brother Benjamin",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Review Questions",
+        "page": 9,
+        "sourceParagraphIndex": 265
+      },
+      "notes": "Question preserved from the source lesson; answer follows the teaching or review material."
+    },
+    {
+      "id": "q-43",
+      "question": "Why did the brothers think these bad things were happening?",
+      "answer": "God was punishing them for what they did to Joseph",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Review Questions",
+        "page": 9,
+        "sourceParagraphIndex": 266
+      },
+      "notes": "Question preserved from the source lesson; answer follows the teaching or review material."
+    },
+    {
+      "id": "q-44",
+      "question": "What did Joseph do when he heard them say this?",
+      "answer": "He turned his head and cried",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Review Questions",
+        "page": 9,
+        "sourceParagraphIndex": 267
+      },
+      "notes": "Question preserved from the source lesson; answer follows the teaching or review material."
+    },
+    {
+      "id": "q-45",
+      "question": "What brother was kept behind in Egypt?",
+      "answer": "Simeon",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Review Questions",
+        "page": 9,
+        "sourceParagraphIndex": 268
+      },
+      "notes": "Question preserved from the source lesson; answer follows the teaching or review material."
+    },
+    {
+      "id": "q-46",
+      "question": "What did the brothers find in their grain sacks? Who put it there?",
+      "answer": "Their money; Joseph put it there",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Review Questions",
+        "page": 9,
+        "sourceParagraphIndex": 269
+      },
+      "notes": "Question preserved from the source lesson; answer follows the teaching or review material."
+    },
+    {
+      "id": "q-47",
+      "question": "What did Jacob say to his sons?",
+      "answer": "Benjamin can’t go with you; why did you tell him you had a brother?",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 270
+      },
+      "notes": "Question preserved from the source lesson; answer follows the teaching or review material."
+    }
+  ],
+  "facts": [
+    {
+      "id": "tf-01",
+      "statement": "Jacob sent ten of his sons to Egypt to buy grain.",
+      "isTrue": true,
+      "origin": "source",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Source True/False Review",
+        "page": 14,
+        "sourceParagraphIndex": 350
+      }
+    },
+    {
+      "id": "tf-02",
+      "statement": "Benjamin went with his brothers on their first trip to Egypt.",
+      "isTrue": false,
+      "origin": "source",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Source True/False Review",
+        "page": 14,
+        "sourceParagraphIndex": 351
+      }
+    },
+    {
+      "id": "tf-03",
+      "statement": "The brothers bowed down when they stood before Joseph.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-04",
+      "statement": "Joseph didn’t recognize his brothers, but they recognized him.",
+      "isTrue": false,
+      "origin": "source",
+      "sourceIds": [
+        "sn-02"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Source True/False Review",
+        "page": 14,
+        "sourceParagraphIndex": 352
+      }
+    },
+    {
+      "id": "tf-05",
+      "statement": "Joseph accused his brothers of being spies.",
+      "isTrue": true,
+      "origin": "source",
+      "sourceIds": [
+        "sn-03"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Source True/False Review",
+        "page": 14,
+        "sourceParagraphIndex": 354
+      }
+    },
+    {
+      "id": "tf-06",
+      "statement": "Joseph kept all of his brothers in prison for seven days.",
+      "isTrue": false,
+      "origin": "source",
+      "sourceIds": [
+        "sn-03"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Source True/False Review",
+        "page": 14,
+        "sourceParagraphIndex": 355
+      }
+    },
+    {
+      "id": "tf-07",
+      "statement": "Joseph told his brothers to come back with Benjamin.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-08",
+      "statement": "Joseph sent all ten brothers home together.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-04",
+        "sn-06"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-09",
+      "statement": "The brothers thought God was punishing them because of what they had done to Joseph.",
+      "isTrue": true,
+      "origin": "source",
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Source True/False Review",
+        "page": 14,
+        "sourceParagraphIndex": 356
+      }
+    },
+    {
+      "id": "tf-10",
+      "statement": "Joseph laughed when he heard the brothers talk about hurting him.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-11",
+      "statement": "Joseph kept Benjamin in prison while the others went home.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-06"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-12",
+      "statement": "Joseph had the brothers’ money put back into their grain sacks.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-13",
+      "statement": "Jacob was happy to send Benjamin back to Egypt right away.",
+      "isTrue": false,
+      "origin": "source",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Source True/False Review",
+        "page": 14,
+        "sourceParagraphIndex": 359
+      }
+    },
+    {
+      "id": "tf-14",
+      "statement": "Simeon stayed in Egypt while the other brothers went home.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ],
+      "teacherReviewRequired": false
+    }
+  ],
+  "vocabulary": {
+    "related": [
+      "JOSEPH",
+      "JACOB",
+      "BENJAMIN",
+      "SIMEON",
+      "EGYPT",
+      "CANAAN",
+      "GRAIN",
+      "FAMINE",
+      "SPY",
+      "DONKEY",
+      "PRISON",
+      "MONEY",
+      "BROTHERS",
+      "FORGIVE",
+      "REVENGE"
+    ],
+    "unrelated": [
+      "SWORD",
+      "CROWN",
+      "LAMP",
+      "BOAT",
+      "GARDEN",
+      "NET",
+      "HARP",
+      "SHIELD",
+      "SCROLL",
+      "MIRROR"
+    ],
+    "entries": [
+      {
+        "id": "v-01",
+        "term": "JOSEPH",
+        "category": "person",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "id": "v-02",
+        "term": "JACOB",
+        "category": "person",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01",
+          "sn-07"
+        ]
+      },
+      {
+        "id": "v-03",
+        "term": "BENJAMIN",
+        "category": "person",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01",
+          "sn-07"
+        ]
+      },
+      {
+        "id": "v-04",
+        "term": "SIMEON",
+        "category": "person",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "id": "v-05",
+        "term": "EGYPT",
+        "category": "place",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "id": "v-06",
+        "term": "CANAAN",
+        "category": "place",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "id": "v-07",
+        "term": "GRAIN",
+        "category": "food",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "id": "v-08",
+        "term": "FAMINE",
+        "category": "event",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "id": "v-09",
+        "term": "SPY",
+        "category": "role",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "id": "v-10",
+        "term": "DONKEY",
+        "category": "animal",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "id": "v-11",
+        "term": "PRISON",
+        "category": "place",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "id": "v-12",
+        "term": "MONEY",
+        "category": "object",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "id": "v-13",
+        "term": "BROTHERS",
+        "category": "family",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "id": "v-14",
+        "term": "FORGIVE",
+        "category": "teaching",
+        "scope": "application",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "id": "v-15",
+        "term": "REVENGE",
+        "category": "teaching",
+        "scope": "application",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      }
+    ]
+  },
+  "characters": [
+    {
+      "id": "ch-01",
+      "name": "Joseph",
+      "origin": "adapted",
+      "scope": "current-story",
+      "sourceIds": [
+        "sn-02",
+        "sn-03"
+      ],
+      "clues": [
+        {
+          "text": "I sold grain in Egypt and knew my brothers even though they did not know me.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-02",
+            "sn-03"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch-02",
+      "name": "Jacob",
+      "origin": "adapted",
+      "scope": "current-story",
+      "sourceIds": [
+        "sn-01",
+        "sn-07"
+      ],
+      "clues": [
+        {
+          "text": "I sent ten of my sons to buy grain but kept Benjamin at home.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-01",
+            "sn-07"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch-03",
+      "name": "Benjamin",
+      "origin": "adapted",
+      "scope": "current-story",
+      "sourceIds": [
+        "sn-01",
+        "sn-07"
+      ],
+      "clues": [
+        {
+          "text": "I stayed home because my father worried that I would be hurt.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-01",
+            "sn-07"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch-04",
+      "name": "Simeon",
+      "origin": "adapted",
+      "scope": "current-story",
+      "sourceIds": [
+        "sn-06"
+      ],
+      "clues": [
+        {
+          "text": "I was the brother kept in Egypt when the others went home.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-06"
+          ]
+        }
+      ]
+    }
+  ],
+  "matchingPairs": [
+    {
+      "id": "mp-01",
+      "left": "Joseph",
+      "right": "Ruler",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ]
+    },
+    {
+      "id": "mp-02",
+      "left": "Jacob",
+      "right": "Father",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    {
+      "id": "mp-03",
+      "left": "Benjamin",
+      "right": "Youngest",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    {
+      "id": "mp-04",
+      "left": "Simeon",
+      "right": "Prisoner",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ]
+    },
+    {
+      "id": "mp-05",
+      "left": "Egypt",
+      "right": "Country",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    {
+      "id": "mp-06",
+      "left": "Grain",
+      "right": "Food",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    }
+  ],
+  "drawingPrompts": [
+    {
+      "id": "draw-01",
+      "prompt": "ten brothers bowing before Joseph in Egypt",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ]
+    },
+    {
+      "id": "draw-02",
+      "prompt": "Joseph’s brothers waiting behind prison bars",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ]
+    },
+    {
+      "id": "draw-03",
+      "prompt": "Joseph wiping away a tear when his brothers talk",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ]
+    },
+    {
+      "id": "draw-04",
+      "prompt": "sacks of grain with coins in them",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ]
+    }
+  ],
+  "keyPhrases": [
+    {
+      "id": "kp-01",
+      "text": "Jacob sent ten sons to Egypt for grain.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    {
+      "id": "kp-02",
+      "text": "The brothers bowed before Joseph without knowing him.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ]
+    },
+    {
+      "id": "kp-03",
+      "text": "Joseph called them spies to test them.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ]
+    },
+    {
+      "id": "kp-04",
+      "text": "Joseph asked the brothers to bring Benjamin back.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ]
+    },
+    {
+      "id": "kp-05",
+      "text": "Joseph put their money back into their bags.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ]
+    },
+    {
+      "id": "kp-06",
+      "text": "Forgive your enemies instead of seeking revenge.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03",
+        "sn-07"
+      ]
+    }
+  ],
+  "theologicalApplications": [
+    {
+      "id": "app-01",
+      "text": "Joseph tested his brothers to find out whether they had changed, not to get revenge.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03",
+        "sn-04"
+      ]
+    },
+    {
+      "id": "app-02",
+      "text": "When the brothers felt sorry about hurting Joseph, he cried.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ]
+    },
+    {
+      "id": "app-03",
+      "text": "Jesus teaches his people to love enemies and do good to them.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ]
+    },
+    {
+      "id": "app-04",
+      "text": "The lesson encourages children to forgive rather than seek revenge.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03",
+        "sn-07"
+      ]
+    }
+  ],
+  "preparedActivities": {
+    "drawPicture": {
+      "prompt": "sacks of grain with coins in them",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ]
+    },
+    "multipleChoice": [
+      {
+        "id": "mc-01",
+        "question": "Why did Jacob send ten of his sons to Egypt?",
+        "correctAnswer": "To buy grain",
+        "choices": [
+          {
+            "text": "To buy grain",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "To go on vacation",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "To steal the pyramids",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "sourceQuestionIds": [
+          "q-38"
+        ],
+        "sourceIds": [
+          "sn-01"
+        ],
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-02",
+        "question": "Which brother stayed home with Jacob?",
+        "correctAnswer": "Benjamin",
+        "choices": [
+          {
+            "text": "Benjamin",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Simeon",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Joseph",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "sourceQuestionIds": [
+          "q-05",
+          "q-45"
+        ],
+        "sourceIds": [
+          "sn-01"
+        ],
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-03",
+        "question": "What did Joseph do when his brothers bowed before him?",
+        "correctAnswer": "Pretended to be a stranger",
+        "choices": [
+          {
+            "text": "Pretended to be a stranger",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Told them his name right away",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Make them his slaves",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "sourceQuestionIds": [
+          "q-40"
+        ],
+        "sourceIds": [
+          "sn-02"
+        ],
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-04",
+        "question": "Why did Joseph call his brothers spies?",
+        "correctAnswer": "To find out if they had changed",
+        "choices": [
+          {
+            "text": "To find out if they had changed",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Because they stole his grain",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Because they were spies",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "sourceQuestionIds": [
+          "q-41"
+        ],
+        "sourceIds": [
+          "sn-03"
+        ],
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-05",
+        "question": "What did Joseph tell his brothers to bring on their next trip?",
+        "correctAnswer": "Their brother Benjamin",
+        "choices": [
+          {
+            "text": "Their brother Benjamin",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Their father Jacob",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "A letter from Pharaoh",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "sourceQuestionIds": [
+          "q-42"
+        ],
+        "sourceIds": [
+          "sn-04"
+        ],
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-06",
+        "question": "What did the brothers find in their sacks when they got home?",
+        "correctAnswer": "Their money",
+        "choices": [
+          {
+            "text": "Their money",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "A silver crown",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "A secret letter",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "sourceQuestionIds": [
+          "q-46"
+        ],
+        "sourceIds": [
+          "sn-06"
+        ],
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      }
+    ],
+    "trueFalse": {
+      "factId": "tf-10",
+      "statement": "Joseph laughed when he heard the brothers talk about hurting him.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": true
+    },
+    "firstLetters": {
+      "reference": "Luke 6:27",
+      "verse": "But to those of you who will listen, I say: Love your enemies, do good to those who hate you,",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Memory Verse Activity",
+        "page": 8,
+        "sourceParagraphIndex": 217,
+        "details": "Source is ESV Luke 6:27 with an ellipsis. Worksheet version proposes the complete Berean Standard Bible verse. Verify exact text, trailing comma, and Scripture rights before approval. Original ESV text: But I say to you who hear, “Love your enemies, do good to those who hate you...”"
+      },
+      "teacherReviewRequired": true
+    },
+    "oddWords": {
+      "related": [
+        "JOSEPH",
+        "GRAIN",
+        "SPY",
+        "DONKEY"
+      ],
+      "unrelated": [
+        "mountain",
+        "frogs",
+        "darkness",
+        "storm",
+        "sea"
+      ],
+      "unrelatedOrigin": "suggested",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-03",
+        "sn-06"
+      ],
+      "teacherReviewRequired": true
+    },
+    "unscrambleWords": {
+      "answers": [
+        "GRAIN",
+        "JOSEPH"
+      ],
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-02"
+      ],
+      "teacherReviewRequired": true
+    },
+    "checkboxes": {
+      "correct": [
+        "Jacob",
+        "Simeon",
+        "Money",
+        "Canaan"
+      ],
+      "incorrect": [
+        "garden",
+        "net",
+        "sandals",
+        "mustache",
+        "hat"
+      ],
+      "incorrectOrigin": "suggested",
+      "teacherReviewRequired": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-06",
+        "sn-07"
+      ]
+    },
+    "whoAmI": {
+      "clue": "I was in charge of the land of Egypt. I knew my brothers when they came to buy grain, but they didn't know me. Who am I?",
+      "answer": "Joseph",
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-02"
+      ],
+      "teacherReviewRequired": true
+    },
+    "matchWords": [
+      {
+        "id": "mp-01",
+        "left": "Joseph",
+        "right": "Ruler",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "id": "mp-02",
+        "left": "Jacob",
+        "right": "Father",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "id": "mp-03",
+        "left": "Benjamin",
+        "right": "Youngest",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "id": "mp-04",
+        "left": "Simeon",
+        "right": "Prisoner",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "id": "mp-05",
+        "left": "Brothers",
+        "right": "Bowed down",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-06",
+        "left": "Grain",
+        "right": "Food",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      }
+    ],
+    "finishVerse": {
+      "reference": "Luke 6:27",
+      "markedVerse": "But to those of [you] who will [listen], I say: [Love] your [enemies], do [good] to those who [hate] you,",
+      "sourceVerse": "But to those of you who will listen, I say: Love your enemies, do good to those who hate you,",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Memory Verse Activity",
+        "page": 8,
+        "sourceParagraphIndex": 217,
+        "details": "Source is ESV Luke 6:27 with an ellipsis. Worksheet version proposes the complete Berean Standard Bible verse. Verify exact text, trailing comma, and Scripture rights before approval. Original ESV text: But I say to you who hear, “Love your enemies, do good to those who hate you...”"
+      },
+      "teacherReviewRequired": true,
+      "origin": "adapted"
+    },
+    "unscrambleVerse": {
+      "reference": "Luke 6:27",
+      "markedVerse": "But to those of [you] who will [listen], I say: [Love] your [enemies], do [good] to those who [hate] you,",
+      "sourceVerse": "But to those of you who will listen, I say: Love your enemies, do good to those who hate you,",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Memory Verse Activity",
+        "page": 8,
+        "sourceParagraphIndex": 217,
+        "details": "Source is ESV Luke 6:27 with an ellipsis. Worksheet version proposes the complete Berean Standard Bible verse. Verify exact text, trailing comma, and Scripture rights before approval. Original ESV text: But I say to you who hear, “Love your enemies, do good to those who hate you...”"
+      },
+      "teacherReviewRequired": true,
+      "origin": "adapted"
+    },
+    "circleMistakes": {
+      "paragraph": "During the famine, Jacob sent six of his sons to buy grain in Egypt. He kept Simeon back at home. When they reached Egypt, Joseph told them he was their brother right away. He said they were robbers and kept them in prison for three years. Before the brothers left, Joseph secretly took all the grain out of their sacks. When the brothers came home, Jacob refused to let Benjamin go back to Egypt.",
+      "mistakeCount": 6,
+      "mistakes": [
+        {
+          "incorrect": "six",
+          "correction": "ten"
+        },
+        {
+          "incorrect": "Simeon back at home",
+          "correction": "Benjamin at home"
+        },
+        {
+          "incorrect": "told them he was their brother right away",
+          "correction": "pretended to be a stranger"
+        },
+        {
+          "incorrect": "robbers",
+          "correction": "spies"
+        },
+        {
+          "incorrect": "three years",
+          "correction": "three days"
+        },
+        {
+          "incorrect": "took all the grain out of their sacks",
+          "correction": "put their money back into their sacks"
+        }
+      ],
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "mediumWordSearch": {
+      "words": [
+        "JOSEPH",
+        "GRAIN",
+        "JACOB",
+        "EGYPT",
+        "SPIES",
+        "SIMEON"
+      ],
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-03",
+        "sn-06"
+      ]
+    },
+    "trueFalseMaze": {
+      "statement": "Jacob was happy to send Benjamin back to Egypt right away.",
+      "isTrue": false,
+      "factId": "tf-13",
+      "origin": "source",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Source True/False Review",
+        "page": 14,
+        "sourceParagraphIndex": 359
+      }
+    },
+    "bigIdeaCryptogram": {
+      "phrase": "Don’t get revenge. Forgive your enemies.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Important Idea",
+        "page": 5,
+        "sourceParagraphIndex": 153,
+        "details": "The original display-font styling is lowercase; punctuation and capitalization normalized for student worksheets. Source lines include “don’t get revenge. forgive your enemies.”"
+      }
+    },
+    "connectBigIdea": {
+      "phrase": "Don’t get revenge. Forgive your enemies.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Important Idea",
+        "page": 5,
+        "sourceParagraphIndex": 153,
+        "details": "The original display-font styling is lowercase; punctuation and capitalization normalized for student worksheets. Source lines include “don’t get revenge. forgive your enemies.”"
+      }
+    },
+    "upsideDownVerse": {
+      "reference": "Luke 6:27",
+      "verse": "But to those of you who will listen, I say: Love your enemies, do good to those who hate you,",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Memory Verse Activity",
+        "page": 8,
+        "sourceParagraphIndex": 217,
+        "details": "Source is ESV Luke 6:27 with an ellipsis. Worksheet version proposes the complete Berean Standard Bible verse. Verify exact text, trailing comma, and Scripture rights before approval. Original ESV text: But I say to you who hear, “Love your enemies, do good to those who hate you...”"
+      },
+      "teacherReviewRequired": true
+    },
+    "verseCryptogram": {
+      "reference": "Luke 6:27",
+      "verse": "But to those of you who will listen, I say: Love your enemies, do good to those who hate you,",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Memory Verse Activity",
+        "page": 8,
+        "sourceParagraphIndex": 217,
+        "details": "Source is ESV Luke 6:27 with an ellipsis. Worksheet version proposes the complete Berean Standard Bible verse. Verify exact text, trailing comma, and Scripture rights before approval. Original ESV text: But I say to you who hear, “Love your enemies, do good to those who hate you...”"
+      },
+      "teacherReviewRequired": true
+    },
+    "spiralVerse": {
+      "reference": "Luke 6:27",
+      "verse": "But to those of you who will listen, I say: Love your enemies, do good to those who hate you,",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Memory Verse Activity",
+        "page": 8,
+        "sourceParagraphIndex": 217,
+        "details": "Source is ESV Luke 6:27 with an ellipsis. Worksheet version proposes the complete Berean Standard Bible verse. Verify exact text, trailing comma, and Scripture rights before approval. Original ESV text: But I say to you who hear, “Love your enemies, do good to those who hate you...”"
+      },
+      "teacherReviewRequired": true
+    },
+    "connectVerse": {
+      "reference": "Luke 6:27",
+      "verse": "But to those of you who will listen, I say: Love your enemies, do good to those who hate you,",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+        "section": "Memory Verse Activity",
+        "page": 8,
+        "sourceParagraphIndex": 217,
+        "details": "Source is ESV Luke 6:27 with an ellipsis. Worksheet version proposes the complete Berean Standard Bible verse. Verify exact text, trailing comma, and Scripture rights before approval. Original ESV text: But I say to you who hear, “Love your enemies, do good to those who hate you...”"
+      },
+      "teacherReviewRequired": true
+    },
+    "pixelPicture": {
+      "phrase": "Joseph’s brothers found money in their sacks of grain.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ]
+    },
+    "finishStory": {
+      "markedParagraph": "During the [famine], Jacob sent ten sons to [Egypt] for grain. He kept [Benjamin] at home. When the brothers [bowed] before [Joseph], they did not know him. Joseph called them [spies] and kept them in [prison] for three days. Joseph said they must [return] with their youngest [brother]. After hearing their sad words, Joseph [cried]. Later, the brothers found their [money] in their grain [sacks].",
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "storyOrder": [
+      {
+        "order": 1,
+        "text": "Jacob sent ten of his sons to Egypt to buy grain.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "order": 2,
+        "text": "The brothers bowed before Joseph without recognizing him.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "order": 3,
+        "text": "Joseph called the brothers spies and kept them in jail for three days.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "order": 4,
+        "text": "Joseph said one brother must stay while the others brought Benjamin back.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "order": 5,
+        "text": "Joseph cried when his brothers spoke about hurting him.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "order": 6,
+        "text": "The brothers found their money in their grain sacks.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "order": 7,
+        "text": "Jacob refused to let Benjamin return to Egypt.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      }
+    ],
+    "sortStory": [
+      {
+        "statement": "Jacob sent ten of his sons to Egypt to buy grain.",
+        "isTrue": true,
+        "factId": "tf-01",
+        "origin": "source",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": false,
+        "source": {
+          "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+          "section": "Source True/False Review",
+          "page": 14,
+          "sourceParagraphIndex": 350
+        }
+      },
+      {
+        "statement": "Benjamin went with his brothers on their first trip to Egypt.",
+        "isTrue": false,
+        "factId": "tf-02",
+        "origin": "source",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": false,
+        "source": {
+          "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+          "section": "Source True/False Review",
+          "page": 14,
+          "sourceParagraphIndex": 351
+        }
+      },
+      {
+        "statement": "The brothers bowed down when they stood before Joseph.",
+        "isTrue": true,
+        "factId": "tf-03",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "statement": "Joseph didn’t recognize his brothers, but they recognized him.",
+        "isTrue": false,
+        "factId": "tf-04",
+        "origin": "source",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": false,
+        "source": {
+          "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+          "section": "Source True/False Review",
+          "page": 14,
+          "sourceParagraphIndex": 352
+        }
+      },
+      {
+        "statement": "Joseph accused his brothers of being spies.",
+        "isTrue": true,
+        "factId": "tf-05",
+        "origin": "source",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": false,
+        "source": {
+          "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+          "section": "Source True/False Review",
+          "page": 14,
+          "sourceParagraphIndex": 354
+        }
+      },
+      {
+        "statement": "Joseph kept all of his brothers in prison for seven days.",
+        "isTrue": false,
+        "factId": "tf-06",
+        "origin": "source",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": false,
+        "source": {
+          "filename": "OT 24 Lesson (Joseph Tests His Brothers).odt",
+          "section": "Source True/False Review",
+          "page": 14,
+          "sourceParagraphIndex": 355
+        }
+      },
+      {
+        "statement": "Joseph told his brothers to come back with Benjamin.",
+        "isTrue": true,
+        "factId": "tf-07",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "statement": "Joseph sent all ten brothers home together.",
+        "isTrue": false,
+        "factId": "tf-08",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-04",
+          "sn-06"
+        ],
+        "teacherReviewRequired": true
+      }
+    ],
+    "drawStory": [
+      {
+        "prompt": "Jacob sent ten of his sons to Egypt to buy grain.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "prompt": "The brothers bowed before Joseph without recognizing him.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "prompt": "Joseph called the brothers spies and kept them in jail for three days.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "prompt": "Joseph said one brother must stay while the others brought Benjamin back.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "prompt": "Joseph cried when his brothers spoke about hurting him.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "prompt": "The brothers found their money in their grain sacks.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      }
+    ],
+    "wordSearch": {
+      "words": [
+        "JOSEPH",
+        "JACOB",
+        "BENJAMIN",
+        "SIMEON",
+        "EGYPT",
+        "CANAAN",
+        "GRAIN",
+        "FAMINE",
+        "MONEY",
+        "SPY",
+        "PRISON",
+        "BROTHERS"
+      ],
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ]
+    },
+    "crossword": [
+      {
+        "answer": "JOSEPH",
+        "clue": "He sold grain to his brothers in Egypt.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "answer": "JACOB",
+        "clue": "He sent ten sons to buy food.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "answer": "STRANGER",
+        "clue": "What Joseph pretended to be to his brothers",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "GRAIN",
+        "clue": "Food the brothers traveled to buy.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "answer": "SPIES",
+        "clue": "Joseph accused his brothers of being these.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "answer": "THREE",
+        "clue": "The number of days the brothers stayed in prison.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "answer": "BENJAMIN",
+        "clue": "Jacob kept this youngest son at home.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "answer": "SIMEON",
+        "clue": "The brother who had to stay in Egypt.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "answer": "MONEY",
+        "clue": "The brothers found this in their grain sacks.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "answer": "CRIED",
+        "clue": "What Joseph did after he heard the brothers.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      }
+    ]
+  },
+  "moduleReadiness": [
+    {
+      "moduleName": "Draw a Picture",
+      "moduleId": "draw-picture",
+      "size": "Small",
+      "preparedActivityKey": "drawPicture",
+      "status": "READY",
+      "contentValidation": "Draft content locally checked; official schema validator, live generator and three presets not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY describes prepared content only, not a successful application run. Teacher approval and live generator tests remain pending."
+    },
+    {
+      "moduleName": "Multiple Choice",
+      "moduleId": "multiple-choice",
+      "size": "Small",
+      "preparedActivityKey": "multipleChoice",
+      "status": "READY",
+      "contentValidation": "Draft content locally checked; official schema validator, live generator and three presets not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY describes prepared content only, not a successful application run. Teacher approval and live generator tests remain pending."
+    },
+    {
+      "moduleName": "True / False",
+      "moduleId": "true-false",
+      "size": "Small",
+      "preparedActivityKey": "trueFalse",
+      "status": "READY",
+      "contentValidation": "Draft content locally checked; official schema validator, live generator and three presets not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY describes prepared content only, not a successful application run. Teacher approval and live generator tests remain pending."
+    },
+    {
+      "moduleName": "First Letters",
+      "moduleId": "first-letters",
+      "size": "Small",
+      "preparedActivityKey": "firstLetters",
+      "status": "READY",
+      "contentValidation": "Draft content locally checked; official schema validator, live generator and three presets not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY describes prepared content only, not a successful application run. Teacher approval and live generator tests remain pending."
+    },
+    {
+      "moduleName": "Odd Words",
+      "moduleId": "odd-words",
+      "size": "Small",
+      "preparedActivityKey": "oddWords",
+      "status": "READY",
+      "contentValidation": "Draft content locally checked; official schema validator, live generator and three presets not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY describes prepared content only, not a successful application run. Teacher approval and live generator tests remain pending."
+    },
+    {
+      "moduleName": "Unscramble Words",
+      "moduleId": "unscramble-words",
+      "size": "Small",
+      "preparedActivityKey": "unscrambleWords",
+      "status": "READY",
+      "contentValidation": "Draft content locally checked; official schema validator, live generator and three presets not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY describes prepared content only, not a successful application run. Teacher approval and live generator tests remain pending."
+    },
+    {
+      "moduleName": "Checkboxes",
+      "moduleId": "checkboxes",
+      "size": "Small",
+      "preparedActivityKey": "checkboxes",
+      "status": "READY",
+      "contentValidation": "Draft content locally checked; official schema validator, live generator and three presets not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY describes prepared content only, not a successful application run. Teacher approval and live generator tests remain pending."
+    },
+    {
+      "moduleName": "Who Am I?",
+      "moduleId": "who-am-i",
+      "size": "Small",
+      "preparedActivityKey": "whoAmI",
+      "status": "READY",
+      "contentValidation": "Draft content locally checked; official schema validator, live generator and three presets not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY describes prepared content only, not a successful application run. Teacher approval and live generator tests remain pending."
+    },
+    {
+      "moduleName": "Match the Words",
+      "moduleId": "match-words",
+      "size": "Medium",
+      "preparedActivityKey": "matchWords",
+      "status": "READY",
+      "contentValidation": "Draft content locally checked; official schema validator, live generator and three presets not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY describes prepared content only, not a successful application run. Teacher approval and live generator tests remain pending."
+    },
+    {
+      "moduleName": "Finish the Verse",
+      "moduleId": "finish-verse",
+      "size": "Medium",
+      "preparedActivityKey": "finishVerse",
+      "status": "READY",
+      "contentValidation": "Draft content locally checked; official schema validator, live generator and three presets not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY describes prepared content only, not a successful application run. Teacher approval and live generator tests remain pending."
+    },
+    {
+      "moduleName": "Unscramble the Verse",
+      "moduleId": "unscramble-verse",
+      "size": "Medium",
+      "preparedActivityKey": "unscrambleVerse",
+      "status": "READY",
+      "contentValidation": "Draft content locally checked; official schema validator, live generator and three presets not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY describes prepared content only, not a successful application run. Teacher approval and live generator tests remain pending."
+    },
+    {
+      "moduleName": "Circle the Mistakes",
+      "moduleId": "circle-mistakes",
+      "size": "Medium",
+      "preparedActivityKey": "circleMistakes",
+      "status": "READY",
+      "contentValidation": "Draft content locally checked; official schema validator, live generator and three presets not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY describes prepared content only, not a successful application run. Teacher approval and live generator tests remain pending."
+    },
+    {
+      "moduleName": "Medium Word Search",
+      "moduleId": "medium-word-search",
+      "size": "Medium",
+      "preparedActivityKey": "mediumWordSearch",
+      "status": "READY",
+      "contentValidation": "Draft content locally checked; official schema validator, live generator and three presets not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY describes prepared content only, not a successful application run. Teacher approval and live generator tests remain pending."
+    },
+    {
+      "moduleName": "True / False Maze",
+      "moduleId": "true-false-maze",
+      "size": "Medium",
+      "preparedActivityKey": "trueFalseMaze",
+      "status": "READY",
+      "contentValidation": "Draft content locally checked; official schema validator, live generator and three presets not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY describes prepared content only, not a successful application run. Teacher approval and live generator tests remain pending."
+    },
+    {
+      "moduleName": "Big Idea Cryptogram",
+      "moduleId": "big-idea-cryptogram",
+      "size": "Medium",
+      "preparedActivityKey": "bigIdeaCryptogram",
+      "status": "READY",
+      "contentValidation": "Draft content locally checked; official schema validator, live generator and three presets not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY describes prepared content only, not a successful application run. Teacher approval and live generator tests remain pending."
+    },
+    {
+      "moduleName": "Upside-Down Verse",
+      "moduleId": "upside-down-verse",
+      "size": "Medium",
+      "preparedActivityKey": "upsideDownVerse",
+      "status": "READY",
+      "contentValidation": "Draft content locally checked; official schema validator, live generator and three presets not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY describes prepared content only, not a successful application run. Teacher approval and live generator tests remain pending."
+    },
+    {
+      "moduleName": "Connect the Big Idea",
+      "moduleId": "connect-big-idea",
+      "size": "Medium",
+      "preparedActivityKey": "connectBigIdea",
+      "status": "READY",
+      "contentValidation": "Draft content locally checked; official schema validator, live generator and three presets not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY describes prepared content only, not a successful application run. Teacher approval and live generator tests remain pending."
+    },
+    {
+      "moduleName": "Pixel Picture",
+      "moduleId": "pixel-picture",
+      "size": "Medium",
+      "preparedActivityKey": "pixelPicture",
+      "status": "READY",
+      "contentValidation": "Draft content locally checked; official schema validator, live generator and three presets not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY describes prepared content only, not a successful application run. Teacher approval and live generator tests remain pending."
+    },
+    {
+      "moduleName": "Finish the Story",
+      "moduleId": "finish-story",
+      "size": "Large",
+      "preparedActivityKey": "finishStory",
+      "status": "READY",
+      "contentValidation": "Draft content locally checked; official schema validator, live generator and three presets not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY describes prepared content only, not a successful application run. Teacher approval and live generator tests remain pending."
+    },
+    {
+      "moduleName": "Story Order",
+      "moduleId": "story-order",
+      "size": "Large",
+      "preparedActivityKey": "storyOrder",
+      "status": "READY",
+      "contentValidation": "Draft content locally checked; official schema validator, live generator and three presets not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY describes prepared content only, not a successful application run. Teacher approval and live generator tests remain pending."
+    },
+    {
+      "moduleName": "Sort the Story",
+      "moduleId": "sort-story",
+      "size": "Large",
+      "preparedActivityKey": "sortStory",
+      "status": "READY",
+      "contentValidation": "Draft content locally checked; official schema validator, live generator and three presets not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY describes prepared content only, not a successful application run. Teacher approval and live generator tests remain pending."
+    },
+    {
+      "moduleName": "Draw the Story",
+      "moduleId": "draw-story",
+      "size": "Large",
+      "preparedActivityKey": "drawStory",
+      "status": "READY",
+      "contentValidation": "Draft content locally checked; official schema validator, live generator and three presets not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY describes prepared content only, not a successful application run. Teacher approval and live generator tests remain pending."
+    },
+    {
+      "moduleName": "Word Search",
+      "moduleId": "word-search",
+      "size": "Large",
+      "preparedActivityKey": "wordSearch",
+      "status": "READY",
+      "contentValidation": "Draft content locally checked; official schema validator, live generator and three presets not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY describes prepared content only, not a successful application run. Teacher approval and live generator tests remain pending."
+    },
+    {
+      "moduleName": "Verse Cryptogram",
+      "moduleId": "verse-cryptogram",
+      "size": "Large",
+      "preparedActivityKey": "verseCryptogram",
+      "status": "READY",
+      "contentValidation": "Draft content locally checked; official schema validator, live generator and three presets not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY describes prepared content only, not a successful application run. Teacher approval and live generator tests remain pending."
+    },
+    {
+      "moduleName": "Crossword",
+      "moduleId": "crossword",
+      "size": "Large",
+      "preparedActivityKey": "crossword",
+      "status": "READY",
+      "contentValidation": "Draft content locally checked; official schema validator, live generator and three presets not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY describes prepared content only, not a successful application run. Teacher approval and live generator tests remain pending."
+    },
+    {
+      "moduleName": "Spiral Verse",
+      "moduleId": "spiral-verse",
+      "size": "Large",
+      "preparedActivityKey": "spiralVerse",
+      "status": "READY",
+      "contentValidation": "Draft content locally checked; official schema validator, live generator and three presets not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY describes prepared content only, not a successful application run. Teacher approval and live generator tests remain pending."
+    },
+    {
+      "moduleName": "Connect the Verse",
+      "moduleId": "connect-verse",
+      "size": "Large",
+      "preparedActivityKey": "connectVerse",
+      "status": "READY",
+      "contentValidation": "Draft content locally checked; official schema validator, live generator and three presets not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY describes prepared content only, not a successful application run. Teacher approval and live generator tests remain pending."
+    }
+  ],
+  "reviewFlags": [
+    {
+      "id": "rf-01",
+      "priority": "high",
+      "type": "scripture-approval",
+      "text": "Original Luke 6:27 memory text is an ESV excerpt. The prepared worksheet proposes full BSB Luke 6:27; verify exact wording, final comma, and distribution rights before approval.",
+      "affectedModules": [
+        "first-letters",
+        "finish-verse",
+        "unscramble-verse",
+        "upside-down-verse",
+        "verse-cryptogram",
+        "spiral-verse",
+        "connect-verse"
+      ]
+    },
+    {
+      "id": "rf-02",
+      "priority": "medium",
+      "type": "original-verse",
+      "text": "Keep the source ESV excerpt distinct from the proposed BSB full verse. The source includes trailing ellipsis.",
+      "affectedModules": [
+        "first-letters",
+        "finish-verse",
+        "unscramble-verse"
+      ]
+    },
+    {
+      "id": "rf-03",
+      "priority": "medium",
+      "type": "source-typo",
+      "text": "The original True/False review item spells the brother kept in Egypt “Simon,” marked True. The story correctly says “Simeon.” Prepared content uses Simeon; original item remains in the ODT.",
+      "affectedModules": [
+        "true-false",
+        "true-false-maze",
+        "sort-story",
+        "crossword"
+      ]
+    },
+    {
+      "id": "rf-04",
+      "priority": "medium",
+      "type": "suggested-false-statements",
+      "text": "New false statements tf-08, tf-10 and tf-11 are suggested, clearly false within Genesis 42, and require teacher approval.",
+      "affectedModules": [
+        "true-false",
+        "true-false-maze",
+        "sort-story"
+      ]
+    },
+    {
+      "id": "rf-05",
+      "priority": "medium",
+      "type": "multiple-choice-distractors",
+      "text": "Check the two suggested incorrect choices for each of the six Multiple Choice questions.",
+      "affectedModules": [
+        "multiple-choice"
+      ]
+    },
+    {
+      "id": "rf-06",
+      "priority": "medium",
+      "type": "vocabulary-distractors",
+      "text": "Confirm Odd Words and Checkboxes incorrect words are sufficiently different from the source story and right for the age group.",
+      "affectedModules": [
+        "odd-words",
+        "checkboxes"
+      ]
+    },
+    {
+      "id": "rf-07",
+      "priority": "medium",
+      "type": "circle-mistakes",
+      "text": "Review six intentionally wrong statements and their corrections for clarity and child friendliness.",
+      "affectedModules": [
+        "circle-mistakes"
+      ]
+    },
+    {
+      "id": "rf-08",
+      "priority": "medium",
+      "type": "application-wording",
+      "text": "Confirm child-friendly application and wording around revenge, forgiveness, and difficult family experiences. Story Notes retain original source wording.",
+      "affectedModules": [
+        "big-idea-cryptogram",
+        "connect-big-idea",
+        "finish-story"
+      ]
+    },
+    {
+      "id": "rf-09",
+      "priority": "high",
+      "type": "generator-testing",
+      "text": "Official schema validator, Review Studio preflight, live module generators and numbered worksheet presets must be tested before approval or publication.",
+      "affectedModules": [
+        "draw-picture",
+        "multiple-choice",
+        "true-false",
+        "first-letters",
+        "odd-words",
+        "unscramble-words",
+        "checkboxes",
+        "who-am-i",
+        "match-words",
+        "finish-verse",
+        "unscramble-verse",
+        "circle-mistakes",
+        "medium-word-search",
+        "true-false-maze",
+        "big-idea-cryptogram",
+        "upside-down-verse",
+        "connect-big-idea",
+        "pixel-picture",
+        "finish-story",
+        "story-order",
+        "sort-story",
+        "draw-story",
+        "word-search",
+        "verse-cryptogram",
+        "crossword",
+        "spiral-verse",
+        "connect-verse"
+      ]
+    },
+    {
+      "id": "rf-10",
+      "priority": "low",
+      "type": "crossword-grid",
+      "text": "Verify the ten short crossword answers can be laid out by the live crossword generator.",
+      "affectedModules": [
+        "crossword"
+      ]
+    },
+    {
+      "id": "rf-11",
+      "priority": "medium",
+      "type": "origin-provenance",
+      "text": "Review all adaptations, especially contextual bracketed answers to original reflection questions and rewritten Story Note cleanText. The originals remain untouched.",
+      "affectedModules": [
+        "finish-story",
+        "story-order",
+        "draw-story"
+      ]
+    }
+  ],
+  "publication": {
+    "status": "approved",
+    "approved": true,
+    "notes": "For teacher review only. Official schema validation, importer preflight, generator tests, numbered presets, and Scripture/rights signoff remain outstanding.",
+    "teacherSignoff": {
+      "reviewer": "Andrew Doane",
+      "date": "2026-11-04",
+      "notes": "Approved with verified BSB verse through Curriculum Review Studio"
+    },
+    "scriptureRights": {
+      "status": "cleared",
+      "basis": "Berean Standard Bible (BSB), dedicated to the public domain on April 30, 2023. Official terms: https://berean.bible/terms.htm. Scripture text confirmed against https://bereanbible.com/bsb.txt.",
+      "reviewedBy": "Andrew Doane",
+      "reviewedOn": "2026-11-04"
+    },
+    "resolvedReviewFlagIds": []
+  },
+  "validation": {
+    "basis": "Original conversion tests predate teacher-approved BSB; revalidate actual engines and content after export.",
+    "allTextChecksPassed": false,
+    "checks": [
+      {
+        "check": "Exactly seven source Story Notes",
+        "passed": true
+      },
+      {
+        "check": "Verbatim Story Note originals from ODT",
+        "passed": true
+      },
+      {
+        "check": "Story Note emphasis matches ALL-CAPS source tokens",
+        "passed": true
+      },
+      {
+        "check": "All original extracted questions match their source paragraph",
+        "passed": true
+      },
+      {
+        "check": "Questions and Story Notes have precise source paragraph and page",
+        "passed": true
+      },
+      {
+        "check": "All 27 prepared activity keys match known template",
+        "passed": true
+      },
+      {
+        "check": "All 27 distinct readiness modules and keys",
+        "passed": true
+      },
+      {
+        "check": "Four distinctive short small drawing scenes",
+        "passed": true
+      },
+      {
+        "check": "6 Multiple Choice questions prepared",
+        "passed": true
+      },
+      {
+        "check": "Each MC has one correct and two suggested wrong answers",
+        "passed": true
+      },
+      {
+        "check": "Every MC has a reference to source teaching or review question",
+        "passed": true
+      },
+      {
+        "check": "14 True/False facts, balanced 7/7",
+        "passed": true
+      },
+      {
+        "check": "New false statements are suggested and flagged",
+        "passed": true
+      },
+      {
+        "check": "Original sourced True/False items retained verbatim",
+        "passed": true
+      },
+      {
+        "check": "Sort Story uses 8 distinct facts with balanced truth values",
+        "passed": true
+      },
+      {
+        "check": "No facts repeated among Preset 3 activities",
+        "passed": true
+      },
+      {
+        "check": "Four alternative facts remain",
+        "passed": true
+      },
+      {
+        "check": "Prepared T/F statements agree with fact pool",
+        "passed": true
+      },
+      {
+        "check": "Match Words uses one-word pairs",
+        "passed": true
+      },
+      {
+        "check": "Match Words sides individually unique",
+        "passed": true
+      },
+      {
+        "check": "Odd Words and Checkboxes vocabularies are disjoint",
+        "passed": true
+      },
+      {
+        "check": "Each word-selection module has four true and four false terms",
+        "passed": true
+      },
+      {
+        "check": "Circle Mistakes has six intentional errors",
+        "passed": true
+      },
+      {
+        "check": "Each Circle Mistakes incorrect phrase appears exactly once",
+        "passed": true
+      },
+      {
+        "check": "Story Order has seven chronological events",
+        "passed": true
+      },
+      {
+        "check": "Large Draw Story captions are six complete and bounded sentences",
+        "passed": true
+      },
+      {
+        "check": "scriptureDisplay is only Genesis",
+        "passed": true
+      },
+      {
+        "check": "Memory verse equals verified BSB Luke 6:27",
+        "passed": true
+      },
+      {
+        "check": "Original ESV and proposed BSB are distinguished",
+        "passed": true
+      },
+      {
+        "check": "All sourceIds refer to preserved Story Notes",
+        "passed": true
+      },
+      {
+        "check": "Crossword includes natural sentence-style clues",
+        "passed": true
+      },
+      {
+        "check": "No official generator test is falsely claimed",
+        "passed": true
+      },
+      {
+        "check": "Publication is pending and unsigned",
+        "passed": true
+      },
+      {
+        "check": "Source typo is flagged for teacher review",
+        "passed": true
+      },
+      {
+        "check": "Top-level keys match established v1 template",
+        "passed": true
+      },
+      {
+        "check": "Required v1 top-level properties all present",
+        "passed": true
+      },
+      {
+        "check": "All required per-entry source and activity fields exist",
+        "passed": true
+      }
+    ],
+    "jsonParseTested": true,
+    "actualGeneratorTested": false
+  }
+}
