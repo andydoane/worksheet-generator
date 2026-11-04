@@ -78,6 +78,11 @@ export default function SortStoryReviewEditor({lesson,onChange,onError}:{
        onClick={()=>alternative&&apply(()=>selectFact(lesson,'sortStory',alternative,i))}>
        Choose unused fact
       </button>
+      {fact&&localIssues.some(issue=>issue.message.includes('differs from canonical'))&&
+       <button type="button" className="review-secondary"
+        onClick={()=>apply(()=>selectFact(lesson,'sortStory',fact.id,i))}>
+        Restore canonical wording and answer
+       </button>}
       <button type="button" className="review-secondary" disabled={i===0}
        onClick={()=>apply(()=>moveSortFact(lesson,i,-1))}>Move up</button>
       <button type="button" className="review-secondary" disabled={i===entries.length-1}
