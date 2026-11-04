@@ -72,7 +72,7 @@ export function wordLines(text: string): string[] {
  * quotation marks. Never edit approved answer text or answer correctness.
  */
 export function printedMultipleChoiceAnswer(answer:string):string{
- return answer.trim().replace(/\\.+(?=["'’”]*$)/u,'');
+ return answer.trim().replace(/\.+(?=["'’”]*$)/u,'');
 }
 export function shuffledChoices(module: MultipleChoice): string[] {
   const options = [module.correct.trim(), module.wrong1.trim(), module.wrong2.trim()];
