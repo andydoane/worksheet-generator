@@ -17,7 +17,7 @@ const visual=(taskId:string,fieldId:string,handlesMissing=false):RepairDestinati
  taskId,fieldId,editor:'visual',handlesMissing,
 });
 const scripture:RepairDestination={
- taskId:'bsb-verse',fieldId:'review-field-bsb',editor:'scripture',handlesMissing:false,
+ taskId:'bsb-verse',fieldId:'review-field-bsb',editor:'scripture',handlesMissing:true,
 };
 const advanced=(id:ModuleId):RepairDestination=>({
  taskId:'module:'+id,fieldId:'review-module-json',editor:'advanced',handlesMissing:false,
