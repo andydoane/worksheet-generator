@@ -19,6 +19,10 @@ export function multipleChoiceIssues(lesson:Lesson):{index?:number;message:strin
  if(!rows.length)issues.push({message:'Add at least one prepared Multiple Choice question.'});
  const ids=new Set<string>();
  rows.forEach((row,index)=>{
+  if(!row||typeof row!=='object'){
+   issues.push({index,message:'This prepared question is not an object. Repair its structure in Advanced JSON.'});
+   return;
+  }
   if(!row.id||ids.has(row.id))issues.push({index,message:'A question ID is missing or repeated.'});
   ids.add(row.id);
   if(!Array.isArray(row.choices)||row.choices.length!==3){
