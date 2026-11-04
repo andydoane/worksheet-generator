@@ -248,9 +248,13 @@ export async function inspectCurriculumLibrary({root=ROOT,writeReports=false}={}
    }
    if(source==='approved'&&name!==id+'.lesson.json')
     errors.push({code:'filename-id',message:name+': filename must match lesson ID '+id});
-   if(seen.has(id))
-    errors.push({code:'duplicate-id',message:id+' occurs in '+seen.get(id)+' and '+source+'/'+name});
-   else seen.set(id,source+'/'+name);
+   // A pending review copy may coexist with the final approved file. Only
+   // approved lessons are bundled publicly; retaining a draft must not make
+   // a one-file publication fail. Duplicates within a stage remain errors.
+   const seenKey=source+':'+id;
+   if(seen.has(seenKey))
+    errors.push({code:'duplicate-id',message:id+' occurs in '+seen.get(seenKey)+' and '+source+'/'+name});
+   else seen.set(seenKey,source+'/'+name);
    const rights=lesson?.publication?.scriptureRights;
    const report=assessCurriculumLesson(lesson,schemaResult.data,{source});
    lessons.push(report);
