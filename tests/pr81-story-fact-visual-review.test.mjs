@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {
  storyEvents,storyOrderIssues,editStoryEvent,moveStoryEvent,
+ normalizeStoryEventNumbers,
  removeStoryEvent,addStoryEventFromNote,replaceStoryEventFromNote,
  sortSelections,selectedFact,factUsage,eligibleFacts,suggestUnusedFact,
  selectFact,removeSortFact,moveSortFact,factSelectionIssues,
@@ -80,6 +81,14 @@ test('Chronological move/add/remove edits preserve events and renumber positions
  const five=structuredClone(ot32);
  five.preparedActivities.storyOrder=five.preparedActivities.storyOrder.slice(0,5);
  assert.throws(()=>removeStoryEvent(five,0),/at least five/u);
+ const wronglyNumbered=structuredClone(ot32);
+ wronglyNumbered.preparedActivities.storyOrder[2].order=5;
+ assert.ok(storyOrderIssues(wronglyNumbered).some(issue=>issue.message.includes('sequential order')));
+ const repaired=normalizeStoryEventNumbers(wronglyNumbered);
+ assert.deepEqual(storyEvents(repaired).map(x=>x.order),[1,2,3,4,5,6,7]);
+ assert.deepEqual(storyOrderIssues(repaired),[]);
+ assert.ok(storyEvents(repaired)[3].teacherReviewRequired===true||
+  storyEvents(repaired)[4].teacherReviewRequired===true);
  const malformed=structuredClone(ot32);
  malformed.preparedActivities.storyOrder={text:'bad'};
  assert.ok(storyOrderIssues(malformed).some(issue=>issue.message.includes('not an array')));
@@ -235,6 +244,8 @@ test('Print-matched story and fact previews, row controls, and advanced fallback
  assert.match(sort,/<SortStoryPrintPreview module=/u);
  assert.match(sort,/selectFact\(lesson,'sortStory'/u);
  assert.match(sort,/Choose unused fact/u);
+ assert.match(sort,/Restore canonical wording and answer/u);
+ assert.match(story,/Fix chronological position numbers/u);
  assert.match(fact,/<PuzzlePreview module=/u);
  assert.match(fact,/<TrueFalsePrintPreview module=/u);
  assert.match(fact,/Restore exact canonical wording/u);
