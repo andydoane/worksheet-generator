@@ -159,7 +159,7 @@ test('Repair registry has an explicit, focusable strategy for every one of 27 mo
    assert.equal(without.editor,'advanced',id+' needs a safe fallback if prepared content is missing');
  }
  assert.equal(repairDestinationForModule('crossword',false).taskId,'crossword');
- assert.equal(repairDestinationForModule('story-order',false).taskId,'module:story-order');
+ assert.equal(repairDestinationForModule('story-order',false).taskId,'story-order');
 });
 
 test('Review Studio mounts real Crossword inputs, advance fallback and actual printable preview',async()=>{
