@@ -19,13 +19,14 @@ import LessonIntegrityReviewEditor from './LessonIntegrityReviewEditor.tsx';
 import MultipleChoiceBankReviewEditor from './MultipleChoiceBankReviewEditor.tsx';
 import {MODULE_REPAIR_REGISTRY} from './repairRegistry.ts';
 import {markRequiredTasksReviewed} from './reviewProgress.ts';
+import {cleanReviewExport} from './exportCleanup.ts';
 import {cryptogramLetters} from '../cryptograms.ts';
 import {buildReviewPreflight,PREPARED_ACTIVITY_KEYS,reviewIssueTarget,type ReviewPreflight} from './preflight.ts';
 import './review.css';
 
 const SAVE_KEY='worksheet-studio:review-workbench:v1';
 function downloadJson(name:string,value:unknown){
- const url=URL.createObjectURL(new Blob([JSON.stringify(value,null,2)+'\n'],{type:'application/json'}));
+ const url=URL.createObjectURL(new Blob([JSON.stringify(cleanReviewExport(value),null,2)+'\n'],{type:'application/json'}));
  const a=document.createElement('a');a.href=url;a.download=name;
  document.body.append(a);a.click();a.remove();
  window.setTimeout(()=>URL.revokeObjectURL(url),1000);
