@@ -386,7 +386,7 @@ export default function ReviewApp(){
        <label>Adapted story paragraph<textarea id="review-field-finish-story" rows={9} value={lesson.preparedActivities.finishStory.markedParagraph}
         onChange={e=>change(['preparedActivities','finishStory','markedParagraph'],e.target.value)}/></label>
        <p className="review-source">Keep the original Story Note emphasis words in order. You may add more [missing words], up to 12 total (minimum 6).</p>
-       <p className="review-source">Currently {[...lesson.preparedActivities.finishStory.markedParagraph.matchAll(/\\[([^\\[\\]]+)\\]/gu)].length} missing words.</p>
+       <p className="review-source">Currently {[...lesson.preparedActivities.finishStory.markedParagraph.matchAll(/\[([^\[\]]+)\]/gu)].length} missing words.</p>
        <SourceContext lesson={lesson} ids={lesson.preparedActivities.finishStory.sourceIds??[]}/>
       </div>}
       {active.id==='drawing-captions'&&<div id="review-field-drawing" tabIndex={-1} className="review-fields">
