@@ -154,11 +154,13 @@ test('Live repository scan validates all three author-approved BSB Red Sea prese
  const report=await inspectCurriculumLibrary();
  assert.equal(report.passed,true,JSON.stringify(report.errors));
  assert.equal(report.errors.length,0);
- assert.equal(report.lessons.length,1);
- assert.equal(report.lessons[0].source,'approved');
- assert.equal(report.lessons[0].eligibleForPublication,true);
- assert.equal(report.lessons[0].rightsCleared,true);
- assert.equal(report.lessons[0].teacherReviewFlagsOutstanding.length,0);
+ const published=report.lessons.filter(x=>x.source==='approved');
+ assert.equal(published.length,1,'Review drafts do not count as public lessons');
+ assert.equal(published[0].eligibleForPublication,true);
+ assert.equal(published[0].rightsCleared,true);
+ assert.equal(published[0].teacherReviewFlagsOutstanding.length,0);
+ assert.ok(report.lessons.filter(x=>x.source==='review')
+  .every(x=>x.eligibleForPublication===false),'All review data must remain unlisted');
  const rendered=renderCurriculumReadinessMarkdown(report);
  assert.match(rendered,/Curriculum library readiness/u);
  assert.match(rendered,/27\/27/u);
