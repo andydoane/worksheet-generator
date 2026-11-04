@@ -1,5 +1,6 @@
 import {useEffect,useState} from 'react';
 import fontkit from '@pdf-lib/fontkit';
+import {formatVerseDashes} from './versePunctuation.ts';
 import {VerseReconstructionPreview} from './VerseReconstructionPreview.tsx';
 import ConnectBigIdeaPrintPreview from './ConnectBigIdeaPrintPreview.tsx';
 import ConnectVersePrintPreview from './ConnectVersePrintPreview.tsx';
@@ -70,7 +71,7 @@ function SpiralView({module}:{module:Extract<SpecialtyModule,{type:'spiral-verse
     <div className="module-title">SPIRAL VERSE</div>
     <div className="specialty-instruction">Copy the verse on the spiral line.</div>
     <div className="spiral-bank"><strong>{module.reference}</strong>
-      <span className="spiral-bank-verse">{module.verse}</span></div>
+      <span className="spiral-bank-verse">{formatVerseDashes(module.verse)}</span></div>
     <svg className="spiral-svg" viewBox="35 35 930 930" role="img"
       aria-label="Blank spiral line for copying the verse">
       <polyline points={path} fill="none" stroke="currentColor"

@@ -1,4 +1,5 @@
 import {parseVerse,verseBank,type FinishVerse} from './storyVerseModules.ts';
+import {formatVerseDashes} from './versePunctuation.ts';
 import {MEDIUM_PRINT_WIDTH,MEDIUM_PRINT_HEIGHT,type MeasureText} from './mediumParityLayout.ts';
 
 /** Browser and PDF draw identical measured top-left print-space coordinates. */
@@ -82,7 +83,7 @@ function bankLayout(words:string[],m:Metrics,width:number,top:number):BankLayout
 }
 export function planFinishVerse(module:FinishVerse,metrics:Metrics,
  width=MEDIUM_PRINT_WIDTH,height=MEDIUM_PRINT_HEIGHT):FinishVersePlan|null{
- const groups=wordGroups(verseTokens(module.verse));
+ const groups=wordGroups(verseTokens(formatVerseDashes(module.verse)));
  if(!groups.length)return null;
  const title='FINISH '+module.reference.trim().toUpperCase();
  let titleSize=25;

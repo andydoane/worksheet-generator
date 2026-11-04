@@ -83,7 +83,8 @@ test('Change Story preserves current numbered preset or Build My Own; no second 
 test('Quick story picker is single-step and keeps current preset; Change Preset remains separate',async()=>{
  const app=await readFile(new URL('../src/App.tsx',import.meta.url),'utf8');
  const helper=await readFile(new URL('../src/lessonQuickSwitch.ts',import.meta.url),'utf8');
- assert.match(app,/onClick=\{\(\)=>chooseQuickStory\(entry\)\}/u);
+ assert.match(app,/onSelect=\{chooseQuickStory\}/u);
+ assert.match(app,/<StoryPicker stories=\{PUBLIC_LESSONS.filter\(approvedForPublic\)\}/u);
  assert.match(app,/chooseQuickLessonWorksheet\(startId,entry\)/u);
  assert.match(app,/createSamePresetForNewStory\(draft,entry\)/u);
  assert.match(app,/needsLessonSwitchConfirmation\(draft,PUBLIC_LESSONS\)/u);

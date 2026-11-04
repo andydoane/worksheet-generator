@@ -2,6 +2,21 @@
  * A-Z letters require handwriting lines; apostrophes and terminal marks
  * remain visibly printed on the answer line, never scrambled or flipped.
  */
+/** Add breathing room around an em dash in the PRINTED verse only.
+ * Never normalize the BSB source, prepared record or teacher's editor text.
+ * Preserve existing whitespace, including newlines, and be idempotent.
+ */
+export function formatVerseDashes(verse:string):string{
+ // Teacher-marked [answers] are one unit. Do not insert a space inside an
+ // answer: doing so would change its blank length and scramble solution.
+ const pieces=verse.split(/(\[[^[\]]*\])/gu);
+ const formatted=pieces.map(piece=>piece.startsWith('[')&&piece.endsWith(']')
+  ?piece:piece.replace(/(\S)—/gu,'$1 —').replace(/—(\S)/gu,'— $1')
+ ).join('');
+ // Also handle an em dash immediately beside a [marked] answer.
+ return formatted.replace(/(\])—/gu,'$1 —').replace(/—(\[)/gu,'— $1');
+}
+
 export const VERSE_PUNCTUATION=/^[.,!?;:'’"“”()\-–—]$/u;
 export const LETTER=/^[A-Za-z]$/u;
 export type VerseGlyph={value:string;kind:'letter'|'punctuation'|'space'};

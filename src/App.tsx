@@ -13,6 +13,7 @@ import {
 } from './lessonQuickSwitch.ts';
 import {approvedLessonForDraft,buildYourOwnLessonDraft,canRecreateApprovedActivity,chooseActivityForDraft,isActivityCustomized,originalApprovedActivity,sameActivityContent} from './curriculumEditor.ts';
 import WelcomeScreen from './WelcomeScreen.tsx';
+import StoryPicker from './StoryPicker.tsx';
 import {explainActivityError} from './editorFeedback.ts';
 import {COVER_BORDERS,coverBorderUrl,isCoverBorderId,type CoverBorderId} from './coverBorders.ts';
 import {
@@ -731,13 +732,9 @@ export default function App() {
                         <button type="button" onClick={()=>{setLessonPicker(null);setLessonPickerError(null);}}>Cancel</button>
                       </div>
                       {lessonPicker==='stories'
-                        ?<div className="lesson-switcher-options">
-                          {PUBLIC_LESSONS.filter(approvedForPublic).map(entry=><button type="button"
-                            key={entry.lesson.id} onClick={()=>chooseQuickStory(entry)}>
-                            <strong>{entry.lesson.lessonDetails.title}</strong>
-                            <small>{entry.lesson.lessonDetails.scriptureDisplay??entry.lesson.lessonDetails.scripturePassages?.join(', ')}</small>
-                          </button>)}
-                        </div>
+                        ?<StoryPicker stories={PUBLIC_LESSONS.filter(approvedForPublic)}
+                         variant="switch" currentId={draft.curriculumLessonId}
+                         onSelect={chooseQuickStory}/>
                         :<div className="lesson-switcher-options">
                           {WORKSHEET_RECIPES.map(recipe=><button type="button" key={recipe.id}
                             disabled={draft.worksheetPresetId===recipe.id}

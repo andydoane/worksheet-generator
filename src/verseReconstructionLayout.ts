@@ -1,5 +1,5 @@
 import {parseVerse,verseScrambles,type UnscrambleVerse} from './storyVerseModules.ts';
-import {letterOnly,verseGlyphs,shortenBibleReference,type VerseGlyph} from './versePunctuation.ts';
+import {letterOnly,verseGlyphs,shortenBibleReference,formatVerseDashes,type VerseGlyph} from './versePunctuation.ts';
 import {MEDIUM_PRINT_WIDTH,MEDIUM_PRINT_HEIGHT,type MeasureText} from './mediumParityLayout.ts';
 import type {UpsideDownVerseModule} from './specialtyModules.ts';
 
@@ -31,7 +31,7 @@ function chunksFromSegments(segments:Segment[]):Chunk[]{
 }
 function segmentsForUnscramble(m:UnscrambleVerse):Segment[]{
  const scrambled=verseScrambles(m),out:Segment[]=[];let i=0;
- for(const part of parseVerse(m.verse).parts){
+ for(const part of parseVerse(formatVerseDashes(m.verse)).parts){
   if(part.kind==='blank')out.push({kind:'blank',text:part.value,scramble:scrambled[i++]});
   else out.push({kind:'ordinary',text:part.value});
  }
@@ -195,6 +195,6 @@ export function planUnscrambleVerse(m:UnscrambleVerse,metrics:Metrics,
 }
 export function planUpsideDownVerse(m:UpsideDownVerseModule,metrics:Metrics,
  width=MEDIUM_PRINT_WIDTH,height=MEDIUM_PRINT_HEIGHT):ReconstructionPlan|null{
- return planReconstruction(chunksFromSegments([{kind:'upside',text:m.verse.toUpperCase()}]),
+ return planReconstruction(chunksFromSegments([{kind:'upside',text:formatVerseDashes(m.verse).toUpperCase()}]),
   metrics,'upside',shortenBibleReference(m.reference)+' – Upside Down',undefined,width,height);
 }

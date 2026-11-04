@@ -3,6 +3,7 @@ import {
   popGraphicsState, concatTransformationMatrix,
 } from 'pdf-lib';
 import {BOOKLET} from './booklet.ts';
+import {formatVerseDashes} from './versePunctuation.ts';
 import {MODULE_TITLE_PT} from './pdfLayout.ts';
 import {balancedLines} from './storyVersePdf.ts';
 import {planCrossword,crosswordBlackCells} from './crosswordLayout.ts';
@@ -74,7 +75,7 @@ function spiral(page:PDFPage,b:Rect,module:Extract<SpecialtyModule,{type:'spiral
   centered(page,fonts.bodyBold,'Copy the verse on the spiral line.',b.x,b.y+b.height-42,b.width,9);
   let size=10.8,rows:string[]|null=null;
   for(;size>=8;size-=.4){
-    rows=balancedLines(module.verse,fonts.bodyBold,size,b.width-16);
+    rows=balancedLines(formatVerseDashes(module.verse),fonts.bodyBold,size,b.width-16);
     if(rows&&rows.length<=4)break;
   }
   if(!rows||rows.length>4)throw Error('Verse does not fit the reference bank. Shorten it.');
