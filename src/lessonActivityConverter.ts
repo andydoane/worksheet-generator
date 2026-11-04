@@ -62,6 +62,9 @@ export type LessonActivityData={
   status:string;approved:boolean;
   teacherSignoff?:{reviewer:string;date:string};
   resolvedReviewFlagIds?:string[];
+  scriptureRights?:{
+   status:'cleared';basis:string;reviewedBy:string;reviewedOn:string;
+  };
  };
  reviewFlags?:{id:string;type:string}[];
  facts:LessonFact[];
