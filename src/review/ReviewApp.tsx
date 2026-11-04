@@ -1,7 +1,7 @@
 import {useEffect,useMemo,useState} from 'react';
 import type {ChangeEvent} from 'react';
 import {parseBsbText,getBsbPassage,wordSpans,clipToWords,markSelectedWords,suggestBlankWords,type BsbIndex,type Passage} from './bsb.ts';
-import {applyBsbVerse,chooseSolveCodePhrase,createApprovedLesson,editAt,listReviewTasks,normalizeLegacySmallDrawingScenes,originalMemoryVerseTranslation,solveCodeChoices,useMatchingStoryOrderCaptions,updatedRightsManifest,type Lesson,type ReviewTask} from './model.ts';
+import {applyBsbVerse,chooseSolveCodePhrase,createApprovedLesson,editAt,listReviewTasks,normalizeLegacySmallDrawingScenes,originalMemoryVerseTranslation,solveCodeChoices,useMatchingStoryOrderCaptions,type Lesson,type ReviewTask} from './model.ts';
 import {validateModule,MODULES} from '../modules.ts';
 import {cryptogramLetters} from '../cryptograms.ts';
 import {buildReviewPreflight,PREPARED_ACTIVITY_KEYS,reviewIssueTarget,type ReviewPreflight} from './preflight.ts';
@@ -67,8 +67,6 @@ export default function ReviewApp(){
  const [reviewer,setReviewer]=useState('');
  const [signDate,setSignDate]=useState(displayDate);
  const [rightsConfirmed,setRightsConfirmed]=useState(false);
- const [manifest,setManifest]=useState<unknown>(null);
- const [confirmEmptyManifest,setConfirmEmptyManifest]=useState(false);
  const tasks=useMemo(()=>lesson?listReviewTasks(lesson):[],[lesson]);
  const diagnosticTasks=useMemo<ReviewTask[]>(()=>{
   if(!preflight)return [];
@@ -158,14 +156,6 @@ export default function ReviewApp(){
   const file=e.target.files?.[0];if(!file)return;
   try{setIndex(parseBsbText(await file.text()));setBibleError('');}
   catch(e){setBibleError(String((e as Error).message??e));}
-  e.target.value='';
- }
- async function loadManifest(e:ChangeEvent<HTMLInputElement>){
-  const file=e.target.files?.[0];if(!file)return;
-  try{const value=JSON.parse(await file.text());
-   if(value?.schemaVersion!==1||!value.lessons||Array.isArray(value.lessons))throw Error('Invalid rights manifest.');
-   setManifest(value);setConfirmEmptyManifest(false);setError('');
-  }catch(e){setError('Could not load rights manifest: '+String((e as Error).message??e));}
   e.target.value='';
  }
  function change(path:(string|number)[],value:string){
@@ -292,19 +282,14 @@ export default function ReviewApp(){
  const versePreview=lesson?.lessonDetails?.memoryVerse;
  const canPublish=lesson&&remaining===0&&preflight!==null&&preflight.issues.length===0&&
   preflight.convertedCount===preflight.totalCount&&
-  reviewer.trim()&&signDate&&rightsConfirmed&&(manifest!==null||confirmEmptyManifest);
+  reviewer.trim()&&signDate&&rightsConfirmed;
  function downloadApproved(){
   if(!canPublish||!lesson)return;
   try{
-   const approved=createApprovedLesson(lesson,reviewer,signDate);
+   const approved=createApprovedLesson(lesson,reviewer,signDate,rightsConfirmed);
    downloadJson(lesson.id+'.lesson.json',approved);
-   setError('Approved lesson downloaded. Download the rights manifest separately, then submit BOTH files in one GitHub PR. Publication will remain blocked until CI passes.');
+   setError('Approved lesson downloaded with its own teacher signoff and Scripture-rights record. Add this ONE JSON file under curriculum/approved/ in a GitHub PR. Publication remains blocked until CI passes.');
   }catch(e){setError(String((e as Error).message??e));}
- }
- function downloadRights(){
-  if(!canPublish||!lesson)return;
-  try{downloadJson('rights-manifest.json',updatedRightsManifest(manifest,lesson.id,reviewer,signDate));}
-  catch(e){setError(String((e as Error).message??e));}
  }
  const mcIndex=active?.id.startsWith('mc:')?lesson?.preparedActivities?.multipleChoice?.findIndex((x:any)=>'mc:'+x.id===active.id):-1;
  const factIndex=active?.id.startsWith('fact:')?lesson?.facts?.findIndex((x:any)=>'fact:'+x.id===active.id):-1;
@@ -598,16 +583,11 @@ export default function ReviewApp(){
        </div>
        <label className="review-checkbox"><input type="checkbox" checked={rightsConfirmed} onChange={e=>setRightsConfirmed(e.target.checked)}/>
         I checked the official BSB public-domain terms and confirm the selected Scripture is verbatim from the loaded BSB source.</label>
-       <label className="review-upload">Import current rights-manifest.json (preserves other lessons)
-        <input type="file" accept=".json,application/json" onChange={loadManifest}/></label>
-       <label className="review-checkbox"><input type="checkbox" checked={confirmEmptyManifest}
-        onChange={e=>{setConfirmEmptyManifest(e.target.checked);if(e.target.checked)setManifest(null);}}/>
-        Alternatively, I confirm this repository's rights manifest currently has no lesson entries.</label>
-       <div className="review-actions">
+       <p className="review-source">This confirmation is recorded in the approved lesson JSON. The generator discovers all individually approved files in curriculum/approved automatically. No shared rights manifest needs uploading or updating.</p>
+        <div className="review-actions">
         <button type="button" disabled={!canPublish} onClick={downloadApproved}>Download approved lesson JSON</button>
-        <button type="button" disabled={!canPublish} onClick={downloadRights}>Download updated rights manifest</button>
-       </div>
-       <p className="review-source">Upload the approved lesson to <code>curriculum/approved/{lesson.id}.lesson.json</code>, move the old review-stage file out of <code>curriculum/review/</code>, and replace the rights manifest in the same PR. CI is the final publication gate.</p>
+               </div>
+       <p className="review-source">Add the downloaded lesson to <code>curriculum/approved/{lesson.id}.lesson.json</code>, removing any duplicate review-stage JSON with the same ID in <code>curriculum/review/</code>. No other curriculum files need to change. CI validates the lesson, approval, Scripture rights and printable presets before publication.</p>
       </div>
      </section>
     </>}
