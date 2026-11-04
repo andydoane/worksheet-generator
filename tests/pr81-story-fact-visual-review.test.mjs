@@ -65,6 +65,8 @@ test('Chronological move/add/remove edits preserve events and renumber positions
  assert.equal(storyEvents(moved)[0].text,storyEvents(ot32)[1].text);
  assert.equal(storyEvents(moved)[1].text,storyEvents(ot32)[0].text);
  assert.deepEqual(storyEvents(moved)[1].sourceIds,storyEvents(ot32)[0].sourceIds);
+ assert.equal(storyEvents(moved)[0].teacherReviewRequired,true);
+ assert.equal(storyEvents(moved)[1].teacherReviewRequired,true);
  assert.throws(()=>moveStoryEvent(ot32,0,-1),/beyond/u);
  const added=addStoryEventFromNote(ot32,'sn-01');
  assert.equal(storyEvents(added).length,8);
