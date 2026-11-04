@@ -5,7 +5,7 @@
  * validators and puzzle engines, then verifies both current booklet recipes.
  * Review-stage content can be incomplete and is reported without publication.
  * Approved content fails CI unless every prepared module, required recipe and
- * independently reviewed Scripture-rights entry is valid.
+ * the lesson's own explicitly confirmed Scripture-rights record is valid.
  */
 import {readFile,readdir,mkdir,writeFile} from 'node:fs/promises';
 import {resolve,join,dirname,basename} from 'node:path';
@@ -90,7 +90,8 @@ export function checkPrintableCandidate(module){
 function categorizedDiagnostics(messages){
  return messages.length&&messages.every(missingDiagnostic)?'missing':'invalid';
 }
-export function assessCurriculumLesson(lesson,schema,{source='review',rightsEvidence=null}={}){
+export function assessCurriculumLesson(lesson,schema,{source='review'}={}){
+ const rightsEvidence=lesson?.publication?.scriptureRights;
  const schemaErrors=validateLesson(lesson,schema);
  const result={
   id:lesson?.id??'(invalid lesson)',title:lesson?.lessonDetails?.title??'(untitled)',
@@ -224,18 +225,11 @@ export async function inspectCurriculumLibrary({root=ROOT,writeReports=false}={}
  const reviewDir=join(curriculum,'review'),approvedDir=join(curriculum,'approved');
  const schemaResult=await getJson(join(curriculum,'schema','lesson-v1.schema.json'));
  if(schemaResult.error)throw Error('Curriculum schema is unavailable: '+schemaResult.error);
- const rightsResult=await getJson(join(approvedDir,'rights-manifest.json'));
  const errors=[],lessons=[],seen=new Map();
- const manifest=rightsResult.data;
- if(rightsResult.error||manifest?.schemaVersion!==1||
-  !manifest.lessons||typeof manifest.lessons!=='object'||Array.isArray(manifest.lessons)){
-  errors.push({code:'rights-manifest',message:'Missing or invalid curriculum/approved/rights-manifest.json'});
- }
  for(const [source,dir] of [['review',reviewDir],['approved',approvedDir]]){
   const names=await listFiles(dir);
   for(const name of names.sort()){
    if(name.endsWith('.md'))continue;
-   if(source==='approved'&&name==='rights-manifest.json')continue;
    if(!name.endsWith('.json'))continue;
    if(source==='approved'&&!/^[a-z0-9]+(?:-[a-z0-9]+)*\.lesson\.json$/u.test(name)){
     errors.push({code:'approved-filename',message:'Approved file must use <lesson-id>.lesson.json: '+name});
@@ -257,10 +251,8 @@ export async function inspectCurriculumLibrary({root=ROOT,writeReports=false}={}
    if(seen.has(id))
     errors.push({code:'duplicate-id',message:id+' occurs in '+seen.get(id)+' and '+source+'/'+name});
    else seen.set(id,source+'/'+name);
-   const rights=source==='approved'?manifest?.lessons?.[id]:null;
-   const report=assessCurriculumLesson(lesson,schemaResult.data,{
-    source,rightsEvidence:rights,
-   });
+   const rights=lesson?.publication?.scriptureRights;
+   const report=assessCurriculumLesson(lesson,schemaResult.data,{source});
    lessons.push(report);
    if(report.schemaErrors.length)
     errors.push({code:'schema',message:id+': '+report.schemaErrors.join('; ')});
@@ -268,7 +260,7 @@ export async function inspectCurriculumLibrary({root=ROOT,writeReports=false}={}
     errors.push({code:'review-stage',message:id+' is approved but still in review/; move it after approval'});
    if(source==='approved'){
     if(!isRightsEvidence(rights))
-     errors.push({code:'rights-clearance',message:id+' needs separately documented Scripture rights clearance'});
+     errors.push({code:'rights-clearance',message:id+' requires an explicit Scripture-rights record in publication.scriptureRights'});
     if(!approvedForPublic({lesson,scriptureDistributionCleared:true,rightsEvidence:rights}))
      errors.push({code:'teacher-signoff',message:id+' lacks valid signed-off curriculum approval or clearance'});
     for(const bad of report.moduleReadiness.filter(x=>x.technicalStatus==='invalid')){
@@ -280,10 +272,6 @@ export async function inspectCurriculumLibrary({root=ROOT,writeReports=false}={}
      errors.push({code:'not-publishable',message:id+' cannot safely enter the public catalog'});
    }
   }
- }
- for(const id of Object.keys(manifest?.lessons??{})){
-  if(!seen.has(id)||!seen.get(id).startsWith('approved/'))
-   errors.push({code:'orphan-rights',message:'Rights record '+id+' has no matching approved lesson'});
  }
  const result={schemaVersion:1,lessons,errors,passed:errors.length===0};
  if(writeReports){

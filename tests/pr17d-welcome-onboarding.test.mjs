@@ -71,18 +71,30 @@ test('Review-stage Red Sea lesson is completely absent from the public catalog u
  flipped.publication.approved=true;
  assert.equal(approvedForPublic({lesson:flipped,scriptureDistributionCleared:true}),false);
  const approved=useMatchingStoryOrderCaptions(normalizeLegacySmallDrawingScenes(redSea));
+ const source=await getJson('curriculum/approved/ot-031-god-parts-the-red-sea.lesson.json');
  approved.publication.approved=true;
  approved.publication.status='approved';
  approved.publication.teacherSignoff={reviewer:'Curriculum author',date:'2026-11-02'};
  approved.publication.resolvedReviewFlagIds=approved.reviewFlags
   .filter(f=>f.type==='teacher-approval').map(f=>f.id);
+ // The historical review-stage fixture quotes ESV; move to the already
+ // signed-off official BSB verse without rewriting its original Story Notes.
+ approved.lessonDetails.memoryVerse=structuredClone(source.lessonDetails.memoryVerse);
+ for(const key of ['firstLetters','finishVerse','unscrambleVerse',
+  'upsideDownVerse','verseCryptogram','spiralVerse','connectVerse'])
+  approved.preparedActivities[key]=structuredClone(source.preparedActivities[key]);
+ approved.publication.scriptureRights=structuredClone(source.publication.scriptureRights);
  assert.deepEqual(validateLesson(approved,schema),[]);
  assert.equal(approvedForPublic({lesson:approved,scriptureDistributionCleared:false}),false);
  assert.equal(approvedForPublic({lesson:approved,scriptureDistributionCleared:true}),false,
-  'rights must be documented beyond a boolean');
+  'a boolean is not enough; the caller must use the embedded evidence');
  assert.equal(approvedForPublic({lesson:approved,scriptureDistributionCleared:true,
-  rightsEvidence:{status:'cleared',basis:'Written permission for this Scripture excerpt',
-   reviewedBy:'Curriculum author',reviewedOn:'2026-11-03'}}),true);
+  rightsEvidence:approved.publication.scriptureRights}),true);
+ const removed=structuredClone(approved);
+ delete removed.publication.scriptureRights;
+ assert.equal(approvedForPublic({lesson:removed,scriptureDistributionCleared:true,
+  rightsEvidence:source.publication.scriptureRights}),false,
+  'detached rights evidence must never bypass the approved file');
  const result=buildWorksheetRecipe(approved,'story-review',{purpose:'published'});
  assert.equal(result.draft.title,approved.lessonDetails.title);
  assert.equal(result.reviewOnly,true,'draft build never itself certifies public publication');

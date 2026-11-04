@@ -33,15 +33,15 @@ the URL. Only repository collaborators have permission to commit changes.
 7. Download a **review session** to carry edits AND checked-off items across
    browsers and devices. Ordinary workbench progress is autosaved in the
    current browser only.
-8. After all decisions and preflight pass, enter your own reviewer name/date,
-   acknowledge official BSB public-domain terms, and import the current
-   rights manifest (or explicitly confirm it is still empty).
-9. Download **both** approved JSON and updated rights manifest. In one GitHub
-   PR, move the old lesson out of `curriculum/review/`, upload the approved
-   lesson to `curriculum/approved/<id>.lesson.json`, and replace
-   `curriculum/approved/rights-manifest.json`. Never overwrite a manifest
-   containing other lessons with the empty starter. Wait for CI to pass and
-   inspect the worksheet PDFs before merging.
+8. After all decisions and preflight pass, enter your actual reviewer name/date
+   and check the official BSB text/source/terms confirmation. Review Studio
+   records this **individual lesson's Scripture-rights clearance** separately
+   from the curriculum teacher signoff in the downloaded approved file.
+9. Download **one approved lesson JSON** (`<id>.lesson.json`). In one GitHub
+   PR, upload it to `curriculum/approved/<id>.lesson.json` and remove any
+   existing review-stage JSON with the same ID under `curriculum/review/`.
+   No manual rights-manifest import or export is necessary. Wait for CI to pass,
+   inspect the worksheet PDFs and then merge. See [the full publication guide](../PUBLISHING.md).
 
 You can always download an unapproved working JSON and defer decisions. Loading
 a different lesson prompts before replacing your in-browser working copy.

@@ -325,27 +325,35 @@ export function checkReviewContent(lesson:Lesson):string[]{
  return [...new Set(errors)];
 }
 
-export function createApprovedLesson(lesson:Lesson,reviewer:string,date:string):Lesson{
+/** Publish one self-contained lesson. The rights confirmation is a separate
+ * explicit teacher action; it cannot be inferred from a valid Bible excerpt.
+ * Historical review drafts remain unapproved until the user signs them.
+ */
+export function createApprovedLesson(
+ lesson:Lesson,reviewer:string,date:string,scriptureRightsConfirmed:boolean,
+):Lesson{
  if(!trim(reviewer))throw Error('Enter the name of the curriculum reviewer.');
- if(!/^\d{4}-\d{2}-\d{2}$/u.test(date))throw Error('Enter a valid signoff date.');
+ if(!/^\d{4}-\d{2}-\d{2}$/u.test(date)||!Number.isFinite(Date.parse(date))||
+    new Date(date).toISOString().slice(0,10)!==date)
+  throw Error('Enter a valid signoff date.');
+ if(scriptureRightsConfirmed!==true)
+  throw Error('Confirm the official BSB source and public-domain terms before final publication.');
+ const memory=lesson.lessonDetails?.memoryVerse;
+ if(memory?.translation!=='BSB'||!trim(memory.text)||
+    memory.bsbSource?.sourceUrl!=='https://bereanbible.com/bsb.txt'||
+    memory.bsbSource?.publicDomainTerms!=='https://berean.bible/terms.htm')
+  throw Error('Select and verify the original BSB Scripture excerpt before approval.');
  const next=clone(lesson);
  next.publication={...next.publication,status:'approved',approved:true,
-  teacherSignoff:{reviewer:trim(reviewer),date,notes:'Approved with BSB verse through Curriculum Review Studio'},
+  teacherSignoff:{reviewer:trim(reviewer),date,notes:'Approved with verified BSB verse through Curriculum Review Studio'},
+  scriptureRights:{
+   status:'cleared',
+   basis:'Berean Standard Bible (BSB), dedicated to the public domain on April 30, 2023. Official terms: https://berean.bible/terms.htm. Scripture text confirmed against https://bereanbible.com/bsb.txt.',
+   reviewedBy:trim(reviewer),reviewedOn:date,
+  },
   resolvedReviewFlagIds:(next.reviewFlags??[]).filter((f:any)=>[
    'teacher-approval','sensitivity','source-wording',
   ].includes(f.type)).map((f:any)=>f.id),
  };
  return next;
-}
-export function updatedRightsManifest(manifest:unknown,lessonId:string,reviewer:string,date:string){
- const source=(manifest&&typeof manifest==='object'&&!Array.isArray(manifest))?manifest as any:{};
- if(source.schemaVersion!==undefined&&source.schemaVersion!==1)
-  throw Error('Unsupported rights-manifest version.');
- const lessons={...(source.lessons??{})};
- lessons[lessonId]={
-  status:'cleared',
-  basis:'Berean Standard Bible (BSB) dedicated to the public domain on April 30, 2023; https://berean.bible/terms.htm. Scripture excerpt selected verbatim from official https://bereanbible.com/bsb.txt.',
-  reviewedBy:trim(reviewer),reviewedOn:date,
- };
- return {schemaVersion:1,lessons};
 }

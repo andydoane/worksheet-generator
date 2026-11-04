@@ -12,10 +12,9 @@ import {blankModule,validateModule} from '../src/modules.ts';
 
 const json=async path=>JSON.parse(await readFile(new URL('../'+path,import.meta.url),'utf8'));
 const lesson=await json('curriculum/approved/ot-031-god-parts-the-red-sea.lesson.json');
-const rights=await json('curriculum/approved/rights-manifest.json');
 const entry=assemblePublicLessonCatalog({
  ['../curriculum/approved/'+lesson.id+'.lesson.json']:lesson,
-},rights)[0];
+})[0];
 if(!entry)throw Error('The approved Red Sea lesson is needed for switching regression tests.');
 const catalog=[entry];
 

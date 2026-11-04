@@ -8,10 +8,9 @@ import {buildWorksheetRecipe,WORKSHEET_RECIPES} from '../src/worksheetRecipes.ts
 import {assemblePublicLessonCatalog} from '../src/publishedLessonCatalog.ts';
 const load=async path=>JSON.parse(await readFile(new URL('../'+path,import.meta.url),'utf8'));
 const lesson=await load('curriculum/approved/ot-031-god-parts-the-red-sea.lesson.json');
-const rights=await load('curriculum/approved/rights-manifest.json');
 const catalog=assemblePublicLessonCatalog({
  ['../curriculum/approved/'+lesson.id+'.lesson.json']:lesson,
-},rights);
+});
 if(catalog.length!==1)throw Error('Refusing samples: no independently approved and rights-cleared lesson.');
 const fonts={
  mouseMemoirs:await readFile(new URL('../fonts/MouseMemoirs-Regular.ttf',import.meta.url)),

@@ -79,7 +79,7 @@ test('Semantic validator enforces chronological notes and source IDs without sil
  assert.ok(validateLesson(modified(x=>{x.preparedActivities.trueFalse.isTrue=!x.preparedActivities.trueFalse.isTrue;}),schema)
   .some(e=>e.includes('truth value disagrees')));
 });
-test('Teacher approval gate prevents publishing by flipping a single flag',()=>{
+test('Teacher approval gate prevents publishing by flipping a single flag',async()=>{
  const inconsistent=modified(x=>{x.publication.approved=true;});
  assert.ok(validateLesson(inconsistent,schema).some(e=>e.includes('publication status and approved')));
  const withoutSignoff=modified(x=>{x.publication.approved=true;x.publication.status='approved';});
@@ -98,7 +98,14 @@ test('Teacher approval gate prevents publishing by flipping a single flag',()=>{
  assert.ok(validateLesson(resolved,schema).some(e=>e.includes('Small Draw a Picture')),
   'Outdated drawing instructions block future approval, even with signoff');
  const normalized=useMatchingStoryOrderCaptions(normalizeLegacySmallDrawingScenes(resolved));
- assert.deepEqual(validateLesson(normalized,schema),[]);
+ const remaining=validateLesson(normalized,schema);
+ assert.ok(remaining.some(x=>x.includes('publication.scriptureRights')),
+  'Approval additionally requires a signed Scripture rights record in the approved JSON');
+ assert.ok(remaining.some(x=>x.includes('verified Berean Standard Bible')),
+  'Historical ESV review data cannot be marked public without approved BSB excerpt');
+ const approved=JSON.parse(await fromRepo('curriculum/approved/ot-031-god-parts-the-red-sea.lesson.json'));
+ assert.deepEqual(validateLesson(approved,schema),[],
+  'Actual author-approved BSB lesson has teacher signoff and embedded Scripture rights');
 });
 test('CLI-compatible content validation passes without adding the lesson to the live app',async()=>{
  const path=fileURLToPath(new URL('../tests/fixtures/ot-031-original-review.json',import.meta.url));
@@ -139,3 +146,20 @@ test('Approved drawing-data format is protected by schema and semantic validatio
  duplicate.preparedActivities.drawStory[1].prompt=duplicate.preparedActivities.drawStory[0].prompt;
  assert.ok(validateLesson(duplicate,schema).some(x=>x.includes('duplicate narrative caption')));
 });
+
+test('Approved per-lesson rights record is independently required by semantic validation',async()=>{
+ const approved=JSON.parse(await fromRepo('curriculum/approved/ot-031-god-parts-the-red-sea.lesson.json'));
+ const noRights=structuredClone(approved);
+ delete noRights.publication.scriptureRights;
+ assert.ok(validateLesson(noRights,schema).some(x=>x.includes('Scripture rights clearance')));
+ const invalidDate=structuredClone(approved);
+ invalidDate.publication.scriptureRights.reviewedOn='2026-02-30';
+ assert.ok(validateLesson(invalidDate,schema).some(x=>x.includes('Scripture rights clearance')));
+ const unverified=structuredClone(approved);
+ unverified.lessonDetails.memoryVerse.bsbSource.sourceUrl='https://example.com/not-bsb.txt';
+ assert.ok(validateLesson(unverified,schema).some(x=>x.includes('official BSB source')));
+ const review=structuredClone(data);
+ assert.deepEqual(validateLesson(review,schema),[],
+  'An unsigned review draft must remain schema-valid while awaiting teacher approval');
+});
+

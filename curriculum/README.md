@@ -2,6 +2,10 @@
 
 This directory holds **source-preserving curriculum interchange data**, not saved worksheet drafts. Only the signed-off JSON in `curriculum/approved/*.lesson.json` is bundled into the public app after teacher and Scripture-rights review; review-stage files are excluded.
 
+## PR 17o — one-file, self-contained publication for 123 lessons
+
+**Current publishing instructions:** [PUBLISHING.md](PUBLISHING.md). Review Studio now downloads **one approved `<lesson-id>.lesson.json`** with separate, explicitly teacher-confirmed `publication.teacherSignoff` and `publication.scriptureRights`. There is no shared `rights-manifest.json` to import, update or download, and OT31's existing clearance has been copied into its lesson file without changing the human approval basis. The public catalog still auto-discovers only `curriculum/approved/*.lesson.json`; the schema validator, real puzzle audit and runtime app all fail closed if an approved file lacks signoff, rights evidence or verified BSB provenance. Adding the 2nd or 123rd approved lesson is a data-only PR with one lesson file, not a registry edit.
+
 ## Finish Story and Medium Solve the Code authoring rules (PR 17n)
 
 Finish the Story allows 6–12 bracketed words and always retains the emphasized Story Note words as an ordered subsequence. More teacher-approved missing words may be inserted between them. Do not rewrite original Story Notes to satisfy a puzzle.
@@ -43,7 +47,7 @@ Each lesson has a `publication` block:
 
 To approve a preset, record an explicit `teacherSignoff` with reviewer/date and `resolvedReviewFlagIds` for every `teacher-approval` flag. The validator rejects inconsistent approval states. **Changing one boolean does not bypass the review gate.** Both the public catalog and GitHub CI enforce those additional approval and rights checks.
 
-Confirm Bible-translation rights separately from teacher review. OT 31 was converted to the public-domain Berean Standard Bible for its printable memory verse; its rights basis, reviewer and date are recorded in `approved/rights-manifest.json`. The historical fixture of the original curriculum conversion includes the original ESV memory verse, but is **not** bundled into the public application.
+Confirm Bible-translation rights separately from teacher review. OT 31 uses the public-domain Berean Standard Bible for its published memory verse. Its original human-reviewed clearance basis, reviewer and date are now stored in **`approved/ot-031-god-parts-the-red-sea.lesson.json` under `publication.scriptureRights`**. No shared rights manifest is required. The historical ESV review fixture is never bundled publicly.
 
 ## First published lesson and its historical review fixture
 
@@ -110,11 +114,11 @@ For independent print/visual QA, `npm run sample:pr17f` produces two complete fo
 
 ## PR 17g: scalable curriculum registration and QA reports
 
-The curriculum library has a separate approved-data directory documented at [approved/README.md](approved/README.md). An approved lesson is added as a data-only JSON file named `approved/<lesson-id>.lesson.json`, plus an explicit rights record in `approved/rights-manifest.json`. Vite auto-discovers only approved lesson data. The public registry refuses any lesson missing actual teacher signoff, resolved teacher-approval flags or separately documented Scripture translation rights clearance.
+The curriculum library has a separate approved-data directory documented at [approved/README.md](approved/README.md). Historically PR17g used a separate rights manifest. **That legacy process was replaced in PR17o:** an approved lesson is added as **one self-contained JSON file** `approved/<lesson-id>.lesson.json`, with its own verified `publication.scriptureRights`. Vite auto-discovers only approved lesson data. The public registry refuses any lesson missing actual teacher signoff, resolved teacher-approval flags or separately documented Scripture translation rights clearance.
 
 `npm run validate:library` is a real readiness audit, not a cosmetic JSON check. It scans every lesson in `review/` and `approved/`, runs schema validation, attempts real 27-module conversion, checks resulting payloads against original module validators and applicable puzzle solvers (Crossword, cryptogram, word search, maze, Pixel Picture, verse and specialty activities), and tests both named booklet recipes. It creates human-readable and machine-readable reports under `artifacts/curriculum-readiness-report.{md,json}`. Reports distinguish author-reported content readiness from tested technical readiness and publication clearance.
 
-Review-stage data may be incomplete; invalid/missing modules are reported but never published. Approved files cannot pass CI without consistent signoff/rights evidence and working named recipes; any prepared-but-invalid activity blocks release. Missing optional module categories are transparently marked missing. Duplicate review/approved IDs and orphan rights records are errors.
+Review-stage data may be incomplete; invalid/missing modules are reported but never published. Approved files cannot pass CI without consistent signoff/rights evidence and working named recipes; any prepared-but-invalid activity blocks release. Missing optional module categories are transparently marked missing. Duplicate review/approved IDs are errors; individual missing or invalid Scripture clearance records block publication.
 
 The Red Sea lesson is still under `review/` and not public. Technical module readiness never constitutes teacher approval or permission to distribute Scripture quotations.
 

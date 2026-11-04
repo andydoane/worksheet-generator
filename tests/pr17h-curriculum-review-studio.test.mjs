@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {parseBsbText,getBsbPassage,wordSpans,clipToWords,markSelectedWords,suggestBlankWords} from '../src/review/bsb.ts';
-import {listReviewTasks,editAt,applyBsbVerse,checkDrawingCopy,checkReviewContent,createApprovedLesson,normalizeLegacySmallDrawingScenes,originalMemoryVerseTranslation,useMatchingStoryOrderCaptions,updatedRightsManifest} from '../src/review/model.ts';
+import {listReviewTasks,editAt,applyBsbVerse,checkDrawingCopy,checkReviewContent,createApprovedLesson,normalizeLegacySmallDrawingScenes,originalMemoryVerseTranslation,useMatchingStoryOrderCaptions} from '../src/review/model.ts';
 
 const raw=await readFile(new URL('../tests/fixtures/ot-031-original-review.json',import.meta.url),'utf8');
 const original=JSON.parse(raw);
@@ -78,17 +78,20 @@ test('Human signoff and independent public-domain evidence remain separate',()=>
  const p=getBsbPassage(bible,'Exodus 15:11'),words=wordSpans(p.text).length;
  const blanks=suggestBlankWords(p.text);
  const work=applyBsbVerse(original,p,0,words-1,blanks,blanks);
- assert.throws(()=>createApprovedLesson(work,'','2026-11-03'),/reviewer/u);
- const approved=createApprovedLesson(work,'Curriculum Author','2026-11-03');
+ assert.throws(()=>createApprovedLesson(work,'','2026-11-03',true),/reviewer/u);
+ const approved=createApprovedLesson(work,'Curriculum Author','2026-11-03',true);
  assert.equal(approved.publication.status,'approved');
  assert.equal(approved.publication.approved,true);
  assert.deepEqual(approved.publication.resolvedReviewFlagIds,['rf-01','rf-02','rf-03','rf-04','rf-05','rf-10']);
  assert.equal(work.publication.approved,false);
- const rights=updatedRightsManifest({schemaVersion:1,lessons:{'other-approved':{status:'cleared'}}},
-  work.id,'Curriculum Author','2026-11-03');
- assert.equal(rights.lessons['other-approved'].status,'cleared');
- assert.equal(rights.lessons[work.id].status,'cleared');
- assert.match(rights.lessons[work.id].basis,/berean\.bible\/terms/u);
+ assert.throws(()=>createApprovedLesson(work,'Curriculum Author','2026-11-03',false),
+  /Confirm the official BSB source/u);
+ assert.equal(approved.publication.scriptureRights.status,'cleared');
+ assert.equal(approved.publication.scriptureRights.reviewedBy,'Curriculum Author');
+ assert.equal(approved.publication.scriptureRights.reviewedOn,'2026-11-03');
+ assert.match(approved.publication.scriptureRights.basis,/berean\.bible\/terms/u);
+ assert.equal(work.publication.scriptureRights,undefined,
+  'Review draft must not be implicitly approved for Scripture distribution');
 });
 
 test('Review studio is isolated from the normal public app and only includes approved lesson data',async()=>{

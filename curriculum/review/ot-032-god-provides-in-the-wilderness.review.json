@@ -3335,7 +3335,6 @@
     "status": "pending-teacher-approval",
     "approved": false,
     "notes": "Conversion draft. All suggestions require teacher approval; BSB verse editorial selection and generator checks remain pending.",
-    "teacherSignoff": null,
     "resolvedReviewFlagIds": []
   }
 }

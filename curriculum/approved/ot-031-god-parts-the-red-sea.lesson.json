@@ -3126,6 +3126,12 @@
       "rf-04",
       "rf-05",
       "rf-10"
-    ]
+    ],
+    "scriptureRights": {
+      "status": "cleared",
+      "basis": "Berean Standard Bible (BSB) dedicated to the public domain on April 30, 2023; https://berean.bible/terms.htm. Verse text selected from the publisher's official https://bereanbible.com/bsb.txt.",
+      "reviewedBy": "Andy Doane",
+      "reviewedOn": "2026-11-03"
+    }
   }
 }
