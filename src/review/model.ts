@@ -24,8 +24,9 @@ export function listReviewTasks(lesson:Lesson):ReviewTask[]{
   tasks.push({id:'drawing-captions',group:'Drawing activities',
    label:'Small scenes and Draw the Story captions',
    detail:'Small Draw a Picture scenes are short noun phrases. Large Draw the Story captions are full narrative sentences, preferably copied from the matching Story Order events.'});
- if(p.finishStory)tasks.push({id:'finish-story',group:'Story narrative',
-  label:'Finish the Story',detail:'Review the adapted paragraph and seven source emphasis words.'});
+ tasks.push({id:'finish-story',group:'Story narrative',
+  label:'Finish the Story',
+  detail:'Teacher-authored story with 6–12 missing words; original Story Note emphasis is optional.'});
  if(p.bigIdeaCryptogram)tasks.push({id:'solve-code',group:'Medium puzzle',
   label:'Solve the Code phrase',
   detail:'Select a concise, source-backed phrase for the Medium cryptogram without changing the lesson’s original Important Idea.'});
@@ -37,6 +38,12 @@ export function listReviewTasks(lesson:Lesson):ReviewTask[]{
   label:'Checkboxes',detail:'Review incorrect word choices.'});
  // A permanent task makes preflight repairs stay open while the teacher types.
  // Diagnostic-only tasks disappear when edits clear the old preflight report.
+ tasks.push({id:'who-am-i',group:'Word activities',label:'Who Am I?',
+  detail:'Choose a lesson character and clue or author a teacher-reviewed alternative.'});
+ tasks.push({id:'unscramble-words',group:'Word activities',label:'Unscramble the Words',
+  detail:'Select two approved vocabulary answers or teacher-authored alternatives.'});
+ tasks.push({id:'pixel-picture',group:'Medium puzzle',label:'Pixel Picture',
+  detail:'Choose a story phrase and one of the original 13×13 silhouettes.'});
  tasks.push({id:'match-words',group:'Word activities',label:'Match the Words',
   detail:'Review 3–6 correct matching pairs. The printed worksheet shuffles only the right column.'});
  tasks.push({id:'crossword',group:'Large puzzles',label:'Crossword',
@@ -251,21 +258,7 @@ export function normalizeLegacySmallDrawingScenes(lesson:Lesson):Lesson{
  return next;
 }
 
-/** Return every source emphasis word in its original order while allowing
- * extra teacher-selected blanks, provided the generator accepts 6–12 total.
- * Subsequence matching keeps repeated emphasis words meaningful.
- */
-export function finishStoryEmphasisInOrder(lesson:Lesson):boolean{
- const expected=(lesson.storyNotes??[]).flatMap((n:any)=>n.emphasizedWords??[])
-  .map((word:string)=>String(word).toLocaleUpperCase());
- const blanks=[...String(lesson.preparedActivities?.finishStory?.markedParagraph??'')
-  .matchAll(/\[([^\[\]]+)\]/gu)].map(m=>m[1].toLocaleUpperCase());
- let i=0;
- for(const blank of blanks)if(i<expected.length&&blank===expected[i])i++;
- return i===expected.length;
-}
-
-/** A separate Medium Solve the Code phrase can be drawn only from original
+ /** A separate Medium Solve the Code phrase can be drawn only from original
  * teaching material, the reviewed Key Phrases bank or Story Order events.
  * This does not edit the canonical Important Idea or Connect the Phrase.
  */
@@ -317,9 +310,7 @@ export function checkReviewContent(lesson:Lesson):string[]{
    errors.push('Multiple Choice '+mc.id+' has missing or inconsistent choices.');
  }
  for(const fact of lesson.facts??[])if(!trim(fact.statement))errors.push('Empty fact: '+fact.id);
- if(p.finishStory&&!finishStoryEmphasisInOrder(lesson))
-  errors.push('Finish the Story must retain all original emphasized Story Note words in order; extra [blanks] are allowed (6–12 total).');
- const mistakes=p.circleMistakes;
+  const mistakes=p.circleMistakes;
  if(mistakes){
   if(mistakes.mistakes?.length!==mistakes.mistakeCount||!trim(mistakes.paragraph)||
    mistakes.mistakes?.some((m:any)=>!trim(m.incorrect)||!trim(m.correction)||

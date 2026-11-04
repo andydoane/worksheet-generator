@@ -11,6 +11,10 @@ import CrosswordReviewEditor from './CrosswordReviewEditor.tsx';
 import StoryOrderReviewEditor from './StoryOrderReviewEditor.tsx';
 import SortStoryReviewEditor from './SortStoryReviewEditor.tsx';
 import FactChoiceReviewEditor from './FactChoiceReviewEditor.tsx';
+import WhoAmIReviewEditor from './WhoAmIReviewEditor.tsx';
+import UnscrambleReviewEditor from './UnscrambleReviewEditor.tsx';
+import PixelPictureReviewEditor from './PixelPictureReviewEditor.tsx';
+import FinishStoryReviewEditor from './FinishStoryReviewEditor.tsx';
 import {cryptogramLetters} from '../cryptograms.ts';
 import {buildReviewPreflight,PREPARED_ACTIVITY_KEYS,reviewIssueTarget,type ReviewPreflight} from './preflight.ts';
 import './review.css';
@@ -96,7 +100,8 @@ export default function ReviewApp(){
  const activeModuleId=active?.id.startsWith('module:')?active.id.slice('module:'.length):
   active?.id==='match-words'?'match-words':
   active?.id==='crossword'?'crossword':
-  (['story-order','sort-story','true-false','true-false-maze'].includes(active?.id??'')
+  (['story-order','sort-story','true-false','true-false-maze',
+    'who-am-i','unscramble-words','pixel-picture','finish-story'].includes(active?.id??'')
    ?active!.id:null);
  const activePreparedKey=activeModuleId?PREPARED_ACTIVITY_KEYS[activeModuleId as keyof typeof PREPARED_ACTIVITY_KEYS]:undefined;
  useEffect(()=>{
@@ -425,13 +430,8 @@ export default function ReviewApp(){
         <SourceContext lesson={lesson} ids={f.sourceIds??[]}/>
        </div>;
       })()}
-      {active.id==='finish-story'&&<div className="review-fields">
-       <label>Adapted story paragraph<textarea id="review-field-finish-story" rows={9} value={lesson.preparedActivities.finishStory.markedParagraph}
-        onChange={e=>change(['preparedActivities','finishStory','markedParagraph'],e.target.value)}/></label>
-       <p className="review-source">Keep the original Story Note emphasis words in order. You may add more [missing words], up to 12 total (minimum 6).</p>
-       <p className="review-source">Currently {[...lesson.preparedActivities.finishStory.markedParagraph.matchAll(/\[([^\[\]]+)\]/gu)].length} missing words.</p>
-       <SourceContext lesson={lesson} ids={lesson.preparedActivities.finishStory.sourceIds??[]}/>
-      </div>}
+      {active.id==='finish-story'&&<FinishStoryReviewEditor
+       lesson={lesson} onChange={applyStoryFactReview} onError={setError}/>}
       {active.id==='drawing-captions'&&<div id="review-field-drawing" tabIndex={-1} className="review-fields">
        <div className="review-note">
         <h3>Small Draw a Picture</h3>
@@ -478,6 +478,12 @@ export default function ReviewApp(){
         onChange={applyCrosswordReview} onError={setError}
         advancedJson={moduleEditorText} onAdvancedJsonChange={setModuleEditorText}
         onApplyAdvancedJson={applyModuleJson}/>}
+      {active.id==='who-am-i'&&<WhoAmIReviewEditor
+       lesson={lesson} onChange={applyStoryFactReview} onError={setError}/>}
+      {active.id==='unscramble-words'&&<UnscrambleReviewEditor
+       lesson={lesson} onChange={applyStoryFactReview} onError={setError}/>}
+      {active.id==='pixel-picture'&&<PixelPictureReviewEditor
+       lesson={lesson} onChange={applyStoryFactReview} onError={setError}/>}
       {active.id==='story-order'&&<StoryOrderReviewEditor
        lesson={lesson} onChange={applyStoryFactReview} onError={setError}/>}
       {active.id==='sort-story'&&<SortStoryReviewEditor
@@ -486,7 +492,8 @@ export default function ReviewApp(){
        lesson={lesson} kind="trueFalse" onChange={applyStoryFactReview} onError={setError}/>}
       {active.id==='true-false-maze'&&<FactChoiceReviewEditor
        lesson={lesson} kind="trueFalseMaze" onChange={applyStoryFactReview} onError={setError}/>}
-      {['story-order','sort-story','true-false','true-false-maze'].includes(active.id)&&
+      {['story-order','sort-story','true-false','true-false-maze',
+        'who-am-i','unscramble-words','pixel-picture','finish-story'].includes(active.id)&&
        <details className="review-match-advanced">
         <summary>Advanced: edit this activity's JSON only</summary>
         <p>This changes only the prepared activity selection or event list; canonical source facts are separate records. Use it only for unusual structural repairs, then rerun preflight.</p>
@@ -690,7 +697,8 @@ export default function ReviewApp(){
       </div>}
       {activeModuleId&&activePreparedKey&&active.id!=='match-words'&&
        active.id!=='crossword'&&
-       !['story-order','sort-story','true-false','true-false-maze'].includes(active.id)&&
+       !['story-order','sort-story','true-false','true-false-maze',
+         'who-am-i','unscramble-words','pixel-picture','finish-story'].includes(active.id)&&
        <div className="review-fields">
        <div className="review-note">
         <h3>{MODULES.find(item=>item.id===activeModuleId)?.name??activeModuleId} · prepared activity</h3>

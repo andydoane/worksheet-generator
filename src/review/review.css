@@ -177,3 +177,32 @@ a{color:#267d68}
 .review-activity-preview .sort-story-print-svg{display:block;width:100%;height:auto}
 .review-activity-preview .small-true-false-measured{width:100%;max-width:440px}
 @media(max-width:580px){.review-story-add{display:grid}}
+
+/* PR82: source-backed character, answer-bank and pixel editing, and authored
+ * Finish the Story. Previews reuse the existing measured print components. */
+#review-field-who-am-i,#review-field-unscramble-words,
+#review-field-pixel-picture,#review-field-finish-story{min-width:0}
+#review-field-who-am-i:focus,#review-field-unscramble-words:focus,
+#review-field-pixel-picture:focus,#review-field-finish-story:focus{
+ outline:2px solid #4b956e;outline-offset:5px}
+#review-field-who-am-i .review-pair{align-items:start}
+#review-field-who-am-i .review-pair label,#review-field-unscramble-words label,
+#review-field-pixel-picture label,#review-field-finish-story label{
+ min-width:0;font-size:12px;font-weight:800;color:#355749}
+#review-field-who-am-i label input,#review-field-who-am-i label textarea,
+#review-field-who-am-i label select,#review-field-unscramble-words label input,
+#review-field-unscramble-words label select,#review-field-pixel-picture label select,
+#review-field-pixel-picture label textarea,#review-field-finish-story label textarea{
+ display:block;width:100%;min-width:0;margin-top:5px;padding:10px 12px;
+ border:1px solid #cbded0;border-radius:8px;background:white;
+ color:#23483a;font-size:13px;line-height:1.45}
+#review-field-who-am-i label textarea,#review-field-pixel-picture label textarea,
+#review-field-finish-story label textarea{resize:vertical}
+#review-field-who-am-i label small,#review-field-unscramble-words label small,
+#review-field-pixel-picture label small,#review-field-finish-story label small{
+ display:block;margin-top:4px;font-size:11px;font-weight:400}
+.review-activity-preview .module-preview{max-width:100%;width:100%}
+.review-activity-preview .medium-print-svg{max-width:100%;height:auto}
+@media(max-width:580px){
+ #review-field-who-am-i .review-pair{grid-template-columns:1fr}
+}
