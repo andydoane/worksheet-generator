@@ -41,6 +41,14 @@ export function listReviewTasks(lesson:Lesson):ReviewTask[]{
   detail:'Review 3–6 correct matching pairs. The printed worksheet shuffles only the right column.'});
  tasks.push({id:'crossword',group:'Large puzzles',label:'Crossword',
   detail:'Edit 6–10 answer/clue pairs, check that every word connects, and review the printable puzzle.'});
+ tasks.push({id:'story-order',group:'Story narrative',label:'Story Order',
+  detail:'Edit and arrange 5–8 source-linked events in correct chronological order.'});
+ tasks.push({id:'sort-story',group:'Canonical facts',label:'Sort the Story',
+  detail:'Choose 4–8 exact canonical facts, with true and false answers and distinct IDs.'});
+ tasks.push({id:'true-false',group:'Canonical facts',label:'True/False',
+  detail:'Choose a canonical fact and its correct answer, without altering the source fact.'});
+ tasks.push({id:'true-false-maze',group:'Canonical facts',label:'True/False Maze',
+  detail:'Choose a different approved fact with a shorter statement and matching correct exit.'});
  tasks.push({id:'connect-phrase',group:'Medium puzzle',label:'Connect the Phrase',
   detail:'Choose source-linked phrasing, confirm word fit, and preview the scattered phrase.'});
  tasks.push({id:'word-search',group:'Vocabulary',label:'Word Search (Large)',
