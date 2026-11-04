@@ -7,7 +7,7 @@
  * Preserve existing whitespace, including newlines, and be idempotent.
  */
 export function formatVerseDashes(verse:string):string{
- return verse.replace(/(\\S)—/gu,'$1 —').replace(/—(\\S)/gu,'— $1');
+ return verse.replace(/(\S)—/gu,'$1 —').replace(/—(\S)/gu,'— $1');
 }
 
 export const VERSE_PUNCTUATION=/^[.,!?;:'’"“”()\-–—]$/u;
