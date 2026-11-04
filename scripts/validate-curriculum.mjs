@@ -163,6 +163,18 @@ export function validateLesson(lesson,schema){
   if(pub.approved){
    if(!pub.teacherSignoff?.reviewer||!pub.teacherSignoff?.date)
     errors.push('publication approval requires an explicit teacher signoff');
+   const rights=pub.scriptureRights;
+   if(rights?.status!=='cleared'||typeof rights?.basis!=='string'||!rights.basis.trim()||
+      typeof rights?.reviewedBy!=='string'||!rights.reviewedBy.trim()||
+      typeof rights?.reviewedOn!=='string'||!/^\d{4}-\d{2}-\d{2}$/u.test(rights.reviewedOn)||
+      !Number.isFinite(Date.parse(rights.reviewedOn))||
+      new Date(rights.reviewedOn).toISOString().slice(0,10)!==rights.reviewedOn)
+    errors.push('publication approval requires its own explicit Scripture rights clearance in publication.scriptureRights');
+   const memory=lesson.lessonDetails?.memoryVerse;
+   if(memory?.translation!=='BSB'||!memory?.text?.trim()||
+      memory?.bsbSource?.sourceUrl!=='https://bereanbible.com/bsb.txt'||
+      memory?.bsbSource?.publicDomainTerms!=='https://berean.bible/terms.htm')
+    errors.push('publication requires verified Berean Standard Bible text and official BSB source/rights URLs');
    const unresolved=(lesson.reviewFlags??[]).filter(x=>
     x.type==='teacher-approval'&&!(pub.resolvedReviewFlagIds??[]).includes(x.id));
    if(unresolved.length)errors.push('publication approval has unresolved teacher review flags: '+unresolved.map(x=>x.id).join(', '));
