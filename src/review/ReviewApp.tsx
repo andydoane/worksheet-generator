@@ -197,10 +197,60 @@ export default function ReviewApp(){
  function changeIdea(value:string){
   if(!lesson)return;
   const next=structuredClone(lesson);
+  const previous=next.lessonDetails.bigIdeas[0].text;
   next.lessonDetails.bigIdeas[0].text=value;
-  if(next.preparedActivities.bigIdeaCryptogram)next.preparedActivities.bigIdeaCryptogram.phrase=value;
-  if(next.preparedActivities.connectBigIdea)next.preparedActivities.connectBigIdea.phrase=value;
+  // Preserve independently chosen, reviewed alternative phrases. Only a
+  // puzzle still using the old canonical text follows the wording edit.
+  if(next.preparedActivities.bigIdeaCryptogram?.phrase===previous)
+   next.preparedActivities.bigIdeaCryptogram.phrase=value;
+  if(next.preparedActivities.connectBigIdea?.phrase===previous)
+   next.preparedActivities.connectBigIdea.phrase=value;
   setLesson(next);setPreflight(null);setReviewed(prev=>prev.filter(x=>x!==active?.id));
+ }
+ function selectCodePhrase(text:string){
+  if(!lesson||!text)return;
+  try{
+   setLesson(chooseSolveCodePhrase(lesson,text));
+   setPreflight(null);setReviewed(prev=>prev.filter(id=>id!=='solve-code'));
+   setError('');
+  }catch(e){setError(String((e as Error).message??e));}
+ }
+ function addProposedCodePhrase(){
+  if(!lesson)return;
+  const phrase=String(lesson.preparedActivities?.bigIdeaCryptogram?.phrase??'').trim();
+  const errors=validateModule({type:'big-idea-cryptogram',idea:phrase,seed:1});
+  if(errors.length){setError(errors.join(' '));return;}
+  if(solveCodeChoices(lesson).some(item=>item.text===phrase)){
+   selectCodePhrase(phrase);return;
+  }
+  const next=structuredClone(lesson);
+  const existing=new Set((next.keyPhrases??[]).map((item:any)=>item.id));
+  let i=1;
+  while(existing.has('kp-review-'+i))i++;
+  const id='kp-review-'+i;
+  // This is a NEW teacher-suggested alternative, never misattributed to the
+  // author's source text or silently marked approved.
+  next.keyPhrases??=[];
+  next.keyPhrases.push({id,text:phrase,origin:'suggested',
+   teacherReviewRequired:true});
+  const item=next.preparedActivities.bigIdeaCryptogram;
+  item.phrase=phrase;item.origin='suggested';item.teacherReviewRequired=true;
+  item.sourceIds=[];delete item.source;
+  setLesson(next);setPreflight(null);
+  setReviewed(prev=>prev.filter(value=>value!=='solve-code'));
+  setError('New phrase added as a suggested review candidate. Confirm its meaning and mark Solve the Code reviewed.');
+ }
+ function applyModuleJson(){
+  if(!lesson||!activePreparedKey)return;
+  try{
+   const nextValue=JSON.parse(moduleEditorText);
+   if(!nextValue||typeof nextValue!=='object')
+    throw Error('Enter an object or array for this prepared activity.');
+   const next=structuredClone(lesson);
+   next.preparedActivities[activePreparedKey]=nextValue;
+   setLesson(next);setPreflight(null);setError('');
+   setReviewed(prev=>prev.filter(id=>id!==active?.id));
+  }catch(e){setError('Could not apply activity data: '+String((e as Error).message??e));}
  }
  function findPassage(){
   if(!index){setError('Load the official BSB text file first.');return;}
@@ -307,7 +357,7 @@ export default function ReviewApp(){
       {mcIndex>=0&&(()=>{
        const mc=lesson.preparedActivities.multipleChoice[mcIndex];
        return <div className="review-fields">
-        <label>Question<textarea value={mc.question} onChange={e=>change(['preparedActivities','multipleChoice',mcIndex,'question'],e.target.value)}/></label>
+        <label>Question<textarea id={'review-mc-'+mc.id} value={mc.question} onChange={e=>change(['preparedActivities','multipleChoice',mcIndex,'question'],e.target.value)}/></label>
         {mc.choices.map((c:any,i:number)=><label key={i}>
          {c.isCorrect?'Correct answer (from source)':'Suggested incorrect answer '+i}
          <input value={c.text} onChange={e=>change(['preparedActivities','multipleChoice',mcIndex,'choices',i,'text'],e.target.value)}/></label>)}
@@ -318,14 +368,15 @@ export default function ReviewApp(){
        const f=lesson.facts[factIndex];
        return <div className="review-fields">
         <p className="review-warning">Intentionally FALSE. Edits are synchronized to Sort the Story and linked True/False activities.</p>
-        <label>False statement<textarea value={f.statement} onChange={e=>change(['facts',factIndex,'statement'],e.target.value)}/></label>
+        <label>{f.isTrue?'Statement':'False statement'}<textarea id={'review-fact-'+f.id} value={f.statement} onChange={e=>change(['facts',factIndex,'statement'],e.target.value)}/></label>
         <SourceContext lesson={lesson} ids={f.sourceIds??[]}/>
        </div>;
       })()}
       {active.id==='finish-story'&&<div className="review-fields">
-       <label>Adapted story paragraph<textarea rows={9} value={lesson.preparedActivities.finishStory.markedParagraph}
+       <label>Adapted story paragraph<textarea id="review-field-finish-story" rows={9} value={lesson.preparedActivities.finishStory.markedParagraph}
         onChange={e=>change(['preparedActivities','finishStory','markedParagraph'],e.target.value)}/></label>
-       <p className="review-source">The square-bracketed original emphasis words must be preserved and remain in chronological order.</p>
+       <p className="review-source">Keep the original Story Note emphasis words in order. You may add more [missing words], up to 12 total (minimum 6).</p>
+       <p className="review-source">Currently {[...lesson.preparedActivities.finishStory.markedParagraph.matchAll(/\\[([^\\[\\]]+)\\]/gu)].length} missing words.</p>
        <SourceContext lesson={lesson} ids={lesson.preparedActivities.finishStory.sourceIds??[]}/>
       </div>}
       {active.id==='drawing-captions'&&<div className="review-fields">
@@ -338,13 +389,13 @@ export default function ReviewApp(){
        </div>
        {(lesson.drawingPrompts??[]).map((item:any,i:number)=><div key={'scene-'+i}>
         <label>Small scene {i+1} · {item.id??'scene'}
-         <textarea rows={2} value={item.prompt}
+         <textarea id={'review-field-drawing-'+i} rows={2} value={item.prompt}
           onChange={e=>change(['drawingPrompts',i,'prompt'],e.target.value)}/></label>
         <SourceContext lesson={lesson} ids={item.sourceIds??[]}/>
        </div>)}
        {lesson.preparedActivities.drawPicture&&
         <label>Default Small Draw a Picture prompt
-         <textarea rows={2} value={lesson.preparedActivities.drawPicture.prompt}
+         <textarea id="review-field-small-drawing" rows={2} value={lesson.preparedActivities.drawPicture.prompt}
           onChange={e=>change(['preparedActivities','drawPicture','prompt'],e.target.value)}/></label>}
        <div className="review-note">
         <h3>Large Draw the Story</h3>
@@ -355,13 +406,13 @@ export default function ReviewApp(){
        </div>
        {(lesson.preparedActivities.drawStory??[]).map((item:any,i:number)=><div key={'caption-'+i}>
         <label>Large drawing caption {i+1}
-         <textarea rows={2} value={item.prompt}
+         <textarea id={'review-field-large-drawing-'+i} rows={2} value={item.prompt}
           onChange={e=>change(['preparedActivities','drawStory',i,'prompt'],e.target.value)}/></label>
         <SourceContext lesson={lesson} ids={item.sourceIds??[]}/>
        </div>)}
       </div>}
       {active.id==='circle-mistakes'&&<div className="review-fields">
-       <label>Deliberately incorrect paragraph<textarea rows={7} value={lesson.preparedActivities.circleMistakes.paragraph}
+       <label>Deliberately incorrect paragraph<textarea id="review-field-circle-mistakes" rows={7} value={lesson.preparedActivities.circleMistakes.paragraph}
         onChange={e=>change(['preparedActivities','circleMistakes','paragraph'],e.target.value)}/></label>
        {lesson.preparedActivities.circleMistakes.mistakes.map((m:any,i:number)=>
         <div className="review-pair" key={i}>
@@ -371,12 +422,12 @@ export default function ReviewApp(){
        <p className="review-source">Every incorrect phrase must actually appear in the paragraph.</p>
       </div>}
       {active.id==='odd-words'&&<div className="review-fields">
-       <label>Suggested unrelated words — one per line<textarea rows={7} value={wordBankDrafts.oddWords}
+       <label>Suggested unrelated words — one per line<textarea id="review-field-odd-words" rows={7} value={wordBankDrafts.oddWords}
         onChange={e=>changeWordList('oddWords','unrelated',e.target.value)}/></label>
        <p>Original related words: {lesson.preparedActivities.oddWords.related.join(', ')}</p>
       </div>}
       {active.id==='checkboxes'&&<div className="review-fields">
-       <label>Suggested incorrect choices — one per line<textarea rows={7} value={wordBankDrafts.checkboxes}
+       <label>Suggested incorrect choices — one per line<textarea id="review-field-checkboxes" rows={7} value={wordBankDrafts.checkboxes}
         onChange={e=>changeWordList('checkboxes','incorrect',e.target.value)}/></label>
        <p>Correct choices: {lesson.preparedActivities.checkboxes.correct.join(', ')}</p>
       </div>}
@@ -385,8 +436,8 @@ export default function ReviewApp(){
        <p>The curriculum discusses the destruction of the Egyptian army. Please decide whether the prepared story, sorting and drawing prompts use age-appropriate wording for your classes. You can adjust the relevant content in the working JSON before marking this reviewed.</p>
       </div>}
       {active.id==='important-idea'&&<div className="review-fields">
-       <label>Important Idea (synchronized across Big Idea puzzles)
-        <input value={lesson.lessonDetails.bigIdeas?.[0]?.text??''} onChange={e=>changeIdea(e.target.value)}/></label>
+       <label>Original Important Idea (retained as curriculum teaching text)
+        <input id="review-field-important-idea" value={lesson.lessonDetails.bigIdeas?.[0]?.text??''} onChange={e=>changeIdea(e.target.value)}/></label>
        <p className="review-source">The source page-5 graphic uses “The Lord God is a mighty savior.” The later prose has different capitalization and punctuation.</p>
       </div>}
       {active.id==='bsb-verse'&&<div className="review-fields">
@@ -402,7 +453,7 @@ export default function ReviewApp(){
        </>}
        <div className="review-pair">
         <label>Look up passage (e.g. Exodus 15:11-12)
-         <input value={reference} onChange={e=>setReference(e.target.value)}/></label>
+         <input id="review-field-bsb" value={reference} onChange={e=>setReference(e.target.value)}/></label>
         <button type="button" onClick={findPassage} disabled={!index}>Look up BSB</button>
        </div>
        {passage&&<>
