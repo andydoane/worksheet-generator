@@ -80,6 +80,7 @@ export function assemblePublicLessonCatalog(
   if(lesson.id!==basename||seen.has(basename))continue;
   seen.add(basename);
   const rights=lesson.publication?.scriptureRights;
+  if(!isRightsEvidence(rights))continue;
   const entry={
    lesson,scriptureDistributionCleared:true as const,rightsEvidence:rights,
   };
