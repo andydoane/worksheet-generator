@@ -1,8 +1,10 @@
 import {useEffect,useMemo,useState} from 'react';
 import type {ChangeEvent} from 'react';
 import {parseBsbText,getBsbPassage,wordSpans,clipToWords,markSelectedWords,suggestBlankWords,type BsbIndex,type Passage} from './bsb.ts';
-import {applyBsbVerse,checkReviewContent,createApprovedLesson,editAt,listReviewTasks,normalizeLegacySmallDrawingScenes,originalMemoryVerseTranslation,useMatchingStoryOrderCaptions,updatedRightsManifest,type Lesson} from './model.ts';
-import {validateModule} from '../modules.ts';
+import {applyBsbVerse,chooseSolveCodePhrase,createApprovedLesson,editAt,listReviewTasks,normalizeLegacySmallDrawingScenes,originalMemoryVerseTranslation,solveCodeChoices,useMatchingStoryOrderCaptions,updatedRightsManifest,type Lesson,type ReviewTask} from './model.ts';
+import {validateModule,MODULES} from '../modules.ts';
+import {cryptogramLetters} from '../cryptograms.ts';
+import {buildReviewPreflight,PREPARED_ACTIVITY_KEYS,reviewIssueTarget,type ReviewIssue,type ReviewPreflight} from './preflight.ts';
 import './review.css';
 
 const SAVE_KEY='worksheet-studio:review-workbench:v1';
@@ -59,14 +61,45 @@ export default function ReviewApp(){
  const [finish,setFinish]=useState<number[]>([]);
  const [unscramble,setUnscramble]=useState<number[]>([]);
  const [displayReference,setDisplayReference]=useState('');
- const [preflight,setPreflight]=useState<string[]|null>(null);
+ const [preflight,setPreflight]=useState<ReviewPreflight|null>(null);
+ const [focusIssueField,setFocusIssueField]=useState<string|null>(null);
+ const [moduleEditorText,setModuleEditorText]=useState('');
  const [reviewer,setReviewer]=useState('');
  const [signDate,setSignDate]=useState(displayDate);
  const [rightsConfirmed,setRightsConfirmed]=useState(false);
  const [manifest,setManifest]=useState<unknown>(null);
  const [confirmEmptyManifest,setConfirmEmptyManifest]=useState(false);
  const tasks=useMemo(()=>lesson?listReviewTasks(lesson):[],[lesson]);
- const active=tasks.find(t=>t.id===selectedId)??tasks.find(t=>!reviewed.includes(t.id))??tasks[0];
+ const diagnosticTasks=useMemo<ReviewTask[]>(()=>{
+  if(!preflight)return [];
+  const existing=new Set(tasks.map(t=>t.id)),extra=new Set<string>();
+  return preflight.issues.flatMap(issue=>{
+   if(existing.has(issue.taskId)||extra.has(issue.taskId))return [];
+   extra.add(issue.taskId);
+   return [{
+    id:issue.taskId,group:'Preflight repairs',
+    label:issue.label==='Review content'?'Other lesson issue':issue.label,
+    detail:'Fix this activity’s prepared lesson data, then run preflight again.',
+   }];
+  });
+ },[preflight,tasks]);
+ const active=[...tasks,...diagnosticTasks].find(t=>t.id===selectedId)??
+  tasks.find(t=>!reviewed.includes(t.id))??tasks[0]??diagnosticTasks[0];
+ const activeModuleId=active?.id.startsWith('module:')?active.id.slice('module:'.length):null;
+ const activePreparedKey=activeModuleId?PREPARED_ACTIVITY_KEYS[activeModuleId as keyof typeof PREPARED_ACTIVITY_KEYS]:undefined;
+ useEffect(()=>{
+  if(!lesson||!activePreparedKey)return;
+  setModuleEditorText(JSON.stringify(lesson.preparedActivities?.[activePreparedKey]??null,null,2));
+ },[activePreparedKey,lesson?.id]);
+ useEffect(()=>{
+  if(!focusIssueField)return;
+  const target=document.getElementById(focusIssueField);
+  if(target){
+   target.scrollIntoView({behavior:'smooth',block:'center'});
+   target.focus({preventScroll:true});
+  }
+  setFocusIssueField(null);
+ },[active?.id,focusIssueField]);
  const complete=tasks.filter(t=>reviewed.includes(t.id)).length;
  const remaining=tasks.length-complete;
  useEffect(()=>{
@@ -207,7 +240,8 @@ export default function ReviewApp(){
  const verseText=passage?clipToWords(passage.text,start,end):'';
  const verseWords=wordSpans(verseText);
  const versePreview=lesson?.lessonDetails?.memoryVerse;
- const canPublish=lesson&&remaining===0&&preflight!==null&&preflight.length===0&&
+ const canPublish=lesson&&remaining===0&&preflight!==null&&preflight.issues.length===0&&
+  preflight.convertedCount===preflight.totalCount&&
   reviewer.trim()&&signDate&&rightsConfirmed&&(manifest!==null||confirmEmptyManifest);
  function downloadApproved(){
   if(!canPublish||!lesson)return;
@@ -420,12 +454,27 @@ export default function ReviewApp(){
       <h2>3. Validate & export</h2>
       <p>{remaining===0?'All review items marked. Run the actual converter preflight before approval.':remaining+' review decisions remain. You can export a working JSON at any time.'}</p>
       <div className="review-actions">
-       <button type="button" onClick={()=>{try{setPreflight(checkReviewContent(lesson));setError('');}catch(e){setPreflight([String((e as Error).message??e)]);}}}>Run preflight checks</button>
+       <button type="button" onClick={()=>{
+         try{setPreflight(buildReviewPreflight(lesson));setError('');}
+         catch(e){setPreflight({convertedCount:0,totalCount:27,
+          issues:[reviewIssueTarget(String((e as Error).message??e))]});}
+        }}>Run preflight checks</button>
        <button type="button" className="review-secondary" onClick={()=>downloadJson(lesson.id+'.review.json',lesson)}>Export working JSON</button>
       </div>
-      {preflight&&<div className={preflight.length?'review-errors':'review-success'} role="status">
-       {preflight.length?<>Preflight found {preflight.length} issue(s):<ul>{preflight.map((s,i)=><li key={i}>{s}</li>)}</ul></>:
-        'Preflight passed: all 27 candidates can be converted. GitHub CI still must independently verify the approved file.'}
+      {preflight&&<div className={preflight.issues.length?'review-errors':'review-success'} role="status">
+       <p><strong>{preflight.convertedCount}/{preflight.totalCount} activity types converted.</strong>
+        {preflight.issues.length?' Select an issue below to edit the relevant activity.':
+         ' Preflight passed. GitHub CI still independently validates the approved file.'}</p>
+       {preflight.issues.length>0&&<ul className="review-issue-list">
+        {preflight.issues.map((issue,i)=><li key={issue.id+'-'+i}>
+         <button type="button" className="review-issue-link"
+          onClick={()=>{setSelectedId(issue.taskId);setFocusIssueField(issue.fieldId);setError('');}}>
+          <strong>{issue.label}</strong>
+          <span>{issue.message}</span>
+          <small>Edit this issue →</small>
+         </button>
+        </li>)}
+       </ul>}
       </div>}
       <div className="review-signoff">
        <h3>Final publication signoff</h3>
