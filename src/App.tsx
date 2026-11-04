@@ -646,7 +646,84 @@ export default function App() {
                       </button>
                       <button type="button" disabled={exporting}
                         onClick={()=>openLessonPicker('stories')}>Change Story</button>
+                      {draft.worksheetPresetId?.startsWith('preset-')&&
+                       <button type="button" disabled={exporting}
+                        aria-expanded={borderSettingsOpen} aria-controls="preset-borders-panel"
+                        onClick={()=>{setLessonPicker(null);setBorderSettingsOpen(open=>!open);}}>
+                        Borders{draft.borderArrangement?.mode==='mix'?' · Mix':
+                         draft.borderArrangement?.mode==='same'?' · One style':
+                         draft.borderArrangement?.mode==='none'?' · None':''}
+                       </button>}
                     </div>
+                    {borderSettingsOpen&&draft.worksheetPresetId?.startsWith('preset-')&&
+                     <section className="preset-borders-panel" id="preset-borders-panel"
+                      aria-label="Automatic borders for this worksheet">
+                      <div className="lesson-switcher-picker-header">
+                       <strong>Worksheet borders</strong>
+                       <button type="button" onClick={()=>setBorderSettingsOpen(false)}>Close</button>
+                      </div>
+                      <p>Choose how the preset places borders across the four pages.
+                       Each page uses one of the balanced layouts, not a border around
+                       every activity.</p>
+                      {!draft.borderArrangement&&
+                       (draft.coverBorder!=='none'||Object.keys(draft.activityBorders).length>0)&&
+                       <p className="preset-border-note">This older worksheet has manually chosen
+                        borders. They stay as they are until you choose a mode below.</p>}
+                      <div className="preset-border-modes" role="radiogroup"
+                       aria-label="Automatic border arrangement mode">
+                       <label>
+                        <input type="radio" name="preset-border-mode"
+                         checked={draft.borderArrangement?.mode==='none'||
+                          (!draft.borderArrangement&&draft.coverBorder==='none'&&
+                           Object.keys(draft.activityBorders).length===0)}
+                         onChange={()=>choosePresetBorderMode('none')}/>
+                        <span><strong>No borders</strong><small>Remove all worksheet borders</small></span>
+                       </label>
+                       <label>
+                        <input type="radio" name="preset-border-mode"
+                         checked={draft.borderArrangement?.mode==='same'}
+                         onChange={()=>choosePresetBorderMode('same')}/>
+                        <span><strong>One style throughout</strong>
+                         <small>Matching border artwork on selected regions</small></span>
+                       </label>
+                       <label>
+                        <input type="radio" name="preset-border-mode"
+                         checked={draft.borderArrangement?.mode==='mix'}
+                         onChange={()=>choosePresetBorderMode('mix')}/>
+                        <span><strong>Mix different styles</strong>
+                         <small>Different borders on each page, chosen automatically</small></span>
+                       </label>
+                      </div>
+                      {draft.borderArrangement?.mode==='same'&&
+                       <div className="preset-border-style">
+                        <label htmlFor="preset-border-style">One border style</label>
+                        <div className="preset-border-style-control">
+                         <select id="preset-border-style"
+                          value={draft.borderArrangement.style}
+                          onChange={e=>chooseUnifiedBorderStyle(e.target.value as ActivityBorderId)}>
+                          {COVER_BORDERS.map(item=><option key={item.id} value={item.id}>
+                           {item.name}</option>)}
+                         </select>
+                         {coverBorderUrl(draft.borderArrangement.style)&&
+                          <img src={coverBorderUrl(draft.borderArrangement.style)}
+                           alt={'Preview of '+draft.borderArrangement.style.replace('-',' ')}/>}
+                        </div>
+                       </div>}
+                      {draft.borderArrangement?.mode!=='none'&&draft.borderArrangement&&
+                       <div className="preset-border-actions">
+                        <button type="button" disabled={exporting}
+                         onClick={regenerateAllBorders}>Regenerate Borders</button>
+                        <small>Replaces only the border positions and artwork.
+                         Your story, activities, answers and worksheet layout stay the same.</small>
+                       </div>}
+                      <p className="preset-border-note">
+                       {(draft.coverBorder==='none'?0:1)+Object.keys(draft.activityBorders).length}
+                       {' '}bordered regions in this saved worksheet. You can still
+                       customize individual borders afterward on the Lesson Details
+                       and Activities tabs. Those changes remain until you regenerate
+                       or choose a different border mode.
+                      </p>
+                     </section>}
                     {lessonPicker&&<div className="lesson-switcher-picker" role="group"
                       aria-label={lessonPicker==='stories'?'Choose a different Bible story':'Choose worksheet preset'}>
                       <div className="lesson-switcher-picker-header">
