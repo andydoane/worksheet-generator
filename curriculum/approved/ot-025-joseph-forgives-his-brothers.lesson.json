@@ -1,0 +1,2999 @@
+{
+  "schemaVersion": 1,
+  "schemaStatus": "review-draft; local schema-shape and source checks only, official importer/generator testing pending",
+  "id": "ot-025-joseph-forgives-his-brothers",
+  "curriculum": {
+    "series": "Old Testament",
+    "lessonNumber": 25
+  },
+  "lessonDetails": {
+    "title": "Joseph Forgives His Brothers",
+    "scripturePassages": [
+      "Genesis 43",
+      "Genesis 44",
+      "Genesis 45",
+      "Genesis 50"
+    ],
+    "scriptureDisplay": "Genesis",
+    "bigIdeas": [
+      {
+        "text": "It’s part of God’s plan to take our bad and use it for good.",
+        "origin": "adapted",
+        "source": {
+          "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+          "section": "Important Idea",
+          "page": 5,
+          "sourceParagraphIndex": 151,
+          "details": "Original display-font wording shows lowercase “god”; capitalization corrected for the worksheet while original text remains in ODT."
+        },
+        "teacherReviewRequired": false
+      }
+    ],
+    "memoryVerse": {
+      "reference": "Genesis 50:20",
+      "translation": "BSB",
+      "text": "what you intended against me for evil, God intended for good, in order to accomplish a day like this—to preserve the lives of many people.",
+      "isExcerpt": true,
+      "hasEllipses": false,
+      "requiresTextReview": false,
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 208,
+        "details": "Original ESV excerpt retained in source lesson; proposed BSB text is the complete Genesis 50:20 verse, pending teacher review and rights clearance."
+      },
+      "teacherReviewRequired": true,
+      "alsoVerifiedAt": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "Verse and Motions",
+        "page": 7,
+        "sourceParagraphIndex": 215
+      },
+      "originalTranslation": "BSB",
+      "bsbSource": {
+        "reference": "Genesis 50:20",
+        "sourceUrl": "https://bereanbible.com/bsb.txt",
+        "publicDomainTerms": "https://berean.bible/terms.htm",
+        "startWord": 3,
+        "endWord": 28
+      }
+    }
+  },
+  "sourceFiles": [
+    {
+      "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+      "format": "odt",
+      "role": "primary teaching source",
+      "note": "This ODT alone was provided. It includes eight picture-only Story Notes, source ESV memory-verse excerpt, review questions, and separate one-word questions; a different proposed BSB text appears only in prepared worksheet activities."
+    }
+  ],
+  "storyNotes": [
+    {
+      "id": "sn-01",
+      "order": 1,
+      "originalText": "When their food ran out, Jacob sent Benjamin to Egypt with his brothers.",
+      "cleanText": "When the family ran out of food, Jacob sent Benjamin with his brothers to Egypt.",
+      "emphasizedWords": [],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "STORY NOTE",
+        "page": 1,
+        "sourceParagraphIndex": 33
+      }
+    },
+    {
+      "id": "sn-02",
+      "order": 2,
+      "originalText": "Though the brothers were scared, Joseph's manager said, \"Don't worry. We received your money.\"",
+      "cleanText": "The brothers were afraid, but Joseph’s manager said their payment had been received.",
+      "emphasizedWords": [],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "STORY NOTE",
+        "page": 2,
+        "sourceParagraphIndex": 50
+      }
+    },
+    {
+      "id": "sn-03",
+      "order": 3,
+      "originalText": "At a meal the brothers were seated oldest to youngest. Benjamin was given five times more.",
+      "cleanText": "At a meal, the brothers sat from oldest to youngest. Benjamin got five times more food.",
+      "emphasizedWords": [],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "STORY NOTE",
+        "page": 2,
+        "sourceParagraphIndex": 65
+      }
+    },
+    {
+      "id": "sn-04",
+      "order": 4,
+      "originalText": "Joseph had the brothers' money placed in their bags, with his special cup placed in Benjamin's bag.",
+      "cleanText": "Joseph put the brothers’ money back in their sacks and hid his silver cup in Benjamin’s sack.",
+      "emphasizedWords": [],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "STORY NOTE",
+        "page": 3,
+        "sourceParagraphIndex": 76
+      }
+    },
+    {
+      "id": "sn-05",
+      "order": 5,
+      "originalText": "The manager caught up with them. They were upset when the cup was found in Benjamin's bag.",
+      "cleanText": "The manager found Joseph’s cup in Benjamin’s sack. The brothers were very upset.",
+      "emphasizedWords": [],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "STORY NOTE",
+        "page": 3,
+        "sourceParagraphIndex": 93
+      }
+    },
+    {
+      "id": "sn-06",
+      "order": 6,
+      "originalText": "Judah told Joseph, \"I made a promise to my father. Make me your slave in Benjamin’s place.\"",
+      "cleanText": "Judah offered to become Joseph’s slave instead of Benjamin.",
+      "emphasizedWords": [],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "STORY NOTE",
+        "page": 4,
+        "sourceParagraphIndex": 106
+      }
+    },
+    {
+      "id": "sn-07",
+      "order": 7,
+      "originalText": "After hearing Judah, Joseph finally told his brothers, \"It's me, your brother Joseph!\"",
+      "cleanText": "Joseph finally told his brothers who he really was.",
+      "emphasizedWords": [],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "STORY NOTE",
+        "page": 4,
+        "sourceParagraphIndex": 123
+      }
+    },
+    {
+      "id": "sn-08",
+      "order": 8,
+      "originalText": "Joseph said, \"God SENT me to Egypt to save many from starving. Now, bring our family to Egypt.\"",
+      "cleanText": "Joseph said God sent him to Egypt to save lives, and he invited his family to come there.",
+      "emphasizedWords": [],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "STORY NOTE",
+        "page": 5,
+        "sourceParagraphIndex": 136
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q-01",
+      "question": "Are my brothers the same old bullies or have they changed?",
+      "answer": "[He tested them to learn if they had changed.]",
+      "kind": "reflection",
+      "scope": "teaching",
+      "origin": "source",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 13
+      },
+      "standaloneReady": true,
+      "notes": "Question and answer drawn from the original lesson."
+    },
+    {
+      "id": "q-02",
+      "question": "would their dad let them take Benjamin back to Egypt?",
+      "answer": "No.",
+      "kind": "factual",
+      "scope": "teaching",
+      "origin": "source",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 25
+      },
+      "standaloneReady": true,
+      "notes": "Question and answer drawn from the original lesson."
+    },
+    {
+      "id": "q-03",
+      "question": "Why?",
+      "answer": "They had eaten all the food they bought last time and food wouldn’t grow in their land.",
+      "kind": "factual",
+      "scope": "teaching",
+      "origin": "source",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "Teaching Narrative",
+        "page": 1,
+        "sourceParagraphIndex": 35
+      },
+      "standaloneReady": true,
+      "notes": "Question and answer drawn from the original lesson."
+    },
+    {
+      "id": "q-04",
+      "question": "Who went this time that didn’t go last time?",
+      "answer": "Benjamin.",
+      "kind": "factual",
+      "scope": "teaching",
+      "origin": "source",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "Teaching Narrative",
+        "page": 2,
+        "sourceParagraphIndex": 37
+      },
+      "standaloneReady": true,
+      "notes": "Question and answer drawn from the original lesson."
+    },
+    {
+      "id": "q-05",
+      "question": "Why did Jacob let him go to Egypt this time?",
+      "answer": "He had to; the grumpy Egyptian ruler, who was really Joseph, ordered them to.",
+      "kind": "factual",
+      "scope": "teaching",
+      "origin": "source",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "Teaching Narrative",
+        "page": 2,
+        "sourceParagraphIndex": 39
+      },
+      "standaloneReady": true,
+      "notes": "Question and answer drawn from the original lesson."
+    },
+    {
+      "id": "q-06",
+      "question": "How did the brothers feel about that?",
+      "answer": "Frightened.",
+      "kind": "factual",
+      "scope": "teaching",
+      "origin": "source",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "Teaching Narrative",
+        "page": 2,
+        "sourceParagraphIndex": 52
+      },
+      "standaloneReady": true,
+      "notes": "Question and answer drawn from the original lesson."
+    },
+    {
+      "id": "q-07",
+      "question": "Do you remember who secretly did that?",
+      "answer": "Joseph.",
+      "kind": "factual",
+      "scope": "teaching",
+      "origin": "source",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "Teaching Narrative",
+        "page": 2,
+        "sourceParagraphIndex": 54
+      },
+      "standaloneReady": true,
+      "notes": "Question and answer drawn from the original lesson."
+    },
+    {
+      "id": "q-08",
+      "question": "What did they think Joseph planned to do to them?",
+      "answer": "Make them slaves.",
+      "kind": "factual",
+      "scope": "teaching",
+      "origin": "source",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "Teaching Narrative",
+        "page": 2,
+        "sourceParagraphIndex": 56
+      },
+      "standaloneReady": true,
+      "notes": "Question and answer drawn from the original lesson."
+    },
+    {
+      "id": "q-09",
+      "question": "What did Joseph’s servant tell them?",
+      "answer": "Don’t worry; we received your money.",
+      "kind": "factual",
+      "scope": "teaching",
+      "origin": "source",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "Teaching Narrative",
+        "page": 2,
+        "sourceParagraphIndex": 58
+      },
+      "standaloneReady": true,
+      "notes": "Question and answer drawn from the original lesson."
+    },
+    {
+      "id": "q-10",
+      "question": "Now he wants to eat a meal with us?",
+      "answer": "[The brothers were confused.]",
+      "kind": "rhetorical",
+      "scope": "teaching",
+      "origin": "source",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "Teaching Narrative",
+        "page": 2,
+        "sourceParagraphIndex": 67
+      },
+      "standaloneReady": true,
+      "notes": "Question and answer drawn from the original lesson."
+    },
+    {
+      "id": "q-11",
+      "question": "What’s this all about?",
+      "answer": "[The brothers did not recognize Joseph.]",
+      "kind": "rhetorical",
+      "scope": "teaching",
+      "origin": "source",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "Teaching Narrative",
+        "page": 2,
+        "sourceParagraphIndex": 67
+      },
+      "standaloneReady": true,
+      "notes": "Question and answer drawn from the original lesson."
+    },
+    {
+      "id": "q-12",
+      "question": "How in the world could they do that without knowing our ages?",
+      "answer": "[Joseph secretly knew their ages.]",
+      "kind": "rhetorical",
+      "scope": "teaching",
+      "origin": "source",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "Teaching Narrative",
+        "page": 2,
+        "sourceParagraphIndex": 69
+      },
+      "standaloneReady": true,
+      "notes": "Question and answer drawn from the original lesson."
+    },
+    {
+      "id": "q-13",
+      "question": "Who?",
+      "answer": "Joseph.",
+      "kind": "factual",
+      "scope": "teaching",
+      "origin": "source",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "Teaching Narrative",
+        "page": 2,
+        "sourceParagraphIndex": 69
+      },
+      "standaloneReady": true,
+      "notes": "Question and answer drawn from the original lesson."
+    },
+    {
+      "id": "q-14",
+      "question": "What did Benjamin get?",
+      "answer": "Five times as much food as the others.",
+      "kind": "factual",
+      "scope": "teaching",
+      "origin": "source",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "Teaching Narrative",
+        "page": 2,
+        "sourceParagraphIndex": 71
+      },
+      "standaloneReady": true,
+      "notes": "Question and answer drawn from the original lesson."
+    },
+    {
+      "id": "q-15",
+      "question": "What did Joseph order to be done with their food bags?",
+      "answer": "Put their money back in it; hide my special silver cup in Benjamin’s sack.",
+      "kind": "factual",
+      "scope": "teaching",
+      "origin": "source",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "Teaching Narrative",
+        "page": 3,
+        "sourceParagraphIndex": 78
+      },
+      "standaloneReady": true,
+      "notes": "Question and answer drawn from the original lesson."
+    },
+    {
+      "id": "q-16",
+      "question": "Are my brothers the same old bullies or have they changed?",
+      "answer": "[Judah’s later choice showed the brothers had changed.]",
+      "kind": "reflection",
+      "scope": "teaching",
+      "origin": "source",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "Teaching Narrative",
+        "page": 3,
+        "sourceParagraphIndex": 84
+      },
+      "standaloneReady": true,
+      "notes": "Question and answer drawn from the original lesson."
+    },
+    {
+      "id": "q-17",
+      "question": "Why would you steal my master’s cup?",
+      "answer": "[The brothers had not stolen it.]",
+      "kind": "quoted-dialogue",
+      "scope": "teaching",
+      "origin": "source",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "Teaching Narrative",
+        "page": 3,
+        "sourceParagraphIndex": 95
+      },
+      "standaloneReady": true,
+      "notes": "Question and answer drawn from the original lesson."
+    },
+    {
+      "id": "q-18",
+      "question": "why?",
+      "answer": "Because they hadn’t stolen the cup.",
+      "kind": "factual",
+      "scope": "teaching",
+      "origin": "source",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "Teaching Narrative",
+        "page": 3,
+        "sourceParagraphIndex": 95
+      },
+      "standaloneReady": true,
+      "notes": "Question and answer drawn from the original lesson."
+    },
+    {
+      "id": "q-19",
+      "question": "What was it?",
+      "answer": "If one of the brothers had stolen the cup, they would die; the others will become slaves.",
+      "kind": "factual",
+      "scope": "teaching",
+      "origin": "source",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "Teaching Narrative",
+        "page": 3,
+        "sourceParagraphIndex": 97
+      },
+      "standaloneReady": true,
+      "notes": "Question and answer drawn from the original lesson."
+    },
+    {
+      "id": "q-20",
+      "question": "Why?",
+      "answer": "They hadn’t stolen the cup; Benjamin was their dad’s favorite and was now in big trouble.",
+      "kind": "factual",
+      "scope": "teaching",
+      "origin": "source",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "Teaching Narrative",
+        "page": 3,
+        "sourceParagraphIndex": 99
+      },
+      "standaloneReady": true,
+      "notes": "Question and answer drawn from the original lesson."
+    },
+    {
+      "id": "q-21",
+      "question": "what did the brothers do?",
+      "answer": "Bowed down to him.",
+      "kind": "factual",
+      "scope": "teaching",
+      "origin": "source",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "Teaching Narrative",
+        "page": 4,
+        "sourceParagraphIndex": 108
+      },
+      "standaloneReady": true,
+      "notes": "Question and answer drawn from the original lesson."
+    },
+    {
+      "id": "q-22",
+      "question": "What was his name?",
+      "answer": "Judah.",
+      "kind": "factual",
+      "scope": "teaching",
+      "origin": "source",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "Teaching Narrative",
+        "page": 4,
+        "sourceParagraphIndex": 110
+      },
+      "standaloneReady": true,
+      "notes": "Question and answer drawn from the original lesson."
+    },
+    {
+      "id": "q-23",
+      "question": "Are my brothers the same old bullies or have they changed?",
+      "answer": "[They had changed.]",
+      "kind": "reflection",
+      "scope": "teaching",
+      "origin": "source",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "Teaching Narrative",
+        "page": 4,
+        "sourceParagraphIndex": 118
+      },
+      "standaloneReady": true,
+      "notes": "Question and answer drawn from the original lesson."
+    },
+    {
+      "id": "q-24",
+      "question": "What did Joseph shout to his brothers?",
+      "answer": "I am Joseph; is my father still alive?",
+      "kind": "factual",
+      "scope": "teaching",
+      "origin": "source",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "Teaching Narrative",
+        "page": 4,
+        "sourceParagraphIndex": 127
+      },
+      "standaloneReady": true,
+      "notes": "Question and answer drawn from the original lesson."
+    },
+    {
+      "id": "q-25",
+      "question": "Why would that be?",
+      "answer": "Because they had been awful to Joseph in the past; what if he wanted revenge?",
+      "kind": "factual",
+      "scope": "teaching",
+      "origin": "source",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "Teaching Narrative",
+        "page": 5,
+        "sourceParagraphIndex": 138
+      },
+      "standaloneReady": true,
+      "notes": "Question and answer drawn from the original lesson."
+    },
+    {
+      "id": "q-26",
+      "question": "what if he wanted revenge?",
+      "answer": "[They feared Joseph might punish them.]",
+      "kind": "reflection",
+      "scope": "teaching",
+      "origin": "source",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "Teaching Narrative",
+        "page": 5,
+        "sourceParagraphIndex": 138
+      },
+      "standaloneReady": true,
+      "notes": "Question and answer drawn from the original lesson."
+    },
+    {
+      "id": "q-27",
+      "question": "What did Joseph mean by that?",
+      "answer": "",
+      "kind": "reflection",
+      "scope": "teaching",
+      "origin": "source",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "Teaching Narrative",
+        "page": 5,
+        "sourceParagraphIndex": 140
+      },
+      "standaloneReady": false,
+      "notes": "Exact original question preserved from the ODT; teacher should review context."
+    },
+    {
+      "id": "q-28",
+      "question": "how does the story of Joseph forgiving his brothers teach us, strengthen us, encourage us, or give us hope?",
+      "answer": "",
+      "kind": "reflection",
+      "scope": "teaching",
+      "origin": "source",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "Teaching Narrative",
+        "page": 5,
+        "sourceParagraphIndex": 150
+      },
+      "standaloneReady": false,
+      "notes": "Exact original question preserved from the ODT; teacher should review context."
+    },
+    {
+      "id": "q-29",
+      "question": "Did you hear the amazing thing Joseph said?",
+      "answer": "",
+      "kind": "rhetorical",
+      "scope": "teaching",
+      "origin": "source",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "Teaching Narrative",
+        "page": 6,
+        "sourceParagraphIndex": 170
+      },
+      "standaloneReady": false,
+      "notes": "Exact original question preserved from the ODT; teacher should review context."
+    },
+    {
+      "id": "q-30",
+      "question": "How did God use Joseph to keep a bunch of people alive?",
+      "answer": "He stored up food.",
+      "kind": "factual",
+      "scope": "memory-verse",
+      "origin": "source",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 210
+      },
+      "standaloneReady": true,
+      "notes": "Question and answer drawn from the original lesson."
+    },
+    {
+      "id": "q-31",
+      "question": "When the brothers returned to Egypt to buy food, what brother went that didn’t go the first time?",
+      "answer": "Benjamin",
+      "kind": "factual",
+      "scope": "review",
+      "origin": "source",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 255
+      },
+      "standaloneReady": true,
+      "notes": "Question and answer drawn from the original lesson."
+    },
+    {
+      "id": "q-32",
+      "question": "When Joseph invited the brothers to his house for a meal, how did they feel? Why?",
+      "answer": "Frightened, thought Joseph would make them slaves",
+      "kind": "factual",
+      "scope": "review",
+      "origin": "source",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 256
+      },
+      "standaloneReady": true,
+      "notes": "Question and answer drawn from the original lesson."
+    },
+    {
+      "id": "q-33",
+      "question": "What unusual things happened at the meal?",
+      "answer": "The brothers were seated oldest to youngest; Benjamin was given five times more",
+      "kind": "factual",
+      "scope": "review",
+      "origin": "source",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 257
+      },
+      "standaloneReady": true,
+      "notes": "Question and answer drawn from the original lesson."
+    },
+    {
+      "id": "q-34",
+      "question": "Before the brothers left, what did Joseph have placed in their bags?",
+      "answer": "Money in each brother’s sack; his silver cup placed in Benjamin’s bag",
+      "kind": "factual",
+      "scope": "review",
+      "origin": "source",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 258
+      },
+      "standaloneReady": true,
+      "notes": "Question and answer drawn from the original lesson."
+    },
+    {
+      "id": "q-35",
+      "question": "When the servant accused them of stealing Joseph’s cup, what did the brothers say?",
+      "answer": "If you find it, that person must die; the rest of us will become your slaves",
+      "kind": "factual",
+      "scope": "review",
+      "origin": "source",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 259
+      },
+      "standaloneReady": true,
+      "notes": "Question and answer drawn from the original lesson."
+    },
+    {
+      "id": "q-36",
+      "question": "What did Judah say to Joseph?",
+      "answer": "Make me a slave in place of Benjamin",
+      "kind": "factual",
+      "scope": "review",
+      "origin": "source",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 260
+      },
+      "standaloneReady": true,
+      "notes": "Question and answer drawn from the original lesson."
+    },
+    {
+      "id": "q-37",
+      "question": "After hearing Judah speak, what did Joseph do?",
+      "answer": "Told the brothers who he was",
+      "kind": "factual",
+      "scope": "review",
+      "origin": "source",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 261
+      },
+      "standaloneReady": true,
+      "notes": "Question and answer drawn from the original lesson."
+    },
+    {
+      "id": "q-38",
+      "question": "How did the brothers feel when Joseph revealed who he was? Why?",
+      "answer": "Afraid that he might want revenge",
+      "kind": "factual",
+      "scope": "review",
+      "origin": "source",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 262
+      },
+      "standaloneReady": true,
+      "notes": "Question and answer drawn from the original lesson."
+    },
+    {
+      "id": "q-39",
+      "question": "When he saw his brothers were scared, what did Joseph say?",
+      "answer": "God has sent me here to save people",
+      "kind": "factual",
+      "scope": "review",
+      "origin": "source",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 263
+      },
+      "standaloneReady": true,
+      "notes": "Question and answer drawn from the original lesson."
+    },
+    {
+      "id": "q-40",
+      "question": "What did Joseph want his brothers to tell his father?",
+      "answer": "Bring the entire family to live with me in Egypt",
+      "kind": "factual",
+      "scope": "review",
+      "origin": "source",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 264
+      },
+      "standaloneReady": true,
+      "notes": "Question and answer drawn from the original lesson."
+    },
+    {
+      "id": "q-41",
+      "question": "When they went to buy food, what brother went that didn’t go the first time?",
+      "answer": "Benjamin",
+      "kind": "factual",
+      "scope": "one-word",
+      "origin": "source",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "One-Word-Answer Questions",
+        "page": 13,
+        "sourceParagraphIndex": 324
+      },
+      "standaloneReady": true,
+      "notes": "Question and answer drawn from the original lesson."
+    },
+    {
+      "id": "q-42",
+      "question": "They thought Joseph was going to make them become... what?",
+      "answer": "Slaves",
+      "kind": "factual",
+      "scope": "one-word",
+      "origin": "source",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "One-Word-Answer Questions",
+        "page": 13,
+        "sourceParagraphIndex": 325
+      },
+      "standaloneReady": true,
+      "notes": "Question and answer drawn from the original lesson."
+    },
+    {
+      "id": "q-43",
+      "question": "At the meal, Benjamin was given this times as much food as his brothers.",
+      "answer": "Five",
+      "kind": "factual",
+      "scope": "one-word",
+      "origin": "source",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "One-Word-Answer Questions",
+        "page": 13,
+        "sourceParagraphIndex": 326
+      },
+      "standaloneReady": true,
+      "notes": "Question and answer drawn from the original lesson."
+    },
+    {
+      "id": "q-44",
+      "question": "What did Joseph have hidden in Benjamin’s sack of grain?",
+      "answer": "Cup",
+      "kind": "factual",
+      "scope": "one-word",
+      "origin": "source",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "One-Word-Answer Questions",
+        "page": 13,
+        "sourceParagraphIndex": 327
+      },
+      "standaloneReady": true,
+      "notes": "Question and answer drawn from the original lesson."
+    },
+    {
+      "id": "q-45",
+      "question": "When the cup was found in Benjamin’s sack, what did the brothers tear?",
+      "answer": "Clothes",
+      "kind": "factual",
+      "scope": "one-word",
+      "origin": "source",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "One-Word-Answer Questions",
+        "page": 13,
+        "sourceParagraphIndex": 328
+      },
+      "standaloneReady": true,
+      "notes": "Question and answer drawn from the original lesson."
+    },
+    {
+      "id": "q-46",
+      "question": "What brother offered to become a slave in Benjamin’s place?",
+      "answer": "Judah",
+      "kind": "factual",
+      "scope": "one-word",
+      "origin": "source",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "One-Word-Answer Questions",
+        "page": 13,
+        "sourceParagraphIndex": 329
+      },
+      "standaloneReady": true,
+      "notes": "Question and answer drawn from the original lesson."
+    },
+    {
+      "id": "q-47",
+      "question": "After hearing Judah speak, Joseph said, “I am ___________ .”",
+      "answer": "Joseph",
+      "kind": "factual",
+      "scope": "one-word",
+      "origin": "source",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "One-Word-Answer Questions",
+        "page": 13,
+        "sourceParagraphIndex": 330
+      },
+      "standaloneReady": true,
+      "notes": "Question and answer drawn from the original lesson."
+    },
+    {
+      "id": "q-48",
+      "question": "When Joseph said, “I am Joseph,” the brothers were scared that he wanted... what?",
+      "answer": "Revenge",
+      "kind": "factual",
+      "scope": "one-word",
+      "origin": "source",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "One-Word-Answer Questions",
+        "page": 13,
+        "sourceParagraphIndex": 331
+      },
+      "standaloneReady": true,
+      "notes": "Question and answer drawn from the original lesson."
+    },
+    {
+      "id": "q-49",
+      "question": "Joseph said, “You meant to harm me, but God meant it for...” what?",
+      "answer": "Good",
+      "kind": "factual",
+      "scope": "one-word",
+      "origin": "source",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "One-Word-Answer Questions",
+        "page": 13,
+        "sourceParagraphIndex": 332
+      },
+      "standaloneReady": true,
+      "notes": "Question and answer drawn from the original lesson."
+    },
+    {
+      "id": "q-50",
+      "question": "Joseph said, “Speak to my _________ and tell him to bring the family to Egypt.”",
+      "answer": "Father",
+      "kind": "factual",
+      "scope": "one-word",
+      "origin": "source",
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "One-Word-Answer Questions",
+        "page": 13,
+        "sourceParagraphIndex": 333
+      },
+      "standaloneReady": true,
+      "notes": "Question and answer drawn from the original lesson."
+    }
+  ],
+  "facts": [
+    {
+      "id": "tf-01",
+      "statement": "Jacob sent Benjamin with his brothers to buy more food in Egypt.",
+      "isTrue": true,
+      "teacherReviewRequired": false,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    {
+      "id": "tf-02",
+      "statement": "Joseph’s brothers recognized him as soon as they came back to Egypt.",
+      "isTrue": false,
+      "teacherReviewRequired": true,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-07"
+      ]
+    },
+    {
+      "id": "tf-03",
+      "statement": "Joseph’s manager told the brothers their grain money had been received.",
+      "isTrue": true,
+      "teacherReviewRequired": false,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ]
+    },
+    {
+      "id": "tf-04",
+      "statement": "Joseph invited his brothers to eat a meal at his home.",
+      "isTrue": true,
+      "teacherReviewRequired": false,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02",
+        "sn-03"
+      ]
+    },
+    {
+      "id": "tf-05",
+      "statement": "At the meal, the brothers were seated in order of their height.",
+      "isTrue": false,
+      "teacherReviewRequired": true,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-03"
+      ]
+    },
+    {
+      "id": "tf-06",
+      "statement": "Benjamin received five times as much food as his brothers.",
+      "isTrue": true,
+      "teacherReviewRequired": false,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ]
+    },
+    {
+      "id": "tf-07",
+      "statement": "Joseph put his silver ring in Benjamin's sack.",
+      "isTrue": false,
+      "teacherReviewRequired": true,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-04"
+      ]
+    },
+    {
+      "id": "tf-08",
+      "statement": "The manager found Joseph’s silver cup in Benjamin’s sack.",
+      "isTrue": true,
+      "teacherReviewRequired": false,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ]
+    },
+    {
+      "id": "tf-09",
+      "statement": "The brothers laughed with joy when the silver cup was discovered.",
+      "isTrue": false,
+      "teacherReviewRequired": true,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-05"
+      ]
+    },
+    {
+      "id": "tf-10",
+      "statement": "Judah offered to become a slave in Benjamin’s place.",
+      "isTrue": true,
+      "teacherReviewRequired": false,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ]
+    },
+    {
+      "id": "tf-11",
+      "statement": "Joseph wanted to get revenge on his brothers.",
+      "isTrue": false,
+      "teacherReviewRequired": true,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-07"
+      ]
+    },
+    {
+      "id": "tf-12",
+      "statement": "Joseph said that God sent him ahead to save many lives.",
+      "isTrue": true,
+      "teacherReviewRequired": false,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-08"
+      ]
+    },
+    {
+      "id": "tf-13",
+      "statement": "Joseph told his brothers to leave their father Jacob behind.",
+      "isTrue": false,
+      "teacherReviewRequired": true,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-08"
+      ]
+    },
+    {
+      "id": "tf-14",
+      "statement": "Joseph asked his brothers to bring the family to Egypt.",
+      "isTrue": true,
+      "teacherReviewRequired": false,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-08"
+      ]
+    }
+  ],
+  "vocabulary": {
+    "related": [
+      "JOSEPH",
+      "BENJAMIN",
+      "JUDAH",
+      "JACOB",
+      "SIMEON",
+      "EGYPT",
+      "GRAIN",
+      "SILVER",
+      "CUP",
+      "MONEY",
+      "FAMILY",
+      "SLAVE",
+      "BROTHERS"
+    ],
+    "unrelated": [
+      "HARP",
+      "SHIELD",
+      "CROWN",
+      "BOAT",
+      "MIRROR",
+      "SHEEP",
+      "ARMOR",
+      "SCROLL"
+    ],
+    "entries": [
+      {
+        "id": "v-01",
+        "term": "JOSEPH",
+        "category": "person",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "id": "v-02",
+        "term": "BENJAMIN",
+        "category": "person",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "id": "v-03",
+        "term": "JUDAH",
+        "category": "person",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "id": "v-04",
+        "term": "JACOB",
+        "category": "person",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "id": "v-05",
+        "term": "SIMEON",
+        "category": "person",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "id": "v-06",
+        "term": "EGYPT",
+        "category": "place",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "id": "v-07",
+        "term": "GRAIN",
+        "category": "food",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "id": "v-08",
+        "term": "SILVER",
+        "category": "object",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "id": "v-09",
+        "term": "CUP",
+        "category": "object",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "id": "v-10",
+        "term": "MONEY",
+        "category": "object",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "id": "v-11",
+        "term": "FAMILY",
+        "category": "relationship",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "id": "v-12",
+        "term": "SLAVE",
+        "category": "historical-role",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "id": "v-13",
+        "term": "BROTHERS",
+        "category": "relationship",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      }
+    ]
+  },
+  "characters": [
+    {
+      "id": "ch-01",
+      "name": "Joseph",
+      "clues": [
+        {
+          "text": "I was a ruler in Egypt and finally told my brothers who I was.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-07"
+          ]
+        }
+      ],
+      "scope": "current-story",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07",
+        "sn-08"
+      ]
+    },
+    {
+      "id": "ch-02",
+      "name": "Benjamin",
+      "clues": [
+        {
+          "text": "I got five times as much food at the meal.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-03"
+          ]
+        }
+      ],
+      "scope": "current-story",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-03"
+      ]
+    },
+    {
+      "id": "ch-03",
+      "name": "Judah",
+      "clues": [
+        {
+          "text": "I offered to become a slave instead of Benjamin.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-06"
+          ]
+        }
+      ],
+      "scope": "current-story",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ]
+    },
+    {
+      "id": "ch-04",
+      "name": "Jacob",
+      "clues": [
+        {
+          "text": "I sent my sons back to Egypt to buy food.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-01"
+          ]
+        }
+      ],
+      "scope": "current-story",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    {
+      "id": "ch-05",
+      "name": "Simeon",
+      "clues": [
+        {
+          "text": "I had been kept in prison while my brothers went home.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-02"
+          ]
+        }
+      ],
+      "scope": "recap",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ]
+    }
+  ],
+  "matchingPairs": [
+    {
+      "id": "mp-01",
+      "left": "Joseph",
+      "right": "Ruler",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ]
+    },
+    {
+      "id": "mp-02",
+      "left": "Benjamin",
+      "right": "Youngest",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ]
+    },
+    {
+      "id": "mp-03",
+      "left": "Judah",
+      "right": "Brave",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ]
+    },
+    {
+      "id": "mp-04",
+      "left": "Jacob",
+      "right": "Father",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    {
+      "id": "mp-05",
+      "left": "Simeon",
+      "right": "Prisoner",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ]
+    },
+    {
+      "id": "mp-06",
+      "left": "Egypt",
+      "right": "Country",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-08"
+      ]
+    }
+  ],
+  "drawingPrompts": [
+    {
+      "id": "draw-01",
+      "prompt": "the brothers eating together at Joseph’s table",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ]
+    },
+    {
+      "id": "draw-02",
+      "prompt": "Joseph's cup hidden in Benjamin's sack",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ]
+    },
+    {
+      "id": "draw-03",
+      "prompt": "Judah talking bravely to Joseph",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ]
+    },
+    {
+      "id": "draw-04",
+      "prompt": "Joseph telling his surprised brothers who he is",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ]
+    }
+  ],
+  "keyPhrases": [
+    {
+      "id": "kp-01",
+      "text": "The brothers came to Egypt for food.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    {
+      "id": "kp-02",
+      "text": "Judah offered to take Benjamin’s place.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ]
+    },
+    {
+      "id": "kp-03",
+      "text": "Joseph told his brothers who he was.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ]
+    },
+    {
+      "id": "kp-04",
+      "text": "God SENT me to Egypt to save many from starving.",
+      "origin": "source",
+      "sourceIds": [
+        "sn-08"
+      ]
+    },
+    {
+      "id": "kp-05",
+      "text": "It’s part of God’s plan to take our bad and use it for good.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-08"
+      ]
+    },
+    {
+      "id": "kp-review-1",
+      "text": "God can take our bad and use it for good.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "theologicalApplications": [
+    {
+      "id": "app-01",
+      "text": "God used Joseph’s suffering to save many lives.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-08"
+      ]
+    },
+    {
+      "id": "app-02",
+      "text": "Judah’s choice showed that the brothers had changed.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ]
+    },
+    {
+      "id": "app-03",
+      "text": "God can use something people intend for harm to accomplish good.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-08"
+      ]
+    },
+    {
+      "id": "app-04",
+      "text": "The lesson connects Joseph’s story to God’s plan to save through Jesus.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-08"
+      ]
+    }
+  ],
+  "preparedActivities": {
+    "drawPicture": {
+      "prompt": "Joseph's cup hidden in Benjamin's sack",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ]
+    },
+    "multipleChoice": [
+      {
+        "id": "mc-01",
+        "question": "Who came to Egypt with the brothers on their second trip?",
+        "correctAnswer": "Benjamin",
+        "choices": [
+          {
+            "text": "Benjamin",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Simeon",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Jacob",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "sourceQuestionIds": [
+          "q-31"
+        ],
+        "teacherReviewRequired": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "id": "mc-02",
+        "question": "Why were the brothers frightened at Joseph’s house?",
+        "correctAnswer": "They thought he would make them slaves.",
+        "choices": [
+          {
+            "text": "They thought he would make them slaves.",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "They thought there was not enough food.",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "They thought they would get lost in Egypt.",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "sourceQuestionIds": [
+          "q-32"
+        ],
+        "teacherReviewRequired": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "id": "mc-03",
+        "question": "How much food did Benjamin receive at the meal?",
+        "correctAnswer": "Five times as much.",
+        "choices": [
+          {
+            "text": "Five times as much.",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Twice as much.",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "The same as everyone else.",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "sourceQuestionIds": [
+          "q-33"
+        ],
+        "teacherReviewRequired": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "id": "mc-04",
+        "question": "Where did Joseph hide his special silver cup?",
+        "correctAnswer": "In Benjamin’s grain sack.",
+        "choices": [
+          {
+            "text": "In Benjamin’s grain sack.",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Under the dinner table.",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "In Judah’s coat.",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "sourceQuestionIds": [
+          "q-34"
+        ],
+        "teacherReviewRequired": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "id": "mc-05",
+        "question": "What did Judah offer to do to protect Benjamin?",
+        "correctAnswer": "Become a slave in his place.",
+        "choices": [
+          {
+            "text": "Become a slave in his place.",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Take the silver cup home.",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Stay in Egypt as a guest.",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "sourceQuestionIds": [
+          "q-36"
+        ],
+        "teacherReviewRequired": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "id": "mc-06",
+        "question": "Why did Joseph say God had sent him to Egypt?",
+        "correctAnswer": "To save many people from starving.",
+        "choices": [
+          {
+            "text": "To save many people from starving.",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "To hide from his family forever.",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "To punish his brothers.",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "sourceQuestionIds": [
+          "q-39"
+        ],
+        "teacherReviewRequired": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-08"
+        ]
+      }
+    ],
+    "trueFalse": {
+      "statement": "Judah offered to become a slave in Benjamin’s place.",
+      "isTrue": true,
+      "teacherReviewRequired": false,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ],
+      "factId": "tf-10"
+    },
+    "firstLetters": {
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 208,
+        "details": "Original ESV excerpt retained in source lesson; proposed BSB text is the complete Genesis 50:20 verse, pending teacher review and rights clearance."
+      },
+      "teacherReviewRequired": true,
+      "reference": "Genesis 50:20",
+      "verse": "what you intended against me for evil, God intended for good, in order to accomplish a day like this—to preserve the lives of many people.",
+      "origin": "adapted"
+    },
+    "oddWords": {
+      "related": [
+        "JOSEPH",
+        "GRAIN",
+        "EGYPT",
+        "CUP"
+      ],
+      "unrelated": [
+        "Goat",
+        "spear",
+        "SCROLL",
+        "chariot"
+      ],
+      "unrelatedOrigin": "suggested",
+      "teacherReviewRequired": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03",
+        "sn-04"
+      ]
+    },
+    "unscrambleWords": {
+      "answers": [
+        "SILVER CUP",
+        "BENJAMIN"
+      ],
+      "origin": "suggested",
+      "sourceIds": [],
+      "teacherReviewRequired": true
+    },
+    "checkboxes": {
+      "correct": [
+        "Benjamin",
+        "Judah",
+        "Money",
+        "Feast"
+      ],
+      "incorrect": [
+        "Mirror",
+        "belt",
+        "Camp",
+        "dirt"
+      ],
+      "incorrectOrigin": "suggested",
+      "teacherReviewRequired": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-04",
+        "sn-06"
+      ]
+    },
+    "whoAmI": {
+      "clue": "I am one of Jacob's sons. I offered to become a slave so my younger brother could go home. Who am I?",
+      "answer": "Judah",
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-06"
+      ],
+      "teacherReviewRequired": true
+    },
+    "matchWords": [
+      {
+        "id": "mp-01",
+        "left": "Joseph",
+        "right": "Ruler",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "id": "mp-02",
+        "left": "Benjamin",
+        "right": "Youngest",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "id": "mp-03",
+        "left": "Judah",
+        "right": "Brave",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "id": "mp-04",
+        "left": "Jacob",
+        "right": "Father",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "id": "mp-05",
+        "left": "Silver",
+        "right": "Cup",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-06",
+        "left": "God",
+        "right": "Good Plan",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-01",
+          "sn-08"
+        ],
+        "teacherReviewRequired": true
+      }
+    ],
+    "finishVerse": {
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 208,
+        "details": "Original ESV excerpt retained in source lesson; proposed BSB text is the complete Genesis 50:20 verse, pending teacher review and rights clearance."
+      },
+      "teacherReviewRequired": true,
+      "reference": "Genesis 50:20",
+      "markedVerse": "what [you] intended against me for [evil], God intended for [good], in order to accomplish a [day] like this—to [preserve] the [lives] of many [people].",
+      "sourceVerse": "what you intended against me for evil, God intended for good, in order to accomplish a day like this—to preserve the lives of many people.",
+      "origin": "adapted"
+    },
+    "unscrambleVerse": {
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 208,
+        "details": "Original ESV excerpt retained in source lesson; proposed BSB text is the complete Genesis 50:20 verse, pending teacher review and rights clearance."
+      },
+      "teacherReviewRequired": true,
+      "reference": "Genesis 50:20",
+      "markedVerse": "what [you] intended against me for [evil], God intended for [good], in order to accomplish a [day] like this—to [preserve] the [lives] of many [people].",
+      "sourceVerse": "what you intended against me for evil, God intended for good, in order to accomplish a day like this—to preserve the lives of many people.",
+      "origin": "adapted"
+    },
+    "circleMistakes": {
+      "paragraph": "Jacob sent his youngest son Simeon with the others to buy more food in Egypt. Joseph invited the brothers to sleep at his house. Benjamin got twenty times as much food as the others. Joseph hid his silver cup in Judah’s sack. When the cup was found, Judah offered to become a soldier in Benjamin’s place. Joseph told his brothers that God had sent him to get revenge on his brothers.",
+      "mistakeCount": 6,
+      "mistakes": [
+        {
+          "incorrect": "Simeon",
+          "correction": "Benjamin"
+        },
+        {
+          "incorrect": "sleep",
+          "correction": "eat"
+        },
+        {
+          "incorrect": "twenty",
+          "correction": "five"
+        },
+        {
+          "incorrect": "Judah’s sack",
+          "correction": "Benjamin’s sack"
+        },
+        {
+          "incorrect": "soldier",
+          "correction": "slave"
+        },
+        {
+          "incorrect": "get revenge on his brothers",
+          "correction": "save many lives"
+        }
+      ],
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-03",
+        "sn-04",
+        "sn-06",
+        "sn-08"
+      ],
+      "teacherReviewRequired": true
+    },
+    "mediumWordSearch": {
+      "words": [
+        "JOSEPH",
+        "JUDAH",
+        "silver cup",
+        "GRAIN",
+        "EGYPT",
+        "benjamin"
+      ],
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-03",
+        "sn-04",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "trueFalseMaze": {
+      "statement": "Joseph told his brothers to leave their father Jacob behind.",
+      "isTrue": false,
+      "teacherReviewRequired": true,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-08"
+      ],
+      "factId": "tf-13"
+    },
+    "bigIdeaCryptogram": {
+      "phrase": "God can take our bad and use it for good.",
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "sourceIds": []
+    },
+    "upsideDownVerse": {
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 208,
+        "details": "Original ESV excerpt retained in source lesson; proposed BSB text is the complete Genesis 50:20 verse, pending teacher review and rights clearance."
+      },
+      "teacherReviewRequired": true,
+      "reference": "Genesis 50:20",
+      "verse": "what you intended against me for evil, God intended for good, in order to accomplish a day like this—to preserve the lives of many people.",
+      "origin": "adapted"
+    },
+    "connectBigIdea": {
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "Important Idea",
+        "page": 5,
+        "sourceParagraphIndex": 151,
+        "details": "Original display-font wording shows lowercase “god”; capitalization corrected for the worksheet while original text remains in ODT."
+      },
+      "phrase": "It’s part of God’s plan to take our bad and use it for good.",
+      "origin": "adapted"
+    },
+    "pixelPicture": {
+      "phrase": "Joseph hid his silver cup in Benjamin’s bag.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ]
+    },
+    "finishStory": {
+      "markedParagraph": "Jacob sent [Benjamin] with his brothers to [Egypt] because the family needed more food. Joseph’s manager said their [money] had been received. At the meal, Benjamin got [FIVE] times as much [food]. Joseph hid a silver [cup] in his sack. When the cup was found, [Judah] offered to become a [slave] instead. Joseph then told his [brothers], “I am [Joseph]!” He said [God] had sent him to Egypt to [save] many lives.",
+      "teacherReviewRequired": true,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07",
+        "sn-08"
+      ]
+    },
+    "storyOrder": [
+      {
+        "order": 1,
+        "text": "Jacob sent Benjamin with his brothers to Egypt for more food.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "order": 2,
+        "text": "The frightened brothers heard that their payment had been received.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "order": 3,
+        "text": "At the meal, Benjamin received five times as much food.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "order": 4,
+        "text": "Joseph hid his silver cup in Benjamin’s grain sack.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "order": 5,
+        "text": "The manager found the cup in Benjamin’s sack.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "order": 6,
+        "text": "Judah offered to become a slave instead of Benjamin.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "order": 7,
+        "text": "Joseph told his brothers, “I am Joseph!”",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "order": 8,
+        "text": "Joseph said God sent him to save lives and invited the family to Egypt.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-08"
+        ]
+      }
+    ],
+    "sortStory": [
+      {
+        "statement": "Jacob sent Benjamin with his brothers to buy more food in Egypt.",
+        "isTrue": true,
+        "teacherReviewRequired": false,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "factId": "tf-01"
+      },
+      {
+        "statement": "Joseph’s brothers recognized him as soon as they came back to Egypt.",
+        "isTrue": false,
+        "teacherReviewRequired": true,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-01",
+          "sn-07"
+        ],
+        "factId": "tf-02"
+      },
+      {
+        "statement": "Joseph’s manager told the brothers their grain money had been received.",
+        "isTrue": true,
+        "teacherReviewRequired": false,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "factId": "tf-03"
+      },
+      {
+        "statement": "At the meal, the brothers were seated in order of their height.",
+        "isTrue": false,
+        "teacherReviewRequired": true,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "factId": "tf-05"
+      },
+      {
+        "statement": "Benjamin received five times as much food as his brothers.",
+        "isTrue": true,
+        "teacherReviewRequired": false,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "factId": "tf-06"
+      },
+      {
+        "statement": "Joseph put his silver ring in Benjamin's sack.",
+        "isTrue": false,
+        "teacherReviewRequired": true,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-04"
+        ],
+        "factId": "tf-07"
+      },
+      {
+        "statement": "The manager found Joseph’s silver cup in Benjamin’s sack.",
+        "isTrue": true,
+        "teacherReviewRequired": false,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ],
+        "factId": "tf-08"
+      },
+      {
+        "statement": "The brothers laughed with joy when the silver cup was discovered.",
+        "isTrue": false,
+        "teacherReviewRequired": true,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-05"
+        ],
+        "factId": "tf-09"
+      }
+    ],
+    "drawStory": [
+      {
+        "prompt": "Jacob sent Benjamin with his brothers to Egypt for more food.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "prompt": "At the meal, Benjamin received five times as much food.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "prompt": "Joseph hid his silver cup in Benjamin’s grain sack.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "prompt": "The manager found the cup in Benjamin’s sack.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "prompt": "Judah offered to become a slave instead of Benjamin.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "prompt": "Joseph told his brothers, “I am Joseph!”",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      }
+    ],
+    "wordSearch": {
+      "words": [
+        "JOSEPH",
+        "JACOB",
+        "JUDAH",
+        "BENJAMIN",
+        "SIMEON",
+        "EGYPT",
+        "GRAIN",
+        "MONEY",
+        "SILVER",
+        "CUP",
+        "BROTHERS",
+        "FAMILY"
+      ],
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07",
+        "sn-08"
+      ]
+    },
+    "verseCryptogram": {
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 208,
+        "details": "Original ESV excerpt retained in source lesson; proposed BSB text is the complete Genesis 50:20 verse, pending teacher review and rights clearance."
+      },
+      "teacherReviewRequired": true,
+      "reference": "Genesis 50:20",
+      "verse": "what you intended against me for evil, God intended for good, in order to accomplish a day like this—to preserve the lives of many people.",
+      "origin": "adapted"
+    },
+    "crossword": [
+      {
+        "answer": "JOSEPH",
+        "clue": "The brother who became a ruler in Egypt.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "answer": "BENJAMIN",
+        "clue": "The youngest brother",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "JUDAH",
+        "clue": "He offered to become a slave for Benjamin.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "answer": "EGYPT",
+        "clue": "The land where the brothers went to buy food.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "answer": "silver cup",
+        "clue": "Joseph hid this item in a sack.",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-04"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "FIVE",
+        "clue": "Benjamin got this many times more food.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "answer": "GRAIN",
+        "clue": "The food the brothers went to buy.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "answer": "MONEY",
+        "clue": "Joseph put this back in the brothers’ sacks.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "answer": "JACOB",
+        "clue": "The brothers’ father.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "answer": "REVENGE",
+        "clue": "Joseph did NOT try to get this",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-08"
+        ],
+        "teacherReviewRequired": true
+      }
+    ],
+    "spiralVerse": {
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 208,
+        "details": "Original ESV excerpt retained in source lesson; proposed BSB text is the complete Genesis 50:20 verse, pending teacher review and rights clearance."
+      },
+      "teacherReviewRequired": true,
+      "reference": "Genesis 50:20",
+      "verse": "what you intended against me for evil, God intended for good, in order to accomplish a day like this—to preserve the lives of many people.",
+      "origin": "adapted"
+    },
+    "connectVerse": {
+      "source": {
+        "filename": "OT 25 Lesson (Joseph Forgives his Brothers).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 208,
+        "details": "Original ESV excerpt retained in source lesson; proposed BSB text is the complete Genesis 50:20 verse, pending teacher review and rights clearance."
+      },
+      "teacherReviewRequired": true,
+      "reference": "Genesis 50:20",
+      "verse": "what you intended against me for evil, God intended for good, in order to accomplish a day like this—to preserve the lives of many people.",
+      "origin": "adapted"
+    }
+  },
+  "moduleReadiness": [
+    {
+      "moduleName": "Draw a Picture",
+      "moduleId": "draw-picture",
+      "size": "Small",
+      "preparedActivityKey": "drawPicture",
+      "status": "READY",
+      "contentValidation": "Draft content prepared and locally checked; actual live generator and numbered presets not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY indicates prepared source data, not successful application generation. Teacher approval and official tests remain pending."
+    },
+    {
+      "moduleName": "Multiple Choice",
+      "moduleId": "multiple-choice",
+      "size": "Small",
+      "preparedActivityKey": "multipleChoice",
+      "status": "READY",
+      "contentValidation": "Draft content prepared and locally checked; actual live generator and numbered presets not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY indicates prepared source data, not successful application generation. Teacher approval and official tests remain pending."
+    },
+    {
+      "moduleName": "True / False",
+      "moduleId": "true-false",
+      "size": "Small",
+      "preparedActivityKey": "trueFalse",
+      "status": "READY",
+      "contentValidation": "Draft content prepared and locally checked; actual live generator and numbered presets not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY indicates prepared source data, not successful application generation. Teacher approval and official tests remain pending."
+    },
+    {
+      "moduleName": "First Letters",
+      "moduleId": "first-letters",
+      "size": "Small",
+      "preparedActivityKey": "firstLetters",
+      "status": "READY",
+      "contentValidation": "Draft content prepared and locally checked; actual live generator and numbered presets not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY indicates prepared source data, not successful application generation. Teacher approval and official tests remain pending."
+    },
+    {
+      "moduleName": "Odd Words",
+      "moduleId": "odd-words",
+      "size": "Small",
+      "preparedActivityKey": "oddWords",
+      "status": "READY",
+      "contentValidation": "Draft content prepared and locally checked; actual live generator and numbered presets not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY indicates prepared source data, not successful application generation. Teacher approval and official tests remain pending."
+    },
+    {
+      "moduleName": "Unscramble Words",
+      "moduleId": "unscramble-words",
+      "size": "Small",
+      "preparedActivityKey": "unscrambleWords",
+      "status": "READY",
+      "contentValidation": "Draft content prepared and locally checked; actual live generator and numbered presets not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY indicates prepared source data, not successful application generation. Teacher approval and official tests remain pending."
+    },
+    {
+      "moduleName": "Checkboxes",
+      "moduleId": "checkboxes",
+      "size": "Small",
+      "preparedActivityKey": "checkboxes",
+      "status": "READY",
+      "contentValidation": "Draft content prepared and locally checked; actual live generator and numbered presets not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY indicates prepared source data, not successful application generation. Teacher approval and official tests remain pending."
+    },
+    {
+      "moduleName": "Who Am I?",
+      "moduleId": "who-am-i",
+      "size": "Small",
+      "preparedActivityKey": "whoAmI",
+      "status": "READY",
+      "contentValidation": "Draft content prepared and locally checked; actual live generator and numbered presets not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY indicates prepared source data, not successful application generation. Teacher approval and official tests remain pending."
+    },
+    {
+      "moduleName": "Match the Words",
+      "moduleId": "match-words",
+      "size": "Medium",
+      "preparedActivityKey": "matchWords",
+      "status": "READY",
+      "contentValidation": "Draft content prepared and locally checked; actual live generator and numbered presets not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY indicates prepared source data, not successful application generation. Teacher approval and official tests remain pending."
+    },
+    {
+      "moduleName": "Finish the Verse",
+      "moduleId": "finish-verse",
+      "size": "Medium",
+      "preparedActivityKey": "finishVerse",
+      "status": "READY",
+      "contentValidation": "Draft content prepared and locally checked; actual live generator and numbered presets not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY indicates prepared source data, not successful application generation. Teacher approval and official tests remain pending."
+    },
+    {
+      "moduleName": "Unscramble the Verse",
+      "moduleId": "unscramble-verse",
+      "size": "Medium",
+      "preparedActivityKey": "unscrambleVerse",
+      "status": "READY",
+      "contentValidation": "Draft content prepared and locally checked; actual live generator and numbered presets not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY indicates prepared source data, not successful application generation. Teacher approval and official tests remain pending."
+    },
+    {
+      "moduleName": "Circle the Mistakes",
+      "moduleId": "circle-mistakes",
+      "size": "Medium",
+      "preparedActivityKey": "circleMistakes",
+      "status": "READY",
+      "contentValidation": "Draft content prepared and locally checked; actual live generator and numbered presets not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY indicates prepared source data, not successful application generation. Teacher approval and official tests remain pending."
+    },
+    {
+      "moduleName": "Medium Word Search",
+      "moduleId": "medium-word-search",
+      "size": "Medium",
+      "preparedActivityKey": "mediumWordSearch",
+      "status": "READY",
+      "contentValidation": "Draft content prepared and locally checked; actual live generator and numbered presets not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY indicates prepared source data, not successful application generation. Teacher approval and official tests remain pending."
+    },
+    {
+      "moduleName": "True / False Maze",
+      "moduleId": "true-false-maze",
+      "size": "Medium",
+      "preparedActivityKey": "trueFalseMaze",
+      "status": "READY",
+      "contentValidation": "Draft content prepared and locally checked; actual live generator and numbered presets not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY indicates prepared source data, not successful application generation. Teacher approval and official tests remain pending."
+    },
+    {
+      "moduleName": "Big Idea Cryptogram",
+      "moduleId": "big-idea-cryptogram",
+      "size": "Medium",
+      "preparedActivityKey": "bigIdeaCryptogram",
+      "status": "READY",
+      "contentValidation": "Draft content prepared and locally checked; actual live generator and numbered presets not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY indicates prepared source data, not successful application generation. Teacher approval and official tests remain pending."
+    },
+    {
+      "moduleName": "Upside-Down Verse",
+      "moduleId": "upside-down-verse",
+      "size": "Medium",
+      "preparedActivityKey": "upsideDownVerse",
+      "status": "READY",
+      "contentValidation": "Draft content prepared and locally checked; actual live generator and numbered presets not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY indicates prepared source data, not successful application generation. Teacher approval and official tests remain pending."
+    },
+    {
+      "moduleName": "Connect the Big Idea",
+      "moduleId": "connect-big-idea",
+      "size": "Medium",
+      "preparedActivityKey": "connectBigIdea",
+      "status": "READY",
+      "contentValidation": "Draft content prepared and locally checked; actual live generator and numbered presets not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY indicates prepared source data, not successful application generation. Teacher approval and official tests remain pending."
+    },
+    {
+      "moduleName": "Pixel Picture",
+      "moduleId": "pixel-picture",
+      "size": "Medium",
+      "preparedActivityKey": "pixelPicture",
+      "status": "READY",
+      "contentValidation": "Draft content prepared and locally checked; actual live generator and numbered presets not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY indicates prepared source data, not successful application generation. Teacher approval and official tests remain pending."
+    },
+    {
+      "moduleName": "Finish the Story",
+      "moduleId": "finish-story",
+      "size": "Large",
+      "preparedActivityKey": "finishStory",
+      "status": "READY",
+      "contentValidation": "Draft content prepared and locally checked; actual live generator and numbered presets not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY indicates prepared source data, not successful application generation. Teacher approval and official tests remain pending."
+    },
+    {
+      "moduleName": "Story Order",
+      "moduleId": "story-order",
+      "size": "Large",
+      "preparedActivityKey": "storyOrder",
+      "status": "READY",
+      "contentValidation": "Draft content prepared and locally checked; actual live generator and numbered presets not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY indicates prepared source data, not successful application generation. Teacher approval and official tests remain pending."
+    },
+    {
+      "moduleName": "Sort the Story",
+      "moduleId": "sort-story",
+      "size": "Large",
+      "preparedActivityKey": "sortStory",
+      "status": "READY",
+      "contentValidation": "Draft content prepared and locally checked; actual live generator and numbered presets not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY indicates prepared source data, not successful application generation. Teacher approval and official tests remain pending."
+    },
+    {
+      "moduleName": "Draw the Story",
+      "moduleId": "draw-story",
+      "size": "Large",
+      "preparedActivityKey": "drawStory",
+      "status": "READY",
+      "contentValidation": "Draft content prepared and locally checked; actual live generator and numbered presets not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY indicates prepared source data, not successful application generation. Teacher approval and official tests remain pending."
+    },
+    {
+      "moduleName": "Word Search",
+      "moduleId": "word-search",
+      "size": "Large",
+      "preparedActivityKey": "wordSearch",
+      "status": "READY",
+      "contentValidation": "Draft content prepared and locally checked; actual live generator and numbered presets not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY indicates prepared source data, not successful application generation. Teacher approval and official tests remain pending."
+    },
+    {
+      "moduleName": "Verse Cryptogram",
+      "moduleId": "verse-cryptogram",
+      "size": "Large",
+      "preparedActivityKey": "verseCryptogram",
+      "status": "READY",
+      "contentValidation": "Draft content prepared and locally checked; actual live generator and numbered presets not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY indicates prepared source data, not successful application generation. Teacher approval and official tests remain pending."
+    },
+    {
+      "moduleName": "Crossword",
+      "moduleId": "crossword",
+      "size": "Large",
+      "preparedActivityKey": "crossword",
+      "status": "READY",
+      "contentValidation": "Draft content prepared and locally checked; actual live generator and numbered presets not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY indicates prepared source data, not successful application generation. Teacher approval and official tests remain pending."
+    },
+    {
+      "moduleName": "Spiral Verse",
+      "moduleId": "spiral-verse",
+      "size": "Large",
+      "preparedActivityKey": "spiralVerse",
+      "status": "READY",
+      "contentValidation": "Draft content prepared and locally checked; actual live generator and numbered presets not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY indicates prepared source data, not successful application generation. Teacher approval and official tests remain pending."
+    },
+    {
+      "moduleName": "Connect the Verse",
+      "moduleId": "connect-verse",
+      "size": "Large",
+      "preparedActivityKey": "connectVerse",
+      "status": "READY",
+      "contentValidation": "Draft content prepared and locally checked; actual live generator and numbered presets not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY indicates prepared source data, not successful application generation. Teacher approval and official tests remain pending."
+    }
+  ],
+  "reviewFlags": [
+    {
+      "id": "rf-01",
+      "priority": "high",
+      "type": "scripture-approval",
+      "text": "The original ODT quotes Genesis 50:20a in ESV. This draft proposes the full BSB Genesis 50:20. Confirm the exact verse length and wording, and complete separate Scripture-distribution approval.",
+      "affectedModules": [
+        "first-letters",
+        "finish-verse",
+        "unscramble-verse",
+        "upside-down-verse",
+        "verse-cryptogram",
+        "spiral-verse",
+        "connect-verse"
+      ]
+    },
+    {
+      "id": "rf-02",
+      "priority": "medium",
+      "type": "original-verse",
+      "text": "Retain the ESV excerpt as original source; do not mistake the BSB full verse for source text. The original excerpt ends with ellipsis after “kept alive.”",
+      "affectedModules": [
+        "first-letters",
+        "finish-verse",
+        "unscramble-verse",
+        "upside-down-verse",
+        "verse-cryptogram",
+        "spiral-verse",
+        "connect-verse"
+      ]
+    },
+    {
+      "id": "rf-03",
+      "priority": "medium",
+      "type": "multiple-choice-distractors",
+      "text": "Review all 12 suggested incorrect Multiple Choice options for believability and child-friendly wording.",
+      "affectedModules": [
+        "multiple-choice"
+      ]
+    },
+    {
+      "id": "rf-04",
+      "priority": "medium",
+      "type": "true-false",
+      "text": "Review six suggested false facts and their three-activity allocation; Preset 3 uses 10 different facts.",
+      "affectedModules": [
+        "sort-story",
+        "true-false",
+        "true-false-maze"
+      ]
+    },
+    {
+      "id": "rf-05",
+      "priority": "medium",
+      "type": "circle-mistakes",
+      "text": "Review the six deliberate mistakes and matching corrections. Confirm the paragraph reads naturally and errors are easy to spot after the story.",
+      "affectedModules": [
+        "circle-mistakes"
+      ]
+    },
+    {
+      "id": "rf-06",
+      "priority": "medium",
+      "type": "odd-checkbox",
+      "text": "Approve distinct Odd Words and Checkboxes lists. Their suggested wrong words are not claims from the source.",
+      "affectedModules": [
+        "odd-words",
+        "checkboxes"
+      ]
+    },
+    {
+      "id": "rf-07",
+      "priority": "medium",
+      "type": "crossword",
+      "text": "Crossword uses short sentence-style clues. Check child-friendly clarity and whether ten entries fit an actual generated grid.",
+      "affectedModules": [
+        "crossword"
+      ]
+    },
+    {
+      "id": "rf-08",
+      "priority": "medium",
+      "type": "wording",
+      "text": "Source story mentions the brothers’ threat to kill a supposed thief, slavery, bullying and Joseph’s fears of revenge; review the age-appropriate adaptation while preserving original questions.",
+      "affectedModules": [
+        "finish-story",
+        "multiple-choice",
+        "sort-story",
+        "draw-story"
+      ]
+    },
+    {
+      "id": "rf-09",
+      "priority": "medium",
+      "type": "source-chronology",
+      "text": "This lesson continues the previous Joseph episode; carefully distinguish the earlier money-in-bags event from the later cup-in-Benjamin’s-sack test.",
+      "affectedModules": [
+        "story-order",
+        "finish-story",
+        "sort-story"
+      ]
+    },
+    {
+      "id": "rf-10",
+      "priority": "low",
+      "type": "story-notes",
+      "text": "This longer lesson uses picture-only Story Notes; no fill-in words were provided in the source, so emphasizedWords arrays are intentionally empty.",
+      "affectedModules": [
+        "story-order",
+        "draw-story"
+      ]
+    },
+    {
+      "id": "rf-11",
+      "priority": "high",
+      "type": "app-validation",
+      "text": "Official repository schema validator, Review Studio preflight, individual generators and all three numbered presets have not been run. Do not publish until these checks and teacher signoff pass.",
+      "affectedModules": [
+        "draw-picture",
+        "multiple-choice",
+        "true-false",
+        "first-letters",
+        "odd-words",
+        "unscramble-words",
+        "checkboxes",
+        "who-am-i",
+        "match-words",
+        "finish-verse",
+        "unscramble-verse",
+        "circle-mistakes",
+        "medium-word-search",
+        "true-false-maze",
+        "big-idea-cryptogram",
+        "upside-down-verse",
+        "connect-big-idea",
+        "pixel-picture",
+        "finish-story",
+        "story-order",
+        "sort-story",
+        "draw-story",
+        "word-search",
+        "verse-cryptogram",
+        "crossword",
+        "spiral-verse",
+        "connect-verse"
+      ]
+    }
+  ],
+  "publication": {
+    "status": "approved",
+    "approved": true,
+    "notes": "Unapproved conversion draft. Official schema validator, importer, generator and preset tests have not been run; Scripture text and rights require teacher review.",
+    "teacherSignoff": {
+      "reviewer": "Andrew Doane",
+      "date": "2026-11-04",
+      "notes": "Approved with verified BSB verse through Curriculum Review Studio"
+    },
+    "scriptureRights": {
+      "status": "cleared",
+      "basis": "Berean Standard Bible (BSB), dedicated to the public domain on April 30, 2023. Official terms: https://berean.bible/terms.htm. Scripture text confirmed against https://bereanbible.com/bsb.txt.",
+      "reviewedBy": "Andrew Doane",
+      "reviewedOn": "2026-11-04"
+    },
+    "resolvedReviewFlagIds": []
+  },
+  "validation": {
+    "basis": "Original conversion tests predate teacher-approved BSB; revalidate actual engines and content after export.",
+    "allTextChecksPassed": false,
+    "checks": [
+      {
+        "check": "Exactly eight original Story Notes",
+        "passed": true
+      },
+      {
+        "check": "Verbatim original Story Note text preserved from the ODT",
+        "passed": true
+      },
+      {
+        "check": "Picture-only Story Notes keep empty emphasis arrays",
+        "passed": true
+      },
+      {
+        "check": "Every extracted question matches its cited ODT paragraph",
+        "passed": true
+      },
+      {
+        "check": "No source question was silently reclassified as a prepared MC",
+        "passed": true
+      },
+      {
+        "check": "All eight source Story Notes have page and paragraph citations",
+        "passed": true
+      },
+      {
+        "check": "All 27 activity keys present",
+        "passed": true
+      },
+      {
+        "check": "All 27 unique module IDs and references",
+        "passed": true
+      },
+      {
+        "check": "No generator tested claims",
+        "passed": true
+      },
+      {
+        "check": "Four distinct short small drawing prompts",
+        "passed": true
+      },
+      {
+        "check": "Six distinct prepared Multiple Choice questions",
+        "passed": true
+      },
+      {
+        "check": "MC choices: exactly one correct, two distinct suggested wrong",
+        "passed": true
+      },
+      {
+        "check": "Every prepared MC references original source questions",
+        "passed": true
+      },
+      {
+        "check": "14 balanced true false facts",
+        "passed": true
+      },
+      {
+        "check": "False facts all marked suggestions requiring review",
+        "passed": true
+      },
+      {
+        "check": "Eight Sort the Story facts selected, with four true and four false",
+        "passed": true
+      },
+      {
+        "check": "Three Preset 3 fact selections are disjoint",
+        "passed": true
+      },
+      {
+        "check": "Four alternative facts remain",
+        "passed": true
+      },
+      {
+        "check": "Selected facts match master facts pool",
+        "passed": true
+      },
+      {
+        "check": "Matching sides consist of one word",
+        "passed": true
+      },
+      {
+        "check": "All matching sides are individually unique",
+        "passed": true
+      },
+      {
+        "check": "Odd Words and Checkboxes lists do not overlap",
+        "passed": true
+      },
+      {
+        "check": "Four related/unrelated terms per word activity",
+        "passed": true
+      },
+      {
+        "check": "Six deliberate Circle the Mistakes errors",
+        "passed": true
+      },
+      {
+        "check": "All deliberate wrong spans appear exactly once",
+        "passed": true
+      },
+      {
+        "check": "Six Large Draw the Story captions match Story Order",
+        "passed": true
+      },
+      {
+        "check": "Story Order is eight chronological events",
+        "passed": true
+      },
+      {
+        "check": "Scripture display contains only Genesis",
+        "passed": true
+      },
+      {
+        "check": "Proposed memory verse is the verified BSB Genesis 50:20",
+        "passed": true
+      },
+      {
+        "check": "Memory verse translation is distinguished from ESV source",
+        "passed": true
+      },
+      {
+        "check": "All referenced source IDs exist",
+        "passed": true
+      },
+      {
+        "check": "Crossword includes sentence-style child-friendly clues",
+        "passed": true
+      },
+      {
+        "check": "Publication remains pending and unapproved",
+        "passed": true
+      },
+      {
+        "check": "Only known top-level v1 keys used",
+        "passed": true
+      }
+    ],
+    "actualGeneratorTested": false,
+    "jsonParseTested": true
+  }
+}
