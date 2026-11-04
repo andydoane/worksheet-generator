@@ -8,6 +8,10 @@ export default function WhoAmIReviewEditor({lesson,onChange,onError}:{
  const item=lesson.preparedActivities?.whoAmI??{};
  const choices=whoAmIChoices(lesson),problems=whoAmIProblems(lesson);
  const source=choices.find(choice=>choice.text===item.clue&&choice.description===item.answer);
+ const needsSourceRestore=!!source&&(
+  item.origin!==(source.origin??'adapted')||
+  JSON.stringify(item.sourceIds??[])!==JSON.stringify(source.sourceIds)||
+  (item.teacherReviewRequired===true)!==source.teacherReviewRequired);
  const apply=(fn:()=>Lesson)=>{try{onChange(fn());onError('');}
   catch(e){onError(e instanceof Error?e.message:String(e));}};
  return <div id="review-field-who-am-i" tabIndex={-1} className="review-fields">
@@ -27,6 +31,10 @@ export default function WhoAmIReviewEditor({lesson,onChange,onError}:{
     </option>)}
    </select>
   </label>
+  {needsSourceRestore&&<button type="button" className="review-secondary"
+   onClick={()=>source&&apply(()=>chooseWhoAmI(lesson,source.id))}>
+   Restore this character's exact lesson provenance
+  </button>}
   <div className="review-pair">
    <label>Correct answer
     <input value={item.answer??''} aria-label="Who Am I answer"
