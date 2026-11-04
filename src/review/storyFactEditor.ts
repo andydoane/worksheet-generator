@@ -77,6 +77,17 @@ export function editStoryEvent(lesson:Lesson,index:number,text:string):Lesson{
  }
  return updated;
 }
+/** Fix imported nonsequential numbering without changing event text,
+ * source IDs or the author's existing visual row order.
+ */
+export function normalizeStoryEventNumbers(lesson:Lesson):Lesson{
+ const {next,events}=storyRecord(lesson);
+ for(const [index,event] of events.entries()){
+  if(event.order!==index+1)event.teacherReviewRequired=true;
+ }
+ renumber(events);
+ return next;
+}
 export function moveStoryEvent(lesson:Lesson,index:number,direction:-1|1):Lesson{
  const {next,events}=storyRecord(lesson),target=index+direction;
  if(index<0||index>=events.length||target<0||target>=events.length)
