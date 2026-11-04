@@ -3,7 +3,7 @@ import {convertLessonActivities,type LessonActivityData} from '../lessonActivity
 import {validateModule} from '../modules.ts';
 
 export type Lesson=Record<string,any>;
-export type ReviewTask={id:string;group:string;label:string;detail:string};
+export type ReviewTask={id:string;group:string;label:string;detail:string;optional?:boolean};
 const clone=<T,>(x:T):T=>structuredClone(x);
 const trim=(x:unknown)=>typeof x==='string'?x.trim():'';
 
@@ -15,7 +15,7 @@ export function listReviewTasks(lesson:Lesson):ReviewTask[]{
   detail:'Review the question, correct answer and suggested incorrect choices.',
  });
  for(const fact of lesson.facts??[]){
-  if(fact.origin==='suggested'||fact.teacherReviewRequired)tasks.push({
+  if(fact.origin==='suggested'||fact.teacherReviewRequired||!trim(fact.statement))tasks.push({
    id:'fact:'+fact.id,group:'False facts and sorting',label:fact.id,
    detail:'Ensure the deliberately false statement is clear, not misleading.',
   });
@@ -32,9 +32,9 @@ export function listReviewTasks(lesson:Lesson):ReviewTask[]{
   detail:'Select a concise, source-backed phrase for the Medium cryptogram without changing the lesson’s original Important Idea.'});
  if(p.circleMistakes)tasks.push({id:'circle-mistakes',group:'Story narrative',
   label:'Circle the Mistakes',detail:'Review the deliberately incorrect paragraph and corrections.'});
- if(p.oddWords?.unrelatedOrigin==='suggested')tasks.push({id:'odd-words',group:'Suggested vocabulary',
+ if(p.oddWords)tasks.push({id:'odd-words',group:'Suggested vocabulary',
   label:'Odd Words',detail:'Review unrelated distractor vocabulary.'});
- if(p.checkboxes?.incorrectOrigin==='suggested')tasks.push({id:'checkboxes',group:'Suggested vocabulary',
+ if(p.checkboxes)tasks.push({id:'checkboxes',group:'Suggested vocabulary',
   label:'Checkboxes',detail:'Review incorrect word choices.'});
  // A permanent task makes preflight repairs stay open while the teacher types.
  // Diagnostic-only tasks disappear when edits clear the old preflight report.
@@ -68,6 +68,22 @@ export function listReviewTasks(lesson:Lesson):ReviewTask[]{
   group:'Editorial decisions',label:'Important Idea wording',detail:'Confirm the original displayed Important Idea.'});
  tasks.push({id:'bsb-verse',group:'Scripture',label:'Approved BSB memory verse',
   detail:'Select the exact public-domain wording, passage boundaries and puzzle blanks.'});
+ // Optional support tasks always exist so a preflight repair remains open
+ // through incremental edits. They are not extra teacher approval hurdles.
+ tasks.push(
+  {id:'lesson-details',group:'Lesson integrity',label:'Lesson title & references',
+   detail:'Repair the title, Scripture display and passage list.',optional:true},
+  {id:'lesson-sources',group:'Lesson integrity',label:'Source records & citations',
+   detail:'Check original Story Notes, source links, questions and filenames.',optional:true},
+  {id:'lesson-readiness',group:'Lesson integrity',label:'27-activity readiness',
+   detail:'Repair missing or inconsistent activity readiness metadata.',optional:true},
+  {id:'lesson-publication',group:'Lesson integrity',label:'Publication & BSB rights',
+   detail:'Review teacher signoff and per-lesson Scripture rights requirements.',optional:true},
+  {id:'recipe-review',group:'Lesson integrity',label:'Preset conflict guide',
+   detail:'See why a booklet slot cannot be filled and which activity to repair.',optional:true},
+  {id:'review-general',group:'Lesson integrity',label:'Other validation help',
+   detail:'View the precise remaining diagnostic and choose a relevant repair section.',optional:true},
+ );
  return tasks;
 }
 
