@@ -154,6 +154,10 @@ test('Em dashes receive exactly one missing space on either side without rewriti
  assert.equal(formatVerseDashes('LORD— who'),'LORD — who');
  assert.equal(formatVerseDashes('LORD —who'),'LORD — who');
  assert.equal(formatVerseDashes('[LORD]—[who]'),'[LORD] — [who]');
+ assert.equal(formatVerseDashes('[LORD—who]'),'[LORD—who]',
+  'Do not change teacher-marked answer spelling or length');
+ assert.equal(formatVerseDashes('[LORD]—walk'),'[LORD] — walk');
+ assert.equal(formatVerseDashes('fear—[LORD]'),'fear — [LORD]');
  assert.equal(formatVerseDashes('LORD\n—who'),'LORD\n— who');
  assert.equal(formatVerseDashes('no em dash here'),'no em dash here');
  assert.equal(formatVerseDashes(formatVerseDashes(text)),formatted);
