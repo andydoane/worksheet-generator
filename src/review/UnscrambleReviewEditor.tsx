@@ -38,6 +38,12 @@ export default function UnscrambleReviewEditor({lesson,onChange,onError}:{
        {option.term}</option>)}
      </select>
     </label>
+    {choices.some(x=>x.term===String(answers[index]??'').trim().toUpperCase())&&
+     <button type="button" className="review-secondary"
+      onClick={()=>apply(()=>chooseUnscramble(
+       lesson,index,String(answers[index]??'').trim().toUpperCase()))}>
+      Use exact vocabulary term and refresh its source notes
+     </button>}
    </div>)}
   </div>
   <p className="review-source">Saved origin: {item.origin??'not recorded'}
