@@ -111,3 +111,21 @@ a{color:#267d68}
 .review-match-advanced textarea{display:block;width:100%;margin:6px 0 10px;border:1px solid #cbded0;border-radius:8px;padding:11px}
 #review-field-match-words:focus{outline:2px solid #4b956e;outline-offset:5px}
 @media(max-width:520px){.review-match-heading{display:block}.review-match-actions{gap:6px}}
+
+/* Source-aware phrase/Word Search visual repair panels; the SVG previews
+ * reuse the exact measured print plans and scale down without clipping. */
+.review-activity-preview{width:100%;min-width:0;padding:14px;border:1px solid #d6e6da;border-radius:10px;background:#fbfdfa}
+.review-activity-preview h3{margin:0 0 8px}
+.review-activity-preview .module-preview{width:100%;max-width:100%;height:auto}
+.review-activity-preview .medium-print-svg{display:block;max-width:100%;width:100%;height:auto;max-height:480px}
+.review-search-rows{display:grid;gap:10px}
+.review-search-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);align-items:end;gap:10px;padding:12px;border:1px solid #d6e6da;border-radius:9px}
+.review-search-row label{display:block;min-width:0;font-size:12px;font-weight:800;color:#355749}
+.review-search-row input,.review-search-row select{display:block;width:100%;min-width:0;margin-top:5px;padding:9px;border:1px solid #cbded0;border-radius:7px;background:white;color:#23483a;font-size:12px}
+.review-search-row label small{display:block;font-weight:400}
+.review-search-row input[aria-invalid="true"]{border-color:#bd714f;outline-color:#bd714f}
+.review-search-actions{display:flex;gap:7px;flex-wrap:wrap;grid-column:1 / -1}
+.review-search-actions button{padding:6px 10px;font-size:11px}
+.review-search-row>.review-warning{grid-column:1/-1;margin:0}
+#review-field-connect-phrase:focus,#review-field-word-search:focus,#review-field-medium-word-search:focus{outline:2px solid #4b956e;outline-offset:5px}
+@media(max-width:580px){.review-search-row{grid-template-columns:1fr}.review-search-actions{grid-column:1}}
