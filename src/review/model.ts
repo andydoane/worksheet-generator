@@ -177,10 +177,19 @@ export function applyBsbVerse(
  });
  const p=next.preparedActivities;
  for(const key of ['firstLetters','upsideDownVerse','verseCryptogram','spiralVerse','connectVerse']){
-  if(p[key])Object.assign(p[key],{reference,verse:text,origin:'adapted'});
+  const missing=!p[key];
+  p[key]??={};
+  Object.assign(p[key],{reference,verse:text,origin:'adapted',
+   ...(missing?{teacherReviewRequired:true}:{}),
+  });
  }
- if(p.finishVerse)Object.assign(p.finishVerse,{reference,markedVerse:f,sourceVerse:text,origin:'adapted'});
- if(p.unscrambleVerse)Object.assign(p.unscrambleVerse,{reference,markedVerse:u,sourceVerse:text,origin:'adapted'});
+ for(const [key,marked] of [['finishVerse',f],['unscrambleVerse',u]] as const){
+  const missing=!p[key];
+  p[key]??={};
+  Object.assign(p[key],{reference,markedVerse:marked,sourceVerse:text,
+   origin:'adapted',...(missing?{teacherReviewRequired:true}:{}),
+  });
+ }
  if(next.validation){
   next.validation.actualGeneratorTested=false;
   next.validation.allTextChecksPassed=false;
