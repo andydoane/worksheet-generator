@@ -100,6 +100,7 @@ a{color:#267d68}
 .review-match-actions button{font-size:11px;padding:6px 9px}
 .review-match-row input[aria-invalid="true"]{border-color:#bd714f;outline-color:#bd714f}
 .review-match-row label small{display:block;font-weight:400;margin-top:3px}
+.review-match-errors{margin:0;padding:8px 10px 8px 28px;border:1px solid #e4c2a4;border-radius:7px;background:#fff5e8;color:#805030;font-size:12px}
 .review-match-preview{max-width:620px;padding:14px;border:1px solid #d8e5dc;border-radius:10px}
 .review-match-preview h3{margin:0}
 .review-match-preview>.medium-print-layout{width:100%;height:auto}
