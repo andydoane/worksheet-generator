@@ -1,8 +1,10 @@
 import {useEffect,useMemo,useState} from 'react';
 import type {ChangeEvent} from 'react';
 import {parseBsbText,getBsbPassage,wordSpans,clipToWords,markSelectedWords,suggestBlankWords,type BsbIndex,type Passage} from './bsb.ts';
-import {applyBsbVerse,checkReviewContent,createApprovedLesson,editAt,listReviewTasks,normalizeLegacySmallDrawingScenes,originalMemoryVerseTranslation,useMatchingStoryOrderCaptions,updatedRightsManifest,type Lesson} from './model.ts';
-import {validateModule} from '../modules.ts';
+import {applyBsbVerse,chooseSolveCodePhrase,createApprovedLesson,editAt,listReviewTasks,normalizeLegacySmallDrawingScenes,originalMemoryVerseTranslation,solveCodeChoices,useMatchingStoryOrderCaptions,updatedRightsManifest,type Lesson,type ReviewTask} from './model.ts';
+import {validateModule,MODULES} from '../modules.ts';
+import {cryptogramLetters} from '../cryptograms.ts';
+import {buildReviewPreflight,PREPARED_ACTIVITY_KEYS,reviewIssueTarget,type ReviewPreflight} from './preflight.ts';
 import './review.css';
 
 const SAVE_KEY='worksheet-studio:review-workbench:v1';
@@ -59,14 +61,45 @@ export default function ReviewApp(){
  const [finish,setFinish]=useState<number[]>([]);
  const [unscramble,setUnscramble]=useState<number[]>([]);
  const [displayReference,setDisplayReference]=useState('');
- const [preflight,setPreflight]=useState<string[]|null>(null);
+ const [preflight,setPreflight]=useState<ReviewPreflight|null>(null);
+ const [focusIssueField,setFocusIssueField]=useState<string|null>(null);
+ const [moduleEditorText,setModuleEditorText]=useState('');
  const [reviewer,setReviewer]=useState('');
  const [signDate,setSignDate]=useState(displayDate);
  const [rightsConfirmed,setRightsConfirmed]=useState(false);
  const [manifest,setManifest]=useState<unknown>(null);
  const [confirmEmptyManifest,setConfirmEmptyManifest]=useState(false);
  const tasks=useMemo(()=>lesson?listReviewTasks(lesson):[],[lesson]);
- const active=tasks.find(t=>t.id===selectedId)??tasks.find(t=>!reviewed.includes(t.id))??tasks[0];
+ const diagnosticTasks=useMemo<ReviewTask[]>(()=>{
+  if(!preflight)return [];
+  const existing=new Set(tasks.map(t=>t.id)),extra=new Set<string>();
+  return preflight.issues.flatMap(issue=>{
+   if(existing.has(issue.taskId)||extra.has(issue.taskId))return [];
+   extra.add(issue.taskId);
+   return [{
+    id:issue.taskId,group:'Preflight repairs',
+    label:issue.label==='Review content'?'Other lesson issue':issue.label,
+    detail:'Fix this activity’s prepared lesson data, then run preflight again.',
+   }];
+  });
+ },[preflight,tasks]);
+ const active=[...tasks,...diagnosticTasks].find(t=>t.id===selectedId)??
+  tasks.find(t=>!reviewed.includes(t.id))??tasks[0]??diagnosticTasks[0];
+ const activeModuleId=active?.id.startsWith('module:')?active.id.slice('module:'.length):null;
+ const activePreparedKey=activeModuleId?PREPARED_ACTIVITY_KEYS[activeModuleId as keyof typeof PREPARED_ACTIVITY_KEYS]:undefined;
+ useEffect(()=>{
+  if(!lesson||!activePreparedKey)return;
+  setModuleEditorText(JSON.stringify(lesson.preparedActivities?.[activePreparedKey]??null,null,2));
+ },[activePreparedKey,lesson?.id]);
+ useEffect(()=>{
+  if(!focusIssueField)return;
+  const target=document.getElementById(focusIssueField);
+  if(target){
+   target.scrollIntoView({behavior:'smooth',block:'center'});
+   target.focus({preventScroll:true});
+  }
+  setFocusIssueField(null);
+ },[active?.id,focusIssueField]);
  const complete=tasks.filter(t=>reviewed.includes(t.id)).length;
  const remaining=tasks.length-complete;
  useEffect(()=>{
@@ -164,10 +197,60 @@ export default function ReviewApp(){
  function changeIdea(value:string){
   if(!lesson)return;
   const next=structuredClone(lesson);
+  const previous=next.lessonDetails.bigIdeas[0].text;
   next.lessonDetails.bigIdeas[0].text=value;
-  if(next.preparedActivities.bigIdeaCryptogram)next.preparedActivities.bigIdeaCryptogram.phrase=value;
-  if(next.preparedActivities.connectBigIdea)next.preparedActivities.connectBigIdea.phrase=value;
+  // Preserve independently chosen, reviewed alternative phrases. Only a
+  // puzzle still using the old canonical text follows the wording edit.
+  if(next.preparedActivities.bigIdeaCryptogram?.phrase===previous)
+   next.preparedActivities.bigIdeaCryptogram.phrase=value;
+  if(next.preparedActivities.connectBigIdea?.phrase===previous)
+   next.preparedActivities.connectBigIdea.phrase=value;
   setLesson(next);setPreflight(null);setReviewed(prev=>prev.filter(x=>x!==active?.id));
+ }
+ function selectCodePhrase(text:string){
+  if(!lesson||!text)return;
+  try{
+   setLesson(chooseSolveCodePhrase(lesson,text));
+   setPreflight(null);setReviewed(prev=>prev.filter(id=>id!=='solve-code'));
+   setError('');
+  }catch(e){setError(String((e as Error).message??e));}
+ }
+ function addProposedCodePhrase(){
+  if(!lesson)return;
+  const phrase=String(lesson.preparedActivities?.bigIdeaCryptogram?.phrase??'').trim();
+  const errors=validateModule({type:'big-idea-cryptogram',idea:phrase,seed:1});
+  if(errors.length){setError(errors.join(' '));return;}
+  if(solveCodeChoices(lesson).some(item=>item.text===phrase)){
+   selectCodePhrase(phrase);return;
+  }
+  const next=structuredClone(lesson);
+  const existing=new Set((next.keyPhrases??[]).map((item:any)=>item.id));
+  let i=1;
+  while(existing.has('kp-review-'+i))i++;
+  const id='kp-review-'+i;
+  // This is a NEW teacher-suggested alternative, never misattributed to the
+  // author's source text or silently marked approved.
+  next.keyPhrases??=[];
+  next.keyPhrases.push({id,text:phrase,origin:'suggested',
+   teacherReviewRequired:true});
+  const item=next.preparedActivities.bigIdeaCryptogram;
+  item.phrase=phrase;item.origin='suggested';item.teacherReviewRequired=true;
+  item.sourceIds=[];delete item.source;
+  setLesson(next);setPreflight(null);
+  setReviewed(prev=>prev.filter(value=>value!=='solve-code'));
+  setError('New phrase added as a suggested review candidate. Confirm its meaning and mark Solve the Code reviewed.');
+ }
+ function applyModuleJson(){
+  if(!lesson||!activePreparedKey)return;
+  try{
+   const nextValue=JSON.parse(moduleEditorText);
+   if(!nextValue||typeof nextValue!=='object')
+    throw Error('Enter an object or array for this prepared activity.');
+   const next=structuredClone(lesson);
+   next.preparedActivities[activePreparedKey]=nextValue;
+   setLesson(next);setPreflight(null);setError('');
+   setReviewed(prev=>prev.filter(id=>id!==active?.id));
+  }catch(e){setError('Could not apply activity data: '+String((e as Error).message??e));}
  }
  function findPassage(){
   if(!index){setError('Load the official BSB text file first.');return;}
@@ -207,7 +290,8 @@ export default function ReviewApp(){
  const verseText=passage?clipToWords(passage.text,start,end):'';
  const verseWords=wordSpans(verseText);
  const versePreview=lesson?.lessonDetails?.memoryVerse;
- const canPublish=lesson&&remaining===0&&preflight!==null&&preflight.length===0&&
+ const canPublish=lesson&&remaining===0&&preflight!==null&&preflight.issues.length===0&&
+  preflight.convertedCount===preflight.totalCount&&
   reviewer.trim()&&signDate&&rightsConfirmed&&(manifest!==null||confirmEmptyManifest);
  function downloadApproved(){
   if(!canPublish||!lesson)return;
@@ -257,6 +341,16 @@ export default function ReviewApp(){
         <span>{reviewed.includes(t.id)?'✓':'○'}</span><span><small>{t.group}</small>{t.label}</span>
        </button>)}
      </nav>
+     {diagnosticTasks.length>0&&<div className="review-diagnostic-links">
+      <h3>Additional activity repairs</h3>
+      <nav className="review-nav" aria-label="Preflight repair sections">
+       {diagnosticTasks.map(t=><button type="button" key={t.id}
+        className={t.id===active?.id?'selected':''}
+        onClick={()=>setSelectedId(t.id)}>
+        <span>!</span><span>{t.label}</span>
+       </button>)}
+      </nav>
+     </div>}
     </section>}
    </aside>
    <div className="review-content">
@@ -273,7 +367,7 @@ export default function ReviewApp(){
       {mcIndex>=0&&(()=>{
        const mc=lesson.preparedActivities.multipleChoice[mcIndex];
        return <div className="review-fields">
-        <label>Question<textarea value={mc.question} onChange={e=>change(['preparedActivities','multipleChoice',mcIndex,'question'],e.target.value)}/></label>
+        <label>Question<textarea id={'review-mc-'+mc.id} value={mc.question} onChange={e=>change(['preparedActivities','multipleChoice',mcIndex,'question'],e.target.value)}/></label>
         {mc.choices.map((c:any,i:number)=><label key={i}>
          {c.isCorrect?'Correct answer (from source)':'Suggested incorrect answer '+i}
          <input value={c.text} onChange={e=>change(['preparedActivities','multipleChoice',mcIndex,'choices',i,'text'],e.target.value)}/></label>)}
@@ -284,17 +378,18 @@ export default function ReviewApp(){
        const f=lesson.facts[factIndex];
        return <div className="review-fields">
         <p className="review-warning">Intentionally FALSE. Edits are synchronized to Sort the Story and linked True/False activities.</p>
-        <label>False statement<textarea value={f.statement} onChange={e=>change(['facts',factIndex,'statement'],e.target.value)}/></label>
+        <label>{f.isTrue?'Statement':'False statement'}<textarea id={'review-fact-'+f.id} value={f.statement} onChange={e=>change(['facts',factIndex,'statement'],e.target.value)}/></label>
         <SourceContext lesson={lesson} ids={f.sourceIds??[]}/>
        </div>;
       })()}
       {active.id==='finish-story'&&<div className="review-fields">
-       <label>Adapted story paragraph<textarea rows={9} value={lesson.preparedActivities.finishStory.markedParagraph}
+       <label>Adapted story paragraph<textarea id="review-field-finish-story" rows={9} value={lesson.preparedActivities.finishStory.markedParagraph}
         onChange={e=>change(['preparedActivities','finishStory','markedParagraph'],e.target.value)}/></label>
-       <p className="review-source">The square-bracketed original emphasis words must be preserved and remain in chronological order.</p>
+       <p className="review-source">Keep the original Story Note emphasis words in order. You may add more [missing words], up to 12 total (minimum 6).</p>
+       <p className="review-source">Currently {[...lesson.preparedActivities.finishStory.markedParagraph.matchAll(/\[([^\[\]]+)\]/gu)].length} missing words.</p>
        <SourceContext lesson={lesson} ids={lesson.preparedActivities.finishStory.sourceIds??[]}/>
       </div>}
-      {active.id==='drawing-captions'&&<div className="review-fields">
+      {active.id==='drawing-captions'&&<div id="review-field-drawing" tabIndex={-1} className="review-fields">
        <div className="review-note">
         <h3>Small Draw a Picture</h3>
         <p>Store short scene descriptions that work after “Draw a picture of …” — without an instruction prefix or final punctuation.</p>
@@ -304,13 +399,13 @@ export default function ReviewApp(){
        </div>
        {(lesson.drawingPrompts??[]).map((item:any,i:number)=><div key={'scene-'+i}>
         <label>Small scene {i+1} · {item.id??'scene'}
-         <textarea rows={2} value={item.prompt}
+         <textarea id={'review-field-drawing-'+i} rows={2} value={item.prompt}
           onChange={e=>change(['drawingPrompts',i,'prompt'],e.target.value)}/></label>
         <SourceContext lesson={lesson} ids={item.sourceIds??[]}/>
        </div>)}
        {lesson.preparedActivities.drawPicture&&
         <label>Default Small Draw a Picture prompt
-         <textarea rows={2} value={lesson.preparedActivities.drawPicture.prompt}
+         <textarea id="review-field-small-drawing" rows={2} value={lesson.preparedActivities.drawPicture.prompt}
           onChange={e=>change(['preparedActivities','drawPicture','prompt'],e.target.value)}/></label>}
        <div className="review-note">
         <h3>Large Draw the Story</h3>
@@ -321,13 +416,13 @@ export default function ReviewApp(){
        </div>
        {(lesson.preparedActivities.drawStory??[]).map((item:any,i:number)=><div key={'caption-'+i}>
         <label>Large drawing caption {i+1}
-         <textarea rows={2} value={item.prompt}
+         <textarea id={'review-field-large-drawing-'+i} rows={2} value={item.prompt}
           onChange={e=>change(['preparedActivities','drawStory',i,'prompt'],e.target.value)}/></label>
         <SourceContext lesson={lesson} ids={item.sourceIds??[]}/>
        </div>)}
       </div>}
       {active.id==='circle-mistakes'&&<div className="review-fields">
-       <label>Deliberately incorrect paragraph<textarea rows={7} value={lesson.preparedActivities.circleMistakes.paragraph}
+       <label>Deliberately incorrect paragraph<textarea id="review-field-circle-mistakes" rows={7} value={lesson.preparedActivities.circleMistakes.paragraph}
         onChange={e=>change(['preparedActivities','circleMistakes','paragraph'],e.target.value)}/></label>
        {lesson.preparedActivities.circleMistakes.mistakes.map((m:any,i:number)=>
         <div className="review-pair" key={i}>
@@ -337,12 +432,12 @@ export default function ReviewApp(){
        <p className="review-source">Every incorrect phrase must actually appear in the paragraph.</p>
       </div>}
       {active.id==='odd-words'&&<div className="review-fields">
-       <label>Suggested unrelated words — one per line<textarea rows={7} value={wordBankDrafts.oddWords}
+       <label>Suggested unrelated words — one per line<textarea id="review-field-odd-words" rows={7} value={wordBankDrafts.oddWords}
         onChange={e=>changeWordList('oddWords','unrelated',e.target.value)}/></label>
        <p>Original related words: {lesson.preparedActivities.oddWords.related.join(', ')}</p>
       </div>}
       {active.id==='checkboxes'&&<div className="review-fields">
-       <label>Suggested incorrect choices — one per line<textarea rows={7} value={wordBankDrafts.checkboxes}
+       <label>Suggested incorrect choices — one per line<textarea id="review-field-checkboxes" rows={7} value={wordBankDrafts.checkboxes}
         onChange={e=>changeWordList('checkboxes','incorrect',e.target.value)}/></label>
        <p>Correct choices: {lesson.preparedActivities.checkboxes.correct.join(', ')}</p>
       </div>}
@@ -350,9 +445,45 @@ export default function ReviewApp(){
        <h3>Age suitability</h3>
        <p>The curriculum discusses the destruction of the Egyptian army. Please decide whether the prepared story, sorting and drawing prompts use age-appropriate wording for your classes. You can adjust the relevant content in the working JSON before marking this reviewed.</p>
       </div>}
+      {active.id==='solve-code'&&<div className="review-fields">
+       <div className="review-note">
+        <h3>Solve the Code · Medium cryptogram</h3>
+        <p>The original Important Idea is kept exactly as authored. This puzzle can use a shorter reviewed key phrase or Story Order sentence instead.</p>
+        <p><strong>Original Important Idea:</strong> {lesson.lessonDetails.bigIdeas?.[0]?.text??'Not recorded'}</p>
+       </div>
+       {lesson.preparedActivities.bigIdeaCryptogram?<>
+        <label>Text used only for Solve the Code
+         <textarea id="review-field-solve-code" rows={3}
+          value={lesson.preparedActivities.bigIdeaCryptogram.phrase}
+          onChange={e=>change(['preparedActivities','bigIdeaCryptogram','phrase'],e.target.value)}/></label>
+        <p className={cryptogramLetters(lesson.preparedActivities.bigIdeaCryptogram.phrase).length>18?'review-warning':'review-source'}>
+         {lesson.preparedActivities.bigIdeaCryptogram.phrase.length}/62 characters ·
+         {cryptogramLetters(lesson.preparedActivities.bigIdeaCryptogram.phrase).length}/18 distinct letters.
+         A valid phrase needs no more than 18 different letters.
+        </p>
+        <label>Use an existing source-backed lesson phrase
+         <select value={solveCodeChoices(lesson).some(item=>item.text===lesson.preparedActivities.bigIdeaCryptogram.phrase)
+          ?lesson.preparedActivities.bigIdeaCryptogram.phrase:''}
+          onChange={e=>selectCodePhrase(e.target.value)}>
+          <option value="">Choose another approved phrase…</option>
+          {solveCodeChoices(lesson).map((item,i)=>{
+           const tooLong=validateModule({type:'big-idea-cryptogram',idea:item.text,seed:1}).length>0;
+           return <option key={i} value={item.text} disabled={tooLong}>
+            {item.text}{tooLong?' (too long for this puzzle)':''}
+           </option>;
+          })}
+         </select></label>
+        <div className="review-note">
+         <p>If you write a new shorter phrase above, it is <strong>not</strong> automatically attributed to the original curriculum. After checking the meaning, explicitly add it as a suggested review candidate.</p>
+         <button type="button" className="review-secondary" onClick={addProposedCodePhrase}>
+          Add this phrase as a teacher-review candidate
+         </button>
+        </div>
+       </>:<p className="review-warning">The lesson does not yet have a prepared Solve the Code entry. Add the missing `preparedActivities.bigIdeaCryptogram` record in the activity-data editor.</p>}
+      </div>}
       {active.id==='important-idea'&&<div className="review-fields">
-       <label>Important Idea (synchronized across Big Idea puzzles)
-        <input value={lesson.lessonDetails.bigIdeas?.[0]?.text??''} onChange={e=>changeIdea(e.target.value)}/></label>
+       <label>Original Important Idea (retained as curriculum teaching text)
+        <input id="review-field-important-idea" value={lesson.lessonDetails.bigIdeas?.[0]?.text??''} onChange={e=>changeIdea(e.target.value)}/></label>
        <p className="review-source">The source page-5 graphic uses “The Lord God is a mighty savior.” The later prose has different capitalization and punctuation.</p>
       </div>}
       {active.id==='bsb-verse'&&<div className="review-fields">
@@ -368,7 +499,7 @@ export default function ReviewApp(){
        </>}
        <div className="review-pair">
         <label>Look up passage (e.g. Exodus 15:11-12)
-         <input value={reference} onChange={e=>setReference(e.target.value)}/></label>
+         <input id="review-field-bsb" value={reference} onChange={e=>setReference(e.target.value)}/></label>
         <button type="button" onClick={findPassage} disabled={!index}>Look up BSB</button>
        </div>
        {passage&&<>
@@ -411,6 +542,21 @@ export default function ReviewApp(){
        </div>
        <p className="review-source">After applying the BSB excerpt, review it here and then mark this section reviewed. No ESV wording will be retained in the exported prepared verse fields.</p>
       </div>}
+      {activeModuleId&&activePreparedKey&&<div className="review-fields">
+       <div className="review-note">
+        <h3>{MODULES.find(item=>item.id===activeModuleId)?.name??activeModuleId} · prepared activity</h3>
+        <p>This activity does not yet have a dedicated visual editor. You can edit its isolated prepared-activity JSON below without changing the rest of the lesson. The schema and puzzle generator will check the result when you rerun preflight.</p>
+        <p>Curriculum field: <code>preparedActivities.{activePreparedKey}</code></p>
+       </div>
+       <label>Prepared activity content
+        <textarea id="review-module-json" rows={12} spellCheck={false}
+         value={moduleEditorText} onChange={e=>setModuleEditorText(e.target.value)}/></label>
+       <button type="button" onClick={applyModuleJson}>Apply this activity's changes</button>
+      </div>}
+      {active.id==='review-general'&&<div id="review-general-details" tabIndex={-1} className="review-note">
+       <h3>Additional lesson validation</h3>
+       <p>This issue was not tied to one module. Check the lesson details and source records; download a working JSON copy for any structural changes, then rerun preflight.</p>
+      </div>}
       <div className="review-actions">
        <button type="button" className="review-approve" onClick={approveActive}>{reviewed.includes(active.id)?'Reviewed — next':'Mark reviewed & continue'}</button>
        <button type="button" className="review-secondary" onClick={()=>setReviewed(x=>x.filter(id=>id!==active.id))}>Needs more work</button>
@@ -420,12 +566,28 @@ export default function ReviewApp(){
       <h2>3. Validate & export</h2>
       <p>{remaining===0?'All review items marked. Run the actual converter preflight before approval.':remaining+' review decisions remain. You can export a working JSON at any time.'}</p>
       <div className="review-actions">
-       <button type="button" onClick={()=>{try{setPreflight(checkReviewContent(lesson));setError('');}catch(e){setPreflight([String((e as Error).message??e)]);}}}>Run preflight checks</button>
+       <button type="button" onClick={()=>{
+         try{setPreflight(buildReviewPreflight(lesson));setError('');}
+         catch(e){setPreflight({convertedCount:0,totalCount:27,
+          issues:[reviewIssueTarget(String((e as Error).message??e))]});}
+        }}>Run preflight checks</button>
        <button type="button" className="review-secondary" onClick={()=>downloadJson(lesson.id+'.review.json',lesson)}>Export working JSON</button>
       </div>
-      {preflight&&<div className={preflight.length?'review-errors':'review-success'} role="status">
-       {preflight.length?<>Preflight found {preflight.length} issue(s):<ul>{preflight.map((s,i)=><li key={i}>{s}</li>)}</ul></>:
-        'Preflight passed: all 27 candidates can be converted. GitHub CI still must independently verify the approved file.'}
+      {preflight&&<div className={preflight.issues.length||preflight.convertedCount!==preflight.totalCount?'review-errors':'review-success'} role="status">
+       <p><strong>{preflight.convertedCount}/{preflight.totalCount} activity types converted.</strong>
+        {preflight.issues.length?' Select an issue below to edit the relevant activity.':
+         preflight.convertedCount!==preflight.totalCount?' Conversion coverage is incomplete; inspect the prepared activity data.':
+         ' Preflight passed. GitHub CI still independently validates the approved file.'}</p>
+       {preflight.issues.length>0&&<ul className="review-issue-list">
+        {preflight.issues.map((issue,i)=><li key={issue.id+'-'+i}>
+         <button type="button" className="review-issue-link"
+          onClick={()=>{setSelectedId(issue.taskId);setFocusIssueField(issue.fieldId);setError('');}}>
+          <strong>{issue.label}</strong>
+          <span>{issue.message}</span>
+          <small>Edit this issue →</small>
+         </button>
+        </li>)}
+       </ul>}
       </div>}
       <div className="review-signoff">
        <h3>Final publication signoff</h3>

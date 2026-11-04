@@ -27,7 +27,7 @@ the URL. Only repository collaborators have permission to commit changes.
    the exact excerpt, including a second verse if desired. Select the words
    that should be blanks in the two verse-completion puzzles. Click **Apply**
    and then **Mark reviewed**.
-6. **Run preflight checks**. It checks all 27 module candidates and module
+6. **Run preflight checks**. Individual issues are clickable: choose one to jump directly to the relevant editor field. The conversion count is shown once as a summary. Finish the Story may have 6–12 blanks, retaining the original emphasis words in order while allowing extra words. For Solve the Code, choose a short reviewed key phrase separately from the original Important Idea; its key supports at most 18 unique letters. It checks all 27 module candidates and module
    validators. It does not replace the official schema, real puzzle-engine,
    and recipe validation in GitHub CI.
 7. Download a **review session** to carry edits AND checked-off items across

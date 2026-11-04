@@ -1,5 +1,15 @@
 # Worksheet Studio
 
+## PR 17n — Curriculum Review Studio: actionable preflight + flexible lesson blanks (v0.16.28)
+
+- **Finish the Story** may use **6–12 bracketed missing words**. The original Story Note emphasis words must still appear in chronological order, but the teacher can add other lesson-appropriate blanks between them. Standard module validation retains the 12-word, answer-length and paragraph-size limits. No approved curriculum is silently rewritten.
+- **Per-issue clickable preflight:** every validation error is shown as its own actionable card with the affected activity and Edit action. Clicking navigates to and focuses the appropriate review field. The `N/27 activity types converted` value is a **summary**, not a duplicate warning. For module errors without a dedicated form, a focused editor allows changes only to that module's `preparedActivities` JSON, not the entire lesson. Manual edits invalidate the prior preflight and must be rechecked.
+- **Independent Solve the Code:** the canonical lesson Important Idea stays unchanged. The teacher can choose a shorter, existing source-linked `keyPhrases[]` entry or Story Order event with ≤18 distinct letters for the Medium cryptogram. Editing it does **not** overwrite Connect the Phrase or the original Important Idea. New custom phrases are added **only by explicit action** as suggested, flagged teacher-review candidates; unknown text fails preflight until reviewed and linked.
+- Converter supports source-backed alternate medium phrases (for both Solve the Code and Connect the Phrase), while maintaining source provenance and the existing 18-letter cryptogram limit; no crypto engine or PDF changes.
+- Regression tests use a **small OT32-derived scenario without checking in the unpublished OT32 review JSON**, covering eight blanks with seven original emphasis words, a 20-distinct-letter Important Idea, selecting an 18-letter reviewed key phrase, fixing the 26/27 summary, and all 27 activity repair routes.
+
+**Smoke test:** Import your OT32 review export into <https://andydoane.github.io/worksheet-generator/review.html> after merging. Run preflight: Finish the Story's eight blanks should now pass. Click the Solve the Code warning to jump directly to its phrase field; select "Remember God’s help before you complain." from the existing key phrases. Rerun preflight and verify 27/27 converted and no duplicated summary warning. Export a **new working JSON** with the changes (the app does not modify your original uploaded file). Inspect the exported Important Idea and Connect the Phrase to ensure they retain the source wording. For other module errors, click their cards and fix the isolated activity payload.
+
 ## PR 17m — Full Draw the Story captions and one-click Change Story (v0.16.27)
 
 - Corrected all six published Red Sea **Large Draw the Story** captions by matching each `sourceIds` entry to the corresponding already-approved `preparedActivities.storyOrder` sentence. The seven reusable Small scene phrases and one prepared Small default remain unchanged. All fields, provenance, signoff and BSB Scripture remain intact.

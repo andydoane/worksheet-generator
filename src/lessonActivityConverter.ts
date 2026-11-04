@@ -67,6 +67,8 @@ export type LessonActivityData={
  facts:LessonFact[];
  storyNotes?:{id:string;order:number;cleanText:string}[];
  vocabulary?:{entries?:{term:string;sourceIds?:string[];scope?:string}[]};
+ /** Reviewed alternatives for medium phrase games; source Important Idea is never rewritten. */
+ keyPhrases?:{id:string;text:string;origin?:string;sourceIds?:string[];teacherReviewRequired?:boolean}[];
  lessonDetails?:{
   memoryVerse?:{reference:string;text:string;source?:LessonSourceLocation};
   bigIdeas?:{text:string;source?:LessonSourceLocation}[];
@@ -422,11 +424,16 @@ export function convertLessonActivities(
   return true;
  }
  function consistentIdea(id:VerseSpecialtyLessonModuleId,entry:LessonPhrase){
-  if(importantIdea&&entry.phrase!==importantIdea.text){
-   issue(id,id,'Prepared phrase differs from the source-authored Important Idea.');
-   return false;
-  }
-  return true;
+  if(!importantIdea||entry.phrase===importantIdea.text)return true;
+  // The authored Important Idea remains canonical. A medium puzzle may use
+  // another reviewed key phrase or a source-linked chronological event.
+  const alternatives=[
+   ...(lesson.keyPhrases??[]).map(item=>item.text),
+   ...(prepared.storyOrder??[]).map(item=>item.text),
+  ];
+  if(alternatives.includes(entry.phrase))return true;
+  issue(id,id,'Prepared phrase must match the original Important Idea, a reviewed key phrase, or an approved Story Order event.');
+  return false;
  }
  function addPrepared(id:VerseSpecialtyLessonModuleId,module:ActivityModule,
   entry:Located,fallback:LessonSourceLocation|undefined){
