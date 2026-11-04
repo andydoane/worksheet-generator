@@ -45,7 +45,7 @@ export function VerseReconstructionPreview({module}:{
           fontFamily="Zilla Slab" fontSize={plan.invertedFontSize} fontWeight="700"
           fill="#222" transform={'translate(0 '+(2*(m.y+plan.glyphOffset))+') scale(1 -1)'}>{m.text}</text>
        :<text x={m.x+plan.cell/2} y={m.y+plan.glyphOffset} textAnchor="middle"
-          fontFamily="Zilla Slab" fontSize="8.2" fontWeight="700"
+          fontFamily="Zilla Slab" fontSize={plan.scrambleFontSize} fontWeight="700"
           fill="#222">{m.scramble}</text>}
       </g>)}
   </svg>}

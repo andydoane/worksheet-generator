@@ -9,7 +9,8 @@ export type ReconstructionMark={
 };
 export type ReconstructionPlan={
  title:string;titleSize:number;titleY:number;reference?:string;referenceY?:number;
- marks:ReconstructionMark[];cell:number;fontSize:number;invertedFontSize:number;lineStep:number;glyphOffset:number;rowCount:number;
+ marks:ReconstructionMark[];cell:number;fontSize:number;invertedFontSize:number;scrambleFontSize:number;
+ lineStep:number;glyphOffset:number;rowCount:number;
  rowWidths:number[];
 };
 type Metrics={title:MeasureText;body:MeasureText;puzzle:MeasureText};
@@ -88,8 +89,12 @@ function planReconstruction(chunks:Chunk[],metrics:Metrics,mode:'unscramble'|'up
  const titleY=25;
  const referenceY=undefined; // reference is in the title for both reconstruction modules.
  const top=mode==='unscramble'?53:44;
- for(let cell=(mode==='unscramble'?10.2:12.1);cell>=8.1;cell-=.5){
-  const fontSize=mode==='unscramble'?Math.min(10.6,cell+1):Math.min(13,cell+1);
+ // Unscramble previously stopped at 10.2pt cells even when the medium
+ // activity had room for much larger letters. Try full-size cells first and
+ // decrease only when the measured verse will not fit in the print-safe area.
+ // Upside Down retains its separately tuned typography.
+ for(let cell=(mode==='unscramble'?17.2:12.1);cell>=8.1;cell-=.5){
+  const fontSize=mode==='unscramble'?Math.min(18.2,cell+1):Math.min(13,cell+1);
   const space=mode==='unscramble'?metrics.body(' ',fontSize):cell*.66;
   const measured=chunks.map(chunk=>{
    const items=chunk.segments.map(segment=>{
@@ -116,28 +121,46 @@ function planReconstruction(chunks:Chunk[],metrics:Metrics,mode:'unscramble'|'up
    if(!balanced)continue;
    rows.splice(0,rows.length,...balanced);
   }
-  // Keep the handwriting-line pitch independent from glyph placement.
-  const glyphOffset=mode==='unscramble'?11.5:6.8;
+  // Below-the-answer scrambled glyphs grow with the writing cells.
+  // The same metrics drive the browser SVG and the exported vector PDF.
+  const scrambleFontSize=mode==='unscramble'
+    ?Math.max(8.2,Math.min(11.8,cell*.72)):8.2;
+  const glyphOffset=mode==='unscramble'?Math.max(11.5,scrambleFontSize+3.5):6.8;
   const invertedFontSize=mode==='upside'
     ?Math.max(9.2,Math.min(11.5,fontSize-1.4)):8.2;
   // Only longer Upside passages reclaim a little of the *internal* bottom
   // reserve; the booklet's outer 0.1in inset is never changed.
   const bottom=height-(mode==='upside'&&rows.length>=4?3.5:7);
-  const requiredBelow=glyphOffset+invertedFontSize+2;
-  const availableStep=rows.length===1?29:
+  const requiredBelow=glyphOffset+
+    (mode==='unscramble'?scrambleFontSize:invertedFontSize)+2;
+  const minimumStep=mode==='unscramble'?Math.max(29,fontSize+glyphOffset+3):
+    Math.max(21.2,requiredBelow+2.8);
+  const preferredStep=mode==='unscramble'?
+    Math.min(43.5,Math.max(minimumStep,fontSize*2.1)):29;
+  const availableStep=rows.length===1?preferredStep:
     (bottom-top-requiredBelow)/(rows.length-1);
-  // Unscramble retains its comfortable 29pt minimum, but expands toward
-  // 1.5× line spacing when a short verse leaves extra writing space.
-  const step=mode==='unscramble'?Math.min(43.5,availableStep):Math.min(29,availableStep);
-  if(step<(mode==='upside'?Math.max(21.2,requiredBelow+2.8):29)-.001)continue;
+  const step=Math.min(preferredStep,availableStep);
+  if(step<minimumStep-.001)continue;
   if(top+(rows.length-1)*step+requiredBelow>bottom+.001)continue;
+  // Treat the title and ALL verse lines as one block. Center their visible
+  // composition vertically instead of pinning it to the top of the module.
+  // Reserve full glyph height for clipping safety, but estimate visible ink
+  // beneath scrambled-letter baselines for a visually balanced center.
+  const visibleTop=titleY-titleSize*.8;
+  const visibleBottom=top+(rows.length-1)*step+glyphOffset+scrambleFontSize*.28+2;
+  const desiredShift=(height-visibleTop-visibleBottom)/2;
+  const verticalShift=mode==='unscramble'
+    ?Math.max(4-visibleTop,Math.min(desiredShift,
+      height-4-(top+(rows.length-1)*step+requiredBelow))):0;
+  if(mode==='unscramble'&&(visibleTop+verticalShift<4-.001||
+     top+(rows.length-1)*step+requiredBelow+verticalShift>height-4+.001))continue;
   const rowWidths=rows.map(row=>row.reduce((sum,chunk)=>sum+chunk.width,0)+
    Math.max(0,row.length-1)*space);
   const marks:ReconstructionMark[]=[];
   for(let line=0;line<rows.length;line++){
    const widthUsed=rows[line].reduce((sum,c)=>sum+c.width,0)+(rows[line].length-1)*space;
    let x=(width-widthUsed)/2;
-   const y=top+line*step;
+   const y=top+line*step+verticalShift;
    for(const chunk of rows[line]){
     for(const {segment} of chunk.items){
      if(segment.kind==='ordinary'){
@@ -160,8 +183,8 @@ function planReconstruction(chunks:Chunk[],metrics:Metrics,mode:'unscramble'|'up
     x+=space;
    }
   }
-  return {title,titleSize,titleY,reference,referenceY,marks,cell,fontSize,lineStep:step,
-   glyphOffset,invertedFontSize,rowCount:rows.length,rowWidths};
+  return {title,titleSize,titleY:titleY+verticalShift,reference,referenceY,marks,cell,fontSize,lineStep:step,
+   glyphOffset,invertedFontSize,scrambleFontSize,rowCount:rows.length,rowWidths};
  }
  return null;
 }

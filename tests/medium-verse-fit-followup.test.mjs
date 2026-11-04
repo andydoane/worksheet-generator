@@ -75,7 +75,8 @@ test('Unscramble combines its reference into the title and brings scrambled lett
  assert.equal(p.title,'UNSCRAMBLE 1 THESSALONIANS 5:16');
  assert.equal(p.reference,undefined);
  assert.equal(p.referenceY,undefined);
- assert.equal(p.glyphOffset,11.5);
+ assert.ok(p.glyphOffset>=11.5);
+ assert.ok(p.scrambleFontSize>=8.2,'Scrambled letter sizes follow the fitted cells');
  assert.ok(p.lineStep>=29&&p.lineStep<=43.5);
 });
 test('Upside has smaller inverted lettering, closer letters and bounded adaptive pitch',async()=>{

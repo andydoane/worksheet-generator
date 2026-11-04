@@ -77,9 +77,13 @@ test('Unscramble expands line pitch for short passages but preserves minimum and
  assert.ok(p&&q);
  assert.ok(p.lineStep>=29&&p.lineStep<=43.5);
  assert.ok(q.lineStep>=29&&q.lineStep<=43.5);
- assert.equal(p.glyphOffset,11.5);
+ assert.ok(p.glyphOffset>=p.scrambleFontSize+3.5-.001,
+  'The lower scrambled letters need clearance beneath their answer lines');
+ assert.ok(q.glyphOffset>=q.scrambleFontSize+3.5-.001);
  assert.ok(p.rowCount<=q.rowCount||p.lineStep>=q.lineStep);
- assert.ok(p.marks.every(g=>g.y+p.glyphOffset+p.invertedFontSize<172.8));
+ for(const plan of [p,q])assert.ok(plan.marks.every(g=>
+  g.y+plan.glyphOffset+plan.scrambleFontSize+2<=172.8-4+.001),
+ 'Scaled scrambled letters must stay inside the printable module');
 });
 test('All three bracket-selected word editors provide a button; repeated words select individually',async()=>{
  const story=await readFile(new URL('../src/App.tsx',import.meta.url),'utf8');
