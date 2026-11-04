@@ -32,7 +32,7 @@ function MazeDrawing({maze,showSolution,plan,statement}:{
    <text x={MEDIUM_PRINT_WIDTH/2} y={plan.subtitleY} textAnchor="middle"
     fontFamily="Nunito" fontWeight="500" fontSize="8.7" fill="#222">Exit the maze at the correct answer.</text>
    <text x={MEDIUM_PRINT_WIDTH/2} y={plan.statementY} textAnchor="middle"
-    fontFamily="Nunito" fontWeight="500" fontSize={plan.statementSize} fill="#222">{statement}</text>
+    fontFamily="Nunito" fontWeight="700" fontSize={plan.statementSize} fill="#222">{statement}</text>
    {showSolution&&<polyline points={route} fill="none" stroke="#167856"
      strokeWidth={Math.max(1.5,cell*.38)} strokeLinecap="round" strokeLinejoin="round"/>}
    <g stroke="#222" strokeWidth=".68" fill="none">
@@ -57,8 +57,8 @@ function MazePrintPreview({module,showSolution}:{
  const [plan,setPlan]=useState<MazePrintPlan|null|false>(null);
  useEffect(()=>{
   let active=true;setPlan(null);
-  void mediumWidths().then(({finishBody})=>{
-   if(active)setPlan(planMazePrint(module.statement,finishBody)??false);
+  void mediumWidths().then(({boldPdf})=>{
+   if(active)setPlan(planMazePrint(module.statement,boldPdf)??false);
   }).catch(()=>{if(active)setPlan(false);});
   return ()=>{active=false;};
  },[module.statement]);

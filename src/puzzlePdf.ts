@@ -93,14 +93,14 @@ function drawMediumWordSearch(page:PDFPage,rect:Rect,fonts:ModuleFonts,
 
 function drawMaze(page:PDFPage,rect:Rect,fonts:ModuleFonts,module:Extract<PuzzleModule,{type:'true-false-maze'}>):void{
  const box=inside(rect);
- const plan=planMazePrint(module.statement,(text,size)=>textWidth(fonts.body,text,size),
+ const plan=planMazePrint(module.statement,(text,size)=>textWidth(fonts.bodyBold,text,size),
    box.width,box.height);
  if(!plan)throw Error('The maze statement does not fit on one line.');
  const maze=generateMaze(module),top=box.y+box.height;
  center(page,fonts.title,'TRUE OR FALSE TREK!',box.x,top-plan.titleY,box.width,MODULE_TITLE_PT);
  center(page,fonts.body,'Exit the maze at the correct answer.',
    box.x,top-plan.subtitleY,box.width,8.7);
- center(page,fonts.body,module.statement,box.x,top-plan.statementY,box.width,plan.statementSize);
+ center(page,fonts.bodyBold,module.statement,box.x,top-plan.statementY,box.width,plan.statementSize);
  const {cell,mazeLeft,mazeTop,mazeWidth}=plan;
  const startX=box.x+mazeLeft,mazeTopPdf=top-mazeTop;
  const line=(x1:number,y1:number,x2:number,y2:number)=>
