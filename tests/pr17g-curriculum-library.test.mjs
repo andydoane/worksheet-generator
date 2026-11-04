@@ -167,41 +167,63 @@ test('Live repository scan validates all three author-approved BSB Red Sea prese
  assert.match(rendered,/preset-1/u);
  assert.match(rendered,/preset-3/u);
 });
-test('A future approved data-only lesson is accepted only when schema, actual puzzles, all three presets, signoff and independent rights all pass',async()=>{
- const root=await mkdtemp(join(tmpdir(),'worksheet-library-pr17g-'));
+test('CI approves another one-file lesson only when full schema, puzzles, presets, signoff and embedded Scripture rights pass',async()=>{
+ const root=await mkdtemp(join(tmpdir(),'worksheet-library-pr17o-'));
  try{
   await mkdir(join(root,'curriculum','schema'),{recursive:true});
   await mkdir(join(root,'curriculum','review'),{recursive:true});
   await mkdir(join(root,'curriculum','approved'),{recursive:true});
   const schemaFile=join(root,'curriculum','schema','lesson-v1.schema.json');
-  const approvedFile=join(root,'curriculum','approved',lesson.id+'.lesson.json');
-  const manifestFile=join(root,'curriculum','approved','rights-manifest.json');
+  const first=signed(),second=signed();
+  second.id='ot-032-future-reviewed-lesson';
+  second.lessonDetails.title='A second approved lesson';
+  const approvedFile=join(root,'curriculum','approved',first.id+'.lesson.json');
+  const secondFile=join(root,'curriculum','approved',second.id+'.lesson.json');
   await writeFile(schemaFile,JSON.stringify(schema));
-  await writeFile(approvedFile,JSON.stringify(signed()));
-  await writeFile(manifestFile,JSON.stringify({schemaVersion:1,lessons:{[lesson.id]:exampleRights}}));
+  await writeFile(approvedFile,JSON.stringify(first));
   const ready=await inspectCurriculumLibrary({root,writeReports:true});
   assert.equal(ready.passed,true,JSON.stringify(ready.errors));
   assert.equal(ready.lessons.length,1);
   assert.equal(ready.lessons[0].eligibleForPublication,true);
   assert.equal(ready.lessons[0].moduleReadiness.length,27);
   assert.ok(ready.lessons[0].recipeReadiness.every(x=>x.ready));
-  const written=JSON.parse(await readFile(join(root,'artifacts','curriculum-readiness-report.json'),'utf8'));
-  assert.equal(written.lessons[0].eligibleForPublication,true);
-  const markdown=await readFile(join(root,'artifacts','curriculum-readiness-report.md'),'utf8');
-  assert.match(markdown,/Scripture rights evidence:\*\* cleared/u);
-  await writeFile(manifestFile,JSON.stringify({schemaVersion:1,lessons:{}}));
-  const withoutRights=await inspectCurriculumLibrary({root});
-  assert.equal(withoutRights.passed,false);
-  assert.ok(withoutRights.errors.some(x=>x.code==='rights-clearance'));
-  await writeFile(manifestFile,JSON.stringify({schemaVersion:1,lessons:{[lesson.id]:exampleRights}}));
-  const malformed=signed();
+  const report=JSON.parse(await readFile(join(root,'artifacts','curriculum-readiness-report.json'),'utf8'));
+  assert.equal(report.lessons[0].eligibleForPublication,true);
+  const md=await readFile(join(root,'artifacts','curriculum-readiness-report.md'),'utf8');
+  assert.match(md,/Scripture rights evidence:\*\* cleared/u);
+
+  await writeFile(secondFile,JSON.stringify(second));
+  const withTwo=await inspectCurriculumLibrary({root});
+  assert.equal(withTwo.passed,true,JSON.stringify(withTwo.errors));
+  assert.equal(withTwo.lessons.length,2,
+   'New self-contained approved file must be automatically discovered without any registry update');
+  const withoutRights=structuredClone(second);
+  delete withoutRights.publication.scriptureRights;
+  await writeFile(secondFile,JSON.stringify(withoutRights));
+  const denied=await inspectCurriculumLibrary({root});
+  assert.equal(denied.passed,false);
+  assert.ok(denied.errors.some(x=>x.code==='rights-clearance'));
+  assert.ok(denied.errors.some(x=>x.code==='not-publishable'));
+  const altered=structuredClone(second);
+  altered.lessonDetails.memoryVerse.bsbSource.sourceUrl='https://unknown.example/verse.txt';
+  await writeFile(secondFile,JSON.stringify(altered));
+  const unverified=await inspectCurriculumLibrary({root});
+  assert.equal(unverified.passed,false);
+  assert.ok(unverified.errors.some(x=>x.code==='schema'&&x.message.includes('official BSB source')));
+  const noApproval=structuredClone(second);
+  delete noApproval.publication.teacherSignoff;
+  await writeFile(secondFile,JSON.stringify(noApproval));
+  const unsigned=await inspectCurriculumLibrary({root});
+  assert.equal(unsigned.passed,false);
+  assert.ok(unsigned.errors.some(x=>x.code==='teacher-signoff'));
+  const malformed=structuredClone(second);
   malformed.preparedActivities.multipleChoice=[];
-  await writeFile(approvedFile,JSON.stringify(malformed));
+  await writeFile(secondFile,JSON.stringify(malformed));
   const noRecipe=await inspectCurriculumLibrary({root});
   assert.equal(noRecipe.passed,false);
   assert.ok(noRecipe.errors.some(x=>x.code==='recipe-not-ready'));
-  await writeFile(approvedFile,JSON.stringify(signed()));
-  await writeFile(join(root,'curriculum','review',lesson.id+'.json'),JSON.stringify(lesson));
+  await writeFile(secondFile,JSON.stringify(second));
+  await writeFile(join(root,'curriculum','review',first.id+'.json'),JSON.stringify(lesson));
   const duplicate=await inspectCurriculumLibrary({root});
   assert.equal(duplicate.passed,false);
   assert.ok(duplicate.errors.some(x=>x.code==='duplicate-id'));
@@ -210,16 +232,15 @@ test('A future approved data-only lesson is accepted only when schema, actual pu
 
 test('Public catalog discovers the actual signed-off BSB Red Sea lesson without a code registry entry',async()=>{
  const approved=await load('curriculum/approved/ot-031-god-parts-the-red-sea.lesson.json');
- const rights=await load('curriculum/approved/rights-manifest.json');
  assert.equal(approved.publication.status,'approved');
  assert.equal(approved.publication.approved,true);
  assert.equal(approved.publication.teacherSignoff.reviewer,'Andy Doane');
  assert.equal(approved.lessonDetails.memoryVerse.translation,'BSB');
  assert.equal(approved.lessonDetails.memoryVerse.reference,'Exodus 15:11');
- assert.equal(rights.lessons[approved.id].status,'cleared');
- assert.match(rights.lessons[approved.id].basis,/public domain/u);
+ assert.equal(approved.publication.scriptureRights.status,'cleared');
+ assert.match(approved.publication.scriptureRights.basis,/public domain/u);
  const files={['../curriculum/approved/'+approved.id+'.lesson.json']:approved};
- const catalog=assemblePublicLessonCatalog(files,rights);
+ const catalog=assemblePublicLessonCatalog(files);
  assert.equal(catalog.length,1);
  assert.equal(catalog[0].lesson.id,approved.id);
  for(const recipe of ['story-review','fun-and-games']){
