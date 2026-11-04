@@ -15,6 +15,9 @@ import WhoAmIReviewEditor from './WhoAmIReviewEditor.tsx';
 import UnscrambleReviewEditor from './UnscrambleReviewEditor.tsx';
 import PixelPictureReviewEditor from './PixelPictureReviewEditor.tsx';
 import FinishStoryReviewEditor from './FinishStoryReviewEditor.tsx';
+import LessonIntegrityReviewEditor from './LessonIntegrityReviewEditor.tsx';
+import MultipleChoiceBankReviewEditor from './MultipleChoiceBankReviewEditor.tsx';
+import {MODULE_REPAIR_REGISTRY} from './repairRegistry.ts';
 import {cryptogramLetters} from '../cryptograms.ts';
 import {buildReviewPreflight,PREPARED_ACTIVITY_KEYS,reviewIssueTarget,type ReviewPreflight} from './preflight.ts';
 import './review.css';
@@ -100,6 +103,7 @@ export default function ReviewApp(){
  const activeModuleId=active?.id.startsWith('module:')?active.id.slice('module:'.length):
   active?.id==='match-words'?'match-words':
   active?.id==='crossword'?'crossword':
+  active?.id==='multiple-choice-bank'?'multiple-choice':
   (['story-order','sort-story','true-false','true-false-maze',
     'who-am-i','unscramble-words','pixel-picture','finish-story'].includes(active?.id??'')
    ?active!.id:null);
@@ -117,8 +121,9 @@ export default function ReviewApp(){
   }
   setFocusIssueField(null);
  },[active?.id,focusIssueField]);
- const complete=tasks.filter(t=>reviewed.includes(t.id)).length;
- const remaining=tasks.length-complete;
+ const requiredTasks=tasks.filter(t=>!t.optional);
+ const complete=requiredTasks.filter(t=>reviewed.includes(t.id)).length;
+ const remaining=requiredTasks.length-complete;
  useEffect(()=>{
   if(!lesson)return;
   try{localStorage.setItem(SAVE_KEY,JSON.stringify({lesson,reviewed,selectedId}));}catch{ /* browser storage unavailable */ }
@@ -199,6 +204,19 @@ export default function ReviewApp(){
   setLesson(next);setPreflight(null);
   setReviewed(previous=>previous.filter(id=>id!==active?.id));
   setError('');
+ }
+ function applyMultipleChoiceBankReview(next:Lesson){
+  setModuleEditorText(JSON.stringify(next.preparedActivities?.multipleChoice??[],null,2));
+  setLesson(next);setPreflight(null);setError('');
+  setReviewed(previous=>previous.filter(id=>!id.startsWith('mc:')));
+ }
+ function applyIntegrityReview(next:Lesson){
+  setLesson(next);setPreflight(null);setError('');
+  // Source-link edits can affect the provenance of multiple activities.
+  // Never carry over all previous teacher checkmarks after source repairs.
+  if(active?.id==='lesson-sources')setReviewed([]);
+  else setReviewed(previous=>previous.filter(id=>id!==active?.id));
+  if(active?.id==='lesson-sources')setRightsConfirmed(false);
  }
  function applyStoryFactReview(next:Lesson){
   if(activePreparedKey)
@@ -329,7 +347,7 @@ export default function ReviewApp(){
  function approveActive(){
   if(!active)return;
   setReviewed(prev=>prev.includes(active.id)?prev:[...prev,active.id]);
-  const next=tasks.find(t=>t.id!==active.id&&!reviewed.includes(t.id));
+  const next=tasks.find(t=>!t.optional&&t.id!==active.id&&!reviewed.includes(t.id));
   if(next)setSelectedId(next.id);
  }
  const verseText=passage?clipToWords(passage.text,start,end):'';
@@ -386,7 +404,7 @@ export default function ReviewApp(){
       {tasks.map(t=><button type="button" key={t.id}
         className={(t.id===active?.id?'selected ':'')+(reviewed.includes(t.id)?'done':'')}
         onClick={()=>{setSelectedId(t.id);setRepairConflictWords([]);setError('');}}>
-        <span>{reviewed.includes(t.id)?'✓':'○'}</span><span><small>{t.group}</small>{t.label}</span>
+        <span>{t.optional?'↗':reviewed.includes(t.id)?'✓':'○'}</span><span><small>{t.group}</small>{t.label}</span>
        </button>)}
      </nav>
      {diagnosticTasks.length>0&&<div className="review-diagnostic-links">
@@ -484,6 +502,8 @@ export default function ReviewApp(){
        lesson={lesson} onChange={applyStoryFactReview} onError={setError}/>}
       {active.id==='pixel-picture'&&<PixelPictureReviewEditor
        lesson={lesson} onChange={applyStoryFactReview} onError={setError}/>}
+      {active.id==='multiple-choice-bank'&&<MultipleChoiceBankReviewEditor
+       lesson={lesson} onChange={applyMultipleChoiceBankReview} onError={setError}/>}
       {active.id==='story-order'&&<StoryOrderReviewEditor
        lesson={lesson} onChange={applyStoryFactReview} onError={setError}/>}
       {active.id==='sort-story'&&<SortStoryReviewEditor
@@ -493,10 +513,13 @@ export default function ReviewApp(){
       {active.id==='true-false-maze'&&<FactChoiceReviewEditor
        lesson={lesson} kind="trueFalseMaze" onChange={applyStoryFactReview} onError={setError}/>}
       {['story-order','sort-story','true-false','true-false-maze',
-        'who-am-i','unscramble-words','pixel-picture','finish-story'].includes(active.id)&&
+        'who-am-i','unscramble-words','pixel-picture','finish-story',
+        'multiple-choice-bank'].includes(active.id)&&
        <details className="review-match-advanced">
         <summary>Advanced: edit this activity's JSON only</summary>
-        <p>This changes only the prepared activity selection or event list; canonical source facts are separate records. Use it only for unusual structural repairs, then rerun preflight.</p>
+        <p>This changes only the selected prepared activity. Original source records
+        and canonical facts are separate. Use for unusual structural repairs
+        after saving a working JSON backup, then rerun preflight.</p>
         <label>Prepared activity JSON
          <textarea id="review-module-json" rows={12} spellCheck={false}
           value={moduleEditorText} onChange={e=>setModuleEditorText(e.target.value)}/></label>
@@ -698,7 +721,8 @@ export default function ReviewApp(){
       {activeModuleId&&activePreparedKey&&active.id!=='match-words'&&
        active.id!=='crossword'&&
        !['story-order','sort-story','true-false','true-false-maze',
-         'who-am-i','unscramble-words','pixel-picture','finish-story'].includes(active.id)&&
+         'who-am-i','unscramble-words','pixel-picture','finish-story',
+         'multiple-choice-bank'].includes(active.id)&&
        <div className="review-fields">
        <div className="review-note">
         <h3>{MODULES.find(item=>item.id===activeModuleId)?.name??activeModuleId} · prepared activity</h3>
@@ -710,13 +734,58 @@ export default function ReviewApp(){
          value={moduleEditorText} onChange={e=>setModuleEditorText(e.target.value)}/></label>
        <button type="button" onClick={applyModuleJson}>Apply this activity's changes</button>
       </div>}
-      {active.id==='review-general'&&<div id="review-general-details" tabIndex={-1} className="review-note">
-       <h3>Additional lesson validation</h3>
-       <p>This issue was not tied to one module. Check the lesson details and source records; download a working JSON copy for any structural changes, then rerun preflight.</p>
+      {(['lesson-details','lesson-sources','lesson-readiness','lesson-publication'] as const)
+       .filter(area=>area===active.id)
+       .map(area=><LessonIntegrityReviewEditor key={area}
+        lesson={lesson} mode={area} onChange={applyIntegrityReview} onError={setError}/>)}
+      {active.id==='recipe-review'&&<div id="review-field-recipe" tabIndex={-1} className="review-fields">
+       <div className="review-note">
+        <h3>Numbered preset repairs</h3>
+        <p>{Object.keys(MODULE_REPAIR_REGISTRY).length}/27 activity types have
+         registered repair destinations: {Object.values(MODULE_REPAIR_REGISTRY)
+          .filter(route=>route.editor==='visual').length} activity forms and
+         {Object.values(MODULE_REPAIR_REGISTRY).filter(route=>
+          route.editor==='scripture').length} shared Scripture routes.</p>
+        <p>Each numbered booklet requires content that does not repeat in another region.
+         Choose the named activity below, select a different approved fact or
+         vocabulary bank, then rerun preflight. The three preset layouts are fixed.</p>
+       </div>
+       {(preflight?.issues??[]).filter(i=>i.recipeId||i.slot).map((issue,i)=>
+        <div key={i} className="review-story-fact-row">
+         <strong>{issue.recipeId??'Preset'} · {issue.slot??'Activity region'}</strong>
+         <p>{issue.message}</p>
+         <button type="button" className="review-secondary" onClick={()=>{
+          setSelectedId(issue.taskId);setFocusIssueField(issue.fieldId);
+          setRepairConflictWords(issue.conflicts??[]);
+         }}>Open {issue.label} repair</button>
+        </div>)}
+       <p className="review-source">If no specific issue is listed, run preflight again
+        to see the currently blocked preset slot.</p>
+      </div>}
+      {active.id==='review-general'&&<div id="review-general-details" tabIndex={-1} className="review-fields">
+       <div className="review-note">
+        <h3>Other validation issues</h3>
+        <p>These messages have no safe automatic repair. Rather than modify
+         curriculum facts or rights records without evidence, choose the affected
+         lesson section below and verify the source. All current preflight messages
+         remain visible below until a fresh preflight run.</p>
+       </div>
+       {(preflight?.issues??[]).filter(issue=>issue.taskId==='review-general').map((issue,i)=>
+        <p className="review-warning" key={i}>{issue.message}</p>)}
+       <div className="review-match-actions">
+        {(['lesson-details','lesson-sources','lesson-readiness','lesson-publication','recipe-review'] as const)
+         .map(area=><button type="button" className="review-secondary" key={area}
+          onClick={()=>{setSelectedId(area);setFocusIssueField('review-field-'+area);}}>
+          {area.replaceAll('-',' ')}
+         </button>)}
+       </div>
+       <p className="review-source">For corrupt structural content, use the source
+        section's scoped advanced editor and export a working JSON backup before changes.
+        The generator and curriculum CI will independently validate all final content.</p>
       </div>}
       <div className="review-actions">
-       <button type="button" className="review-approve" onClick={approveActive}>{reviewed.includes(active.id)?'Reviewed — next':'Mark reviewed & continue'}</button>
-       <button type="button" className="review-secondary" onClick={()=>setReviewed(x=>x.filter(id=>id!==active.id))}>Needs more work</button>
+       {!active.optional&&<button type="button" className="review-approve" onClick={approveActive}>{reviewed.includes(active.id)?'Reviewed — next':'Mark reviewed & continue'}</button>}
+       {!active.optional&&<button type="button" className="review-secondary" onClick={()=>setReviewed(x=>x.filter(id=>id!==active.id))}>Needs more work</button>}
       </div>
      </section>}
      <section className="review-panel">
@@ -751,7 +820,7 @@ export default function ReviewApp(){
         </li>)}
        </ul>}
       </div>}
-      <div className="review-signoff">
+      <div id="review-field-publication-signoff" className="review-signoff">
        <h3>Final publication signoff</h3>
        <p>Only complete this after you've reviewed the items and Bible text. A downloaded file is not published until you submit it through GitHub and CI passes.</p>
        <div className="review-pair">

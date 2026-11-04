@@ -206,3 +206,26 @@ a{color:#267d68}
 @media(max-width:580px){
  #review-field-who-am-i .review-pair{grid-template-columns:1fr}
 }
+
+/* PR83: permanent, optional lesson-data repair and multiple choice bank. */
+#review-field-lesson-details:focus,#review-field-lesson-sources:focus,
+#review-field-lesson-readiness:focus,#review-field-lesson-publication:focus,
+#review-field-multiple-choice-bank:focus,#review-field-recipe:focus,
+#review-general-details:focus{outline:2px solid #4b956e;outline-offset:5px}
+#review-field-lesson-details label,#review-field-lesson-sources label,
+#review-field-lesson-readiness label,#review-field-multiple-choice-bank label{
+ display:block;min-width:0;font-size:12px;font-weight:800;color:#355749}
+#review-field-lesson-details input,#review-field-lesson-details textarea,
+#review-field-lesson-sources input,#review-field-lesson-sources select,
+#review-field-lesson-sources textarea,#review-field-multiple-choice-bank textarea,
+#review-field-multiple-choice-bank input,#review-field-multiple-choice-bank select{
+ display:block;width:100%;min-width:0;margin-top:5px;padding:10px 12px;
+ border:1px solid #cbded0;border-radius:8px;background:white;
+ color:#23483a;font-size:13px;line-height:1.45}
+#review-field-lesson-sources .review-story-fact-row{overflow-wrap:anywhere}
+#review-field-multiple-choice-bank .review-pair{grid-template-columns:repeat(2,minmax(0,1fr))}
+#review-field-multiple-choice-bank .review-story-fact-row{margin-bottom:8px}
+.review-nav button span:first-child{min-width:12px}
+@media(max-width:580px){
+ #review-field-multiple-choice-bank .review-pair{grid-template-columns:1fr}
+}

@@ -1,6 +1,7 @@
 import {MODULES,type ModuleId} from '../modules.ts';
 import {checkReviewContent,type Lesson} from './model.ts';
 import {repairDestinationForModule} from './repairRegistry.ts';
+import {lessonIntegrityIssues,type IntegrityArea} from './lessonIntegrity.ts';
 import {
  buildWorksheetRecipe,WORKSHEET_RECIPES,RecipeContentConflictError,
  type LessonWorksheetSource,
@@ -46,6 +47,8 @@ export type ReviewIssue={
  recipeId?:string;
  slot?:string;
  conflicts?:string[];
+ area?:IntegrityArea;
+ path?:string;
 };
 export type ReviewPreflight={
  convertedCount:number;
@@ -94,6 +97,24 @@ export function reviewIssueTarget(message:string):ReviewIssue{
   return issue(message,'circle-mistakes','review-field-circle-mistakes','circle-mistakes');
  if(message.startsWith('Select and approve a Berean')||message.includes('does not reconstruct the exact memory verse'))
   return issue(message,'bsb-verse','review-field-bsb');
+ if(/^(?:A worksheet recipe needs a lesson title|Lesson (?:title|Scripture)|Invalid lesson (?:title|Scripture))/iu.test(message))
+  return issue(message,'lesson-details','review-field-lesson-details');
+ if(/^(?:Not enough valid multiple-choice|No approved multiple-choice content|Multiple-choice pool)/iu.test(message))
+  return issue(message,'multiple-choice-bank','review-field-multiple-choice-bank','multiple-choice');
+ // Catch recipe errors with the named activity, even if the prefix is
+ // a preset name or the generator changes the prose around that activity.
+ if(/^(?:Preset [1-3]|Recipe preset-[1-3]|No approved|Lesson .* has no valid)/iu.test(message)){
+  const id=[...moduleIds].sort((a,b)=>b.length-a.length).find(id=>
+   new RegExp('(^|[^a-z-])'+id+'([^a-z-]|$)','iu').test(message));
+  if(id)return reviewIssueTarget(id+': '+message);
+  return issue(message,'recipe-review','review-field-recipe');
+ }
+ if(/(?:rights clearance|teacher signoff|publication|license|licence)/iu.test(message))
+  return issue(message,'lesson-publication','review-field-lesson-publication');
+ if(/(?:source (?:file|record|reference)|sourceIds|sourceQuestionIds|Story Note)/iu.test(message))
+  return issue(message,'lesson-sources','review-field-lesson-sources');
+ if(/(?:readiness|27 activity types|moduleReadiness)/iu.test(message))
+  return issue(message,'lesson-readiness','review-field-lesson-readiness');
  const moduleName=message.match(/^([a-z][a-z-]*):/u)?.[1];
  if(moduleName&&moduleIds.has(moduleName)){
   const id=moduleName as ModuleId;
@@ -105,17 +126,29 @@ export function reviewIssueTarget(message:string):ReviewIssue{
 
 export function buildReviewPreflight(lesson:Lesson):ReviewPreflight{
  const messages=checkReviewContent(lesson);
+ const structural=lessonIntegrityIssues(lesson);
  const recipeIssues:ReviewIssue[]=[];
  // All 27 activities may convert successfully while an assembled booklet
  // still fails (for example, two regions need distinct approved content).
  // Check the actual three numbered recipes after content checks are clean.
- if(messages.length===0){
+ if(messages.length===0&&structural.length===0){
   for(const recipe of WORKSHEET_RECIPES){
    try{
     const result=buildWorksheetRecipe(lesson as LessonWorksheetSource,recipe.id,
      {purpose:'editorial-review',seed:1});
-    if(result.openSlots.length)
-     messages.push(recipe.name+': '+result.openSlots.length+' activity regions are empty.');
+    for(const region of result.openSlots){
+     const step=recipe.steps.find(s=>s.page+':'+s.regionId===region.slot);
+     if(step){
+      const mapped=reviewIssueTarget(step.moduleId+': '+recipe.name+
+       ' has an empty '+step.moduleId+' slot at '+region.slot+'.');
+      recipeIssues.push({...mapped,id:recipe.id+':'+region.slot+':'+mapped.taskId,
+       recipeId:recipe.id,slot:region.slot});
+     }else recipeIssues.push({...issue(recipe.name+
+      ' has an empty region at '+region.slot+
+      '. Check the preset layout and corresponding activity.',
+      'recipe-review','review-field-recipe'),
+      recipeId:recipe.id,slot:region.slot});
+    }
    }catch(error){
     if(error instanceof RecipeContentConflictError){
      const mapped=reviewIssueTarget(error.moduleId+': '+error.message);
@@ -135,6 +168,9 @@ export function buildReviewPreflight(lesson:Lesson):ReviewPreflight{
  const issues=messages.filter(message=>!/^Only \d+\/27 activity types converted/u.test(message))
   .map(message=>{
    const target=reviewIssueTarget(message),id=target.moduleId;
+   if(target.taskId.startsWith('mc:')&&!(lesson.preparedActivities?.multipleChoice??[])
+    .some((item:any)=>'mc:'+item.id===target.taskId))
+    return {...target,taskId:'multiple-choice-bank',fieldId:'review-field-multiple-choice-bank'};
    if(!id)return target;
    const record=lesson.preparedActivities?.[PREPARED_ACTIVITY_KEYS[id]];
    // Some visual editors can create missing records; other editors still
@@ -142,6 +178,14 @@ export function buildReviewPreflight(lesson:Lesson):ReviewPreflight{
    const present=!!record&&(!Array.isArray(record)||record.length>0);
    const route=repairDestinationForModule(id,present);
    return {...target,taskId:route.taskId,fieldId:route.fieldId};
-  }).concat(recipeIssues);
+  }).concat(recipeIssues).concat(structural.map((entry,index)=>({
+   id:entry.area+':'+entry.path+':'+index,
+   message:entry.message,
+   label:entry.area==='lesson-details'?'Lesson details':
+    entry.area==='lesson-sources'?'Curriculum sources':
+    entry.area==='lesson-readiness'?'Activity readiness':'Publication and rights',
+   taskId:entry.area,fieldId:'review-field-'+entry.area,
+   area:entry.area,path:entry.path,
+  })));
  return {convertedCount,totalCount:27,issues};
 }
