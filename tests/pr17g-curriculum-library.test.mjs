@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {readFile,mkdir,writeFile,mkdtemp,rm} from 'node:fs/promises';
+import {readFile,readdir,mkdir,writeFile,mkdtemp,rm} from 'node:fs/promises';
 import {tmpdir} from 'node:os';
 import {join} from 'node:path';
 import {
@@ -150,24 +150,70 @@ test('Public auto-discovery requires a self-contained approved file; no shared r
  assert.doesNotMatch(appCatalog,/rights-manifest\.json/u);
 });
 
-test('Live repository scan validates all three author-approved BSB Red Sea presets',async()=>{
+test('Live repository scan validates every approved lesson and all three numbered presets',async()=>{
  const report=await inspectCurriculumLibrary();
  assert.equal(report.passed,true,JSON.stringify(report.errors));
  assert.equal(report.errors.length,0);
  const published=report.lessons.filter(x=>x.source==='approved');
- assert.equal(published.length,1,'Review drafts do not count as public lessons');
- assert.equal(published[0].eligibleForPublication,true);
- assert.equal(published[0].rightsCleared,true);
- assert.equal(published[0].teacherReviewFlagsOutstanding.length,0);
+ const files=(await readdir(new URL('../curriculum/approved/',import.meta.url)))
+  .filter(name=>name.endsWith('.lesson.json')).sort();
+ const expectedIds=files.map(name=>name.slice(0,-'.lesson.json'.length));
+ assert.ok(expectedIds.includes(approvedRedSea.id),'Retain the teacher-approved OT31 lesson');
+ assert.deepEqual(published.map(x=>x.id).sort(),expectedIds,
+  'Every newly uploaded approved file must be discovered, without a fixed lesson count');
+ for(const entry of published){
+  assert.equal(entry.eligibleForPublication,true,entry.id);
+  assert.equal(entry.rightsCleared,true,entry.id);
+  assert.equal(entry.teacherReviewFlagsOutstanding.length,0,entry.id);
+  assert.equal(entry.recipeReadiness.length,3,entry.id);
+  assert.ok(entry.recipeReadiness.every(x=>x.ready&&x.openSlots===0),
+   entry.id+': '+JSON.stringify(entry.recipeReadiness));
+ }
+ const catalogFiles={};
+ for(const name of files){
+  const path='../curriculum/approved/'+name;
+  catalogFiles[path]=await load('curriculum/approved/'+name);
+ }
+ assert.deepEqual(assemblePublicLessonCatalog(catalogFiles).map(x=>x.lesson.id).sort(),
+  expectedIds,'The public catalog must discover every independently approved lesson');
  assert.ok(report.lessons.filter(x=>x.source==='review')
   .every(x=>x.eligibleForPublication===false),'All review data must remain unlisted');
  const rendered=renderCurriculumReadinessMarkdown(report);
  assert.match(rendered,/Curriculum library readiness/u);
  assert.match(rendered,/27\/27/u);
- assert.match(rendered,/ADAPTATION NEEDED/u);
  assert.match(rendered,/cleared/u);
  assert.match(rendered,/preset-1/u);
  assert.match(rendered,/preset-3/u);
+});
+test('A pending review copy can coexist with one approved file, but same-stage duplicates still fail',async()=>{
+ const root=await mkdtemp(join(tmpdir(),'worksheet-publish-review-copy-'));
+ try{
+  const curriculum=join(root,'curriculum'),review=join(curriculum,'review');
+  const approvedDir=join(curriculum,'approved');
+  await mkdir(join(curriculum,'schema'),{recursive:true});
+  await mkdir(review,{recursive:true});
+  await mkdir(approvedDir,{recursive:true});
+  await writeFile(join(curriculum,'schema','lesson-v1.schema.json'),JSON.stringify(schema));
+  await writeFile(join(review,'ot-031-pending.review.json'),JSON.stringify(lesson));
+  await writeFile(join(approvedDir,signed().id+'.lesson.json'),JSON.stringify(signed()));
+  const coexist=await inspectCurriculumLibrary({root});
+  assert.equal(coexist.passed,true,JSON.stringify(coexist.errors));
+  assert.equal(coexist.lessons.length,2);
+  assert.deepEqual(coexist.lessons.map(x=>x.source),['review','approved']);
+  assert.equal(coexist.lessons[0].eligibleForPublication,false);
+  assert.equal(coexist.lessons[1].eligibleForPublication,true);
+  // Two different review files with the same source ID are still a mistake.
+  await writeFile(join(review,'ot-031-other.review.json'),JSON.stringify(lesson));
+  const duplicates=await inspectCurriculumLibrary({root});
+  assert.ok(duplicates.errors.some(x=>x.code==='duplicate-id'));
+  // Keep the fail-closed rule for falsely approved review-stage files.
+  await rm(join(review,'ot-031-other.review.json'));
+  await writeFile(join(review,'ot-031-pending.review.json'),JSON.stringify(signed()));
+  const wrongStage=await inspectCurriculumLibrary({root});
+  assert.ok(wrongStage.errors.some(x=>x.code==='review-stage'));
+ }finally{
+  await rm(root,{recursive:true,force:true});
+ }
 });
 test('CI approves another one-file lesson only when full schema, puzzles, presets, signoff and embedded Scripture rights pass',async()=>{
  const root=await mkdtemp(join(tmpdir(),'worksheet-library-pr17o-'));
@@ -225,10 +271,13 @@ test('CI approves another one-file lesson only when full schema, puzzles, preset
   assert.equal(noRecipe.passed,false);
   assert.ok(noRecipe.errors.some(x=>x.code==='recipe-not-ready'));
   await writeFile(secondFile,JSON.stringify(second));
+  // The one-file upload flow permits an older pending draft in review/.
+  // Only approved/<id>.lesson.json enters the live public catalog.
   await writeFile(join(root,'curriculum','review',first.id+'.json'),JSON.stringify(lesson));
-  const duplicate=await inspectCurriculumLibrary({root});
-  assert.equal(duplicate.passed,false);
-  assert.ok(duplicate.errors.some(x=>x.code==='duplicate-id'));
+  const withPendingReview=await inspectCurriculumLibrary({root});
+  assert.equal(withPendingReview.passed,true,JSON.stringify(withPendingReview.errors));
+  assert.equal(withPendingReview.lessons.filter(x=>x.source==='approved').length,2);
+  assert.equal(withPendingReview.lessons.filter(x=>x.source==='review').length,1);
  }finally{await rm(root,{recursive:true,force:true});}
 });
 

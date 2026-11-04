@@ -123,6 +123,20 @@ test('A source-linked 18-letter phrase makes all 27 modules convert, preserving 
   /maximum 18/u);
 });
 
+test('Review preflight checks all three printable presets after 27 activity conversions',()=>{
+ const ready=buildReviewPreflight(approved);
+ assert.equal(ready.convertedCount,27);
+ assert.deepEqual(ready.issues,[],'Approved OT31 can build all three real presets');
+ const noTitle=structuredClone(approved);
+ noTitle.lessonDetails.title='';
+ const report=buildReviewPreflight(noTitle);
+ assert.equal(report.convertedCount,27,
+  'Activity conversion alone cannot certify a complete printable worksheet');
+ assert.deepEqual(report.issues.map(issue=>issue.message.split(':')[0]),
+  ['Preset 1','Preset 2','Preset 3']);
+ assert.ok(report.issues.every(issue=>issue.fieldId==='review-general-details'));
+});
+
 test('All 27 converter module diagnostics map to an available prepared field and focusable editor',()=>{
  assert.equal(Object.keys(PREPARED_ACTIVITY_KEYS).length,27);
  for(const [id,key] of Object.entries(PREPARED_ACTIVITY_KEYS)){

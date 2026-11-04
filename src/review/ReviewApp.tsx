@@ -566,7 +566,7 @@ export default function ReviewApp(){
        <p><strong>{preflight.convertedCount}/{preflight.totalCount} activity types converted.</strong>
         {preflight.issues.length?' Select an issue below to edit the relevant activity.':
          preflight.convertedCount!==preflight.totalCount?' Conversion coverage is incomplete; inspect the prepared activity data.':
-         ' Preflight passed. GitHub CI still independently validates the approved file.'}</p>
+         ' Preflight passed: all 27 activities and three numbered presets are buildable. GitHub CI still independently validates schema, publication rights and the approved file.'}</p>
        {preflight.issues.length>0&&<ul className="review-issue-list">
         {preflight.issues.map((issue,i)=><li key={issue.id+'-'+i}>
          <button type="button" className="review-issue-link"
@@ -591,7 +591,7 @@ export default function ReviewApp(){
         <div className="review-actions">
         <button type="button" disabled={!canPublish} onClick={downloadApproved}>Download approved lesson JSON</button>
                </div>
-       <p className="review-source">Add the downloaded lesson to <code>curriculum/approved/{lesson.id}.lesson.json</code>, removing any duplicate review-stage JSON with the same ID in <code>curriculum/review/</code>. No other curriculum files need to change. CI validates the lesson, approval, Scripture rights and printable presets before publication.</p>
+       <p className="review-source">Add the downloaded lesson to <code>curriculum/approved/{lesson.id}.lesson.json</code>, and a pending review-stage copy may remain in <code>curriculum/review/</code>. Only approved files enter the public catalog; CI validates both stages separately. No other curriculum files need to change. CI validates the lesson, approval, Scripture rights and printable presets before publication.</p>
       </div>
      </section>
     </>}
