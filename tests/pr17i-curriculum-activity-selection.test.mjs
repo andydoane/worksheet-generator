@@ -13,9 +13,8 @@ import {createBookletPdf} from '../src/pdf.ts';
 
 const getJson=async path=>JSON.parse(await readFile(new URL('../'+path,import.meta.url),'utf8'));
 const approved=await getJson('curriculum/approved/ot-031-god-parts-the-red-sea.lesson.json');
-const manifest=await getJson('curriculum/approved/rights-manifest.json');
 const path='../curriculum/approved/'+approved.id+'.lesson.json';
-const publicLesson=assemblePublicLessonCatalog({[path]:approved},manifest)[0];
+const publicLesson=assemblePublicLessonCatalog({[path]:approved})[0];
 if(!publicLesson)throw Error('This test requires the real independently approved BSB Red Sea lesson.');
 const selected=(type,draft,slot='2:bottom-medium',entries=[publicLesson])=>
  chooseActivityForDraft(type,draft,slot,entries);
@@ -122,7 +121,7 @@ test('Multiple Choice uses distinct approved questions while unused candidates r
 test('Unapproved, withdrawn or incomplete lesson content is never fabricated',async()=>{
  const draft=buildYourOwnLessonDraft(publicLesson);
  const review=await getJson('tests/fixtures/ot-031-original-review.json');
- const fake={lesson:review,scriptureDistributionCleared:true,rightsEvidence:manifest.lessons[approved.id]};
+ const fake={lesson:review,scriptureDistributionCleared:true,rightsEvidence:approved.publication.scriptureRights};
  assert.throws(()=>buildYourOwnLessonDraft(fake),/not approved/u);
  const withdrawn=selected('finish-verse',draft,'2:bottom-medium',[]);
  assert.equal(withdrawn.source,'unavailable');
