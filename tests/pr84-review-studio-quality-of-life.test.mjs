@@ -193,7 +193,7 @@ test('Regenerate updates the Pixel Picture silhouette but not the saved curricul
   projectText('src/App.tsx'),projectText('src/review/PixelPictureReviewEditor.tsx'),
  ]);
  assert.match(app,/shapeId:choosePixelShapeId\(seed,original\.phrase\)/u);
- assert.match(app,/seed: original\.seed \+ 1/u.match?.()??/Regenerate/u);
+ assert.match(app,/const seed=original\.seed\+1/u);
  assert.doesNotMatch(review,/<label>Silhouette/u);
  assert.match(review,/Preview another generated silhouette/u);
  assert.match(review,/type:'pixel-picture',phrase,shapeId,seed:previewSeed/u);
