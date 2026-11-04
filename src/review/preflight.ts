@@ -100,7 +100,7 @@ export function reviewIssueTarget(message:string):ReviewIssue{
  if(/^(?:A worksheet recipe needs a lesson title|Lesson (?:title|Scripture)|Invalid lesson (?:title|Scripture))/iu.test(message))
   return issue(message,'lesson-details','review-field-lesson-details');
  if(/^(?:Not enough valid multiple-choice|No approved multiple-choice content|Multiple-choice pool)/iu.test(message))
-  return issue(message,'module:multiple-choice','review-module-json','multiple-choice');
+  return issue(message,'multiple-choice-bank','review-field-multiple-choice-bank','multiple-choice');
  // Catch recipe errors with the named activity, even if the prefix is
  // a preset name or the generator changes the prose around that activity.
  if(/^(?:Preset [1-3]|Recipe preset-[1-3]|No approved|Lesson .* has no valid)/iu.test(message)){
@@ -168,6 +168,9 @@ export function buildReviewPreflight(lesson:Lesson):ReviewPreflight{
  const issues=messages.filter(message=>!/^Only \d+\/27 activity types converted/u.test(message))
   .map(message=>{
    const target=reviewIssueTarget(message),id=target.moduleId;
+   if(target.taskId.startsWith('mc:')&&!(lesson.preparedActivities?.multipleChoice??[])
+    .some((item:any)=>'mc:'+item.id===target.taskId))
+    return {...target,taskId:'multiple-choice-bank',fieldId:'review-field-multiple-choice-bank'};
    if(!id)return target;
    const record=lesson.preparedActivities?.[PREPARED_ACTIVITY_KEYS[id]];
    // Some visual editors can create missing records; other editors still
