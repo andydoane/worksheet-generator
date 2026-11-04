@@ -2,6 +2,7 @@ import {BOOKLET} from './booklet.ts';
 import type {MeasureText} from './mediumParityLayout.ts';
 import {balancedBankLines} from './balancedBankLines.ts';
 import {parseConnectionWords,type ConnectVerseModule} from './specialtyModules.ts';
+import {formatVerseDashes} from './versePunctuation.ts';
 import {scatterWords,scaleConnectScatterFont,type ScatteredWord,type ScatterBounds} from './wordScatterLayout.ts';
 
 export const CONNECT_VERSE_TITLE='CONNECT THE VERSE';
@@ -30,7 +31,7 @@ export function planConnectVerse(module:ConnectVerseModule,metrics:{
  const titleY=25,subtitleY=42,subtitleSize=9.4,bankTop=51;
  if(metrics.subtitle(CONNECT_VERSE_INSTRUCTION,subtitleSize)>width-8)return null;
  for(let bankFontSize=11.2;bankFontSize>=8.4;bankFontSize-=.4){
-  const rows=balancedBankLines(module.verse.trim(),width-16,metrics.verse,bankFontSize,5);
+  const rows=balancedBankLines(formatVerseDashes(module.verse).trim(),width-16,metrics.verse,bankFontSize,5);
   if(!rows)continue;
   const bankLineHeight=bankFontSize*1.25+1.6;
   const bankHeight=rows.length*bankLineHeight+10;
