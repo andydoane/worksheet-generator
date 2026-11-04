@@ -1,0 +1,3010 @@
+{
+  "schemaVersion": 1,
+  "schemaStatus": "review-draft; requires official schema/importer and generator validation",
+  "id": "ot-029-the-plagues-of-egypt",
+  "curriculum": {
+    "series": "Old Testament",
+    "lessonNumber": 29
+  },
+  "lessonDetails": {
+    "title": "The Plagues of Egypt",
+    "scripturePassages": [
+      "Exodus 7",
+      "Exodus 8",
+      "Exodus 9",
+      "Exodus 10"
+    ],
+    "scriptureDisplay": "Exodus 7–10 (first nine plagues; first plague reviewed from previous lesson)",
+    "bigIdeas": [
+      {
+        "text": "The Lord is the ONE TRUE God.",
+        "origin": "adapted",
+        "source": {
+          "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+          "section": "Important Idea",
+          "page": 7,
+          "sourceParagraphIndex": 247,
+          "details": "Printed Important Idea includes adjacent display paragraphs 247–249; leading “The” standardized and theological capitalization preserved."
+        },
+        "teacherReviewRequired": false
+      }
+    ],
+    "memoryVerse": {
+      "reference": "Deuteronomy 10:17",
+      "translation": "BSB",
+      "text": "For the LORD your God is God of gods and Lord of lords, the great, mighty, and awesome God,",
+      "isExcerpt": true,
+      "hasEllipses": false,
+      "requiresTextReview": false,
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+        "section": "Memory Verse Activity",
+        "page": 9,
+        "sourceParagraphIndex": 277,
+        "details": "Source curriculum gives ESV wording; this is a proposed BSB excerpt ending before the next clause. Final punctuation is subject to teacher selection."
+      },
+      "alsoVerifiedAt": {
+        "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+        "section": "Verse and Motions",
+        "page": 9,
+        "sourceParagraphIndex": 284
+      },
+      "bsbSource": {
+        "reference": "Deuteronomy 10:17",
+        "sourceUrl": "https://bereanbible.com/bsb.txt",
+        "publicDomainTerms": "https://berean.bible/terms.htm",
+        "startWord": 0,
+        "endWord": 18
+      },
+      "originalCurriculumVerse": {
+        "reference": "Deuteronomy 10:17a",
+        "translation": "ESV",
+        "text": "For the Lord your God is God of gods and Lord of lords, the great, the mighty, and the awesome God..."
+      }
+    }
+  },
+  "sourceFiles": [
+    {
+      "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+      "format": "odt",
+      "role": "primary teaching source",
+      "note": "The lesson covers the first nine plagues; there is no accompanying ODP. The original memory verse is an ESV excerpt of Deuteronomy 10:17a."
+    }
+  ],
+  "storyNotes": [
+    {
+      "id": "sn-01",
+      "order": 1,
+      "originalText": "Water into BLOOD",
+      "cleanText": "God turned the water of Egypt into blood.",
+      "emphasizedWords": [
+        "BLOOD"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+        "section": "STORY NOTE",
+        "page": 1,
+        "sourceParagraphIndex": 26
+      }
+    },
+    {
+      "id": "sn-02",
+      "order": 2,
+      "originalText": "Frogs",
+      "cleanText": "God covered the land of Egypt with frogs.",
+      "emphasizedWords": [],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+        "section": "STORY NOTE",
+        "page": 2,
+        "sourceParagraphIndex": 39
+      }
+    },
+    {
+      "id": "sn-03",
+      "order": 3,
+      "originalText": "Gnats",
+      "cleanText": "God turned the dust of Egypt into gnats.",
+      "emphasizedWords": [],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+        "section": "STORY NOTE",
+        "page": 2,
+        "sourceParagraphIndex": 62
+      }
+    },
+    {
+      "id": "sn-04",
+      "order": 4,
+      "originalText": "Flies",
+      "cleanText": "God sent swarms of flies into Egypt, but spared Goshen.",
+      "emphasizedWords": [],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+        "section": "STORY NOTE",
+        "page": 3,
+        "sourceParagraphIndex": 79
+      }
+    },
+    {
+      "id": "sn-05",
+      "order": 5,
+      "originalText": "Livestock",
+      "cleanText": "The livestock of the Egyptians died, but the Israelites’ animals survived.",
+      "emphasizedWords": [],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+        "section": "STORY NOTE",
+        "page": 3,
+        "sourceParagraphIndex": 103
+      }
+    },
+    {
+      "id": "sn-06",
+      "order": 6,
+      "originalText": "Boils",
+      "cleanText": "God sent painful boils on Egyptian people and animals.",
+      "emphasizedWords": [],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+        "section": "STORY NOTE",
+        "page": 4,
+        "sourceParagraphIndex": 124
+      }
+    },
+    {
+      "id": "sn-07",
+      "order": 7,
+      "originalText": "Hail",
+      "cleanText": "God sent a severe hailstorm to Egypt but spared Goshen.",
+      "emphasizedWords": [],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+        "section": "STORY NOTE",
+        "page": 4,
+        "sourceParagraphIndex": 144
+      }
+    },
+    {
+      "id": "sn-08",
+      "order": 8,
+      "originalText": "Locusts",
+      "cleanText": "God sent locusts to eat the plants left after the hail.",
+      "emphasizedWords": [],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+        "section": "STORY NOTE",
+        "page": 5,
+        "sourceParagraphIndex": 165
+      }
+    },
+    {
+      "id": "sn-09",
+      "order": 9,
+      "originalText": "Darkness",
+      "cleanText": "God covered Egypt in darkness for three days, but Israel had light.",
+      "emphasizedWords": [],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+        "section": "STORY NOTE",
+        "page": 6,
+        "sourceParagraphIndex": 186
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q-01",
+      "question": "But when they spoke to Pharaoh, the stubborn king of Egypt, what did he say?",
+      "answer": "“I don’t know the Lord God of Israel and I’m not letting my slaves go!”",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "recap",
+      "source": {
+        "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 17
+      }
+    },
+    {
+      "id": "q-02",
+      "question": "What was plague #1?",
+      "answer": "God turned the water of Egypt into blood.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+        "section": "Story teaching",
+        "page": 1,
+        "sourceParagraphIndex": 28
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-03",
+      "question": "After seeing the power of the Lord, what did Pharaoh say?",
+      "answer": "He wouldn’t let the people go.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+        "section": "Story teaching",
+        "page": 1,
+        "sourceParagraphIndex": 32
+      }
+    },
+    {
+      "id": "q-04",
+      "question": "What was plague #2?",
+      "answer": "God covered the land with frogs.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+        "section": "Story teaching",
+        "page": 2,
+        "sourceParagraphIndex": 45
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-05",
+      "question": "After the Lord punished Egypt with a plague of frogs, what did Pharaoh say?",
+      "answer": "He said they could go if Moses prayed to send them away; when the frogs left, he changed his mind.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+        "section": "Story teaching",
+        "page": 2,
+        "sourceParagraphIndex": 55
+      },
+      "notes": "Footnote marker after question in original ODT points to Story Sheet Instructions."
+    },
+    {
+      "id": "q-06",
+      "question": "What was plague #3?",
+      "answer": "God turned the dust to gnats.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+        "section": "Story teaching",
+        "page": 2,
+        "sourceParagraphIndex": 66
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-07",
+      "question": "After the Lord God punished Egypt with a plague of gnats, what did Pharaoh say?",
+      "answer": "He wouldn’t let God’s people go.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+        "section": "Story teaching",
+        "page": 2,
+        "sourceParagraphIndex": 74
+      }
+    },
+    {
+      "id": "q-08",
+      "question": "What was plague #4?",
+      "answer": "God covered the land with flies.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+        "section": "Story teaching",
+        "page": 3,
+        "sourceParagraphIndex": 87
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-09",
+      "question": "Why didn’t they have flies?",
+      "answer": "That’s where God’s people lived.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+        "section": "Story teaching",
+        "page": 3,
+        "sourceParagraphIndex": 89
+      }
+    },
+    {
+      "id": "q-10",
+      "question": "After the Lord God punished Egypt with a plague of flies, what did Pharaoh say?",
+      "answer": "“If you pray for the flies to leave, I’ll let you go”; when the flies left, Pharaoh changed his mind.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+        "section": "Story teaching",
+        "page": 3,
+        "sourceParagraphIndex": 99
+      }
+    },
+    {
+      "id": "q-11",
+      "question": "What was plague #5?",
+      "answer": "Their animals died.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+        "section": "Story teaching",
+        "page": 4,
+        "sourceParagraphIndex": 109
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-12",
+      "question": "Why?",
+      "answer": "That’s where God’s people lived.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+        "section": "Story teaching",
+        "page": 4,
+        "sourceParagraphIndex": 111
+      },
+      "standaloneReady": false,
+      "notes": "Context-dependent question: Goshen/Israelite animals spared, or no hail in Goshen, depending on location."
+    },
+    {
+      "id": "q-13",
+      "question": "After the Lord God punished Egypt with a plague of dead livestock, what did Pharaoh say?",
+      "answer": "He wouldn’t let them go.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+        "section": "Story teaching",
+        "page": 4,
+        "sourceParagraphIndex": 119
+      }
+    },
+    {
+      "id": "q-14",
+      "question": "What was plague #6?",
+      "answer": "People were covered with boils.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+        "section": "Story teaching",
+        "page": 4,
+        "sourceParagraphIndex": 130
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-15",
+      "question": "After the Lord God punished Egypt with a plague of boils, what did Pharaoh say?",
+      "answer": "He would not let the people go.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+        "section": "Story teaching",
+        "page": 4,
+        "sourceParagraphIndex": 140
+      }
+    },
+    {
+      "id": "q-16",
+      "question": "What was plague #7?",
+      "answer": "A hailstorm.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+        "section": "Story teaching",
+        "page": 5,
+        "sourceParagraphIndex": 148
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-17",
+      "question": "Why?",
+      "answer": "That’s where God’s people lived.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+        "section": "Story teaching",
+        "page": 5,
+        "sourceParagraphIndex": 150
+      },
+      "standaloneReady": false,
+      "notes": "Context-dependent question: Goshen/Israelite animals spared, or no hail in Goshen, depending on location."
+    },
+    {
+      "id": "q-18",
+      "question": "What did Pharaoh have to say about this?",
+      "answer": "The lesson directs the teacher to read the answer next.",
+      "kind": "prompt",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+        "section": "Story teaching",
+        "page": 5,
+        "sourceParagraphIndex": 152
+      },
+      "standaloneReady": false,
+      "notes": "Teacher transition before reading Scripture; not a factual stand-alone worksheet item."
+    },
+    {
+      "id": "q-19",
+      "question": "After the Lord God punished Egypt with a plague of hail, what did Pharaoh say?",
+      "answer": "He asked Moses to pray that the hail would stop; when it did, Pharaoh changed his mind.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+        "section": "Story teaching",
+        "page": 5,
+        "sourceParagraphIndex": 160
+      }
+    },
+    {
+      "id": "q-20",
+      "question": "What was plague #8?",
+      "answer": "Locusts.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+        "section": "Story teaching",
+        "page": 5,
+        "sourceParagraphIndex": 169
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-21",
+      "question": "What was Pharaoh’s response to this?",
+      "answer": "The lesson directs the teacher to read the answer next.",
+      "kind": "prompt",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+        "section": "Story teaching",
+        "page": 5,
+        "sourceParagraphIndex": 173
+      },
+      "standaloneReady": false,
+      "notes": "Teacher transition before reading Scripture; not a factual stand-alone worksheet item."
+    },
+    {
+      "id": "q-22",
+      "question": "After the Lord God punished Egypt with a plague of locusts, what did Pharaoh say?",
+      "answer": "He asked Moses to pray that the locusts would leave; when they did, he changed his mind.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+        "section": "Story teaching",
+        "page": 6,
+        "sourceParagraphIndex": 181
+      }
+    },
+    {
+      "id": "q-23",
+      "question": "What was plague #9?",
+      "answer": "Darkness.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+        "section": "Story teaching",
+        "page": 6,
+        "sourceParagraphIndex": 190
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-24",
+      "question": "Why?",
+      "answer": "God’s people lived there.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+        "section": "Story teaching",
+        "page": 6,
+        "sourceParagraphIndex": 192
+      },
+      "standaloneReady": false,
+      "notes": "Context-dependent question: Goshen/Israelite animals spared, or no hail in Goshen, depending on location."
+    },
+    {
+      "id": "q-25",
+      "question": "What did Pharaoh do with all this dark?",
+      "answer": "The lesson directs the teacher to read the answer next.",
+      "kind": "prompt",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+        "section": "Story teaching",
+        "page": 6,
+        "sourceParagraphIndex": 194
+      },
+      "standaloneReady": false,
+      "notes": "Teacher transition before reading Scripture; not a factual stand-alone worksheet item."
+    },
+    {
+      "id": "q-26",
+      "question": "After the Lord God punished Egypt with a plague of darkness, what did Pharaoh say?",
+      "answer": "You can leave, but don’t take your animals; when Moses said no, Pharaoh changed his mind.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+        "section": "Story teaching",
+        "page": 6,
+        "sourceParagraphIndex": 202
+      }
+    },
+    {
+      "id": "q-27",
+      "question": "So how does the story of the plagues of Egypt teach us, strengthen us, encourage us, or give us hope?",
+      "answer": "Various responses.",
+      "kind": "discussion",
+      "origin": "source",
+      "scope": "application",
+      "source": {
+        "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+        "section": "Important Idea/Application",
+        "page": 6,
+        "sourceParagraphIndex": 206
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-28",
+      "question": "But Pharaoh and the Egyptians?",
+      "answer": "They worshiped many gods they thought were real.",
+      "kind": "rhetorical",
+      "origin": "source",
+      "scope": "application",
+      "source": {
+        "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+        "section": "Important Idea/Application",
+        "page": 7,
+        "sourceParagraphIndex": 210
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-29",
+      "question": "Can you guess which Egyptian “god” would be the target of God’s final plague?",
+      "answer": "Pharaoh himself.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "application",
+      "source": {
+        "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+        "section": "Important Idea/Application",
+        "page": 8,
+        "sourceParagraphIndex": 263
+      }
+    },
+    {
+      "id": "q-30",
+      "question": "What does that mean?",
+      "answer": "That God is the God in charge of all the other gods (who don’t really exist anyway) and he is the Lord (or king) in charge of all the other lords (or kings).",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "memory-verse",
+      "source": {
+        "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+        "section": "Memory Verse Activity",
+        "page": 9,
+        "sourceParagraphIndex": 280
+      },
+      "notes": "Source contains two separate questions in the same paragraph."
+    },
+    {
+      "id": "q-31",
+      "question": "How did God show that he was the God in charge of the “gods” Egypt worshiped?",
+      "answer": "He sent plagues to show his power.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "memory-verse",
+      "source": {
+        "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+        "section": "Memory Verse Activity",
+        "page": 9,
+        "sourceParagraphIndex": 280
+      },
+      "notes": "Source contains two separate questions in the same paragraph."
+    }
+  ],
+  "facts": [
+    {
+      "id": "tf-01",
+      "statement": "God turned the water of the Nile into blood.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-02",
+      "statement": "Frogs filled homes across Egypt.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-03",
+      "statement": "Pharaoh’s magicians successfully made gnats.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-03"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-04",
+      "statement": "God spared Goshen from swarms of flies.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-05",
+      "statement": "The Israelites’ livestock died in the fifth plague.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-06",
+      "statement": "God caused painful boils on Egyptian people.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-07",
+      "statement": "The hailstorm struck the Israelites in Goshen.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-08",
+      "statement": "Locusts ate plants that survived the hail.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-08"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-09",
+      "statement": "The darkness over Egypt lasted seven days.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-09"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-10",
+      "statement": "Pharaoh asked Moses to pray for the frogs to leave.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-11",
+      "statement": "Pharaoh freed Israel after the locusts left.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-08"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-12",
+      "statement": "Israel’s homes had light during Egypt’s darkness.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-09"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-13",
+      "statement": "The Israelites were stuck in darkness for three days.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-09"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-14",
+      "statement": "The lesson teaches that the Lord is the one true God.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-09"
+      ],
+      "teacherReviewRequired": false
+    }
+  ],
+  "vocabulary": {
+    "related": [
+      "Moses",
+      "Aaron",
+      "Pharaoh",
+      "Israelites",
+      "Egypt",
+      "Goshen",
+      "Nile",
+      "Blood",
+      "Frogs",
+      "Gnats",
+      "Flies",
+      "Livestock",
+      "Boils",
+      "Hail",
+      "Locusts",
+      "Darkness",
+      "Staff",
+      "River",
+      "Magicians",
+      "Furnace",
+      "Ashes",
+      "Wind",
+      "Crops",
+      "Prayer",
+      "Jesus",
+      "Plagues",
+      "God"
+    ],
+    "unrelated": [
+      "Giant",
+      "Sling",
+      "Harp",
+      "Ladder",
+      "Scroll"
+    ],
+    "entries": [
+      {
+        "id": "v-01",
+        "term": "Moses",
+        "category": "people",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-08"
+        ]
+      },
+      {
+        "id": "v-02",
+        "term": "Aaron",
+        "category": "people",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03"
+        ]
+      },
+      {
+        "id": "v-03",
+        "term": "Pharaoh",
+        "category": "people",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-09"
+        ]
+      },
+      {
+        "id": "v-04",
+        "term": "Israelites",
+        "category": "people",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-01",
+          "sn-04",
+          "sn-09"
+        ]
+      },
+      {
+        "id": "v-05",
+        "term": "Egypt",
+        "category": "places",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-09"
+        ]
+      },
+      {
+        "id": "v-06",
+        "term": "Goshen",
+        "category": "places",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-04",
+          "sn-05",
+          "sn-07",
+          "sn-09"
+        ]
+      },
+      {
+        "id": "v-07",
+        "term": "Nile",
+        "category": "places",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "id": "v-08",
+        "term": "Blood",
+        "category": "objects-actions",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "id": "v-09",
+        "term": "Frogs",
+        "category": "animals",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "id": "v-10",
+        "term": "Gnats",
+        "category": "animals",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "id": "v-11",
+        "term": "Flies",
+        "category": "animals",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "id": "v-12",
+        "term": "Livestock",
+        "category": "animals",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "id": "v-13",
+        "term": "Boils",
+        "category": "objects-actions",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "id": "v-14",
+        "term": "Hail",
+        "category": "weather",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "id": "v-15",
+        "term": "Locusts",
+        "category": "animals",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-08"
+        ]
+      },
+      {
+        "id": "v-16",
+        "term": "Darkness",
+        "category": "weather",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-09"
+        ]
+      },
+      {
+        "id": "v-17",
+        "term": "Staff",
+        "category": "objects-actions",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-01",
+          "sn-03",
+          "sn-07"
+        ]
+      },
+      {
+        "id": "v-18",
+        "term": "River",
+        "category": "places",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "id": "v-19",
+        "term": "Magicians",
+        "category": "people",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "id": "v-20",
+        "term": "Furnace",
+        "category": "objects-actions",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "id": "v-21",
+        "term": "Ashes",
+        "category": "objects-actions",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "id": "v-22",
+        "term": "Wind",
+        "category": "weather",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-08"
+        ]
+      },
+      {
+        "id": "v-23",
+        "term": "Crops",
+        "category": "objects-actions",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-07",
+          "sn-08"
+        ]
+      },
+      {
+        "id": "v-24",
+        "term": "Prayer",
+        "category": "concepts",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-02",
+          "sn-07",
+          "sn-08"
+        ]
+      },
+      {
+        "id": "v-25",
+        "term": "Jesus",
+        "category": "application",
+        "origin": "adapted",
+        "scope": "application",
+        "source": {
+          "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+          "section": "Theological application",
+          "page": 8,
+          "sourceParagraphIndex": 271
+        }
+      },
+      {
+        "id": "v-26",
+        "term": "Plagues",
+        "category": "concepts",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-01",
+          "sn-09"
+        ]
+      },
+      {
+        "id": "v-27",
+        "term": "God",
+        "category": "people",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-01",
+          "sn-09"
+        ]
+      },
+      {
+        "id": "v-28",
+        "term": "Giant",
+        "category": "suggested distractor",
+        "origin": "suggested",
+        "scope": "unrelated",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-29",
+        "term": "Sling",
+        "category": "suggested distractor",
+        "origin": "suggested",
+        "scope": "unrelated",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-30",
+        "term": "Harp",
+        "category": "suggested distractor",
+        "origin": "suggested",
+        "scope": "unrelated",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-31",
+        "term": "Ladder",
+        "category": "suggested distractor",
+        "origin": "suggested",
+        "scope": "unrelated",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-32",
+        "term": "Scroll",
+        "category": "suggested distractor",
+        "origin": "suggested",
+        "scope": "unrelated",
+        "teacherReviewRequired": true
+      }
+    ]
+  },
+  "characters": [
+    {
+      "id": "ch-01",
+      "name": "Moses",
+      "origin": "source",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-07",
+        "sn-08",
+        "sn-09"
+      ],
+      "clues": [
+        {
+          "text": "I prayed for Pharaoh and warned him about the plagues.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-02",
+            "sn-08"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch-02",
+      "name": "Aaron",
+      "origin": "source",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03"
+      ],
+      "clues": [
+        {
+          "text": "I held out my staff as God sent early plagues.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-01",
+            "sn-02",
+            "sn-03"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch-03",
+      "name": "Pharaoh",
+      "origin": "source",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-09"
+      ],
+      "clues": [
+        {
+          "text": "I was the stubborn king of Egypt and would not let Israel leave.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-01",
+            "sn-09"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch-04",
+      "name": "Israelites",
+      "origin": "source",
+      "sourceIds": [
+        "sn-04",
+        "sn-05",
+        "sn-07",
+        "sn-09"
+      ],
+      "clues": [
+        {
+          "text": "We were God’s people living in Goshen, spared from several plagues.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-04",
+            "sn-05",
+            "sn-07",
+            "sn-09"
+          ]
+        }
+      ]
+    }
+  ],
+  "matchingPairs": [
+    {
+      "id": "mp-01",
+      "left": "Pharaoh",
+      "right": "King",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-09"
+      ]
+    },
+    {
+      "id": "mp-02",
+      "left": "Moses",
+      "right": "Leader",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02",
+        "sn-08"
+      ]
+    },
+    {
+      "id": "mp-03",
+      "left": "Nile",
+      "right": "River",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    {
+      "id": "mp-04",
+      "left": "Boils",
+      "right": "Sores",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ]
+    },
+    {
+      "id": "mp-05",
+      "left": "Hail",
+      "right": "Ice",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ]
+    },
+    {
+      "id": "mp-06",
+      "left": "Locusts",
+      "right": "Grasshoppers",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-08"
+      ]
+    }
+  ],
+  "drawingPrompts": [
+    {
+      "id": "dp-01",
+      "prompt": "the Nile River turning to blood as Aaron raises his staff",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    {
+      "id": "dp-02",
+      "prompt": "frogs hopping into bowls and beds in Egyptian houses",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ]
+    },
+    {
+      "id": "dp-03",
+      "prompt": "huge hailstones falling from dark clouds over Egyptian fields",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ]
+    },
+    {
+      "id": "dp-04",
+      "prompt": "dark Egyptian houses beside the brightly lit homes of the Israelites",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-09"
+      ]
+    }
+  ],
+  "keyPhrases": [
+    {
+      "id": "kp-01",
+      "text": "The Lord is the ONE TRUE God.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-09"
+      ]
+    },
+    {
+      "id": "kp-02",
+      "text": "God showed His power through the plagues of Egypt.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-09"
+      ]
+    },
+    {
+      "id": "kp-03",
+      "text": "Pharaoh continued to refuse to release the Israelites.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02",
+        "sn-09"
+      ]
+    },
+    {
+      "id": "kp-04",
+      "text": "God spared His people from several of Egypt’s plagues.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04",
+        "sn-05",
+        "sn-07",
+        "sn-09"
+      ]
+    },
+    {
+      "id": "kp-05",
+      "text": "The Lord’s power is greater than the gods Egypt worshiped.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-09"
+      ]
+    },
+    {
+      "id": "kp-review-1",
+      "text": "The Lord is the one true God.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "theologicalApplications": [
+    {
+      "id": "ta-01",
+      "text": "The plagues showed Egypt that the Lord alone is the true God.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+        "section": "Important Idea/Application",
+        "page": 7,
+        "sourceParagraphIndex": 250
+      }
+    },
+    {
+      "id": "ta-02",
+      "text": "Pharaoh kept refusing to release Israel even when he saw God’s power.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+        "section": "Important Idea/Application",
+        "page": 8,
+        "sourceParagraphIndex": 258
+      }
+    },
+    {
+      "id": "ta-03",
+      "text": "The lesson contrasts the Lord with the Egyptian gods whom the people worshiped.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+        "section": "Important Idea/Application",
+        "page": 7,
+        "sourceParagraphIndex": 210
+      }
+    },
+    {
+      "id": "ta-04",
+      "text": "The lesson connects God’s power in Egypt with His sending Jesus to rescue people from sins.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+        "section": "Important Idea/Application",
+        "page": 8,
+        "sourceParagraphIndex": 271
+      }
+    },
+    {
+      "id": "ta-05",
+      "text": "The children are invited to confess in prayer that the Lord is the one true God.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+        "section": "Important Idea/Application",
+        "page": 8,
+        "sourceParagraphIndex": 273
+      }
+    }
+  ],
+  "preparedActivities": {
+    "drawPicture": {
+      "prompt": "the Nile River turning to blood as Aaron raises his staff",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    "multipleChoice": [
+      {
+        "id": "mc-01",
+        "question": "What did God turn the water of Egypt into?",
+        "correctAnswer": "Blood",
+        "choices": [
+          {
+            "text": "Blood",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Sand",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Wine",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "sourceQuestionIds": [
+          "q-02"
+        ],
+        "teacherReviewRequired": true,
+        "source": {
+          "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+          "section": "Story teaching",
+          "page": 1,
+          "sourceParagraphIndex": 28
+        }
+      },
+      {
+        "id": "mc-02",
+        "question": "Which plague came after the blood?",
+        "correctAnswer": "Frogs",
+        "choices": [
+          {
+            "text": "Frogs",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Locusts",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Hail",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02",
+          "sn-03"
+        ],
+        "sourceQuestionIds": [
+          "q-06"
+        ],
+        "teacherReviewRequired": true,
+        "source": {
+          "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+          "section": "Story teaching",
+          "page": 2,
+          "sourceParagraphIndex": 66
+        }
+      },
+      {
+        "id": "mc-03",
+        "question": "Who did God keep the plagues away from?",
+        "correctAnswer": "The Israelites",
+        "choices": [
+          {
+            "text": "The Israelites",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "The Egyptians",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "The frogs",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ],
+        "sourceQuestionIds": [
+          "q-09"
+        ],
+        "teacherReviewRequired": true,
+        "source": {
+          "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+          "section": "Story teaching",
+          "page": 3,
+          "sourceParagraphIndex": 89
+        }
+      },
+      {
+        "id": "mc-04",
+        "question": "After the locusts left, what did Pharaoh do?",
+        "correctAnswer": "He still refused to free Israel",
+        "choices": [
+          {
+            "text": "He still refused to free Israel",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "He let the Israelites go",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "He believed in the Lord",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-08"
+        ],
+        "sourceQuestionIds": [
+          "q-22"
+        ],
+        "teacherReviewRequired": true,
+        "source": {
+          "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+          "section": "Story teaching",
+          "page": 6,
+          "sourceParagraphIndex": 181
+        }
+      },
+      {
+        "id": "mc-05",
+        "question": "How long did darkness cover Egypt?",
+        "correctAnswer": "Three days",
+        "choices": [
+          {
+            "text": "Three days",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "One day",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Seven days",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-09"
+        ],
+        "sourceQuestionIds": [
+          "q-23"
+        ],
+        "teacherReviewRequired": true,
+        "source": {
+          "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+          "section": "Story teaching",
+          "page": 6,
+          "sourceParagraphIndex": 192
+        }
+      },
+      {
+        "id": "mc-06",
+        "question": "What did the plagues teach Egypt?",
+        "correctAnswer": "The Lord is the one true God",
+        "choices": [
+          {
+            "text": "The Lord is the one true God",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Pharaoh was the true god",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "The Egyptian gods were stronger",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01",
+          "sn-09"
+        ],
+        "sourceQuestionIds": [
+          "q-31"
+        ],
+        "teacherReviewRequired": true,
+        "source": {
+          "filename": "OT 29 Lesson (The Plagues of Egypt).odt",
+          "section": "Important Idea",
+          "page": 7,
+          "sourceParagraphIndex": 247
+        }
+      }
+    ],
+    "trueFalse": {
+      "statement": "Pharaoh asked Moses to pray for the frogs to leave.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ],
+      "teacherReviewRequired": false,
+      "factId": "tf-10"
+    },
+    "firstLetters": {
+      "reference": "Deuteronomy 10:17",
+      "verse": "For the LORD your God is God of gods and Lord of lords, the great, mighty, and awesome God,",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "oddWords": {
+      "related": [
+        "BLOOD",
+        "FROGS",
+        "GNATS",
+        "HAIL",
+        "LOCUSTS"
+      ],
+      "unrelated": [
+        "Birds",
+        "Drought",
+        "Flood",
+        "Robe",
+        "Hat"
+      ],
+      "origin": "adapted",
+      "unrelatedOrigin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "unscrambleWords": {
+      "answers": [
+        "FROGS",
+        "GNATS"
+      ],
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02",
+        "sn-03"
+      ]
+    },
+    "checkboxes": {
+      "correct": [
+        "Blood",
+        "Frogs",
+        "Gnats",
+        "Hail",
+        "Locusts"
+      ],
+      "incorrect": [
+        "Giant",
+        "Sling",
+        "Harp",
+        "Ladder",
+        "Scroll"
+      ],
+      "origin": "adapted",
+      "incorrectOrigin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "whoAmI": {
+      "clue": "I was the king of Egypt who refused to let God’s people go. Who am I?",
+      "answer": "Pharaoh",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-09"
+      ]
+    },
+    "matchWords": [
+      {
+        "id": "mp-01",
+        "left": "Pharaoh",
+        "right": "Stubborn",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-01",
+          "sn-09"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-02",
+        "left": "Darkness",
+        "right": "Three days",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-02",
+          "sn-08"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-03",
+        "left": "River",
+        "right": "Blood",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-04",
+        "left": "Boils",
+        "right": "Sores",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "id": "mp-05",
+        "left": "Hail",
+        "right": "Ice",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "id": "mp-06",
+        "left": "Locusts",
+        "right": "Grasshoppers",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-08"
+        ]
+      }
+    ],
+    "finishVerse": {
+      "reference": "Deuteronomy 10:17",
+      "markedVerse": "For the [LORD] your [God] is God of [gods] and [Lord] of lords, the [great], [mighty], and [awesome] God,",
+      "sourceVerse": "For the LORD your God is God of gods and Lord of lords, the great, mighty, and awesome God,",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "unscrambleVerse": {
+      "reference": "Deuteronomy 10:17",
+      "markedVerse": "For the [LORD] your [God] is God of [gods] and [Lord] of lords, the [great], [mighty], and [awesome] God,",
+      "sourceVerse": "For the LORD your God is God of gods and Lord of lords, the great, mighty, and awesome God,",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "circleMistakes": {
+      "paragraph": "God sent the first plague by turning the Nile into milk. Next, birds filled Egyptian houses. When Aaron struck the dust, it became ants. God sent flies to attack the Israelites but spared the rest of Egypt. In the fifth plague, Israel’s livestock died. A terrible snowstorm struck Egypt, and then bees ate the remaining crops. The ninth plague brought sunlight for three days.",
+      "mistakeCount": 8,
+      "mistakes": [
+        {
+          "incorrect": "milk",
+          "correction": "blood"
+        },
+        {
+          "incorrect": "birds",
+          "correction": "frogs"
+        },
+        {
+          "incorrect": "ants",
+          "correction": "gnats"
+        },
+        {
+          "incorrect": "flies to attack the Israelites",
+          "correction": "flies to attack the Egyptians"
+        },
+        {
+          "incorrect": "Israel’s livestock died",
+          "correction": "Egyptian livestock died"
+        },
+        {
+          "incorrect": "snowstorm",
+          "correction": "hailstorm"
+        },
+        {
+          "incorrect": "bees",
+          "correction": "locusts"
+        },
+        {
+          "incorrect": "sunlight",
+          "correction": "darkness"
+        }
+      ],
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07",
+        "sn-08",
+        "sn-09"
+      ],
+      "teacherReviewRequired": true
+    },
+    "mediumWordSearch": {
+      "words": [
+        "BLOOD",
+        "FROGS",
+        "GNATS",
+        "FLIES",
+        "HAIL",
+        "BOILS"
+      ],
+      "origin": "adapted"
+    },
+    "trueFalseMaze": {
+      "statement": "The Israelites were stuck in darkness for three days.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-09"
+      ],
+      "teacherReviewRequired": true,
+      "factId": "tf-13"
+    },
+    "bigIdeaCryptogram": {
+      "phrase": "The Lord is the one true God.",
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "sourceIds": []
+    },
+    "upsideDownVerse": {
+      "reference": "Deuteronomy 10:17",
+      "verse": "For the LORD your God is God of gods and Lord of lords, the great, mighty, and awesome God,",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "connectBigIdea": {
+      "phrase": "God showed His power through the plagues of Egypt.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-09"
+      ]
+    },
+    "pixelPicture": {
+      "phrase": "The Lord sent powerful plagues to show His power in Egypt.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-09"
+      ]
+    },
+    "finishStory": {
+      "markedParagraph": "God sent [BLOOD] as the first plague, turning Egypt’s water red. Next, [FROGS] filled the land, but Pharaoh changed his [mind] after they went away. Then dust turned into [GNATS], and swarms of [FLIES] filled Egypt while Goshen, were the Israelites lived, was spared. In the fifth plague, the Egyptians’ [LIVESTOCK] died, but the Israelites’ animals survived. Moses scattered ashes, and painful [BOILS] broke out on people and animals. Next, a great storm of [HAIL] struck Egypt, but not the Israelites. The eighth plague brought [LOCUSTS], which ate what was left after the hail. For the ninth plague, thick [DARKNESS] covered Egypt for three days, but the Israelites had [light]. Despite these plagues, Pharaoh still refused to let God’s people [go]. ",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07",
+        "sn-08",
+        "sn-09"
+      ],
+      "teacherReviewRequired": true
+    },
+    "storyOrder": [
+      {
+        "order": 1,
+        "text": "God turned Egypt’s water into blood, but Pharaoh refused to free the Israelites.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "order": 2,
+        "text": "God sent frogs across Egypt and then turned dust into gnats.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02",
+          "sn-03"
+        ]
+      },
+      {
+        "order": 3,
+        "text": "God sent swarms of flies into Egypt but kept them away from Goshen.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "order": 4,
+        "text": "The Egyptians’ livestock died, but God spared Israel’s animals.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "order": 5,
+        "text": "God caused painful boils to break out on Egyptian people and animals.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "order": 6,
+        "text": "A powerful hailstorm struck Egypt, but God spared Goshen.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "order": 7,
+        "text": "God sent locusts to eat the plants left after the hailstorm.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-08"
+        ]
+      },
+      {
+        "order": 8,
+        "text": "Darkness covered Egypt for three days, but the Israelites had light.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-09"
+        ]
+      }
+    ],
+    "sortStory": [
+      {
+        "statement": "God turned the water of the Nile into blood.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": false,
+        "factId": "tf-01"
+      },
+      {
+        "statement": "Pharaoh’s magicians successfully made gnats.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": true,
+        "factId": "tf-03"
+      },
+      {
+        "statement": "God spared Goshen from swarms of flies.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ],
+        "teacherReviewRequired": false,
+        "factId": "tf-04"
+      },
+      {
+        "statement": "The Israelites’ livestock died in the fifth plague.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-05"
+        ],
+        "teacherReviewRequired": true,
+        "factId": "tf-05"
+      },
+      {
+        "statement": "God caused painful boils on Egyptian people.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ],
+        "teacherReviewRequired": false,
+        "factId": "tf-06"
+      },
+      {
+        "statement": "The hailstorm struck the Israelites in Goshen.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-07"
+        ],
+        "teacherReviewRequired": true,
+        "factId": "tf-07"
+      },
+      {
+        "statement": "Locusts ate plants that survived the hail.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-08"
+        ],
+        "teacherReviewRequired": false,
+        "factId": "tf-08"
+      },
+      {
+        "statement": "The darkness over Egypt lasted seven days.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-09"
+        ],
+        "teacherReviewRequired": true,
+        "factId": "tf-09"
+      }
+    ],
+    "drawStory": [
+      {
+        "prompt": "God turned Egypt’s water into blood, but Pharaoh refused to free the Israelites.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "prompt": "God sent frogs across Egypt and then turned dust into gnats.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02",
+          "sn-03"
+        ]
+      },
+      {
+        "prompt": "God sent swarms of flies into Egypt but kept them away from Goshen.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "prompt": "A powerful hailstorm struck Egypt, but God spared Goshen.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "prompt": "God sent locusts to eat the plants left after the hailstorm.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-08"
+        ]
+      },
+      {
+        "prompt": "Darkness covered Egypt for three days, but the Israelites had light.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-09"
+        ]
+      }
+    ],
+    "wordSearch": {
+      "words": [
+        "BLOOD",
+        "FROGS",
+        "GNATS",
+        "FLIES",
+        "LIVESTOCK",
+        "BOILS",
+        "HAIL",
+        "LOCUSTS",
+        "DARKNESS",
+        "PHARAOH",
+        "MOSES",
+        "GOSHEN"
+      ],
+      "origin": "adapted"
+    },
+    "verseCryptogram": {
+      "reference": "Deuteronomy 10:17",
+      "verse": "For the LORD your God is God of gods and Lord of lords, the great, mighty, and awesome God,",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "crossword": [
+      {
+        "answer": "BLOOD",
+        "clue": "What did the Nile water turn into?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "answer": "FROGS",
+        "clue": "Which animals covered Egypt in the second plague?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "answer": "GNATS",
+        "clue": "What tiny insects came from the dust?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "answer": "FLIES",
+        "clue": "Which buzzing insects did God keep out of Goshen?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "answer": "LIVESTOCK",
+        "clue": "What farm animals died in the fifth plague?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "answer": "BOILS",
+        "clue": "What painful sores struck the Egyptians?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "answer": "HAIL",
+        "clue": "What fell from the sky during the seventh plague?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "answer": "LOCUSTS",
+        "clue": "What insects ate what remained after the hail?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-08"
+        ]
+      },
+      {
+        "answer": "DARKNESS",
+        "clue": "What covered Egypt for three days?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-09"
+        ]
+      }
+    ],
+    "spiralVerse": {
+      "reference": "Deuteronomy 10:17",
+      "verse": "For the LORD your God is God of gods and Lord of lords, the great, mighty, and awesome God,",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "connectVerse": {
+      "reference": "Deuteronomy 10:17",
+      "verse": "For the LORD your God is God of gods and Lord of lords, the great, mighty, and awesome God,",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    }
+  },
+  "moduleReadiness": [
+    {
+      "moduleName": "Draw a Picture",
+      "moduleId": "draw-picture",
+      "size": "Small",
+      "preparedActivityKey": "drawPicture",
+      "status": "READY",
+      "contentValidation": "Prepared source-grounded content; generator not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Requires teacher/content preflight before publication."
+    },
+    {
+      "moduleName": "Multiple Choice Question",
+      "moduleId": "multiple-choice",
+      "size": "Small",
+      "preparedActivityKey": "multipleChoice",
+      "status": "READY",
+      "contentValidation": "Prepared source-grounded content; generator not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Requires teacher/content preflight before publication."
+    },
+    {
+      "moduleName": "True or False Questions",
+      "moduleId": "true-false",
+      "size": "Small",
+      "preparedActivityKey": "trueFalse",
+      "status": "READY",
+      "contentValidation": "Prepared source-grounded content; generator not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Requires teacher/content preflight before publication."
+    },
+    {
+      "moduleName": "First Letter Challenge",
+      "moduleId": "first-letters",
+      "size": "Small",
+      "preparedActivityKey": "firstLetters",
+      "status": "READY",
+      "contentValidation": "Prepared source-grounded content; generator not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Requires teacher/content preflight before publication."
+    },
+    {
+      "moduleName": "What’s Doesn’t Belong?",
+      "moduleId": "odd-words",
+      "size": "Small",
+      "preparedActivityKey": "oddWords",
+      "status": "READY",
+      "contentValidation": "Prepared source-grounded content; generator not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Requires teacher/content preflight before publication."
+    },
+    {
+      "moduleName": "Unscramble the Words",
+      "moduleId": "unscramble-words",
+      "size": "Small",
+      "preparedActivityKey": "unscrambleWords",
+      "status": "READY",
+      "contentValidation": "Prepared source-grounded content; generator not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Requires teacher/content preflight before publication."
+    },
+    {
+      "moduleName": "Checkboxes",
+      "moduleId": "checkboxes",
+      "size": "Small",
+      "preparedActivityKey": "checkboxes",
+      "status": "READY",
+      "contentValidation": "Prepared source-grounded content; generator not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Requires teacher/content preflight before publication."
+    },
+    {
+      "moduleName": "Who Am I?",
+      "moduleId": "who-am-i",
+      "size": "Small",
+      "preparedActivityKey": "whoAmI",
+      "status": "READY",
+      "contentValidation": "Prepared source-grounded content; generator not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Requires teacher/content preflight before publication."
+    },
+    {
+      "moduleName": "Match the Words",
+      "moduleId": "match-words",
+      "size": "Medium",
+      "preparedActivityKey": "matchWords",
+      "status": "READY",
+      "contentValidation": "Prepared source-grounded content; generator not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Requires teacher/content preflight before publication."
+    },
+    {
+      "moduleName": "Finish the Verse",
+      "moduleId": "finish-verse",
+      "size": "Medium",
+      "preparedActivityKey": "finishVerse",
+      "status": "READY",
+      "contentValidation": "Prepared source-grounded content; generator not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Requires teacher/content preflight before publication."
+    },
+    {
+      "moduleName": "Unscramble the Verse",
+      "moduleId": "unscramble-verse",
+      "size": "Medium",
+      "preparedActivityKey": "unscrambleVerse",
+      "status": "READY",
+      "contentValidation": "Prepared source-grounded content; generator not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Requires teacher/content preflight before publication."
+    },
+    {
+      "moduleName": "Circle the Mistakes",
+      "moduleId": "circle-mistakes",
+      "size": "Medium",
+      "preparedActivityKey": "circleMistakes",
+      "status": "READY",
+      "contentValidation": "Prepared source-grounded content; generator not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Requires teacher/content preflight before publication."
+    },
+    {
+      "moduleName": "Word Search (Medium)",
+      "moduleId": "medium-word-search",
+      "size": "Medium",
+      "preparedActivityKey": "mediumWordSearch",
+      "status": "READY",
+      "contentValidation": "Prepared source-grounded content; generator not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Requires teacher/content preflight before publication."
+    },
+    {
+      "moduleName": "True or False Maze",
+      "moduleId": "true-false-maze",
+      "size": "Medium",
+      "preparedActivityKey": "trueFalseMaze",
+      "status": "READY",
+      "contentValidation": "Prepared source-grounded content; generator not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Requires teacher/content preflight before publication."
+    },
+    {
+      "moduleName": "Solve the Code",
+      "moduleId": "big-idea-cryptogram",
+      "size": "Medium",
+      "preparedActivityKey": "bigIdeaCryptogram",
+      "status": "READY",
+      "contentValidation": "Prepared source-grounded content; generator not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Requires teacher/content preflight before publication."
+    },
+    {
+      "moduleName": "Upside Down Verse",
+      "moduleId": "upside-down-verse",
+      "size": "Medium",
+      "preparedActivityKey": "upsideDownVerse",
+      "status": "READY",
+      "contentValidation": "Prepared source-grounded content; generator not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Requires teacher/content preflight before publication."
+    },
+    {
+      "moduleName": "Connect the Phrase",
+      "moduleId": "connect-big-idea",
+      "size": "Medium",
+      "preparedActivityKey": "connectBigIdea",
+      "status": "READY",
+      "contentValidation": "Prepared source-grounded content; generator not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Requires teacher/content preflight before publication."
+    },
+    {
+      "moduleName": "Pixel Picture",
+      "moduleId": "pixel-picture",
+      "size": "Medium",
+      "preparedActivityKey": "pixelPicture",
+      "status": "READY",
+      "contentValidation": "Prepared source-grounded content; generator not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Requires teacher/content preflight before publication."
+    },
+    {
+      "moduleName": "Finish the Story",
+      "moduleId": "finish-story",
+      "size": "Large",
+      "preparedActivityKey": "finishStory",
+      "status": "READY",
+      "contentValidation": "Prepared source-grounded content; generator not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Requires teacher/content preflight before publication."
+    },
+    {
+      "moduleName": "Story Order",
+      "moduleId": "story-order",
+      "size": "Large",
+      "preparedActivityKey": "storyOrder",
+      "status": "READY",
+      "contentValidation": "Prepared source-grounded content; generator not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Requires teacher/content preflight before publication."
+    },
+    {
+      "moduleName": "Sort the Story",
+      "moduleId": "sort-story",
+      "size": "Large",
+      "preparedActivityKey": "sortStory",
+      "status": "READY",
+      "contentValidation": "Prepared source-grounded content; generator not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Requires teacher/content preflight before publication."
+    },
+    {
+      "moduleName": "Draw the Story",
+      "moduleId": "draw-story",
+      "size": "Large",
+      "preparedActivityKey": "drawStory",
+      "status": "READY",
+      "contentValidation": "Prepared source-grounded content; generator not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Requires teacher/content preflight before publication."
+    },
+    {
+      "moduleName": "Word Search (Large)",
+      "moduleId": "word-search",
+      "size": "Large",
+      "preparedActivityKey": "wordSearch",
+      "status": "READY",
+      "contentValidation": "Prepared source-grounded content; generator not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Requires teacher/content preflight before publication."
+    },
+    {
+      "moduleName": "Verse Cryptogram",
+      "moduleId": "verse-cryptogram",
+      "size": "Large",
+      "preparedActivityKey": "verseCryptogram",
+      "status": "ADAPTATION NEEDED",
+      "contentValidation": "Prepared source-grounded content; generator not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Generator-specific test required. Requires teacher/content preflight before publication."
+    },
+    {
+      "moduleName": "Crossword",
+      "moduleId": "crossword",
+      "size": "Large",
+      "preparedActivityKey": "crossword",
+      "status": "ADAPTATION NEEDED",
+      "contentValidation": "Prepared source-grounded content; generator not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Generator-specific test required. Requires teacher/content preflight before publication."
+    },
+    {
+      "moduleName": "Spiral Verse",
+      "moduleId": "spiral-verse",
+      "size": "Large",
+      "preparedActivityKey": "spiralVerse",
+      "status": "ADAPTATION NEEDED",
+      "contentValidation": "Prepared source-grounded content; generator not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Generator-specific test required. Requires teacher/content preflight before publication."
+    },
+    {
+      "moduleName": "Connect the Verse",
+      "moduleId": "connect-verse",
+      "size": "Large",
+      "preparedActivityKey": "connectVerse",
+      "status": "ADAPTATION NEEDED",
+      "contentValidation": "Prepared source-grounded content; generator not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Generator-specific test required. Requires teacher/content preflight before publication."
+    }
+  ],
+  "reviewFlags": [
+    {
+      "id": "rf-01",
+      "priority": "high",
+      "type": "scope",
+      "text": "This lesson teaches plagues 1–9 only. Plague 1 is a recap from the prior lesson; do not add the tenth plague or Passover to printed activities.",
+      "affectedModules": [
+        "draw-picture",
+        "multiple-choice",
+        "true-false",
+        "first-letters",
+        "odd-words",
+        "unscramble-words",
+        "checkboxes",
+        "who-am-i",
+        "match-words",
+        "finish-verse",
+        "unscramble-verse",
+        "circle-mistakes",
+        "medium-word-search",
+        "true-false-maze",
+        "big-idea-cryptogram",
+        "upside-down-verse",
+        "connect-big-idea",
+        "pixel-picture",
+        "finish-story",
+        "story-order",
+        "sort-story",
+        "draw-story",
+        "word-search",
+        "verse-cryptogram",
+        "crossword",
+        "spiral-verse",
+        "connect-verse"
+      ]
+    },
+    {
+      "id": "rf-02",
+      "priority": "high",
+      "type": "scripture-excerpt",
+      "text": "Source ESV Deuteronomy 10:17a differs from proposed BSB excerpt. Confirm BSB selection, excerpt ending and punctuation using the Review Studio; Scripture-rights clearance remains unapproved.",
+      "affectedModules": [
+        "first-letters",
+        "finish-verse",
+        "unscramble-verse",
+        "upside-down-verse",
+        "verse-cryptogram",
+        "spiral-verse",
+        "connect-verse"
+      ]
+    },
+    {
+      "id": "rf-03",
+      "priority": "high",
+      "type": "suggested-facts",
+      "text": "Approve six newly composed false statements. Ensure none are misleading, especially Goshen and Pharaoh’s changing responses.",
+      "affectedModules": [
+        "true-false",
+        "sort-story",
+        "true-false-maze"
+      ]
+    },
+    {
+      "id": "rf-04",
+      "priority": "high",
+      "type": "multiple-choice",
+      "text": "Review both suggested incorrect choices for each of the six Multiple Choice questions.",
+      "affectedModules": [
+        "multiple-choice"
+      ]
+    },
+    {
+      "id": "rf-05",
+      "priority": "medium",
+      "type": "drawing",
+      "text": "Review four concise scene prompts and six complete Draw the Story captions. The latter reuse Story Order wording.",
+      "affectedModules": [
+        "draw-picture",
+        "draw-story"
+      ]
+    },
+    {
+      "id": "rf-06",
+      "priority": "medium",
+      "type": "distractors",
+      "text": "Approve the plausible but unrelated Odd Words and Checkboxes items: Giant, Sling, Harp, Ladder, Scroll.",
+      "affectedModules": [
+        "odd-words",
+        "checkboxes"
+      ]
+    },
+    {
+      "id": "rf-07",
+      "priority": "medium",
+      "type": "circle-mistakes",
+      "text": "Review eight deliberately incorrect words/phrases and all corrections in Circle Mistakes.",
+      "affectedModules": [
+        "circle-mistakes"
+      ]
+    },
+    {
+      "id": "rf-08",
+      "priority": "medium",
+      "type": "story-adaptation",
+      "text": "The source Story Notes are nine brief plague labels, not narrative sentences. Review adapted chronological captions and Finish the Story narrative.",
+      "affectedModules": [
+        "story-order",
+        "finish-story",
+        "draw-story"
+      ]
+    },
+    {
+      "id": "rf-09",
+      "priority": "medium",
+      "type": "theology",
+      "text": "Review adapted references to Egyptian gods and the source’s claim that plagues defeated named gods; do not present these comparative statements as independently verified historical facts.",
+      "affectedModules": [
+        "big-idea-cryptogram",
+        "connect-big-idea",
+        "pixel-picture"
+      ]
+    },
+    {
+      "id": "rf-10",
+      "priority": "medium",
+      "type": "sensitive-content",
+      "text": "Review age-appropriate references to livestock death, illness, judgment and the deferred tenth plague.",
+      "affectedModules": [
+        "finish-story",
+        "story-order",
+        "multiple-choice",
+        "sort-story"
+      ]
+    },
+    {
+      "id": "rf-11",
+      "priority": "medium",
+      "type": "crossword",
+      "text": "Schema-valid word clues are not proof a crossword grid can be generated. Run the actual crossword builder.",
+      "affectedModules": [
+        "crossword"
+      ]
+    },
+    {
+      "id": "rf-12",
+      "priority": "medium",
+      "type": "preset-testing",
+      "text": "Run all 27 module preflight checks and all three numbered worksheet presets in the real application; these tests were not run here.",
+      "affectedModules": [
+        "draw-picture",
+        "multiple-choice",
+        "true-false",
+        "first-letters",
+        "odd-words",
+        "unscramble-words",
+        "checkboxes",
+        "who-am-i",
+        "match-words",
+        "finish-verse",
+        "unscramble-verse",
+        "circle-mistakes",
+        "medium-word-search",
+        "true-false-maze",
+        "big-idea-cryptogram",
+        "upside-down-verse",
+        "connect-big-idea",
+        "pixel-picture",
+        "finish-story",
+        "story-order",
+        "sort-story",
+        "draw-story",
+        "word-search",
+        "verse-cryptogram",
+        "crossword",
+        "spiral-verse",
+        "connect-verse"
+      ]
+    },
+    {
+      "id": "rf-13",
+      "priority": "low",
+      "type": "original-question-bank",
+      "text": "The source contains many nearly identical Pharaoh questions; all have been preserved, but only a small distinct set is used for prepared Multiple Choice.",
+      "affectedModules": [
+        "multiple-choice"
+      ]
+    },
+    {
+      "id": "rf-14",
+      "priority": "low",
+      "type": "big-idea-capitalization",
+      "text": "Big Idea capitalization normalized to “The Lord is the ONE TRUE God.” following the updated God capitalization rule.",
+      "affectedModules": [
+        "big-idea-cryptogram"
+      ]
+    }
+  ],
+  "validation": {
+    "basis": "Original conversion tests predate teacher-approved BSB; revalidate actual engines and content after export.",
+    "allTextChecksPassed": false,
+    "checks": [
+      {
+        "check": "Nine Story Notes preserved literally from ODT",
+        "passed": true,
+        "detail": 9
+      },
+      {
+        "check": "Story Note order, IDs and source provenance",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "All original teaching questions preserved",
+        "passed": true,
+        "detail": 31
+      },
+      {
+        "check": "Question IDs unique",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "All 27 prepared activity keys populated",
+        "passed": true,
+        "detail": 27
+      },
+      {
+        "check": "All 27 module IDs unique",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Only four small drawing candidates",
+        "passed": true,
+        "detail": 4
+      },
+      {
+        "check": "All drawing prompts grammatical and <=105 chars",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Match labels one or two words, six distinct pairs",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Multiple Choice 4–6 and unique questions",
+        "passed": true,
+        "detail": 6
+      },
+      {
+        "check": "Multiple Choice choices 1 correct + 2 suggested wrong",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Multiple Choice text lengths",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Multiple Choice source questions exist",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "12–16 balanced nonduplicate true/false facts",
+        "passed": true,
+        "detail": "14 facts: 8 true, 6 false"
+      },
+      {
+        "check": "All false facts suggested and marked teacher-review",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Preset 3 truth statements ten nonoverlapping IDs",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Sort Story mixed true/false and within 115",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Small True/False and maze length <=80 / <=65",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Four alternative distinct unused facts",
+        "passed": true,
+        "detail": 4
+      },
+      {
+        "check": "Fact selections reconstruct fact bank exactly",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "All sourceIds point to preserved notes",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Odd Words counts, length, disjointness",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Checkboxes distinct true and suggested incorrect terms",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Who Am I clue <=120",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Unscramble Words two short unique words",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "BSB memory-verse excerpt recorded and teacher-flagged",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "All seven verse modules use consistent BSB excerpt",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Finish/unscramble verse marked words exactly restore text",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Verse brackets 2–8, <=9 chars",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Circle Mistakes has eight unique correction phrases",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Medium/large wordsearch banks unique, legal sizes",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Big Idea cryptogram <=62 characters",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Connect Big Idea 4–20 words",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Pixel Picture phrase 30–85 chars",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Finish Story <=1100 chars, 6–12 blanks",
+        "passed": true,
+        "detail": [
+          750,
+          9
+        ]
+      },
+      {
+        "check": "Story Order 5–8 complete ordered sentences <=115",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Draw Story 4–6 complete captions <=105, sourced from Story Order",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Crossword nine unique answers 3–12, clues <=85",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Every module properly disclaims live generator testing",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Publication stays unapproved",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "All nested sourceIds resolve to original story notes",
+        "passed": true,
+        "detail": ""
+      }
+    ],
+    "actualGeneratorTested": false,
+    "jsonParseTested": true
+  },
+  "publication": {
+    "status": "approved",
+    "approved": true,
+    "notes": "Teacher approval, exact BSB excerpt selection and separate Scripture rights clearance are pending. Not published.",
+    "teacherSignoff": {
+      "reviewer": "Andrew Doane",
+      "date": "2026-11-04",
+      "notes": "Approved with verified BSB verse through Curriculum Review Studio"
+    },
+    "scriptureRights": {
+      "status": "cleared",
+      "basis": "Berean Standard Bible (BSB), dedicated to the public domain on April 30, 2023. Official terms: https://berean.bible/terms.htm. Scripture text confirmed against https://bereanbible.com/bsb.txt.",
+      "reviewedBy": "Andrew Doane",
+      "reviewedOn": "2026-11-04"
+    },
+    "resolvedReviewFlagIds": []
+  }
+}
