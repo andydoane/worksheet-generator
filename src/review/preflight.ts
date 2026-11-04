@@ -1,6 +1,9 @@
 import {MODULES,type ModuleId} from '../modules.ts';
 import {checkReviewContent,type Lesson} from './model.ts';
-import {buildWorksheetRecipe,WORKSHEET_RECIPES,type LessonWorksheetSource} from '../worksheetRecipes.ts';
+import {
+ buildWorksheetRecipe,WORKSHEET_RECIPES,RecipeContentConflictError,
+ type LessonWorksheetSource,
+} from '../worksheetRecipes.ts';
 
 export const PREPARED_ACTIVITY_KEYS:Record<ModuleId,string>={
  'draw-picture':'drawPicture',
@@ -39,6 +42,9 @@ export type ReviewIssue={
  taskId:string;
  fieldId:string;
  moduleId?:ModuleId;
+ recipeId?:string;
+ slot?:string;
+ conflicts?:string[];
 };
 export type ReviewPreflight={
  convertedCount:number;
@@ -61,6 +67,13 @@ const verseIds=new Set([
  * module in a focused advanced editor, never a nonfunctional error link.
  */
 export function reviewIssueTarget(message:string):ReviewIssue{
+ // Keep compatibility with legacy preset errors that were plain strings.
+ // Typed RecipeContentConflictError carries these fields directly.
+ const presetActivity=message.match(/^Preset [1-3]:.*?\b(medium-word-search|word-search|connect-big-idea|odd-words|match-words)\b/u)?.[1];
+ if(presetActivity){
+  const target=reviewIssueTarget(presetActivity+': '+message);
+  return {...target,id:target.taskId+':'+message,message};
+ }
  if(message.startsWith('Finish the Story')||message.startsWith('finishStory'))
   return issue(message,'finish-story','review-field-finish-story','finish-story');
  if(message.startsWith('Multiple Choice ')){
@@ -102,6 +115,10 @@ export function reviewIssueTarget(message:string):ReviewIssue{
    return issue(message,'checkboxes','review-field-checkboxes',id);
   if(id==='match-words')
    return issue(message,'match-words','review-field-match-words',id);
+  if(id==='connect-big-idea')
+   return issue(message,'connect-phrase','review-field-connect-phrase',id);
+  if(id==='word-search'||id==='medium-word-search')
+   return issue(message,id,'review-field-'+id,id);
   if(verseIds.has(id))
    return issue(message,'bsb-verse','review-field-bsb',id);
   return issue(message,'module:'+id,'review-module-json',id);
@@ -111,6 +128,7 @@ export function reviewIssueTarget(message:string):ReviewIssue{
 
 export function buildReviewPreflight(lesson:Lesson):ReviewPreflight{
  const messages=checkReviewContent(lesson);
+ const recipeIssues:ReviewIssue[]=[];
  // All 27 activities may convert successfully while an assembled booklet
  // still fails (for example, two regions need distinct approved content).
  // Check the actual three numbered recipes after content checks are clean.
@@ -122,7 +140,14 @@ export function buildReviewPreflight(lesson:Lesson):ReviewPreflight{
     if(result.openSlots.length)
      messages.push(recipe.name+': '+result.openSlots.length+' activity regions are empty.');
    }catch(error){
-    messages.push(recipe.name+': '+(error instanceof Error?error.message:String(error)));
+    if(error instanceof RecipeContentConflictError){
+     const mapped=reviewIssueTarget(error.moduleId+': '+error.message);
+     recipeIssues.push({...mapped,
+      id:error.recipeId+':'+error.slot+':'+mapped.taskId,
+      message:error.message,recipeId:error.recipeId,slot:error.slot,
+      conflicts:[...error.conflicts],
+     });
+    }else messages.push(recipe.name+': '+(error instanceof Error?error.message:String(error)));
    }
   }
  }
@@ -137,8 +162,9 @@ export function buildReviewPreflight(lesson:Lesson):ReviewPreflight{
    const record=lesson.preparedActivities?.[PREPARED_ACTIVITY_KEYS[id]];
    // A dedicated review form cannot edit a module that has no prepared
    // content yet. Send those cases to the isolated module-data editor.
-   if(id==='match-words'||record&&(!Array.isArray(record)||record.length>0))return target;
+   if(['match-words','connect-big-idea','word-search','medium-word-search'].includes(id)||
+    record&&(!Array.isArray(record)||record.length>0))return target;
    return {...target,taskId:'module:'+id,fieldId:'review-module-json'};
-  });
+  }).concat(recipeIssues);
  return {convertedCount,totalCount:27,issues};
 }
