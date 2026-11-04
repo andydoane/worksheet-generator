@@ -86,7 +86,7 @@ test('Crossword highlights invalid fields and distinguishes disconnected grids f
  const issues=crosswordIssues(invalid);
  for(const kind of ['enter an answer','duplicates entry','3–12 A–Z','cannot contain commas','1–85 characters'])
   assert.ok(issues.some(issue=>issue.message.includes(kind)),kind+': '+JSON.stringify(issues));
- assert.ok(issues.some(issue=>issue.index===1&&issue.field==='answer'));
+ assert.ok(issues.some(issue=>issue.index===2&&issue.field==='answer'));
  assert.ok(issues.some(issue=>issue.index===4&&issue.field==='clue'));
  const disconnected=['ABC','DEF','GHI','JKL','MNO','PQR'].map((answer,index)=>({
   answer,clue:'Clue '+(index+1),
