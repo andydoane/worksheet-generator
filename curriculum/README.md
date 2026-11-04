@@ -2,6 +2,12 @@
 
 This directory holds **source-preserving curriculum interchange data**, not saved worksheet drafts. Only the signed-off JSON in `curriculum/approved/*.lesson.json` is bundled into the public app after teacher and Scripture-rights review; review-stage files are excluded.
 
+## Finish Story and Medium Solve the Code authoring rules (PR 17n)
+
+Finish the Story allows 6–12 bracketed words and always retains the emphasized Story Note words as an ordered subsequence. More teacher-approved missing words may be inserted between them. Do not rewrite original Story Notes to satisfy a puzzle.
+
+The Important Idea in `lessonDetails.bigIdeas[0].text` is the curriculum author's canonical teaching text and **must not be shortened solely for a cryptogram**. `preparedActivities.bigIdeaCryptogram.phrase` (Medium Solve the Code) may independently refer to the original idea, an existing source-backed `keyPhrases[].text` entry or a `preparedActivities.storyOrder[].text` event that fits its limit of 18 distinct unaccented A–Z letters. `preparedActivities.connectBigIdea.phrase` may likewise use a reviewed alternative. Preserve origin and source IDs. A teacher can use Review Studio to select an existing shorter candidate or explicitly add new wording as a flagged suggested candidate.
+
 ## Drawing content contract for new lesson conversions (PR 17m)
 
 **Small Draw a Picture and Large Draw the Story deliberately use different kinds of data.** Both continue using schema-v1 `prompt` fields so approved/review-stage JSON and existing worksheet module payloads remain compatible.
