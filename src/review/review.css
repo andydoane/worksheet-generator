@@ -144,3 +144,36 @@ a{color:#267d68}
 .review-activity-preview .crossword-preview{width:100%;max-width:100%}
 #review-field-crossword:focus{outline:2px solid #4b956e;outline-offset:5px}
 @media(max-width:580px){.review-crossword-row .review-pair{grid-template-columns:1fr}}
+
+/* PR81: chronological story rows and canonical fact selection panels. */
+.review-story-fact-rows{display:grid;gap:12px}
+.review-story-fact-row{display:grid;gap:10px;padding:14px;border:1px solid #d6e6da;
+ border-radius:10px;background:#fcfdfa;min-width:0}
+.review-story-fact-row>label,.review-story-add>label{display:block;font-size:12px;
+ font-weight:800;color:#355749;min-width:0}
+.review-story-fact-row textarea,.review-story-fact-row select,
+.review-story-add select{display:block;width:100%;min-width:0;margin-top:5px;
+ border:1px solid #cbded0;border-radius:8px;padding:10px 12px;
+ color:#23483a;background:white;font-size:12px;line-height:1.45}
+.review-story-fact-row textarea{resize:vertical;min-height:72px}
+.review-story-fact-row textarea[aria-invalid="true"]{border-color:#bd714f;
+ outline-color:#bd714f}
+.review-story-fact-row label small{display:block;margin-top:3px;font-weight:400}
+.review-story-fact-row .review-match-actions button{font-size:11px;padding:7px 10px}
+.review-fact-statement{margin:3px 0!important;padding:9px 12px;
+ border-left:3px solid #add0b8;background:white;border-radius:6px;
+ font-size:13px!important;color:#294b40!important}
+.review-fact-detail{display:grid;gap:10px;padding:15px;border:1px solid #d6e6da;
+ border-radius:10px;background:#fcfdfa}
+.review-story-add{display:flex;align-items:end;gap:10px;flex-wrap:wrap}
+.review-story-add>label{flex:1 1 260px}
+.review-story-add>button{flex:0 0 auto}
+.review-story-fact-row select:focus,.review-story-fact-row textarea:focus{
+ outline:2px solid #8dbca2}
+#review-field-story-order:focus,#review-field-sort-story:focus,
+#review-field-true-false:focus,#review-field-true-false-maze:focus{
+ outline:2px solid #4b956e;outline-offset:5px}
+.review-activity-preview .sv-preview{max-width:100%}
+.review-activity-preview .sort-story-print-svg{display:block;width:100%;height:auto}
+.review-activity-preview .small-true-false-measured{width:100%;max-width:440px}
+@media(max-width:580px){.review-story-add{display:grid}}
