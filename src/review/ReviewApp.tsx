@@ -591,7 +591,7 @@ export default function ReviewApp(){
         <div className="review-actions">
         <button type="button" disabled={!canPublish} onClick={downloadApproved}>Download approved lesson JSON</button>
                </div>
-       <p className="review-source">Add the downloaded lesson to <code>curriculum/approved/{lesson.id}.lesson.json</code>, removing any duplicate review-stage JSON with the same ID in <code>curriculum/review/</code>. No other curriculum files need to change. CI validates the lesson, approval, Scripture rights and printable presets before publication.</p>
+       <p className="review-source">Add the downloaded lesson to <code>curriculum/approved/{lesson.id}.lesson.json</code>, and a pending review-stage copy may remain in <code>curriculum/review/</code>. Only approved files enter the public catalog; CI validates both stages separately. No other curriculum files need to change. CI validates the lesson, approval, Scripture rights and printable presets before publication.</p>
       </div>
      </section>
     </>}
