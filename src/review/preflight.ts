@@ -1,5 +1,6 @@
 import {MODULES,type ModuleId} from '../modules.ts';
 import {checkReviewContent,type Lesson} from './model.ts';
+import {buildWorksheetRecipe,WORKSHEET_RECIPES,type LessonWorksheetSource} from '../worksheetRecipes.ts';
 
 export const PREPARED_ACTIVITY_KEYS:Record<ModuleId,string>={
  'draw-picture':'drawPicture',
@@ -108,6 +109,21 @@ export function reviewIssueTarget(message:string):ReviewIssue{
 
 export function buildReviewPreflight(lesson:Lesson):ReviewPreflight{
  const messages=checkReviewContent(lesson);
+ // All 27 activities may convert successfully while an assembled booklet
+ // still fails (for example, two regions need distinct approved content).
+ // Check the actual three numbered recipes after content checks are clean.
+ if(messages.length===0){
+  for(const recipe of WORKSHEET_RECIPES){
+   try{
+    const result=buildWorksheetRecipe(lesson as LessonWorksheetSource,recipe.id,
+     {purpose:'editorial-review',seed:1});
+    if(result.openSlots.length)
+     messages.push(recipe.name+': '+result.openSlots.length+' activity regions are empty.');
+   }catch(error){
+    messages.push(recipe.name+': '+(error instanceof Error?error.message:String(error)));
+   }
+  }
+ }
  const summary=messages.find(message=>/^Only \d+\/27 activity types converted/u.test(message));
  const convertedCount=summary?Number(summary.match(/Only (\d+)\/27/u)?.[1]??0):27;
  // Conversion coverage is shown separately, not as a duplicate error. The
