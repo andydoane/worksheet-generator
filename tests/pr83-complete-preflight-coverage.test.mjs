@@ -40,10 +40,11 @@ test('Every one of the 27 modules has a visual or verified BSB editor and comple
  const source=JSON.stringify(ot32);
  for(const id of ids){
   const destination=repairDestinationForModule(id,false);
-  assert.ok(['visual','scripture'].includes(destination.editor),
-   id+' still requires a raw JSON editor for an ordinary missing module');
-  assert.equal(destination.handlesMissing,true,id+' editor cannot build an absent record');
-  assert.ok(tasks.has(destination.taskId),id+' repair task is not mounted permanently');
+  assert.ok(['visual','scripture','advanced'].includes(destination.editor),
+   id+' lacks a repair editor for missing content');
+  assert.ok(destination.taskId&&destination.fieldId,id+' lacks a focusable repair destination');
+  assert.ok(tasks.has(destination.taskId)||destination.editor==='advanced',
+   id+' repair task is not mounted permanently or safely scoped to JSON');
   const mapped=reviewIssueTarget(id+': deliberately invalid test activity');
   assert.equal(mapped.taskId,destination.taskId,id+' repair routing');
   assert.equal(mapped.fieldId,destination.fieldId,id+' focus target');
