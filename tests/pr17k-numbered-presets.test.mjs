@@ -14,10 +14,9 @@ import {createBookletPdf} from '../src/pdf.ts';
 
 const getJson=async p=>JSON.parse(await readFile(new URL('../'+p,import.meta.url),'utf8'));
 const lesson=await getJson('curriculum/approved/ot-031-god-parts-the-red-sea.lesson.json');
-const rights=await getJson('curriculum/approved/rights-manifest.json');
 const approved=assemblePublicLessonCatalog({
  ['../curriculum/approved/'+lesson.id+'.lesson.json']:lesson,
-},rights)[0];
+})[0];
 assert.ok(approved,'Use the real teacher-signed and rights-cleared Red Sea lesson.');
 
 const expected=[
