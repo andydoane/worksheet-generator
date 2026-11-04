@@ -67,9 +67,17 @@ export function wordLines(text: string): string[] {
   return text.split(/\r?\n/).map((line) => line.trim()).filter(Boolean);
 }
 
+/** Print-only punctuation cleanup for Multiple Choice answers. Retain
+ * question punctuation and meaningful ! / ? marks, including any closing
+ * quotation marks. Never edit approved answer text or answer correctness.
+ */
+export function printedMultipleChoiceAnswer(answer:string):string{
+ return answer.trim().replace(/\\.+(?=["'’”]*$)/u,'');
+}
 export function shuffledChoices(module: MultipleChoice): string[] {
   const options = [module.correct.trim(), module.wrong1.trim(), module.wrong2.trim()];
-  return shuffledIndices(3, options.join('\n'), module.seed).map((i) => options[i]);
+  const order = shuffledIndices(3, options.join('\n'), module.seed);
+  return order.map(i=>printedMultipleChoiceAnswer(options[i]));
 }
 
 export function shuffledWordList(module: OddWords | Checkboxes): { text: string; belongs: boolean }[] {
