@@ -8,6 +8,17 @@ import {
  type VerseCryptogramPlan,
 } from './verseCryptogramLayout.ts';
 
+/** Retained for the interactive editor's inline cipher-key glyphs. */
+export function CipherGlyph({id}:{id:number}){
+ const glyph=cipherSymbol(id);
+ return <svg viewBox="0 0 16 16" className="cipher-glyph" aria-hidden="true">
+  {glyph.paths.map((path,i)=><path key={i} d={path.d}
+   fill={path.filled?'currentColor':'none'}
+   stroke={path.filled?'none':'currentColor'} strokeWidth="1.45"
+   strokeLinejoin="round" strokeLinecap="round"/>)}
+ </svg>;
+}
+
 function PrintSymbol({id,x,y,size}:{id:number;x:number;y:number;size:number}){
  const glyph=cipherSymbol(id);
  return <g transform={'translate('+x+' '+y+') scale('+(size/16)+')'}>
