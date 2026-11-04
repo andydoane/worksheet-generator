@@ -229,3 +229,16 @@ a{color:#267d68}
 @media(max-width:580px){
  #review-field-multiple-choice-bank .review-pair{grid-template-columns:1fr}
 }
+
+/* PR84: guarded bulk-review acknowledgement stays secondary to the
+ * ordinary required-item review workflow and publication gates. */
+.review-bulk-check{margin:14px 0;padding:12px;border:1px solid #d6e6da;
+ border-radius:9px;background:#fcfdfa}
+.review-bulk-check summary{cursor:pointer;font-size:12px;font-weight:800;
+ color:#355749;line-height:1.5}
+.review-bulk-check p{font-size:12px;line-height:1.55}
+.review-bulk-check .review-checkbox{display:flex;align-items:flex-start;
+ gap:8px;margin:9px 0;font-size:12px;font-weight:600}
+.review-bulk-check .review-checkbox input{margin:3px 0 0;flex:0 0 auto}
+.review-bulk-check button{margin-top:5px;width:100%;font-size:12px}
+.review-bulk-check button:disabled{opacity:.6;cursor:not-allowed}
