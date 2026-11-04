@@ -18,6 +18,7 @@ import FinishStoryReviewEditor from './FinishStoryReviewEditor.tsx';
 import LessonIntegrityReviewEditor from './LessonIntegrityReviewEditor.tsx';
 import MultipleChoiceBankReviewEditor from './MultipleChoiceBankReviewEditor.tsx';
 import {MODULE_REPAIR_REGISTRY} from './repairRegistry.ts';
+import {markRequiredTasksReviewed} from './reviewProgress.ts';
 import {cryptogramLetters} from '../cryptograms.ts';
 import {buildReviewPreflight,PREPARED_ACTIVITY_KEYS,reviewIssueTarget,type ReviewPreflight} from './preflight.ts';
 import './review.css';
@@ -353,9 +354,7 @@ export default function ReviewApp(){
   if(!lesson||!bulkReviewAcknowledged||remaining===0)return;
   if(!window.confirm('Confirm that you have personally reviewed the '+remaining+
    ' remaining curriculum items. This marks review checkboxes only; it does NOT approve the lesson, clear Scripture rights, or skip preflight. Continue?'))return;
-  setReviewed(previous=>[...new Set([
-   ...previous,...requiredTasks.map(task=>task.id),
-  ])]);
+  setReviewed(previous=>markRequiredTasksReviewed(lesson,previous));
   setBulkReviewAcknowledged(false);
   setBulkReviewNotice('Review checkmarks updated. Rerun preflight and complete the separate BSB rights confirmation and teacher signoff before publication.');
   setPreflight(null);setRightsConfirmed(false);
