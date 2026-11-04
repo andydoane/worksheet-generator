@@ -4,7 +4,7 @@ import {parseBsbText,getBsbPassage,wordSpans,clipToWords,markSelectedWords,sugge
 import {applyBsbVerse,chooseSolveCodePhrase,createApprovedLesson,editAt,listReviewTasks,normalizeLegacySmallDrawingScenes,originalMemoryVerseTranslation,solveCodeChoices,useMatchingStoryOrderCaptions,updatedRightsManifest,type Lesson,type ReviewTask} from './model.ts';
 import {validateModule,MODULES} from '../modules.ts';
 import {cryptogramLetters} from '../cryptograms.ts';
-import {buildReviewPreflight,PREPARED_ACTIVITY_KEYS,reviewIssueTarget,type ReviewIssue,type ReviewPreflight} from './preflight.ts';
+import {buildReviewPreflight,PREPARED_ACTIVITY_KEYS,reviewIssueTarget,type ReviewPreflight} from './preflight.ts';
 import './review.css';
 
 const SAVE_KEY='worksheet-studio:review-workbench:v1';
