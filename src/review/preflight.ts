@@ -100,6 +100,8 @@ export function reviewIssueTarget(message:string):ReviewIssue{
    return issue(message,'odd-words','review-field-odd-words',id);
   if(id==='checkboxes')
    return issue(message,'checkboxes','review-field-checkboxes',id);
+  if(id==='match-words')
+   return issue(message,'match-words','review-field-match-words',id);
   if(verseIds.has(id))
    return issue(message,'bsb-verse','review-field-bsb',id);
   return issue(message,'module:'+id,'review-module-json',id);
