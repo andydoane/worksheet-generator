@@ -1,6 +1,9 @@
 import {getRegions,type LayoutId,type PageNumber,type RegionSize} from './booklet.ts';
 import {EMPTY_DRAFT,type StoredDraft} from './draftMigration.ts';
-import {lessonContentPool,chooseUnusedLessonContent} from './lessonContentPool.ts';
+import {
+ lessonContentPool,chooseUnusedLessonContent,chooseDistinctPresetWordBanks,
+ type LessonContentChoice,
+} from './lessonContentPool.ts';
 import {slotKey,moduleForSize,validateModule,type ModuleAssignments} from './modules.ts';
 import {
  convertLessonActivities,findLessonCandidate,
@@ -153,6 +156,27 @@ export type WorksheetRecipeResult={
 };
 export type RecipeOptions={purpose:'editorial-review'|'published';seed?:number};
 
+/** Preserve the affected activity and page region as structured data so the
+ * review workbench never has to guess from a human-readable preset message.
+ */
+export class RecipeContentConflictError extends Error{
+ readonly recipeId:RecipeId;
+ readonly moduleId:LessonModuleId;
+ readonly slot:string;
+ readonly conflicts:string[];
+ constructor(recipeId:RecipeId,recipeName:string,moduleId:LessonModuleId,
+  slot:string,conflicts:string[]){
+  super(recipeName+' needs a distinct '+moduleId+
+   ' activity at '+slot+', but all approved alternatives repeat: '+
+   conflicts.join(', ')+'. Review the curriculum data for more choices.');
+  this.name='RecipeContentConflictError';
+  this.recipeId=recipeId;
+  this.moduleId=moduleId;
+  this.slot=slot;
+  this.conflicts=[...conflicts];
+ }
+}
+
 function recipeForId(id:RecipeId):WorksheetRecipe{
  const recipe=[...WORKSHEET_RECIPES,...LEGACY_RECIPES].find(item=>item.id===id);
  if(!recipe)throw Error('Unknown worksheet recipe: '+id);
@@ -211,6 +235,7 @@ export function buildWorksheetRecipe(
  const selections:RecipeSelection[]=[];
  const usedContentIds=new Set<string>();
  const usedClaims=new Set<string>();
+ let reservedPreset2Search:LessonContentChoice|undefined;
  for(const step of recipe.steps){
   const key=slotKey(step.page,step.regionId);
   const region=regionBySlot.get(key);
@@ -224,15 +249,26 @@ export function buildWorksheetRecipe(
   if(!isLegacy){
    const choices=pool!.candidates.filter(c=>
     c.moduleId===step.moduleId&&!usedContentIds.has(c.moduleId+':'+c.contentId));
-   const picked=chooseUnusedLessonContent(choices,usedClaims,{preferFullBank:true});
-   if(!picked)throw Error('No approved '+step.moduleId+' content available for '+recipe.name+' at '+key+'.');
-   if(picked.reused.length){
-    throw Error(recipe.name+' needs a distinct '+step.moduleId+
-     ' activity at '+key+', but all approved alternatives repeat: '+
-     picked.reused.join(', ')+'. Review the curriculum data for more choices.');
+   let preselected:LessonContentChoice|undefined;
+   // Reserve Odd Words and Large Word Search together. The original greedy
+   // choice could use words required by every later search alternative.
+   if(id==='preset-2'&&step.moduleId==='odd-words'){
+    const future=pool!.candidates.filter(c=>c.moduleId==='word-search');
+    const plan=chooseDistinctPresetWordBanks(choices,future,usedClaims);
+    if(plan){preselected=plan.odd;reservedPreset2Search=plan.search;}
    }
+   if(id==='preset-2'&&step.moduleId==='word-search'&&reservedPreset2Search&&
+    choices.includes(reservedPreset2Search)){
+    preselected=reservedPreset2Search;
+   }
+   const picked=preselected?{
+    candidate:preselected,reused:preselected.claims.filter(claim=>usedClaims.has(claim)),
+   }:chooseUnusedLessonContent(choices,usedClaims,{preferFullBank:true});
+   if(!picked)throw Error('No approved '+step.moduleId+' content available for '+recipe.name+' at '+key+'.');
+   if(picked.reused.length)
+    throw new RecipeContentConflictError(id,recipe.name,step.moduleId,key,picked.reused);
    choice=picked.candidate;
-   picked.candidate.claims.forEach(id=>usedClaims.add(id));
+   picked.candidate.claims.forEach(claim=>usedClaims.add(claim));
   }else if(step.moduleId==='multiple-choice'){
    if(step.questionIndex===undefined||step.questionIndex<0||
     !Number.isInteger(step.questionIndex)||step.questionIndex>=questionSteps.length){

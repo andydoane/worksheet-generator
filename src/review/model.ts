@@ -39,6 +39,12 @@ export function listReviewTasks(lesson:Lesson):ReviewTask[]{
  // Diagnostic-only tasks disappear when edits clear the old preflight report.
  tasks.push({id:'match-words',group:'Word activities',label:'Match the Words',
   detail:'Review 3–6 correct matching pairs. The printed worksheet shuffles only the right column.'});
+ tasks.push({id:'connect-phrase',group:'Medium puzzle',label:'Connect the Phrase',
+  detail:'Choose source-linked phrasing, confirm word fit, and preview the scattered phrase.'});
+ tasks.push({id:'word-search',group:'Vocabulary',label:'Word Search (Large)',
+  detail:'Review 4–12 source-backed words and their nonrepeating preset selection.'});
+ tasks.push({id:'medium-word-search',group:'Vocabulary',label:'Word Search (Medium)',
+  detail:'Review 1–6 short words in the smaller nine-by-nine grid.'});
  if(lesson.reviewFlags?.some((x:any)=>x.type==='sensitivity'))tasks.push({id:'sensitivity',
   group:'Editorial decisions',label:'Age suitability',detail:'Review language about the fate of the Egyptian army for your students.'});
  if(lesson.reviewFlags?.some((x:any)=>x.type==='source-wording'))tasks.push({id:'important-idea',
