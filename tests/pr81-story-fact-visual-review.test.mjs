@@ -167,7 +167,7 @@ test('Selecting a fact already used elsewhere is rejected; one-click alternative
  assert.ok(second);
  const resolved=selectFact(withTF,'trueFalseMaze',second);
  for(const id of [alternative,second])assert.equal(factUsage(resolved).get(id).length,1);
- assert.throws(()=>selectFact(ot31,'trueFalse',repeated==='tf-01'?'tf-03':repeated),/selected elsewhere/u);
+ assert.throws(()=>selectFact(ot31,'trueFalse',sortSelections(ot31)[0].factId),/selected elsewhere/u);
  assert.throws(()=>selectFact(ot32,'sortStory',ot32.preparedActivities.trueFalse.factId,0),/already selected/u);
  assert.throws(()=>selectFact(ot32,'trueFalse','fake-fact-id'),/existing canonical/u);
  assert.deepEqual(resolved.facts,ot31.facts);
