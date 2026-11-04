@@ -452,7 +452,7 @@ export default function ReviewApp(){
         <ul>{matchingIssues.map((item,i)=><li key={i}>{item.message}</li>)}</ul>
        </div>}
        <div className="review-match-rows">
-        {matchingPairs.map((pair:any,i:number)=><div className="review-match-row" key={pair.id??i}>
+        {matchingPairs.map((pair:any,i:number)=><div className="review-match-row" key={pair.id??i} role="group" aria-label={'Matching pair '+(i+1)}>
          <div className="review-match-heading">
           <strong>Pair {i+1}</strong>
           <small>{pair.id??'No pair ID'} · {pair.origin==='suggested'?'Suggested / needs teacher review':pair.origin??'Origin not recorded'}</small>
@@ -461,22 +461,32 @@ export default function ReviewApp(){
           <label>Left word or phrase
            <input id={'review-match-'+i+'-left'} value={pair.left??''}
             aria-invalid={matchingIssues.some(issue=>issue.index===i&&issue.field==='left')}
+            aria-describedby={matchingIssues.some(issue=>issue.index===i)?'review-match-'+i+'-errors':undefined}
             onChange={e=>changeMatching(()=>editMatchingPair(lesson,i,'left',e.target.value))}/>
            <small>{String(pair.left??'').trim().length}/22 characters</small>
           </label>
           <label>Correct match
            <input id={'review-match-'+i+'-right'} value={pair.right??''}
             aria-invalid={matchingIssues.some(issue=>issue.index===i&&issue.field==='right')}
+            aria-describedby={matchingIssues.some(issue=>issue.index===i)?'review-match-'+i+'-errors':undefined}
             onChange={e=>changeMatching(()=>editMatchingPair(lesson,i,'right',e.target.value))}/>
            <small>{String(pair.right??'').trim().length}/22 characters</small>
           </label>
          </div>
+         {matchingIssues.some(issue=>issue.index===i)&&
+          <ul id={'review-match-'+i+'-errors'} className="review-match-errors">
+           {matchingIssues.filter(issue=>issue.index===i).map((issue,j)=>
+            <li key={j}>{issue.message}</li>)}
+          </ul>}
          <div className="review-match-actions">
           <button type="button" className="review-secondary" disabled={i===0}
+           aria-label={'Move pair '+(i+1)+' up'}
            onClick={()=>changeMatching(()=>moveMatchingPair(lesson,i,-1))}>Move up</button>
           <button type="button" className="review-secondary" disabled={i===matchingPairs.length-1}
+           aria-label={'Move pair '+(i+1)+' down'}
            onClick={()=>changeMatching(()=>moveMatchingPair(lesson,i,1))}>Move down</button>
           <button type="button" className="review-secondary" disabled={matchingPairs.length<=3}
+           aria-label={'Remove pair '+(i+1)}
            onClick={()=>deleteMatching(i)}>Remove pair</button>
          </div>
          <SourceContext lesson={lesson} ids={pair.sourceIds??[]}/>
