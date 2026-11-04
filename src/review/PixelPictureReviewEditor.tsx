@@ -14,6 +14,10 @@ export default function PixelPictureReviewEditor({lesson,onChange,onError}:{
  const phrase=String(item.phrase??''),shapeId=String(item.shapeId??'star');
  const choices=pixelPhraseChoices(lesson),problems=pixelProblems(lesson);
  const selected=choices.find(x=>x.text===phrase);
+ const needsSourceRestore=!!selected&&(
+  item.origin!==(selected.origin??'adapted')||
+  JSON.stringify(item.sourceIds??[])!==JSON.stringify(selected.sourceIds)||
+  (item.teacherReviewRequired===true)!==selected.teacherReviewRequired);
  const letter=problems.length===0?choosePixelLetter(phrase,1):undefined;
  const blanks=problems.length===0?choosePixelBlanks(phrase,1).length:0;
  const apply=(fn:()=>Lesson)=>{try{onChange(fn());onError('');}
@@ -37,6 +41,10 @@ export default function PixelPictureReviewEditor({lesson,onChange,onError}:{
      {choice.description} · {choice.text}</option>)}
    </select>
   </label>
+  {needsSourceRestore&&<button type="button" className="review-secondary"
+   onClick={()=>selected&&apply(()=>choosePixelPhrase(lesson,selected.id))}>
+   Use matching lesson phrase and restore its source
+  </button>}
   <label>Worksheet phrase
    <textarea rows={4} value={phrase}
     onChange={e=>apply(()=>editPixelPhrase(lesson,e.target.value))}/>
