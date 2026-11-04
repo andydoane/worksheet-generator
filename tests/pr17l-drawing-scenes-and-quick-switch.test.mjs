@@ -10,10 +10,9 @@ import {buildYourOwnLessonDraft} from '../src/curriculumEditor.ts';
 
 const readJson=async path=>JSON.parse(await readFile(new URL('../'+path,import.meta.url),'utf8'));
 const lesson=await readJson('curriculum/approved/ot-031-god-parts-the-red-sea.lesson.json');
-const rights=await readJson('curriculum/approved/rights-manifest.json');
 const entries=assemblePublicLessonCatalog({
  ['../curriculum/approved/'+lesson.id+'.lesson.json']:lesson,
-},rights);
+});
 assert.equal(entries.length,1);
 const entry=entries[0];
 
