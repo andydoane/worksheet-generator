@@ -56,7 +56,7 @@ test('Finish the Story accepts teacher-authored blanks unrelated to original emp
   'New approved wording does not need to reproduce source emphasis or order');
  const extra=structuredClone(authored);
  extra.preparedActivities.finishStory.markedParagraph+=' [ONE] [TWO] [THREE] [FOUR] [FIVE].';
- assert.equal([...extra.preparedActivities.finishStory.markedParagraph.matchAll(/\\[([^\\[\\]]+)\\]/gu)].length,12);
+ assert.equal([...extra.preparedActivities.finishStory.markedParagraph.matchAll(/\[([^\[\]]+)\]/gu)].length,12);
  assert.deepEqual(validateModule({type:'finish-story',
   story:extra.preparedActivities.finishStory.markedParagraph,seed:1}),[]);
  const thirteen=structuredClone(extra);
