@@ -13,6 +13,7 @@ import {buildWorksheetRecipe} from '../src/worksheetRecipes.ts';
 import {buildReviewPreflight} from '../src/review/preflight.ts';
 import {markRequiredTasksReviewed,reviewChecklistCounts} from '../src/review/reviewProgress.ts';
 import {listReviewTasks} from '../src/review/model.ts';
+import {cleanReviewExport} from '../src/review/exportCleanup.ts';
 
 const load=async name=>JSON.parse(await readFile(new URL(
  '../curriculum/approved/'+name+'.lesson.json',import.meta.url),'utf8'));
@@ -154,6 +155,22 @@ test('Edited Pixel Picture record removes inherited shape but keeps lesson phras
  assert.equal(changed.preparedActivities.pixelPicture.teacherReviewRequired,true);
  assert.deepEqual(changed.preparedActivities.pixelPicture.sourceIds,[]);
  assert.deepEqual(ot32.lessonDetails,changed.lessonDetails);
+});
+
+test('Review Studio exports omit obsolete Pixel silhouettes without changing original lessons',()=>{
+ const before=JSON.stringify(ot32);
+ const plain=cleanReviewExport(ot32);
+ assert.equal(plain.preparedActivities.pixelPicture.shapeId,undefined);
+ assert.equal(plain.preparedActivities.pixelPicture.phrase,
+  ot32.preparedActivities.pixelPicture.phrase);
+ assert.deepEqual(plain.storyNotes,ot32.storyNotes);
+ const session={lesson:ot32,reviewed:['bsb-verse'],selectedId:'pixel-picture'};
+ const cleaned=cleanReviewExport(session);
+ assert.equal(cleaned.lesson.preparedActivities.pixelPicture.shapeId,undefined);
+ assert.deepEqual(cleaned.reviewed,['bsb-verse']);
+ assert.equal(cleaned.selectedId,'pixel-picture');
+ assert.equal(JSON.stringify(ot32),before,
+  'Cleaning an export must not mutate the source or current review session');
 });
 
 test('Bulk review acknowledges only required tasks, without granting publication approval',()=>{
