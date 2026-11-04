@@ -36,7 +36,7 @@ export function drawReconstructionPdf(page:PDFPage,rect:Rect,
    page.drawLine({start:{x:x+.8,y:y-2},end:{x:x+plan.cell-1,y:y-2},
     color:INK,thickness:.8});
    if(module.type==='unscramble-verse'){
-    const char=item.scramble??'',size=8.2;
+    const char=item.scramble??'',size=plan.scrambleFontSize;
     page.drawText(char,{x:x+(plan.cell-fonts.puzzle.widthOfTextAtSize(char,size))/2,
       y:y-plan.glyphOffset,font:fonts.puzzle,size,color:INK});
    }else{
