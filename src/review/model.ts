@@ -35,6 +35,10 @@ export function listReviewTasks(lesson:Lesson):ReviewTask[]{
   label:'Odd Words',detail:'Review unrelated distractor vocabulary.'});
  if(p.checkboxes?.incorrectOrigin==='suggested')tasks.push({id:'checkboxes',group:'Suggested vocabulary',
   label:'Checkboxes',detail:'Review incorrect word choices.'});
+ // A permanent task makes preflight repairs stay open while the teacher types.
+ // Diagnostic-only tasks disappear when edits clear the old preflight report.
+ tasks.push({id:'match-words',group:'Word activities',label:'Match the Words',
+  detail:'Review 3–6 correct matching pairs. The printed worksheet shuffles only the right column.'});
  if(lesson.reviewFlags?.some((x:any)=>x.type==='sensitivity'))tasks.push({id:'sensitivity',
   group:'Editorial decisions',label:'Age suitability',detail:'Review language about the fate of the Egyptian army for your students.'});
  if(lesson.reviewFlags?.some((x:any)=>x.type==='source-wording'))tasks.push({id:'important-idea',
