@@ -106,7 +106,7 @@ export function drawCryptogramPdf(page:PDFPage,rect:Rect,module:Cryptogram,fonts
  for(const cell of plan.bodyCells){
   const x=box.x+cell.x,answerY=top-cell.lineY;
   if(cell.symbol===undefined){
-   page.drawText(cell.char,{x,y:answerY-2,font:fonts.body,size:10,color:INK});
+   page.drawText(cell.char,{x,y:answerY,font:fonts.body,size:10,color:INK});
   }else{
    page.drawLine({start:{x:x+.8,y:answerY},
     end:{x:x+.8+plan.answerLineWidth,y:answerY},
