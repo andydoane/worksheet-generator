@@ -1,4 +1,5 @@
 import {shuffledIndices} from './shuffle.ts';
+import {formatVerseDashes} from './versePunctuation.ts';
 
 export type VerseCryptogram={type:'verse-cryptogram';reference:string;verse:string;seed:number};
 export type BigIdeaCryptogram={type:'big-idea-cryptogram';idea:string;seed:number};
@@ -52,7 +53,9 @@ export type CryptogramResult={text:string;reference:string|null;key:SymbolCode[]
 export function generateCryptogram(module:Cryptogram):CryptogramResult{
   const errs=validateCryptogram(module);
   if(errs.length)throw Error(errs.join(' '));
-  const text=cryptogramText(module).trim();
+  const text=module.type==='verse-cryptogram'
+   ?formatVerseDashes(cryptogramText(module).trim())
+   :cryptogramText(module).trim();
   const alphabet=Array.from('ABCDEFGHIJKLMNOPQRSTUVWXYZ');
   const perm=shuffledIndices(26,'pigpen-alphabet-v1',module.seed);
   const mapping:Record<string,number>={};
