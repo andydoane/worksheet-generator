@@ -4,9 +4,9 @@ import type {LessonWorksheetSource} from './worksheetRecipes.ts';
  * PR 17g: public catalog is a DATA registry, not an editorial shortcut.
  *
  * Vite bundles ONLY curriculum/approved/*.lesson.json. It never glob-imports
- * curriculum/review/. Each added file is accompanied by a separately recorded
- * Scripture-rights decision; CI validates schema, all puzzle engines and both
- * printable recipes before deployment. No curriculum is published by this PR.
+ * curriculum/review/. Every approved file carries its OWN recorded Scripture
+ * rights verification alongside teacher signoff. CI checks both approvals,
+ * schema, real puzzle engines and all numbered recipes before deployment.
  */
 export type ScriptureRightsEvidence={
  status:'cleared';
@@ -15,10 +15,6 @@ export type ScriptureRightsEvidence={
  reviewedBy:string;
  /** YYYY-MM-DD; recorded approval, not an inferred date. */
  reviewedOn:string;
-};
-export type CurriculumRightsManifest={
- schemaVersion:1;
- lessons:Record<string,ScriptureRightsEvidence>;
 };
 export type PublicLessonEntry={
  lesson:LessonWorksheetSource;
@@ -44,6 +40,16 @@ export function approvedForPublic(entry:PublicLessonEntry):boolean{
  const {lesson}=entry;
  if(!lesson||lesson.schemaVersion!==1)return false;
  const pub=lesson.publication;
+ const embedded=pub?.scriptureRights;
+ if(!isRightsEvidence(embedded)||embedded.status!==entry.rightsEvidence.status||
+   embedded.basis!==entry.rightsEvidence.basis||
+   embedded.reviewedBy!==entry.rightsEvidence.reviewedBy||
+   embedded.reviewedOn!==entry.rightsEvidence.reviewedOn)return false;
+ // An explicit rights record is not enough if the printed Scripture has not
+ // been verified as BSB from the official workbench source.
+ const memory=lesson.lessonDetails?.memoryVerse;
+ if(memory?.translation!=='BSB'||!hasText(memory.text)||
+    !hasText(memory?.bsbSource?.sourceUrl))return false;
  if(pub?.status!=='approved'||pub.approved!==true||
   !hasText(pub.teacherSignoff?.reviewer)||
   !hasText(pub.teacherSignoff?.date))return false;
@@ -57,17 +63,14 @@ export function approvedForPublic(entry:PublicLessonEntry):boolean{
  * Pure catalog assembly can be exercised in Node and in the browser. Requiring
  * an exact slug filename and independent permission evidence prevents a file
  * with a plausible title or a single flipped approved flag from going public.
- *
- * CI does deeper full-schema, engine, recipe and manifest validation. This
- * runtime check is a second fail-closed defense, not a substitute for CI.
+ * The only source of rights evidence is the same approved file; the UI cannot
+ * accidentally forget an older lesson by overwriting a shared manifest.
+ * CI does deeper full-schema, engine and recipe validation. This runtime
+ * check is a second fail-closed defense, not a substitute for CI.
  */
 export function assemblePublicLessonCatalog(
- files:Record<string,unknown>,manifest:unknown,
+ files:Record<string,unknown>,
 ):readonly PublicLessonEntry[]{
- if(!manifest||typeof manifest!=='object')return [];
- const m=manifest as Partial<CurriculumRightsManifest>;
- if(m.schemaVersion!==1||!m.lessons||typeof m.lessons!=='object'||
-  Array.isArray(m.lessons))return [];
  const result:PublicLessonEntry[]=[];
  const seen=new Set<string>();
  for(const [path,data] of Object.entries(files).sort(([a],[b])=>a.localeCompare(b))){
@@ -76,7 +79,7 @@ export function assemblePublicLessonCatalog(
   const lesson=data as LessonWorksheetSource;
   if(lesson.id!==basename||seen.has(basename))continue;
   seen.add(basename);
-  const rights=m.lessons[basename];
+  const rights=lesson.publication?.scriptureRights;
   const entry={
    lesson,scriptureDistributionCleared:true as const,rightsEvidence:rights,
   };
@@ -94,9 +97,5 @@ const lessonFiles:Record<string,unknown>=
  import.meta.env
   ?import.meta.glob('../curriculum/approved/*.lesson.json',{eager:true,import:'default'})
   :{};
-const rightsFiles:Record<string,unknown>=
- import.meta.env
-  ?import.meta.glob('../curriculum/approved/rights-manifest.json',{eager:true,import:'default'})
-  :{};
 export const PUBLIC_LESSONS:readonly PublicLessonEntry[]=
- assemblePublicLessonCatalog(lessonFiles,Object.values(rightsFiles)[0]);
+ assemblePublicLessonCatalog(lessonFiles);
