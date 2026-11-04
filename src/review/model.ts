@@ -71,6 +71,8 @@ export function listReviewTasks(lesson:Lesson):ReviewTask[]{
  // Optional support tasks always exist so a preflight repair remains open
  // through incremental edits. They are not extra teacher approval hurdles.
  tasks.push(
+  {id:'multiple-choice-bank',group:'Lesson integrity',label:'Multiple Choice bank',
+   detail:'Repair or add source-linked Multiple Choice questions and distractors.',optional:true},
   {id:'lesson-details',group:'Lesson integrity',label:'Lesson title & references',
    detail:'Repair the title, Scripture display and passage list.',optional:true},
   {id:'lesson-sources',group:'Lesson integrity',label:'Source records & citations',
