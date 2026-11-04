@@ -82,6 +82,9 @@ export function moveStoryEvent(lesson:Lesson,index:number,direction:-1|1):Lesson
  if(index<0||index>=events.length||target<0||target>=events.length)
   throw Error('Cannot move this story event beyond the first or last row.');
  [events[index],events[target]]=[events[target],events[index]];
+ // Chronology is an editorial decision even when the wording is unchanged.
+ events[index].teacherReviewRequired=true;
+ events[target].teacherReviewRequired=true;
  renumber(events);
  return next;
 }
