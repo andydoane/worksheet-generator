@@ -3,7 +3,7 @@ import StoryVersePreview from '../StoryVersePreview.tsx';
 import type {Lesson} from './model.ts';
 import {
  addStoryEventFromNote,editStoryEvent,moveStoryEvent,
- removeStoryEvent,replaceStoryEventFromNote,storyEvents,storyOrderIssues,
+ normalizeStoryEventNumbers,removeStoryEvent,replaceStoryEventFromNote,storyEvents,storyOrderIssues,
 } from './storyFactEditor.ts';
 
 export default function StoryOrderReviewEditor({lesson,onChange,onError}:{
@@ -26,6 +26,11 @@ export default function StoryOrderReviewEditor({lesson,onChange,onError}:{
   {issues.length>0&&<div className="review-warning" role="status">
    <strong>Story Order needs attention</strong>
    <ul>{issues.filter(item=>item.index===undefined).map((item,i)=><li key={i}>{item.message}</li>)}</ul>
+   {issues.some(item=>item.message.includes('sequential order'))&&
+    <button type="button" className="review-secondary"
+     onClick={()=>apply(()=>normalizeStoryEventNumbers(lesson))}>
+     Fix chronological position numbers
+    </button>}
   </div>}
   <div className="review-story-fact-rows">
    {events.map((event,i)=>{
