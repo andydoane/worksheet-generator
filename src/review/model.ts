@@ -26,6 +26,9 @@ export function listReviewTasks(lesson:Lesson):ReviewTask[]{
    detail:'Small Draw a Picture scenes are short noun phrases. Large Draw the Story captions are full narrative sentences, preferably copied from the matching Story Order events.'});
  if(p.finishStory)tasks.push({id:'finish-story',group:'Story narrative',
   label:'Finish the Story',detail:'Review the adapted paragraph and seven source emphasis words.'});
+ if(p.bigIdeaCryptogram)tasks.push({id:'solve-code',group:'Medium puzzle',
+  label:'Solve the Code phrase',
+  detail:'Select a concise, source-backed phrase for the Medium cryptogram without changing the lesson’s original Important Idea.'});
  if(p.circleMistakes)tasks.push({id:'circle-mistakes',group:'Story narrative',
   label:'Circle the Mistakes',detail:'Review the deliberately incorrect paragraph and corrections.'});
  if(p.oddWords?.unrelatedOrigin==='suggested')tasks.push({id:'odd-words',group:'Suggested vocabulary',
@@ -228,6 +231,60 @@ export function normalizeLegacySmallDrawingScenes(lesson:Lesson):Lesson{
  return next;
 }
 
+/** Return every source emphasis word in its original order while allowing
+ * extra teacher-selected blanks, provided the generator accepts 6–12 total.
+ * Subsequence matching keeps repeated emphasis words meaningful.
+ */
+export function finishStoryEmphasisInOrder(lesson:Lesson):boolean{
+ const expected=(lesson.storyNotes??[]).flatMap((n:any)=>n.emphasizedWords??[])
+  .map((word:string)=>String(word).toLocaleUpperCase());
+ const blanks=[...String(lesson.preparedActivities?.finishStory?.markedParagraph??'')
+  .matchAll(/\[([^\[\]]+)\]/gu)].map(m=>m[1].toLocaleUpperCase());
+ let i=0;
+ for(const blank of blanks)if(i<expected.length&&blank===expected[i])i++;
+ return i===expected.length;
+}
+
+/** A separate Medium Solve the Code phrase can be drawn only from original
+ * teaching material, the reviewed Key Phrases bank or Story Order events.
+ * This does not edit the canonical Important Idea or Connect the Phrase.
+ */
+export function solveCodeChoices(lesson:Lesson):{
+ text:string;origin?:string;sourceIds?:string[];source?:unknown;teacherReviewRequired?:boolean;
+}[]{
+ const original=lesson.lessonDetails?.bigIdeas?.[0];
+ const candidates=[
+  ...(original?[original]:[]),
+  ...(lesson.keyPhrases??[]),
+  ...(lesson.preparedActivities?.storyOrder??[]),
+ ];
+ const seen=new Set<string>();
+ return candidates.flatMap(item=>{
+  const text=trim(item.text);
+  if(!text||seen.has(text))return [];
+  seen.add(text);
+  return [{text,origin:item.origin,sourceIds:item.sourceIds,
+   source:item.source,teacherReviewRequired:item.teacherReviewRequired}];
+ });
+}
+
+export function chooseSolveCodePhrase(lesson:Lesson,text:string):Lesson{
+ const match=solveCodeChoices(lesson).find(item=>item.text===text);
+ if(!match)throw Error('Choose the original Important Idea or a reviewed source-linked phrase.');
+ const errors=validateModule({type:'big-idea-cryptogram',idea:text,seed:1});
+ if(errors.length)throw Error(errors.join(' '));
+ const next=clone(lesson);
+ const item=next.preparedActivities.bigIdeaCryptogram;
+ if(!item)throw Error('This lesson has no prepared Solve the Code activity.');
+ item.phrase=text;
+ item.origin=match.origin??'adapted';
+ item.sourceIds=[...(match.sourceIds??[])];
+ item.teacherReviewRequired=match.teacherReviewRequired===true;
+ if(match.source)item.source=match.source;
+ else delete item.source;
+ return next;
+}
+
 export function checkReviewContent(lesson:Lesson):string[]{
  const errors:string[]=[...checkDrawingCopy(lesson)];
  const p=lesson.preparedActivities??{};
@@ -240,12 +297,8 @@ export function checkReviewContent(lesson:Lesson):string[]{
    errors.push('Multiple Choice '+mc.id+' has missing or inconsistent choices.');
  }
  for(const fact of lesson.facts??[])if(!trim(fact.statement))errors.push('Empty fact: '+fact.id);
- const expected=(lesson.storyNotes??[]).flatMap((n:any)=>n.emphasizedWords??[]);
- if(p.finishStory){
-  const words=[...String(p.finishStory.markedParagraph??'').matchAll(/\[([^\[\]]+)\]/gu)].map(m=>m[1]);
-  if(words.length!==expected.length||words.some((x,i)=>x.toUpperCase()!==String(expected[i]).toUpperCase()))
-   errors.push('Finish the Story brackets must preserve the original emphasized Story Note words.');
- }
+ if(p.finishStory&&!finishStoryEmphasisInOrder(lesson))
+  errors.push('Finish the Story must retain all original emphasized Story Note words in order; extra [blanks] are allowed (6–12 total).');
  const mistakes=p.circleMistakes;
  if(mistakes){
   if(mistakes.mistakes?.length!==mistakes.mistakeCount||!trim(mistakes.paragraph)||
