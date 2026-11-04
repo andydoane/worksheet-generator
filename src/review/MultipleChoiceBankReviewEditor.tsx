@@ -44,11 +44,13 @@ export default function MultipleChoiceBankReviewEditor({lesson,onChange,onError}
   {issues.filter(issue=>issue.index===undefined).map((issue,i)=>
    <p key={i} className="review-warning">{issue.message}</p>)}
   <div className="review-story-fact-rows">
-   {rows.map((row:any,index:number)=>{
+   {rows.map((original:any,index:number)=>{
+    const row=original&&typeof original==='object'?original:{};
     const errors=issues.filter(issue=>issue.index===index);
-    const correct=row.choices?.find((choice:any)=>choice.isCorrect===true);
-    const wrong=row.choices?.filter((choice:any)=>!choice.isCorrect)??[];
-    const writable=Array.isArray(row.choices)&&row.choices.length===3&&
+    const choices=Array.isArray(row.choices)?row.choices:[];
+    const correct=choices.find((choice:any)=>choice?.isCorrect===true);
+    const wrong=choices.filter((choice:any)=>!choice?.isCorrect);
+    const writable=choices.length===3&&
      !!correct&&wrong.length===2;
     const preview=writable&&errors.length===0;
     return <section className="review-story-fact-row" key={row.id??index}>
