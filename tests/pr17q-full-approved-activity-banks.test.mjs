@@ -76,6 +76,8 @@ test('Prefer the fullest valid bank, but never reuse items to inflate a workshee
  const full=candidate('all-six',['pair:a','pair:b','pair:c','pair:d','pair:e','pair:f']);
  const compact=candidate('only-three',['pair:a','pair:b','pair:c']);
  assert.equal(chooseUnusedLessonContent([compact,full],new Set(),{preferFullBank:true}).candidate.contentId,'all-six');
+ assert.equal(chooseUnusedLessonContent([full,compact],new Set()).candidate.contentId,'only-three',
+  'Build My Own preserves a compact first choice so a second instance can use different pairs');
  const selected=chooseUnusedLessonContent([full,compact],new Set(['pair:f']),{preferFullBank:true});
  assert.equal(selected.candidate.contentId,'only-three',
   'A smaller nonrepeating activity beats a larger one that repeats an answer');
