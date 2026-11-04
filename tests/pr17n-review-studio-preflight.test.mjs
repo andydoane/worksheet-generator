@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {
- checkReviewContent,chooseSolveCodePhrase,finishStoryEmphasisInOrder,
+ checkReviewContent,chooseSolveCodePhrase,
  listReviewTasks,solveCodeChoices,
 } from '../src/review/model.ts';
 import {buildReviewPreflight,PREPARED_ACTIVITY_KEYS,reviewIssueTarget} from '../src/review/preflight.ts';
@@ -40,46 +40,45 @@ function scenario(){
  return lesson;
 }
 
-test('Finish the Story preserves original emphasis order but permits additional blanks through 12',()=>{
+test('Finish the Story accepts teacher-authored blanks unrelated to original emphasized Story Note words',()=>{
  const source=scenario();
  const before=JSON.stringify(source);
- assert.equal(finishStoryEmphasisInOrder(source),true,
-  'The additional MANNA blank does not invalidate the 7 original emphasis words');
  assert.deepEqual(checkReviewContent(source).filter(x=>x.includes('Finish the Story')),[]);
+ const authored=structuredClone(source);
+ authored.preparedActivities.finishStory.markedParagraph=
+  'God [LED] his people through the [DESERT]. The people [COMPLAINED] and '+
+  'asked for [FOOD]. God gave them [MANNA] and [WATER]. They learned to [TRUST] him.';
  assert.deepEqual(validateModule({
-  type:'finish-story',story:source.preparedActivities.finishStory.markedParagraph,seed:1,
+  type:'finish-story',story:authored.preparedActivities.finishStory.markedParagraph,seed:1,
  }),[]);
- assert.equal([...ot32MarkedStory.matchAll(/\[([^\[\]]+)\]/gu)].length,8);
- const extra=structuredClone(source);
- extra.preparedActivities.finishStory.markedParagraph+=' and [GOD] [HELP] [US] [NOW].';
- assert.equal([...extra.preparedActivities.finishStory.markedParagraph.matchAll(/\[([^\[\]]+)\]/gu)].length,12);
- assert.equal(finishStoryEmphasisInOrder(extra),true);
+ assert.deepEqual(checkReviewContent(authored).filter(x=>
+  x.includes('Finish the Story')||x.startsWith('finish-story:')),[],
+  'New approved wording does not need to reproduce source emphasis or order');
+ const extra=structuredClone(authored);
+ extra.preparedActivities.finishStory.markedParagraph+=' [ONE] [TWO] [THREE] [FOUR] [FIVE].';
+ assert.equal([...extra.preparedActivities.finishStory.markedParagraph.matchAll(/\\[([^\\[\\]]+)\\]/gu)].length,12);
  assert.deepEqual(validateModule({type:'finish-story',
   story:extra.preparedActivities.finishStory.markedParagraph,seed:1}),[]);
  const thirteen=structuredClone(extra);
  thirteen.preparedActivities.finishStory.markedParagraph+=' [TODAY].';
- assert.equal(finishStoryEmphasisInOrder(thirteen),true);
  assert.ok(checkReviewContent(thirteen).some(x=>x.includes('6–12')),
-  'Generator maximum remains enforced, despite allowing extras');
- assert.equal(JSON.stringify(source),before,'Validation never rewrites author content');
+  'Printable generator maximum remains enforced');
+ assert.equal(JSON.stringify(source),before,'Validation never rewrites canonical sources');
 });
 
-test('Missing/reordered original emphasis words are still rejected, including repeated words',()=>{
+test('No original emphasized words are needed, but malformed/oversized blanks still fail',()=>{
  const lesson=scenario();
- const wrong=structuredClone(lesson);
- wrong.preparedActivities.finishStory.markedParagraph=
-  wrong.preparedActivities.finishStory.markedParagraph.replace('[BREAD]','BREAD');
- assert.equal(finishStoryEmphasisInOrder(wrong),false);
- assert.ok(checkReviewContent(wrong).some(x=>x.includes('emphasized Story Note words')));
- const reversed=structuredClone(lesson);
- reversed.preparedActivities.finishStory.markedParagraph=
-  reversed.preparedActivities.finishStory.markedParagraph.replace('[FOOD]','[BREAD]')
-   .replace('[BREAD] from','[FOOD] from');
- assert.equal(finishStoryEmphasisInOrder(reversed),false);
- const repeat=structuredClone(lesson);
- repeat.storyNotes[1].emphasizedWords=['FOOD'];
- assert.equal(finishStoryEmphasisInOrder(repeat),false,
-  'Original duplicated emphasis tokens require duplicated ordered occurrences');
+ const missing=structuredClone(lesson);
+ missing.preparedActivities.finishStory.markedParagraph=
+  'We [SAW] [GOOD] [HELP] [FROM] [OUR] [GOD].';
+ assert.deepEqual(checkReviewContent(missing).filter(x=>x.startsWith('finish-story:')),[]);
+ const invalid=structuredClone(lesson);
+ invalid.preparedActivities.finishStory.markedParagraph='[ONLY] [FIVE] [BLANKS] [IN] [THIS].';
+ assert.ok(checkReviewContent(invalid).some(x=>x.includes('6–12')));
+ const tooLong=structuredClone(lesson);
+ tooLong.preparedActivities.finishStory.markedParagraph=
+  'We saw '+('many '.repeat(230))+'[GOD] [GAVE] [THEM] [FOOD] [AND] [WATER].';
+ assert.ok(checkReviewContent(tooLong).some(x=>x.includes('1,100')));
 });
 
 test('OT32-sized important idea is a single actionable cryptogram issue, not two duplicate failures',()=>{
