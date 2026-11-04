@@ -66,7 +66,7 @@ test('Story library scales to 123 records with responsive text, book and Testame
  const one=filterPublicStories(stories,{...allFilters,query:'story 101'});
  assert.equal(one.length,1);
  assert.equal(one[0].lesson.lessonDetails.title,'Bible Story 101');
- assert.ok(filterPublicStories(stories,{...allFilters,query:'acts 3'}).length>0);
+ assert.ok(filterPublicStories(stories,{...allFilters,query:'acts 8'}).length>0);
  assert.equal(filterPublicStories(stories,{...allFilters,query:'does-not-exist'}).length,0);
  assert.equal(stories[100].lesson.lessonDetails.title,'Bible Story 101',
   'Search/filter do not reorder or alter source catalog');
