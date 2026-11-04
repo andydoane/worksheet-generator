@@ -1,0 +1,2850 @@
+{
+  "schemaVersion": 1,
+  "schemaStatus": "review-draft; local structural checks only, official validator and generator tests pending",
+  "id": "ot-026-the-birth-of-moses",
+  "curriculum": {
+    "series": "Old Testament",
+    "lessonNumber": 26
+  },
+  "lessonDetails": {
+    "title": "The Birth of Moses",
+    "scripturePassages": [
+      "Exodus 1",
+      "Exodus 2"
+    ],
+    "scriptureDisplay": "Exodus",
+    "bigIdeas": [
+      {
+        "text": "Nothing in the world can stop the plans of God.",
+        "origin": "adapted",
+        "source": {
+          "filename": "OT 26 Lesson (The Birth of Moses).odt",
+          "section": "Important Idea",
+          "page": 5,
+          "sourceParagraphIndex": 153,
+          "details": "Display font obscures letter case; capitalization regularized, with God capitalized."
+        }
+      }
+    ],
+    "memoryVerse": {
+      "reference": "Psalm 135:6",
+      "translation": "BSB",
+      "text": "The LORD does all that pleases Him in the heavens and on the earth, in the seas and in all their depths.",
+      "isExcerpt": false,
+      "hasEllipses": false,
+      "requiresTextReview": false,
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 26 Lesson (The Birth of Moses).odt",
+        "section": "Memory Verse Activity",
+        "page": 8,
+        "sourceParagraphIndex": 223,
+        "details": "Source lesson uses ESV; worksheet proposal uses verified complete BSB Psalm 135:6, pending teacher review and rights clearance."
+      },
+      "teacherReviewRequired": true,
+      "originalTranslation": "BSB",
+      "bsbSource": {
+        "reference": "Psalm 135:6",
+        "sourceUrl": "https://bereanbible.com/bsb.txt",
+        "publicDomainTerms": "https://berean.bible/terms.htm",
+        "startWord": 0,
+        "endWord": 21
+      }
+    }
+  },
+  "sourceFiles": [
+    {
+      "filename": "OT 26 Lesson (The Birth of Moses).odt",
+      "format": "odt",
+      "role": "primary teaching source",
+      "note": "ODT is the complete primary lesson. It quotes Psalm 135:6 in ESV; review-draft worksheet activity text uses a separately verified BSB rendering. No ODP or original Story Sheet resources provided."
+    }
+  ],
+  "storyNotes": [
+    {
+      "id": "sn-01",
+      "order": 1,
+      "originalText": "Jacob's family grew into the nation of Israel. They FILLED the land of Egypt.",
+      "cleanText": "Jacob’s family grew into a huge nation called Israel. They filled the land of Egypt.",
+      "emphasizedWords": [
+        "FILLED"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 26 Lesson (The Birth of Moses).odt",
+        "section": "STORY NOTE",
+        "page": 1,
+        "sourceParagraphIndex": 37
+      }
+    },
+    {
+      "id": "sn-02",
+      "order": 2,
+      "originalText": "Egypt's king was afraid of them. He made them work hard as SLAVES, but they kept growing.",
+      "cleanText": "Pharaoh made the Israelites work hard as slaves, but their families kept growing.",
+      "emphasizedWords": [
+        "SLAVES"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 26 Lesson (The Birth of Moses).odt",
+        "section": "STORY NOTE",
+        "page": 2,
+        "sourceParagraphIndex": 54
+      }
+    },
+    {
+      "id": "sn-03",
+      "order": 3,
+      "originalText": "Pharaoh ordered two midwives to kill the baby BOYS, but they refused to do what he asked.",
+      "cleanText": "Two midwives, Shiphrah and Puah, refused Pharaoh’s order to kill the Hebrew baby boys.",
+      "emphasizedWords": [
+        "BOYS"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 26 Lesson (The Birth of Moses).odt",
+        "section": "STORY NOTE",
+        "page": 3,
+        "sourceParagraphIndex": 74
+      }
+    },
+    {
+      "id": "sn-04",
+      "order": 4,
+      "originalText": "Pharaoh gave a new order: \"Throw all the Hebrew baby boys in the Nile RIVER!\"",
+      "cleanText": "Pharaoh ordered the Hebrew baby boys to be thrown into the Nile River.",
+      "emphasizedWords": [
+        "RIVER"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 26 Lesson (The Birth of Moses).odt",
+        "section": "STORY NOTE",
+        "page": 3,
+        "sourceParagraphIndex": 91
+      }
+    },
+    {
+      "id": "sn-05",
+      "order": 5,
+      "originalText": "An Israelite family had a baby boy. They kept him HIDDEN for three months.",
+      "cleanText": "An Israelite family hid their baby boy for three months.",
+      "emphasizedWords": [
+        "HIDDEN"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 26 Lesson (The Birth of Moses).odt",
+        "section": "STORY NOTE",
+        "page": 3,
+        "sourceParagraphIndex": 104
+      }
+    },
+    {
+      "id": "sn-06",
+      "order": 6,
+      "originalText": "She put him in a BASKET and placed him in the grass by the river. His sister watched nearby.",
+      "cleanText": "The baby's mother put him in a basket by the river while his sister watched nearby.",
+      "emphasizedWords": [
+        "BASKET"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 26 Lesson (The Birth of Moses).odt",
+        "section": "STORY NOTE",
+        "page": 4,
+        "sourceParagraphIndex": 115
+      }
+    },
+    {
+      "id": "sn-07",
+      "order": 7,
+      "originalText": "Pharaoh's daughter found the basket in the river. She felt SORRY for him.",
+      "cleanText": "Pharaoh’s daughter found the baby in the basket and felt sorry for him.",
+      "emphasizedWords": [
+        "SORRY"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 26 Lesson (The Birth of Moses).odt",
+        "section": "STORY NOTE",
+        "page": 5,
+        "sourceParagraphIndex": 136
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q-01",
+      "question": "What made old Abe’s family so special?",
+      "answer": "God gave him a whole pile of promises.",
+      "kind": "factual",
+      "scope": "recap",
+      "origin": "source",
+      "source": {
+        "filename": "OT 26 Lesson (The Birth of Moses).odt",
+        "section": "Teaching Narrative",
+        "page": 1,
+        "sourceParagraphIndex": 13
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-02",
+      "question": "Had God kept that promise?",
+      "answer": "Yes.",
+      "kind": "factual",
+      "scope": "story",
+      "origin": "source",
+      "source": {
+        "filename": "OT 26 Lesson (The Birth of Moses).odt",
+        "section": "Teaching Narrative",
+        "page": 2,
+        "sourceParagraphIndex": 45
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-03",
+      "question": "Why?",
+      "answer": "There would be more of them than Egyptians; maybe they’d join their enemies in a fight against them.",
+      "kind": "factual",
+      "scope": "story",
+      "origin": "source",
+      "source": {
+        "filename": "OT 26 Lesson (The Birth of Moses).odt",
+        "section": "Teaching Narrative",
+        "page": 2,
+        "sourceParagraphIndex": 56
+      },
+      "standaloneReady": false,
+      "notes": "Keep source question; needs surrounding context or is quoted dialogue, not a standalone worksheet item."
+    },
+    {
+      "id": "q-04",
+      "question": "But did this new Pharaoh remember Joseph at all?",
+      "answer": "No.",
+      "kind": "factual",
+      "scope": "story",
+      "origin": "source",
+      "source": {
+        "filename": "OT 26 Lesson (The Birth of Moses).odt",
+        "section": "Teaching Narrative",
+        "page": 2,
+        "sourceParagraphIndex": 61
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-05",
+      "question": "What evil plan did Pharaoh come up with?",
+      "answer": "Turn the Israelites into slaves; make them work hard.",
+      "kind": "factual",
+      "scope": "story",
+      "origin": "source",
+      "source": {
+        "filename": "OT 26 Lesson (The Birth of Moses).odt",
+        "section": "Teaching Narrative",
+        "page": 2,
+        "sourceParagraphIndex": 63
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-06",
+      "question": "Did Pharaoh’s plan stop the Israelites from growing?",
+      "answer": "No; they grew even faster.",
+      "kind": "factual",
+      "scope": "story",
+      "origin": "source",
+      "source": {
+        "filename": "OT 26 Lesson (The Birth of Moses).odt",
+        "section": "Teaching Narrative",
+        "page": 2,
+        "sourceParagraphIndex": 67
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-07",
+      "question": "What evil order did Pharaoh give to these women?",
+      "answer": "Kill the Hebrew baby boys.",
+      "kind": "factual",
+      "scope": "story",
+      "origin": "source",
+      "source": {
+        "filename": "OT 26 Lesson (The Birth of Moses).odt",
+        "section": "Teaching Narrative",
+        "page": 3,
+        "sourceParagraphIndex": 82
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-08",
+      "question": "What was Pharaoh’s third evil plan to stop the Israelites?",
+      "answer": "Every Hebrew boy born must be tossed into the river.",
+      "kind": "factual",
+      "scope": "story",
+      "origin": "source",
+      "source": {
+        "filename": "OT 26 Lesson (The Birth of Moses).odt",
+        "section": "Teaching Narrative",
+        "page": 3,
+        "sourceParagraphIndex": 95
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-09",
+      "question": "Why?",
+      "answer": "Pharaoh ordered baby boys to be tossed in the river.",
+      "kind": "factual",
+      "scope": "story",
+      "origin": "source",
+      "source": {
+        "filename": "OT 26 Lesson (The Birth of Moses).odt",
+        "section": "Teaching Narrative",
+        "page": 4,
+        "sourceParagraphIndex": 108
+      },
+      "standaloneReady": false,
+      "notes": "Keep source question; needs surrounding context or is quoted dialogue, not a standalone worksheet item."
+    },
+    {
+      "id": "q-10",
+      "question": "So what did they do?",
+      "answer": "",
+      "kind": "discussion",
+      "scope": "story",
+      "origin": "source",
+      "source": {
+        "filename": "OT 26 Lesson (The Birth of Moses).odt",
+        "section": "Teaching Narrative",
+        "page": 4,
+        "sourceParagraphIndex": 110
+      },
+      "standaloneReady": false,
+      "notes": "Keep source question; needs surrounding context or is quoted dialogue, not a standalone worksheet item."
+    },
+    {
+      "id": "q-11",
+      "question": "What evil order had Pharaoh given to the Israelites?",
+      "answer": "To put every Hebrew baby boy into the Nile River.",
+      "kind": "factual",
+      "scope": "story",
+      "origin": "source",
+      "source": {
+        "filename": "OT 26 Lesson (The Birth of Moses).odt",
+        "section": "Teaching Narrative",
+        "page": 4,
+        "sourceParagraphIndex": 117
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-12",
+      "question": "Who was sent on a secret spying mission to make sure her little brother was okay?",
+      "answer": "His older sister.",
+      "kind": "factual",
+      "scope": "story",
+      "origin": "source",
+      "source": {
+        "filename": "OT 26 Lesson (The Birth of Moses).odt",
+        "section": "Teaching Narrative",
+        "page": 4,
+        "sourceParagraphIndex": 123
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-13",
+      "question": "Do you want me to go and get one of the Hebrew women?",
+      "answer": "",
+      "kind": "quoted-dialogue",
+      "scope": "scripture",
+      "origin": "source",
+      "source": {
+        "filename": "OT 26 Lesson (The Birth of Moses).odt",
+        "section": "Teaching Narrative",
+        "page": 4,
+        "sourceParagraphIndex": 131
+      },
+      "standaloneReady": false,
+      "notes": "Keep source question; needs surrounding context or is quoted dialogue, not a standalone worksheet item."
+    },
+    {
+      "id": "q-14",
+      "question": "Who found the little baby boat floating in the Nile River?",
+      "answer": "Pharaoh’s daughter.",
+      "kind": "factual",
+      "scope": "story",
+      "origin": "source",
+      "source": {
+        "filename": "OT 26 Lesson (The Birth of Moses).odt",
+        "section": "Teaching Narrative",
+        "page": 5,
+        "sourceParagraphIndex": 138
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-15",
+      "question": "What did her dad want done with Israelite baby boys?",
+      "answer": "Thrown into the river.",
+      "kind": "factual",
+      "scope": "story",
+      "origin": "source",
+      "source": {
+        "filename": "OT 26 Lesson (The Birth of Moses).odt",
+        "section": "Teaching Narrative",
+        "page": 5,
+        "sourceParagraphIndex": 140
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-16",
+      "question": "Should I find a Hebrew woman to feed this baby?",
+      "answer": "",
+      "kind": "quoted-dialogue",
+      "scope": "story",
+      "origin": "source",
+      "source": {
+        "filename": "OT 26 Lesson (The Birth of Moses).odt",
+        "section": "Teaching Narrative",
+        "page": 5,
+        "sourceParagraphIndex": 144
+      },
+      "standaloneReady": false,
+      "notes": "Keep source question; needs surrounding context or is quoted dialogue, not a standalone worksheet item."
+    },
+    {
+      "id": "q-17",
+      "question": "What did Pharaoh's daughter say?",
+      "answer": "Yes, and I'll pay her.",
+      "kind": "factual",
+      "scope": "story",
+      "origin": "source",
+      "source": {
+        "filename": "OT 26 Lesson (The Birth of Moses).odt",
+        "section": "Teaching Narrative",
+        "page": 5,
+        "sourceParagraphIndex": 144
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-18",
+      "question": "After that, what happened?",
+      "answer": "He became the son of Pharaoh’s daughter.",
+      "kind": "factual",
+      "scope": "story",
+      "origin": "source",
+      "source": {
+        "filename": "OT 26 Lesson (The Birth of Moses).odt",
+        "section": "Teaching Narrative",
+        "page": 5,
+        "sourceParagraphIndex": 146
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-19",
+      "question": "What did she name her adopted son?",
+      "answer": "Moses.",
+      "kind": "factual",
+      "scope": "story",
+      "origin": "source",
+      "source": {
+        "filename": "OT 26 Lesson (The Birth of Moses).odt",
+        "section": "Teaching Narrative",
+        "page": 5,
+        "sourceParagraphIndex": 148
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-20",
+      "question": "So how does the story of the birth of Moses teach us, strengthen us, encourage us, or give us hope?",
+      "answer": "",
+      "kind": "discussion",
+      "scope": "application",
+      "origin": "source",
+      "source": {
+        "filename": "OT 26 Lesson (The Birth of Moses).odt",
+        "section": "Important Idea",
+        "page": 5,
+        "sourceParagraphIndex": 152
+      },
+      "standaloneReady": false,
+      "notes": "Keep source question; needs surrounding context or is quoted dialogue, not a standalone worksheet item."
+    },
+    {
+      "id": "q-21",
+      "question": "Why?",
+      "answer": "Because God was with them!",
+      "kind": "factual",
+      "scope": "application",
+      "origin": "source",
+      "source": {
+        "filename": "OT 26 Lesson (The Birth of Moses).odt",
+        "section": "Important Idea",
+        "page": 6,
+        "sourceParagraphIndex": 179
+      },
+      "standaloneReady": false,
+      "notes": "Keep source question; needs surrounding context or is quoted dialogue, not a standalone worksheet item."
+    },
+    {
+      "id": "q-22",
+      "question": "Guess who?",
+      "answer": "Jesus.",
+      "kind": "factual",
+      "scope": "application",
+      "origin": "source",
+      "source": {
+        "filename": "OT 26 Lesson (The Birth of Moses).odt",
+        "section": "Important Idea",
+        "page": 6,
+        "sourceParagraphIndex": 205
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-23",
+      "question": "And what do these words tell us?",
+      "answer": "That God can do whatever he pleases.",
+      "kind": "factual",
+      "scope": "memory-verse",
+      "origin": "source",
+      "source": {
+        "filename": "OT 26 Lesson (The Birth of Moses).odt",
+        "section": "Memory Verse Activity",
+        "page": 8,
+        "sourceParagraphIndex": 225
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-24",
+      "question": "What happened to Jacob’s family by the beginning of Exodus?",
+      "answer": "They had grown into a great nation",
+      "kind": "review",
+      "scope": "review",
+      "origin": "source",
+      "source": {
+        "filename": "OT 26 Lesson (The Birth of Moses).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 269
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-25",
+      "question": "Because he was afraid of them, what did Pharaoh do?",
+      "answer": "Made the Israelites work hard as slaves",
+      "kind": "review",
+      "scope": "review",
+      "origin": "source",
+      "source": {
+        "filename": "OT 26 Lesson (The Birth of Moses).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 270
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-26",
+      "question": "What happened after Pharaoh made the Israelites his slaves?",
+      "answer": "They grew even more",
+      "kind": "review",
+      "scope": "review",
+      "origin": "source",
+      "source": {
+        "filename": "OT 26 Lesson (The Birth of Moses).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 271
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-27",
+      "question": "What did Pharaoh tell the midwives to do? What happened?",
+      "answer": "To kill the baby boys; they didn’t obey him",
+      "kind": "review",
+      "scope": "review",
+      "origin": "source",
+      "source": {
+        "filename": "OT 26 Lesson (The Birth of Moses).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 272
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-28",
+      "question": "What final order did Pharaoh give?",
+      "answer": "Throw the baby boys into the river",
+      "kind": "review",
+      "scope": "review",
+      "origin": "source",
+      "source": {
+        "filename": "OT 26 Lesson (The Birth of Moses).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 273
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-29",
+      "question": "What did the couple from the tribe of Levi do with their baby boy?",
+      "answer": "Hid him for three months",
+      "kind": "review",
+      "scope": "review",
+      "origin": "source",
+      "source": {
+        "filename": "OT 26 Lesson (The Birth of Moses).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 274
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-30",
+      "question": "When they couldn’t hide him anymore, what did they do?",
+      "answer": "Placed him in a basket in the Nile River",
+      "kind": "review",
+      "scope": "review",
+      "origin": "source",
+      "source": {
+        "filename": "OT 26 Lesson (The Birth of Moses).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 275
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-31",
+      "question": "Who found the baby? How did she feel?",
+      "answer": "Pharaoh’s daughter; she felt sorry for him",
+      "kind": "review",
+      "scope": "review",
+      "origin": "source",
+      "source": {
+        "filename": "OT 26 Lesson (The Birth of Moses).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 276
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-32",
+      "question": "What did the baby’s sister Miriam say?",
+      "answer": "Do you want me to find someone to feed him?",
+      "kind": "review",
+      "scope": "review",
+      "origin": "source",
+      "source": {
+        "filename": "OT 26 Lesson (The Birth of Moses).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 277
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-33",
+      "question": "After he no longer needed his mother’s milk, what happened to the boy?",
+      "answer": "He became the son of Pharaoh’s daughter; she named him Moses",
+      "kind": "review",
+      "scope": "review",
+      "origin": "source",
+      "source": {
+        "filename": "OT 26 Lesson (The Birth of Moses).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 278
+      },
+      "standaloneReady": true
+    }
+  ],
+  "facts": [
+    {
+      "id": "tf-01",
+      "statement": "Jacob’s family grew into a large nation in Egypt.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-02",
+      "statement": "The new Pharaoh remembered how Joseph had helped Egypt.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-02"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-03",
+      "statement": "Pharaoh made the Israelites work hard as slaves.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-04",
+      "statement": "Making the Israelites serve as slaves stopped their families from growing.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-02"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-05",
+      "statement": "Shiphrah and Puah refused Pharaoh’s order to kill the baby boys.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-06",
+      "statement": "Pharaoh thanked the two midwives for protecting the baby boys.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-03"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-07",
+      "statement": "Pharaoh ordered Hebrew baby boys to be thrown into the Nile River.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-08",
+      "statement": "Moses’ family hid him for a whole year.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-09",
+      "statement": "Moses’ mother placed him in a basket in tall grass beside the river.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-10",
+      "statement": "Moses' basket sank into the river.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-06"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-11",
+      "statement": "Pharaoh’s daughter found the baby and felt sorry for him.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-12",
+      "statement": "Pharaoh’s daughter saw the baby and sent him back into the river.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-13",
+      "statement": "Moses’ own mother cared for him after his sister spoke to Pharaoh’s daughter.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-14",
+      "statement": "Pharaoh’s daughter named the baby Joseph.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    }
+  ],
+  "vocabulary": {
+    "related": [
+      "MOSES",
+      "MIRIAM",
+      "PHARAOH",
+      "EGYPT",
+      "ISRAEL",
+      "ISRAELITES",
+      "HEBREWS",
+      "JACOB",
+      "JOSEPH",
+      "ABRAHAM",
+      "ISAAC",
+      "NILE",
+      "RIVER",
+      "BASKET",
+      "GRASS",
+      "BABY",
+      "DAUGHTER",
+      "MOTHER",
+      "MIDWIVES",
+      "SHIPHRAH",
+      "PUAH",
+      "SLAVES",
+      "HIDDEN",
+      "THREE",
+      "MONTHS",
+      "PROMISE",
+      "FAMILY",
+      "SISTER",
+      "SON",
+      "HELP",
+      "KIND",
+      "TAR",
+      "LAND",
+      "GROW"
+    ],
+    "unrelated": [
+      "HARP",
+      "SHEEP",
+      "TOWER",
+      "TRUMPET",
+      "LION",
+      "SNOW",
+      "ANGEL",
+      "CAMEL",
+      "SWORD",
+      "RAIN"
+    ],
+    "entries": [
+      {
+        "id": "v-01",
+        "term": "MOSES",
+        "category": "person",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-02",
+        "term": "MIRIAM",
+        "category": "person",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-03",
+        "term": "PHARAOH",
+        "category": "person",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-04",
+        "term": "EGYPT",
+        "category": "place",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-05",
+        "term": "ISRAEL",
+        "category": "place",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-06",
+        "term": "ISRAELITES",
+        "category": "story-word",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-07",
+        "term": "HEBREWS",
+        "category": "story-word",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-08",
+        "term": "JACOB",
+        "category": "person",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-09",
+        "term": "JOSEPH",
+        "category": "person",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-10",
+        "term": "ABRAHAM",
+        "category": "person",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-11",
+        "term": "ISAAC",
+        "category": "person",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-12",
+        "term": "NILE",
+        "category": "place",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-13",
+        "term": "RIVER",
+        "category": "story-word",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-14",
+        "term": "BASKET",
+        "category": "story-word",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-15",
+        "term": "GRASS",
+        "category": "story-word",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-16",
+        "term": "BABY",
+        "category": "story-word",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-17",
+        "term": "DAUGHTER",
+        "category": "story-word",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-18",
+        "term": "MOTHER",
+        "category": "story-word",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-19",
+        "term": "MIDWIVES",
+        "category": "story-word",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-20",
+        "term": "SHIPHRAH",
+        "category": "person",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-21",
+        "term": "PUAH",
+        "category": "person",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-22",
+        "term": "SLAVES",
+        "category": "story-word",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-23",
+        "term": "HIDDEN",
+        "category": "story-word",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-24",
+        "term": "THREE",
+        "category": "story-word",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-25",
+        "term": "MONTHS",
+        "category": "story-word",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-26",
+        "term": "PROMISE",
+        "category": "story-word",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-27",
+        "term": "FAMILY",
+        "category": "story-word",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-28",
+        "term": "SISTER",
+        "category": "story-word",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-29",
+        "term": "SON",
+        "category": "story-word",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-30",
+        "term": "HELP",
+        "category": "story-word",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-31",
+        "term": "KIND",
+        "category": "story-word",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-32",
+        "term": "TAR",
+        "category": "story-word",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-33",
+        "term": "LAND",
+        "category": "story-word",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-34",
+        "term": "GROW",
+        "category": "story-word",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      }
+    ]
+  },
+  "characters": [
+    {
+      "id": "ch-01",
+      "name": "Moses",
+      "origin": "source",
+      "sourceIds": [
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "clues": [
+        {
+          "text": "I was a baby hidden in a basket near the Nile River.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-05",
+            "sn-06"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch-02",
+      "name": "Miriam",
+      "origin": "source",
+      "sourceIds": [
+        "sn-06",
+        "sn-07"
+      ],
+      "clues": [
+        {
+          "text": "I watched my baby brother’s basket by the river.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-06"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch-03",
+      "name": "Pharaoh",
+      "origin": "source",
+      "sourceIds": [
+        "sn-02",
+        "sn-03",
+        "sn-04"
+      ],
+      "clues": [
+        {
+          "text": "I was the king of Egypt who made the Israelites slaves.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-02"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch-04",
+      "name": "Pharaoh’s daughter",
+      "origin": "source",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "clues": [
+        {
+          "text": "I found a crying baby in a basket near the Nile River.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-07"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch-05",
+      "name": "Shiphrah",
+      "origin": "source",
+      "sourceIds": [
+        "sn-03"
+      ],
+      "clues": [
+        {
+          "text": "I was one of the midwives who refused Pharaoh’s cruel order.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-03"
+          ]
+        }
+      ]
+    }
+  ],
+  "matchingPairs": [
+    {
+      "id": "mp-01",
+      "left": "Moses",
+      "right": "Baby",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ]
+    },
+    {
+      "id": "mp-02",
+      "left": "Miriam",
+      "right": "Sister",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ]
+    },
+    {
+      "id": "mp-03",
+      "left": "Pharaoh",
+      "right": "King",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ]
+    },
+    {
+      "id": "mp-04",
+      "left": "Nile",
+      "right": "River",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04",
+        "sn-06"
+      ]
+    },
+    {
+      "id": "mp-05",
+      "left": "Basket",
+      "right": "Boat",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ]
+    },
+    {
+      "id": "mp-06",
+      "left": "Egypt",
+      "right": "Country",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-02"
+      ]
+    }
+  ],
+  "drawingPrompts": [
+    {
+      "id": "dp-01",
+      "prompt": "Israelite families working together to carry heavy loads",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ]
+    },
+    {
+      "id": "dp-02",
+      "prompt": "the two brave midwives helping a family with a baby",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ]
+    },
+    {
+      "id": "dp-03",
+      "prompt": "baby Moses floating in a basket among tall river grass",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ]
+    },
+    {
+      "id": "dp-04",
+      "prompt": "Pharaoh’s daughter finding the baby beside the Nile River",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ]
+    }
+  ],
+  "keyPhrases": [
+    {
+      "id": "kp-01",
+      "text": "Nothing in the world can stop the plans of God.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 26 Lesson (The Birth of Moses).odt",
+        "section": "Important Idea",
+        "page": 5,
+        "sourceParagraphIndex": 153,
+        "details": "Display font obscures letter case; capitalization regularized, with God capitalized."
+      }
+    },
+    {
+      "id": "kp-02",
+      "text": "God kept His promise to make Abraham’s family a great nation.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    {
+      "id": "kp-03",
+      "text": "The midwives respected God and refused Pharaoh’s cruel order.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ]
+    },
+    {
+      "id": "kp-04",
+      "text": "God kept baby Moses safe in the river.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06",
+        "sn-07"
+      ]
+    }
+  ],
+  "theologicalApplications": [
+    {
+      "id": "ta-01",
+      "text": "Nothing in the world can stop the plans of God.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 26 Lesson (The Birth of Moses).odt",
+        "section": "Important Idea",
+        "page": 5,
+        "sourceParagraphIndex": 153,
+        "details": "Display font obscures letter case; capitalization regularized, with God capitalized."
+      }
+    },
+    {
+      "id": "ta-02",
+      "text": "God kept His promise as Jacob’s family grew into a nation.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    {
+      "id": "ta-03",
+      "text": "God protected baby Moses in spite of Pharaoh’s cruel orders.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ]
+    },
+    {
+      "id": "ta-04",
+      "text": "The lesson points ahead to God blessing the world through Jesus.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 26 Lesson (The Birth of Moses).odt",
+        "section": "Important Idea",
+        "page": 6,
+        "sourceParagraphIndex": 209
+      }
+    }
+  ],
+  "preparedActivities": {
+    "drawPicture": {
+      "prompt": "baby Moses floating in a basket among tall river grass",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ]
+    },
+    "multipleChoice": [
+      {
+        "id": "mc-01",
+        "question": "Why was the new Pharaoh afraid of the Israelites?",
+        "correctAnswer": "There were so many of them.",
+        "choices": [
+          {
+            "text": "There were so many of them.",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "They all had big muscles.",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "They were really good workers.",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "sourceQuestionIds": [
+          "q-03"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-02",
+        "question": "Why did Shiphrah and Puah refuse Pharaoh’s order?",
+        "correctAnswer": "They respected God.",
+        "choices": [
+          {
+            "text": "They respected God.",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "They forgot what Pharaoh told them.",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "They didn't understand.",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "sourceQuestionIds": [
+          "q-07"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-03",
+        "question": "How long did Moses’ family keep him hidden?",
+        "correctAnswer": "Three months",
+        "choices": [
+          {
+            "text": "Three months",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Three days",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Three years",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ],
+        "sourceQuestionIds": [
+          "q-29"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-04",
+        "question": "Where did Moses’ mother put his basket?",
+        "correctAnswer": "In tall grass by the Nile",
+        "choices": [
+          {
+            "text": "In tall grass by the Nile",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Inside Pharaoh’s palace",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "In the desert",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ],
+        "sourceQuestionIds": [
+          "q-30"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-05",
+        "question": "Who watched baby Moses from nearby?",
+        "correctAnswer": "His sister",
+        "choices": [
+          {
+            "text": "His sister",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "His mother",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "His brother",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ],
+        "sourceQuestionIds": [
+          "q-12"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-06",
+        "question": "What did Pharaoh’s daughter do when she found the baby?",
+        "correctAnswer": "She felt sorry for him.",
+        "choices": [
+          {
+            "text": "She felt sorry for him.",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "She ignored him.",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "She gave him to her father’s soldiers.",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ],
+        "sourceQuestionIds": [
+          "q-14",
+          "q-31"
+        ],
+        "teacherReviewRequired": true
+      }
+    ],
+    "trueFalse": {
+      "statement": "Moses’ own mother cared for him after his sister spoke to Pharaoh’s daughter.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06",
+        "sn-07"
+      ],
+      "isTrue": true,
+      "factId": "tf-13",
+      "teacherReviewRequired": false
+    },
+    "firstLetters": {
+      "reference": "Psalm 135:6",
+      "verse": "The LORD does all that pleases Him in the heavens and on the earth, in the seas and in all their depths.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 26 Lesson (The Birth of Moses).odt",
+        "section": "Memory Verse Activity",
+        "page": 8,
+        "sourceParagraphIndex": 223,
+        "details": "Source lesson uses ESV; worksheet proposal uses verified complete BSB Psalm 135:6, pending teacher review and rights clearance."
+      },
+      "teacherReviewRequired": true
+    },
+    "oddWords": {
+      "related": [
+        "NILE",
+        "BASKET",
+        "MIDWIVES",
+        "GRASS"
+      ],
+      "unrelated": [
+        "Sheep",
+        "Tower",
+        "Horn",
+        "Fur",
+        "Mountain"
+      ],
+      "origin": "adapted",
+      "unrelatedOrigin": "suggested",
+      "teacherReviewRequired": true,
+      "sourceIds": [
+        "sn-03",
+        "sn-06"
+      ]
+    },
+    "unscrambleWords": {
+      "answers": [
+        "MOSES",
+        "NILE RIVER"
+      ],
+      "origin": "suggested",
+      "sourceIds": [],
+      "teacherReviewRequired": true
+    },
+    "checkboxes": {
+      "correct": [
+        "Moses",
+        "Miriam",
+        "Egypt",
+        "Pharaoh"
+      ],
+      "incorrect": [
+        "Lion",
+        "Snow",
+        "Angel",
+        "Camel",
+        "Grandpa"
+      ],
+      "origin": "adapted",
+      "incorrectOrigin": "suggested",
+      "teacherReviewRequired": true,
+      "sourceIds": [
+        "sn-02",
+        "sn-06",
+        "sn-07"
+      ]
+    },
+    "whoAmI": {
+      "clue": "I watched my baby brother’s basket by the river. I talked with Pharaoh's daughter. Who am I?",
+      "answer": "Miriam",
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-06"
+      ],
+      "teacherReviewRequired": true
+    },
+    "matchWords": [
+      {
+        "id": "mp-01",
+        "left": "Moses",
+        "right": "Baby",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "id": "mp-02",
+        "left": "Miriam",
+        "right": "Sister",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "id": "mp-03",
+        "left": "Pharaoh",
+        "right": "King",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "id": "mp-04",
+        "left": "Nile",
+        "right": "River",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04",
+          "sn-06"
+        ]
+      },
+      {
+        "id": "mp-05",
+        "left": "Basket",
+        "right": "Boat",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "id": "mp-06",
+        "left": "Puah",
+        "right": "Midwife",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-01",
+          "sn-02"
+        ],
+        "teacherReviewRequired": true
+      }
+    ],
+    "finishVerse": {
+      "reference": "Psalm 135:6",
+      "markedVerse": "The [LORD] does [all] that [pleases] Him in the [heavens] and on the [earth], in the [seas] and in all their [depths].",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 26 Lesson (The Birth of Moses).odt",
+        "section": "Memory Verse Activity",
+        "page": 8,
+        "sourceParagraphIndex": 223,
+        "details": "Source lesson uses ESV; worksheet proposal uses verified complete BSB Psalm 135:6, pending teacher review and rights clearance."
+      },
+      "teacherReviewRequired": true,
+      "sourceVerse": "The LORD does all that pleases Him in the heavens and on the earth, in the seas and in all their depths."
+    },
+    "unscrambleVerse": {
+      "reference": "Psalm 135:6",
+      "markedVerse": "The [LORD] does [all] that [pleases] Him in the [heavens] and on the [earth], in the [seas] and in all their [depths].",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 26 Lesson (The Birth of Moses).odt",
+        "section": "Memory Verse Activity",
+        "page": 8,
+        "sourceParagraphIndex": 223,
+        "details": "Source lesson uses ESV; worksheet proposal uses verified complete BSB Psalm 135:6, pending teacher review and rights clearance."
+      },
+      "teacherReviewRequired": true,
+      "sourceVerse": "The LORD does all that pleases Him in the heavens and on the earth, in the seas and in all their depths."
+    },
+    "circleMistakes": {
+      "paragraph": "Jacob’s family grew smaller and smaller in Egypt. Pharaoh made the Israelites work less by making them slaves. Shiphrah and Puah obeyed Pharaoh’s order about the baby boys. Moses’ parents hid him for three years. His mother put him in a basket up in a tree. Pharaoh’s daughter found him and felt angry.",
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true,
+      "mistakeCount": 6,
+      "mistakes": [
+        {
+          "incorrect": "smaller and smaller",
+          "correction": "larger and larger"
+        },
+        {
+          "incorrect": "less",
+          "correction": "harder"
+        },
+        {
+          "incorrect": "obeyed",
+          "correction": "refused"
+        },
+        {
+          "incorrect": "three years",
+          "correction": "three months"
+        },
+        {
+          "incorrect": "tree",
+          "correction": "tall grass by the river"
+        },
+        {
+          "incorrect": "angry",
+          "correction": "sorry"
+        }
+      ]
+    },
+    "mediumWordSearch": {
+      "words": [
+        "MOSES",
+        "MIRIAM",
+        "NILE",
+        "BASKET",
+        "PHARAOH",
+        "SISTER"
+      ],
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ]
+    },
+    "trueFalseMaze": {
+      "statement": "Pharaoh’s daughter named the baby Joseph.",
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": true,
+      "isTrue": false,
+      "factId": "tf-14"
+    },
+    "bigIdeaCryptogram": {
+      "phrase": "Nothing in the world can stop the plans of God.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 26 Lesson (The Birth of Moses).odt",
+        "section": "Important Idea",
+        "page": 5,
+        "sourceParagraphIndex": 153,
+        "details": "Display font obscures letter case; capitalization regularized, with God capitalized."
+      },
+      "sourceIds": [],
+      "teacherReviewRequired": false
+    },
+    "upsideDownVerse": {
+      "reference": "Psalm 135:6",
+      "verse": "The LORD does all that pleases Him in the heavens and on the earth, in the seas and in all their depths.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 26 Lesson (The Birth of Moses).odt",
+        "section": "Memory Verse Activity",
+        "page": 8,
+        "sourceParagraphIndex": 223,
+        "details": "Source lesson uses ESV; worksheet proposal uses verified complete BSB Psalm 135:6, pending teacher review and rights clearance."
+      },
+      "teacherReviewRequired": true
+    },
+    "connectBigIdea": {
+      "phrase": "Nothing in the world can stop the plans of God.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 26 Lesson (The Birth of Moses).odt",
+        "section": "Important Idea",
+        "page": 5,
+        "sourceParagraphIndex": 153,
+        "details": "Display font obscures letter case; capitalization regularized, with God capitalized."
+      }
+    },
+    "pixelPicture": {
+      "phrase": "God kept baby Moses safe in the river.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": false
+    },
+    "finishStory": {
+      "markedParagraph": "Jacob’s family [FILLED] the land of Egypt. Pharaoh made the Israelites work as [SLAVES], but their families kept [GROWING]. Two brave [MIDWIVES] refused to kill the baby [BOYS]. Then Pharaoh ordered that they be thrown into the Nile [RIVER]. One family kept their baby [HIDDEN] for three months. His mother placed him in a [BASKET] by the [RIVER] while his [SISTER] watched. Pharaoh’s daughter [FOUND] him and felt [SORRY] for him.",
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "storyOrder": [
+      {
+        "order": 1,
+        "text": "Jacob’s family grew into a large nation in Egypt.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "order": 2,
+        "text": "Pharaoh made the Israelites work hard as slaves.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "order": 3,
+        "text": "The midwives refused Pharaoh’s cruel order.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "order": 4,
+        "text": "Pharaoh ordered Hebrew baby boys to be thrown into the Nile River.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "order": 5,
+        "text": "An Israelite family hid their baby for three months.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "order": 6,
+        "text": "His mother put him in a basket beside the Nile River.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "order": 7,
+        "text": "His sister watched the basket from nearby.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "order": 8,
+        "text": "Pharaoh’s daughter found the baby and felt sorry for him.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      }
+    ],
+    "sortStory": [
+      {
+        "statement": "Jacob’s family grew into a large nation in Egypt.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": false,
+        "factId": "tf-01"
+      },
+      {
+        "statement": "The new Pharaoh remembered how Joseph had helped Egypt.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-01",
+          "sn-02"
+        ],
+        "teacherReviewRequired": true,
+        "factId": "tf-02"
+      },
+      {
+        "statement": "Pharaoh made the Israelites work hard as slaves.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": false,
+        "factId": "tf-03"
+      },
+      {
+        "statement": "Making the Israelites serve as slaves stopped their families from growing.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": true,
+        "factId": "tf-04"
+      },
+      {
+        "statement": "Shiphrah and Puah refused Pharaoh’s order to kill the baby boys.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": false,
+        "factId": "tf-05"
+      },
+      {
+        "statement": "Pharaoh thanked the two midwives for protecting the baby boys.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": true,
+        "factId": "tf-06"
+      },
+      {
+        "statement": "Pharaoh ordered Hebrew baby boys to be thrown into the Nile River.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ],
+        "teacherReviewRequired": false,
+        "factId": "tf-07"
+      },
+      {
+        "statement": "Moses’ family hid him for a whole year.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-05"
+        ],
+        "teacherReviewRequired": true,
+        "factId": "tf-08"
+      }
+    ],
+    "drawStory": [
+      {
+        "prompt": "Pharaoh made the Israelites work hard as slaves.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "prompt": "The midwives refused Pharaoh’s cruel order.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "prompt": "Pharaoh ordered Hebrew baby boys to be thrown into the Nile River.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "prompt": "An Israelite family hid their baby for three months.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "prompt": "His mother put him in a basket beside the Nile River.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "prompt": "Pharaoh’s daughter found the baby and felt sorry for him.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      }
+    ],
+    "wordSearch": {
+      "words": [
+        "MOSES",
+        "MIRIAM",
+        "PHARAOH",
+        "BASKET",
+        "NILE",
+        "EGYPT",
+        "MIDWIVES",
+        "JOSEPH",
+        "BABY",
+        "SISTER",
+        "ISRAEL",
+        "Puah"
+      ],
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "verseCryptogram": {
+      "reference": "Psalm 135:6",
+      "verse": "The LORD does all that pleases Him in the heavens and on the earth, in the seas and in all their depths.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 26 Lesson (The Birth of Moses).odt",
+        "section": "Memory Verse Activity",
+        "page": 8,
+        "sourceParagraphIndex": 223,
+        "details": "Source lesson uses ESV; worksheet proposal uses verified complete BSB Psalm 135:6, pending teacher review and rights clearance."
+      },
+      "teacherReviewRequired": true
+    },
+    "crossword": [
+      {
+        "answer": "MOSES",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ],
+        "clue": "What was the baby’s name?"
+      },
+      {
+        "answer": "NILE",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-06"
+        ],
+        "clue": "Moses was placed in this river.",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "BASKET",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ],
+        "clue": "What did Moses’ mother use to keep him safe?"
+      },
+      {
+        "answer": "MIRIAM",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ],
+        "clue": "Who watched the baby by the river?"
+      },
+      {
+        "answer": "PHARAOH",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "clue": "Who was king of Egypt?"
+      },
+      {
+        "answer": "MIDWIVES",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "clue": "Who refused Pharaoh’s cruel order?"
+      },
+      {
+        "answer": "EGYPT",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "clue": "Where did Jacob’s family grow into a nation?"
+      },
+      {
+        "answer": "SLAVES",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-06"
+        ],
+        "clue": "Pharaoh made the Israelites become this.",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "ABRAHAM",
+        "origin": "suggested",
+        "sourceIds": [],
+        "clue": "The Israelites came from his family.",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "DAUGHTER",
+        "clue": "Pharaoh's ___ found baby Moses.",
+        "origin": "suggested",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      }
+    ],
+    "spiralVerse": {
+      "reference": "Psalm 135:6",
+      "verse": "The LORD does all that pleases Him in the heavens and on the earth, in the seas and in all their depths.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 26 Lesson (The Birth of Moses).odt",
+        "section": "Memory Verse Activity",
+        "page": 8,
+        "sourceParagraphIndex": 223,
+        "details": "Source lesson uses ESV; worksheet proposal uses verified complete BSB Psalm 135:6, pending teacher review and rights clearance."
+      },
+      "teacherReviewRequired": true
+    },
+    "connectVerse": {
+      "reference": "Psalm 135:6",
+      "verse": "The LORD does all that pleases Him in the heavens and on the earth, in the seas and in all their depths.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 26 Lesson (The Birth of Moses).odt",
+        "section": "Memory Verse Activity",
+        "page": 8,
+        "sourceParagraphIndex": 223,
+        "details": "Source lesson uses ESV; worksheet proposal uses verified complete BSB Psalm 135:6, pending teacher review and rights clearance."
+      },
+      "teacherReviewRequired": true
+    }
+  },
+  "moduleReadiness": [
+    {
+      "moduleName": "Draw a Picture",
+      "moduleId": "draw-picture",
+      "size": "Small",
+      "preparedActivityKey": "drawPicture",
+      "status": "READY",
+      "contentValidation": "Locally prepared and checked. Official schema validator, app generator and presets not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means source content is prepared, not that the app generator has passed. Teacher approval and generator checks still required."
+    },
+    {
+      "moduleName": "Multiple Choice",
+      "moduleId": "multiple-choice",
+      "size": "Small",
+      "preparedActivityKey": "multipleChoice",
+      "status": "READY",
+      "contentValidation": "Locally prepared and checked. Official schema validator, app generator and presets not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means source content is prepared, not that the app generator has passed. Teacher approval and generator checks still required."
+    },
+    {
+      "moduleName": "True/False",
+      "moduleId": "true-false",
+      "size": "Small",
+      "preparedActivityKey": "trueFalse",
+      "status": "READY",
+      "contentValidation": "Locally prepared and checked. Official schema validator, app generator and presets not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means source content is prepared, not that the app generator has passed. Teacher approval and generator checks still required."
+    },
+    {
+      "moduleName": "First Letters",
+      "moduleId": "first-letters",
+      "size": "Small",
+      "preparedActivityKey": "firstLetters",
+      "status": "READY",
+      "contentValidation": "Locally prepared and checked. Official schema validator, app generator and presets not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means source content is prepared, not that the app generator has passed. Teacher approval and generator checks still required."
+    },
+    {
+      "moduleName": "Odd Words",
+      "moduleId": "odd-words",
+      "size": "Small",
+      "preparedActivityKey": "oddWords",
+      "status": "READY",
+      "contentValidation": "Locally prepared and checked. Official schema validator, app generator and presets not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means source content is prepared, not that the app generator has passed. Teacher approval and generator checks still required."
+    },
+    {
+      "moduleName": "Unscramble Words",
+      "moduleId": "unscramble-words",
+      "size": "Small",
+      "preparedActivityKey": "unscrambleWords",
+      "status": "READY",
+      "contentValidation": "Locally prepared and checked. Official schema validator, app generator and presets not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means source content is prepared, not that the app generator has passed. Teacher approval and generator checks still required."
+    },
+    {
+      "moduleName": "Checkboxes",
+      "moduleId": "checkboxes",
+      "size": "Small",
+      "preparedActivityKey": "checkboxes",
+      "status": "READY",
+      "contentValidation": "Locally prepared and checked. Official schema validator, app generator and presets not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means source content is prepared, not that the app generator has passed. Teacher approval and generator checks still required."
+    },
+    {
+      "moduleName": "Who Am I?",
+      "moduleId": "who-am-i",
+      "size": "Small",
+      "preparedActivityKey": "whoAmI",
+      "status": "READY",
+      "contentValidation": "Locally prepared and checked. Official schema validator, app generator and presets not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means source content is prepared, not that the app generator has passed. Teacher approval and generator checks still required."
+    },
+    {
+      "moduleName": "Match the Words",
+      "moduleId": "match-words",
+      "size": "Medium",
+      "preparedActivityKey": "matchWords",
+      "status": "READY",
+      "contentValidation": "Locally prepared and checked. Official schema validator, app generator and presets not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means source content is prepared, not that the app generator has passed. Teacher approval and generator checks still required."
+    },
+    {
+      "moduleName": "Finish the Verse",
+      "moduleId": "finish-verse",
+      "size": "Medium",
+      "preparedActivityKey": "finishVerse",
+      "status": "READY",
+      "contentValidation": "Locally prepared and checked. Official schema validator, app generator and presets not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means source content is prepared, not that the app generator has passed. Teacher approval and generator checks still required."
+    },
+    {
+      "moduleName": "Unscramble the Verse",
+      "moduleId": "unscramble-verse",
+      "size": "Medium",
+      "preparedActivityKey": "unscrambleVerse",
+      "status": "READY",
+      "contentValidation": "Locally prepared and checked. Official schema validator, app generator and presets not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means source content is prepared, not that the app generator has passed. Teacher approval and generator checks still required."
+    },
+    {
+      "moduleName": "Circle the Mistakes",
+      "moduleId": "circle-mistakes",
+      "size": "Medium",
+      "preparedActivityKey": "circleMistakes",
+      "status": "READY",
+      "contentValidation": "Locally prepared and checked. Official schema validator, app generator and presets not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means source content is prepared, not that the app generator has passed. Teacher approval and generator checks still required."
+    },
+    {
+      "moduleName": "Word Search (Medium)",
+      "moduleId": "medium-word-search",
+      "size": "Medium",
+      "preparedActivityKey": "mediumWordSearch",
+      "status": "READY",
+      "contentValidation": "Locally prepared and checked. Official schema validator, app generator and presets not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means source content is prepared, not that the app generator has passed. Teacher approval and generator checks still required."
+    },
+    {
+      "moduleName": "True/False Maze",
+      "moduleId": "true-false-maze",
+      "size": "Medium",
+      "preparedActivityKey": "trueFalseMaze",
+      "status": "READY",
+      "contentValidation": "Locally prepared and checked. Official schema validator, app generator and presets not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means source content is prepared, not that the app generator has passed. Teacher approval and generator checks still required."
+    },
+    {
+      "moduleName": "Big Idea Cryptogram",
+      "moduleId": "big-idea-cryptogram",
+      "size": "Medium",
+      "preparedActivityKey": "bigIdeaCryptogram",
+      "status": "READY",
+      "contentValidation": "Locally prepared and checked. Official schema validator, app generator and presets not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means source content is prepared, not that the app generator has passed. Teacher approval and generator checks still required."
+    },
+    {
+      "moduleName": "Upside-Down Verse",
+      "moduleId": "upside-down-verse",
+      "size": "Medium",
+      "preparedActivityKey": "upsideDownVerse",
+      "status": "READY",
+      "contentValidation": "Locally prepared and checked. Official schema validator, app generator and presets not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means source content is prepared, not that the app generator has passed. Teacher approval and generator checks still required."
+    },
+    {
+      "moduleName": "Connect the Big Idea",
+      "moduleId": "connect-big-idea",
+      "size": "Medium",
+      "preparedActivityKey": "connectBigIdea",
+      "status": "READY",
+      "contentValidation": "Locally prepared and checked. Official schema validator, app generator and presets not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means source content is prepared, not that the app generator has passed. Teacher approval and generator checks still required."
+    },
+    {
+      "moduleName": "Pixel Picture",
+      "moduleId": "pixel-picture",
+      "size": "Medium",
+      "preparedActivityKey": "pixelPicture",
+      "status": "READY",
+      "contentValidation": "Locally prepared and checked. Official schema validator, app generator and presets not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means source content is prepared, not that the app generator has passed. Teacher approval and generator checks still required."
+    },
+    {
+      "moduleName": "Finish the Story",
+      "moduleId": "finish-story",
+      "size": "Large",
+      "preparedActivityKey": "finishStory",
+      "status": "READY",
+      "contentValidation": "Locally prepared and checked. Official schema validator, app generator and presets not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means source content is prepared, not that the app generator has passed. Teacher approval and generator checks still required."
+    },
+    {
+      "moduleName": "Story Order",
+      "moduleId": "story-order",
+      "size": "Large",
+      "preparedActivityKey": "storyOrder",
+      "status": "READY",
+      "contentValidation": "Locally prepared and checked. Official schema validator, app generator and presets not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means source content is prepared, not that the app generator has passed. Teacher approval and generator checks still required."
+    },
+    {
+      "moduleName": "Sort the Story",
+      "moduleId": "sort-story",
+      "size": "Large",
+      "preparedActivityKey": "sortStory",
+      "status": "READY",
+      "contentValidation": "Locally prepared and checked. Official schema validator, app generator and presets not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means source content is prepared, not that the app generator has passed. Teacher approval and generator checks still required."
+    },
+    {
+      "moduleName": "Draw the Story",
+      "moduleId": "draw-story",
+      "size": "Large",
+      "preparedActivityKey": "drawStory",
+      "status": "READY",
+      "contentValidation": "Locally prepared and checked. Official schema validator, app generator and presets not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means source content is prepared, not that the app generator has passed. Teacher approval and generator checks still required."
+    },
+    {
+      "moduleName": "Word Search",
+      "moduleId": "word-search",
+      "size": "Large",
+      "preparedActivityKey": "wordSearch",
+      "status": "READY",
+      "contentValidation": "Locally prepared and checked. Official schema validator, app generator and presets not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means source content is prepared, not that the app generator has passed. Teacher approval and generator checks still required."
+    },
+    {
+      "moduleName": "Verse Cryptogram",
+      "moduleId": "verse-cryptogram",
+      "size": "Large",
+      "preparedActivityKey": "verseCryptogram",
+      "status": "READY",
+      "contentValidation": "Locally prepared and checked. Official schema validator, app generator and presets not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means source content is prepared, not that the app generator has passed. Teacher approval and generator checks still required."
+    },
+    {
+      "moduleName": "Crossword",
+      "moduleId": "crossword",
+      "size": "Large",
+      "preparedActivityKey": "crossword",
+      "status": "READY",
+      "contentValidation": "Locally prepared and checked. Official schema validator, app generator and presets not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means source content is prepared, not that the app generator has passed. Teacher approval and generator checks still required."
+    },
+    {
+      "moduleName": "Spiral Verse",
+      "moduleId": "spiral-verse",
+      "size": "Large",
+      "preparedActivityKey": "spiralVerse",
+      "status": "READY",
+      "contentValidation": "Locally prepared and checked. Official schema validator, app generator and presets not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means source content is prepared, not that the app generator has passed. Teacher approval and generator checks still required."
+    },
+    {
+      "moduleName": "Connect the Verse",
+      "moduleId": "connect-verse",
+      "size": "Large",
+      "preparedActivityKey": "connectVerse",
+      "status": "READY",
+      "contentValidation": "Locally prepared and checked. Official schema validator, app generator and presets not tested.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means source content is prepared, not that the app generator has passed. Teacher approval and generator checks still required."
+    }
+  ],
+  "reviewFlags": [
+    {
+      "id": "rf-01",
+      "priority": "high",
+      "type": "scripture-review",
+      "text": "Source lesson quotes Psalm 135:6 from ESV. Proposed BSB wording reads “The LORD does all that pleases Him in the heavens and on the earth, in the seas and in all their depths.” Confirm full-verse wording, translation choice and distribution clearance.",
+      "affectedModules": [
+        "first-letters",
+        "finish-verse",
+        "unscramble-verse",
+        "upside-down-verse",
+        "verse-cryptogram",
+        "spiral-verse",
+        "connect-verse"
+      ]
+    },
+    {
+      "id": "rf-02",
+      "priority": "high",
+      "type": "sensitive-content",
+      "text": "The source describes Pharaoh ordering the killing of Hebrew baby boys. Check child-facing Multiple Choice, True/False, Finish Story and caption wording for age appropriateness without changing biblical meaning.",
+      "affectedModules": [
+        "multiple-choice",
+        "true-false",
+        "sort-story",
+        "story-order",
+        "finish-story",
+        "draw-story"
+      ]
+    },
+    {
+      "id": "rf-03",
+      "priority": "high",
+      "type": "distractor-approval",
+      "text": "Approve or edit the 12 newly composed incorrect Multiple Choice answer choices, seven proposed false facts and Odd Words/Checkboxes unrelated words before publication.",
+      "affectedModules": [
+        "multiple-choice",
+        "true-false",
+        "true-false-maze",
+        "sort-story",
+        "odd-words",
+        "checkboxes"
+      ]
+    },
+    {
+      "id": "rf-04",
+      "priority": "medium",
+      "type": "circle-mistakes-review",
+      "text": "Review the six intentionally incorrect claims and their correction keys. The child-facing paragraph uses simple wording.",
+      "affectedModules": [
+        "circle-mistakes"
+      ]
+    },
+    {
+      "id": "rf-05",
+      "priority": "medium",
+      "type": "original-vs-adapted",
+      "text": "Seven Story Notes are preserved verbatim. Adapted cleanText and narrative captions should be checked against the original chronology and terminology.",
+      "affectedModules": [
+        "finish-story",
+        "story-order",
+        "draw-story"
+      ]
+    },
+    {
+      "id": "rf-06",
+      "priority": "medium",
+      "type": "drawing-review",
+      "text": "Confirm the four small drawing scene candidates are clear, central to the story, fun and appropriate for children.",
+      "affectedModules": [
+        "draw-picture",
+        "draw-story"
+      ]
+    },
+    {
+      "id": "rf-07",
+      "priority": "medium",
+      "type": "preset-validation",
+      "text": "The ten selected facts are distinct for Sort the Story (eight), True/False (one) and True/False Maze (one). Live Presets 1–3 and generator output have not been tested.",
+      "affectedModules": [
+        "sort-story",
+        "true-false",
+        "true-false-maze"
+      ]
+    },
+    {
+      "id": "rf-08",
+      "priority": "medium",
+      "type": "crossword-generator",
+      "text": "Nine child-friendly Crossword answers and clues were prepared but grid feasibility and intersections require the real generator.",
+      "affectedModules": [
+        "crossword"
+      ]
+    },
+    {
+      "id": "rf-09",
+      "priority": "low",
+      "type": "theological-review",
+      "text": "The source uses a lower-case display font for God in its Big Idea. The prepared Big Idea capitalizes God and preserves the meaning.",
+      "affectedModules": [
+        "big-idea-cryptogram",
+        "connect-big-idea"
+      ]
+    },
+    {
+      "id": "rf-10",
+      "priority": "medium",
+      "type": "chronology-and-naming",
+      "text": "The source names the baby Moses near the end and identifies his older sister as Miriam later in the teaching narrative. Review whether early use of these names is suitable for your worksheets.",
+      "affectedModules": [
+        "multiple-choice",
+        "who-am-i",
+        "crossword",
+        "story-order"
+      ]
+    }
+  ],
+  "publication": {
+    "status": "approved",
+    "approved": true,
+    "notes": "Teacher-review draft only. No publishing, PR, schema validation or live generator/preset testing. BSB wording and Scripture rights require approval.",
+    "teacherSignoff": {
+      "reviewer": "Andrew Doane",
+      "date": "2026-11-04",
+      "notes": "Approved with verified BSB verse through Curriculum Review Studio"
+    },
+    "scriptureRights": {
+      "status": "cleared",
+      "basis": "Berean Standard Bible (BSB), dedicated to the public domain on April 30, 2023. Official terms: https://berean.bible/terms.htm. Scripture text confirmed against https://bereanbible.com/bsb.txt.",
+      "reviewedBy": "Andrew Doane",
+      "reviewedOn": "2026-11-04"
+    },
+    "resolvedReviewFlagIds": []
+  },
+  "validation": {
+    "basis": "Original conversion tests predate teacher-approved BSB; revalidate actual engines and content after export.",
+    "allTextChecksPassed": false,
+    "checks": [
+      {
+        "check": "Exactly seven source Story Notes",
+        "passed": true
+      },
+      {
+        "check": "Original Story Notes preserved exactly from ODT",
+        "passed": true
+      },
+      {
+        "check": "All emphasized original Story Note words preserved",
+        "passed": true
+      },
+      {
+        "check": "All extracted questions are in their cited source paragraphs",
+        "passed": true
+      },
+      {
+        "check": "All recorded original answers are in their cited paragraphs",
+        "passed": true
+      },
+      {
+        "check": "Questions and Story Notes have source provenance",
+        "passed": true
+      },
+      {
+        "check": "All 27 prepared activity keys present",
+        "passed": true
+      },
+      {
+        "check": "All 27 module IDs unique",
+        "passed": true
+      },
+      {
+        "check": "All module IDs refer to prepared activity keys",
+        "passed": true
+      },
+      {
+        "check": "All 27 generator tested flags false",
+        "passed": true
+      },
+      {
+        "check": "Exactly four small drawing candidates",
+        "passed": true
+      },
+      {
+        "check": "Small drawing prompts are short scene phrases",
+        "passed": true
+      },
+      {
+        "check": "Six unique multiple choice questions",
+        "passed": true
+      },
+      {
+        "check": "Each multiple choice has one correct and two incorrect options",
+        "passed": true
+      },
+      {
+        "check": "All incorrect options labeled suggested",
+        "passed": true
+      },
+      {
+        "check": "14 balanced True/False facts",
+        "passed": true
+      },
+      {
+        "check": "False statements require teacher review",
+        "passed": true
+      },
+      {
+        "check": "Eight Sort the Story facts selected",
+        "passed": true
+      },
+      {
+        "check": "True False selections do not overlap within preset three",
+        "passed": true
+      },
+      {
+        "check": "Four remaining alternative facts",
+        "passed": true
+      },
+      {
+        "check": "All selected facts match master bank",
+        "passed": true
+      },
+      {
+        "check": "Single-word matching-pair labels",
+        "passed": true
+      },
+      {
+        "check": "Matching pairs have unique left and right answers",
+        "passed": true
+      },
+      {
+        "check": "Odd Words and Checkboxes do not reuse word lists",
+        "passed": true
+      },
+      {
+        "check": "Odd Words and Checkboxes each have four correct and four incorrect words",
+        "passed": true
+      },
+      {
+        "check": "Six Circle the Mistakes errors",
+        "passed": true
+      },
+      {
+        "check": "Circle the Mistakes incorrect spans are unique in paragraph",
+        "passed": true
+      },
+      {
+        "check": "Four to six Draw the Story sentences",
+        "passed": true
+      },
+      {
+        "check": "Draw the Story captions match Story Order text",
+        "passed": true
+      },
+      {
+        "check": "ScriptureDisplay is only the Bible book",
+        "passed": true
+      },
+      {
+        "check": "Memory verse has verified BSB wording",
+        "passed": true
+      },
+      {
+        "check": "Memory verse not silently substituted for original source translation",
+        "passed": true
+      },
+      {
+        "check": "All referenced Story Note IDs exist",
+        "passed": true
+      },
+      {
+        "check": "Publication remains pending unapproved",
+        "passed": true
+      },
+      {
+        "check": "No worksheet layouts or editor draft objects",
+        "passed": true
+      },
+      {
+        "check": "Complete original Bible-sourced notes and questions preserved in separate collections",
+        "passed": true
+      },
+      {
+        "check": "Schema-supported top-level keys only",
+        "passed": true
+      },
+      {
+        "check": "Every prepared multiple-choice question references an actual source question",
+        "passed": true
+      }
+    ],
+    "actualGeneratorTested": false,
+    "jsonParseTested": true
+  }
+}
