@@ -1,0 +1,3318 @@
+{
+  "schemaVersion": 1,
+  "schemaStatus": "Working conversion draft; official importer/preflight and live generators not executed",
+  "id": "ot-033-god-speaks-from-mount-sinai",
+  "curriculum": {
+    "series": "Old Testament",
+    "lessonNumber": 33
+  },
+  "lessonDetails": {
+    "title": "God Speaks From Mount Sinai",
+    "scripturePassages": [
+      "Exodus 19",
+      "Exodus 20"
+    ],
+    "scriptureDisplay": "Exodus 19–20",
+    "bigIdeas": [
+      {
+        "text": "The Lord is a god to be feared.",
+        "origin": "source",
+        "source": {
+          "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+          "section": "Important Idea",
+          "page": 5,
+          "sourceParagraphIndex": 154,
+          "details": "The displayed source phrase spans ODT paragraphs 154–156; casing and punctuation preserved from page-5 Important Idea graphic."
+        }
+      }
+    ],
+    "memoryVerse": {
+      "reference": "Psalm 128:1",
+      "translation": "BSB",
+      "text": "Blessed are all who fear the LORD, who walk in His ways!",
+      "isExcerpt": true,
+      "hasEllipses": false,
+      "requiresTextReview": false,
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 199,
+        "details": "Source curriculum prints the ESV wording; BSB is the proposed rights-cleared worksheet version."
+      },
+      "alsoVerifiedAt": {
+        "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+        "section": "Verse and Motions",
+        "page": 7,
+        "sourceParagraphIndex": 206
+      },
+      "bsbSource": {
+        "reference": "Psalm 128:1",
+        "sourceUrl": "https://bereanbible.com/bsb.txt",
+        "publicDomainTerms": "https://berean.bible/terms.htm",
+        "startWord": 4,
+        "endWord": 15
+      },
+      "originalCurriculumVerse": {
+        "reference": "Psalm 128:1",
+        "translation": "ESV",
+        "text": "Blessed is everyone who fears the Lord, who walks in his ways!"
+      }
+    }
+  },
+  "sourceFiles": [
+    {
+      "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+      "format": "odt",
+      "role": "primary teaching source",
+      "note": "No slide presentation supplied; original memory verse is ESV Psalm 128:1, replaced in proposed worksheet activities with verified BSB text."
+    }
+  ],
+  "storyNotes": [
+    {
+      "id": "sn-01",
+      "order": 1,
+      "originalText": "Three months after leaving Egypt, the Israelites camped at MOUNT Sinai.",
+      "cleanText": "Three months after leaving Egypt, the Israelites camped at Mount Sinai.",
+      "emphasizedWords": [
+        "MOUNT"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+        "section": "STORY NOTE",
+        "page": 2,
+        "sourceParagraphIndex": 37
+      }
+    },
+    {
+      "id": "sn-02",
+      "order": 2,
+      "originalText": "On the mountain, God told Moses, “If my people obey me, they will be my special TREASURE.”",
+      "cleanText": "On the mountain, God told Moses, “If my people obey me, they will be my special treasure.”",
+      "emphasizedWords": [
+        "TREASURE"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+        "section": "STORY NOTE",
+        "page": 2,
+        "sourceParagraphIndex": 54
+      }
+    },
+    {
+      "id": "sn-03",
+      "order": 3,
+      "originalText": "The people told Moses, “We will DO all that God says.”",
+      "cleanText": "The people told Moses, “We will do all that God says.”",
+      "emphasizedWords": [
+        "DO"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+        "section": "STORY NOTE",
+        "page": 3,
+        "sourceParagraphIndex": 69
+      }
+    },
+    {
+      "id": "sn-04",
+      "order": 4,
+      "originalText": "God told Moses, “PREPARE the people. In three days, I will come meet with you on this mountain.”",
+      "cleanText": "God told Moses, “prepare the people. In three days, I will come meet with you on this mountain.”",
+      "emphasizedWords": [
+        "PREPARE"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+        "section": "STORY NOTE",
+        "page": 3,
+        "sourceParagraphIndex": 88
+      }
+    },
+    {
+      "id": "sn-05",
+      "order": 5,
+      "originalText": "God came down on Mount Sinai with FIRE, thunder, lightning, smoke, and an earthquake.",
+      "cleanText": "God came down on Mount Sinai with fire, thunder, lightning, smoke, and an earthquake.",
+      "emphasizedWords": [
+        "FIRE"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+        "section": "STORY NOTE",
+        "page": 4,
+        "sourceParagraphIndex": 105
+      }
+    },
+    {
+      "id": "sn-06",
+      "order": 6,
+      "originalText": "From the rumbling mountain, God spoke TEN commandments to his people.",
+      "cleanText": "From the rumbling mountain, God spoke ten commandments to his people.",
+      "emphasizedWords": [
+        "TEN"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+        "section": "STORY NOTE",
+        "page": 4,
+        "sourceParagraphIndex": 126
+      }
+    },
+    {
+      "id": "sn-07",
+      "order": 7,
+      "originalText": "The people were SCARED. Moses went up the mountain. For 40 days, God spoke his law to him.",
+      "cleanText": "The people were scared. Moses went up the mountain. For 40 days, God spoke his law to him.",
+      "emphasizedWords": [
+        "SCARED"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+        "section": "STORY NOTE",
+        "page": 5,
+        "sourceParagraphIndex": 139
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q-01",
+      "question": "How do you feel about fire?",
+      "answer": "Various responses.",
+      "kind": "discussion",
+      "origin": "source",
+      "scope": "introduction",
+      "source": {
+        "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 11
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-02",
+      "question": "What about thunder and lightning?",
+      "answer": "Various responses.",
+      "kind": "discussion",
+      "origin": "source",
+      "scope": "introduction",
+      "source": {
+        "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 15
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-03",
+      "question": "How about earthquakes?",
+      "answer": "Various responses.",
+      "kind": "discussion",
+      "origin": "source",
+      "scope": "introduction",
+      "source": {
+        "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 19
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-04",
+      "question": "Do you remember how God showed his people where he wanted them to go?",
+      "answer": "He led them as a pillar of cloud by day and fire by night.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "recap",
+      "source": {
+        "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+        "section": "Story teaching",
+        "page": 2,
+        "sourceParagraphIndex": 41
+      }
+    },
+    {
+      "id": "q-05",
+      "question": "Who did he meet there?",
+      "answer": "God.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+        "section": "Story teaching",
+        "page": 2,
+        "sourceParagraphIndex": 56
+      }
+    },
+    {
+      "id": "q-06",
+      "question": "What was God’s message?",
+      "answer": "Obey me completely. If you do, I’ll treat you like my special treasure.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+        "section": "Story teaching",
+        "page": 2,
+        "sourceParagraphIndex": 58
+      }
+    },
+    {
+      "id": "q-07",
+      "question": "If they did, what did God promise to do?",
+      "answer": "Treat them like his special treasure.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+        "section": "Story teaching",
+        "page": 2,
+        "sourceParagraphIndex": 64
+      }
+    },
+    {
+      "id": "q-08",
+      "question": "what?",
+      "answer": "Treasure.",
+      "kind": "context-dependent",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+        "section": "Story teaching",
+        "page": 3,
+        "sourceParagraphIndex": 73
+      },
+      "standaloneReady": false,
+      "notes": "Requires original surrounding teaching context; not a standalone Multiple Choice candidate."
+    },
+    {
+      "id": "q-09",
+      "question": "What did the elders say to Moses?",
+      "answer": "We’ll do everything God says.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+        "section": "Story teaching",
+        "page": 3,
+        "sourceParagraphIndex": 77
+      }
+    },
+    {
+      "id": "q-10",
+      "question": "What was it?",
+      "answer": "God was going to come down on the mountain in a thick cloud.",
+      "kind": "context-dependent",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+        "section": "Story teaching",
+        "page": 3,
+        "sourceParagraphIndex": 90
+      },
+      "standaloneReady": false,
+      "notes": "Requires original surrounding teaching context; not a standalone Multiple Choice candidate."
+    },
+    {
+      "id": "q-11",
+      "question": "What were his instructions?",
+      "answer": "Wash their clothes, put limits/barriers around the mountain to keep people from going up it.",
+      "kind": "context-dependent",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+        "section": "Story teaching",
+        "page": 3,
+        "sourceParagraphIndex": 94
+      },
+      "standaloneReady": false,
+      "notes": "Requires original surrounding teaching context; not a standalone Multiple Choice candidate."
+    },
+    {
+      "id": "q-12",
+      "question": "If anyone touched the mountain when God came, what would happen to them?",
+      "answer": "They were to be killed.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+        "section": "Story teaching",
+        "page": 3,
+        "sourceParagraphIndex": 96
+      }
+    },
+    {
+      "id": "q-13",
+      "question": "What things happened to make them so scared?",
+      "answer": "Thunder, lightning, earthquake, fire, smoke, trumpet blasts.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+        "section": "Story teaching",
+        "page": 4,
+        "sourceParagraphIndex": 109
+      }
+    },
+    {
+      "id": "q-14",
+      "question": "So what did God say to the people?",
+      "answer": "God spoke ten commands.",
+      "kind": "context-dependent",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+        "section": "Story teaching",
+        "page": 4,
+        "sourceParagraphIndex": 119
+      },
+      "standaloneReady": false,
+      "notes": "Source asks rhetorically before giving Ten Commandments as the answer in following paragraph; answer is contextual."
+    },
+    {
+      "id": "q-15",
+      "question": "How many of the ten commands God spoke can you name?",
+      "answer": "Various responses.",
+      "kind": "discussion",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+        "section": "Story teaching",
+        "page": 5,
+        "sourceParagraphIndex": 132
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-16",
+      "question": "After hearing the voice of their mountain-shaking God, how did the Israelite people feel?",
+      "answer": "Scared.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+        "section": "Story teaching",
+        "page": 5,
+        "sourceParagraphIndex": 141
+      }
+    },
+    {
+      "id": "q-17",
+      "question": "What?",
+      "answer": "To speak to God for them.",
+      "kind": "context-dependent",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+        "section": "Story teaching",
+        "page": 5,
+        "sourceParagraphIndex": 143
+      },
+      "standaloneReady": false,
+      "notes": "Requires original surrounding teaching context; not a standalone Multiple Choice candidate."
+    },
+    {
+      "id": "q-18",
+      "question": "So how does the story of God coming down on Mount Sinai teach us, strengthen us, encourage us, or give us hope?",
+      "answer": "Various responses.",
+      "kind": "discussion",
+      "origin": "source",
+      "scope": "application",
+      "source": {
+        "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+        "section": "Important Idea introduction",
+        "page": 5,
+        "sourceParagraphIndex": 151
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-19",
+      "question": "Which is it, Moses?",
+      "answer": "Both fear God and do not be afraid in the sense explained in the lesson.",
+      "kind": "rhetorical",
+      "origin": "source",
+      "scope": "application",
+      "source": {
+        "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+        "section": "Theological application",
+        "page": 5,
+        "sourceParagraphIndex": 165
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-20",
+      "question": "Should I not be afraid or should I fear God?",
+      "answer": "Both are possible, as the lesson explains.",
+      "kind": "rhetorical",
+      "origin": "source",
+      "scope": "application",
+      "source": {
+        "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+        "section": "Theological application",
+        "page": 5,
+        "sourceParagraphIndex": 165
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-21",
+      "question": "I can't do both, right?",
+      "answer": "The lesson answers: actually, you can.",
+      "kind": "rhetorical",
+      "origin": "source",
+      "scope": "application",
+      "source": {
+        "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+        "section": "Theological application",
+        "page": 5,
+        "sourceParagraphIndex": 165
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-22",
+      "question": "What is a good dad like?",
+      "answer": "He’s strong and loving, cares for his kids, protects and teaches them.",
+      "kind": "discussion",
+      "origin": "source",
+      "scope": "application",
+      "source": {
+        "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+        "section": "Theological application",
+        "page": 6,
+        "sourceParagraphIndex": 171
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-23",
+      "question": "Why?",
+      "answer": "Because they know their dad loves them and would never, ever hurt them!",
+      "kind": "context-dependent",
+      "origin": "source",
+      "scope": "application",
+      "source": {
+        "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+        "section": "Theological application",
+        "page": 6,
+        "sourceParagraphIndex": 173
+      },
+      "standaloneReady": false,
+      "notes": "Requires original surrounding teaching context; not a standalone Multiple Choice candidate."
+    },
+    {
+      "id": "q-24",
+      "question": "Why?",
+      "answer": "Because Jesus was already punished in our place!",
+      "kind": "context-dependent",
+      "origin": "source",
+      "scope": "application",
+      "source": {
+        "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+        "section": "Theological application",
+        "page": 6,
+        "sourceParagraphIndex": 185
+      },
+      "standaloneReady": false,
+      "notes": "Requires original surrounding teaching context; not a standalone Multiple Choice candidate."
+    },
+    {
+      "id": "q-25",
+      "question": "Why?",
+      "answer": "Because a mountain-shaking God like the Lord could squash them like a bug!",
+      "kind": "context-dependent",
+      "origin": "source",
+      "scope": "application",
+      "source": {
+        "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 201
+      },
+      "standaloneReady": false,
+      "notes": "Requires original surrounding teaching context; not a standalone Multiple Choice candidate."
+    },
+    {
+      "id": "q-26",
+      "question": "What do you think that means?",
+      "answer": "Obey his commands.",
+      "kind": "discussion",
+      "origin": "source",
+      "scope": "application",
+      "source": {
+        "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 202
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-27",
+      "question": "The Israelites camped by a mountain. What was its name?",
+      "answer": "Mount Sinai",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+        "section": "Review questions",
+        "page": 9,
+        "sourceParagraphIndex": 247
+      }
+    },
+    {
+      "id": "q-28",
+      "question": "God said, “If my people obey me, then they’ll become...” what?",
+      "answer": "His special treasure",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+        "section": "Review questions",
+        "page": 9,
+        "sourceParagraphIndex": 248
+      }
+    },
+    {
+      "id": "q-29",
+      "question": "When Moses told God’s message to the leaders, what did they say?",
+      "answer": "We’ll do everything he says",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+        "section": "Review questions",
+        "page": 9,
+        "sourceParagraphIndex": 249
+      }
+    },
+    {
+      "id": "q-30",
+      "question": "What did God tell the people to do to prepare for his coming in three days?",
+      "answer": "Wash their clothes, put limits around the mountain, don’t touch the mountain",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+        "section": "Review questions",
+        "page": 9,
+        "sourceParagraphIndex": 250
+      }
+    },
+    {
+      "id": "q-31",
+      "question": "What happened when God came down on Mount Sinai?",
+      "answer": "There was fire, smoke, thunder, lightning, earthquakes, and a trumpet blast",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+        "section": "Review questions",
+        "page": 10,
+        "sourceParagraphIndex": 251
+      }
+    },
+    {
+      "id": "q-32",
+      "question": "What did God speak from the rumbling mountain?",
+      "answer": "Ten Commandments",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+        "section": "Review questions",
+        "page": 10,
+        "sourceParagraphIndex": 252
+      }
+    },
+    {
+      "id": "q-33",
+      "question": "How did the people feel when God spoke to them?",
+      "answer": "Afraid that they would die",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+        "section": "Review questions",
+        "page": 10,
+        "sourceParagraphIndex": 253
+      }
+    },
+    {
+      "id": "q-34",
+      "question": "After hearing from God, what did the people say to Moses?",
+      "answer": "You speak to God for us, we’ll die if God speaks to us",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+        "section": "Review questions",
+        "page": 10,
+        "sourceParagraphIndex": 254
+      }
+    },
+    {
+      "id": "q-35",
+      "question": "How long did Moses stay on the mountain with God?",
+      "answer": "40 days",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+        "section": "Review questions",
+        "page": 10,
+        "sourceParagraphIndex": 255
+      }
+    },
+    {
+      "id": "q-36",
+      "question": "Is it a person?",
+      "answer": "Context-dependent example for the guessing game.",
+      "kind": "activity-example",
+      "origin": "source",
+      "scope": "supplemental",
+      "source": {
+        "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+        "section": "Extra Review Activity",
+        "page": 12,
+        "sourceParagraphIndex": 282
+      },
+      "standaloneReady": false,
+      "notes": "Requires original surrounding teaching context; not a standalone Multiple Choice candidate."
+    },
+    {
+      "id": "q-37",
+      "question": "Is it bigger than a dog?",
+      "answer": "Context-dependent example for the guessing game.",
+      "kind": "activity-example",
+      "origin": "source",
+      "scope": "supplemental",
+      "source": {
+        "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+        "section": "Extra Review Activity",
+        "page": 12,
+        "sourceParagraphIndex": 282
+      },
+      "standaloneReady": false,
+      "notes": "Requires original surrounding teaching context; not a standalone Multiple Choice candidate."
+    }
+  ],
+  "facts": [
+    {
+      "id": "tf-01",
+      "statement": "The Israelites camped near Mount Sinai.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-02",
+      "statement": "God promised to make obedient Israel His special treasure.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-03",
+      "statement": "The Israelites promised Moses they would ignore God’s commands.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-03"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-04",
+      "statement": "God told the people to wash their clothes before He came.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-05",
+      "statement": "God told all the people to climb Mount Sinai to meet Him.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-04"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-06",
+      "statement": "God descended on Sinai with fire, smoke, and thunder.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-07",
+      "statement": "Mount Sinai stayed quiet and still when God came down.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-08",
+      "statement": "God spoke the Ten Commandments from the mountain.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-09",
+      "statement": "The people celebrated and asked God to speak even louder.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-10",
+      "statement": "The frightened people asked Moses to speak to God for them.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-11",
+      "statement": "Moses stayed in the camp while God spoke from Mount Sinai.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-02",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-12",
+      "statement": "Moses stayed on the mountain for forty days to receive God’s law.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-13",
+      "statement": "Moses was on the mountain for 400 days.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-14",
+      "statement": "God said the people would hear Him speaking with Moses.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+        "section": "Story teaching",
+        "page": 3,
+        "sourceParagraphIndex": 81
+      }
+    }
+  ],
+  "vocabulary": {
+    "related": [
+      "Moses",
+      "Israelites",
+      "God",
+      "Jesus",
+      "Egypt",
+      "Sinai",
+      "Desert",
+      "Mount",
+      "Mountain",
+      "Camp",
+      "Cloud",
+      "Fire",
+      "Thunder",
+      "Lightning",
+      "Smoke",
+      "Earthquake",
+      "Trumpet",
+      "Covenant",
+      "Treasure",
+      "Commands",
+      "Commandments",
+      "Ten",
+      "Law",
+      "Obey",
+      "Prepare",
+      "Wash",
+      "Clothes",
+      "Barrier",
+      "Fear",
+      "Scared",
+      "Respect",
+      "Forty",
+      "Days",
+      "Elders",
+      "Promise",
+      "People",
+      "Prayer",
+      "Cross",
+      "Power",
+      "Blessed",
+      "Psalms",
+      "Trust"
+    ],
+    "unrelated": [
+      "Vineyard",
+      "Fisherman",
+      "Well",
+      "Boat",
+      "Pottery",
+      "Shepherd",
+      "Crown"
+    ],
+    "entries": [
+      {
+        "id": "v-01",
+        "term": "Moses",
+        "category": "people",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-07"
+        ]
+      },
+      {
+        "id": "v-02",
+        "term": "Israelites",
+        "category": "people",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-01",
+          "sn-03"
+        ]
+      },
+      {
+        "id": "v-03",
+        "term": "God",
+        "category": "people",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-02",
+          "sn-04",
+          "sn-05",
+          "sn-06"
+        ]
+      },
+      {
+        "id": "v-04",
+        "term": "Jesus",
+        "category": "people",
+        "origin": "adapted",
+        "scope": "application",
+        "sourceIds": [],
+        "source": {
+          "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+          "section": "Teaching narrative/vocabulary",
+          "page": 6,
+          "sourceParagraphIndex": 185
+        }
+      },
+      {
+        "id": "v-05",
+        "term": "Egypt",
+        "category": "places",
+        "origin": "adapted",
+        "scope": "recap",
+        "sourceIds": [],
+        "source": {
+          "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+          "section": "Teaching narrative/vocabulary",
+          "page": 1,
+          "sourceParagraphIndex": 27
+        }
+      },
+      {
+        "id": "v-06",
+        "term": "Sinai",
+        "category": "places",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-01",
+          "sn-05"
+        ]
+      },
+      {
+        "id": "v-07",
+        "term": "Desert",
+        "category": "places",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [],
+        "source": {
+          "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+          "section": "Teaching narrative/vocabulary",
+          "page": 2,
+          "sourceParagraphIndex": 34
+        }
+      },
+      {
+        "id": "v-08",
+        "term": "Mount",
+        "category": "places",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "id": "v-09",
+        "term": "Mountain",
+        "category": "places",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-01",
+          "sn-02"
+        ]
+      },
+      {
+        "id": "v-10",
+        "term": "Camp",
+        "category": "places",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [],
+        "source": {
+          "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+          "section": "Teaching narrative/vocabulary",
+          "page": 2,
+          "sourceParagraphIndex": 34
+        }
+      },
+      {
+        "id": "v-11",
+        "term": "Cloud",
+        "category": "objects-actions",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [],
+        "source": {
+          "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+          "section": "Teaching narrative/vocabulary",
+          "page": 2,
+          "sourceParagraphIndex": 41
+        }
+      },
+      {
+        "id": "v-12",
+        "term": "Fire",
+        "category": "objects-actions",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "id": "v-13",
+        "term": "Thunder",
+        "category": "objects-actions",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "id": "v-14",
+        "term": "Lightning",
+        "category": "objects-actions",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "id": "v-15",
+        "term": "Smoke",
+        "category": "objects-actions",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "id": "v-16",
+        "term": "Earthquake",
+        "category": "objects-actions",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "id": "v-17",
+        "term": "Trumpet",
+        "category": "objects-actions",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [],
+        "source": {
+          "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+          "section": "Teaching narrative/vocabulary",
+          "page": 4,
+          "sourceParagraphIndex": 100
+        }
+      },
+      {
+        "id": "v-18",
+        "term": "Covenant",
+        "category": "concepts",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "id": "v-19",
+        "term": "Treasure",
+        "category": "concepts",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "id": "v-20",
+        "term": "Commands",
+        "category": "concepts",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "id": "v-21",
+        "term": "Commandments",
+        "category": "concepts",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "id": "v-22",
+        "term": "Ten",
+        "category": "concepts",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "id": "v-23",
+        "term": "Law",
+        "category": "concepts",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [],
+        "source": {
+          "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+          "section": "Teaching narrative/vocabulary",
+          "page": 5,
+          "sourceParagraphIndex": 139
+        }
+      },
+      {
+        "id": "v-24",
+        "term": "Obey",
+        "category": "concepts",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "id": "v-25",
+        "term": "Prepare",
+        "category": "concepts",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "id": "v-26",
+        "term": "Wash",
+        "category": "objects-actions",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "id": "v-27",
+        "term": "Clothes",
+        "category": "objects-actions",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "id": "v-28",
+        "term": "Barrier",
+        "category": "objects-actions",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "id": "v-29",
+        "term": "Fear",
+        "category": "concepts",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "id": "v-30",
+        "term": "Scared",
+        "category": "concepts",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "id": "v-31",
+        "term": "Respect",
+        "category": "concepts",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [],
+        "source": {
+          "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+          "section": "Teaching narrative/vocabulary",
+          "page": 6,
+          "sourceParagraphIndex": 189
+        }
+      },
+      {
+        "id": "v-32",
+        "term": "Forty",
+        "category": "objects-actions",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "id": "v-33",
+        "term": "Days",
+        "category": "objects-actions",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "id": "v-34",
+        "term": "Elders",
+        "category": "people",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [],
+        "source": {
+          "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+          "section": "Teaching narrative/vocabulary",
+          "page": 3,
+          "sourceParagraphIndex": 77
+        }
+      },
+      {
+        "id": "v-35",
+        "term": "Promise",
+        "category": "concepts",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [],
+        "source": {
+          "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+          "section": "Teaching narrative/vocabulary",
+          "page": 2,
+          "sourceParagraphIndex": 62
+        }
+      },
+      {
+        "id": "v-36",
+        "term": "People",
+        "category": "people",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [],
+        "source": {
+          "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+          "section": "Teaching narrative/vocabulary",
+          "page": 3,
+          "sourceParagraphIndex": 71
+        }
+      },
+      {
+        "id": "v-37",
+        "term": "Prayer",
+        "category": "concepts",
+        "origin": "adapted",
+        "scope": "application",
+        "sourceIds": [],
+        "source": {
+          "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+          "section": "Teaching narrative/vocabulary",
+          "page": 6,
+          "sourceParagraphIndex": 195
+        }
+      },
+      {
+        "id": "v-38",
+        "term": "Cross",
+        "category": "objects-actions",
+        "origin": "adapted",
+        "scope": "application",
+        "sourceIds": [],
+        "source": {
+          "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+          "section": "Teaching narrative/vocabulary",
+          "page": 6,
+          "sourceParagraphIndex": 185
+        }
+      },
+      {
+        "id": "v-39",
+        "term": "Power",
+        "category": "concepts",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [],
+        "source": {
+          "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+          "section": "Teaching narrative/vocabulary",
+          "page": 6,
+          "sourceParagraphIndex": 189
+        }
+      },
+      {
+        "id": "v-40",
+        "term": "Blessed",
+        "category": "concepts",
+        "origin": "adapted",
+        "scope": "application",
+        "sourceIds": [],
+        "source": {
+          "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+          "section": "Teaching narrative/vocabulary",
+          "page": 7,
+          "sourceParagraphIndex": 199
+        }
+      },
+      {
+        "id": "v-41",
+        "term": "Psalms",
+        "category": "concepts",
+        "origin": "adapted",
+        "scope": "application",
+        "sourceIds": [],
+        "source": {
+          "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+          "section": "Teaching narrative/vocabulary",
+          "page": 7,
+          "sourceParagraphIndex": 202
+        }
+      },
+      {
+        "id": "v-42",
+        "term": "Trust",
+        "category": "concepts",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [],
+        "source": {
+          "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+          "section": "Teaching narrative/vocabulary",
+          "page": 5,
+          "sourceParagraphIndex": 159
+        }
+      },
+      {
+        "id": "v-43",
+        "term": "Vineyard",
+        "category": "distractor",
+        "origin": "suggested",
+        "scope": "unrelated-to-current-lesson",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-44",
+        "term": "Fisherman",
+        "category": "distractor",
+        "origin": "suggested",
+        "scope": "unrelated-to-current-lesson",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-45",
+        "term": "Well",
+        "category": "distractor",
+        "origin": "suggested",
+        "scope": "unrelated-to-current-lesson",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-46",
+        "term": "Boat",
+        "category": "distractor",
+        "origin": "suggested",
+        "scope": "unrelated-to-current-lesson",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-47",
+        "term": "Pottery",
+        "category": "distractor",
+        "origin": "suggested",
+        "scope": "unrelated-to-current-lesson",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-48",
+        "term": "Shepherd",
+        "category": "distractor",
+        "origin": "suggested",
+        "scope": "unrelated-to-current-lesson",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-49",
+        "term": "Crown",
+        "category": "distractor",
+        "origin": "suggested",
+        "scope": "unrelated-to-current-lesson",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      }
+    ]
+  },
+  "characters": [
+    {
+      "id": "ch-01",
+      "name": "Moses",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-07"
+      ],
+      "clues": [
+        {
+          "text": "I climbed Mount Sinai to speak with God and brought His message to Israel. Who am I?",
+          "origin": "adapted"
+        }
+      ]
+    },
+    {
+      "id": "ch-02",
+      "name": "God",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02",
+        "sn-04",
+        "sn-05",
+        "sn-06"
+      ],
+      "clues": [
+        {
+          "text": "I came down on Mount Sinai in fire and spoke ten commandments. Who am I?",
+          "origin": "adapted"
+        }
+      ]
+    },
+    {
+      "id": "ch-03",
+      "name": "Israelites",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-03",
+        "sn-07"
+      ],
+      "clues": [
+        {
+          "text": "We camped at Sinai and asked Moses to speak with God for us. Who are we?",
+          "origin": "adapted"
+        }
+      ]
+    }
+  ],
+  "matchingPairs": [
+    {
+      "id": "mp-01",
+      "left": "Sinai",
+      "right": "The mountain where Israel camped",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    {
+      "id": "mp-02",
+      "left": "Covenant",
+      "right": "A special promise",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ]
+    },
+    {
+      "id": "mp-03",
+      "left": "Treasure",
+      "right": "What God promised obedient Israel",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ]
+    },
+    {
+      "id": "mp-04",
+      "left": "Moses",
+      "right": "God’s messenger to the Israelites",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ]
+    },
+    {
+      "id": "mp-05",
+      "left": "Trumpet",
+      "right": "A loud blast at the mountain",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ]
+    },
+    {
+      "id": "mp-06",
+      "left": "Ten",
+      "right": "The number of commandments",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ]
+    }
+  ],
+  "drawingPrompts": [
+    {
+      "id": "dp-01",
+      "prompt": "the Israelites camping at the foot of Mount Sinai",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    {
+      "id": "dp-02",
+      "prompt": "Moses climbing Mount Sinai to speak with God",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ]
+    },
+    {
+      "id": "dp-03",
+      "prompt": "God promising that Israel will be His special treasure",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ]
+    },
+    {
+      "id": "dp-04",
+      "prompt": "the Israelites promising Moses they will obey God",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ]
+    },
+    {
+      "id": "dp-05",
+      "prompt": "the Israelites washing their clothes to prepare for God’s coming",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ]
+    },
+    {
+      "id": "dp-06",
+      "prompt": "people standing behind barriers at the foot of Mount Sinai",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ]
+    },
+    {
+      "id": "dp-07",
+      "prompt": "Mount Sinai covered in fire, smoke, and lightning",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ]
+    },
+    {
+      "id": "dp-08",
+      "prompt": "the people trembling while hearing the trumpet at Mount Sinai",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ]
+    },
+    {
+      "id": "dp-09",
+      "prompt": "God speaking the Ten Commandments from the mountain",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ]
+    },
+    {
+      "id": "dp-10",
+      "prompt": "the frightened Israelites asking Moses to speak to God for them",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ]
+    },
+    {
+      "id": "dp-11",
+      "prompt": "Moses on the mountain as God teaches him His law",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ]
+    }
+  ],
+  "keyPhrases": [
+    {
+      "id": "kp-01",
+      "text": "The Lord is a god to be feared.",
+      "origin": "source",
+      "source": {
+        "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+        "section": "Important Idea",
+        "page": 5,
+        "sourceParagraphIndex": 154,
+        "details": "The displayed source phrase spans ODT paragraphs 154–156; casing and punctuation preserved from page-5 Important Idea graphic."
+      }
+    },
+    {
+      "id": "kp-02",
+      "text": "God showed His power on Mount Sinai with fire and thunder.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ]
+    },
+    {
+      "id": "kp-03",
+      "text": "God gave His people ten commands to teach them how to love Him and others.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ]
+    },
+    {
+      "id": "kp-04",
+      "text": "The Lord wants His people to respect and obey Him.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ]
+    },
+    {
+      "id": "kp-review-1",
+      "text": "The Lord is a God to be feared.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "theologicalApplications": [
+    {
+      "id": "app-01",
+      "text": "The Lord is a god to be feared.",
+      "origin": "source",
+      "source": {
+        "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+        "section": "Important Idea",
+        "page": 5,
+        "sourceParagraphIndex": 154,
+        "details": "The displayed source phrase spans ODT paragraphs 154–156; casing and punctuation preserved from page-5 Important Idea graphic."
+      }
+    },
+    {
+      "id": "app-02",
+      "text": "God’s power on Mount Sinai teaches His people to fear Him with trembling respect.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+        "section": "Theological application",
+        "page": 6,
+        "sourceParagraphIndex": 189
+      }
+    },
+    {
+      "id": "app-03",
+      "text": "God’s commandments teach His people how to love Him and how to love one another.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+        "section": "Story teaching",
+        "page": 4,
+        "sourceParagraphIndex": 128
+      }
+    },
+    {
+      "id": "app-04",
+      "text": "Jesus took the punishment for sins in the place of those who believe in Him.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+        "section": "Theological application",
+        "page": 6,
+        "sourceParagraphIndex": 185
+      },
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "app-05",
+      "text": "God is both fearfully powerful and a loving Father who saves sinners.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 33 Lesson (God Speaks From Mount Sinai).odt",
+        "section": "Closing prayer/application",
+        "page": 6,
+        "sourceParagraphIndex": 195
+      },
+      "teacherReviewRequired": true
+    }
+  ],
+  "preparedActivities": {
+    "drawPicture": {
+      "prompt": "the Israelites camping at the foot of Mount Sinai",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    "multipleChoice": [
+      {
+        "id": "mc-01",
+        "question": "Where did the Israelites camp after leaving Egypt?",
+        "correctAnswer": "At Mount Sinai",
+        "choices": [
+          {
+            "text": "At Mount Sinai",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "In Egypt",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "In the Promised Land",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceQuestionIds": [
+          "q-27"
+        ],
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-02",
+        "question": "What did God promise Israel if they obeyed Him?",
+        "correctAnswer": "They would be His special treasure",
+        "choices": [
+          {
+            "text": "They would be His special treasure",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "They would own all of Egypt",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "They would live forever",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceQuestionIds": [
+          "q-06",
+          "q-28"
+        ],
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-03",
+        "question": "What did God tell the people to do before He came?",
+        "correctAnswer": "Wash their clothes",
+        "choices": [
+          {
+            "text": "Wash their clothes",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Cut their hair",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Build a statue",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceQuestionIds": [
+          "q-11",
+          "q-30"
+        ],
+        "sourceIds": [
+          "sn-04"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-04",
+        "question": "What happened when God came down on Mount Sinai?",
+        "correctAnswer": "Fire, smoke, and thunder.",
+        "choices": [
+          {
+            "text": "Fire, smoke, and thunder.",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Rain, floods, and rivers.",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Hail, locusts, and frogs.",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceQuestionIds": [
+          "q-13",
+          "q-31"
+        ],
+        "sourceIds": [
+          "sn-05"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-05",
+        "question": "How many commandments did God speak from Sinai?",
+        "correctAnswer": "Ten",
+        "choices": [
+          {
+            "text": "Ten",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Seven",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Twelve",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceQuestionIds": [
+          "q-32"
+        ],
+        "sourceIds": [
+          "sn-06"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-06",
+        "question": "What did the frightened people ask Moses to do?",
+        "correctAnswer": "Speak with God for them.",
+        "choices": [
+          {
+            "text": "Speak with God for them.",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Take them back to Egypt.",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Tell God to go away",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceQuestionIds": [
+          "q-17",
+          "q-34"
+        ],
+        "sourceIds": [
+          "sn-07"
+        ],
+        "teacherReviewRequired": true
+      }
+    ],
+    "trueFalse": {
+      "statement": "God spoke the Ten Commandments from the mountain.",
+      "isTrue": true,
+      "factId": "tf-08",
+      "origin": "adapted"
+    },
+    "firstLetters": {
+      "reference": "Psalm 128:1",
+      "verse": "Blessed are all who fear the LORD, who walk in His ways!",
+      "origin": "adapted"
+    },
+    "oddWords": {
+      "related": [
+        "Sinai",
+        "Moses",
+        "Thunder",
+        "Smoke",
+        "Trumpet"
+      ],
+      "unrelated": [
+        "Disciple",
+        "Fisherman",
+        "Well",
+        "Sword",
+        "Pit"
+      ],
+      "origin": "adapted",
+      "unrelatedOrigin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "unscrambleWords": {
+      "answers": [
+        "SINAI",
+        "SMOKE"
+      ],
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-05"
+      ]
+    },
+    "checkboxes": {
+      "correct": [
+        "Sinai",
+        "Treasure",
+        "Lightning",
+        "Trumpet",
+        "Commands"
+      ],
+      "incorrect": [
+        "Shepherd",
+        "Snake",
+        "Bucket",
+        "Boat",
+        "Pottery"
+      ],
+      "origin": "adapted",
+      "incorrectOrigin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "whoAmI": {
+      "clue": "I climbed Mount Sinai to speak with God and brought His message to Israel. Who am I?",
+      "answer": "Moses",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02",
+        "sn-03",
+        "sn-07"
+      ]
+    },
+    "matchWords": [
+      {
+        "id": "mp-01",
+        "left": "Sinai",
+        "right": "Mountain",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "id": "mp-02",
+        "left": "Covenant",
+        "right": "Special promise",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "id": "mp-03",
+        "left": "Treasure",
+        "right": "God's promise",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "id": "mp-04",
+        "left": "Moses",
+        "right": "Leader",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "id": "mp-05",
+        "left": "Trumpet",
+        "right": "Sound",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "id": "mp-06",
+        "left": "Ten",
+        "right": "Commandments",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      }
+    ],
+    "finishVerse": {
+      "reference": "Psalm 128:1",
+      "markedVerse": "[Blessed] are [all] who [fear] the [LORD], who [walk] in His [ways]!",
+      "origin": "adapted",
+      "sourceVerse": "Blessed are all who fear the LORD, who walk in His ways!"
+    },
+    "unscrambleVerse": {
+      "reference": "Psalm 128:1",
+      "markedVerse": "[Blessed] are [all] who [fear] the [LORD], who [walk] in His [ways]!",
+      "origin": "adapted",
+      "sourceVerse": "Blessed are all who fear the LORD, who walk in His ways!"
+    },
+    "circleMistakes": {
+      "paragraph": "After leaving Egypt, the Israelites camped at Mount Carmel. God told Moses that Israel would be His special pet. The people told Moses they would ignore God’s commands. God said to paint their tents and climb to the top of the mountain. On the third day, the mountain was quiet and still. God spoke seven commandments. The people laughed and asked God to speak louder.",
+      "mistakeCount": 8,
+      "mistakes": [
+        {
+          "incorrect": "Mount Carmel",
+          "correction": "Mount Sinai",
+          "sourceIds": [
+            "sn-01"
+          ]
+        },
+        {
+          "incorrect": "special pet",
+          "correction": "special treasure",
+          "sourceIds": [
+            "sn-02"
+          ]
+        },
+        {
+          "incorrect": "ignore God’s commands",
+          "correction": "do all that God said",
+          "sourceIds": [
+            "sn-03"
+          ]
+        },
+        {
+          "incorrect": "paint their tents",
+          "correction": "wash their clothes",
+          "sourceIds": [
+            "sn-04"
+          ]
+        },
+        {
+          "incorrect": "climb to the top of the mountain",
+          "correction": "stay away from the mountain",
+          "sourceIds": [
+            "sn-04"
+          ]
+        },
+        {
+          "incorrect": "quiet and still",
+          "correction": "full of fire, thunder, and shaking",
+          "sourceIds": [
+            "sn-05"
+          ]
+        },
+        {
+          "incorrect": "seven commandments",
+          "correction": "ten commandments",
+          "sourceIds": [
+            "sn-06"
+          ]
+        },
+        {
+          "incorrect": "laughed and asked God to speak louder",
+          "correction": "were scared and asked Moses to speak to God",
+          "sourceIds": [
+            "sn-07"
+          ]
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "mediumWordSearch": {
+      "words": [
+        "SINAI",
+        "MOSES",
+        "FIRE",
+        "SMOKE",
+        "FEAR",
+        "TREASURE"
+      ],
+      "origin": "adapted"
+    },
+    "trueFalseMaze": {
+      "statement": "Moses was on the mountain for 400 days.",
+      "isTrue": false,
+      "factId": "tf-13",
+      "origin": "suggested"
+    },
+    "bigIdeaCryptogram": {
+      "phrase": "The Lord is a God to be feared.",
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "sourceIds": []
+    },
+    "upsideDownVerse": {
+      "reference": "Psalm 128:1",
+      "verse": "Blessed are all who fear the LORD, who walk in His ways!",
+      "origin": "adapted"
+    },
+    "connectBigIdea": {
+      "phrase": "The Lord wants His people to respect and obey Him.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ]
+    },
+    "pixelPicture": {
+      "phrase": "God showed His power on Mount Sinai with fire and thunder.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ]
+    },
+    "finishStory": {
+      "markedParagraph": "Three months after leaving Egypt, the Israelites camped at [MOUNT] Sinai. Moses climbed the mountain, where God promised that Israel would be His special [TREASURE]. Moses told the people God’s message, and they said they would [DO] everything God said. God told Moses to [PREPARE] the people, because in three days He would come down on the mountain. The Israelites [washed] their clothes and stayed away from the mountain. God came down with [FIRE], thunder, lightning, [smoke], and shaking. From the mountain, God spoke [TEN] commandments. The people were [SCARED] and asked Moses to speak to God for them. Moses went up the mountain, where God spoke His laws to him for [forty] days.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ]
+    },
+    "storyOrder": [
+      {
+        "order": 1,
+        "text": "Three months after leaving Egypt, the Israelites camped at Mount Sinai.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "order": 2,
+        "text": "God told Moses that obedient Israel would be His special treasure.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "order": 3,
+        "text": "The people promised Moses that they would do everything God said.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "order": 4,
+        "text": "God told Moses to prepare the people for His coming in three days.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "order": 5,
+        "text": "God came down on Mount Sinai with fire, smoke, thunder, and lightning.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "order": 6,
+        "text": "From the mountain, God spoke the Ten Commandments to His people.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "order": 7,
+        "text": "The people were afraid, and Moses went up to receive God’s law for forty days.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      }
+    ],
+    "sortStory": [
+      {
+        "factId": "tf-01",
+        "statement": "The Israelites camped near Mount Sinai.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "factId": "tf-02",
+        "statement": "God promised to make obedient Israel His special treasure.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "factId": "tf-03",
+        "statement": "The Israelites promised Moses they would ignore God’s commands.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "factId": "tf-04",
+        "statement": "God told the people to wash their clothes before He came.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "factId": "tf-05",
+        "statement": "God told all the people to climb Mount Sinai to meet Him.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "factId": "tf-06",
+        "statement": "God descended on Sinai with fire, smoke, and thunder.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "factId": "tf-07",
+        "statement": "Mount Sinai stayed quiet and still when God came down.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "factId": "tf-09",
+        "statement": "The people celebrated and asked God to speak even louder.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-07"
+        ]
+      }
+    ],
+    "drawStory": [
+      {
+        "prompt": "Three months after leaving Egypt, the Israelites camped at Mount Sinai.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "prompt": "God told Moses that Israel would be His special treasure.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "prompt": "God told Moses to prepare the people for His coming in three days.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "prompt": "God came down on Mount Sinai with fire, smoke, thunder, and lightning.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "prompt": "From the mountain, God spoke the Ten Commandments to His people.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "prompt": "The people were afraid, and Moses went up to receive God’s law for forty days.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      }
+    ],
+    "wordSearch": {
+      "words": [
+        "SINAI",
+        "MOSES",
+        "COVENANT",
+        "TREASURE",
+        "WASH",
+        "THUNDER",
+        "LIGHTNING",
+        "FIRE",
+        "SMOKE",
+        "TRUMPET",
+        "COMMANDS",
+        "FEAR"
+      ],
+      "origin": "adapted"
+    },
+    "verseCryptogram": {
+      "reference": "Psalm 128:1",
+      "verse": "Blessed are all who fear the LORD, who walk in His ways!",
+      "origin": "adapted"
+    },
+    "spiralVerse": {
+      "reference": "Psalm 128:1",
+      "verse": "Blessed are all who fear the LORD, who walk in His ways!",
+      "origin": "adapted"
+    },
+    "connectVerse": {
+      "reference": "Psalm 128:1",
+      "verse": "Blessed are all who fear the LORD, who walk in His ways!",
+      "origin": "adapted"
+    },
+    "crossword": [
+      {
+        "answer": "SINAI",
+        "clue": "Which mountain did Israel camp beside?",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "origin": "adapted"
+      },
+      {
+        "answer": "MOSES",
+        "clue": "Who carried God’s message to Israel?",
+        "sourceIds": [
+          "sn-02",
+          "sn-03"
+        ],
+        "origin": "adapted"
+      },
+      {
+        "answer": "COVENANT",
+        "clue": "What is a special promise called?",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "origin": "adapted"
+      },
+      {
+        "answer": "TREASURE",
+        "clue": "What did God promise obedient Israel would become?",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "origin": "adapted"
+      },
+      {
+        "answer": "THUNDER",
+        "clue": "What loud storm sound did the people hear at Sinai?",
+        "sourceIds": [
+          "sn-05"
+        ],
+        "origin": "adapted"
+      },
+      {
+        "answer": "SMOKE",
+        "clue": "What rose from the mountain with the fire?",
+        "sourceIds": [
+          "sn-05"
+        ],
+        "origin": "adapted"
+      },
+      {
+        "answer": "TRUMPET",
+        "clue": "What instrument gave a very loud blast?",
+        "sourceIds": [
+          "sn-05"
+        ],
+        "origin": "adapted"
+      },
+      {
+        "answer": "TEN",
+        "clue": "How many commandments did God speak?",
+        "sourceIds": [
+          "sn-06"
+        ],
+        "origin": "adapted"
+      },
+      {
+        "answer": "FEAR",
+        "clue": "What feeling made the people tremble?",
+        "sourceIds": [
+          "sn-07"
+        ],
+        "origin": "adapted"
+      },
+      {
+        "answer": "FORTY",
+        "clue": "How many days did Moses spend on the mountain?",
+        "sourceIds": [
+          "sn-07"
+        ],
+        "origin": "adapted"
+      }
+    ]
+  },
+  "moduleReadiness": [
+    {
+      "moduleName": "Draw a Picture",
+      "moduleId": "draw-picture",
+      "size": "Small",
+      "preparedActivityKey": "drawPicture",
+      "status": "READY",
+      "contentValidation": "locally checked",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Content prepared for teacher review; live generator and official preflight have not been run."
+    },
+    {
+      "moduleName": "Multiple Choice Question",
+      "moduleId": "multiple-choice",
+      "size": "Small",
+      "preparedActivityKey": "multipleChoice",
+      "status": "READY",
+      "contentValidation": "locally checked",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Six factual items; 12 proposed distractors need approval. Generator not run."
+    },
+    {
+      "moduleName": "True or False Questions",
+      "moduleId": "true-false",
+      "size": "Small",
+      "preparedActivityKey": "trueFalse",
+      "status": "READY",
+      "contentValidation": "locally checked",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Unique allocated fact IDs; no overlap between these modules in Preset 3. False facts require approval. Generator not run."
+    },
+    {
+      "moduleName": "First Letter Challenge",
+      "moduleId": "first-letters",
+      "size": "Small",
+      "preparedActivityKey": "firstLetters",
+      "status": "READY",
+      "contentValidation": "locally checked",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Content prepared for teacher review; live generator and official preflight have not been run."
+    },
+    {
+      "moduleName": "What’s Doesn’t Belong?",
+      "moduleId": "odd-words",
+      "size": "Small",
+      "preparedActivityKey": "oddWords",
+      "status": "READY",
+      "contentValidation": "locally checked",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Content prepared for teacher review; live generator and official preflight have not been run."
+    },
+    {
+      "moduleName": "Unscramble the Words",
+      "moduleId": "unscramble-words",
+      "size": "Small",
+      "preparedActivityKey": "unscrambleWords",
+      "status": "READY",
+      "contentValidation": "locally checked",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Content prepared for teacher review; live generator and official preflight have not been run."
+    },
+    {
+      "moduleName": "Checkboxes",
+      "moduleId": "checkboxes",
+      "size": "Small",
+      "preparedActivityKey": "checkboxes",
+      "status": "READY",
+      "contentValidation": "locally checked",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Content prepared for teacher review; live generator and official preflight have not been run."
+    },
+    {
+      "moduleName": "Who Am I?",
+      "moduleId": "who-am-i",
+      "size": "Small",
+      "preparedActivityKey": "whoAmI",
+      "status": "READY",
+      "contentValidation": "locally checked",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Content prepared for teacher review; live generator and official preflight have not been run."
+    },
+    {
+      "moduleName": "Match the Words",
+      "moduleId": "match-words",
+      "size": "Medium",
+      "preparedActivityKey": "matchWords",
+      "status": "READY",
+      "contentValidation": "locally checked",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Content prepared for teacher review; live generator and official preflight have not been run."
+    },
+    {
+      "moduleName": "Finish the Verse",
+      "moduleId": "finish-verse",
+      "size": "Medium",
+      "preparedActivityKey": "finishVerse",
+      "status": "READY",
+      "contentValidation": "locally checked",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Content prepared for teacher review; live generator and official preflight have not been run."
+    },
+    {
+      "moduleName": "Unscramble the Verse",
+      "moduleId": "unscramble-verse",
+      "size": "Medium",
+      "preparedActivityKey": "unscrambleVerse",
+      "status": "READY",
+      "contentValidation": "locally checked",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Content prepared for teacher review; live generator and official preflight have not been run."
+    },
+    {
+      "moduleName": "Circle the Mistakes",
+      "moduleId": "circle-mistakes",
+      "size": "Medium",
+      "preparedActivityKey": "circleMistakes",
+      "status": "READY",
+      "contentValidation": "locally checked",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Content prepared for teacher review; live generator and official preflight have not been run."
+    },
+    {
+      "moduleName": "Word Search (Medium)",
+      "moduleId": "medium-word-search",
+      "size": "Medium",
+      "preparedActivityKey": "mediumWordSearch",
+      "status": "READY",
+      "contentValidation": "locally checked",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Content prepared for teacher review; live generator and official preflight have not been run."
+    },
+    {
+      "moduleName": "True or False Maze",
+      "moduleId": "true-false-maze",
+      "size": "Medium",
+      "preparedActivityKey": "trueFalseMaze",
+      "status": "READY",
+      "contentValidation": "locally checked",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Unique allocated fact IDs; no overlap between these modules in Preset 3. False facts require approval. Generator not run."
+    },
+    {
+      "moduleName": "Solve the Code",
+      "moduleId": "big-idea-cryptogram",
+      "size": "Medium",
+      "preparedActivityKey": "bigIdeaCryptogram",
+      "status": "READY",
+      "contentValidation": "locally checked",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Original Big Idea wording kept, including lowercase god; teacher review flagged. Generator not run."
+    },
+    {
+      "moduleName": "Upside Down Verse",
+      "moduleId": "upside-down-verse",
+      "size": "Medium",
+      "preparedActivityKey": "upsideDownVerse",
+      "status": "READY",
+      "contentValidation": "locally checked",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Content prepared for teacher review; live generator and official preflight have not been run."
+    },
+    {
+      "moduleName": "Connect the Phrase",
+      "moduleId": "connect-big-idea",
+      "size": "Medium",
+      "preparedActivityKey": "connectBigIdea",
+      "status": "READY",
+      "contentValidation": "locally checked",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Original Big Idea wording kept, including lowercase god; teacher review flagged. Generator not run."
+    },
+    {
+      "moduleName": "Pixel Picture",
+      "moduleId": "pixel-picture",
+      "size": "Medium",
+      "preparedActivityKey": "pixelPicture",
+      "status": "READY",
+      "contentValidation": "locally checked",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Content prepared for teacher review; live generator and official preflight have not been run."
+    },
+    {
+      "moduleName": "Finish the Story",
+      "moduleId": "finish-story",
+      "size": "Large",
+      "preparedActivityKey": "finishStory",
+      "status": "READY",
+      "contentValidation": "locally checked",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Content prepared for teacher review; live generator and official preflight have not been run."
+    },
+    {
+      "moduleName": "Story Order",
+      "moduleId": "story-order",
+      "size": "Large",
+      "preparedActivityKey": "storyOrder",
+      "status": "READY",
+      "contentValidation": "locally checked",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Content prepared for teacher review; live generator and official preflight have not been run."
+    },
+    {
+      "moduleName": "Sort the Story",
+      "moduleId": "sort-story",
+      "size": "Large",
+      "preparedActivityKey": "sortStory",
+      "status": "READY",
+      "contentValidation": "locally checked",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Unique allocated fact IDs; no overlap between these modules in Preset 3. False facts require approval. Generator not run."
+    },
+    {
+      "moduleName": "Draw the Story",
+      "moduleId": "draw-story",
+      "size": "Large",
+      "preparedActivityKey": "drawStory",
+      "status": "READY",
+      "contentValidation": "locally checked",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Content prepared for teacher review; live generator and official preflight have not been run."
+    },
+    {
+      "moduleName": "Word Search (Large)",
+      "moduleId": "word-search",
+      "size": "Large",
+      "preparedActivityKey": "wordSearch",
+      "status": "READY",
+      "contentValidation": "locally checked",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Content prepared for teacher review; live generator and official preflight have not been run."
+    },
+    {
+      "moduleName": "Verse Cryptogram",
+      "moduleId": "verse-cryptogram",
+      "size": "Large",
+      "preparedActivityKey": "verseCryptogram",
+      "status": "READY",
+      "contentValidation": "locally checked",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Content prepared for teacher review; live generator and official preflight have not been run."
+    },
+    {
+      "moduleName": "Crossword",
+      "moduleId": "crossword",
+      "size": "Large",
+      "preparedActivityKey": "crossword",
+      "status": "READY",
+      "contentValidation": "locally checked",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Ten distinct clue/answer pairs prepared; actual crossword fit/generation must be checked."
+    },
+    {
+      "moduleName": "Spiral Verse",
+      "moduleId": "spiral-verse",
+      "size": "Large",
+      "preparedActivityKey": "spiralVerse",
+      "status": "READY",
+      "contentValidation": "locally checked",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Content prepared for teacher review; live generator and official preflight have not been run."
+    },
+    {
+      "moduleName": "Connect the Verse",
+      "moduleId": "connect-verse",
+      "size": "Large",
+      "preparedActivityKey": "connectVerse",
+      "status": "READY",
+      "contentValidation": "locally checked",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Content prepared for teacher review; live generator and official preflight have not been run."
+    }
+  ],
+  "reviewFlags": [
+    {
+      "id": "rf-01",
+      "priority": "high",
+      "type": "teacher-approval",
+      "text": "Approve 12 suggested incorrect answers across 6 Multiple Choice questions.",
+      "affectedModules": [
+        "multiple-choice"
+      ]
+    },
+    {
+      "id": "rf-02",
+      "priority": "high",
+      "type": "teacher-approval",
+      "text": "Approve 6 suggested false statements; eight Sort statements and two other True/False selections use distinct fact IDs.",
+      "affectedModules": [
+        "sort-story",
+        "true-false",
+        "true-false-maze"
+      ]
+    },
+    {
+      "id": "rf-03",
+      "priority": "high",
+      "type": "scripture-text",
+      "text": "Original lesson quotes ESV Psalm 128:1; proposed activities use verified BSB Psalm 128:1. Confirm passage and exact BSB text in Review Studio.",
+      "affectedModules": [
+        "first-letters",
+        "finish-verse",
+        "unscramble-verse",
+        "upside-down-verse",
+        "verse-cryptogram",
+        "spiral-verse",
+        "connect-verse"
+      ]
+    },
+    {
+      "id": "rf-04",
+      "priority": "high",
+      "type": "editorial",
+      "text": "Original Important Idea graphic reads “The Lord is a god to be feared.” with lowercase god; preserve source wording, but confirm whether the teacher wants a corrected approved wording before publication.",
+      "affectedModules": [
+        "big-idea-cryptogram"
+      ]
+    },
+    {
+      "id": "rf-05",
+      "priority": "medium",
+      "type": "teacher-approval",
+      "text": "Review selected Bible-era but lesson-unrelated Odd Words and Checkboxes distractors.",
+      "affectedModules": [
+        "odd-words",
+        "checkboxes"
+      ]
+    },
+    {
+      "id": "rf-06",
+      "priority": "medium",
+      "type": "teacher-approval",
+      "text": "Review eight deliberately incorrect phrases and corrections in Circle the Mistakes.",
+      "affectedModules": [
+        "circle-mistakes"
+      ]
+    },
+    {
+      "id": "rf-07",
+      "priority": "medium",
+      "type": "editorial",
+      "text": "Story Note 7 and review teach that Moses remained on the mountain forty days; Exodus 24:18 supplies this later event beyond the main Exodus 19–20 reading. Source wording remains unchanged.",
+      "affectedModules": [
+        "story-order",
+        "finish-story",
+        "draw-story",
+        "crossword"
+      ]
+    },
+    {
+      "id": "rf-08",
+      "priority": "medium",
+      "type": "sensitive-content",
+      "text": "Review original statements about death for touching Sinai, fearing God, and Jesus bearing punishment for sin; adaptations must preserve the curriculum’s theological emphasis.",
+      "affectedModules": [
+        "finish-story",
+        "story-order",
+        "multiple-choice"
+      ]
+    },
+    {
+      "id": "rf-09",
+      "priority": "medium",
+      "type": "teacher-approval",
+      "text": "Review adapted Story Order and Large Draw the Story captions, including chronology and omitted events in the six-caption selection.",
+      "affectedModules": [
+        "story-order",
+        "draw-story"
+      ]
+    },
+    {
+      "id": "rf-10",
+      "priority": "high",
+      "type": "validation",
+      "text": "Run Review Studio preflight and actual 27 activity generators, all three presets, and official repository validation before signoff; not performed here.",
+      "affectedModules": [
+        "draw-picture",
+        "multiple-choice",
+        "true-false",
+        "first-letters",
+        "odd-words",
+        "unscramble-words",
+        "checkboxes",
+        "who-am-i",
+        "match-words",
+        "finish-verse",
+        "unscramble-verse",
+        "circle-mistakes",
+        "medium-word-search",
+        "true-false-maze",
+        "big-idea-cryptogram",
+        "upside-down-verse",
+        "connect-big-idea",
+        "pixel-picture",
+        "finish-story",
+        "story-order",
+        "sort-story",
+        "draw-story",
+        "word-search",
+        "verse-cryptogram",
+        "crossword",
+        "spiral-verse",
+        "connect-verse"
+      ]
+    }
+  ],
+  "validation": {
+    "basis": "Original conversion tests predate teacher-approved BSB; revalidate actual engines and content after export.",
+    "allTextChecksPassed": false,
+    "checks": [
+      {
+        "check": "Valid JSON syntax and schemaVersion 1",
+        "passed": true,
+        "detail": "Parsed"
+      },
+      {
+        "check": "All 27 prepared activity keys present",
+        "passed": true,
+        "detail": 27
+      },
+      {
+        "check": "27 module readiness entries consistent with prepared activities",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Generator tests not falsely asserted",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Teacher approval and publication flags correct",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "All seven Story Notes preserved verbatim",
+        "passed": true,
+        "detail": 7
+      },
+      {
+        "check": "Emphasized words retained in source text",
+        "passed": true,
+        "detail": [
+          [
+            "MOUNT"
+          ],
+          [
+            "TREASURE"
+          ],
+          [
+            "DO"
+          ],
+          [
+            "PREPARE"
+          ],
+          [
+            "FIRE"
+          ],
+          [
+            "TEN"
+          ],
+          [
+            "SCARED"
+          ]
+        ]
+      },
+      {
+        "check": "Story Note IDs and order stable",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "All sourceIds resolve to a Story Note",
+        "passed": true,
+        "detail": "150 links"
+      },
+      {
+        "check": "All original questions kept with source location",
+        "passed": true,
+        "detail": 37
+      },
+      {
+        "check": "Original question text found in ODT",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Multiple Choice 4-6 independent questions",
+        "passed": true,
+        "detail": 6
+      },
+      {
+        "check": "MC 1 correct and 2 suggested wrong, within limits",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "MC sourceQuestionIds resolve",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "14 facts, true/false balance",
+        "passed": true,
+        "detail": "8 true, 6 false"
+      },
+      {
+        "check": "Facts are independent unique statements",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "New false facts are suggested and flagged",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Preset 3 TF allocations have 10 disjoint fact IDs",
+        "passed": true,
+        "detail": [
+          "tf-01",
+          "tf-02",
+          "tf-03",
+          "tf-04",
+          "tf-05",
+          "tf-06",
+          "tf-07",
+          "tf-09",
+          "tf-08",
+          "tf-13"
+        ]
+      },
+      {
+        "check": "Four alternative facts available",
+        "passed": true,
+        "detail": [
+          "tf-10",
+          "tf-11",
+          "tf-12",
+          "tf-14"
+        ]
+      },
+      {
+        "check": "All prepared truth values match fact bank",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "TF/Maze length limits",
+        "passed": true,
+        "detail": [
+          49,
+          60
+        ]
+      },
+      {
+        "check": "Sort story 8 mixed true/false facts <=115 chars",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Scene prompts concise, grammatical, <=105 chars",
+        "passed": true,
+        "detail": 11
+      },
+      {
+        "check": "Draw a Picture scene phrase, not full instruction",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Large Draw the Story 4-6 narrative sentences <=105",
+        "passed": true,
+        "detail": [
+          71,
+          66,
+          66,
+          70,
+          64,
+          78
+        ]
+      },
+      {
+        "check": "Large captions copied verbatim from Story Order",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Story Order 5-8 complete sentences <=115",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Odd Words 5 related 5 plausible distinct unrelated",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Checkboxes correct and incorrect distinct",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Unscramble Words two short unique entries",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Who Am I prompt limit",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Match Words 3-6 unique pairs",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Memory verse BSB consistent across seven verse modules",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Memory verse provided as full non-elliptical passage",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "finishVerse brackets restore exact BSB text",
+        "passed": true,
+        "detail": 6
+      },
+      {
+        "check": "unscrambleVerse brackets restore exact BSB text",
+        "passed": true,
+        "detail": 6
+      },
+      {
+        "check": "Circle mistakes count and unambiguous spans",
+        "passed": true,
+        "detail": 8
+      },
+      {
+        "check": "Small and large word search bank sizes",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Big Idea cryptogram <=62; Connect Big Idea 4-20 words",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Distinct phrase puzzles to reduce repetition",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Pixel Picture between 30 and 85 characters",
+        "passed": true,
+        "detail": 58
+      },
+      {
+        "check": "Finish Story <=1100 chars, 6-12 bracketed blanks",
+        "passed": true,
+        "detail": [
+          690,
+          [
+            "MOUNT",
+            "TREASURE",
+            "DO",
+            "PREPARE",
+            "FIRE",
+            "TEN",
+            "SCARED"
+          ]
+        ]
+      },
+      {
+        "check": "Finish Story uses all seven source ALL-CAPS words",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Crossword 6-10 unique short answer/clue pairs",
+        "passed": true,
+        "detail": 10
+      },
+      {
+        "check": "Original Important Idea transcribed exactly",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Potential theological and Scripture issues flagged",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Review flags present",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "No signoff invented",
+        "passed": true,
+        "detail": ""
+      }
+    ],
+    "actualGeneratorTested": false,
+    "jsonParseTested": true
+  },
+  "publication": {
+    "status": "approved",
+    "approved": true,
+    "notes": "Unapproved conversion draft. Teacher must review new suggestions, original Big Idea casing, BSB verse, chronology, and generator preflight before publishing.",
+    "resolvedReviewFlagIds": [
+      "rf-01",
+      "rf-02",
+      "rf-05",
+      "rf-06",
+      "rf-09"
+    ],
+    "teacherSignoff": {
+      "reviewer": "Andrew Doane",
+      "date": "2026-11-04",
+      "notes": "Approved with verified BSB verse through Curriculum Review Studio"
+    },
+    "scriptureRights": {
+      "status": "cleared",
+      "basis": "Berean Standard Bible (BSB), dedicated to the public domain on April 30, 2023. Official terms: https://berean.bible/terms.htm. Scripture text confirmed against https://bereanbible.com/bsb.txt.",
+      "reviewedBy": "Andrew Doane",
+      "reviewedOn": "2026-11-04"
+    }
+  }
+}
