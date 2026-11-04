@@ -24,7 +24,7 @@ const advanced=(id:ModuleId):RepairDestination=>({
 });
 export const MODULE_REPAIR_REGISTRY:Record<ModuleId,RepairDestination>={
  'draw-picture':visual('drawing-captions','review-field-drawing'),
- 'multiple-choice':advanced('multiple-choice'),
+ 'multiple-choice':visual('multiple-choice-bank','review-field-multiple-choice-bank',true),
  'true-false':visual('true-false','review-field-true-false',true),
  'first-letters':scripture,
  'odd-words':visual('odd-words','review-field-odd-words'),
