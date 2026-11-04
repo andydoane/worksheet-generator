@@ -131,9 +131,12 @@ test('Review preflight checks all three printable presets after 27 activity conv
  const report=buildReviewPreflight(noTitle);
  assert.equal(report.convertedCount,27,
   'Activity conversion alone cannot certify a complete printable worksheet');
- assert.deepEqual(report.issues.map(issue=>issue.message.split(':')[0]),
-  ['Preset 1','Preset 2','Preset 3']);
- assert.ok(report.issues.every(issue=>issue.fieldId==='review-general-details'));
+ assert.equal(report.issues.length,1);
+ assert.equal(report.issues[0].taskId,'lesson-details');
+ assert.equal(report.issues[0].fieldId,'review-field-lesson-details');
+ assert.match(report.issues[0].message,/lesson title/u);
+ assert.equal(report.issues.some(issue=>issue.taskId==='review-general'),false,
+  'Missing title opens the actual repair form, not three generic preset errors');
 });
 
 test('All 27 converter module diagnostics map to an available prepared field and focusable editor',()=>{
