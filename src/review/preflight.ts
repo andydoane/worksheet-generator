@@ -137,7 +137,7 @@ export function buildReviewPreflight(lesson:Lesson):ReviewPreflight{
    const record=lesson.preparedActivities?.[PREPARED_ACTIVITY_KEYS[id]];
    // A dedicated review form cannot edit a module that has no prepared
    // content yet. Send those cases to the isolated module-data editor.
-   if(record&&(!Array.isArray(record)||record.length>0))return target;
+   if(id==='match-words'||record&&(!Array.isArray(record)||record.length>0))return target;
    return {...target,taskId:'module:'+id,fieldId:'review-module-json'};
   });
  return {convertedCount,totalCount:27,issues};
