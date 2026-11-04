@@ -129,3 +129,18 @@ a{color:#267d68}
 .review-search-row>.review-warning{grid-column:1/-1;margin:0}
 #review-field-connect-phrase:focus,#review-field-word-search:focus,#review-field-medium-word-search:focus{outline:2px solid #4b956e;outline-offset:5px}
 @media(max-width:580px){.review-search-row{grid-template-columns:1fr}.review-search-actions{grid-column:1}}
+
+/* PR80: Crossword clue/answer editor uses the same print SVG as the normal
+ * worksheet preview, with inline row diagnostics and responsive controls. */
+.review-crossword-rows{display:grid;gap:12px}
+.review-crossword-row{padding:14px;border:1px solid #d6e6da;border-radius:10px;
+ background:#fcfdfa;display:grid;gap:10px}
+.review-crossword-row .review-pair{align-items:start}
+.review-crossword-row .review-pair label,.review-crossword-vocab-label{font-size:12px;font-weight:800;color:#355749}
+.review-crossword-row input[aria-invalid="true"]{border-color:#bd714f;outline-color:#bd714f}
+.review-crossword-row label small{display:block;font-weight:400;margin-top:2px}
+.review-crossword-row .review-match-errors{margin:0}
+.review-activity-preview .crossword-print-svg{display:block;width:100%;height:auto;max-height:530px}
+.review-activity-preview .crossword-preview{width:100%;max-width:100%}
+#review-field-crossword:focus{outline:2px solid #4b956e;outline-offset:5px}
+@media(max-width:580px){.review-crossword-row .review-pair{grid-template-columns:1fr}}
