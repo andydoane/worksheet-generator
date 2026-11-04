@@ -11,7 +11,7 @@ import {generatePixelPicture} from '../src/pixelPicture.ts';
 import {
  whoAmIChoices,whoAmIProblems,chooseWhoAmI,editWhoAmI,
  unscrambleChoices,unscrambleProblems,unscrambleWords,chooseUnscramble,editUnscramble,
- pixelPhraseChoices,pixelProblems,choosePixelPhrase,editPixelPhrase,editPixelShape,
+ pixelPhraseChoices,pixelProblems,choosePixelPhrase,editPixelPhrase,
  finishStoryProblems,editFinishStory,
 } from '../src/review/wordPuzzleEditors.ts';
 
@@ -109,7 +109,7 @@ test('Pixel Picture chooses source phrase and preserves corresponding provenance
  }).grid.length,13);
  assert.equal(JSON.stringify(ot32),before);
 });
-test('Pixel Picture custom phrase and silhouette use engine validation and preserve curricular sources',()=>{
+test('Pixel Picture stores only the phrase, not a fixed silhouette, and preserves curricular sources',()=>{
  const custom='God gave his people food and water in the desert.';
  const revised=editPixelPhrase(ot32,custom);
  assert.equal(revised.preparedActivities.pixelPicture.phrase,custom);
@@ -117,18 +117,18 @@ test('Pixel Picture custom phrase and silhouette use engine validation and prese
  assert.equal(revised.preparedActivities.pixelPicture.teacherReviewRequired,true);
  assert.deepEqual(revised.preparedActivities.pixelPicture.sourceIds,[]);
  assert.deepEqual(pixelProblems(revised),[]);
- const reskinned=editPixelShape(revised,'heart');
- assert.equal(reskinned.preparedActivities.pixelPicture.shapeId,'heart');
- assert.equal(reskinned.preparedActivities.pixelPicture.phrase,custom);
- assert.deepEqual(pixelProblems(reskinned),[]);
- assert.deepEqual(reskinned.lessonDetails,ot32.lessonDetails);
+ assert.equal(revised.preparedActivities.pixelPicture.shapeId,undefined,
+  'editing clears old curriculum-saved silhouettes');
+ assert.deepEqual(revised.lessonDetails,ot32.lessonDetails);
  assert.ok(pixelProblems(editPixelPhrase(ot32,'Short phrase')).some(x=>x.includes('30–85')));
- assert.ok(pixelProblems(editPixelShape(ot32,'not-an-existing-shape'))
-  .some(x=>x.includes('13×13')));
+ const legacy=structuredClone(ot32);
+ legacy.preparedActivities.pixelPicture.shapeId='not-an-existing-shape';
+ assert.deepEqual(pixelProblems(legacy),[],
+  'old file picture choices no longer control whether a phrase is valid');
  const missing=structuredClone(ot32);
  delete missing.preparedActivities.pixelPicture;
  const created=editPixelPhrase(missing,custom);
- assert.equal(created.preparedActivities.pixelPicture.shapeId,'star');
+ assert.equal(created.preparedActivities.pixelPicture.shapeId,undefined);
  assert.deepEqual(pixelProblems(created),[]);
 });
 

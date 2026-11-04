@@ -3,6 +3,18 @@ import {PIXEL_SHAPES,pixelShape} from './pixelPictureShapes.ts';
 export type PixelPicture={type:'pixel-picture';phrase:string;shapeId:string;seed:number};
 export const PIXEL_SIZE=13;
 export const PIXEL_MIN_LENGTH=30,PIXEL_MAX_LENGTH=85;
+/** A picture belongs to a generated worksheet, never the curriculum.
+ * Sequential Regenerate seeds rotate through all silhouettes. Same seed and
+ * phrase always produce the same shape for print preview and PDF export.
+ * Old lesson shapeId fields are intentionally ignored by the converter.
+ */
+export function choosePixelShapeId(seed:number,phrase:string):string{
+ const offset=Array.from(phrase).reduce((acc,ch)=>(
+  (Math.imul(acc,31)+ch.charCodeAt(0))>>>0
+ ),0);
+ return PIXEL_SHAPES[((Math.max(0,Math.trunc(seed))-1+offset)%PIXEL_SHAPES.length
+  +PIXEL_SHAPES.length)%PIXEL_SHAPES.length].id;
+}
 export const PIXEL_INSTRUCTION='Fill in the missing letter. Color in the squares containing that letter.';
 export type PixelPicturePuzzle={
  maskedPhrase:string;

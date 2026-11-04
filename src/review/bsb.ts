@@ -30,7 +30,10 @@ export function parseBsbText(raw:string,requireComplete=true):BsbIndex {
 }
 
 export function getBsbPassage(index:BsbIndex,input:string):Passage {
- const match=input.trim().match(/^(.+?)\s+(\d+):(\d+)(?:\s*[-–]\s*(?:(\d+):)?(\d+))?$/u);
+ // Curriculum references sometimes name halves of a verse (e.g. Psalm 136:1a).
+ // Look up the complete numbered BSB verse, then let the teacher choose
+ // the exact first/last words. A letter suffix is not a BSB verse boundary.
+ const match=input.trim().match(/^(.+?)\s+(\d+):(\d+)[a-z]?(?:\s*[-–]\s*(?:(\d+):)?(\d+)[a-z]?)?$/iu);
  if(!match)throw Error('Enter a reference such as Exodus 15:11 or Exodus 15:11-12.');
  const book=index.books.find(x=>x.toLowerCase()===match[1].trim().toLowerCase());
  if(!book)throw Error('Book not found in the BSB file: '+match[1]);
