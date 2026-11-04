@@ -17,7 +17,7 @@ export type LessonWorksheetSource=LessonActivityData&{
   scriptureDisplay?:string;
   scripturePassages?:string[];
   bigIdeas?:{text:string;origin?:string}[];
-  memoryVerse?:{reference:string;text:string;translation?:string};
+  memoryVerse?:{reference:string;text:string;translation?:string;bsbSource?:{sourceUrl:string}};
  };
 };
 export type RecipeId='preset-1'|'preset-2'|'preset-3'|'story-review'|'fun-and-games';
