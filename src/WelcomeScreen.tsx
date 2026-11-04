@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import {WORKSHEET_RECIPES,type RecipeId} from './worksheetRecipes.ts';
 import type {PublicLessonEntry} from './publishedLessonCatalog.ts';
+import StoryPicker from './StoryPicker.tsx';
 
 type Screen='home'|'stories'|'recipes';
 export type WelcomeScreenProps={
@@ -85,15 +86,10 @@ export default function WelcomeScreen({
         <button type="button" className="welcome-secondary" onClick={onStartBlank}>Start from Scratch</button>
        </div>
       </div>
-      :<div className="welcome-options">
-       {stories.map(entry=><button type="button" className="welcome-choice" key={entry.lesson.id}
-        onClick={()=>{setSelectedId(entry.lesson.id);setError(null);setScreen('recipes');}}>
-        <span className="welcome-choice-icon" aria-hidden="true">▤</span>
-        <span><strong>{entry.lesson.lessonDetails.title}</strong>
-         <small>{entry.lesson.lessonDetails.scriptureDisplay??entry.lesson.lessonDetails.scripturePassages?.join(', ')}</small></span>
-        <span className="welcome-chevron" aria-hidden="true">›</span>
-       </button>)}
-      </div>}
+      :<StoryPicker stories={stories} variant="welcome"
+       onSelect={entry=>{
+        setSelectedId(entry.lesson.id);setError(null);setScreen('recipes');
+       }}/>
     </>}
     {screen==='recipes'&&selected&&<>
      <button type="button" className="welcome-back" onClick={goBack}>‹ Back to Bible Stories</button>
