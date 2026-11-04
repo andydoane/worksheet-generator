@@ -1,6 +1,6 @@
 import {useEffect,useMemo,useState} from 'react';
 import type {ChangeEvent} from 'react';
-import {parseBsbText,getBsbPassage,wordSpans,clipToWords,markSelectedWords,suggestBlankWords,type BsbIndex,type Passage} from './bsb.ts';
+import {parseBsbText,getBsbPassage,wordSpans,clipToWords,markSelectedWords,type BsbIndex,type Passage} from './bsb.ts';
 import {applyBsbVerse,chooseSolveCodePhrase,createApprovedLesson,editAt,listReviewTasks,normalizeLegacySmallDrawingScenes,originalMemoryVerseTranslation,solveCodeChoices,useMatchingStoryOrderCaptions,type Lesson,type ReviewTask} from './model.ts';
 import {validateModule,MODULES} from '../modules.ts';
 import {MatchingPrintPreview} from '../MediumPrintPreview.tsx';
@@ -65,6 +65,8 @@ export default function ReviewApp(){
   checkboxes:wordBankText(saved?.lesson??null,'checkboxes'),
  }));
  const [reviewed,setReviewed]=useState<string[]>(saved?.reviewed??[]);
+ const [bulkReviewAcknowledged,setBulkReviewAcknowledged]=useState(false);
+ const [bulkReviewNotice,setBulkReviewNotice]=useState('');
  const [selectedId,setSelectedId]=useState<string>(saved?.selectedId??'');
  const [error,setError]=useState('');
  const [index,setIndex]=useState<BsbIndex|null>(null);
@@ -99,7 +101,7 @@ export default function ReviewApp(){
   });
  },[preflight,tasks]);
  const active=[...tasks,...diagnosticTasks].find(t=>t.id===selectedId)??
-  tasks.find(t=>!reviewed.includes(t.id))??tasks[0]??diagnosticTasks[0];
+  tasks.find(t=>!t.optional&&!reviewed.includes(t.id))??tasks[0]??diagnosticTasks[0];
  const activeModuleId=active?.id.startsWith('module:')?active.id.slice('module:'.length):
   active?.id==='match-words'?'match-words':
   active?.id==='crossword'?'crossword':
@@ -147,6 +149,7 @@ export default function ReviewApp(){
    checkboxes:wordBankText(data,'checkboxes'),
   });
   setReviewed(value?.lesson?.schemaVersion===1&&Array.isArray(value.reviewed)?value.reviewed:[]);
+  setBulkReviewAcknowledged(false);setBulkReviewNotice('');
   setSelectedId(value?.lesson?.schemaVersion===1&&typeof value.selectedId==='string'?value.selectedId:'');
   setReference(data.lessonDetails.memoryVerse.reference);
   // Rights confirmation is an explicit decision for THIS lesson and THIS
@@ -320,16 +323,18 @@ export default function ReviewApp(){
    const next=getBsbPassage(index,reference);
    const tokenCount=wordSpans(next.text).length;
    setPassage(next);setStart(0);setEnd(tokenCount-1);
-   setFinish(suggestBlankWords(next.text));
-   setUnscramble(suggestBlankWords(next.text));
-   setDisplayReference(next.reference);setError('');
+   setFinish([]);setUnscramble([]);
+   // The BSB index uses whole numbered verses. Preserve an original 1a/1b
+   // curriculum citation for the booklet while the teacher picks the excerpt.
+   setDisplayReference(/\d[a-z](?:\s*[-–]|$)/iu.test(reference.trim())
+    ?reference.trim():next.reference);
+   setError('');
   }catch(e){setError(String((e as Error).message??e));}
  }
  function changeBounds(s:number,e:number){
   if(!passage)return;
-  const nextText=clipToWords(passage.text,s,e);
-  setStart(s);setEnd(e);setFinish(suggestBlankWords(nextText));
-  setUnscramble(suggestBlankWords(nextText));
+  setStart(s);setEnd(e);setFinish([]);
+  setUnscramble([]);
   setPreflight(null);
  }
  function toggle(setter:(v:number[]|((x:number[])=>number[]))=>void,which:number){
@@ -343,6 +348,17 @@ export default function ReviewApp(){
    setRightsConfirmed(false);
    setPreflight(null);setError('');
   }catch(e){setError(String((e as Error).message??e));}
+ }
+ function markRemainingReviewed(){
+  if(!lesson||!bulkReviewAcknowledged||remaining===0)return;
+  if(!window.confirm('Confirm that you have personally reviewed the '+remaining+
+   ' remaining curriculum items. This marks review checkboxes only; it does NOT approve the lesson, clear Scripture rights, or skip preflight. Continue?'))return;
+  setReviewed(previous=>[...new Set([
+   ...previous,...requiredTasks.map(task=>task.id),
+  ])]);
+  setBulkReviewAcknowledged(false);
+  setBulkReviewNotice('Review checkmarks updated. Rerun preflight and complete the separate BSB rights confirmation and teacher signoff before publication.');
+  setPreflight(null);setRightsConfirmed(false);
  }
  function approveActive(){
   if(!active)return;
@@ -391,9 +407,9 @@ export default function ReviewApp(){
      <button type="button" className="review-secondary" onClick={loadRedSea}>Load Red Sea lesson from GitHub</button>
      <label className="review-upload">Choose curriculum JSON or saved review session <input type="file" accept=".json,application/json" onChange={loadLesson}/></label>
      {lesson&&<><strong>{lesson.lessonDetails.title}</strong><p>{lesson.id}</p>
-      <div className="review-meter"><div style={{width:(tasks.length?complete/tasks.length*100:0)+'%'}}/></div>
-      <small>{complete} of {tasks.length} decisions reviewed</small>
-      <button type="button" className="review-secondary" onClick={()=>downloadJson(lesson.id+'.review-session.json',{lesson,reviewed,selectedId})}>Download review session (keeps checkmarks)</button>
+      <div className="review-meter"><div style={{width:(requiredTasks.length?complete/requiredTasks.length*100:0)+'%'}}/></div>
+      <small>{complete} of {requiredTasks.length} required decisions reviewed</small>
+      <button type="button" className="review-secondary" onClick={()=>downloadJson(lesson.id+'.review-session.json',{lesson,reviewed,selectedId})}>Save review session — preserves edits and checkmarks</button>
       <button type="button" className="review-secondary" onClick={()=>downloadJson(lesson.id+'.review.json',lesson)}>Download working JSON</button>
      </>}
      <small>Progress autosaves in this browser only. To continue on another device, download your review session and import it there to keep edits and checkmarks.</small>
@@ -407,6 +423,25 @@ export default function ReviewApp(){
         <span>{t.optional?'↗':reviewed.includes(t.id)?'✓':'○'}</span><span><small>{t.group}</small>{t.label}</span>
        </button>)}
      </nav>
+     <details className="review-bulk-check">
+      <summary>Already reviewed this lesson? Mark remaining items reviewed</summary>
+      <p>This is only for material you have personally checked elsewhere.
+       Import a saved <strong>review session</strong> above to restore existing
+       checkmarks automatically; a plain curriculum JSON doesn't store them.</p>
+      <p><strong>This does not approve the lesson.</strong> Preflight, official BSB
+       rights confirmation and final teacher signoff remain separate.</p>
+      <label className="review-checkbox">
+       <input type="checkbox" checked={bulkReviewAcknowledged}
+        onChange={e=>setBulkReviewAcknowledged(e.target.checked)}/>
+       I personally reviewed all remaining curriculum items.
+      </label>
+      <button type="button" className="review-secondary"
+       disabled={!bulkReviewAcknowledged||remaining===0}
+       onClick={markRemainingReviewed}>
+       Mark {remaining} remaining items reviewed
+      </button>
+      {bulkReviewNotice&&<p role="status" className="review-source">{bulkReviewNotice}</p>}
+     </details>
      {diagnosticTasks.length>0&&<div className="review-diagnostic-links">
       <h3>Additional activity repairs</h3>
       <nav className="review-nav" aria-label="Preflight repair sections">
@@ -674,7 +709,7 @@ export default function ReviewApp(){
         <a href="https://berean.bible/downloads.htm" target="_blank" rel="noreferrer">Get the official text file</a>
        </>}
        <div className="review-pair">
-        <label>Look up passage (e.g. Exodus 15:11-12)
+        <label>Look up passage (e.g. Psalm 136:1a or Exodus 15:11-12)
          <input id="review-field-bsb" value={reference} onChange={e=>setReference(e.target.value)}/></label>
         <button type="button" onClick={findPassage} disabled={!index}>Look up BSB</button>
        </div>
@@ -693,7 +728,9 @@ export default function ReviewApp(){
         <label>Reference printed on the booklet
          <input value={displayReference} maxLength={38} onChange={e=>setDisplayReference(e.target.value)}/></label>
         <div className="review-verse"><small>Exact excerpt to use (punctuation preserved)</small><p>{verseText}</p></div>
-        <p className="review-source">Select words to become blanks in each activity. Use 2–8 for Finish the Verse and 4–8 for Unscramble the Verse; each answer must contain at most nine letters.</p>
+        <p className="review-source">No words are selected automatically. Choose 2–8 blanks
+         for Finish the Verse and 4–8 for Unscramble the Verse; each answer must
+         contain at most nine letters. Changing excerpt boundaries clears both selections.</p>
         {(['finish','unscramble'] as const).map(mode=>{
          const chosen=mode==='finish'?finish:unscramble;
          const setter=mode==='finish'?setFinish:setUnscramble;
@@ -711,7 +748,11 @@ export default function ReviewApp(){
              <p className="review-warning" key={i}>{s}</p>)}
          </div>;
         })}
-        <button type="button" onClick={useBsb}>Apply BSB to all verse activities</button>
+        <button type="button" onClick={useBsb}
+         disabled={finish.length<2||finish.length>8||
+          unscramble.length<4||unscramble.length>8}>
+         Apply BSB to all verse activities
+        </button>
        </>}
        <div className="review-verse"><small>Currently stored in the curriculum</small>
         <p>{versePreview.reference} ({versePreview.translation})</p><p>{versePreview.text}</p>
