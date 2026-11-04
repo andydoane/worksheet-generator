@@ -39,6 +39,8 @@ export function listReviewTasks(lesson:Lesson):ReviewTask[]{
  // Diagnostic-only tasks disappear when edits clear the old preflight report.
  tasks.push({id:'match-words',group:'Word activities',label:'Match the Words',
   detail:'Review 3–6 correct matching pairs. The printed worksheet shuffles only the right column.'});
+ tasks.push({id:'crossword',group:'Large puzzles',label:'Crossword',
+  detail:'Edit 6–10 answer/clue pairs, check that every word connects, and review the printable puzzle.'});
  tasks.push({id:'connect-phrase',group:'Medium puzzle',label:'Connect the Phrase',
   detail:'Choose source-linked phrasing, confirm word fit, and preview the scattered phrase.'});
  tasks.push({id:'word-search',group:'Vocabulary',label:'Word Search (Large)',
