@@ -1,0 +1,3340 @@
+{
+  "schemaVersion": 1,
+  "schemaStatus": "schema-v1 conversion draft; teacher review and actual generator checks pending",
+  "id": "ot-032-god-provides-in-the-wilderness",
+  "curriculum": {
+    "series": "Old Testament",
+    "lessonNumber": 32
+  },
+  "lessonDetails": {
+    "title": "God Provides in the Wilderness",
+    "scripturePassages": [
+      "Exodus 16",
+      "Exodus 17"
+    ],
+    "scriptureDisplay": "Exodus 16–17",
+    "bigIdeas": [
+      {
+        "text": "Before you complain, remember what God has done for you.",
+        "origin": "source",
+        "source": {
+          "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+          "section": "Important Idea",
+          "page": 5,
+          "sourceParagraphIndex": 162,
+          "details": "Confirmed against the Important Idea graphic on page 5; duplicate layout text in source paragraph 160 is joined without a space."
+        }
+      }
+    ],
+    "memoryVerse": {
+      "reference": "1 Chronicles 16:8",
+      "translation": "BSB",
+      "text": "“Give thanks to the LORD; call upon His name; make known His deeds among the nations.",
+      "isExcerpt": false,
+      "hasEllipses": false,
+      "requiresTextReview": false,
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+        "section": "Memory Verse Activity",
+        "page": 8,
+        "sourceParagraphIndex": 223
+      },
+      "alsoVerifiedAt": {
+        "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+        "section": "Verse and Motions",
+        "page": 8,
+        "sourceParagraphIndex": 230
+      },
+      "bsbSource": {
+        "reference": "1 Chronicles 16:8",
+        "sourceUrl": "https://bereanbible.com/bsb.txt",
+        "publicDomainTerms": "https://berean.bible/terms.htm",
+        "startWord": 0,
+        "endWord": 15
+      }
+    }
+  },
+  "sourceFiles": [
+    {
+      "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+      "format": "odt",
+      "role": "primary teaching source",
+      "note": "No ODP supplied; original memory verse is 1 Chronicles 16:8, ESV. Replaced for worksheets with verified BSB text for teacher review."
+    }
+  ],
+  "storyNotes": [
+    {
+      "id": "sn-01",
+      "order": 1,
+      "originalText": "As they traveled through the desert, the people complained because they had no FOOD.",
+      "cleanText": "As they traveled through the desert, the people complained because they had no food.",
+      "emphasizedWords": [
+        "FOOD"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+        "section": "STORY NOTE",
+        "page": 2,
+        "sourceParagraphIndex": 39
+      }
+    },
+    {
+      "id": "sn-02",
+      "order": 2,
+      "originalText": "God told Moses, \"I will send quail at night and BREAD from heaven in the morning.\"",
+      "cleanText": "God told Moses, \"I will send quail at night and bread from heaven in the morning.\"",
+      "emphasizedWords": [
+        "BREAD"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+        "section": "STORY NOTE",
+        "page": 2,
+        "sourceParagraphIndex": 58
+      }
+    },
+    {
+      "id": "sn-03",
+      "order": 3,
+      "originalText": "God covered the camp with QUAIL that night. Next morning, white bread flakes covered the ground.",
+      "cleanText": "God covered the camp with quail that night. Next morning, white bread flakes covered the ground.",
+      "emphasizedWords": [
+        "QUAIL"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+        "section": "STORY NOTE",
+        "page": 3,
+        "sourceParagraphIndex": 73
+      }
+    },
+    {
+      "id": "sn-04",
+      "order": 4,
+      "originalText": "Moses said, \"Don't SAVE any of the bread.\" When people tried, it became a bug-filled stinky mess.",
+      "cleanText": "Moses said, \"Don't save any of the bread.\" When people tried, it became a bug-filled stinky mess.",
+      "emphasizedWords": [
+        "SAVE"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+        "section": "STORY NOTE",
+        "page": 3,
+        "sourceParagraphIndex": 92
+      }
+    },
+    {
+      "id": "sn-05",
+      "order": 5,
+      "originalText": "God sent twice as much bread on the sixth day so his people could REST on the seventh.",
+      "cleanText": "God sent twice as much bread on the sixth day so his people could rest on the seventh.",
+      "emphasizedWords": [
+        "REST"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+        "section": "STORY NOTE",
+        "page": 4,
+        "sourceParagraphIndex": 109
+      }
+    },
+    {
+      "id": "sn-06",
+      "order": 6,
+      "originalText": "When the Israelites complained about water, God gave them water after Moses struck a ROCK.",
+      "cleanText": "When the Israelites complained about water, God gave them water after Moses struck a rock.",
+      "emphasizedWords": [
+        "ROCK"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+        "section": "STORY NOTE",
+        "page": 4,
+        "sourceParagraphIndex": 128
+      }
+    },
+    {
+      "id": "sn-07",
+      "order": 7,
+      "originalText": "Whenever Moses held up his STAFF, Israel won the battle, so Aaron and Hur held up his arms.",
+      "cleanText": "Whenever Moses held up his staff, Israel won the battle, so Aaron and Hur held up his arms.",
+      "emphasizedWords": [
+        "STAFF"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+        "section": "STORY NOTE",
+        "page": 5,
+        "sourceParagraphIndex": 143
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q-01",
+      "question": "What does the word “Exodus” mean?",
+      "answer": "To exit.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "recap",
+      "source": {
+        "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 9
+      }
+    },
+    {
+      "id": "q-02",
+      "question": "Why is it called that?",
+      "answer": "Because it’s about God’s people exiting the land of Egypt where they were slaves.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "recap",
+      "source": {
+        "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 11
+      }
+    },
+    {
+      "id": "q-03",
+      "question": "How did he lead them?",
+      "answer": "As a pillar of cloud by day, a pillar of fire by night.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "recap",
+      "source": {
+        "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+        "section": "Story teaching",
+        "page": 2,
+        "sourceParagraphIndex": 43
+      }
+    },
+    {
+      "id": "q-04",
+      "question": "What is a desert like?",
+      "answer": "No water, no rain, no food.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+        "section": "Story teaching",
+        "page": 2,
+        "sourceParagraphIndex": 45
+      }
+    },
+    {
+      "id": "q-05",
+      "question": "What could the people not find in the desert?",
+      "answer": "Food.",
+      "kind": "factual",
+      "origin": "adapted",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+        "section": "Story teaching",
+        "page": 2,
+        "sourceParagraphIndex": 47
+      }
+    },
+    {
+      "id": "q-06",
+      "question": "Who really led the Israelites into the desert?",
+      "answer": "God.",
+      "kind": "factual",
+      "origin": "adapted",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+        "section": "Story teaching",
+        "page": 2,
+        "sourceParagraphIndex": 51
+      }
+    },
+    {
+      "id": "q-07",
+      "question": "Does bread normally rain from the sky?",
+      "answer": "No.",
+      "kind": "factual",
+      "origin": "adapted",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+        "section": "Story teaching",
+        "page": 2,
+        "sourceParagraphIndex": 60
+      }
+    },
+    {
+      "id": "q-08",
+      "question": "What instructions did God give about this bread from heaven?",
+      "answer": "Only gather what you need; on the sixth day, gather twice as much.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+        "section": "Story teaching",
+        "page": 2,
+        "sourceParagraphIndex": 64
+      }
+    },
+    {
+      "id": "q-09",
+      "question": "What did God send them in the evening?",
+      "answer": "Quail.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+        "section": "Story teaching",
+        "page": 3,
+        "sourceParagraphIndex": 75
+      }
+    },
+    {
+      "id": "q-10",
+      "question": "What did Moses say when the people asked about the white flakes?",
+      "answer": "It’s the bread God has given you to eat.",
+      "kind": "factual",
+      "origin": "adapted",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+        "section": "Story teaching",
+        "page": 3,
+        "sourceParagraphIndex": 79
+      }
+    },
+    {
+      "id": "q-11",
+      "question": "What does the name “manna” mean?",
+      "answer": "What’s that?",
+      "kind": "factual",
+      "origin": "adapted",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+        "section": "Story teaching",
+        "page": 3,
+        "sourceParagraphIndex": 85
+      }
+    },
+    {
+      "id": "q-12",
+      "question": "What instructions did Moses give about the manna bread?",
+      "answer": "Don’t save any of it until morning.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+        "section": "Story teaching",
+        "page": 3,
+        "sourceParagraphIndex": 94
+      }
+    },
+    {
+      "id": "q-13",
+      "question": "Why did some people try to save manna overnight?",
+      "answer": "They didn’t trust God to send more the next day.",
+      "kind": "factual",
+      "origin": "adapted",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+        "section": "Story teaching",
+        "page": 3,
+        "sourceParagraphIndex": 96
+      }
+    },
+    {
+      "id": "q-14",
+      "question": "Why could they not eat the manna they saved overnight?",
+      "answer": "It smelled and was filled with maggots.",
+      "kind": "factual",
+      "origin": "adapted",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+        "section": "Story teaching",
+        "page": 3,
+        "sourceParagraphIndex": 98
+      }
+    },
+    {
+      "id": "q-15",
+      "question": "What instructions did Moses give them on the sixth day?",
+      "answer": "Gather twice as much, save some for day seven.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+        "section": "Story teaching",
+        "page": 4,
+        "sourceParagraphIndex": 117
+      }
+    },
+    {
+      "id": "q-16",
+      "question": "What did they do on day seven?",
+      "answer": "Went to look for manna on day seven.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+        "section": "Story teaching",
+        "page": 4,
+        "sourceParagraphIndex": 121
+      }
+    },
+    {
+      "id": "q-17",
+      "question": "When the Israelites ran out of water to drink, what did they do?",
+      "answer": "Complained again.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+        "section": "Story teaching",
+        "page": 4,
+        "sourceParagraphIndex": 130
+      }
+    },
+    {
+      "id": "q-18",
+      "question": "What did God tell Moses to do?",
+      "answer": "Strike a rock with a staff and water would come out.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+        "section": "Story teaching",
+        "page": 4,
+        "sourceParagraphIndex": 132
+      }
+    },
+    {
+      "id": "q-19",
+      "question": "How could Moses make water come out of a rock?",
+      "answer": "God can do miracles.",
+      "kind": "factual",
+      "origin": "adapted",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+        "section": "Story teaching",
+        "page": 4,
+        "sourceParagraphIndex": 134
+      }
+    },
+    {
+      "id": "q-20",
+      "question": "What would Moses do?",
+      "answer": "Stand on a hill with his staff.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+        "section": "Story teaching",
+        "page": 5,
+        "sourceParagraphIndex": 147
+      }
+    },
+    {
+      "id": "q-21",
+      "question": "Whenever Moses held his staff high, what happened?",
+      "answer": "The Israelites would start winning the battle.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+        "section": "Story teaching",
+        "page": 5,
+        "sourceParagraphIndex": 151
+      }
+    },
+    {
+      "id": "q-22",
+      "question": "Whenever Moses lowered his hands, what happened?",
+      "answer": "The Israelites would start losing.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+        "section": "Story teaching",
+        "page": 5,
+        "sourceParagraphIndex": 153
+      }
+    },
+    {
+      "id": "q-23",
+      "question": "When the Israelites couldn’t find food, what did they do?",
+      "answer": "They complained.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "application",
+      "source": {
+        "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+        "section": "Important Idea/application",
+        "page": 6,
+        "sourceParagraphIndex": 182
+      }
+    },
+    {
+      "id": "q-24",
+      "question": "When they couldn’t find water, what did they do?",
+      "answer": "They complained.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "application",
+      "source": {
+        "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+        "section": "Important Idea/application",
+        "page": 6,
+        "sourceParagraphIndex": 184
+      }
+    },
+    {
+      "id": "q-25",
+      "question": "When Moses struck the rock, what happened?",
+      "answer": "Water came out.",
+      "kind": "factual",
+      "origin": "adapted",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+        "section": "Review Activity",
+        "page": 10,
+        "sourceParagraphIndex": 254
+      }
+    },
+    {
+      "id": "q-26",
+      "question": "What did the Israelites say when they couldn’t find food?",
+      "answer": "Wish we’d died in Egypt; had all the food we wanted",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 268
+      }
+    },
+    {
+      "id": "q-27",
+      "question": "Though the people grumbled to Moses, who were they really complaining about?",
+      "answer": "The Lord God",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "application",
+      "source": {
+        "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 269
+      }
+    },
+    {
+      "id": "q-28",
+      "question": "What food did God send the people to eat?",
+      "answer": "Quail in the evening, manna bread in the morning",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 270
+      }
+    },
+    {
+      "id": "q-29",
+      "question": "What did they call the bread from heaven? What was it like?",
+      "answer": "Manna; it was flaky, white, and sweet",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 271
+      }
+    },
+    {
+      "id": "q-30",
+      "question": "What happened when some people tried to save the manna?",
+      "answer": "It smelled and was full of maggots",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 272
+      }
+    },
+    {
+      "id": "q-31",
+      "question": "What did God tell the people to do on the sixth day? Why?",
+      "answer": "Gather twice as much, save some for the seventh day, so they could rest and honor the Lord",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 273
+      }
+    },
+    {
+      "id": "q-32",
+      "question": "When the people complained about water, what did God have Moses do? What happened?",
+      "answer": "Moses struck a rock and water came out",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+        "section": "Review Questions",
+        "page": 11,
+        "sourceParagraphIndex": 274
+      }
+    },
+    {
+      "id": "q-33",
+      "question": "When they couldn’t find water, what did the people want to do to Moses?",
+      "answer": "Kill him",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+        "section": "Review Questions",
+        "page": 11,
+        "sourceParagraphIndex": 275
+      }
+    },
+    {
+      "id": "q-34",
+      "question": "What did the Amalekites do to the Israelites?",
+      "answer": "Attacked them",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+        "section": "Review Questions",
+        "page": 11,
+        "sourceParagraphIndex": 276
+      }
+    },
+    {
+      "id": "q-35",
+      "question": "What happened during the battle with the Amalekites?",
+      "answer": "When Moses held his staff high, they won. Aaron and Hur held up Moses’ arms; Joshua’s men won the battle",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "current-lesson",
+      "source": {
+        "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+        "section": "Review Questions",
+        "page": 11,
+        "sourceParagraphIndex": 277
+      }
+    }
+  ],
+  "facts": [
+    {
+      "id": "tf-01",
+      "statement": "The Israelites complained that they had no food in the desert.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-02",
+      "statement": "God promised bread from heaven in the morning.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-03",
+      "statement": "God sent quail to the Israelites in the evening.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02",
+        "sn-03"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-04",
+      "statement": "White flakes of manna covered the ground in the morning.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-05",
+      "statement": "The Israelites called the bread from heaven manna.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-06",
+      "statement": "Moses told the people not to keep manna overnight on ordinary days.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-07",
+      "statement": "Manna kept overnight against the rules became smelly and full of maggots.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-08",
+      "statement": "On the sixth day, the Israelites gathered twice as much manna.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-09",
+      "statement": "Extra manna collected on the sixth day stayed fresh for the Sabbath.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-10",
+      "statement": "God wanted the Israelites to rest on the seventh day.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-11",
+      "statement": "Some people searched for manna on the seventh day and found none.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-12",
+      "statement": "Moses struck a rock, and God gave the people water.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-13",
+      "statement": "The Amalekites attacked the Israelites in the wilderness.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-14",
+      "statement": "Joshua led Israelites into battle against the Amalekites.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-15",
+      "statement": "Israel was winning when Moses held up his staff.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-16",
+      "statement": "Aaron and Hur held up the arms of Moses.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-17",
+      "statement": "Moses held his staff on a hill during the battle.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-18",
+      "statement": "Moses told the Israelites they would get fish each night.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-02"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-19",
+      "statement": "The people gathered manna from the sea.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-03"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-20",
+      "statement": "The manna tasted spicy.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-03"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-21",
+      "statement": "Moses said everyone should save manna every single night.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-04",
+        "sn-05"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-22",
+      "statement": "When they saved manna when they weren't supposed to, it stayed fresh.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-04"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-23",
+      "statement": "The Israelites were told to gather no manna on the sixth day.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-24",
+      "statement": "God sent manna on the seventh day.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-25",
+      "statement": "Moses struck a tree to make water flow for the people.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-06"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-26",
+      "statement": "Joshua defeated the Amalekites while Moses stayed in his tent.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-27",
+      "statement": "Aaron and Hur held up Joshua’s hands during the battle.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-28",
+      "statement": "Israel lost the battle every time Moses held his staff high.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    }
+  ],
+  "vocabulary": {
+    "related": [
+      "Moses",
+      "Aaron",
+      "Hur",
+      "Joshua",
+      "Israelites",
+      "Amalekites",
+      "God",
+      "Pharaoh",
+      "Jesus",
+      "Egypt",
+      "Wilderness",
+      "Desert",
+      "Rephidim",
+      "Camp",
+      "Hill",
+      "Bread",
+      "Quail",
+      "Manna",
+      "Flakes",
+      "Water",
+      "Maggots",
+      "Rock",
+      "Staff",
+      "Hands",
+      "Tent",
+      "Swords",
+      "Sabbath",
+      "Rest",
+      "Complain",
+      "Gather",
+      "Strike",
+      "Fight",
+      "Trust",
+      "Thanks",
+      "Remember",
+      "Rescue",
+      "Pray",
+      "Miracle",
+      "Deeds",
+      "Nations",
+      "Cloud",
+      "Fire"
+    ],
+    "unrelated": [
+      "Temple",
+      "Vineyard",
+      "Donkey",
+      "Altar",
+      "Pottery",
+      "Boat",
+      "Crown",
+      "Fisherman"
+    ],
+    "entries": [
+      {
+        "id": "v-01",
+        "term": "Moses",
+        "category": "people",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "id": "v-02",
+        "term": "Aaron",
+        "category": "people",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "id": "v-03",
+        "term": "Hur",
+        "category": "people",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "id": "v-04",
+        "term": "Joshua",
+        "category": "people",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "id": "v-05",
+        "term": "Israelites",
+        "category": "people",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "id": "v-06",
+        "term": "Amalekites",
+        "category": "people",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "id": "v-07",
+        "term": "God",
+        "category": "people",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "id": "v-08",
+        "term": "Pharaoh",
+        "category": "people",
+        "origin": "adapted",
+        "scope": "recap",
+        "sourceIds": [],
+        "source": {
+          "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+          "section": "Introduction",
+          "page": 1,
+          "sourceParagraphIndex": 27
+        }
+      },
+      {
+        "id": "v-09",
+        "term": "Jesus",
+        "category": "people",
+        "origin": "adapted",
+        "scope": "application",
+        "sourceIds": [],
+        "source": {
+          "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+          "section": "Theological application",
+          "page": 6,
+          "sourceParagraphIndex": 209
+        }
+      },
+      {
+        "id": "v-10",
+        "term": "Egypt",
+        "category": "places",
+        "origin": "adapted",
+        "scope": "recap",
+        "sourceIds": [],
+        "source": {
+          "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+          "section": "Introduction",
+          "page": 1,
+          "sourceParagraphIndex": 27
+        }
+      },
+      {
+        "id": "v-11",
+        "term": "Wilderness",
+        "category": "places",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "id": "v-12",
+        "term": "Desert",
+        "category": "places",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "id": "v-13",
+        "term": "Rephidim",
+        "category": "places",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "id": "v-14",
+        "term": "Camp",
+        "category": "places",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "id": "v-15",
+        "term": "Hill",
+        "category": "places",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "id": "v-16",
+        "term": "Bread",
+        "category": "food",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "id": "v-17",
+        "term": "Quail",
+        "category": "animals",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "id": "v-18",
+        "term": "Manna",
+        "category": "food",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "id": "v-19",
+        "term": "Flakes",
+        "category": "food",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "id": "v-20",
+        "term": "Water",
+        "category": "objects",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "id": "v-21",
+        "term": "Maggots",
+        "category": "animals",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "id": "v-22",
+        "term": "Rock",
+        "category": "objects",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "id": "v-23",
+        "term": "Staff",
+        "category": "objects",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "id": "v-24",
+        "term": "Hands",
+        "category": "objects",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "id": "v-25",
+        "term": "Tent",
+        "category": "objects",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "id": "v-26",
+        "term": "Swords",
+        "category": "objects",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "id": "v-27",
+        "term": "Sabbath",
+        "category": "concepts",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "id": "v-28",
+        "term": "Rest",
+        "category": "actions",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "id": "v-29",
+        "term": "Complain",
+        "category": "actions",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "id": "v-30",
+        "term": "Gather",
+        "category": "actions",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "id": "v-31",
+        "term": "Strike",
+        "category": "actions",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "id": "v-32",
+        "term": "Fight",
+        "category": "actions",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "id": "v-33",
+        "term": "Trust",
+        "category": "concepts",
+        "origin": "adapted",
+        "scope": "application",
+        "sourceIds": [],
+        "source": {
+          "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+          "section": "Theological application",
+          "page": 6,
+          "sourceParagraphIndex": 209
+        }
+      },
+      {
+        "id": "v-34",
+        "term": "Thanks",
+        "category": "concepts",
+        "origin": "adapted",
+        "scope": "application",
+        "sourceIds": [],
+        "source": {
+          "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+          "section": "Theological application",
+          "page": 6,
+          "sourceParagraphIndex": 209
+        }
+      },
+      {
+        "id": "v-35",
+        "term": "Remember",
+        "category": "actions",
+        "origin": "adapted",
+        "scope": "application",
+        "sourceIds": [],
+        "source": {
+          "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+          "section": "Theological application",
+          "page": 6,
+          "sourceParagraphIndex": 209
+        }
+      },
+      {
+        "id": "v-36",
+        "term": "Rescue",
+        "category": "actions",
+        "origin": "adapted",
+        "scope": "application",
+        "sourceIds": [],
+        "source": {
+          "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+          "section": "Theological application",
+          "page": 6,
+          "sourceParagraphIndex": 209
+        }
+      },
+      {
+        "id": "v-37",
+        "term": "Pray",
+        "category": "actions",
+        "origin": "adapted",
+        "scope": "application",
+        "sourceIds": [],
+        "source": {
+          "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+          "section": "Theological application",
+          "page": 6,
+          "sourceParagraphIndex": 209
+        }
+      },
+      {
+        "id": "v-38",
+        "term": "Miracle",
+        "category": "concepts",
+        "origin": "adapted",
+        "scope": "current-lesson",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "id": "v-39",
+        "term": "Deeds",
+        "category": "concepts",
+        "origin": "adapted",
+        "scope": "memory-verse",
+        "sourceIds": [],
+        "source": {
+          "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+          "section": "Memory Verse Activity",
+          "page": 8,
+          "sourceParagraphIndex": 223
+        }
+      },
+      {
+        "id": "v-40",
+        "term": "Nations",
+        "category": "concepts",
+        "origin": "adapted",
+        "scope": "memory-verse",
+        "sourceIds": [],
+        "source": {
+          "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+          "section": "Memory Verse Activity",
+          "page": 8,
+          "sourceParagraphIndex": 223
+        }
+      },
+      {
+        "id": "v-41",
+        "term": "Cloud",
+        "category": "objects",
+        "origin": "adapted",
+        "scope": "recap",
+        "sourceIds": [],
+        "source": {
+          "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+          "section": "Introduction",
+          "page": 1,
+          "sourceParagraphIndex": 27
+        }
+      },
+      {
+        "id": "v-42",
+        "term": "Fire",
+        "category": "objects",
+        "origin": "adapted",
+        "scope": "recap",
+        "sourceIds": [],
+        "source": {
+          "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+          "section": "Introduction",
+          "page": 1,
+          "sourceParagraphIndex": 27
+        }
+      }
+    ]
+  },
+  "characters": [
+    {
+      "id": "ch-01",
+      "name": "Moses",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02",
+        "sn-04",
+        "sn-06",
+        "sn-07"
+      ],
+      "clues": [
+        {
+          "text": "I struck a rock with my staff, and God gave water. Who am I?",
+          "origin": "adapted"
+        }
+      ]
+    },
+    {
+      "id": "ch-02",
+      "name": "Aaron",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "clues": [
+        {
+          "text": "I helped hold up Moses’ arms on the hill. Who am I?",
+          "origin": "adapted"
+        }
+      ]
+    },
+    {
+      "id": "ch-03",
+      "name": "Hur",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "clues": [
+        {
+          "text": "I stood with Aaron and helped support Moses’ tired arms. Who am I?",
+          "origin": "adapted"
+        }
+      ]
+    },
+    {
+      "id": "ch-04",
+      "name": "Joshua",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "clues": [
+        {
+          "text": "I led Israel’s soldiers into battle against the Amalekites. Who am I?",
+          "origin": "adapted"
+        }
+      ]
+    },
+    {
+      "id": "ch-05",
+      "name": "Israelites",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-03"
+      ],
+      "clues": [
+        {
+          "text": "We ate manna in the desert and drank water from a rock. Who are we?",
+          "origin": "adapted"
+        }
+      ]
+    }
+  ],
+  "matchingPairs": [
+    {
+      "id": "mp-01",
+      "left": "Manna",
+      "right": "Bread from heaven",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ]
+    },
+    {
+      "id": "mp-02",
+      "left": "Quail",
+      "right": "Meat in the evening",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ]
+    },
+    {
+      "id": "mp-03",
+      "left": "Sabbath",
+      "right": "Day of rest",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ]
+    },
+    {
+      "id": "mp-04",
+      "left": "Rock",
+      "right": "Water came out",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ]
+    },
+    {
+      "id": "mp-05",
+      "left": "Joshua",
+      "right": "Led the soldiers",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ]
+    },
+    {
+      "id": "mp-06",
+      "left": "Aaron and Hur",
+      "right": "Held up Moses’ arms",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ]
+    }
+  ],
+  "drawingPrompts": [
+    {
+      "id": "dp-01",
+      "prompt": "the Israelites complaining about having no food in the desert",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    {
+      "id": "dp-02",
+      "prompt": "Moses telling the Israelites about bread from heaven",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ]
+    },
+    {
+      "id": "dp-03",
+      "prompt": "quail flying down to the Israelites’ camp at evening",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ]
+    },
+    {
+      "id": "dp-04",
+      "prompt": "white manna flakes covering the ground outside the tents",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ]
+    },
+    {
+      "id": "dp-05",
+      "prompt": "a smelly bowl of saved manna with little bugs in it",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ]
+    },
+    {
+      "id": "dp-06",
+      "prompt": "the Israelites gathering double manna on the sixth day",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ]
+    },
+    {
+      "id": "dp-07",
+      "prompt": "the Israelites resting on the Sabbath instead of gathering manna",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ]
+    },
+    {
+      "id": "dp-08",
+      "prompt": "Moses striking a rock as water gushes out",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ]
+    },
+    {
+      "id": "dp-09",
+      "prompt": "Joshua leading Israel’s soldiers against the Amalekites",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ]
+    },
+    {
+      "id": "dp-10",
+      "prompt": "Aaron and Hur holding up Moses’ tired arms on the hill",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ]
+    }
+  ],
+  "keyPhrases": [
+    {
+      "id": "kp-01",
+      "text": "Before you complain, remember what God has done for you.",
+      "origin": "source",
+      "source": {
+        "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+        "section": "Important Idea",
+        "page": 5,
+        "sourceParagraphIndex": 162,
+        "details": "Confirmed against the Important Idea graphic on page 5; duplicate layout text in source paragraph 160 is joined without a space."
+      }
+    },
+    {
+      "id": "kp-02",
+      "text": "God gave his people food, water, and help in battle.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02",
+        "sn-06",
+        "sn-07"
+      ]
+    },
+    {
+      "id": "kp-03",
+      "text": "Remember God’s help before you complain.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-06"
+      ]
+    },
+    {
+      "id": "kp-04",
+      "text": "Give thanks to the Lord for the things he has done.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+        "section": "Memory Verse Activity",
+        "page": 8,
+        "sourceParagraphIndex": 226
+      }
+    },
+    {
+      "id": "kp-review-1",
+      "text": "God made water flow out from a rock.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "theologicalApplications": [
+    {
+      "id": "app-01",
+      "text": "Before you complain, remember what God has done for you.",
+      "origin": "source",
+      "source": {
+        "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+        "section": "Important Idea",
+        "page": 5,
+        "sourceParagraphIndex": 162,
+        "details": "Confirmed against the Important Idea graphic on page 5; duplicate layout text in source paragraph 160 is joined without a space."
+      }
+    },
+    {
+      "id": "app-02",
+      "text": "Complaining to Moses and Aaron about food and water was really complaining against the Lord.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+        "section": "Important Idea/application",
+        "page": 6,
+        "sourceParagraphIndex": 197
+      }
+    },
+    {
+      "id": "app-03",
+      "text": "Remember how God has cared for and rescued his people when troubles come.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+        "section": "Important Idea/application",
+        "page": 6,
+        "sourceParagraphIndex": 209
+      }
+    },
+    {
+      "id": "app-04",
+      "text": "Remember Jesus, God’s Son, who died for our sins and rose again.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+        "section": "Important Idea/application",
+        "page": 7,
+        "sourceParagraphIndex": 213
+      }
+    },
+    {
+      "id": "app-05",
+      "text": "Give thanks to God, call on him for help, and tell others what he has done.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+        "section": "Memory Verse Activity",
+        "page": 8,
+        "sourceParagraphIndex": 226
+      }
+    }
+  ],
+  "preparedActivities": {
+    "drawPicture": {
+      "prompt": "the Israelites complaining about having no food in the desert",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    "multipleChoice": [
+      {
+        "id": "mc-01",
+        "question": "Why did the Israelites complain in the desert?",
+        "correctAnswer": "They had no food.",
+        "choices": [
+          {
+            "text": "They had no food.",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "It was too hot.",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "They lost their sandals.",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceQuestionIds": [
+          "q-05"
+        ],
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-02",
+        "question": "What did God send for the people to eat in the evening?",
+        "correctAnswer": "Quail",
+        "choices": [
+          {
+            "text": "Quail",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Fish",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Lambs",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceQuestionIds": [
+          "q-09"
+        ],
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-03",
+        "question": "What did God give the Israelites in the morning?",
+        "correctAnswer": "Manna",
+        "choices": [
+          {
+            "text": "Manna",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Grapes",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Bananas",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceQuestionIds": [
+          "q-28"
+        ],
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-04",
+        "question": "What did the people call the bread from heaven?",
+        "correctAnswer": "Manna",
+        "choices": [
+          {
+            "text": "Manna",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Bible Bread",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Cloudpuffs",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceQuestionIds": [
+          "q-11"
+        ],
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-05",
+        "question": "What happened when the Israelites tried to save manna overnight?",
+        "correctAnswer": "It stank and had maggots.",
+        "choices": [
+          {
+            "text": "It stank and had maggots.",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "It turned into wine.",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "It disappeared.",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceQuestionIds": [
+          "q-14"
+        ],
+        "sourceIds": [
+          "sn-04"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-06",
+        "question": "How much manna did the people gather on day six?",
+        "correctAnswer": "Twice as much",
+        "choices": [
+          {
+            "text": "Twice as much",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Nothing",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Half as much",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceQuestionIds": [
+          "q-15"
+        ],
+        "sourceIds": [
+          "sn-05"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-07",
+        "question": "What were the Israelites to do on the seventh day?",
+        "correctAnswer": "Rest and honor the Lord",
+        "choices": [
+          {
+            "text": "Rest and honor the Lord",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Gather more manna",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "March back to Egypt",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceQuestionIds": [
+          "q-31"
+        ],
+        "sourceIds": [
+          "sn-05"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-08",
+        "question": "How did God provide water to the Israelites?",
+        "correctAnswer": "From a rock Moses struck",
+        "choices": [
+          {
+            "text": "From a rock Moses struck",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "From a well Joshua dug",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "From rain Aaron prayed for",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceQuestionIds": [
+          "q-18"
+        ],
+        "sourceIds": [
+          "sn-06"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-09",
+        "question": "Who attacked Israel in the wilderness?",
+        "correctAnswer": "The Amalekites",
+        "choices": [
+          {
+            "text": "The Amalekites",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "The Philistines",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "The Midianites",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceQuestionIds": [
+          "q-34"
+        ],
+        "sourceIds": [
+          "sn-07"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-10",
+        "question": "Who led the Israelite soldiers into battle?",
+        "correctAnswer": "Joshua",
+        "choices": [
+          {
+            "text": "Joshua",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Aaron",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Hur",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceQuestionIds": [
+          "q-35"
+        ],
+        "sourceIds": [
+          "sn-07"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-11",
+        "question": "What happened when Moses held up his staff during the battle?",
+        "correctAnswer": "Israel began winning.",
+        "choices": [
+          {
+            "text": "Israel began winning.",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "The manna fell.",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "The water stopped.",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceQuestionIds": [
+          "q-21"
+        ],
+        "sourceIds": [
+          "sn-07"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-12",
+        "question": "Who held up Moses’ tired arms?",
+        "correctAnswer": "Aaron and Hur",
+        "choices": [
+          {
+            "text": "Aaron and Hur",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Abraham and Isaac",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Two angels",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceQuestionIds": [
+          "q-35"
+        ],
+        "sourceIds": [
+          "sn-07"
+        ],
+        "teacherReviewRequired": true
+      }
+    ],
+    "trueFalse": {
+      "statement": "White flakes of manna covered the ground in the morning.",
+      "isTrue": true,
+      "factId": "tf-04",
+      "origin": "adapted"
+    },
+    "firstLetters": {
+      "reference": "1 Chronicles 16:8",
+      "verse": "“Give thanks to the LORD; call upon His name; make known His deeds among the nations.",
+      "origin": "adapted"
+    },
+    "oddWords": {
+      "related": [
+        "Manna",
+        "Quail",
+        "Sabbath",
+        "Rock",
+        "Staff"
+      ],
+      "unrelated": [
+        "Temple",
+        "Grapes",
+        "Donkey",
+        "Altar",
+        "Pottery"
+      ],
+      "origin": "adapted",
+      "unrelatedOrigin": "suggested"
+    },
+    "unscrambleWords": {
+      "answers": [
+        "MANNA",
+        "QUAIL"
+      ],
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ]
+    },
+    "checkboxes": {
+      "correct": [
+        "Manna",
+        "Quail",
+        "Sabbath",
+        "Rock",
+        "Staff"
+      ],
+      "incorrect": [
+        "Temple",
+        "Grapes",
+        "Donkey",
+        "Altar",
+        "Pottery"
+      ],
+      "origin": "adapted",
+      "incorrectOrigin": "suggested"
+    },
+    "whoAmI": {
+      "clue": "I struck a rock with my staff, and God gave water. Who am I?",
+      "answer": "Moses",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ]
+    },
+    "matchWords": [
+      {
+        "id": "mp-01",
+        "left": "Manna",
+        "right": "Bread from heaven",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "id": "mp-02",
+        "left": "Quail",
+        "right": "Meat in the evening",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "id": "mp-03",
+        "left": "Sabbath",
+        "right": "Day of rest",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "id": "mp-04",
+        "left": "Rock",
+        "right": "Water came out",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "id": "mp-05",
+        "left": "Joshua",
+        "right": "Led the soldiers",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "id": "mp-06",
+        "left": "Aaron and Hur",
+        "right": "Held up Moses’ arms",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      }
+    ],
+    "finishVerse": {
+      "reference": "1 Chronicles 16:8",
+      "markedVerse": "“Give [thanks] to the LORD; [call] upon His [name]; make [known] His [deeds] among the [nations].",
+      "origin": "adapted",
+      "sourceVerse": "“Give thanks to the LORD; call upon His name; make known His deeds among the nations."
+    },
+    "unscrambleVerse": {
+      "reference": "1 Chronicles 16:8",
+      "markedVerse": "“Give [thanks] to the LORD; [call] upon His [name]; make [known] His [deeds] among the [nations].",
+      "origin": "adapted",
+      "sourceVerse": "“Give thanks to the LORD; call upon His name; make known His deeds among the nations."
+    },
+    "circleMistakes": {
+      "paragraph": "When the Israelites had no food, they celebrated Moses and Aaron. God sent doves at night and manna in the evening. Moses told them to save manna every night. On the sixth day, they gathered less bread so they could work on the seventh. When they needed water, Moses struck a tree and water came out. During the battle, Aaron and Hur held up Joshua’s arms.",
+      "mistakeCount": 8,
+      "mistakes": [
+        {
+          "incorrect": "celebrated",
+          "correction": "complained",
+          "sourceIds": [
+            "sn-01"
+          ]
+        },
+        {
+          "incorrect": "doves",
+          "correction": "quail",
+          "sourceIds": [
+            "sn-03"
+          ]
+        },
+        {
+          "incorrect": "the evening",
+          "correction": "the morning",
+          "sourceIds": [
+            "sn-03"
+          ]
+        },
+        {
+          "incorrect": "save manna every night",
+          "correction": "not save manna on ordinary nights",
+          "sourceIds": [
+            "sn-04"
+          ]
+        },
+        {
+          "incorrect": "less bread",
+          "correction": "twice as much bread",
+          "sourceIds": [
+            "sn-05"
+          ]
+        },
+        {
+          "incorrect": "work on the seventh",
+          "correction": "rest on the seventh",
+          "sourceIds": [
+            "sn-05"
+          ]
+        },
+        {
+          "incorrect": "a tree",
+          "correction": "a rock",
+          "sourceIds": [
+            "sn-06"
+          ]
+        },
+        {
+          "incorrect": "Joshua’s arms",
+          "correction": "Moses’ arms",
+          "sourceIds": [
+            "sn-07"
+          ]
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "mediumWordSearch": {
+      "words": [
+        "MANNA",
+        "QUAIL",
+        "MOSES",
+        "ROCK",
+        "STAFF",
+        "AARON"
+      ],
+      "origin": "adapted"
+    },
+    "trueFalseMaze": {
+      "statement": "God wanted the Israelites to rest on the seventh day.",
+      "isTrue": true,
+      "factId": "tf-10",
+      "origin": "adapted"
+    },
+    "bigIdeaCryptogram": {
+      "phrase": "God made water flow out from a rock.",
+      "origin": "suggested",
+      "sourceIds": [],
+      "teacherReviewRequired": true
+    },
+    "upsideDownVerse": {
+      "reference": "1 Chronicles 16:8",
+      "verse": "“Give thanks to the LORD; call upon His name; make known His deeds among the nations.",
+      "origin": "adapted"
+    },
+    "connectBigIdea": {
+      "phrase": "Before you complain, remember what God has done for you.",
+      "origin": "source",
+      "source": {
+        "filename": "OT 32 Lesson (God Provides in the Wilderness)(1).odt",
+        "section": "Important Idea",
+        "page": 5,
+        "sourceParagraphIndex": 162,
+        "details": "Confirmed against the Important Idea graphic on page 5; duplicate layout text in source paragraph 160 is joined without a space."
+      }
+    },
+    "pixelPicture": {
+      "phrase": "God gave the Israelites manna, water, and help in battle.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03",
+        "sn-06",
+        "sn-07"
+      ]
+    },
+    "finishStory": {
+      "markedParagraph": "After leaving Egypt, the Israelites complained that there was no [FOOD] in the desert. God promised Moses [BREAD] from heaven and quail in the evening. That night, [QUAIL] came, and in the morning white flakes called [MANNA] covered the ground. Moses told the people not to [SAVE] it overnight, but some did, and the leftovers stank and filled with maggots. God gave twice as much manna on day six so his people could [REST] on the Sabbath. Later the people needed water, and Moses struck a [ROCK]; God gave them water. When the Amalekites attacked, Joshua led the soldiers while Moses lifted his [STAFF]. Aaron and Hur supported his arms, and Israel won the battle.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ]
+    },
+    "storyOrder": [
+      {
+        "order": 1,
+        "text": "The Israelites complained that there was no food in the desert.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "order": 2,
+        "text": "God told Moses He would send quail at night and bread from heaven in the morning.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "order": 3,
+        "text": "Quail came that night, and white manna flakes appeared on the ground the next morning.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "order": 4,
+        "text": "Some people saved manna against Moses’ instructions, and it became smelly and filled with maggots.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "order": 5,
+        "text": "God provided double manna on day six so the people could rest on the Sabbath.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "order": 6,
+        "text": "When the people had no water, Moses struck a rock and God brought out water.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "order": 7,
+        "text": "During the battle, Aaron and Hur supported Moses’ arms while he held up his staff.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      }
+    ],
+    "sortStory": [
+      {
+        "factId": "tf-01",
+        "statement": "The Israelites complained that they had no food in the desert.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "factId": "tf-03",
+        "statement": "God sent quail to the Israelites in the evening.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02",
+          "sn-03"
+        ]
+      },
+      {
+        "factId": "tf-08",
+        "statement": "On the sixth day, the Israelites gathered twice as much manna.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "factId": "tf-12",
+        "statement": "Moses struck a rock, and God gave the people water.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "factId": "tf-14",
+        "statement": "Joshua led Israelites into battle against the Amalekites.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "factId": "tf-18",
+        "statement": "Moses told the Israelites they would get fish each night.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "factId": "tf-23",
+        "statement": "The Israelites were told to gather no manna on the sixth day.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "factId": "tf-25",
+        "statement": "Moses struck a tree to make water flow for the people.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-06"
+        ]
+      }
+    ],
+    "drawStory": [
+      {
+        "prompt": "The Israelites complained that there was no food in the desert.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "prompt": "God told Moses He would send quail at night and bread from heaven in the morning.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "prompt": "Quail came that night, and white manna flakes appeared on the ground the next morning.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "prompt": "God provided double manna on day six so the people could rest on the Sabbath.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "prompt": "When the people had no water, Moses struck a rock and God brought out water.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "prompt": "During the battle, Aaron and Hur supported Moses’ arms while he held up his staff.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      }
+    ],
+    "wordSearch": {
+      "words": [
+        "ISRAELITES",
+        "MANNA",
+        "QUAIL",
+        "MOSES",
+        "SABBATH",
+        "WILDERNESS",
+        "JOSHUA",
+        "AARON",
+        "HUR",
+        "ROCK",
+        "STAFF",
+        "WATER"
+      ],
+      "origin": "adapted"
+    },
+    "verseCryptogram": {
+      "reference": "1 Chronicles 16:8",
+      "verse": "“Give thanks to the LORD; call upon His name; make known His deeds among the nations.",
+      "origin": "adapted"
+    },
+    "crossword": [
+      {
+        "answer": "MANNA",
+        "clue": "What did they call the bread God sent from heaven?",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "origin": "adapted"
+      },
+      {
+        "answer": "QUAIL",
+        "clue": "What birds came to the camp in the evening?",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "origin": "adapted"
+      },
+      {
+        "answer": "MOSES",
+        "clue": "Who struck a rock to provide water?",
+        "sourceIds": [
+          "sn-06"
+        ],
+        "origin": "adapted"
+      },
+      {
+        "answer": "SABBATH",
+        "clue": "What was the holy seventh day of rest called?",
+        "sourceIds": [
+          "sn-05"
+        ],
+        "origin": "adapted"
+      },
+      {
+        "answer": "JOSHUA",
+        "clue": "Who led Israel’s soldiers into battle?",
+        "sourceIds": [
+          "sn-07"
+        ],
+        "origin": "adapted"
+      },
+      {
+        "answer": "AARON",
+        "clue": "Who helped Hur hold up Moses’ hands?",
+        "sourceIds": [
+          "sn-07"
+        ],
+        "origin": "adapted"
+      },
+      {
+        "answer": "ROCK",
+        "clue": "What did Moses strike so water would come out?",
+        "sourceIds": [
+          "sn-06"
+        ],
+        "origin": "adapted"
+      },
+      {
+        "answer": "STAFF",
+        "clue": "What did Moses hold up during the battle?",
+        "sourceIds": [
+          "sn-07"
+        ],
+        "origin": "adapted"
+      },
+      {
+        "answer": "DESERT",
+        "clue": "Where were the Israelites traveling when they ran out of food?",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "origin": "adapted"
+      },
+      {
+        "answer": "MAGGOTS",
+        "clue": "What filled the old manna when some people saved it overnight?",
+        "sourceIds": [
+          "sn-04"
+        ],
+        "origin": "adapted"
+      }
+    ],
+    "spiralVerse": {
+      "reference": "1 Chronicles 16:8",
+      "verse": "“Give thanks to the LORD; call upon His name; make known His deeds among the nations.",
+      "origin": "adapted"
+    },
+    "connectVerse": {
+      "reference": "1 Chronicles 16:8",
+      "verse": "“Give thanks to the LORD; call upon His name; make known His deeds among the nations.",
+      "origin": "adapted"
+    }
+  },
+  "moduleReadiness": [
+    {
+      "moduleName": "Draw a Picture",
+      "moduleId": "draw-picture",
+      "size": "Small",
+      "preparedActivityKey": "drawPicture",
+      "status": "READY",
+      "contentValidation": "passed",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Text content prepared; actual application generator not run."
+    },
+    {
+      "moduleName": "Multiple Choice Question",
+      "moduleId": "multiple-choice",
+      "size": "Small",
+      "preparedActivityKey": "multipleChoice",
+      "status": "READY",
+      "contentValidation": "passed",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Twelve questions and 24 proposed incorrect choices require teacher approval."
+    },
+    {
+      "moduleName": "True or False Questions",
+      "moduleId": "true-false",
+      "size": "Small",
+      "preparedActivityKey": "trueFalse",
+      "status": "READY",
+      "contentValidation": "passed",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Text content prepared; actual application generator not run."
+    },
+    {
+      "moduleName": "First Letter Challenge",
+      "moduleId": "first-letters",
+      "size": "Small",
+      "preparedActivityKey": "firstLetters",
+      "status": "READY",
+      "contentValidation": "passed",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Verified BSB verse; confirm editorial Scripture selection and import rendering."
+    },
+    {
+      "moduleName": "What’s Doesn’t Belong?",
+      "moduleId": "odd-words",
+      "size": "Small",
+      "preparedActivityKey": "oddWords",
+      "status": "READY",
+      "contentValidation": "passed",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Plausible, story-unrelated Bible-era distractors proposed for teacher approval."
+    },
+    {
+      "moduleName": "Unscramble the Words",
+      "moduleId": "unscramble-words",
+      "size": "Small",
+      "preparedActivityKey": "unscrambleWords",
+      "status": "READY",
+      "contentValidation": "passed",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Text content prepared; actual application generator not run."
+    },
+    {
+      "moduleName": "Checkboxes",
+      "moduleId": "checkboxes",
+      "size": "Small",
+      "preparedActivityKey": "checkboxes",
+      "status": "READY",
+      "contentValidation": "passed",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Plausible, story-unrelated Bible-era distractors proposed for teacher approval."
+    },
+    {
+      "moduleName": "Who Am I?",
+      "moduleId": "who-am-i",
+      "size": "Small",
+      "preparedActivityKey": "whoAmI",
+      "status": "READY",
+      "contentValidation": "passed",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Text content prepared; actual application generator not run."
+    },
+    {
+      "moduleName": "Match the Words",
+      "moduleId": "match-words",
+      "size": "Medium",
+      "preparedActivityKey": "matchWords",
+      "status": "READY",
+      "contentValidation": "passed",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Text content prepared; actual application generator not run."
+    },
+    {
+      "moduleName": "Finish the Verse",
+      "moduleId": "finish-verse",
+      "size": "Medium",
+      "preparedActivityKey": "finishVerse",
+      "status": "READY",
+      "contentValidation": "passed",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Verified BSB verse; confirm editorial Scripture selection and import rendering."
+    },
+    {
+      "moduleName": "Unscramble the Verse",
+      "moduleId": "unscramble-verse",
+      "size": "Medium",
+      "preparedActivityKey": "unscrambleVerse",
+      "status": "READY",
+      "contentValidation": "passed",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Verified BSB verse; confirm editorial Scripture selection and import rendering."
+    },
+    {
+      "moduleName": "Circle the Mistakes",
+      "moduleId": "circle-mistakes",
+      "size": "Medium",
+      "preparedActivityKey": "circleMistakes",
+      "status": "READY",
+      "contentValidation": "passed",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Eight intentional errors and corrections drafted; teacher must approve wording."
+    },
+    {
+      "moduleName": "Word Search (Medium)",
+      "moduleId": "medium-word-search",
+      "size": "Medium",
+      "preparedActivityKey": "mediumWordSearch",
+      "status": "READY",
+      "contentValidation": "passed",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Text content prepared; actual application generator not run."
+    },
+    {
+      "moduleName": "True or False Maze",
+      "moduleId": "true-false-maze",
+      "size": "Medium",
+      "preparedActivityKey": "trueFalseMaze",
+      "status": "READY",
+      "contentValidation": "passed",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Text content prepared; actual application generator not run."
+    },
+    {
+      "moduleName": "Solve the Code",
+      "moduleId": "big-idea-cryptogram",
+      "size": "Medium",
+      "preparedActivityKey": "bigIdeaCryptogram",
+      "status": "READY",
+      "contentValidation": "passed",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Text content prepared; actual application generator not run."
+    },
+    {
+      "moduleName": "Upside Down Verse",
+      "moduleId": "upside-down-verse",
+      "size": "Medium",
+      "preparedActivityKey": "upsideDownVerse",
+      "status": "READY",
+      "contentValidation": "passed",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Verified BSB verse; confirm editorial Scripture selection and import rendering."
+    },
+    {
+      "moduleName": "Connect the Phrase",
+      "moduleId": "connect-big-idea",
+      "size": "Medium",
+      "preparedActivityKey": "connectBigIdea",
+      "status": "READY",
+      "contentValidation": "passed",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Text content prepared; actual application generator not run."
+    },
+    {
+      "moduleName": "Pixel Picture",
+      "moduleId": "pixel-picture",
+      "size": "Medium",
+      "preparedActivityKey": "pixelPicture",
+      "status": "READY",
+      "contentValidation": "passed",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Text content prepared; actual application generator not run."
+    },
+    {
+      "moduleName": "Finish the Story",
+      "moduleId": "finish-story",
+      "size": "Large",
+      "preparedActivityKey": "finishStory",
+      "status": "READY",
+      "contentValidation": "passed",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Text content prepared; actual application generator not run."
+    },
+    {
+      "moduleName": "Story Order",
+      "moduleId": "story-order",
+      "size": "Large",
+      "preparedActivityKey": "storyOrder",
+      "status": "READY",
+      "contentValidation": "passed",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Text content prepared; actual application generator not run."
+    },
+    {
+      "moduleName": "Sort the Story",
+      "moduleId": "sort-story",
+      "size": "Large",
+      "preparedActivityKey": "sortStory",
+      "status": "READY",
+      "contentValidation": "passed",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Text content prepared; actual application generator not run."
+    },
+    {
+      "moduleName": "Draw the Story",
+      "moduleId": "draw-story",
+      "size": "Large",
+      "preparedActivityKey": "drawStory",
+      "status": "READY",
+      "contentValidation": "passed",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Six narrative captions aligned with Story Order and original Story Notes."
+    },
+    {
+      "moduleName": "Word Search (Large)",
+      "moduleId": "word-search",
+      "size": "Large",
+      "preparedActivityKey": "wordSearch",
+      "status": "READY",
+      "contentValidation": "passed",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Text content prepared; actual application generator not run."
+    },
+    {
+      "moduleName": "Verse Cryptogram",
+      "moduleId": "verse-cryptogram",
+      "size": "Large",
+      "preparedActivityKey": "verseCryptogram",
+      "status": "READY",
+      "contentValidation": "passed",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Verified BSB verse; confirm editorial Scripture selection and import rendering."
+    },
+    {
+      "moduleName": "Crossword",
+      "moduleId": "crossword",
+      "size": "Large",
+      "preparedActivityKey": "crossword",
+      "status": "ADAPTATION NEEDED",
+      "contentValidation": "needs-generator-test",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Ten clue/answer pairs prepared; crossword grid feasibility and interlocks not tested."
+    },
+    {
+      "moduleName": "Spiral Verse",
+      "moduleId": "spiral-verse",
+      "size": "Large",
+      "preparedActivityKey": "spiralVerse",
+      "status": "READY",
+      "contentValidation": "passed",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Verified BSB verse; confirm editorial Scripture selection and import rendering."
+    },
+    {
+      "moduleName": "Connect the Verse",
+      "moduleId": "connect-verse",
+      "size": "Large",
+      "preparedActivityKey": "connectVerse",
+      "status": "READY",
+      "contentValidation": "passed",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Verified BSB verse; confirm editorial Scripture selection and import rendering."
+    }
+  ],
+  "reviewFlags": [
+    {
+      "id": "rf-01",
+      "priority": "high",
+      "type": "teacher-approval",
+      "text": "Approve 24 proposed Multiple Choice distractors across 12 factual questions.",
+      "affectedModules": [
+        "multiple-choice"
+      ]
+    },
+    {
+      "id": "rf-02",
+      "priority": "high",
+      "type": "teacher-approval",
+      "text": "Approve 11 suggested false statements, including those selected for Sort the Story.",
+      "affectedModules": [
+        "true-false",
+        "true-false-maze",
+        "sort-story"
+      ]
+    },
+    {
+      "id": "rf-03",
+      "priority": "high",
+      "type": "teacher-approval",
+      "text": "Approve plausible unrelated words for Odd Words and Checkboxes: Temple, Vineyard, Donkey, Altar, Pottery.",
+      "affectedModules": [
+        "odd-words",
+        "checkboxes"
+      ]
+    },
+    {
+      "id": "rf-04",
+      "priority": "high",
+      "type": "scripture",
+      "text": "The original lesson quotes 1 Chronicles 16:8 in ESV; draft uses verified BSB wording (among the nations). Teacher must confirm this public-worksheet verse choice.",
+      "affectedModules": [
+        "first-letters",
+        "finish-verse",
+        "unscramble-verse",
+        "upside-down-verse",
+        "verse-cryptogram",
+        "spiral-verse",
+        "connect-verse"
+      ]
+    },
+    {
+      "id": "rf-05",
+      "priority": "high",
+      "type": "generator-test",
+      "text": "Curriculum Review Studio preflight and actual puzzle generators have not been run; confirm crossword, pixel, verse, and page-preset generation.",
+      "affectedModules": [
+        "crossword",
+        "pixel-picture",
+        "verse-cryptogram",
+        "spiral-verse",
+        "connect-verse"
+      ]
+    },
+    {
+      "id": "rf-06",
+      "priority": "medium",
+      "type": "adapted-content",
+      "text": "Review adapted Story Order sentences, Draw the Story captions, Finish the Story fill-ins, and ten Small drawing candidates.",
+      "affectedModules": [
+        "story-order",
+        "draw-story",
+        "finish-story",
+        "draw-picture"
+      ]
+    },
+    {
+      "id": "rf-07",
+      "priority": "medium",
+      "type": "sensitive-content",
+      "text": "Source includes threats to kill Moses, maggots in stored manna, and the Amalekite battle; confirm age-appropriate worksheet presentation.",
+      "affectedModules": [
+        "multiple-choice",
+        "circle-mistakes",
+        "story-order",
+        "sort-story"
+      ]
+    },
+    {
+      "id": "rf-08",
+      "priority": "medium",
+      "type": "teacher-approval",
+      "text": "Review eight fabricated mistakes and suggested corrections in Circle the Mistakes.",
+      "affectedModules": [
+        "circle-mistakes"
+      ]
+    },
+    {
+      "id": "rf-09",
+      "priority": "medium",
+      "type": "source-clarification",
+      "text": "The printed Important Idea is split across ODT layout paragraphs; wording was checked against the page-5 graphic.",
+      "affectedModules": [
+        "big-idea-cryptogram",
+        "connect-big-idea"
+      ]
+    },
+    {
+      "id": "rf-10",
+      "priority": "low",
+      "type": "content-variety",
+      "text": "Check the three numbered presets for repeated questions, drawing prompts, word pairs, and fact-bank selection.",
+      "affectedModules": [
+        "draw-picture",
+        "multiple-choice",
+        "true-false",
+        "true-false-maze",
+        "unscramble-words"
+      ]
+    }
+  ],
+  "validation": {
+    "basis": "Original conversion tests predate teacher-approved BSB; revalidate actual engines and content after export.",
+    "allTextChecksPassed": false,
+    "checks": [
+      {
+        "check": "Source has seven Story Notes",
+        "passed": true,
+        "detail": 7
+      },
+      {
+        "check": "Original Story Notes exactly preserved",
+        "passed": true,
+        "detail": "Verbatim except paragraph whitespace normalization"
+      },
+      {
+        "check": "All source all-caps answers preserved",
+        "passed": true,
+        "detail": "7 original fill-in answer words"
+      },
+      {
+        "check": "Story Note IDs unique and chronological",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "All Story Note sourceIds resolve",
+        "passed": true,
+        "detail": 161
+      },
+      {
+        "check": "All 27 prepared module keys",
+        "passed": true,
+        "detail": 27
+      },
+      {
+        "check": "Small Draw a Picture <=105 and more than one option",
+        "passed": true,
+        "detail": 10
+      },
+      {
+        "check": "Large Draw the Story 4-6 complete sentences <=105",
+        "passed": true,
+        "detail": [
+          63,
+          81,
+          86,
+          77,
+          76,
+          82
+        ]
+      },
+      {
+        "check": "Story Order 5-8 <=115",
+        "passed": true,
+        "detail": [
+          63,
+          81,
+          86,
+          98,
+          77,
+          76,
+          82
+        ]
+      },
+      {
+        "check": "Multiple Choice 8+ valid candidates",
+        "passed": true,
+        "detail": 12
+      },
+      {
+        "check": "Facts <=80 for Small / <=65 for Maze",
+        "passed": true,
+        "detail": [
+          56,
+          53
+        ]
+      },
+      {
+        "check": "Odd Words counts, short labels, disjoint",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Small Unscramble word size",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Who Am I <=120",
+        "passed": true,
+        "detail": 60
+      },
+      {
+        "check": "Matching pairs 3-6, short unique labels",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Verse text independently verified BSB",
+        "passed": true,
+        "detail": "1 Chronicles 16:8; BibleHub BSB"
+      },
+      {
+        "check": "Verse games all use one verified text",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "finishVerse bracket count and exact restoration",
+        "passed": true,
+        "detail": [
+          7,
+          98
+        ]
+      },
+      {
+        "check": "unscrambleVerse bracket count and exact restoration",
+        "passed": true,
+        "detail": [
+          7,
+          98
+        ]
+      },
+      {
+        "check": "Circle Mistakes 1-8 unique correction spans",
+        "passed": true,
+        "detail": 8
+      },
+      {
+        "check": "Medium and Large word search unique entries",
+        "passed": true,
+        "detail": [
+          6,
+          12
+        ]
+      },
+      {
+        "check": "Big Idea cryptogram <=62",
+        "passed": true,
+        "detail": 56
+      },
+      {
+        "check": "Pixel phrase 30-85",
+        "passed": true,
+        "detail": 57
+      },
+      {
+        "check": "Finish Story <=1100 and 6-12 blanks",
+        "passed": true,
+        "detail": [
+          660,
+          8
+        ]
+      },
+      {
+        "check": "Sort Story 4-8 true+false <=115",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Crossword 6-10 unique short answers, clues <=85",
+        "passed": true,
+        "detail": 10
+      },
+      {
+        "check": "Publication unapproved",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "No module falsely claims generator test",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "All teacher-review false facts identified",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "No question ID duplicate and source question IDs resolve",
+        "passed": true,
+        "detail": ""
+      }
+    ],
+    "actualGeneratorTested": false,
+    "jsonParseTested": true
+  },
+  "publication": {
+    "status": "pending-teacher-approval",
+    "approved": false,
+    "notes": "Conversion draft. All suggestions require teacher approval; BSB verse editorial selection and generator checks remain pending.",
+    "resolvedReviewFlagIds": []
+  }
+}
