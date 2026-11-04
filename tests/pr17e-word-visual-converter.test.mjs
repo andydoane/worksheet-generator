@@ -10,7 +10,7 @@ import {
 import {validateModule,matchRows,parsePairs,moduleForSize} from '../src/modules.ts';
 import {shuffledWordList,scramblePhrase} from '../src/smallModules.ts';
 import {generateWordSearch,checkWordSearch} from '../src/puzzleEngines.ts';
-import {generatePixelPicture} from '../src/pixelPicture.ts';
+import {generatePixelPicture,choosePixelShapeId} from '../src/pixelPicture.ts';
 import {boxGrid} from '../src/storyVerseModules.ts';
 import {EMPTY_DRAFT,migrateDraftValue} from '../src/draftMigration.ts';
 import {getRegions,DEFAULT_LAYOUTS} from '../src/booklet.ts';
@@ -96,7 +96,7 @@ test('Match Words preserves the authored pairs; sorting and scramble logic remai
  assert.notEqual(scramblePhrase(scramble.first,scramble.seed),scramble.first);
  assert.notEqual(scramblePhrase(scramble.second,scramble.seed),scramble.second);
 });
-test('Drawing, character and Pixel Picture modules retain source phrasing, picture shape and actual puzzle solution',()=>{
+test('Drawing and character phrasing remains sourced while Pixel Picture shape comes from generator seed',()=>{
  assert.equal(visual('draw-picture').module.prompt,lesson.preparedActivities.drawPicture.prompt);
  const who=visual('who-am-i').module;
  assert.equal(who.type,'who-am-i');
@@ -110,7 +110,8 @@ test('Drawing, character and Pixel Picture modules retain source phrasing, pictu
  const picture=visual('pixel-picture').module;
  assert.equal(picture.type,'pixel-picture');
  assert.equal(picture.phrase,lesson.preparedActivities.pixelPicture.phrase);
- assert.equal(picture.shapeId,'star','default shape is an existing certified 13x13 mask');
+ assert.equal(picture.shapeId,choosePixelShapeId(picture.seed,picture.phrase),
+  'picture comes from seed, not a saved curriculum silhouette');
  const generated=generatePixelPicture(picture);
  assert.equal(generated.grid.length,13);
  assert.deepEqual(generated.grid,generatePixelPicture(picture).grid);
@@ -126,10 +127,13 @@ test('Invalid word and picture input yields diagnostics and no invalid candidate
  wrong.preparedActivities.unscrambleWords.answers=['MOSES'];
  wrong.preparedActivities.mediumWordSearch.words=['TOO-LONG-OR-INVALID'];
  const r=convert(wrong);
- for(const id of ['pixel-picture','word-search','draw-picture','match-words','unscramble-words','medium-word-search']){
+ for(const id of ['word-search','draw-picture','match-words','unscramble-words','medium-word-search']){
   assert.ok(r.diagnostics.some(d=>d.moduleId===id),id);
   assert.equal(r.candidates.some(c=>c.moduleId===id),false,id);
  }
+ assert.equal(r.candidates.some(c=>c.moduleId==='pixel-picture'),true,
+  'invalid legacy silhouette ID must be ignored; valid phrase can still print');
+ assert.equal(r.diagnostics.some(d=>d.moduleId==='pixel-picture'),false);
  assert.equal(r.candidates.some(x=>x.moduleId==='story-order'),true);
  const missing=structuredClone(lesson);
  delete missing.preparedActivities.checkboxes;
