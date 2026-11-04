@@ -5,6 +5,8 @@ import {applyBsbVerse,chooseSolveCodePhrase,createApprovedLesson,editAt,listRevi
 import {validateModule,MODULES} from '../modules.ts';
 import {MatchingPrintPreview} from '../MediumPrintPreview.tsx';
 import {addMatchingPair,editMatchingPair,matchingPairIssues,moveMatchingPair,removeMatchingPair} from './matchingWords.ts';
+import ConnectPhraseReviewEditor from './ConnectPhraseReviewEditor.tsx';
+import WordSearchReviewEditor from './WordSearchReviewEditor.tsx';
 import {cryptogramLetters} from '../cryptograms.ts';
 import {buildReviewPreflight,PREPARED_ACTIVITY_KEYS,reviewIssueTarget,type ReviewPreflight} from './preflight.ts';
 import './review.css';
@@ -65,6 +67,8 @@ export default function ReviewApp(){
  const [displayReference,setDisplayReference]=useState('');
  const [preflight,setPreflight]=useState<ReviewPreflight|null>(null);
  const [focusIssueField,setFocusIssueField]=useState<string|null>(null);
+ // Preserve the last conflict explanation while editing invalidates preflight.
+ const [repairConflictWords,setRepairConflictWords]=useState<string[]>([]);
  const [moduleEditorText,setModuleEditorText]=useState('');
  const [reviewer,setReviewer]=useState('');
  const [signDate,setSignDate]=useState(displayDate);
@@ -131,7 +135,7 @@ export default function ReviewApp(){
   // Rights confirmation is an explicit decision for THIS lesson and THIS
   // exact chosen BSB excerpt, never inherited from a prior review.
   setRightsConfirmed(false);
-  setPassage(null);setPreflight(null);setError('');
+  setPassage(null);setPreflight(null);setRepairConflictWords([]);setError('');
  }
  async function loadLesson(e:ChangeEvent<HTMLInputElement>){
   const file=e.target.files?.[0];if(!file)return;
@@ -178,6 +182,11 @@ export default function ReviewApp(){
   const next=structuredClone(lesson);
   next.preparedActivities[key][field]=value.split(/\r?\n/u).map(x=>x.trim()).filter(Boolean);
   setLesson(next);setPreflight(null);setReviewed(prev=>prev.filter(x=>x!==active?.id));
+ }
+ function applyVisualReview(next:Lesson){
+  setLesson(next);setPreflight(null);
+  setReviewed(previous=>previous.filter(id=>id!==active?.id));
+  setError('');
  }
  function changeMatching(action:()=>Lesson){
   if(!lesson)return;
@@ -355,7 +364,7 @@ export default function ReviewApp(){
      <nav className="review-nav" aria-label="Review items">
       {tasks.map(t=><button type="button" key={t.id}
         className={(t.id===active?.id?'selected ':'')+(reviewed.includes(t.id)?'done':'')}
-        onClick={()=>{setSelectedId(t.id);setError('');}}>
+        onClick={()=>{setSelectedId(t.id);setRepairConflictWords([]);setError('');}}>
         <span>{reviewed.includes(t.id)?'✓':'○'}</span><span><small>{t.group}</small>{t.label}</span>
        </button>)}
      </nav>
@@ -364,7 +373,7 @@ export default function ReviewApp(){
       <nav className="review-nav" aria-label="Preflight repair sections">
        {diagnosticTasks.map(t=><button type="button" key={t.id}
         className={t.id===active?.id?'selected':''}
-        onClick={()=>setSelectedId(t.id)}>
+        onClick={()=>{setSelectedId(t.id);setRepairConflictWords([]);}}>
         <span>!</span><span>{t.label}</span>
        </button>)}
       </nav>
@@ -439,6 +448,15 @@ export default function ReviewApp(){
         <SourceContext lesson={lesson} ids={item.sourceIds??[]}/>
        </div>)}
       </div>}
+      {active.id==='connect-phrase'&&
+       <ConnectPhraseReviewEditor lesson={lesson}
+        onChange={applyVisualReview} onError={setError}/>}
+      {active.id==='word-search'&&
+       <WordSearchReviewEditor lesson={lesson} kind="wordSearch"
+        conflicts={repairConflictWords} onChange={applyVisualReview} onError={setError}/>}
+      {active.id==='medium-word-search'&&
+       <WordSearchReviewEditor lesson={lesson} kind="mediumWordSearch"
+        onChange={applyVisualReview} onError={setError}/>}
       {active.id==='match-words'&&<div id="review-field-match-words" tabIndex={-1} className="review-fields">
        <div className="review-note">
         <h3>Correct matching pairs · {matchingPairs.length} of 6</h3>
@@ -669,7 +687,12 @@ export default function ReviewApp(){
        {preflight.issues.length>0&&<ul className="review-issue-list">
         {preflight.issues.map((issue,i)=><li key={issue.id+'-'+i}>
          <button type="button" className="review-issue-link"
-          onClick={()=>{setSelectedId(issue.taskId);setFocusIssueField(issue.fieldId);setError('');}}>
+          onClick={()=>{
+           setSelectedId(issue.taskId);setFocusIssueField(issue.fieldId);
+           setRepairConflictWords(issue.conflicts??[...issue.message.matchAll(/vocab:([a-z-]+)/giu)]
+            .map(match=>'vocab:'+match[1]));
+           setError('');
+          }}>
           <strong>{issue.label}</strong>
           <span>{issue.message}</span>
           <small>Edit this issue →</small>
