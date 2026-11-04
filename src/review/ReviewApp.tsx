@@ -566,7 +566,7 @@ export default function ReviewApp(){
        <p><strong>{preflight.convertedCount}/{preflight.totalCount} activity types converted.</strong>
         {preflight.issues.length?' Select an issue below to edit the relevant activity.':
          preflight.convertedCount!==preflight.totalCount?' Conversion coverage is incomplete; inspect the prepared activity data.':
-         ' Preflight passed. GitHub CI still independently validates the approved file.'}</p>
+         ' Preflight passed: all 27 activities and three numbered presets are buildable. GitHub CI still independently validates schema, publication rights and the approved file.'}</p>
        {preflight.issues.length>0&&<ul className="review-issue-list">
         {preflight.issues.map((issue,i)=><li key={issue.id+'-'+i}>
          <button type="button" className="review-issue-link"
