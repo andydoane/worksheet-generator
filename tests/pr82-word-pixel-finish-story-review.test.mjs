@@ -199,7 +199,8 @@ test('All three new visual editors and freer story editor show print-matched pre
  assert.match(story,/<ModulePreview module=\{module\}/u);
  assert.match(app,/setSelectedId\(issue.taskId\)/u);
  assert.match(app,/setFocusIssueField\(issue.fieldId\)/u);
- assert.match(workflow,/Generate sample PDFs\n\s+if: github\.event_name == 'pull_request'/u);
+ assert.doesNotMatch(workflow,/Generate sample PDFs|Upload sample PDF for review/u);
+ assert.match(workflow,/npm run test/u);
  assert.match(workflow,/Upload site artifact/u,
   'Pages deployment must still upload the production build');
 });
