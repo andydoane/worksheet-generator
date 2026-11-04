@@ -113,6 +113,14 @@ export function buildReviewPreflight(lesson:Lesson):ReviewPreflight{
  // Conversion coverage is shown separately, not as a duplicate error. The
  // actionable diagnostics directly name the unavailable activity and cause.
  const issues=messages.filter(message=>!/^Only \d+\/27 activity types converted/u.test(message))
-  .map(reviewIssueTarget);
+  .map(message=>{
+   const target=reviewIssueTarget(message),id=target.moduleId;
+   if(!id)return target;
+   const record=lesson.preparedActivities?.[PREPARED_ACTIVITY_KEYS[id]];
+   // A dedicated review form cannot edit a module that has no prepared
+   // content yet. Send those cases to the isolated module-data editor.
+   if(record&&(!Array.isArray(record)||record.length>0))return target;
+   return {...target,taskId:'module:'+id,fieldId:'review-module-json'};
+  });
  return {convertedCount,totalCount:27,issues};
 }
