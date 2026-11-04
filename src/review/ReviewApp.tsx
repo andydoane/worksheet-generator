@@ -125,6 +125,9 @@ export default function ReviewApp(){
   setReviewed(value?.lesson?.schemaVersion===1&&Array.isArray(value.reviewed)?value.reviewed:[]);
   setSelectedId(value?.lesson?.schemaVersion===1&&typeof value.selectedId==='string'?value.selectedId:'');
   setReference(data.lessonDetails.memoryVerse.reference);
+  // Rights confirmation is an explicit decision for THIS lesson and THIS
+  // exact chosen BSB excerpt, never inherited from a prior review.
+  setRightsConfirmed(false);
   setPassage(null);setPreflight(null);setError('');
  }
  async function loadLesson(e:ChangeEvent<HTMLInputElement>){
@@ -268,6 +271,7 @@ export default function ReviewApp(){
   try{
    const next=applyBsbVerse(lesson,passage,start,end,finish,unscramble,displayReference);
    setLesson(next);setReviewed(prev=>prev.filter(x=>x!=='bsb-verse'));
+   setRightsConfirmed(false);
    setPreflight(null);setError('');
   }catch(e){setError(String((e as Error).message??e));}
  }
