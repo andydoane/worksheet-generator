@@ -13,6 +13,9 @@ export default function ConnectPhraseReviewEditor({lesson,onChange,onError}:{
  const choices=connectPhraseChoices(lesson);
  const problems=useMemo(()=>connectPhraseProblems(text),[text]);
  const existing=choices.find(item=>item.text===text);
+ const sourceSection=existing?.source&&typeof existing.source==='object'&&
+  'section' in existing.source&&typeof existing.source.section==='string'
+   ?existing.source.section:'';
  const apply=(action:()=>Lesson)=>{
   try{onChange(action());onError('');}
   catch(error){onError(error instanceof Error?error.message:String(error));}
@@ -55,7 +58,7 @@ export default function ConnectPhraseReviewEditor({lesson,onChange,onError}:{
   </div>}
   {existing&&<p className="review-source">
    Provenance: {existing.origin??'adapted'}
-   {existing.source?.section?' · '+existing.source.section:''}
+   {sourceSection?' · '+sourceSection:''}
    {existing.sourceIds?.length?' · source notes: '+existing.sourceIds.join(', '):''}
    {existing.teacherReviewRequired?' · teacher review required':''}
   </p>}
