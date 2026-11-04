@@ -573,9 +573,10 @@ export default function ReviewApp(){
         }}>Run preflight checks</button>
        <button type="button" className="review-secondary" onClick={()=>downloadJson(lesson.id+'.review.json',lesson)}>Export working JSON</button>
       </div>
-      {preflight&&<div className={preflight.issues.length?'review-errors':'review-success'} role="status">
+      {preflight&&<div className={preflight.issues.length||preflight.convertedCount!==preflight.totalCount?'review-errors':'review-success'} role="status">
        <p><strong>{preflight.convertedCount}/{preflight.totalCount} activity types converted.</strong>
         {preflight.issues.length?' Select an issue below to edit the relevant activity.':
+         preflight.convertedCount!==preflight.totalCount?' Conversion coverage is incomplete; inspect the prepared activity data.':
          ' Preflight passed. GitHub CI still independently validates the approved file.'}</p>
        {preflight.issues.length>0&&<ul className="review-issue-list">
         {preflight.issues.map((issue,i)=><li key={issue.id+'-'+i}>
