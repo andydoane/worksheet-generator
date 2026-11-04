@@ -152,19 +152,23 @@ test('Shared fact and phrase identities are stable and survive manual edits',()=
  assert.ok(selectedMaze&&!selectedMaze.reused.length);
 });
 
-test('Verse cipher key has exactly two logical rows for every count of 3–26 letters',async()=>{
- const [preview,pdf,css]=await Promise.all([
+test('Verse cipher key keeps one two-band matrix for every count of 3–26 letters',async()=>{
+ const [preview,pdf,planner]=await Promise.all([
   readFile(new URL('../src/CryptogramPreview.tsx',import.meta.url),'utf8'),
   readFile(new URL('../src/cryptogramPdf.ts',import.meta.url),'utf8'),
-  readFile(new URL('../src/layout.css',import.meta.url),'utf8'),
+  readFile(new URL('../src/verseCryptogramLayout.ts',import.meta.url),'utf8'),
  ]);
- for(let n=3;n<=26;n++)assert.equal(cryptogramLetters('ABCDEFGHIJKLMNOPQRSTUVWXYZ'.slice(0,n)).length,n);
- assert.match(preview,/gridTemplateColumns:/u);
- assert.doesNotMatch(preview,/chunks\.map/u);
- assert.match(pdf,/keyCols=data\.key\.length,keyRows=1/u);
- assert.match(pdf,/cellWidth\*\.70/u);
- assert.match(css,/\.cipher-key-row \{display:grid/u);
- assert.match(css,/\.cipher-key-row \.cipher-key-cell \{max-width:none/u);
+ for(let n=3;n<=26;n++)
+  assert.equal(cryptogramLetters('ABCDEFGHIJKLMNOPQRSTUVWXYZ'.slice(0,n)).length,n);
+ assert.match(preview,/plan\.keyCells\.map/u);
+ assert.match(preview,/plan\.keyHeight/u);
+ assert.doesNotMatch(preview,/gridTemplateColumns:|chunks\.map/u,
+  'The Large preview must not independently wrap or size its key');
+ assert.match(pdf,/for\(const item of plan\.keyCells\)/u);
+ assert.match(pdf,/plan\.keySymbolSize/u);
+ assert.match(planner,/const keyWidth=width\/data\.key\.length/u);
+ assert.match(planner,/keyCells=data\.key\.map/u);
+ assert.match(planner,/keyTop=38,keyHeight=29/u);
 });
 
 test('All three teacher-selected presets produce printable two-sheet PDFs',async()=>{
