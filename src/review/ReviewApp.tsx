@@ -7,6 +7,7 @@ import {MatchingPrintPreview} from '../MediumPrintPreview.tsx';
 import {addMatchingPair,editMatchingPair,matchingPairIssues,moveMatchingPair,removeMatchingPair} from './matchingWords.ts';
 import ConnectPhraseReviewEditor from './ConnectPhraseReviewEditor.tsx';
 import WordSearchReviewEditor from './WordSearchReviewEditor.tsx';
+import CrosswordReviewEditor from './CrosswordReviewEditor.tsx';
 import {cryptogramLetters} from '../cryptograms.ts';
 import {buildReviewPreflight,PREPARED_ACTIVITY_KEYS,reviewIssueTarget,type ReviewPreflight} from './preflight.ts';
 import './review.css';
@@ -90,7 +91,8 @@ export default function ReviewApp(){
  const active=[...tasks,...diagnosticTasks].find(t=>t.id===selectedId)??
   tasks.find(t=>!reviewed.includes(t.id))??tasks[0]??diagnosticTasks[0];
  const activeModuleId=active?.id.startsWith('module:')?active.id.slice('module:'.length):
-  active?.id==='match-words'?'match-words':null;
+  active?.id==='match-words'?'match-words':
+  active?.id==='crossword'?'crossword':null;
  const activePreparedKey=activeModuleId?PREPARED_ACTIVITY_KEYS[activeModuleId as keyof typeof PREPARED_ACTIVITY_KEYS]:undefined;
  useEffect(()=>{
   if(!lesson||!activePreparedKey)return;
@@ -187,6 +189,10 @@ export default function ReviewApp(){
   setLesson(next);setPreflight(null);
   setReviewed(previous=>previous.filter(id=>id!==active?.id));
   setError('');
+ }
+ function applyCrosswordReview(next:Lesson){
+  setModuleEditorText(JSON.stringify(next.preparedActivities?.crossword??[],null,2));
+  applyVisualReview(next);
  }
  function changeMatching(action:()=>Lesson){
   if(!lesson)return;
@@ -457,6 +463,11 @@ export default function ReviewApp(){
       {active.id==='medium-word-search'&&
        <WordSearchReviewEditor lesson={lesson} kind="mediumWordSearch"
         onChange={applyVisualReview} onError={setError}/>}
+      {active.id==='crossword'&&
+       <CrosswordReviewEditor lesson={lesson}
+        onChange={applyCrosswordReview} onError={setError}
+        advancedJson={moduleEditorText} onAdvancedJsonChange={setModuleEditorText}
+        onApplyAdvancedJson={applyModuleJson}/>}
       {active.id==='match-words'&&<div id="review-field-match-words" tabIndex={-1} className="review-fields">
        <div className="review-note">
         <h3>Correct matching pairs · {matchingPairs.length} of 6</h3>
@@ -648,7 +659,8 @@ export default function ReviewApp(){
        </div>
        <p className="review-source">After applying the BSB excerpt, review it here and then mark this section reviewed. No ESV wording will be retained in the exported prepared verse fields.</p>
       </div>}
-      {activeModuleId&&activePreparedKey&&active.id!=='match-words'&&<div className="review-fields">
+      {activeModuleId&&activePreparedKey&&active.id!=='match-words'&&
+       active.id!=='crossword'&&<div className="review-fields">
        <div className="review-note">
         <h3>{MODULES.find(item=>item.id===activeModuleId)?.name??activeModuleId} · prepared activity</h3>
         <p>This activity does not yet have a dedicated visual editor. You can edit its isolated prepared-activity JSON below without changing the rest of the lesson. The schema and puzzle generator will check the result when you rerun preflight.</p>

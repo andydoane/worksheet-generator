@@ -152,7 +152,7 @@ test('All 27 converter module diagnostics map to an available prepared field and
  assert.equal(reviewIssueTarget('drawingPrompts[1]: invalid').fieldId,'review-field-drawing-1');
  assert.equal(reviewIssueTarget('preparedActivities.drawStory[3]: invalid').fieldId,'review-field-large-drawing-3');
  assert.equal(reviewIssueTarget('Select and approve a Berean Standard Bible memory verse.').taskId,'bsb-verse');
- assert.equal(reviewIssueTarget('crossword: No solution').taskId,'module:crossword');
+ assert.equal(reviewIssueTarget('crossword: No solution').taskId,'crossword');
 });
 
 test('Review Studio renders interactive issue cards, isolated source-linked Solve Code editor, and general module fallback',async()=>{
