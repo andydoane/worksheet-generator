@@ -341,6 +341,16 @@ export default function ReviewApp(){
         <span>{reviewed.includes(t.id)?'✓':'○'}</span><span><small>{t.group}</small>{t.label}</span>
        </button>)}
      </nav>
+     {diagnosticTasks.length>0&&<div className="review-diagnostic-links">
+      <h3>Additional activity repairs</h3>
+      <nav className="review-nav" aria-label="Preflight repair sections">
+       {diagnosticTasks.map(t=><button type="button" key={t.id}
+        className={t.id===active?.id?'selected':''}
+        onClick={()=>setSelectedId(t.id)}>
+        <span>!</span><span>{t.label}</span>
+       </button>)}
+      </nav>
+     </div>}
     </section>}
    </aside>
    <div className="review-content">
@@ -379,7 +389,7 @@ export default function ReviewApp(){
        <p className="review-source">Currently {[...lesson.preparedActivities.finishStory.markedParagraph.matchAll(/\\[([^\\[\\]]+)\\]/gu)].length} missing words.</p>
        <SourceContext lesson={lesson} ids={lesson.preparedActivities.finishStory.sourceIds??[]}/>
       </div>}
-      {active.id==='drawing-captions'&&<div className="review-fields">
+      {active.id==='drawing-captions'&&<div id="review-field-drawing" tabIndex={-1} className="review-fields">
        <div className="review-note">
         <h3>Small Draw a Picture</h3>
         <p>Store short scene descriptions that work after “Draw a picture of …” — without an instruction prefix or final punctuation.</p>
@@ -434,6 +444,42 @@ export default function ReviewApp(){
       {active.id==='sensitivity'&&<div className="review-note">
        <h3>Age suitability</h3>
        <p>The curriculum discusses the destruction of the Egyptian army. Please decide whether the prepared story, sorting and drawing prompts use age-appropriate wording for your classes. You can adjust the relevant content in the working JSON before marking this reviewed.</p>
+      </div>}
+      {active.id==='solve-code'&&<div className="review-fields">
+       <div className="review-note">
+        <h3>Solve the Code · Medium cryptogram</h3>
+        <p>The original Important Idea is kept exactly as authored. This puzzle can use a shorter reviewed key phrase or Story Order sentence instead.</p>
+        <p><strong>Original Important Idea:</strong> {lesson.lessonDetails.bigIdeas?.[0]?.text??'Not recorded'}</p>
+       </div>
+       {lesson.preparedActivities.bigIdeaCryptogram?<>
+        <label>Text used only for Solve the Code
+         <textarea id="review-field-solve-code" rows={3}
+          value={lesson.preparedActivities.bigIdeaCryptogram.phrase}
+          onChange={e=>change(['preparedActivities','bigIdeaCryptogram','phrase'],e.target.value)}/></label>
+        <p className={cryptogramLetters(lesson.preparedActivities.bigIdeaCryptogram.phrase).length>18?'review-warning':'review-source'}>
+         {lesson.preparedActivities.bigIdeaCryptogram.phrase.length}/62 characters ·
+         {cryptogramLetters(lesson.preparedActivities.bigIdeaCryptogram.phrase).length}/18 distinct letters.
+         A valid phrase needs no more than 18 different letters.
+        </p>
+        <label>Use an existing source-backed lesson phrase
+         <select value={solveCodeChoices(lesson).some(item=>item.text===lesson.preparedActivities.bigIdeaCryptogram.phrase)
+          ?lesson.preparedActivities.bigIdeaCryptogram.phrase:''}
+          onChange={e=>selectCodePhrase(e.target.value)}>
+          <option value="">Choose another approved phrase…</option>
+          {solveCodeChoices(lesson).map((item,i)=>{
+           const tooLong=validateModule({type:'big-idea-cryptogram',idea:item.text,seed:1}).length>0;
+           return <option key={i} value={item.text} disabled={tooLong}>
+            {item.text}{tooLong?' (too long for this puzzle)':''}
+           </option>;
+          })}
+         </select></label>
+        <div className="review-note">
+         <p>If you write a new shorter phrase above, it is <strong>not</strong> automatically attributed to the original curriculum. After checking the meaning, explicitly add it as a suggested review candidate.</p>
+         <button type="button" className="review-secondary" onClick={addProposedCodePhrase}>
+          Add this phrase as a teacher-review candidate
+         </button>
+        </div>
+       </>:<p className="review-warning">The lesson does not yet have a prepared Solve the Code entry. Add the missing `preparedActivities.bigIdeaCryptogram` record in the activity-data editor.</p>}
       </div>}
       {active.id==='important-idea'&&<div className="review-fields">
        <label>Original Important Idea (retained as curriculum teaching text)
@@ -495,6 +541,21 @@ export default function ReviewApp(){
         <p>{versePreview.reference} ({versePreview.translation})</p><p>{versePreview.text}</p>
        </div>
        <p className="review-source">After applying the BSB excerpt, review it here and then mark this section reviewed. No ESV wording will be retained in the exported prepared verse fields.</p>
+      </div>}
+      {activeModuleId&&activePreparedKey&&<div className="review-fields">
+       <div className="review-note">
+        <h3>{MODULES.find(item=>item.id===activeModuleId)?.name??activeModuleId} · prepared activity</h3>
+        <p>This activity does not yet have a dedicated visual editor. You can edit its isolated prepared-activity JSON below without changing the rest of the lesson. The schema and puzzle generator will check the result when you rerun preflight.</p>
+        <p>Curriculum field: <code>preparedActivities.{activePreparedKey}</code></p>
+       </div>
+       <label>Prepared activity content
+        <textarea id="review-module-json" rows={12} spellCheck={false}
+         value={moduleEditorText} onChange={e=>setModuleEditorText(e.target.value)}/></label>
+       <button type="button" onClick={applyModuleJson}>Apply this activity's changes</button>
+      </div>}
+      {active.id==='review-general'&&<div id="review-general-details" tabIndex={-1} className="review-note">
+       <h3>Additional lesson validation</h3>
+       <p>This issue was not tied to one module. Check the lesson details and source records; download a working JSON copy for any structural changes, then rerun preflight.</p>
       </div>}
       <div className="review-actions">
        <button type="button" className="review-approve" onClick={approveActive}>{reviewed.includes(active.id)?'Reviewed — next':'Mark reviewed & continue'}</button>
