@@ -34,6 +34,7 @@ import PuzzleEditor from './PuzzleEditor';
 import {isCryptogram,isCryptogramId} from './cryptograms.ts';
 import CryptogramEditor from './CryptogramEditor';
 import {isSpecialtyModule} from './specialtyModules.ts';
+import {choosePixelShapeId} from './pixelPicture.ts';
 import SpecialtyEditor from './SpecialtyEditor';
 import {
   MODULES, moduleForSize, readAssignments, slotKey, validateModule,
@@ -497,9 +498,14 @@ export default function App() {
     setDraft((previous) => {
       const original = previous.modules[activeKey];
       if (!original || !('seed' in original)) return previous;
+      const seed=original.seed+1;
       return {
         ...previous,
-        modules: { ...previous.modules, [activeKey]: { ...original, seed: original.seed + 1 } },
+        modules: { ...previous.modules, [activeKey]: {
+          ...original,seed,
+          ...(original.type==='pixel-picture'
+           ?{shapeId:choosePixelShapeId(seed,original.phrase)}:{}),
+        } },
       };
     });
   }
