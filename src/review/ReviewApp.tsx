@@ -16,6 +16,7 @@ import UnscrambleReviewEditor from './UnscrambleReviewEditor.tsx';
 import PixelPictureReviewEditor from './PixelPictureReviewEditor.tsx';
 import FinishStoryReviewEditor from './FinishStoryReviewEditor.tsx';
 import LessonIntegrityReviewEditor from './LessonIntegrityReviewEditor.tsx';
+import MultipleChoiceBankReviewEditor from './MultipleChoiceBankReviewEditor.tsx';
 import {MODULE_REPAIR_REGISTRY} from './repairRegistry.ts';
 import {cryptogramLetters} from '../cryptograms.ts';
 import {buildReviewPreflight,PREPARED_ACTIVITY_KEYS,reviewIssueTarget,type ReviewPreflight} from './preflight.ts';
@@ -102,6 +103,7 @@ export default function ReviewApp(){
  const activeModuleId=active?.id.startsWith('module:')?active.id.slice('module:'.length):
   active?.id==='match-words'?'match-words':
   active?.id==='crossword'?'crossword':
+  active?.id==='multiple-choice-bank'?'multiple-choice':
   (['story-order','sort-story','true-false','true-false-maze',
     'who-am-i','unscramble-words','pixel-picture','finish-story'].includes(active?.id??'')
    ?active!.id:null);
@@ -202,6 +204,11 @@ export default function ReviewApp(){
   setLesson(next);setPreflight(null);
   setReviewed(previous=>previous.filter(id=>id!==active?.id));
   setError('');
+ }
+ function applyMultipleChoiceBankReview(next:Lesson){
+  setModuleEditorText(JSON.stringify(next.preparedActivities?.multipleChoice??[],null,2));
+  setLesson(next);setPreflight(null);setError('');
+  setReviewed(previous=>previous.filter(id=>!id.startsWith('mc:')));
  }
  function applyIntegrityReview(next:Lesson){
   setLesson(next);setPreflight(null);setError('');
@@ -495,6 +502,8 @@ export default function ReviewApp(){
        lesson={lesson} onChange={applyStoryFactReview} onError={setError}/>}
       {active.id==='pixel-picture'&&<PixelPictureReviewEditor
        lesson={lesson} onChange={applyStoryFactReview} onError={setError}/>}
+      {active.id==='multiple-choice-bank'&&<MultipleChoiceBankReviewEditor
+       lesson={lesson} onChange={applyMultipleChoiceBankReview} onError={setError}/>}
       {active.id==='story-order'&&<StoryOrderReviewEditor
        lesson={lesson} onChange={applyStoryFactReview} onError={setError}/>}
       {active.id==='sort-story'&&<SortStoryReviewEditor
@@ -504,10 +513,13 @@ export default function ReviewApp(){
       {active.id==='true-false-maze'&&<FactChoiceReviewEditor
        lesson={lesson} kind="trueFalseMaze" onChange={applyStoryFactReview} onError={setError}/>}
       {['story-order','sort-story','true-false','true-false-maze',
-        'who-am-i','unscramble-words','pixel-picture','finish-story'].includes(active.id)&&
+        'who-am-i','unscramble-words','pixel-picture','finish-story',
+        'multiple-choice-bank'].includes(active.id)&&
        <details className="review-match-advanced">
         <summary>Advanced: edit this activity's JSON only</summary>
-        <p>This changes only the prepared activity selection or event list; canonical source facts are separate records. Use it only for unusual structural repairs, then rerun preflight.</p>
+        <p>This changes only the selected prepared activity. Original source records
+        and canonical facts are separate. Use for unusual structural repairs
+        after saving a working JSON backup, then rerun preflight.</p>
         <label>Prepared activity JSON
          <textarea id="review-module-json" rows={12} spellCheck={false}
           value={moduleEditorText} onChange={e=>setModuleEditorText(e.target.value)}/></label>
@@ -709,7 +721,8 @@ export default function ReviewApp(){
       {activeModuleId&&activePreparedKey&&active.id!=='match-words'&&
        active.id!=='crossword'&&
        !['story-order','sort-story','true-false','true-false-maze',
-         'who-am-i','unscramble-words','pixel-picture','finish-story'].includes(active.id)&&
+         'who-am-i','unscramble-words','pixel-picture','finish-story',
+         'multiple-choice-bank'].includes(active.id)&&
        <div className="review-fields">
        <div className="review-note">
         <h3>{MODULES.find(item=>item.id===activeModuleId)?.name??activeModuleId} · prepared activity</h3>
@@ -767,7 +780,7 @@ export default function ReviewApp(){
       </div>}
       <div className="review-actions">
        {!active.optional&&<button type="button" className="review-approve" onClick={approveActive}>{reviewed.includes(active.id)?'Reviewed — next':'Mark reviewed & continue'}</button>}
-       <button type="button" className="review-secondary" onClick={()=>setReviewed(x=>x.filter(id=>id!==active.id))}>Needs more work</button>
+       {!active.optional&&<button type="button" className="review-secondary" onClick={()=>setReviewed(x=>x.filter(id=>id!==active.id))}>Needs more work</button>}
       </div>
      </section>}
      <section className="review-panel">
