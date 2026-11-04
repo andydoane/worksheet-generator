@@ -182,14 +182,19 @@ export function lessonContentPool(lesson:LessonActivityData,seed=1):LessonConten
    'adapted');
  }
 
- // Alternate story word searches built only from source-backed vocabulary.
- // Limit to a fixed, small set so booklet generation remains quick and stable.
+ // Alternate story word searches use only approved lesson vocabulary.
+ // Prefer full-size grids (12 for Large, 6 for Medium) while retaining
+ // shorter Large fallbacks if a 12-word grid cannot fit or would repeat
+ // vocabulary already printed elsewhere in the booklet.
+ // Bound the candidate set so construction stays deterministic and quick.
  for(const type of ['medium-word-search','word-search'] as const){
-  const count=type==='medium-word-search'?6:10;
-  for(let offset=0;offset<Math.min(vocab.length,18);offset++){
-   const words=Array.from({length:count},(_,i)=>vocab[(offset+i)%vocab.length]);
-   if(words.some(x=>!x)||new Set(words).size!==words.length)continue;
-   add(type,'word-bank:'+offset,{type,words:words.join('\n'),seed},'adapted');
+  const counts=type==='medium-word-search'?[6]:[12,11,10];
+  for(const count of counts){
+   for(let offset=0;offset<Math.min(vocab.length,count===12||count===6?18:9);offset++){
+    const words=Array.from({length:count},(_,i)=>vocab[(offset+i)%vocab.length]);
+    if(words.some(x=>!x)||new Set(words).size!==words.length)continue;
+    add(type,'word-bank:'+count+':'+offset,{type,words:words.join('\n'),seed},'adapted');
+   }
   }
  }
 
@@ -222,16 +227,22 @@ export function choiceOverlap(choice:LessonContentChoice,used:ReadonlySet<string
 }
 export function chooseUnusedLessonContent(
  choices:readonly LessonContentChoice[],used:ReadonlySet<string>,
+ options:{preferFullBank?:boolean}={},
 ):{candidate:LessonContentChoice;reused:string[]}|undefined{
  if(!choices.length)return undefined;
  const scored=choices.map((candidate,i)=>({candidate,i,reused:choiceOverlap(candidate,used)}));
- // Compact word/pair banks leave unused approved material for another
- // instance later in the same booklet. For every other module retain the
- // authored/primary order when equally nonconflicting.
- const splitFriendly=['odd-words','checkboxes','match-words']
-  .includes(choices[0].moduleId);
+ // Nonrepetition always has priority over size. Numbered presets have one
+ // instance of each type, so fill its region with the largest approved bank.
+ // Build My Own may place the same kind of activity twice: retain smaller
+ // reusable groups there, leaving distinct words/pairs for another instance.
+ const type=choices[0].moduleId;
+ const splitFriendly=['odd-words','checkboxes','match-words'].includes(type);
+ const fillFriendly=['odd-words','checkboxes','match-words',
+  'word-search','medium-word-search'].includes(type);
+ const sizeOrder=options.preferFullBank&&fillFriendly?-1:
+  !options.preferFullBank&&splitFriendly?1:0;
  scored.sort((a,b)=>a.reused.length-b.reused.length||
-  (splitFriendly?a.candidate.claims.length-b.candidate.claims.length:0)||
+  sizeOrder*(a.candidate.claims.length-b.candidate.claims.length)||
   a.i-b.i);
  const best=scored[0];
  return {candidate:best.candidate,reused:best.reused};

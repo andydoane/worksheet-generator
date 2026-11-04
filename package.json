@@ -1,6 +1,6 @@
 {
   "name": "worksheet-generator",
-  "version": "0.16.30",
+  "version": "0.16.31",
   "private": true,
   "type": "module",
   "scripts": {
@@ -62,7 +62,8 @@
     "build": "npm run validate:library && npm run check && vite build",
     "preview": "vite preview",
     "prepare:bsb": "node --experimental-strip-types scripts/prepare-bsb.mjs",
-    "sample:pr17k": "node --experimental-strip-types scripts/create-pr17k-preset-samples.mjs"
+    "sample:pr17k": "node --experimental-strip-types scripts/create-pr17k-preset-samples.mjs",
+    "sample:pr17q": "node --experimental-strip-types scripts/create-pr17q-full-bank-samples.mjs"
   },
   "dependencies": {
     "@pdf-lib/fontkit": "1.1.1",

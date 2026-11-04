@@ -224,7 +224,7 @@ export function buildWorksheetRecipe(
   if(!isLegacy){
    const choices=pool!.candidates.filter(c=>
     c.moduleId===step.moduleId&&!usedContentIds.has(c.moduleId+':'+c.contentId));
-   const picked=chooseUnusedLessonContent(choices,usedClaims);
+   const picked=chooseUnusedLessonContent(choices,usedClaims,{preferFullBank:true});
    if(!picked)throw Error('No approved '+step.moduleId+' content available for '+recipe.name+' at '+key+'.');
    if(picked.reused.length){
     throw Error(recipe.name+' needs a distinct '+step.moduleId+
