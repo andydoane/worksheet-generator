@@ -79,7 +79,7 @@ test('Semantic validator enforces chronological notes and source IDs without sil
  assert.ok(validateLesson(modified(x=>{x.preparedActivities.trueFalse.isTrue=!x.preparedActivities.trueFalse.isTrue;}),schema)
   .some(e=>e.includes('truth value disagrees')));
 });
-test('Teacher approval gate prevents publishing by flipping a single flag',()=>{
+test('Teacher approval gate prevents publishing by flipping a single flag',async()=>{
  const inconsistent=modified(x=>{x.publication.approved=true;});
  assert.ok(validateLesson(inconsistent,schema).some(e=>e.includes('publication status and approved')));
  const withoutSignoff=modified(x=>{x.publication.approved=true;x.publication.status='approved';});
