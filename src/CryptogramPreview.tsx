@@ -1,6 +1,6 @@
 import {useEffect,useState} from 'react';
 import {cipherSymbol} from './cipherSymbols.ts';
-import {generateCryptogram,type Cryptogram} from './cryptograms.ts';
+import {generateCryptogram,type Cryptogram,type VerseCryptogram} from './cryptograms.ts';
 import BigIdeaCryptogramPreview from './BigIdeaCryptogramPreview.tsx';
 import {mediumWidths} from './MediumPrintPreview.tsx';
 import {
@@ -18,8 +18,7 @@ function PrintSymbol({id,x,y,size}:{id:number;x:number;y:number;size:number}){
  </g>;
 }
 /** The Large Verse Cryptogram uses exactly the PDF's measured point scene. */
-export default function CryptogramPreview({module}:{module:Cryptogram}){
- if(module.type==='big-idea-cryptogram')return <BigIdeaCryptogramPreview module={module}/>;
+function VerseCryptogramPreview({module}:{module:VerseCryptogram}){
  const [plan,setPlan]=useState<VerseCryptogramPlan|null|false>(null);
  const data=generateCryptogram(module);
  useEffect(()=>{
@@ -66,4 +65,9 @@ export default function CryptogramPreview({module}:{module:Cryptogram}){
      </g>)}
    </svg>}
  </div>;
+}
+export default function CryptogramPreview({module}:{module:Cryptogram}){
+ return module.type==='big-idea-cryptogram'
+  ?<BigIdeaCryptogramPreview module={module}/>
+  :<VerseCryptogramPreview module={module}/>;
 }
