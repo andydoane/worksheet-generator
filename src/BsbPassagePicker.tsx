@@ -37,9 +37,10 @@ export default function BsbPassagePicker({
   return ()=>{mounted=false;};
  },[]);
 
- const referenceParts=reference.trim().match(/^(.+?)\s+(\d+):(\d+)(?:-(\d+))?$/u);
- const book=index?.books.includes(referenceParts?.[1]??'')
-  ?referenceParts![1]:(index?.books[0]??'');
+ const referenceParts=reference.trim().match(
+  /^(.+?)\s+(\d+):(\d+)[a-z]?(?:\s*[-–]\s*(?:(\d+):)?(\d+)[a-z]?)?$/iu);
+ const book=index?.books.find(name=>name.toLowerCase()===referenceParts?.[1]?.toLowerCase())
+  ??(index?.books[0]??'');
  const chapters=useMemo(()=>index?bsbChapters(index,book):[],[index,book]);
  const chapter=referenceParts&&book===referenceParts[1]&&
   chapters.includes(Number(referenceParts[2]))?Number(referenceParts[2]):(chapters[0]??1);
@@ -47,8 +48,9 @@ export default function BsbPassagePicker({
  const firstVerse=referenceParts&&book===referenceParts[1]&&
   chapter===Number(referenceParts[2])&&verses.includes(Number(referenceParts[3]))
   ?Number(referenceParts[3]):(verses[0]??1);
- const lastVerse=referenceParts?.[4]&&verses.includes(Number(referenceParts[4]))
-  ?Number(referenceParts[4]):firstVerse;
+ const crossChapter=!!referenceParts?.[4]&&Number(referenceParts[4])!==chapter;
+ const endVerse=referenceParts?.[5]&&!crossChapter?Number(referenceParts[5]):firstVerse;
+ const lastVerse=verses.includes(endVerse)?endVerse:firstVerse;
 
  function choose(nextBook:string,nextChapter:number,nextFirst:number,nextLast=nextFirst){
   setReference(nextBook+' '+nextChapter+':'+nextFirst+
@@ -105,11 +107,12 @@ export default function BsbPassagePicker({
     }}>{verses.map(v=><option key={v} value={v}>{v}</option>)}</select>
    </label>
    <label>Through verse
-    <select value={lastVerse} disabled={!index} onChange={e=>{
+    <select value={lastVerse} disabled={!index||crossChapter} onChange={e=>{
      choose(book,chapter,firstVerse,Number(e.target.value));
     }}>{verses.filter(v=>v>=firstVerse).map(v=><option key={v} value={v}>{v}</option>)}</select>
    </label>
   </div>
+  {crossChapter&&<small>Cross-chapter range selected; edit its end verse using the reference field below.</small>}
   <label className="bsb-picker-reference">Or enter a reference (including cross-chapter ranges)
    <input value={reference} onChange={e=>setReference(e.target.value)}
     placeholder="e.g. Exodus 15:11 or John 3:16-17"/>
