@@ -29,11 +29,11 @@ export const crosswordModule=(pairs:readonly CrosswordPair[])=>({
  seed:1,
 });
 
-/** Report the same rules as the generator, localized to the broken row.
- * After textual validation, execute the real backtracking generator so a
- * well-formed but disconnected set cannot be mistaken for a valid grid.
+/** Fast, deterministic per-keystroke checks. Do not call the crossword
+ * backtracking engine here: the Review Studio uses these while typing.
+ * The full converter preflight continues to call crosswordIssues().
  */
-export function crosswordIssues(pairs:readonly CrosswordPair[]):CrosswordIssue[]{
+export function crosswordTextIssues(pairs:readonly CrosswordPair[]):CrosswordIssue[]{
  const issues:CrosswordIssue[]=[];
  if(pairs.length<6||pairs.length>10)issues.push({kind:'count',
   message:'Crossword needs 6–10 answer/clue pairs (currently '+pairs.length+').'});
@@ -64,6 +64,15 @@ export function crosswordIssues(pairs:readonly CrosswordPair[]):CrosswordIssue[]
    issues.push({index,field:'clue',kind:'field',
     message:'Entry '+(index+1)+': a clue cannot contain commas or line breaks.'});
  }
+ return issues;
+}
+
+/** Full converter-equivalent validation, including the actual connected-grid
+ * generator. The Review Studio delays this expensive check while typing;
+ * explicit preflight and exports never accept this partial validation alone.
+ */
+export function crosswordIssues(pairs:readonly CrosswordPair[]):CrosswordIssue[]{
+ const issues=crosswordTextIssues(pairs);
  if(issues.length)return issues;
  const module=crosswordModule(pairs);
  const engineErrors=validateModule(module);

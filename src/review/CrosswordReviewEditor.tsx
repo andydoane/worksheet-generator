@@ -1,8 +1,8 @@
-import {useMemo} from 'react';
+import {useEffect,useMemo,useState} from 'react';
 import SpecialtyPreview from '../SpecialtyPreview.tsx';
 import type {Lesson} from './model.ts';
 import {
- addCrosswordPair,crosswordIssues,crosswordModule,crosswordVocabulary,
+ addCrosswordPair,crosswordIssues,crosswordTextIssues,crosswordModule,crosswordVocabulary,
  editCrosswordPair,moveCrosswordPair,removeCrosswordPair,
  replaceCrosswordAnswerWithVocabulary,type CrosswordIssue,
 } from './crosswordEditor.ts';
@@ -19,10 +19,26 @@ export default function CrosswordReviewEditor({lesson,onChange,onError,
  const saved=lesson.preparedActivities?.crossword;
  const malformed=saved!==undefined&&!Array.isArray(saved);
  const entries=Array.isArray(saved)?saved:[];
- const issues=useMemo(()=>crosswordIssues(entries),[entries]);
- const rowIssues=(index:number)=>issues.filter(issue=>issue.index===index);
+ // Validate cheap field rules immediately, without rebuilding a full grid.
+ const textIssues=useMemo(()=>crosswordTextIssues(entries),[entries]);
+ // Only the crossword answer/clue text controls placement. A unique key
+ // rejects stale validation from an earlier lesson, row order, or keystroke.
+ const previewKey=JSON.stringify(entries.map((entry:any)=>[entry?.answer,entry?.clue]));
+ const canGenerate=!malformed&&textIssues.length===0;
+ const [settled,setSettled]=useState<{key:string;issues:CrosswordIssue[]}|null>(null);
+ useEffect(()=>{
+  if(!canGenerate)return;
+  const timer=window.setTimeout(()=>{
+   setSettled({key:previewKey,issues:crosswordIssues(entries)});
+  },500);
+  return ()=>window.clearTimeout(timer);
+ },[previewKey,canGenerate]);
+ const pending=canGenerate&&settled?.key!==previewKey;
+ // Never show a stale grid or old layout error during a newer edit.
+ const issues=canGenerate?(pending?[]:settled?.issues??[]):textIssues;
+ const rowIssues=(index:number)=>textIssues.filter(issue=>issue.index===index);
  const vocabulary=useMemo(()=>crosswordVocabulary(lesson),[lesson]);
- const valid=issues.length===0&&!malformed;
+ const valid=canGenerate&&!pending&&issues.length===0;
  const apply=(action:()=>Lesson)=>{
   try{onChange(action());onError('');}
   catch(e){onError(e instanceof Error?e.message:String(e));}
@@ -36,7 +52,8 @@ export default function CrosswordReviewEditor({lesson,onChange,onError,
   <div className="review-note">
    <h3>Crossword · {entries.length} of 6–10 answer/clue pairs</h3>
    <p>Each answer should have 3–12 A–Z letters (spaces may separate words). Each clue needs 1–85 characters; answers must be different and neither field can contain a comma.</p>
-   <p>Valid answers must <strong>interlock in one connected crossword</strong>. This editor tests the same puzzle generator and print layout used by exported worksheets. If the words cannot connect, try a lesson vocabulary word with more letters in common and write an accurate new clue.</p>
+   <p>Valid answers must <strong>interlock in one connected crossword</strong>. Text and duplicate checks update as you type; the full grid and print preview update after a brief pause. Final preflight always runs the complete generator against your latest edits.</p>
+   <p>If the words cannot connect, try a lesson vocabulary word with more letters in common and write an accurate new clue.</p>
    <p>Rewritten answers or clues retain their source-note links for context but become <strong>suggested and teacher-review-required</strong>. Selecting new vocabulary clears the old clue and replaces outdated source links.</p>
   </div>
   {malformed&&<p className="review-warning" role="alert">The stored crossword data is not an array. Expand Advanced JSON below to replace it with a list of answer/clue entries before continuing.</p>}
@@ -113,7 +130,9 @@ export default function CrosswordReviewEditor({lesson,onChange,onError,
    onClick={()=>apply(()=>addCrosswordPair(lesson))}>+ Add answer and clue</button>
   <section className="review-activity-preview">
    <h3>Print-matched crossword preview</h3>
-   {valid?<SpecialtyPreview module={crosswordModule(entries)}/>:
+   {pending?<p className="review-crossword-updating" role="status">
+    Updating crossword layout and preview after typing stops…</p>:
+    valid?<SpecialtyPreview module={crosswordModule(entries)}/>:
     <p className="review-warning">Complete 6–10 valid pairs that form a connected crossword to view the printable grid and clues.</p>}
   </section>
   <details className="review-match-advanced">
