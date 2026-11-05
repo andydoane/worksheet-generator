@@ -162,7 +162,9 @@ test('Review Studio renders interactive issue cards, isolated source-linked Solv
   readFile(new URL('../src/review/ReviewApp.tsx',import.meta.url),'utf8'),
   readFile(new URL('../src/review/review.css',import.meta.url),'utf8'),
  ]);
- assert.match(page,/buildReviewPreflight\(lesson\)/u);
+ assert.match(page,/buildReviewPreflight\(checkedLesson,\{/u);
+ assert.match(page,/puzzle:puzzlePdf,verse:boldPdf,subtitle:finishBody/u);
+ assert.match(page,/latestLesson\.current!==checkedLesson/u);
  assert.match(page,/preflight\.issues\.map/u);
  assert.match(page,/setSelectedId\(issue\.taskId\)/u);
  assert.match(page,/setFocusIssueField\(issue\.fieldId\)/u);
