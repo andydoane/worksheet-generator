@@ -2,6 +2,7 @@ import {MODULES,type ModuleId} from '../modules.ts';
 import {checkReviewContent,type Lesson} from './model.ts';
 import {repairDestinationForModule} from './repairRegistry.ts';
 import {lessonIntegrityIssues,type IntegrityArea} from './lessonIntegrity.ts';
+import {reviewSchemaIssues,type SchemaRepair} from './schemaPreflight.ts';
 import {
  buildWorksheetRecipe,WORKSHEET_RECIPES,RecipeContentConflictError,
  type LessonWorksheetSource,
@@ -49,6 +50,7 @@ export type ReviewIssue={
  conflicts?:string[];
  area?:IntegrityArea;
  path?:string;
+ schemaRepair?:SchemaRepair;
 };
 export type ReviewPreflight={
  convertedCount:number;
@@ -125,6 +127,20 @@ export function reviewIssueTarget(message:string):ReviewIssue{
 }
 
 export function buildReviewPreflight(lesson:Lesson):ReviewPreflight{
+ // CI validates schema before invoking the converter. Do exactly the same
+ // here so malformed metadata cannot reach "Download approved lesson JSON".
+ const schemaIssues=reviewSchemaIssues(lesson);
+ if(schemaIssues.length)return {convertedCount:0,totalCount:27,
+  issues:schemaIssues.map(entry=>({
+   id:'schema:'+entry.path,
+   message:entry.message,
+   label:'Curriculum schema',
+   taskId:entry.taskId,
+   fieldId:entry.fieldId,
+   path:entry.path,
+   ...(entry.repair?{schemaRepair:entry.repair}:{}),
+  })),
+ };
  const messages=checkReviewContent(lesson);
  const structural=lessonIntegrityIssues(lesson);
  const recipeIssues:ReviewIssue[]=[];

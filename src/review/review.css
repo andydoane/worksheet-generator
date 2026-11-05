@@ -254,3 +254,12 @@ a{color:#267d68}
 .review-word-bank .review-warning{margin:0}
 .review-word-bank .review-warning ul{margin:6px 0 0;padding-left:20px}
 .review-word-bank .review-source{line-height:1.5;margin:0}
+
+
+/* Schema mismatches are detected before approved curriculum export. Only
+ * narrow, teacher-confirmed metadata repairs are offered inline. */
+.review-issue-list .review-schema-fix{display:block;width:auto;margin:8px 0 14px;
+ border:1px solid #357961;border-radius:8px;background:#f5fbf7;
+ color:#28614b;padding:10px 12px;font-size:12px;font-weight:800;cursor:pointer}
+.review-issue-list .review-schema-fix:hover{background:#e4f3e8}
+.review-issue-list .review-schema-fix:focus-visible{outline:3px solid #82b69d;outline-offset:2px}

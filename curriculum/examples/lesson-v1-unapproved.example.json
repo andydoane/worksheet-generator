@@ -1,0 +1,193 @@
+{
+  "schemaVersion": 1,
+  "schemaStatus": "EXAMPLE ONLY — unapproved starter, not a completed conversion",
+  "id": "example-lesson-not-for-publication",
+  "curriculum": {
+    "series": "Example Curriculum (replace)",
+    "lessonNumber": 1
+  },
+  "lessonDetails": {
+    "title": "Example lesson — replace using actual curriculum",
+    "scripturePassages": [
+      "Exodus 14"
+    ],
+    "scriptureDisplay": "Exodus 14",
+    "bigIdeas": [
+      {
+        "text": "Replace with the source curriculum's actual Big Idea.",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": true
+      }
+    ],
+    "memoryVerse": {
+      "reference": "REPLACE IN REVIEW STUDIO",
+      "translation": "UNVERIFIED",
+      "text": "PLACEHOLDER — choose the exact BSB passage during review.",
+      "isExcerpt": false,
+      "requiresTextReview": true
+    }
+  },
+  "sourceFiles": [
+    {
+      "filename": "REPLACE-WITH-ACTUAL-SOURCE.odt",
+      "format": "odt",
+      "role": "placeholder teaching source; replace all source information"
+    }
+  ],
+  "storyNotes": [
+    {
+      "id": "sn-01",
+      "order": 1,
+      "originalText": "REPLACE WITH THE EXACT ORIGINAL STORY NOTE FROM YOUR SOURCE DOCUMENT.",
+      "cleanText": "Replace with a faithful clean version of that original Story Note.",
+      "emphasizedWords": [],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "REPLACE-WITH-ACTUAL-SOURCE.odt",
+        "section": "STORY NOTE",
+        "page": 1
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q-01",
+      "question": "REPLACE with a real question from the curriculum.",
+      "answer": "REPLACE with the answer from that same source.",
+      "kind": "factual",
+      "origin": "source",
+      "source": {
+        "filename": "REPLACE-WITH-ACTUAL-SOURCE.odt",
+        "section": "STORY NOTE",
+        "page": 1
+      }
+    }
+  ],
+  "facts": [
+    {
+      "id": "tf-01",
+      "statement": "REPLACE with a true fact grounded in your Story Notes.",
+      "isTrue": true,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "teacherReviewRequired": true
+    }
+  ],
+  "vocabulary": {
+    "related": [
+      "MOSES",
+      "SEA",
+      "WATER",
+      "STAFF",
+      "ISRAEL"
+    ],
+    "unrelated": [
+      "ROCKET",
+      "CROWN",
+      "WAGON",
+      "CANDLE"
+    ],
+    "entries": [
+      {
+        "id": "voc-01",
+        "term": "WATER",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "scope": "story",
+        "teacherReviewRequired": true
+      }
+    ]
+  },
+  "preparedActivities": {
+    "oddWords": {
+      "related": [
+        "MOSES",
+        "SEA",
+        "WATER",
+        "STAFF",
+        "ISRAEL"
+      ],
+      "unrelated": [
+        "ROCKET",
+        "CROWN",
+        "WAGON",
+        "CANDLE"
+      ],
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "teacherReviewRequired": true
+    },
+    "checkboxes": {
+      "correct": [
+        "MOSES",
+        "SEA",
+        "WATER",
+        "STAFF",
+        "ISRAEL"
+      ],
+      "incorrect": [
+        "ROCKET",
+        "CROWN",
+        "WAGON",
+        "CANDLE"
+      ],
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "teacherReviewRequired": true
+    },
+    "unscrambleWords": {
+      "answers": [
+        "MOSES",
+        "WATER"
+      ],
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "teacherReviewRequired": true
+    }
+  },
+  "moduleReadiness": [],
+  "reviewFlags": [
+    {
+      "id": "rf-01",
+      "priority": "high",
+      "type": "teacher-approval",
+      "text": "EXAMPLE ONLY. Replace placeholders, supply evidence, complete all 27 activities, and review every suggested choice.",
+      "affectedModules": [
+        "odd-words",
+        "checkboxes",
+        "unscramble-words"
+      ]
+    }
+  ],
+  "validation": {
+    "basis": "EXAMPLE ONLY: schema structure illustrated; no source or puzzle verification has been performed.",
+    "allTextChecksPassed": false,
+    "checks": [
+      {
+        "check": "Real source material and all 27 activities supplied",
+        "passed": false
+      }
+    ],
+    "actualGeneratorTested": false,
+    "jsonParseTested": true
+  },
+  "publication": {
+    "status": "pending-teacher-approval",
+    "approved": false,
+    "notes": "Unapproved illustrative starter. Never upload this file under curriculum/approved."
+  }
+}

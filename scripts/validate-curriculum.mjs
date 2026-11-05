@@ -1,6 +1,8 @@
 import {readFile,readdir} from 'node:fs/promises';
 import {resolve,join,dirname} from 'node:path';
 import {fileURLToPath} from 'node:url';
+import {validateLessonSchema} from '../src/lessonSchemaValidation.ts';
+export {validateLessonSchema};
 
 const here=dirname(fileURLToPath(import.meta.url));
 const schemaPath=resolve(here,'../curriculum/schema/lesson-v1.schema.json');
@@ -14,54 +16,6 @@ const knownModules=new Set([
  'finish-story','story-order','sort-story','draw-story','word-search',
  'verse-cryptogram','crossword','spiral-verse','connect-verse'
 ]);
-
-/** Dependency-free subset of JSON Schema 2020-12 used in lesson-v1.schema.json.
- * Validate shape, field types, required keys, enums, refs, patterns and bounds.
- * This is NOT a replacement for a full schema engine or the module solvers.
- */
-export function validateLessonSchema(value,schema){
- const errors=[];
- function inspect(item,rule,path){
-  if(rule.$ref){
-   const ref=rule.$ref;
-   if(!ref.startsWith('#/$defs/')){errors.push(path+': unsupported schema ref '+ref);return;}
-   const def=schema.$defs?.[ref.slice(8)];
-   if(!def){errors.push(path+': unresolved schema ref '+ref);return;}
-   inspect(item,def,path);return;
-  }
-  if('const' in rule&&item!==rule.const)errors.push(path+': expected '+JSON.stringify(rule.const));
-  if('enum' in rule&&!rule.enum.includes(item))errors.push(path+': invalid enum value '+JSON.stringify(item));
-  if(rule.type==='object'){
-   if(item===null||typeof item!=='object'||Array.isArray(item)){errors.push(path+': expected an object');return;}
-   for(const field of rule.required??[])if(!(field in item))errors.push(path+'.'+field+': required field missing');
-   for(const [field,v] of Object.entries(item)){
-    if(rule.properties?.[field])inspect(v,rule.properties[field],path+'.'+field);
-    else if(rule.additionalProperties===false)errors.push(path+'.'+field+': unsupported field');
-   }
-  }
-  if(rule.type==='array'){
-   if(!Array.isArray(item)){errors.push(path+': expected an array');return;}
-   if(rule.minItems!==undefined&&item.length<rule.minItems)errors.push(path+': too few items');
-   if(rule.maxItems!==undefined&&item.length>rule.maxItems)errors.push(path+': too many items');
-   if(rule.items)item.forEach((value,index)=>inspect(value,rule.items,path+'['+index+']'));
-  }
-  if(rule.type==='string'){
-   if(typeof item!=='string'){errors.push(path+': expected a string');return;}
-   if(rule.minLength!==undefined&&item.length<rule.minLength)errors.push(path+': too short');
-   if(rule.maxLength!==undefined&&item.length>rule.maxLength)errors.push(path+': too long');
-   if(rule.pattern&&!(new RegExp(rule.pattern,'u')).test(item))errors.push(path+': invalid format');
-  }
-  if(rule.type==='boolean'&&typeof item!=='boolean')errors.push(path+': expected a boolean');
-  if(rule.type==='integer'&&!Number.isSafeInteger(item))errors.push(path+': expected an integer');
-  if(rule.type==='number'&&(typeof item!=='number'||!Number.isFinite(item)))errors.push(path+': expected a finite number');
-  if((rule.type==='integer'||rule.type==='number')&&typeof item==='number'){
-   if(rule.minimum!==undefined&&item<rule.minimum)errors.push(path+': below minimum');
-   if(rule.maximum!==undefined&&item>rule.maximum)errors.push(path+': above maximum');
-  }
- }
- inspect(value,schema,'$');
- return errors;
-}
 
 export function validateLesson(lesson,schema){
  const errors=validateLessonSchema(lesson,schema);
