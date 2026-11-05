@@ -142,6 +142,7 @@ a{color:#267d68}
 .review-crossword-row .review-match-errors{margin:0}
 .review-activity-preview .crossword-print-svg{display:block;width:100%;height:auto;max-height:530px}
 .review-activity-preview .crossword-preview{width:100%;max-width:100%}
+.review-crossword-updating{margin:0;padding:16px;border:1px dashed #bbd4c1;border-radius:9px;background:#f4f9f5;color:#416a55;font-size:12px;line-height:1.6}
 #review-field-crossword:focus{outline:2px solid #4b956e;outline-offset:5px}
 @media(max-width:580px){.review-crossword-row .review-pair{grid-template-columns:1fr}}
 
