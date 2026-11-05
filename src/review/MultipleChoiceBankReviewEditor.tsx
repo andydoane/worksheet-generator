@@ -20,10 +20,10 @@ export default function MultipleChoiceBankReviewEditor({lesson,onChange,onError}
  return <div id="review-field-multiple-choice-bank" className="review-fields" tabIndex={-1}>
   <div className="review-note">
    <h3>Multiple Choice · {rows.length} prepared question(s)</h3>
-   <p>Presets 1 and 2 each need a Multiple Choice question. Source question text and
-    its correct answer stay together when you select from the original curriculum.
-    You supply two different, plausible incorrect answers. Any wording change
-    requires teacher review and does not change the original question records.</p>
+   <p>Presets 1 and 2 each need a Multiple Choice question. The correct answer
+    always appears first in the review fields, followed by two incorrect answers.
+    The printable worksheet shuffles those choices automatically. Wording changes
+    require teacher review and never change the original source questions.</p>
   </div>
   {invalidStructure&&<p className="review-warning">
    The Multiple Choice collection is malformed. Open the scoped Advanced JSON
@@ -89,7 +89,7 @@ export default function MultipleChoiceBankReviewEditor({lesson,onChange,onError}
        }}>Remove prepared question</button>
      </div>
      {preview&&<details className="review-sources">
-      <summary>Print-matched question preview</summary>
+      <summary>Optional printed worksheet preview (answers shuffled)</summary>
       <SmallModulePreview module={{type:'multiple-choice',question:row.question,
        correct:row.correctAnswer,wrong1:wrong[0].text,wrong2:wrong[1].text,seed:1}}/>
      </details>}

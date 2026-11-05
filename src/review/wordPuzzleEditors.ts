@@ -153,6 +153,75 @@ export function chooseUnscramble(lesson:Lesson,index:number,term:string):Lesson{
  return editAnswers(lesson,index,choice.term,choice);
 }
 
+/** New review imports can carry many suggested words even though the printable
+ * activity accepts exactly two. Pick a usable pair without deleting the
+ * additional saved entries: those remain as reviewAlternatives in the working
+ * lesson and in review-session backups until the teacher decides otherwise.
+ *
+ * Malformed data and already-edited two-answer lists are intentionally NOT
+ * rewritten automatically.
+ */
+export function prepareUnscrambleReview(lesson:Lesson):{lesson:Lesson;changed:boolean}{
+ const item=lesson.preparedActivities?.unscrambleWords;
+ if(!item||!Array.isArray(item.answers)||item.answers.length===2||
+  !item.answers.every((value:unknown)=>typeof value==='string'))
+  return {lesson,changed:false};
+ const selected:string[]=[],selectedSaved=new Set<number>(),seen=new Set<string>();
+ const add=(term:string,savedIndex?:number)=>{
+  const value=term.trim().toUpperCase().replace(/\s+/gu,' ');
+  if(!validUnscramblePhrase(value)||seen.has(value)||selected.length===2)return;
+  selected.push(value);seen.add(value);
+  if(savedIndex!==undefined)selectedSaved.add(savedIndex);
+ };
+ item.answers.forEach((value:string,i:number)=>add(value,i));
+ for(const source of unscrambleChoices(lesson))add(source.term);
+ if(selected.length!==2)return {lesson,changed:false};
+ const next=copy(lesson),target=next.preparedActivities.unscrambleWords;
+ const remaining=item.answers.filter((_:string,i:number)=>!selectedSaved.has(i));
+ const previous=Array.isArray(item.reviewAlternatives)?
+  item.reviewAlternatives.filter((value:unknown):value is string=>typeof value==='string'):[];
+ const alternatives=[...previous,...remaining];
+ if(alternatives.length)target.reviewAlternatives=alternatives;
+ else delete target.reviewAlternatives;
+ target.answers=selected;
+ // An oversized source list can cite more than these two words. Rebuild only
+ // links that actually match the chosen terms; never inherit stale citations.
+ const vocabulary=unscrambleChoices(lesson);
+ target.sourceIds=unique(selected.flatMap(value=>
+  vocabulary.find(choice=>choice.term===value)?.sourceIds??[]));
+ flag(target);
+ return {lesson:next,changed:true};
+}
+
+export function unscrambleAlternatives(lesson:Lesson):string[]{
+ const item=lesson.preparedActivities?.unscrambleWords;
+ const entries=item?.reviewAlternatives;
+ if(!Array.isArray(entries))return [];
+ return entries.filter((value:unknown):value is string=>
+  typeof value==='string'&&validUnscramblePhrase(value.trim().toUpperCase()))
+  .filter((value:string,i:number,list:string[])=>
+   list.findIndex(candidate=>candidate.trim().toUpperCase()===value.trim().toUpperCase())===i);
+}
+
+export function chooseUnscrambleAlternative(lesson:Lesson,index:number,term:string):Lesson{
+ const value=unscrambleAlternatives(lesson).find(word=>
+  word.trim().toUpperCase()===term.trim().toUpperCase());
+ if(!value)throw Error('Select a previously saved answer alternative.');
+ const source=unscrambleChoices(lesson).find(choice=>
+  choice.term===value.trim().toUpperCase());
+ const old=unscrambleWords(lesson)[index];
+ const updated=editAnswers(lesson,index,value.trim().toUpperCase(),source);
+ // Switching between saved alternatives must never erase the displaced
+ // original answer from the review-session candidate pool.
+ if(typeof old==='string'&&old.trim()&&
+  !unscrambleAlternatives(updated).some(candidate=>
+   candidate.trim().toUpperCase()===old.trim().toUpperCase())){
+  updated.preparedActivities.unscrambleWords.reviewAlternatives??=[];
+  updated.preparedActivities.unscrambleWords.reviewAlternatives.push(old);
+ }
+ return updated;
+}
+
 export type PixelPhraseChoice=SourceChoice;
 export function pixelPhraseChoices(lesson:Lesson):PixelPhraseChoice[]{
  const ideas=(lesson.lessonDetails?.bigIdeas??[]).map((x:any,i:number)=>({

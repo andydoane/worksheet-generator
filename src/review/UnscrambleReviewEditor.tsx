@@ -2,15 +2,16 @@ import {useState} from 'react';
 import SmallModulePreview from '../SmallModulePreview.tsx';
 import type {Lesson} from './model.ts';
 import {
- chooseUnscramble,editUnscramble,repairUnscrambleAnswers,resetMalformedUnscramble,
- unscrambleChoices,unscrambleProblems,unscrambleWords,
+ chooseUnscramble,chooseUnscrambleAlternative,editUnscramble,repairUnscrambleAnswers,
+ resetMalformedUnscramble,unscrambleAlternatives,unscrambleChoices,unscrambleProblems,unscrambleWords,
 } from './wordPuzzleEditors.ts';
 
 export default function UnscrambleReviewEditor({lesson,onChange,onError}:{
  lesson:Lesson;onChange:(next:Lesson)=>void;onError:(message:string)=>void;
 }){
  const answers=unscrambleWords(lesson),problems=unscrambleProblems(lesson);
- const choices=unscrambleChoices(lesson),item=lesson.preparedActivities?.unscrambleWords??{};
+ const choices=unscrambleChoices(lesson),alternatives=unscrambleAlternatives(lesson);
+ const item=lesson.preparedActivities?.unscrambleWords??{};
  const [keepFirst,setKeepFirst]=useState(0);
  const [keepSecond,setKeepSecond]=useState(1);
  const malformed=item.answers!==undefined&&!Array.isArray(item.answers);
@@ -29,8 +30,9 @@ export default function UnscrambleReviewEditor({lesson,onChange,onError}:{
    <p>Enter your own answers or select two different lesson vocabulary words.
     Each answer uses 3–10 letters in one or two words and must be possible to scramble.
     Custom wording is marked suggested and requires teacher review.</p>
-   <p>This editor can also repair a missing or incomplete answer list without
-    making you edit JSON. It never discards extra saved answers without confirmation.</p>
+   <p>Review Studio selects two valid answers by default when the saved list
+    contains extra candidates. You can replace either answer at any time. Extra
+    saved words remain available as alternatives rather than being discarded.</p>
   </div>
   {malformed&&<div className="review-warning" role="status">
    <strong>Invalid stored answer format</strong>
@@ -67,6 +69,10 @@ export default function UnscrambleReviewEditor({lesson,onChange,onError}:{
     Create two editable answer fields
    </button>
   </div>}
+  {alternatives.length>0&&!malformed&&!tooMany&&<p className="review-source">
+   Two answers are selected for this worksheet. {alternatives.length} additional saved
+   {alternatives.length===1?' answer is':' answers are'} available below.
+   Review the selected words before marking this activity complete.</p>}
   {!malformed&&!tooMany&&<div className="review-story-fact-rows">
    {[0,1].map(index=><div className="review-story-fact-row" key={index}>
     <strong>Answer {index+1}</strong>
@@ -84,6 +90,16 @@ export default function UnscrambleReviewEditor({lesson,onChange,onError}:{
        {option.term}</option>)}
      </select>
     </label>
+    {alternatives.length>0&&<label>Or select another originally saved answer
+     <select value="" onChange={e=>{
+      if(e.target.value)apply(()=>chooseUnscrambleAlternative(lesson,index,e.target.value));
+     }}>
+      <option value="">Choose a saved alternative…</option>
+      {alternatives.map(term=><option key={term} value={term}
+       disabled={String(answers[1-index]??'').trim().toUpperCase()===term.trim().toUpperCase()}>
+       {term}</option>)}
+     </select>
+    </label>}
     {choices.some(x=>x.term===String(answers[index]??'').trim().toUpperCase())&&
      <button type="button" className="review-secondary"
       onClick={()=>apply(()=>chooseUnscramble(

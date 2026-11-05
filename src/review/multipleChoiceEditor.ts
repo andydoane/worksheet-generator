@@ -7,6 +7,16 @@ export type MultipleChoiceRow={
  sourceQuestionIds?:string[];sourceIds?:string[];
  origin?:string;teacherReviewRequired?:boolean;[key:string]:unknown;
 };
+/** Review order only. Keep each original array index so editing always writes
+ * back to the right choice. The printable generator still shuffles by seed.
+ */
+export function reviewChoiceOrder(row:MultipleChoiceRow):{choice:Choice;originalIndex:number}[]{
+ const choices=Array.isArray(row.choices)?row.choices:[];
+ return choices.map((choice,originalIndex)=>({choice,originalIndex}))
+  .sort((a,b)=>Number(b.choice?.isCorrect===true)-Number(a.choice?.isCorrect===true)||
+   a.originalIndex-b.originalIndex);
+}
+
 export function multipleChoiceRows(lesson:Lesson):MultipleChoiceRow[]{
  const rows=lesson.preparedActivities?.multipleChoice;
  return Array.isArray(rows)?rows:[];
