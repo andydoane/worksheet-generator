@@ -3142,115 +3142,115 @@
     "allTextChecksPassed": false,
     "checks": [
       {
-        "name": "Original seven Story Notes preserved verbatim",
+        "check": "Original seven Story Notes preserved verbatim",
         "passed": true
       },
       {
-        "name": "Original questions and answers preserved with source paragraph indices",
+        "check": "Original questions and answers preserved with source paragraph indices",
         "passed": true
       },
       {
-        "name": "All ten original review questions included",
+        "check": "All ten original review questions included",
         "passed": true
       },
       {
-        "name": "Bible book only in scriptureDisplay",
+        "check": "Bible book only in scriptureDisplay",
         "passed": true
       },
       {
-        "name": "The Big Idea correctly capitalizes God",
+        "check": "The Big Idea correctly capitalizes God",
         "passed": true
       },
       {
-        "name": "Four to six multiple choice questions and three answer choices each",
+        "check": "Four to six multiple choice questions and three answer choices each",
         "passed": true
       },
       {
-        "name": "Multiple Choice uses one correct and two suggested answers",
+        "check": "Multiple Choice uses one correct and two suggested answers",
         "passed": true
       },
       {
-        "name": "True/False fact pool has 12 to 16 distinct statements",
+        "check": "True/False fact pool has 12 to 16 distinct statements",
         "passed": true
       },
       {
-        "name": "True/False statements balanced 7 true and 7 false",
+        "check": "True/False statements balanced 7 true and 7 false",
         "passed": true
       },
       {
-        "name": "Every false fact is suggested and requires approval",
+        "check": "Every false fact is suggested and requires approval",
         "passed": true
       },
       {
-        "name": "Sort the Story gets eight facts",
+        "check": "Sort the Story gets eight facts",
         "passed": true
       },
       {
-        "name": "Sort the Story, True/False and Maze share no fact ID",
+        "check": "Sort the Story, True/False and Maze share no fact ID",
         "passed": true
       },
       {
-        "name": "Four alternative true/false facts remain",
+        "check": "Four alternative true/false facts remain",
         "passed": true
       },
       {
-        "name": "Four distinct, age-appropriate Small drawing prompts",
+        "check": "Four distinct, age-appropriate Small drawing prompts",
         "passed": true
       },
       {
-        "name": "Six short Match the Words pairs",
+        "check": "Six short Match the Words pairs",
         "passed": true
       },
       {
-        "name": "Circle the Mistakes contains six listed mistakes exactly once",
+        "check": "Circle the Mistakes contains six listed mistakes exactly once",
         "passed": true
       },
       {
-        "name": "Odd Words and Checkboxes use distinct word sets",
+        "check": "Odd Words and Checkboxes use distinct word sets",
         "passed": true
       },
       {
-        "name": "Finish the Story passage is 600–700 characters",
+        "check": "Finish the Story passage is 600–700 characters",
         "passed": true
       },
       {
-        "name": "All marked Finish the Story blanks are intact",
+        "check": "All marked Finish the Story blanks are intact",
         "passed": true
       },
       {
-        "name": "Prepared content exists for all 27 modules",
+        "check": "Prepared content exists for all 27 modules",
         "passed": true
       },
       {
-        "name": "Module IDs are unique and generators marked untested",
+        "check": "Module IDs are unique and generators marked untested",
         "passed": true
       },
       {
-        "name": "All referenced Story Notes exist",
+        "check": "All referenced Story Notes exist",
         "passed": true
       },
       {
-        "name": "Large drawing captions are 4–6 full, short event sentences",
+        "check": "Large drawing captions are 4–6 full, short event sentences",
         "passed": true
       },
       {
-        "name": "Large drawing captions reuse Story Order entries",
+        "check": "Large drawing captions reuse Story Order entries",
         "passed": true
       },
       {
-        "name": "Crossword has ten distinct single-word answers",
+        "check": "Crossword has ten distinct single-word answers",
         "passed": true
       },
       {
-        "name": "BSB verse is consistent across all seven scripture activities",
+        "check": "BSB verse is consistent across all seven scripture activities",
         "passed": true
       },
       {
-        "name": "All required metadata is kept pending",
+        "check": "All required metadata is kept pending",
         "passed": true
       },
       {
-        "name": "Prepared multiple-choice questions are distinct",
+        "check": "Prepared multiple-choice questions are distinct",
         "passed": true
       }
     ],
