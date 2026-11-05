@@ -23,6 +23,10 @@ import {markRequiredTasksReviewed} from './reviewProgress.ts';
 import {cleanReviewExport} from './exportCleanup.ts';
 import {cryptogramLetters} from '../cryptograms.ts';
 import {buildReviewPreflight,PREPARED_ACTIVITY_KEYS,reviewIssueTarget,type ReviewPreflight} from './preflight.ts';
+import {
+ wordBankDrafts as draftWordBanks,changeWordBankList,wordBankIssues,wordBankCounts,
+ type WordBankKind,type WordBankField,
+} from './wordBanks.ts';
 import './review.css';
 
 const SAVE_KEY='worksheet-studio:review-workbench:v1';
@@ -41,14 +45,6 @@ function initialSaved():Saved|null {
  return null;
 }
 const displayDate=()=>new Date().toISOString().slice(0,10);
-type WordBankKind='oddWords'|'checkboxes';
-function wordBankText(lesson:Lesson|null,kind:WordBankKind):string{
- const field=kind==='oddWords'?'unrelated':'incorrect';
- const words=lesson?.preparedActivities?.[kind]?.[field];
- return Array.isArray(words)?words.join('\n'):'';
-}
-
-
 function SourceContext({lesson,ids=[],questionIds=[]}:{lesson:Lesson;ids?:string[];questionIds?:string[]}){
  const notes=(lesson.storyNotes??[]).filter((n:any)=>ids.includes(n.id));
  const questions=(lesson.questions??[]).filter((q:any)=>questionIds.includes(q.id));
@@ -63,10 +59,7 @@ export default function ReviewApp(){
  const [lesson,setLesson]=useState<Lesson|null>(saved?.lesson??null);
  // Keep the raw textarea value (including trailing Enter/newlines) separate
  // from the normalized word array stored in the curriculum JSON.
- const [wordBankDrafts,setWordBankDrafts]=useState(()=>({
-  oddWords:wordBankText(saved?.lesson??null,'oddWords'),
-  checkboxes:wordBankText(saved?.lesson??null,'checkboxes'),
- }));
+ const [wordBankDrafts,setWordBankDrafts]=useState(()=>draftWordBanks(saved?.lesson??null));
  const [reviewed,setReviewed]=useState<string[]>(saved?.reviewed??[]);
  const [bulkReviewAcknowledged,setBulkReviewAcknowledged]=useState(false);
  const [bulkReviewNotice,setBulkReviewNotice]=useState('');
@@ -146,10 +139,7 @@ export default function ReviewApp(){
    throw Error('This is not a supported curriculum schema-v1 lesson or review session.');
   if(lesson&&!window.confirm('Load another lesson? Current edits will be replaced. Export your review session first if you need to keep it.'))return;
   setLesson(data);
-  setWordBankDrafts({
-   oddWords:wordBankText(data,'oddWords'),
-   checkboxes:wordBankText(data,'checkboxes'),
-  });
+  setWordBankDrafts(draftWordBanks(data));
   setReviewed(value?.lesson?.schemaVersion===1&&Array.isArray(value.reviewed)?value.reviewed:[]);
   setBulkReviewAcknowledged(false);setBulkReviewNotice('');
   setSelectedId(value?.lesson?.schemaVersion===1&&typeof value.selectedId==='string'?value.selectedId:'');
@@ -197,13 +187,20 @@ export default function ReviewApp(){
    setReviewed(prev=>prev.filter(x=>x!==active?.id));setError('');
   }catch(e){setError(String((e as Error).message??e));}
  }
- function changeWordList(key:WordBankKind,field:'unrelated'|'incorrect',value:string){
+ function changeWordList(key:WordBankKind,field:WordBankField,value:string){
   if(!lesson)return;
-  // A trailing Enter must stay visible until the teacher types the next word.
-  setWordBankDrafts(previous=>({...previous,[key]:value}));
-  const next=structuredClone(lesson);
-  next.preparedActivities[key][field]=value.split(/\r?\n/u).map(x=>x.trim()).filter(Boolean);
-  setLesson(next);setPreflight(null);setReviewed(prev=>prev.filter(x=>x!==active?.id));
+  try{
+   const next=changeWordBankList(lesson,key,field,value);
+   // Preserve the trailing Enter and partially typed words in either textarea.
+   setWordBankDrafts(previous=>({...previous,
+    [key]:{...previous[key],[field]:value},
+   }));
+   setLesson(next);setPreflight(null);
+   // The source-backed and suggested choices both affect this activity.
+   // Require renewed teacher review regardless of which field changed.
+   setReviewed(previous=>previous.filter(id=>id!==(key==='oddWords'?'odd-words':'checkboxes')));
+   setError('');
+  }catch(error){setError(String((error as Error).message??error));}
  }
  function applyVisualReview(next:Lesson){
   setLesson(next);setPreflight(null);
@@ -642,15 +639,46 @@ export default function ReviewApp(){
         </div>)}
        <p className="review-source">Every incorrect phrase must actually appear in the paragraph.</p>
       </div>}
-      {active.id==='odd-words'&&<div className="review-fields">
-       <label>Suggested unrelated words — one per line<textarea id="review-field-odd-words" rows={7} value={wordBankDrafts.oddWords}
-        onChange={e=>changeWordList('oddWords','unrelated',e.target.value)}/></label>
-       <p>Original related words: {lesson.preparedActivities.oddWords.related.join(', ')}</p>
+      {active.id==='odd-words'&&<div className="review-fields review-word-bank">
+       <p className="review-source">Choose 1–5 words that belong in the story and 1–5 that do not.
+        What Doesn’t Belong needs 6–10 choices altogether. Enter one choice per line (12 characters maximum,
+        including spaces). All choices must be distinct.</p>
+       <label>Story-related words ({wordBankCounts(lesson,'oddWords').story}/5)
+        <textarea id="review-field-odd-words" rows={6}
+         value={wordBankDrafts.oddWords.related}
+         onChange={e=>changeWordList('oddWords','related',e.target.value)}/></label>
+       <label>Unrelated words ({wordBankCounts(lesson,'oddWords').unrelated}/5)
+        <textarea id="review-field-odd-words-unrelated" rows={6}
+         value={wordBankDrafts.oddWords.unrelated}
+         onChange={e=>changeWordList('oddWords','unrelated',e.target.value)}/></label>
+       <p className="review-word-bank-total">Total: {wordBankCounts(lesson,'oddWords').total}/10 choices (minimum 6).</p>
+       {wordBankIssues(lesson,'oddWords').length>0&&
+        <div className="review-warning" role="alert">
+         <strong>Fix this word bank before preflight:</strong>
+         <ul>{wordBankIssues(lesson,'oddWords').map((issue,i)=><li key={i}>{issue}</li>)}</ul>
+        </div>}
+       <p className="review-source">Changing these worksheet choices does not change the original
+        vocabulary or source citations. Review your changes and mark this activity reviewed again.</p>
       </div>}
-      {active.id==='checkboxes'&&<div className="review-fields">
-       <label>Suggested incorrect choices — one per line<textarea id="review-field-checkboxes" rows={7} value={wordBankDrafts.checkboxes}
-        onChange={e=>changeWordList('checkboxes','incorrect',e.target.value)}/></label>
-       <p>Correct choices: {lesson.preparedActivities.checkboxes.correct.join(', ')}</p>
+      {active.id==='checkboxes'&&<div className="review-fields review-word-bank">
+       <p className="review-source">Choose 1–5 story-related choices and 1–5 unrelated choices.
+        Enter one choice per line (14 characters maximum; one or two words). All choices must be distinct.</p>
+       <label>Correct, story-related choices ({wordBankCounts(lesson,'checkboxes').story}/5)
+        <textarea id="review-field-checkboxes" rows={6}
+         value={wordBankDrafts.checkboxes.correct}
+         onChange={e=>changeWordList('checkboxes','correct',e.target.value)}/></label>
+       <label>Incorrect, unrelated choices ({wordBankCounts(lesson,'checkboxes').unrelated}/5)
+        <textarea id="review-field-checkboxes-incorrect" rows={6}
+         value={wordBankDrafts.checkboxes.incorrect}
+         onChange={e=>changeWordList('checkboxes','incorrect',e.target.value)}/></label>
+       <p className="review-word-bank-total">Total: {wordBankCounts(lesson,'checkboxes').total}/10 choices.</p>
+       {wordBankIssues(lesson,'checkboxes').length>0&&
+        <div className="review-warning" role="alert">
+         <strong>Fix this word bank before preflight:</strong>
+         <ul>{wordBankIssues(lesson,'checkboxes').map((issue,i)=><li key={i}>{issue}</li>)}</ul>
+        </div>}
+       <p className="review-source">Changing these worksheet choices does not change the original
+        vocabulary or source citations. Review your changes and mark this activity reviewed again.</p>
       </div>}
       {active.id==='sensitivity'&&<div className="review-note">
        <h3>Age suitability</h3>

@@ -127,12 +127,18 @@ test('Original curriculum ESV label stays accurate after BSB conversion and old 
   'Do not invent an unknown source translation');
 });
 
-test('Review page preserves raw multiline drafts for Odd Words and Checkboxes',async()=>{
+test('Review page preserves independent multiline drafts for all four word-bank fields',async()=>{
  const page=await readFile(new URL('../src/review/ReviewApp.tsx',import.meta.url),'utf8');
- assert.match(page,/value=\{wordBankDrafts\.oddWords\}/u);
- assert.match(page,/value=\{wordBankDrafts\.checkboxes\}/u);
- assert.match(page,/setWordBankDrafts\(previous=>\(\{\.\.\.previous,\[key\]:value\}\)\)/u);
- assert.match(page,/value\.split\(\/\\r\?\\n\/u\)\.map\(x=>x\.trim\(\)\)\.filter\(Boolean\)/u);
+ const helper=await readFile(new URL('../src/review/wordBanks.ts',import.meta.url),'utf8');
+ for(const field of ['oddWords.related','oddWords.unrelated',
+  'checkboxes.correct','checkboxes.incorrect']){
+  assert.ok(page.includes('value={wordBankDrafts.'+field+'}'),
+   'The editable '+field+' field keeps its own raw typing buffer');
+ }
+ assert.match(page,/setWordBankDrafts\(previous=>\(\{\.\.\.previous,/u);
+ assert.match(page,/\[key\]:\{\.\.\.previous\[key\],\[field\]:value\}/u);
+ assert.match(helper,/rawText\.split\(\/\\r\?\\n\/u\)/u);
+ assert.match(helper,/\.map\(line=>line\.trim\(\)\)\.filter\(Boolean\)/u);
  assert.match(page,/Original curriculum uses \{originalMemoryVerseTranslation\(lesson\)\}/u);
 });
 
