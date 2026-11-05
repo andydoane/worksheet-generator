@@ -33,7 +33,7 @@ export default function LessonContentDialog({
  const [bigIdea,setBigIdea]=useState(
   starting?.kind==='bigIdea'?starting.text:draft.bigIdea);
  const [source,setSource]=useState<'bsb'|'custom'>(
-  draft.verseTranslation&&draft.verseTranslation!=='BSB'?'custom':'bsb');
+  draft.verseTranslation==='BSB'||!draft.verseText.trim()?'bsb':'custom');
  const [reference,setReference]=useState(
   starting?.kind==='memoryVerse'?starting.reference:draft.verseReference);
  const [verseText,setVerseText]=useState(
@@ -137,13 +137,19 @@ export default function LessonContentDialog({
       <div className="lesson-dialog-field">
        <label htmlFor="lesson-edit-verse-reference">Memory Verse reference</label>
        <input id="lesson-edit-verse-reference" value={reference} maxLength={120}
-        placeholder="e.g. John 3:16" onChange={e=>setReference(e.target.value)}/>
+        placeholder="e.g. John 3:16" onChange={e=>{
+         setReference(e.target.value);
+         if(translation==='BSB')setTranslation('');
+        }}/>
       </div>
       <div className="lesson-dialog-field">
        <label htmlFor="lesson-edit-verse-text">Memory Verse text</label>
        <textarea id="lesson-edit-verse-text" rows={5} maxLength={1500}
         placeholder="Enter or paste the exact verse text."
-        value={verseText} onChange={e=>setVerseText(e.target.value)}/>
+        value={verseText} onChange={e=>{
+         setVerseText(e.target.value);
+         if(translation==='BSB')setTranslation('');
+        }}/>
        <small>{verseText.trim().length} / 1,500 characters. Actual activity limits may be shorter.</small>
       </div>
       <div className="lesson-dialog-field">
