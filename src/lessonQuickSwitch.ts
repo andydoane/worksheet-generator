@@ -33,14 +33,15 @@ export function createLessonWorksheet(entry:PublicLessonEntry,startId:WorksheetS
  * returned and the caller must keep the existing worksheet untouched.
  */
 export class PresetContentFitError extends Error{
- constructor(
-  readonly kind:'Big Idea'|'Memory Verse',
-  readonly issues:string[],
- ){
+ readonly kind:'Big Idea'|'Memory Verse';
+ readonly issues:string[];
+ constructor(kind:'Big Idea'|'Memory Verse',issues:string[]){
   super('This preset cannot use your chosen '+kind+': '+issues.join(' ')+
    ' Your current worksheet is unchanged. Edit your '+kind+
    ' or choose a shorter passage before trying again.');
   this.name='PresetContentFitError';
+  this.kind=kind;
+  this.issues=issues;
  }
 }
 
