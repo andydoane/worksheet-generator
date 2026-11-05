@@ -112,7 +112,7 @@ test('Review UI edits all four fields, preserves trailing Enter, reroutes errors
  assert.match(app,/wordBankIssues\(lesson,'checkboxes'\)/u);
  assert.match(app,/wordBankCounts\(lesson,'oddWords'\)/u);
  assert.match(app,/wordBankCounts\(lesson,'checkboxes'\)/u);
- assert.match(app,/setWordBankDrafts\(draftWordBanks\(data\)\)/u);
+ assert.match(app,/setWordBankDrafts\(draftWordBanks\(prepared\.lesson\)\)/u);
  const css=await readFile(new URL('../src/review/review.css',import.meta.url),'utf8');
  assert.match(css,/\.review-word-bank/u);
 });

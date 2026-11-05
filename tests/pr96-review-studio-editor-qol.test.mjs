@@ -85,7 +85,7 @@ test('Malformed and non-text answers keep the existing explicit repair path',()=
  assert.equal(prepareUnscrambleReview(bad).changed,false);
 });
 
-test('Review orders the correct Multiple Choice answer first while editing by original index',()=>{
+test('Review orders the correct Multiple Choice answer first while editing by original index',async()=>{
  const source=structuredClone(fixture);
  const row={
   id:'mc-review-1',question:'Where did Joseph go?',correctAnswer:'Egypt',
