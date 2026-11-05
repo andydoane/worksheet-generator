@@ -1,6 +1,7 @@
 import {useEffect,useMemo,useState} from 'react';
 import type {ChangeEvent} from 'react';
 import {parseBsbText,getBsbPassage,wordSpans,clipToWords,markSelectedWords,type BsbIndex,type Passage} from './bsb.ts';
+import {loadBsbIndex} from '../bsbLibrary.ts';
 import {applyBsbVerse,chooseSolveCodePhrase,createApprovedLesson,editAt,listReviewTasks,normalizeLegacySmallDrawingScenes,originalMemoryVerseTranslation,solveCodeChoices,useMatchingStoryOrderCaptions,type Lesson,type ReviewTask} from './model.ts';
 import {validateModule,MODULES} from '../modules.ts';
 import {MatchingPrintPreview} from '../MediumPrintPreview.tsx';
@@ -134,9 +135,8 @@ export default function ReviewApp(){
  },[lesson,reviewed,selectedId]);
  useEffect(()=>{
   let cancelled=false;
-  fetch(import.meta.env.BASE_URL+'review/bsb.txt')
-   .then(r=>{if(!r.ok)throw Error('The deployed BSB file is unavailable.');return r.text();})
-   .then(text=>{if(!cancelled){setIndex(parseBsbText(text));setBibleError('');}})
+  loadBsbIndex(import.meta.env.BASE_URL)
+   .then(loaded=>{if(!cancelled){setIndex(loaded);setBibleError('');}})
    .catch(e=>{if(!cancelled)setBibleError(String(e?.message??e));});
   return ()=>{cancelled=true;};
  },[]);
