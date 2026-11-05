@@ -144,5 +144,5 @@ test('Guide documents all registered modules, an example and direct-to-main publ
  assert.match(guide,/curriculum\/examples\/lesson-v1-unapproved\.example\.json/u);
  assert.match(guide,/ot-031-god-parts-the-red-sea\.lesson\.json/u);
  assert.match(pub,/Commit directly to the main branch/u);
- assert.match(pub,/A branch and PR is optional/u);
+ assert.match(pub,/### Optional: pull-request workflow/u);
 });
