@@ -1,12 +1,12 @@
 {
   "name": "worksheet-generator",
-  "version": "0.16.51",
+  "version": "0.16.52",
   "private": true,
   "type": "module",
   "scripts": {
     "dev": "vite",
     "check": "tsc --noEmit",
-    "validate:curriculum": "node scripts/validate-curriculum.mjs",
+    "validate:curriculum": "node --experimental-strip-types scripts/validate-curriculum.mjs",
     "validate:library": "node --experimental-strip-types scripts/curriculum-library.mjs",
     "test": "node --experimental-strip-types --test tests/*.test.mjs && npm run validate:curriculum && npm run validate:library",
     "sample:pdf": "node --experimental-strip-types scripts/create-sample-pdf.mjs",

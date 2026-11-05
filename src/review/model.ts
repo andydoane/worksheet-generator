@@ -1,6 +1,7 @@
 import {clipToWords,markSelectedWords,type Passage} from './bsb.ts';
 import {convertLessonActivities,type LessonActivityData} from '../lessonActivityConverter.ts';
 import {validateModule} from '../modules.ts';
+import {reviewSchemaErrors} from './schemaPreflight.ts';
 
 export type Lesson=Record<string,any>;
 export type ReviewTask={id:string;group:string;label:string;detail:string;optional?:boolean};
@@ -393,5 +394,12 @@ export function createApprovedLesson(
    'teacher-approval','sensitivity','source-wording',
   ].includes(f.type)).map((f:any)=>f.id),
  };
+ // Review preflight checks the working draft, but teacher signoff and
+ // Scripture-rights metadata are inserted only at this final step. Validate
+ // the EXACT downloadable object again, before creating any download.
+ const schemaProblems=reviewSchemaErrors(next);
+ if(schemaProblems.length)throw Error('Approved download blocked by curriculum schema:\n'+
+  schemaProblems.slice(0,12).join('\n')+
+  (schemaProblems.length>12?'\n…and '+(schemaProblems.length-12)+' more issues.':''));
  return next;
 }

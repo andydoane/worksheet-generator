@@ -25,7 +25,8 @@ import {MODULE_REPAIR_REGISTRY} from './repairRegistry.ts';
 import {markRequiredTasksReviewed} from './reviewProgress.ts';
 import {cleanReviewExport} from './exportCleanup.ts';
 import {cryptogramLetters} from '../cryptograms.ts';
-import {buildReviewPreflight,PREPARED_ACTIVITY_KEYS,reviewIssueTarget,type ReviewPreflight} from './preflight.ts';
+import {buildReviewPreflight,PREPARED_ACTIVITY_KEYS,reviewIssueTarget,type ReviewPreflight,type ReviewIssue} from './preflight.ts';
+import {applyReviewSchemaRepair,schemaRepairLabel} from './schemaPreflight.ts';
 import {
  wordBankDrafts as draftWordBanks,changeWordBankList,wordBankIssues,wordBankCounts,
  type WordBankKind,type WordBankField,
@@ -379,6 +380,19 @@ export default function ReviewApp(){
  const canPublish=lesson&&remaining===0&&preflight!==null&&preflight.issues.length===0&&
   preflight.convertedCount===preflight.totalCount&&
   reviewer.trim()&&signDate&&rightsConfirmed;
+ function repairSchemaIssue(issue:ReviewIssue){
+  if(!lesson||!issue.schemaRepair)return;
+  const label=schemaRepairLabel(issue.schemaRepair);
+  if(!window.confirm('Apply this metadata-only correction?\n\n'+label+
+   '\n\nYour original lesson text and sources will not be edited. This change will require preflight and the affected section to be reviewed again.'))return;
+  try{
+   const next=applyReviewSchemaRepair(lesson,issue.schemaRepair);
+   setLesson(next);setPreflight(null);
+   setReviewed(previous=>previous.filter(id=>id!==issue.taskId));
+   setRightsConfirmed(false);
+   setError('Metadata correction applied. Recheck this section and rerun preflight.');
+  }catch(error){setError(error instanceof Error?error.message:String(error));}
+ }
  function downloadApproved(){
   if(!canPublish||!lesson)return;
   try{
@@ -891,7 +905,7 @@ export default function ReviewApp(){
        <p><strong>{preflight.convertedCount}/{preflight.totalCount} activity types converted.</strong>
         {preflight.issues.length?' Select an issue below to edit the relevant activity.':
          preflight.convertedCount!==preflight.totalCount?' Conversion coverage is incomplete; inspect the prepared activity data.':
-         ' Preflight passed: all 27 activities and three numbered presets are buildable. GitHub CI still independently validates schema, publication rights and the approved file.'}</p>
+         ' Preflight passed: curriculum schema, 27 activities, and all three numbered presets are valid. GitHub CI independently checks the final approved file.'}</p>
        {preflight.issues.length>0&&<ul className="review-issue-list">
         {preflight.issues.map((issue,i)=><li key={issue.id+'-'+i}>
          <button type="button" className="review-issue-link"
@@ -903,8 +917,10 @@ export default function ReviewApp(){
           }}>
           <strong>{issue.label}</strong>
           <span>{issue.message}</span>
-          <small>Edit this issue →</small>
+          <small>{issue.schemaRepair?'Review the metadata issue →':'Edit this issue →'}</small>
          </button>
+         {issue.schemaRepair&&<button type="button" className="review-schema-fix"
+          onClick={()=>repairSchemaIssue(issue)}>{schemaRepairLabel(issue.schemaRepair)}</button>}
         </li>)}
        </ul>}
       </div>}
