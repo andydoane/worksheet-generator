@@ -1,5 +1,6 @@
 import {useEffect,useMemo,useRef,useState} from 'react';
 import BsbPassagePicker from './BsbPassagePicker.tsx';
+import {BIG_IDEA_MAX_CHARACTERS,MEMORY_VERSE_MAX_CHARACTERS} from './lessonContentLimits.ts';
 import {mediumWidths} from './MediumPrintPreview.tsx';
 import {
  planLessonContentChange,applyLessonContentChange,
@@ -115,10 +116,10 @@ export default function LessonContentDialog({
    {!reviewing&&<>
     {kind==='bigIdea'?<div className="lesson-dialog-field">
      <label htmlFor="lesson-edit-big-idea">Big Idea</label>
-     <textarea id="lesson-edit-big-idea" rows={3} maxLength={350} value={bigIdea}
+     <textarea id="lesson-edit-big-idea" rows={3} maxLength={BIG_IDEA_MAX_CHARACTERS} value={bigIdea}
       placeholder="What is the main idea the children should remember?"
       onChange={e=>setBigIdea(e.target.value)}/>
-     <small>{bigIdea.trim().length} / 350 characters. Some activities require much shorter text.</small>
+     <small>{bigIdea.trim().length} / {BIG_IDEA_MAX_CHARACTERS} characters (Solve the Code limit). Letter variety and print fitting are also checked.</small>
     </div>:<>
      <div className="lesson-verse-source" role="group" aria-label="Where to get your memory verse">
       <button type="button" className={source==='bsb'?'selected':''}
@@ -129,7 +130,7 @@ export default function LessonContentDialog({
      {source==='bsb'?<BsbPassagePicker
       initialReference={reference||'Exodus 15:11'}
       onCancel={onClose}
-      maxCharacters={1500}
+      maxCharacters={MEMORY_VERSE_MAX_CHARACTERS}
       validateSelection={validateBsb}
       onApply={selection=>review({kind:'memoryVerse',reference:selection.reference,
        text:selection.text,translation:'BSB'})}
@@ -144,13 +145,13 @@ export default function LessonContentDialog({
       </div>
       <div className="lesson-dialog-field">
        <label htmlFor="lesson-edit-verse-text">Memory Verse text</label>
-       <textarea id="lesson-edit-verse-text" rows={5} maxLength={1500}
+       <textarea id="lesson-edit-verse-text" rows={5} maxLength={MEMORY_VERSE_MAX_CHARACTERS}
         placeholder="Enter or paste the exact verse text."
         value={verseText} onChange={e=>{
          setVerseText(e.target.value);
          if(translation==='BSB')setTranslation('');
         }}/>
-       <small>{verseText.trim().length} / 1,500 characters. Actual activity limits may be shorter.</small>
+       <small>{verseText.trim().length} / {MEMORY_VERSE_MAX_CHARACTERS} characters (Verse Cryptogram limit). Word counts, brackets, and print fitting are also checked.</small>
       </div>
       <div className="lesson-dialog-field">
        <label htmlFor="lesson-edit-verse-translation">Translation or source (optional)</label>

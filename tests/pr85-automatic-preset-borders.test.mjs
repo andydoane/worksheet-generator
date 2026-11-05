@@ -252,7 +252,8 @@ test('Border controls are adjacent to Change Preset and Change Story and retain 
  assert.match(app,/choosePresetBorderMode\('same'\)/u);
  assert.match(app,/choosePresetBorderMode\('mix'\)/u);
  assert.match(app,/Regenerate Borders/u);
- assert.match(app,/carryPresetBorderMode\(draft,createLessonWorksheet\(entry,startId\)\)/u);
+ assert.match(app,/createSameStoryPresetWithContent\(draft,entry,startId/u);
+ assert.match(quick,/carryPresetBorderMode\(current,createLessonWorksheet\(entry,startId\)\)/u);
  assert.match(app,/reflowPresetBordersOnPage/u);
  assert.match(app,/setActivityBorder\(previous\.activityBorders,activeKey,id\)/u);
  assert.match(app,/cover-border-trigger/u);
