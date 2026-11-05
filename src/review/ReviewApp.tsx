@@ -1,10 +1,10 @@
-import {useEffect,useMemo,useState} from 'react';
+import {useEffect,useMemo,useRef,useState} from 'react';
 import type {ChangeEvent} from 'react';
 import {parseBsbText,getBsbPassage,wordSpans,clipToWords,markSelectedWords,type BsbIndex,type Passage} from './bsb.ts';
 import {loadBsbIndex} from '../bsbLibrary.ts';
 import {applyBsbVerse,chooseSolveCodePhrase,createApprovedLesson,editAt,listReviewTasks,normalizeLegacySmallDrawingScenes,originalMemoryVerseTranslation,solveCodeChoices,useMatchingStoryOrderCaptions,type Lesson,type ReviewTask} from './model.ts';
 import {validateModule,MODULES} from '../modules.ts';
-import {MatchingPrintPreview} from '../MediumPrintPreview.tsx';
+import {MatchingPrintPreview,mediumWidths} from '../MediumPrintPreview.tsx';
 import {addMatchingPair,editMatchingPair,matchingPairIssues,moveMatchingPair,removeMatchingPair} from './matchingWords.ts';
 import ConnectPhraseReviewEditor from './ConnectPhraseReviewEditor.tsx';
 import WordSearchReviewEditor from './WordSearchReviewEditor.tsx';
@@ -83,6 +83,10 @@ export default function ReviewApp(){
  const [unscramble,setUnscramble]=useState<number[]>([]);
  const [displayReference,setDisplayReference]=useState('');
  const [preflight,setPreflight]=useState<ReviewPreflight|null>(null);
+ const [preflightPending,setPreflightPending]=useState(false);
+ const preflightRunId=useRef(0);
+ const latestLesson=useRef(lesson);
+ latestLesson.current=lesson;
  const [focusIssueField,setFocusIssueField]=useState<string|null>(null);
  // Preserve the last conflict explanation while editing invalidates preflight.
  const [repairConflictWords,setRepairConflictWords]=useState<string[]>([]);
@@ -141,6 +145,28 @@ export default function ReviewApp(){
    .catch(e=>{if(!cancelled)setBibleError(String(e?.message??e));});
   return ()=>{cancelled=true;};
  },[]);
+ async function runMeasuredPreflight(){
+  if(!lesson)return;
+  const checkedLesson=lesson,request=++preflightRunId.current;
+  // A pending measurement is not approval; fail closed until it completes.
+  setPreflight(null);setPreflightPending(true);
+  try{
+   const {puzzlePdf,boldPdf,finishBody}=await mediumWidths();
+   // An edit or new lesson while fonts load must never restore stale success.
+   if(request!==preflightRunId.current||latestLesson.current!==checkedLesson)return;
+   setPreflight(buildReviewPreflight(checkedLesson,{
+    puzzle:puzzlePdf,verse:boldPdf,subtitle:finishBody,
+   }));
+   setError('');
+  }catch(e){
+   if(request!==preflightRunId.current||latestLesson.current!==checkedLesson)return;
+   setPreflight({convertedCount:0,totalCount:27,
+    issues:[reviewIssueTarget('Print-matched preflight could not run: '+
+     String((e as Error).message??e))]});
+  }finally{
+   if(request===preflightRunId.current)setPreflightPending(false);
+  }
+ }
  function acceptLesson(value:any){
   const data=value?.lesson?.schemaVersion===1?value.lesson:value;
   if(data?.schemaVersion!==1||typeof data.id!=='string'||!data.preparedActivities||!data.lessonDetails?.memoryVerse||!Array.isArray(data.reviewFlags))
@@ -894,11 +920,10 @@ export default function ReviewApp(){
       <h2>3. Validate & export</h2>
       <p>{remaining===0?'All review items marked. Run the actual converter preflight before approval.':remaining+' review decisions remain. You can export a working JSON at any time.'}</p>
       <div className="review-actions">
-       <button type="button" onClick={()=>{
-         try{setPreflight(buildReviewPreflight(lesson));setError('');}
-         catch(e){setPreflight({convertedCount:0,totalCount:27,
-          issues:[reviewIssueTarget(String((e as Error).message??e))]});}
-        }}>Run preflight checks</button>
+       <button type="button" disabled={preflightPending}
+        onClick={()=>{void runMeasuredPreflight();}}>
+        {preflightPending?'Checking printable fit…':'Run preflight checks'}
+       </button>
        <button type="button" className="review-secondary" onClick={()=>downloadJson(lesson.id+'.review.json',lesson)}>Export working JSON</button>
       </div>
       {preflight&&<div className={preflight.issues.length||preflight.convertedCount!==preflight.totalCount?'review-errors':'review-success'} role="status">
