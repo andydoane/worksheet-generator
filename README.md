@@ -1,3 +1,7 @@
+> **New ChatGPT conversation or contributor?** Start with the [living Worksheet Studio project handoff](docs/PROJECT-HANDOFF.md). It explains the current development workflow, architecture, safeguards, and roadmap. For preparing lesson JSON, see the separate [curriculum conversion guide](docs/CURRICULUM-CONVERSION-GUIDE.md).
+>
+> The PR notes below are historical. Confirm current repository code, issues, and Actions before following any older release instructions.
+
 ## PR 17o — approve and publish new curricula with one JSON file (v0.16.29)
 
 - The public app still discovers `curriculum/approved/*.lesson.json` automatically. Every approved lesson now carries its own **separately recorded, explicit BSB Scripture-rights clearance** under `publication.scriptureRights` as well as the existing `teacherSignoff`. Neither a lone approved flag nor a file in the approved folder is sufficient to publish.
