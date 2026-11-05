@@ -18,6 +18,9 @@ import PixelPictureReviewEditor from './PixelPictureReviewEditor.tsx';
 import FinishStoryReviewEditor from './FinishStoryReviewEditor.tsx';
 import LessonIntegrityReviewEditor from './LessonIntegrityReviewEditor.tsx';
 import MultipleChoiceBankReviewEditor from './MultipleChoiceBankReviewEditor.tsx';
+import {prepareUnscrambleReview} from './wordPuzzleEditors.ts';
+import {reviewChoiceOrder} from './multipleChoiceEditor.ts';
+import {sharedVerseBlankIssues} from './verseBlankSharing.ts';
 import {MODULE_REPAIR_REGISTRY} from './repairRegistry.ts';
 import {markRequiredTasksReviewed} from './reviewProgress.ts';
 import {cleanReviewExport} from './exportCleanup.ts';
@@ -40,7 +43,11 @@ type Saved={lesson:Lesson;reviewed:string[];selectedId:string};
 function initialSaved():Saved|null {
  try{const raw=localStorage.getItem(SAVE_KEY);if(!raw)return null;
  const parsed=JSON.parse(raw);
- if(parsed?.lesson?.schemaVersion===1&&parsed.lesson.id&&Array.isArray(parsed.reviewed))return parsed;
+ if(parsed?.lesson?.schemaVersion===1&&parsed.lesson.id&&Array.isArray(parsed.reviewed)){
+   const prepared=prepareUnscrambleReview(parsed.lesson);
+   return {...parsed,lesson:prepared.lesson,
+    reviewed:prepared.changed?parsed.reviewed.filter((id:string)=>id!=='unscramble-words'):parsed.reviewed};
+  }
  }catch{return null;}
  return null;
 }
@@ -138,9 +145,12 @@ export default function ReviewApp(){
   if(data?.schemaVersion!==1||typeof data.id!=='string'||!data.preparedActivities||!data.lessonDetails?.memoryVerse||!Array.isArray(data.reviewFlags))
    throw Error('This is not a supported curriculum schema-v1 lesson or review session.');
   if(lesson&&!window.confirm('Load another lesson? Current edits will be replaced. Export your review session first if you need to keep it.'))return;
-  setLesson(data);
-  setWordBankDrafts(draftWordBanks(data));
-  setReviewed(value?.lesson?.schemaVersion===1&&Array.isArray(value.reviewed)?value.reviewed:[]);
+  const prepared=prepareUnscrambleReview(data);
+  setLesson(prepared.lesson);
+  setWordBankDrafts(draftWordBanks(prepared.lesson));
+  const importedReview=value?.lesson?.schemaVersion===1&&Array.isArray(value.reviewed)?value.reviewed:[];
+  setReviewed(prepared.changed?
+   importedReview.filter((id:string)=>id!=='unscramble-words'):importedReview);
   setBulkReviewAcknowledged(false);setBulkReviewNotice('');
   setSelectedId(value?.lesson?.schemaVersion===1&&typeof value.selectedId==='string'?value.selectedId:'');
   setReference(data.lessonDetails.memoryVerse.reference);
@@ -466,8 +476,9 @@ export default function ReviewApp(){
        const mc=lesson.preparedActivities.multipleChoice[mcIndex];
        return <div className="review-fields">
         <label>Question<textarea id={'review-mc-'+mc.id} value={mc.question} onChange={e=>change(['preparedActivities','multipleChoice',mcIndex,'question'],e.target.value)}/></label>
-        {mc.choices.map((c:any,i:number)=><label key={i}>
-         {c.isCorrect?'Correct answer (from source)':'Suggested incorrect answer '+i}
+        <p className="review-source">Correct answer stays first here. Answer choices are shuffled only on the printed worksheet.</p>
+        {reviewChoiceOrder(mc).map(({choice:c,originalIndex:i},position)=><label key={i}>
+         {c.isCorrect?'Correct answer (from source)':'Suggested incorrect answer '+position}
          <input value={c.text} onChange={e=>change(['preparedActivities','multipleChoice',mcIndex,'choices',i,'text'],e.target.value)}/></label>)}
         <SourceContext lesson={lesson} ids={mc.sourceIds??[]} questionIds={mc.sourceQuestionIds??[]}/>
        </div>;
@@ -771,6 +782,14 @@ export default function ReviewApp(){
             onClick={()=>toggle(setter,i)}>{w.word}</button>;
           })}</div>
           <p className="review-source">{markSelectedWords(verseText,chosen)}</p>
+          <button type="button" className="review-secondary review-share-blanks"
+           disabled={sharedVerseBlankIssues(verseText,displayReference,chosen).length>0}
+           onClick={()=>{
+            const shared=[...chosen];
+            setFinish(shared);setUnscramble(shared);
+           }}>Use these blanks for both activities</button>
+          {chosen.length<4&&<small className="review-source">
+           Select 4–8 eligible blanks to copy the same selections to both activities.</small>}
           {validateModule({type:mode==='finish'?'finish-verse':'unscramble-verse',
             reference:displayReference,verse:markSelectedWords(verseText,chosen),seed:1}).map((s,i)=>
              <p className="review-warning" key={i}>{s}</p>)}
