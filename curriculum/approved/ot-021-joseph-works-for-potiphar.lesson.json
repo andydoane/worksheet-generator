@@ -3271,115 +3271,115 @@
     "allTextChecksPassed": false,
     "checks": [
       {
-        "name": "Seven source Story Notes, original and clean text separate",
+        "check": "Seven source Story Notes, original and clean text separate",
         "passed": true
       },
       {
-        "name": "Original notes extracted verbatim from source",
+        "check": "Original notes extracted verbatim from source",
         "passed": true
       },
       {
-        "name": "All source questions tracked with source paragraph indices",
+        "check": "All source questions tracked with source paragraph indices",
         "passed": true
       },
       {
-        "name": "All ten original Review Questions retained",
+        "check": "All ten original Review Questions retained",
         "passed": true
       },
       {
-        "name": "All nine who-said-it statements retained",
+        "check": "All nine who-said-it statements retained",
         "passed": true
       },
       {
-        "name": "Scripture display is Bible book name only",
+        "check": "Scripture display is Bible book name only",
         "passed": true
       },
       {
-        "name": "Big Idea capitalizes God",
+        "check": "Big Idea capitalizes God",
         "passed": true
       },
       {
-        "name": "Multiple Choice within 4-6 and exactly three options",
+        "check": "Multiple Choice within 4-6 and exactly three options",
         "passed": true
       },
       {
-        "name": "Multiple Choice has exactly one correct option and two suggested distractors",
+        "check": "Multiple Choice has exactly one correct option and two suggested distractors",
         "passed": true
       },
       {
-        "name": "True/False 12-16 facts",
+        "check": "True/False 12-16 facts",
         "passed": true
       },
       {
-        "name": "True/False seven true seven false",
+        "check": "True/False seven true seven false",
         "passed": true
       },
       {
-        "name": "Suggested false statements require teacher review",
+        "check": "Suggested false statements require teacher review",
         "passed": true
       },
       {
-        "name": "Eight distinct Sort the Story facts",
+        "check": "Eight distinct Sort the Story facts",
         "passed": true
       },
       {
-        "name": "TF, Maze, Sort disjoint within Preset 3",
+        "check": "TF, Maze, Sort disjoint within Preset 3",
         "passed": true
       },
       {
-        "name": "Four alternative T/F facts remain",
+        "check": "Four alternative T/F facts remain",
         "passed": true
       },
       {
-        "name": "Exactly four Small drawing scenes",
+        "check": "Exactly four Small drawing scenes",
         "passed": true
       },
       {
-        "name": "Matching pairs short",
+        "check": "Matching pairs short",
         "passed": true
       },
       {
-        "name": "Circle the Mistakes has six mapped errors",
+        "check": "Circle the Mistakes has six mapped errors",
         "passed": true
       },
       {
-        "name": "Odd Words and Checkboxes word banks are different",
+        "check": "Odd Words and Checkboxes word banks are different",
         "passed": true
       },
       {
-        "name": "27 activity modules prepared",
+        "check": "27 activity modules prepared",
         "passed": true
       },
       {
-        "name": "All prepared activity source references exist",
+        "check": "All prepared activity source references exist",
         "passed": true
       },
       {
-        "name": "Four to six Large Draw the Story captions",
+        "check": "Four to six Large Draw the Story captions",
         "passed": true
       },
       {
-        "name": "DrawStory captions match StoryOrder",
+        "check": "DrawStory captions match StoryOrder",
         "passed": true
       },
       {
-        "name": "Crossword clues distinct, readable, single-word answers",
+        "check": "Crossword clues distinct, readable, single-word answers",
         "passed": true
       },
       {
-        "name": "Proposed Scripture consistent across modules",
+        "check": "Proposed Scripture consistent across modules",
         "passed": true
       },
       {
-        "name": "Everything remains pending and generators untested",
+        "check": "Everything remains pending and generators untested",
         "passed": true
       },
       {
-        "name": "No identical prepared Multiple Choice questions",
+        "check": "No identical prepared Multiple Choice questions",
         "passed": true
       },
       {
-        "name": "No identical facts",
+        "check": "No identical facts",
         "passed": true
       }
     ],
