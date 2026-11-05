@@ -7,13 +7,15 @@ import {contentLinkForModule} from './lessonContentSync.ts';
 import type {LessonContentKind} from './lessonContentLinks.ts';
 import {lessonContentIsCustomized} from './lessonContentDialogModel.ts';
 import LessonContentDialog from './LessonContentDialog.tsx';
+import {mediumWidths} from './MediumPrintPreview.tsx';
 import {upgradeSavedDrawingCaptions} from './drawingDraftUpgrade.ts';
 import {hasMeaningfulDraft,exampleWorksheetDraft} from './welcomeFlow.ts';
 import {PUBLIC_LESSONS,approvedForPublic,type PublicLessonEntry} from './publishedLessonCatalog.ts';
 import {buildWorksheetRecipe,type RecipeId} from './worksheetRecipes.ts';
 import {WORKSHEET_RECIPES} from './worksheetRecipes.ts';
 import {
- createLessonWorksheet,createSamePresetForNewStory,isWorksheetStartId,needsLessonSwitchConfirmation,
+ createSamePresetForNewStory,createSameStoryPresetWithContent,
+ isWorksheetStartId,needsLessonSwitchConfirmation,
  type WorksheetStartId,
 } from './lessonQuickSwitch.ts';
 import {approvedLessonForDraft,buildYourOwnLessonDraft,canRecreateApprovedActivity,chooseActivityForDraft,isActivityCustomized,originalApprovedActivity,sameActivityContent} from './curriculumEditor.ts';
@@ -27,7 +29,7 @@ import {
 } from './activityBorders.ts';
 import ActivityBorderPicker from './ActivityBorderPicker.tsx';
 import {
- arrangePresetBorders,carryPresetBorderMode,regeneratePresetBorders,
+ arrangePresetBorders,regeneratePresetBorders,
  reflowPresetBordersOnPage,type PresetBorderMode,type PresetBorderSettings,
 } from './presetBorders.ts';
 import CoverTitlePreview from './CoverTitlePreview.tsx';
@@ -241,6 +243,8 @@ export default function App() {
   const [moduleNotice,setModuleNotice]=useState<string|null>(null);
   const [lessonPicker,setLessonPicker]=useState<'presets'|'stories'|null>(null);
   const [lessonPickerError,setLessonPickerError]=useState<string|null>(null);
+  const [switchingWorksheet,setSwitchingWorksheet]=useState(false);
+  const switchingWorksheetRef=useRef(false);
   const [borderGalleryOpen,setBorderGalleryOpen]=useState(false);
   const [borderSettingsOpen,setBorderSettingsOpen]=useState(false);
   const [contentDialog,setContentDialog]=useState<{kind:LessonContentKind;restoreOriginal?:boolean}|null>(null);
@@ -396,8 +400,8 @@ export default function App() {
     setDraft(previous=>regeneratePresetBorders(previous));
   }
 
-  function chooseQuickLessonWorksheet(startId:WorksheetStartId,entryOverride?:PublicLessonEntry){
-    if(exporting)return;
+  async function chooseQuickLessonWorksheet(startId:WorksheetStartId,entryOverride?:PublicLessonEntry){
+    if(exporting||switchingWorksheetRef.current)return;
     const entry=entryOverride??approvedLessonForDraft(draft,PUBLIC_LESSONS);
     if(!entry){
       setLessonPickerError('That Bible story is not available in the approved library.');
@@ -408,20 +412,38 @@ export default function App() {
       setLessonPickerError(null);
       return;
     }
+    switchingWorksheetRef.current=true;
+    setSwitchingWorksheet(true);
+    setLessonPickerError(null);
     try{
-      // Generate the next booklet before asking permission to replace the
-      // existing single-draft worksheet. Failure leaves the old draft intact.
-      const next=entryOverride
-        ?createSamePresetForNewStory(draft,entry)
-        :carryPresetBorderMode(draft,createLessonWorksheet(entry,startId));
-      if(needsLessonSwitchConfirmation(draft,PUBLIC_LESSONS)&&!window.confirm(
-        'Replace this customized worksheet? Changes to lesson details, activities, '+
-        'layouts and borders will be lost. You can cancel to keep your current work.'
-      ))return;
+      // Construct and validate the destination before asking for confirmation.
+      // A failure (including fonts/print fitting) leaves the saved draft intact.
+      let next:Draft;
+      if(entryOverride){
+        // A different Bible story always uses that story's original values.
+        next=createSamePresetForNewStory(draft,entry);
+      }else{
+        const widths=await mediumWidths();
+        next=createSameStoryPresetWithContent(draft,entry,startId,{
+          title:widths.title,body:widths.finishBody,puzzle:widths.puzzlePdf,
+          bank:widths.bank,subtitle:widths.boldPdf,
+          bankInkCenter:widths.bankInkCenter,
+        });
+      }
+      const explanation=entryOverride
+        ?'Switch Bible stories? Your current Big Idea, Memory Verse, activity edits, layouts and '+
+         'individual borders will be replaced with the new story’s defaults. Cancel to keep them.'
+        :'Switch presets? Your chosen Big Idea, Memory Verse and translation will be preserved '+
+         'and used in the new preset’s linked activities. Other activity edits, layouts and '+
+         'individual borders will be replaced. Cancel to keep this worksheet.';
+      if(needsLessonSwitchConfirmation(draft,PUBLIC_LESSONS)&&!window.confirm(explanation))return;
       startWorksheet(next,true);
     }catch(error){
       setLessonPickerError(error instanceof Error?error.message:
         'Could not load this preset. Your current worksheet is unchanged.');
+    }finally{
+      switchingWorksheetRef.current=false;
+      setSwitchingWorksheet(false);
     }
   }
 
@@ -669,11 +691,11 @@ export default function App() {
                         WORKSHEET_RECIPES.find(item=>item.id===draft.worksheetPresetId)?.name??'Custom worksheet'}</small>
                     </div>
                     <div className="lesson-switcher-actions">
-                      <button type="button" disabled={!approvedLesson||exporting}
+                      <button type="button" disabled={!approvedLesson||exporting||switchingWorksheet}
                         onClick={()=>openLessonPicker('presets')}>
                         {draft.worksheetPresetId==='build-own'?'Choose a Preset':'Change Preset'}
                       </button>
-                      <button type="button" disabled={exporting}
+                      <button type="button" disabled={exporting||switchingWorksheet}
                         onClick={()=>openLessonPicker('stories')}>Change Story</button>
                       {draft.worksheetPresetId?.startsWith('preset-')&&
                        <button type="button" disabled={exporting}
@@ -757,7 +779,8 @@ export default function App() {
                       aria-label={lessonPicker==='stories'?'Choose a different Bible story':'Choose worksheet preset'}>
                       <div className="lesson-switcher-picker-header">
                         <strong>{lessonPicker==='presets'?'Choose a preset for this story':'Choose a Bible story'}</strong>
-                        <button type="button" onClick={()=>{setLessonPicker(null);setLessonPickerError(null);}}>Cancel</button>
+                        <button type="button" disabled={switchingWorksheet}
+                         onClick={()=>{setLessonPicker(null);setLessonPickerError(null);}}>Cancel</button>
                       </div>
                       {lessonPicker==='stories'
                         ?<StoryPicker stories={PUBLIC_LESSONS.filter(approvedForPublic)}
@@ -765,21 +788,22 @@ export default function App() {
                          onSelect={chooseQuickStory}/>
                         :<div className="lesson-switcher-options">
                           {WORKSHEET_RECIPES.map(recipe=><button type="button" key={recipe.id}
-                            disabled={draft.worksheetPresetId===recipe.id}
+                            disabled={switchingWorksheet||draft.worksheetPresetId===recipe.id}
                             onClick={()=>{if(isWorksheetStartId(recipe.id))chooseQuickLessonWorksheet(recipe.id);}}>
                             <strong>{recipe.name}{draft.worksheetPresetId===recipe.id?' · Current':''}</strong>
                             <small>{recipe.description}</small>
                           </button>)}
-                          <button type="button" disabled={draft.worksheetPresetId==='build-own'}
+                          <button type="button" disabled={switchingWorksheet||draft.worksheetPresetId==='build-own'}
                             onClick={()=>chooseQuickLessonWorksheet('build-own')}>
                             <strong>Build My Own Worksheet{draft.worksheetPresetId==='build-own'?' · Current':''}</strong>
-                            <small>Start a fresh booklet using this story's details and choose your own activities.</small>
+                            <small>Start an empty booklet, keeping your chosen Big Idea and Memory Verse.</small>
                           </button>
                         </div>}
                       {lessonPickerError&&<p className="lesson-switcher-error" role="alert">{lessonPickerError}</p>}
                     </div>}
-                    <small className="lesson-switcher-hint">Choosing another preset or story replaces this one browser-saved worksheet.
-                      Customized work is protected by confirmation.</small>
+                    <small className="lesson-switcher-hint">Changing presets keeps your chosen Big Idea and Memory Verse
+                      and validates them against the new activities. Changing Bible stories loads that story’s defaults.
+                      Other worksheet edits are protected by confirmation.</small>
                   </section>}
                   <div className="field">
                     <label htmlFor="title">Worksheet title</label>

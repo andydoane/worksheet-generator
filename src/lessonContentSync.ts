@@ -1,4 +1,5 @@
 import type {StoredDraft} from './draftMigration.ts';
+import {BIG_IDEA_MAX_CHARACTERS,MEMORY_VERSE_MAX_CHARACTERS} from './lessonContentLimits.ts';
 import type {ActivityModule,ModuleAssignments,ModuleId} from './modules.ts';
 import {validateModule} from './modules.ts';
 import {linkedContentKind,readActivityContentLinks,type ActivityContentLinks,
@@ -212,12 +213,13 @@ export function planLessonContentChange(
  const text=change.text.trim();
  if(!text)issues.push({message:kind==='bigIdea'
   ?'Enter a Big Idea before applying.' :'Enter a Memory Verse before applying.'});
- if(kind==='bigIdea'&&text.length>350)
-  issues.push({message:'Keep the Big Idea at 350 characters or fewer.'});
+ if(kind==='bigIdea'&&text.length>BIG_IDEA_MAX_CHARACTERS)
+  issues.push({message:'Keep the Big Idea at '+BIG_IDEA_MAX_CHARACTERS+' characters or fewer.'});
  if(change.kind==='memoryVerse'){
   if(!change.reference.trim()||change.reference.trim().length>120)
    issues.push({message:'Enter a Memory Verse reference of 1–120 characters.'});
-  if(text.length>1500)issues.push({message:'Keep the Memory Verse at 1,500 characters or fewer.'});
+  if(text.length>MEMORY_VERSE_MAX_CHARACTERS)
+   issues.push({message:'Keep the Memory Verse at '+MEMORY_VERSE_MAX_CHARACTERS+' characters or fewer.'});
   if(change.translation!==undefined&&change.translation!==null&&change.translation.trim().length>80)
    issues.push({message:'Keep the translation label at 80 characters or fewer.'});
  }
@@ -271,10 +273,13 @@ export function planLessonContentChange(
  if(issues.length||blockingConflicts)return {
   kind,linkedSlots,updatedSlots:[],preservedSlots:[],conflicts,issues,
  };
- const updatedDraft:StoredDraft={...draft,modules,
-  activityDefaults:Object.keys(defaults).length?defaults:undefined,
-  activityContentLinks:Object.keys(nextLinks).length?nextLinks:undefined,
- };
+ const updatedDraft:StoredDraft={...draft,modules};
+ // Do not leave optional keys set to undefined. localStorage JSON omits them,
+ // and Build My Own drafts should round-trip without changing their shape.
+ if(Object.keys(defaults).length)updatedDraft.activityDefaults=defaults;
+ else delete updatedDraft.activityDefaults;
+ if(Object.keys(nextLinks).length)updatedDraft.activityContentLinks=nextLinks;
+ else delete updatedDraft.activityContentLinks;
  if(change.kind==='bigIdea')updatedDraft.bigIdea=text;
  else{
   updatedDraft.verseReference=change.reference.trim();

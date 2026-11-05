@@ -1,5 +1,6 @@
 import {shuffledIndices} from './shuffle.ts';
 import {formatVerseDashes} from './versePunctuation.ts';
+import {BIG_IDEA_MAX_CHARACTERS,MEMORY_VERSE_MAX_CHARACTERS} from './lessonContentLimits.ts';
 
 export type VerseCryptogram={type:'verse-cryptogram';reference:string;verse:string;seed:number};
 export type BigIdeaCryptogram={type:'big-idea-cryptogram';idea:string;seed:number};
@@ -36,7 +37,7 @@ export function validateCryptogram(module:Cryptogram):string[]{
   const errors:string[]=[];
   if(module.type==='verse-cryptogram'&&(!module.reference.trim()||module.reference.length>42))
     errors.push('Enter a Scripture reference of 1–42 characters.');
-  const max=module.type==='verse-cryptogram'?145:62;
+  const max=module.type==='verse-cryptogram'?MEMORY_VERSE_MAX_CHARACTERS:BIG_IDEA_MAX_CHARACTERS;
   if(!content.trim()||content.trim().length>max)
     errors.push('Enter text of 1–'+max+' characters for the '+(module.type==='verse-cryptogram'?'large':'medium')+' cryptogram.');
   if(letters.length<3)errors.push('Use at least three different letters for a meaningful code.');

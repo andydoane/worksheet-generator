@@ -202,10 +202,10 @@ test('too-long verses, short bracket banks and incorrect Big Ideas cannot be app
  assert.equal(giant.updatedDraft,undefined);
  assert.ok(giant.issues.some(x=>/printable area/u.test(x.message)));
  const ideaDraft=make('preset-3');
- const invalidIdea=planLessonContentChange(ideaDraft,{kind:'bigIdea',text:'A'.repeat(351)},{
+ const invalidIdea=planLessonContentChange(ideaDraft,{kind:'bigIdea',text:'A'.repeat(63)},{
   print:metrics});
  assert.equal(invalidIdea.updatedDraft,undefined);
- assert.match(invalidIdea.issues.map(x=>x.message).join(' '),/350 characters/);
+ assert.match(invalidIdea.issues.map(x=>x.message).join(' '),/62 characters/);
  assert.equal(JSON.stringify(draft),before);
 });
 
