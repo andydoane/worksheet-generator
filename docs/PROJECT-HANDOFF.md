@@ -2,8 +2,8 @@
 
 > **Snapshot, not source of truth.** This document is a starting point for future ChatGPT conversations and contributors, **not** a replacement for the current GitHub repository, tests, CI results, or the owner's newest instructions. The project changes frequently. Verify `main`, open issues/PRs, and recent Actions runs before making recommendations, editing code, or declaring work complete. Do not assume a roadmap item is still open because it appears below.
 
-**Last checked against `main`:** 2026-11-05 (`main` version `0.16.54` after PR #102; this PR proposes `0.16.55`)  
-**Package version represented by this change:** `0.16.55`  
+**Last checked against `main`:** 2026-11-05 (`main` version `0.16.55` after merged PR #103; this PR proposes `0.16.56`)  
+**Package version represented by this change:** `0.16.56`  
 **Repository:** https://github.com/andydoane/worksheet-generator  
 **Worksheet Studio:** https://andydoane.github.io/worksheet-generator/  
 **Curriculum Review Studio:** https://andydoane.github.io/worksheet-generator/review.html  
@@ -93,6 +93,7 @@ For a proposed change, explain it plainly, inspect the current implementation, i
 | [#98](https://github.com/andydoane/worksheet-generator/pull/98) | Fixed approved OT18/OT20/OT21 metadata/schema errors without changing lesson content |
 | [#99](https://github.com/andydoane/worksheet-generator/pull/99) | Shared structural schema validation in Review Studio and CI, confirmed metadata repairs, final approved-download gate, conversion guide, direct-to-main publishing instructions |
 | [#102](https://github.com/andydoane/worksheet-generator/pull/102) | Measured Large Connect the Verse word boxes replace the 12-letter cap; OT19 “understanding” now passes when the printed layout fits, with preview/PDF regression coverage |
+| [#103](https://github.com/andydoane/worksheet-generator/pull/103) | Who Am I suppresses a redundant standalone final question only in the measured SVG/PDF display; original teacher and curriculum wording remain untouched |
 
 The living handoff was introduced in [PR #101](https://github.com/andydoane/worksheet-generator/pull/101); its README link, PR checklist and freshness tests make this guide easier to discover and maintain.
 
@@ -100,7 +101,7 @@ Do not infer current merge status from this table; verify in GitHub. If a future
 
 ## 7. Current work and upcoming plans
 
-**Status last checked:** 2026-11-05, against `main` after PR #102 merged and issue #95 closed; there were no open PRs before the new Who Am I work. Refresh GitHub before acting; this table describes the status during this PR.
+**Status last checked:** 2026-11-05, against `main` after PR #103 merged and GitHub Actions passed; there were no open issues or PRs before this sidebar change. Refresh GitHub before acting; this table is a snapshot of the new PR in progress.
 
 | Status at last check | Item | Next action or caveat |
 | --- | --- | --- |
@@ -108,8 +109,8 @@ Do not infer current merge status from this table; verify in GitHub. If a future
 | **Merged** | [#97 — Crossword editing responsiveness](https://github.com/andydoane/worksheet-generator/pull/97) | Verify hands-on behavior if new feedback arrives; do not reimplement it |
 | **Merged; #95 closed** | [#102 — measured Connect the Verse fit](https://github.com/andydoane/worksheet-generator/pull/102) ([issue #95](https://github.com/andydoane/worksheet-generator/issues/95)) | Real PDF-matched Large word-box validation accepts OT19 `understanding` when it fits; teacher confirmed the fix works. Keep Scripture text untouched and preserve the fit checks |
 | **Merged** | [#101 — living project handoff](https://github.com/andydoane/worksheet-generator/pull/101) ([issue #100](https://github.com/andydoane/worksheet-generator/issues/100)) | This guide, README entrypoint, PR template and handoff regression tests are in `main`; maintain the focused roadmap and version details in each code PR |
-| **Draft PR** | [#103 — Plan C: printed Who Am I clue cleanup](https://github.com/andydoane/worksheet-generator/pull/103) | Add shared display-only cleanup for a standalone final question; leave approved and teacher-authored source data unchanged, validate the printed text, and test SVG/PDF geometry, empty clues, and punctuation variants |
-| **Next proposed PR (Plan D)** | Sidebar Home action and collapsible navigation | Add Home above Your Workspace and a keyboard-accessible collapsing icon rail without affecting the existing top-right Home; test responsive/mobile behavior and saved preference separately |
+| **Merged** | [#103 — Plan C: printed Who Am I clue cleanup](https://github.com/andydoane/worksheet-generator/pull/103) | Shared display-only cleanup hides standalone trailing question in both SVG and PDF. Raw reviewed/approved clues retain source text and attribution, with regression coverage |
+| **Draft PR** | [#104 — Plan D: sidebar Home and collapsible navigation](https://github.com/andydoane/worksheet-generator/pull/104) | Add Home above Your Workspace, toggle between 255px sidebar and 76px icon/number rail, persist the choice separately from worksheet drafts, retain top-right Home and mobile brand bar, and test labels/keyboard/responsiveness |
 
 **To maintain this table in every future feature/bug-fix PR:** replace stale statuses rather than simply adding rows; add the PR/issue link, brief outcome or current blocker, and accurate next step. Update **Status last checked**, package version above, and milestone context based on actual GitHub information. Never invent a date, merge, approval, or test result. Avoid documenting every small curriculum upload. Documentation-only changes may update the handoff without requiring a release; new direct-to-main approved JSON uploads are exempt.
 
