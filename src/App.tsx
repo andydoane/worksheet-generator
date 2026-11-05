@@ -1,7 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 import pkg from '../package.json';
 import {MODULE_GUIDANCE,isAutofilledModule,samplePlaceholder} from './moduleGuidance.ts';
-import {migrateDraftValue} from './draftMigration.ts';
+import {migrateDraftValue,type OriginalLessonContent} from './draftMigration.ts';
+import type {ActivityContentLinks} from './lessonContentLinks.ts';
+import {contentLinkForModule} from './lessonContentSync.ts';
 import {upgradeSavedDrawingCaptions} from './drawingDraftUpgrade.ts';
 import {hasMeaningfulDraft,exampleWorksheetDraft} from './welcomeFlow.ts';
 import {PUBLIC_LESSONS,approvedForPublic,type PublicLessonEntry} from './publishedLessonCatalog.ts';
@@ -58,6 +60,7 @@ type Draft = {
   bigIdea: string;
   verseReference: string;
   verseText: string;
+  verseTranslation?: string;
   layouts: Record<2 | 3 | 4, LayoutId>;
   modules: ModuleAssignments;
   activityBorders: ActivityBorders;
@@ -65,6 +68,8 @@ type Draft = {
   curriculumLessonId?:string;
   worksheetPresetId?:'preset-1'|'preset-2'|'preset-3'|'build-own';
   activityDefaults?:ModuleAssignments;
+  activityContentLinks?:ActivityContentLinks;
+  originalLessonContent?:OriginalLessonContent;
 };
 
 type EditorTab = 'details' | 'layouts' | 'activities';
@@ -458,6 +463,15 @@ export default function App() {
       const next:Draft={...previous,modules,activityBorders};
       if(Object.keys(activityDefaults).length)next.activityDefaults=activityDefaults;
       else delete next.activityDefaults;
+      // Only the exact canonical phrase or verse establishes a content link.
+      const activityContentLinks={...previous.activityContentLinks};
+      delete activityContentLinks[activeKey];
+      if(selected&&selected.source!=='unavailable'){
+       const link=contentLinkForModule(selected.module,previous);
+       if(link)activityContentLinks[activeKey]=link;
+      }
+      if(Object.keys(activityContentLinks).length)next.activityContentLinks=activityContentLinks;
+      else delete next.activityContentLinks;
       return next;
     });
     setModuleNotice(selected?.message??'Activity removed from this region.');
@@ -481,7 +495,12 @@ export default function App() {
     setDraft(previous=>{
       const modules={...previous.modules,[activeKey]:structuredClone(original)};
       const activityDefaults={...previous.activityDefaults,[activeKey]:structuredClone(original)};
-      return {...previous,modules,activityDefaults};
+      const activityContentLinks={...previous.activityContentLinks};
+      const link=contentLinkForModule(original,previous);
+      if(link)activityContentLinks[activeKey]=link;
+      else delete activityContentLinks[activeKey];
+      return {...previous,modules,activityDefaults,
+       activityContentLinks:Object.keys(activityContentLinks).length?activityContentLinks:undefined};
     });
     setModuleNotice('Original approved lesson activity restored. Other activities are unchanged.');
   }

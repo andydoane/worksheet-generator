@@ -1,5 +1,6 @@
 import {getRegions,type LayoutId,type PageNumber,type RegionSize} from './booklet.ts';
-import {EMPTY_DRAFT,type StoredDraft} from './draftMigration.ts';
+import {EMPTY_DRAFT,type StoredDraft,type OriginalLessonContent} from './draftMigration.ts';
+import {inferActivityContentLinks} from './lessonContentSync.ts';
 import {
  lessonContentPool,chooseUnusedLessonContent,chooseDistinctPresetWordBanks,
  type LessonContentChoice,
@@ -304,12 +305,20 @@ export function buildWorksheetRecipe(
  const openSlots=regions.filter(x=>!modules[x.slot]).map(x=>({
   slot:x.slot,page:x.page,size:x.region.size,
  }));
- const draft:StoredDraft={
-  ...structuredClone(EMPTY_DRAFT),
-  title,scripture,
+ const originalLessonContent:OriginalLessonContent={
   bigIdea:lesson.lessonDetails.bigIdeas?.[0]?.text??'',
   verseReference:lesson.lessonDetails.memoryVerse?.reference??'',
   verseText:lesson.lessonDetails.memoryVerse?.text??'',
+  ...(lesson.lessonDetails.memoryVerse?.translation
+   ?{verseTranslation:lesson.lessonDetails.memoryVerse.translation}:{}),
+ };
+ const linked=inferActivityContentLinks({
+  ...originalLessonContent,modules,activityDefaults:modules,
+ });
+ const draft:StoredDraft={
+  ...structuredClone(EMPTY_DRAFT),
+  title,scripture,
+  ...originalLessonContent,
   layouts:{...recipe.layouts},
   modules,
   // Review-only sample data never becomes a public lesson context.
@@ -317,6 +326,8 @@ export function buildWorksheetRecipe(
    curriculumLessonId:lesson.id,
    ...(!isLegacy?{worksheetPresetId:id as 'preset-1'|'preset-2'|'preset-3'}:{}),
    activityDefaults:structuredClone(modules),
+   ...(Object.keys(linked).length?{activityContentLinks:linked}:{}),
+   originalLessonContent:structuredClone(originalLessonContent),
   }:{}),
  };
  return {
