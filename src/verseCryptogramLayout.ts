@@ -8,6 +8,8 @@ export const LARGE_CIPHER_HEIGHT=(BOOKLET.cell.height*2-BOOKLET.padding*2)*72;
 export const VERSE_CIPHER_WORD_GAP=16;
 export const VERSE_CIPHER_MIN_CELL=13;
 export const VERSE_CIPHER_MAX_CELL=21.5;
+/** Extra vertical breathing room is allowed only after the word and cell fit is fixed. */
+export const VERSE_CIPHER_MAX_LINE_STEP=48;
 
 type CipherCell={char:string;symbol?:number};
 type Word={cells:CipherCell[];width:number};
@@ -115,7 +117,8 @@ export function planVerseCryptogram(
   const symbolTopOffset=6;
   const inkHeight=symbolTopOffset+symbolSize;
   const minimumPitch=Math.max(28,symbolSize+18);
-  const lineStep=lines.length===1?0:Math.min(42,(available-inkHeight)/(lines.length-1));
+  const lineStep=lines.length===1?0:Math.min(VERSE_CIPHER_MAX_LINE_STEP,
+   (available-inkHeight)/(lines.length-1));
   if(lines.length>1&&lineStep<minimumPitch-.001)continue;
   const totalHeight=inkHeight+(lines.length-1)*lineStep;
   if(totalHeight>available+.001)continue;

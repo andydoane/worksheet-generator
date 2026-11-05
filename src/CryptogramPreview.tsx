@@ -64,7 +64,7 @@ function VerseCryptogramPreview({module}:{module:VerseCryptogram}){
      textAnchor="middle" fontFamily="Nunito" fontWeight="700"
      fontSize={plan.referenceSize} fill="#242424">{data.reference}</text>}
     {plan.bodyCells.map((cell,i)=>cell.symbol===undefined?
-     <text key={'punct-'+i} x={cell.x} y={cell.lineY+2}
+     <text key={'punct-'+i} x={cell.x} y={cell.lineY}
       fontFamily="Nunito" fontWeight="500" fontSize="10"
       fill="#242424">{cell.char}</text>:
      <g key={'cipher-'+i}>
