@@ -77,7 +77,7 @@ export default function SmallModuleEditor({ module, onChange }: Props) {
           <textarea id="who-clue" rows={5} value={module.clue} onChange={(e) => onChange({ clue:e.target.value })} placeholder={samplePlaceholder(module.type,'clue')} />
           <label htmlFor="who-answer">Character's name</label>
           <input id="who-answer" value={module.answer} onChange={(e) => onChange({ answer:e.target.value })} placeholder={samplePlaceholder(module.type,'answer')} />
-          <p>The clue fits the top portion of the activity. The separate Who Am I? question and a writing line for each answer letter stay clear below.</p>
+          <p>The clue fits the top portion of the activity. A separate trailing “Who am I?” is omitted only from the printed clue, without changing your saved text. The large question and writing lines stay below.</p>
         </div>
       );
   }

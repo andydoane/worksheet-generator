@@ -2,6 +2,7 @@ import type {MeasureText} from './mediumParityLayout.ts';
 import {balancedBankLines} from './balancedBankLines.ts';
 import {answerCharacters,type WhoAmI} from './smallModules.ts';
 import {WHO_AM_I_CLUE_MAX} from './whoAmILimits.ts';
+import {printedWhoAmIClue} from './whoAmIClue.ts';
 import {SMALL_PRINT_WIDTH,SMALL_PRINT_HEIGHT,type SmallLine} from './smallParityLayout.ts';
 
 /** Shared constraint for the editor and printable layout.
@@ -26,7 +27,7 @@ export type WhoAmIPrintPlan={
  */
 export function planWhoAmI(module:WhoAmI,clueWidth:MeasureText,
  width=SMALL_PRINT_WIDTH,height=SMALL_PRINT_HEIGHT):WhoAmIPrintPlan|null{
- const clue=module.clue.trim(),answer=answerCharacters(module.answer);
+ const clue=printedWhoAmIClue(module.clue),answer=answerCharacters(module.answer);
  if(!clue||clue.length>WHO_AM_I_CLUE_MAX||!answer.length)return null;
  const clueTop=8,dividerY=height*.52,clueBottom=dividerY-6;
  const clueAvailable=clueBottom-clueTop;

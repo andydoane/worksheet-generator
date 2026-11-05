@@ -5,6 +5,7 @@
 import { shuffledIndices } from './shuffle.ts';
 import {TRUE_FALSE_MAX_CHARACTERS} from './trueFalseLimits.ts';
 import {WHO_AM_I_CLUE_MAX} from './whoAmILimits.ts';
+import {printedWhoAmIClue} from './whoAmIClue.ts';
 
 export type MultipleChoice = {
   type: 'multiple-choice'; question: string; correct: string; wrong1: string; wrong2: string; seed: number;
@@ -188,7 +189,9 @@ export function validateSmallModule(module: SmallModule): string[] {
     }
     case 'who-am-i': {
       const errors: string[] = [];
-      if (!within(module.clue, WHO_AM_I_CLUE_MAX)) errors.push('Enter a character clue of 1–120 characters.');
+      const printedClue=printedWhoAmIClue(module.clue);
+      if (!printedClue) errors.push('Enter a descriptive character clue, not only “Who am I?”.');
+      else if (!within(printedClue, WHO_AM_I_CLUE_MAX)) errors.push('Enter a character clue of 1–120 characters after removing a redundant final “Who am I?”.');
       const name = module.answer.trim();
       if (!/^[\p{L}]+(?:[ -][\p{L}]+)*$/u.test(name) || Array.from(name).filter((c) => /\p{L}/u.test(c)).length > 14) {
         errors.push('Enter an answer of 1–14 letters (spaces and hyphens allowed).');
