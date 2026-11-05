@@ -88,7 +88,10 @@ export function validateSpecialty(module:SpecialtyModule):string[]{
       const errs:string[]=[];
       const maxWords=module.type==='connect-big-idea'?20:35;
       if(list.length<4||list.length>maxWords)errs.push('Enter 4–'+maxWords+' words to connect.');
-      if(list.some(w=>w.length>12))errs.push('Keep each word at 12 characters or fewer.');
+      // Connect the Verse uses measured Large word boxes, not a 12-letter cap.
+      // Keep the existing Big Idea activity limit independently.
+      if(module.type==='connect-big-idea'&&list.some(w=>w.length>12))
+        errs.push('Keep each Big Idea word at 12 characters or fewer.');
       const maxLength=module.type==='connect-verse'?260:125;
       if(!text.trim()||text.length>maxLength)errs.push('Keep the phrase under '+maxLength+' characters.');
       if([...text].some(c=>/\p{L}/u.test(c)&&!/[A-Za-z]/.test(c)))
