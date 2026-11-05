@@ -50,6 +50,13 @@ export function buildYourOwnLessonDraft(entry:PublicLessonEntry):StoredDraft{
   bigIdea:details.bigIdeas?.[0]?.text??'',
   verseReference:details.memoryVerse?.reference??'',
   verseText:details.memoryVerse?.text??'',
+  ...(details.memoryVerse?.translation?{verseTranslation:details.memoryVerse.translation}:{}),
+  originalLessonContent:{
+   bigIdea:details.bigIdeas?.[0]?.text??'',
+   verseReference:details.memoryVerse?.reference??'',
+   verseText:details.memoryVerse?.text??'',
+   ...(details.memoryVerse?.translation?{verseTranslation:details.memoryVerse.translation}:{}),
+  },
  };
 }
 
