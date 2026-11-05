@@ -21,7 +21,7 @@ export default function ConnectVersePrintPreview({module}:{module:ConnectVerseMo
  },[module.verse,module.seed]);
  return <div className="module-preview medium-print-layout connect-verse-print-preview">
   {state===null?<div className="medium-print-loading">Preparing print-matched verse…</div>:
-   state===false?<div className="medium-print-loading">This verse cannot fit. Try shorter words or fewer words.</div>:
+   state===false?<div className="medium-print-loading">This verse cannot fit the printable word boxes and reference bank at readable size.</div>:
   <svg className="medium-print-svg" viewBox={'0 0 '+LARGE_CONNECT_WIDTH+' '+LARGE_CONNECT_HEIGHT}
    preserveAspectRatio="xMidYMid meet" role="img"
    aria-label="Connect the Verse with a reference bank and nonoverlapping boxed words">
