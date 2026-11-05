@@ -1,0 +1,24 @@
+name: PR97 scoped crossword verification
+on:
+  push:
+    branches: [feat/pr97-crossword-debounced-preview]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+      - name: Test Crossword editor and preflight behavior
+        run: node --experimental-strip-types --test tests/pr80-crossword-review-and-repair-registry.test.mjs tests/pr97-crossword-debounced-preview.test.mjs
+      - name: Type-check
+        run: npm run check
+      - name: Build Vite client independently of invalid approved-curriculum metadata
+        run: npx vite build
+      - name: Verify committed BSB corpus
+        run: npm run verify:bsb
