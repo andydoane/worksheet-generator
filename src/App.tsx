@@ -4,6 +4,9 @@ import {MODULE_GUIDANCE,isAutofilledModule,samplePlaceholder} from './moduleGuid
 import {migrateDraftValue,type OriginalLessonContent} from './draftMigration.ts';
 import type {ActivityContentLinks} from './lessonContentLinks.ts';
 import {contentLinkForModule} from './lessonContentSync.ts';
+import type {LessonContentKind} from './lessonContentLinks.ts';
+import {lessonContentIsCustomized} from './lessonContentDialogModel.ts';
+import LessonContentDialog from './LessonContentDialog.tsx';
 import {upgradeSavedDrawingCaptions} from './drawingDraftUpgrade.ts';
 import {hasMeaningfulDraft,exampleWorksheetDraft} from './welcomeFlow.ts';
 import {PUBLIC_LESSONS,approvedForPublic,type PublicLessonEntry} from './publishedLessonCatalog.ts';
@@ -240,6 +243,8 @@ export default function App() {
   const [lessonPickerError,setLessonPickerError]=useState<string|null>(null);
   const [borderGalleryOpen,setBorderGalleryOpen]=useState(false);
   const [borderSettingsOpen,setBorderSettingsOpen]=useState(false);
+  const [contentDialog,setContentDialog]=useState<{kind:LessonContentKind;restoreOriginal?:boolean}|null>(null);
+  const [contentNotice,setContentNotice]=useState<string|null>(null);
 
   useEffect(() => {
     try {
@@ -250,7 +255,7 @@ export default function App() {
     }
   }, [draft]);
 
-  function edit(field: 'title' | 'scripture' | 'bigIdea' | 'verseReference' | 'verseText', value: string) {
+  function edit(field: 'title' | 'scripture', value: string) {
     setDraft((previous) => ({ ...previous, [field]: value }));
   }
 
@@ -308,6 +313,8 @@ export default function App() {
     // accidental erasure without requiring a complex custom modal.
     if (!window.confirm('Start a new worksheet? This will permanently clear the current lesson details, activities, layouts, and borders saved in this browser. This cannot be undone.')) return;
     setDraft(structuredClone(blank));
+    setContentDialog(null);
+    setContentNotice(null);
     setModuleNotice(null);
     setLessonPicker(null);
     setLessonPickerError(null);
@@ -328,6 +335,8 @@ export default function App() {
       'Replace your current saved worksheet? This will overwrite the worksheet saved in this browser. You can cancel to keep working on it.'
     ))return false;
     setDraft(structuredClone(next));
+    setContentDialog(null);
+    setContentNotice(null);
     setModuleNotice(null);
     setLessonPicker(null);
     setLessonPickerError(null);
@@ -803,19 +812,49 @@ export default function App() {
                     </div>}
                     <p>A border reduces the title text area to 4.3 × 2.1 inches.</p>
                   </div>
-                  <div className="field separated">
-                    <label htmlFor="bigIdea">Big Idea</label>
-                    <textarea id="bigIdea" value={draft.bigIdea} onChange={(e) => edit('bigIdea', e.target.value)} placeholder="One sentence capturing the heart of the lesson" rows={2} maxLength={350} />
-                  </div>
-                  <div className="field">
-                    <label htmlFor="verseReference">Memory verse reference</label>
-                    <input id="verseReference" value={draft.verseReference} onChange={(e) => edit('verseReference', e.target.value)} placeholder="e.g. 1 Samuel 17:47" maxLength={120} />
-                  </div>
-                  <div className="field">
-                    <label htmlFor="verseText">Memory verse text</label>
-                    <textarea id="verseText" value={draft.verseText} onChange={(e) => edit('verseText', e.target.value)} placeholder="Type the exact verse from your chosen Bible translation" rows={3} maxLength={1500} />
-                    <p>Text from your PR 1 draft is preserved, and layout selections save automatically too.</p>
-                  </div>
+                  <section className="lesson-content-summary separated" aria-labelledby="lesson-big-idea-heading">
+                    <div className="lesson-content-summary-head">
+                      <strong id="lesson-big-idea-heading">Big Idea</strong>
+                      <div className="lesson-content-summary-actions">
+                        <button type="button" disabled={exporting}
+                         onClick={()=>{setContentNotice(null);setContentDialog({kind:'bigIdea'});}}>
+                          Change Big Idea</button>
+                        {lessonContentIsCustomized(draft,'bigIdea')&&
+                         <button type="button" className="lesson-content-restore"
+                          disabled={exporting}
+                          onClick={()=>{setContentNotice(null);setContentDialog({kind:'bigIdea',restoreOriginal:true});}}>
+                          Restore Original</button>}
+                      </div>
+                    </div>
+                    <p className={'lesson-content-text'+(!draft.bigIdea.trim()?' lesson-content-placeholder':'')}>
+                      {draft.bigIdea||'No Big Idea selected yet.'}</p>
+                    {lessonContentIsCustomized(draft,'bigIdea')&&
+                     <small className="lesson-content-meta">Customized from the original preset lesson</small>}
+                  </section>
+                  <section className="lesson-content-summary" aria-labelledby="lesson-memory-verse-heading">
+                    <div className="lesson-content-summary-head">
+                      <strong id="lesson-memory-verse-heading">Memory Verse</strong>
+                      <div className="lesson-content-summary-actions">
+                        <button type="button" disabled={exporting}
+                         onClick={()=>{setContentNotice(null);setContentDialog({kind:'memoryVerse'});}}>
+                         Change Verse</button>
+                        {lessonContentIsCustomized(draft,'memoryVerse')&&
+                         <button type="button" className="lesson-content-restore"
+                          disabled={exporting}
+                          onClick={()=>{setContentNotice(null);setContentDialog({kind:'memoryVerse',restoreOriginal:true});}}>
+                          Restore Original</button>}
+                      </div>
+                    </div>
+                    <strong className="lesson-content-reference">
+                      {draft.verseReference||'No Memory Verse selected yet.'}</strong>
+                    {draft.verseTranslation&&
+                     <span className="lesson-content-meta">{draft.verseTranslation}</span>}
+                    <p className={'lesson-content-text'+(!draft.verseText.trim()?' lesson-content-placeholder':'')}>
+                      {draft.verseText||'Use Change Verse to choose from the BSB or enter your own text.'}</p>
+                    {lessonContentIsCustomized(draft,'memoryVerse')&&
+                     <small className="lesson-content-meta">Customized from the original preset lesson</small>}
+                  </section>
+                  {contentNotice&&<p className="lesson-content-success" role="status">{contentNotice}</p>}
                 </div>
               ) : tab === 'layouts' ? (
                 <div className="layouts-panel">
@@ -1035,6 +1074,15 @@ export default function App() {
           </div>
         </main>
       </div>
+      {contentDialog&&<LessonContentDialog key={contentDialog.kind+(contentDialog.restoreOriginal?'-restore':'')}
+       kind={contentDialog.kind} restoreOriginal={contentDialog.restoreOriginal}
+       draft={draft} onClose={()=>setContentDialog(null)}
+       onApply={next=>{
+        setDraft(next);
+        setContentNotice((contentDialog.kind==='bigIdea'?'Big Idea':'Memory Verse')+
+         ' and linked worksheet activities updated.');
+        setContentDialog(null);
+       }}/>} 
     </div>
   );
 }

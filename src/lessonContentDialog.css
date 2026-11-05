@@ -1,0 +1,69 @@
+.lesson-content-summary { display:grid;gap:12px;padding:17px;border:1px solid #dce9dc;border-radius:12px;background:#fbfdf9;min-width:0; }
+.lesson-content-summary.separated { border-top:2px solid #e3ece3; }
+.lesson-content-summary-head { display:flex;align-items:flex-start;justify-content:space-between;gap:10px;flex-wrap:wrap; }
+.lesson-content-summary-head strong { font-size:13px;color:#294f49; }
+.lesson-content-summary .lesson-content-text { margin:0;white-space:pre-wrap;overflow-wrap:anywhere;font-size:13px;color:#264d44;line-height:1.65;font-weight:600; }
+.lesson-content-summary .lesson-content-reference { color:#325a51;font-size:13px;overflow-wrap:anywhere; }
+.lesson-content-summary .lesson-content-meta { font-size:11px;color:#657e71; }
+.lesson-content-summary-actions { display:flex;gap:8px;align-items:center;flex-wrap:wrap; }
+.lesson-content-summary button { border:1px solid #bfd4c5;border-radius:8px;background:#fff;color:#236452;font-weight:800;font-size:12px;padding:8px 10px; }
+.lesson-content-summary button:hover:not(:disabled) { background:#f0f8ef;border-color:#83ae97; }
+.lesson-content-summary .lesson-content-restore { border-style:dashed;font-size:11px; }
+.lesson-content-summary .lesson-content-placeholder { color:#7e9387;font-weight:500;font-style:italic; }
+
+.lesson-content-dialog { box-sizing:border-box;width:min(720px,calc(100vw - 24px));max-width:none;max-height:min(88vh,900px);border:1px solid #d2e1d4;border-radius:16px;padding:0;background:#fff;color:#264e44;box-shadow:0 25px 70px rgba(14,37,27,.28);overflow:auto; }
+.lesson-content-dialog::backdrop { background:rgba(13,34,28,.62); }
+.lesson-content-dialog-head { display:flex;justify-content:space-between;align-items:flex-start;gap:15px;padding:23px 25px;border-bottom:1px solid #e6ede4;background:#f7faf6; }
+.lesson-content-dialog-head h2 { font-size:24px;line-height:1.2;margin:5px 0 8px;color:#24483d; }
+.lesson-content-dialog-head p { color:#657d70;font-size:12px;line-height:1.5;margin:0; }
+.lesson-content-kicker { font-size:10px;letter-spacing:1px;font-weight:900;color:#44816e; }
+.lesson-content-dialog .lesson-dialog-close { min-width:34px;min-height:34px;background:white;border:1px solid #d7e4da;border-radius:9px;font-size:15px;color:#516b60; }
+.lesson-content-dialog-body { display:grid;gap:18px;padding:24px 25px; }
+.lesson-dialog-field { display:grid;gap:7px; }
+.lesson-dialog-field label { font-size:12px;font-weight:900;color:#294f49; }
+.lesson-dialog-field input,.lesson-dialog-field textarea { box-sizing:border-box;width:100%;min-width:0;padding:11px 12px;border:1px solid #cbdccf;border-radius:9px;color:#24483d;background:white;font-size:14px;font-family:inherit;line-height:1.55; }
+.lesson-dialog-field textarea { resize:vertical; }
+.lesson-dialog-field input:focus,.lesson-dialog-field textarea:focus { outline:3px solid #c5e9d8;outline-offset:0;border-color:#3a9479; }
+.lesson-dialog-field small { font-size:11px;color:#71867a;line-height:1.5; }
+.lesson-dialog-manual { display:grid;gap:15px; }
+.lesson-verse-source { display:grid;grid-template-columns:1fr 1fr;gap:8px; }
+.lesson-verse-source button { border:1px solid #d0dfd3;background:#f8faf7;border-radius:9px;padding:12px 9px;font-weight:800;color:#537668; }
+.lesson-verse-source button.selected { background:#dfefe5;color:#205747;border-color:#7db89c; }
+.lesson-dialog-review { display:grid;gap:18px; }
+.lesson-dialog-selection { border:1px solid #d8e8d9;background:#f7faf7;border-radius:11px;padding:16px;display:grid;gap:7px; }
+.lesson-dialog-selection strong,.lesson-dialog-impact h3 { font-size:13px;color:#295547;margin:0; }
+.lesson-dialog-selection p { margin:0;font-size:14px;line-height:1.65;overflow-wrap:anywhere;white-space:pre-wrap; }
+.lesson-dialog-selection small,.lesson-dialog-selection .lesson-dialog-reference { font-size:11px;color:#6b8576; }
+.lesson-dialog-impact { display:grid;gap:9px; }
+.lesson-dialog-impact p { font-size:12px;line-height:1.5;color:#65796c;margin:0; }
+.lesson-dialog-impact ul { padding:0;margin:0;list-style:none;display:grid;gap:6px; }
+.lesson-dialog-impact li { border:1px solid #e0e9df;border-radius:8px;padding:10px 12px;display:flex;flex-wrap:wrap;gap:6px;justify-content:space-between;align-items:baseline; }
+.lesson-dialog-impact li span { font-size:12px;font-weight:800; }
+.lesson-dialog-impact li small { color:#597b6c;font-size:11px; }
+.lesson-dialog-conflicts { border:1px solid #e9dcc5;padding:14px;border-radius:10px;display:grid;gap:9px; }
+.lesson-dialog-conflicts legend { font-size:13px;font-weight:900;color:#805a20;padding:0 5px; }
+.lesson-dialog-conflicts p { margin:0;color:#725a34;font-size:12px;line-height:1.5; }
+.lesson-dialog-conflicts label { display:flex;gap:9px;align-items:flex-start;font-size:12px;line-height:1.5;color:#3d5147;cursor:pointer; }
+.lesson-dialog-conflicts label input { flex-shrink:0;margin-top:3px; }
+.lesson-dialog-errors,.lesson-dialog-warning { padding:12px 13px;border-left:3px solid #b86b4b;background:#fff7f2;color:#7d4732;border-radius:5px;font-size:12px;line-height:1.6; }
+.lesson-dialog-errors strong { font-size:13px; }
+.lesson-dialog-errors ul { margin:8px 0;padding-left:20px; }
+.lesson-dialog-errors p { margin:5px 0 0; }
+.lesson-dialog-ready { margin:0;font-size:12px;line-height:1.55;color:#326a50;background:#edf8ee;padding:12px;border-radius:8px; }
+.lesson-dialog-actions { display:flex;justify-content:flex-end;gap:8px;flex-wrap:wrap; }
+.lesson-dialog-actions button { border-radius:9px;border:1px solid #cadacf;background:white;color:#2b5749;font-size:12px;padding:10px 13px;font-weight:850; }
+.lesson-dialog-actions button.lesson-dialog-primary { background:#307e6c;border-color:#307e6c;color:#fff; }
+.lesson-dialog-actions button:disabled { opacity:.42;cursor:not-allowed; }
+.lesson-content-dialog .bsb-picker { font-size:13px; }
+.lesson-content-dialog .bsb-picker-controls select { font-size:12px; }
+.lesson-content-dialog .bsb-picker-reference input { font-size:13px; }
+@media(max-width:540px) {
+ .lesson-content-dialog { width:calc(100vw - 12px);max-height:94vh; }
+ .lesson-content-dialog-head,.lesson-content-dialog-body { padding:16px; }
+ .lesson-content-dialog-head h2 { font-size:21px; }
+ .lesson-verse-source { grid-template-columns:1fr; }
+ .lesson-dialog-actions { justify-content:stretch; }
+ .lesson-dialog-actions button { flex:1; }
+}
+
+.lesson-content-success { margin:0;padding:11px 14px;border:1px solid #cae5cf;border-radius:9px;background:#edf8f0;color:#286449;font-weight:750;font-size:12px;line-height:1.5; }
