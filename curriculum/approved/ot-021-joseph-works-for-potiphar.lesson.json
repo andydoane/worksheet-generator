@@ -1,0 +1,3392 @@
+{
+  "schemaVersion": 1,
+  "schemaStatus": "proposed-v1; pending teacher and generator verification",
+  "id": "ot-021-joseph-works-for-potiphar",
+  "curriculum": {
+    "series": "Old Testament",
+    "lessonNumber": 21
+  },
+  "lessonDetails": {
+    "title": "Joseph Works for Potiphar",
+    "scripturePassages": [
+      "Genesis 39",
+      "Romans 15:4",
+      "Matthew 28:20"
+    ],
+    "scriptureDisplay": "Genesis",
+    "bigIdeas": [
+      {
+        "origin": "adapted",
+        "text": "God is always with us, in good times and bad.",
+        "sourceIds": [
+          "sn-02",
+          "sn-07"
+        ],
+        "source": {
+          "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+          "section": "Important Idea",
+          "page": 5,
+          "sourceParagraphIndex": 144,
+          "details": "Source uses a font/display layout that shows “god”; capitalization normalized for God in the prepared Big Idea. Original source remains unchanged."
+        }
+      }
+    ],
+    "memoryVerse": {
+      "reference": "Matthew 28:20",
+      "translation": "BSB",
+      "text": "And surely I am with you always, even to the end of the age.”",
+      "isExcerpt": true,
+      "hasEllipses": false,
+      "requiresTextReview": false,
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 206,
+        "details": "Original ESV: “And behold, I am with you always, to the end of the age.” Proposed BSB wording checked at https://ebible.org/engbsb/MAT28.htm ; teacher should confirm approved translation and excerpt selection."
+      },
+      "alsoVerifiedAt": {
+        "filename": "https://ebible.org/engbsb/MAT28.htm",
+        "section": "Berean Standard Bible, Matthew 28:20",
+        "details": "Publicly available BSB verse checked for proposed wording; teacher must approve final excerpt."
+      },
+      "originalTranslation": "BSB",
+      "bsbSource": {
+        "reference": "Matthew 28:20",
+        "sourceUrl": "https://bereanbible.com/bsb.txt",
+        "publicDomainTerms": "https://berean.bible/terms.htm",
+        "startWord": 11,
+        "endWord": 24
+      }
+    }
+  },
+  "sourceFiles": [
+    {
+      "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+      "format": "odt",
+      "role": "primary teaching source",
+      "note": "Original 16-page OT21 ODT lesson. Seven Story Notes, teaching/discussion questions, Who Said It review statements, ten review questions, and memory verse have been indexed. The original ESV excerpt is retained in verse provenance, while BSB is proposed for new worksheet text."
+    }
+  ],
+  "storyNotes": [
+    {
+      "id": "sn-01",
+      "order": 1,
+      "originalText": "Joseph was taken to Egypt and sold as a SLAVE to Potiphar, captain of the palace guard.",
+      "cleanText": "Joseph was taken to Egypt and sold as a slave to Potiphar, captain of the palace guard.",
+      "emphasizedWords": [
+        "SLAVE"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "STORY NOTE",
+        "page": 1,
+        "sourceParagraphIndex": 29
+      }
+    },
+    {
+      "id": "sn-02",
+      "order": 2,
+      "originalText": "God was WITH Joseph and gave him success at everything he did.",
+      "cleanText": "God was with Joseph and gave him success at everything he did.",
+      "emphasizedWords": [
+        "WITH"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "STORY NOTE",
+        "page": 2,
+        "sourceParagraphIndex": 44
+      }
+    },
+    {
+      "id": "sn-03",
+      "order": 3,
+      "originalText": "Potiphar put Joseph in CHARGE of his house. He didn't have to worry about anything.",
+      "cleanText": "Potiphar put Joseph in charge of his house. He didn't have to worry about anything.",
+      "emphasizedWords": [
+        "CHARGE"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "STORY NOTE",
+        "page": 2,
+        "sourceParagraphIndex": 59
+      }
+    },
+    {
+      "id": "sn-04",
+      "order": 4,
+      "originalText": "Potiphar's WIFE asked Joseph to commit adultery with her, but Joseph told her no.",
+      "cleanText": "Potiphar's wife asked Joseph to commit adultery with her, but Joseph told her no.",
+      "emphasizedWords": [
+        "WIFE"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "STORY NOTE",
+        "page": 3,
+        "sourceParagraphIndex": 74
+      }
+    },
+    {
+      "id": "sn-05",
+      "order": 5,
+      "originalText": "One day, Potiphar's wife grabbed him. Joseph ran AWAY, leaving his coat behind.",
+      "cleanText": "One day, Potiphar's wife grabbed him. Joseph ran away, leaving his coat behind.",
+      "emphasizedWords": [
+        "AWAY"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "STORY NOTE",
+        "page": 3,
+        "sourceParagraphIndex": 93
+      }
+    },
+    {
+      "id": "sn-06",
+      "order": 6,
+      "originalText": "Potiphar's wife LIED. She told her husband that Joseph had attacked her.",
+      "cleanText": "Potiphar's wife lied. She told her husband that Joseph had attacked her.",
+      "emphasizedWords": [
+        "LIED"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "STORY NOTE",
+        "page": 4,
+        "sourceParagraphIndex": 110
+      }
+    },
+    {
+      "id": "sn-07",
+      "order": 7,
+      "originalText": "Potiphar threw Joseph in PRISON. But God was with him. So the jailkeeper put Joseph in charge.",
+      "cleanText": "Potiphar threw Joseph in prison. But God was with him. So the jailkeeper put Joseph in charge.",
+      "emphasizedWords": [
+        "PRISON"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "STORY NOTE",
+        "page": 4,
+        "sourceParagraphIndex": 129
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q-01",
+      "question": "How many of you have ridden a roller coaster before?",
+      "answer": "Have the kids answer with a show of hands.",
+      "kind": "discussion",
+      "scope": "introduction",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 9
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone."
+    },
+    {
+      "id": "q-02",
+      "question": "Because his dad loved him, what did he give him?",
+      "answer": "A beautiful robe.",
+      "kind": "factual",
+      "scope": "introduction",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 15
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone."
+    },
+    {
+      "id": "q-03",
+      "question": "How did the other brothers feel about this?",
+      "answer": "They hated him.",
+      "kind": "factual",
+      "scope": "introduction",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 17
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone."
+    },
+    {
+      "id": "q-04",
+      "question": "How did the other brothers feel when they heard this?",
+      "answer": "They hated him more.",
+      "kind": "factual",
+      "scope": "introduction",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 19
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone."
+    },
+    {
+      "id": "q-05",
+      "question": "What did they do with Joseph?",
+      "answer": "Sold him as a slave to some traders.",
+      "kind": "factual",
+      "scope": "introduction",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 21
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone."
+    },
+    {
+      "id": "q-06",
+      "question": "What country did they take him to?",
+      "answer": "Egypt.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Story Teaching",
+        "page": 2,
+        "sourceParagraphIndex": 31
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone."
+    },
+    {
+      "id": "q-07",
+      "question": "What is a slave?",
+      "answer": "A person owned by and forced to work for someone else.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Story Teaching",
+        "page": 2,
+        "sourceParagraphIndex": 33
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone."
+    },
+    {
+      "id": "q-08",
+      "question": "Now, who lives in a palace?",
+      "answer": "A king.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Story Teaching",
+        "page": 2,
+        "sourceParagraphIndex": 35
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone."
+    },
+    {
+      "id": "q-09",
+      "question": "Who was there with Joseph in Egypt?",
+      "answer": "The Lord God.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Story Teaching",
+        "page": 2,
+        "sourceParagraphIndex": 46
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone."
+    },
+    {
+      "id": "q-10",
+      "question": "Because the Lord God was with Joseph, what happened?",
+      "answer": "Joseph was successful at everything Potiphar ordered him to do.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Story Teaching",
+        "page": 2,
+        "sourceParagraphIndex": 50
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone."
+    },
+    {
+      "id": "q-11",
+      "question": "And guess who noticed this?",
+      "answer": "Potiphar, who put Joseph in charge of his house.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Story Teaching",
+        "page": 2,
+        "sourceParagraphIndex": 52
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone."
+    },
+    {
+      "id": "q-12",
+      "question": "How did Potiphar’s plan turn out?",
+      "answer": "Great.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Story Teaching",
+        "page": 2,
+        "sourceParagraphIndex": 61
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone."
+    },
+    {
+      "id": "q-13",
+      "question": "Why were things going so well with Potiphar's household?",
+      "answer": "The Lord was with Joseph.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Story Teaching",
+        "page": 3,
+        "sourceParagraphIndex": 65
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone."
+    },
+    {
+      "id": "q-14",
+      "question": "Was this because of anything Potiphar did?",
+      "answer": "Nope! It was because the Lord was with Joseph!",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Story Teaching",
+        "page": 3,
+        "sourceParagraphIndex": 67
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone."
+    },
+    {
+      "id": "q-15",
+      "question": "Who?",
+      "answer": "Potiphar's wife.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Story Teaching",
+        "page": 3,
+        "sourceParagraphIndex": 78
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone."
+    },
+    {
+      "id": "q-16",
+      "question": "Did Joseph say yes or no to Mrs. Potiphar's plan?",
+      "answer": "No.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Story Teaching",
+        "page": 3,
+        "sourceParagraphIndex": 82
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone."
+    },
+    {
+      "id": "q-17",
+      "question": "But did Mrs. Potiphar give up?",
+      "answer": "Nope!",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Story Teaching",
+        "page": 3,
+        "sourceParagraphIndex": 86
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone."
+    },
+    {
+      "id": "q-18",
+      "question": "What did she keep doing?",
+      "answer": "Asking Joseph every day.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Story Teaching",
+        "page": 3,
+        "sourceParagraphIndex": 86
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone."
+    },
+    {
+      "id": "q-19",
+      "question": "One day, when no one was around to see, Mrs. Potiphar grabbed a handful of Joseph's coat and said, \"Come to bed with me!” When Mrs. Potiphar wouldn't let go, what did Joseph do to escape?",
+      "answer": "Left his coat behind.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Story Teaching",
+        "page": 4,
+        "sourceParagraphIndex": 97
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone."
+    },
+    {
+      "id": "q-20",
+      "question": "How do you think Potiphar's wife felt about this?",
+      "answer": "Mad.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Story Teaching",
+        "page": 4,
+        "sourceParagraphIndex": 99
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone."
+    },
+    {
+      "id": "q-21",
+      "question": "What was she holding?",
+      "answer": "Joseph's coat.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Story Teaching",
+        "page": 4,
+        "sourceParagraphIndex": 101
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone."
+    },
+    {
+      "id": "q-22",
+      "question": "What did she do to get everyone to run in to see her?",
+      "answer": "She screamed.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Story Teaching",
+        "page": 4,
+        "sourceParagraphIndex": 112
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone."
+    },
+    {
+      "id": "q-23",
+      "question": "What awful lie did she tell?",
+      "answer": "Joseph tried to force her to commit adultery with him.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Story Teaching",
+        "page": 4,
+        "sourceParagraphIndex": 114
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone."
+    },
+    {
+      "id": "q-24",
+      "question": "What did she say happened with the coat?",
+      "answer": "When she screamed, Joseph ran away and left it behind.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Story Teaching",
+        "page": 4,
+        "sourceParagraphIndex": 116
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone."
+    },
+    {
+      "id": "q-25",
+      "question": "How do you think Potiphar felt when he heard this untrue tale?",
+      "answer": "Various responses.",
+      "kind": "discussion",
+      "scope": "teaching",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Story Teaching",
+        "page": 4,
+        "sourceParagraphIndex": 118
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone."
+    },
+    {
+      "id": "q-26",
+      "question": "do I believe my wife or do I believe my most-trusted servant who is in charge of everything I own and does everything perfectly?",
+      "answer": "Various responses.",
+      "kind": "discussion",
+      "scope": "teaching",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Story Teaching",
+        "page": 4,
+        "sourceParagraphIndex": 120
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone."
+    },
+    {
+      "id": "q-27",
+      "question": "Who do you think he believed?",
+      "answer": "Various responses.",
+      "kind": "discussion",
+      "scope": "teaching",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Story Teaching",
+        "page": 4,
+        "sourceParagraphIndex": 120
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone."
+    },
+    {
+      "id": "q-28",
+      "question": "How did he feel when he heard what she said about Joseph?",
+      "answer": "Furious.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Story Teaching",
+        "page": 4,
+        "sourceParagraphIndex": 131
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone."
+    },
+    {
+      "id": "q-29",
+      "question": "Because he believed his wife’s lies, what did Potiphar do with Joseph?",
+      "answer": "Throw him in prison.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Story Teaching",
+        "page": 4,
+        "sourceParagraphIndex": 133
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone."
+    },
+    {
+      "id": "q-30",
+      "question": "Who was with Joseph?",
+      "answer": "The Lord God.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Story Teaching",
+        "page": 4,
+        "sourceParagraphIndex": 135
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone."
+    },
+    {
+      "id": "q-31",
+      "question": "Because of this, what did the jailkeeper do?",
+      "answer": "Put Joseph in charge of all the other prisoners.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Story Teaching",
+        "page": 4,
+        "sourceParagraphIndex": 137
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone."
+    },
+    {
+      "id": "q-32",
+      "question": "So how does the story of Joseph working for Potiphar teach us, strengthen us, encourage us, or give us hope?",
+      "answer": "Open discussion.",
+      "kind": "discussion",
+      "scope": "big-idea",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Important Idea",
+        "page": 5,
+        "sourceParagraphIndex": 143
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone."
+    },
+    {
+      "id": "q-33",
+      "question": "Who was there with Joseph?",
+      "answer": "The Lord God.",
+      "kind": "factual",
+      "scope": "big-idea",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Important Idea",
+        "page": 6,
+        "sourceParagraphIndex": 167
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone."
+    },
+    {
+      "id": "q-34",
+      "question": "How long did Jesus promise to be with his disciples?",
+      "answer": "To the end.",
+      "kind": "factual",
+      "scope": "big-idea",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Important Idea",
+        "page": 6,
+        "sourceParagraphIndex": 186
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone."
+    },
+    {
+      "id": "q-35",
+      "question": "Why?",
+      "answer": "Because Jesus promised forever life to those who believe in him.",
+      "kind": "factual",
+      "scope": "big-idea",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Important Idea",
+        "page": 6,
+        "sourceParagraphIndex": 200
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone."
+    },
+    {
+      "id": "q-36",
+      "question": "What promise did Jesus make to his disciples?",
+      "answer": "To be with them always.",
+      "kind": "factual",
+      "scope": "memory-verse",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 208
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone."
+    },
+    {
+      "id": "q-37",
+      "question": "What country was Joseph taken to?",
+      "answer": "Egypt",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Review Questions",
+        "page": 11,
+        "sourceParagraphIndex": 269
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone."
+    },
+    {
+      "id": "q-38",
+      "question": "Who was Joseph sold to?",
+      "answer": "Potiphar",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Review Questions",
+        "page": 11,
+        "sourceParagraphIndex": 270
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone."
+    },
+    {
+      "id": "q-39",
+      "question": "What job did Potiphar have?",
+      "answer": "Captain of the palace guard",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Review Questions",
+        "page": 11,
+        "sourceParagraphIndex": 271
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone."
+    },
+    {
+      "id": "q-40",
+      "question": "Why did Joseph have success at everything he did?",
+      "answer": "God was with him",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Review Questions",
+        "page": 11,
+        "sourceParagraphIndex": 272
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone."
+    },
+    {
+      "id": "q-41",
+      "question": "What job did Potiphar give Joseph? How did it work out?",
+      "answer": "Put him in charge of his house, never had to worry about anything",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Review Questions",
+        "page": 11,
+        "sourceParagraphIndex": 273
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone."
+    },
+    {
+      "id": "q-42",
+      "question": "Who asked Joseph to commit adultery?",
+      "answer": "Potiphar’s wife",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Review Questions",
+        "page": 11,
+        "sourceParagraphIndex": 274
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone."
+    },
+    {
+      "id": "q-43",
+      "question": "When Potiphar’s wife grabbed onto Joseph, what did he do?",
+      "answer": "Ran away, leaving his coat behind",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Review Questions",
+        "page": 11,
+        "sourceParagraphIndex": 275
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone."
+    },
+    {
+      "id": "q-44",
+      "question": "What did Potiphar’s wife tell her husband?",
+      "answer": "Joseph attacked her, she screamed, Joseph ran away",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Review Questions",
+        "page": 11,
+        "sourceParagraphIndex": 276
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone."
+    },
+    {
+      "id": "q-45",
+      "question": "What did Potiphar do with Joseph after listening to his wife’s story?",
+      "answer": "Threw him in prison",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Review Questions",
+        "page": 11,
+        "sourceParagraphIndex": 277
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone."
+    },
+    {
+      "id": "q-46",
+      "question": "How did things go for Joseph in prison?",
+      "answer": "God was with him; was placed in charge of other prisoners",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Review Questions",
+        "page": 11,
+        "sourceParagraphIndex": 278
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone."
+    },
+    {
+      "id": "q-47",
+      "question": "I can’t believe I’ve been dragged all the way to Egypt!",
+      "answer": "Joseph",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Review Questions",
+        "page": 9,
+        "sourceParagraphIndex": 257
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone. Original Who-Said-It statement is retained as a source review prompt, not rewritten as a question."
+    },
+    {
+      "id": "q-48",
+      "question": "I think this young man will make a fine slave for me to purchase.",
+      "answer": "Potiphar",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Review Questions",
+        "page": 9,
+        "sourceParagraphIndex": 258
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone. Original Who-Said-It statement is retained as a source review prompt, not rewritten as a question."
+    },
+    {
+      "id": "q-49",
+      "question": "My husband is Pharaoh’s bodyguard.",
+      "answer": "Potiphar’s wife",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Review Questions",
+        "page": 9,
+        "sourceParagraphIndex": 259
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone. Original Who-Said-It statement is retained as a source review prompt, not rewritten as a question."
+    },
+    {
+      "id": "q-50",
+      "question": "Hmm… I wonder what I’ll eat today. This is the only thing I have to worry about!",
+      "answer": "Potiphar",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Review Questions",
+        "page": 9,
+        "sourceParagraphIndex": 260
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone. Original Who-Said-It statement is retained as a source review prompt, not rewritten as a question."
+    },
+    {
+      "id": "q-51",
+      "question": "Everything I do turns out great! It’s because God is with me.",
+      "answer": "Joseph",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Review Questions",
+        "page": 9,
+        "sourceParagraphIndex": 261
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone. Original Who-Said-It statement is retained as a source review prompt, not rewritten as a question."
+    },
+    {
+      "id": "q-52",
+      "question": "Hey you, handsome guy! Come to bed with me.",
+      "answer": "Potiphar’s wife",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Review Questions",
+        "page": 9,
+        "sourceParagraphIndex": 262
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone. Original Who-Said-It statement is retained as a source review prompt, not rewritten as a question."
+    },
+    {
+      "id": "q-53",
+      "question": "No, I would never do such an evil thing to my God or my master Potiphar!",
+      "answer": "Joseph",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Review Questions",
+        "page": 9,
+        "sourceParagraphIndex": 263
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone. Original Who-Said-It statement is retained as a source review prompt, not rewritten as a question."
+    },
+    {
+      "id": "q-54",
+      "question": "Joseph attacked me! When I screamed, he ran away and left his coat behind!",
+      "answer": "Potiphar’s wife",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Review Questions",
+        "page": 9,
+        "sourceParagraphIndex": 264
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone. Original Who-Said-It statement is retained as a source review prompt, not rewritten as a question."
+    },
+    {
+      "id": "q-55",
+      "question": "How dare he hurt my wife! Throw that slave in prison!",
+      "answer": "Potiphar",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Review Questions",
+        "page": 9,
+        "sourceParagraphIndex": 265
+      },
+      "notes": "Original question preserved verbatim. Source answer retained; questions requiring nearby context are not assumed standalone. Original Who-Said-It statement is retained as a source review prompt, not rewritten as a question."
+    }
+  ],
+  "facts": [
+    {
+      "id": "tf-01",
+      "statement": "Joseph was sold to Potiphar in Egypt.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "STORY NOTE",
+        "page": 1,
+        "sourceParagraphIndex": 29
+      }
+    },
+    {
+      "id": "tf-02",
+      "statement": "Joseph was a slave in the land of Israel.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-03",
+      "statement": "God was with Joseph while he worked for Potiphar.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "STORY NOTE",
+        "page": 2,
+        "sourceParagraphIndex": 44
+      }
+    },
+    {
+      "id": "tf-04",
+      "statement": "Potiphar sent Joseph away because he did poor work.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-02",
+        "sn-03"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-05",
+      "statement": "Potiphar trusted Joseph to care for his house.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "STORY NOTE",
+        "page": 2,
+        "sourceParagraphIndex": 59
+      }
+    },
+    {
+      "id": "tf-06",
+      "statement": "Potiphar put Joseph in charge of Pharaoh's army.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-03"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-07",
+      "statement": "Potiphar’s wife asked Joseph to do wrong, but he said no.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "STORY NOTE",
+        "page": 3,
+        "sourceParagraphIndex": 74
+      }
+    },
+    {
+      "id": "tf-08",
+      "statement": "Joseph agreed to do what Potiphar’s wife asked.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-04"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-09",
+      "statement": "Joseph left his coat behind and ran away.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "STORY NOTE",
+        "page": 3,
+        "sourceParagraphIndex": 93
+      }
+    },
+    {
+      "id": "tf-10",
+      "statement": "Potiphar's wife told the truth about Joseph hurting her.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-11",
+      "statement": "Potiphar’s wife lied about Joseph.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "STORY NOTE",
+        "page": 4,
+        "sourceParagraphIndex": 110
+      }
+    },
+    {
+      "id": "tf-12",
+      "statement": "Joseph lied about Potiphar's wife.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-06"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-13",
+      "statement": "Potiphar sent Joseph to prison.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "STORY NOTE",
+        "page": 4,
+        "sourceParagraphIndex": 129
+      }
+    },
+    {
+      "id": "tf-14",
+      "statement": "God forgot about Joseph after he was sent to prison.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    }
+  ],
+  "vocabulary": {
+    "related": [
+      "JOSEPH",
+      "POTIPHAR",
+      "EGYPT",
+      "PHARAOH",
+      "COAT",
+      "HOUSE",
+      "PRISON",
+      "GUARD",
+      "SERVANT",
+      "JAILER",
+      "WIFE",
+      "GOD",
+      "BLESSING",
+      "TRUST",
+      "ESCAPE",
+      "LIE"
+    ],
+    "unrelated": [
+      "ARK",
+      "SHEPHERD",
+      "HARP",
+      "TENT",
+      "RIVER",
+      "BOAT",
+      "ALTAR",
+      "GIANT",
+      "FISH",
+      "LADDER",
+      "CAMEL",
+      "SHIELD"
+    ],
+    "entries": [
+      {
+        "id": "v-01",
+        "term": "JOSEPH",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-02",
+        "term": "POTIPHAR",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-03",
+        "term": "EGYPT",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-04",
+        "term": "PHARAOH",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-05",
+        "term": "COAT",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-06",
+        "term": "HOUSE",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-07",
+        "term": "PRISON",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-08",
+        "term": "GUARD",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-09",
+        "term": "SERVANT",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-10",
+        "term": "JAILER",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-11",
+        "term": "WIFE",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-12",
+        "term": "GOD",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-13",
+        "term": "BLESSING",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-14",
+        "term": "TRUST",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-15",
+        "term": "ESCAPE",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-16",
+        "term": "LIE",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-17",
+        "term": "ARK",
+        "origin": "suggested",
+        "category": "unrelated-distractor",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-18",
+        "term": "SHEPHERD",
+        "origin": "suggested",
+        "category": "unrelated-distractor",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-19",
+        "term": "HARP",
+        "origin": "suggested",
+        "category": "unrelated-distractor",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-20",
+        "term": "TENT",
+        "origin": "suggested",
+        "category": "unrelated-distractor",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-21",
+        "term": "RIVER",
+        "origin": "suggested",
+        "category": "unrelated-distractor",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-22",
+        "term": "BOAT",
+        "origin": "suggested",
+        "category": "unrelated-distractor",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-23",
+        "term": "ALTAR",
+        "origin": "suggested",
+        "category": "unrelated-distractor",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-24",
+        "term": "GIANT",
+        "origin": "suggested",
+        "category": "unrelated-distractor",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-25",
+        "term": "FISH",
+        "origin": "suggested",
+        "category": "unrelated-distractor",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-26",
+        "term": "LADDER",
+        "origin": "suggested",
+        "category": "unrelated-distractor",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-27",
+        "term": "CAMEL",
+        "origin": "suggested",
+        "category": "unrelated-distractor",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-28",
+        "term": "SHIELD",
+        "origin": "suggested",
+        "category": "unrelated-distractor",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      }
+    ]
+  },
+  "characters": [
+    {
+      "id": "ch-01",
+      "name": "Joseph",
+      "origin": "adapted",
+      "scope": "current-story",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "clues": [
+        {
+          "text": "God helped me do good work in a faraway land.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-02"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch-02",
+      "name": "Potiphar",
+      "origin": "adapted",
+      "scope": "current-story",
+      "sourceIds": [
+        "sn-01",
+        "sn-03",
+        "sn-07"
+      ],
+      "clues": [
+        {
+          "text": "I was captain of the palace guard.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-01"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch-03",
+      "name": "Potiphar’s wife",
+      "origin": "adapted",
+      "scope": "current-story",
+      "sourceIds": [
+        "sn-04",
+        "sn-05",
+        "sn-06"
+      ],
+      "clues": [
+        {
+          "text": "I told a lie about Joseph.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-06"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch-04",
+      "name": "Jailer",
+      "origin": "adapted",
+      "scope": "current-story",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "clues": [
+        {
+          "text": "I let Joseph help care for other prisoners.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-07"
+          ]
+        }
+      ]
+    }
+  ],
+  "matchingPairs": [
+    {
+      "id": "mp-01",
+      "left": "Joseph",
+      "right": "Servant",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    {
+      "id": "mp-02",
+      "left": "Potiphar",
+      "right": "Captain",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    {
+      "id": "mp-03",
+      "left": "Pharaoh",
+      "right": "King",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    {
+      "id": "mp-04",
+      "left": "Coat",
+      "right": "Clothing",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ]
+    },
+    {
+      "id": "mp-05",
+      "left": "Prison",
+      "right": "Jail",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ]
+    },
+    {
+      "id": "mp-06",
+      "left": "Egypt",
+      "right": "Country",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    }
+  ],
+  "drawingPrompts": [
+    {
+      "id": "draw-01",
+      "prompt": "Joseph arriving at Potiphar’s house in Egypt",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    {
+      "id": "draw-02",
+      "prompt": "Joseph caring for Potiphar’s house and animals",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ]
+    },
+    {
+      "id": "draw-03",
+      "prompt": "Joseph running out of the house without his coat",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ]
+    },
+    {
+      "id": "draw-04",
+      "prompt": "Joseph helping the jailer inside a prison",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ]
+    }
+  ],
+  "keyPhrases": [
+    {
+      "id": "kp-01",
+      "text": "Joseph was taken to Egypt and sold to Potiphar.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    {
+      "id": "kp-02",
+      "text": "God was with Joseph and helped him do his work well.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ]
+    },
+    {
+      "id": "kp-03",
+      "text": "Potiphar trusted Joseph to take care of his whole house.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ]
+    },
+    {
+      "id": "kp-04",
+      "text": "Potiphar’s wife asked Joseph to do wrong, but he said no.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ]
+    },
+    {
+      "id": "kp-05",
+      "text": "Joseph ran away when Potiphar’s wife grabbed his coat.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ]
+    },
+    {
+      "id": "kp-06",
+      "text": "Potiphar’s wife told a lie about Joseph.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ]
+    },
+    {
+      "id": "kp-07",
+      "text": "Potiphar sent Joseph to prison, where God was still with him.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ]
+    }
+  ],
+  "theologicalApplications": [
+    {
+      "id": "app-01",
+      "text": "God was with Joseph in Egypt, even when he was far from home.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-02"
+      ]
+    },
+    {
+      "id": "app-02",
+      "text": "Joseph chose to say no to something wrong.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04",
+        "sn-05"
+      ]
+    },
+    {
+      "id": "app-03",
+      "text": "God did not leave Joseph when he was treated unfairly.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06",
+        "sn-07"
+      ]
+    },
+    {
+      "id": "app-04",
+      "text": "God is with His people in good times and in hard times.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02",
+        "sn-07"
+      ]
+    }
+  ],
+  "preparedActivities": {
+    "drawPicture": {
+      "prompt": "Joseph caring for Potiphar’s house and animals",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    "multipleChoice": [
+      {
+        "id": "mc-01",
+        "question": "Who bought Joseph as a slave in Egypt?",
+        "correctAnswer": "Potiphar",
+        "choices": [
+          {
+            "text": "Pharaoh",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Potiphar",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Jacob",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "sourceQuestionIds": [
+          "q-12",
+          "q-13"
+        ],
+        "sourceIds": [
+          "sn-01"
+        ],
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-02",
+        "question": "Why did Joseph do his work so well?",
+        "correctAnswer": "God was with him.",
+        "choices": [
+          {
+            "text": "He was super smart.",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "God was with him.",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "He liked showing off.",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "sourceQuestionIds": [
+          "q-10",
+          "q-51"
+        ],
+        "sourceIds": [
+          "sn-02"
+        ],
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-03",
+        "question": "What did Potiphar ask Joseph to look after?",
+        "correctAnswer": "His whole house",
+        "choices": [
+          {
+            "text": "His whole house",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "His pet dog",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "The Nile River",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "sourceQuestionIds": [
+          "q-13"
+        ],
+        "sourceIds": [
+          "sn-03"
+        ],
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-04",
+        "question": "What did Joseph say when Potiphar’s wife asked him to do wrong?",
+        "correctAnswer": "No",
+        "choices": [
+          {
+            "text": "Yes",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Maybe later",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "No",
+            "isCorrect": true,
+            "origin": "adapted"
+          }
+        ],
+        "sourceQuestionIds": [
+          "q-20",
+          "q-26"
+        ],
+        "sourceIds": [
+          "sn-04"
+        ],
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-05",
+        "question": "How did Joseph escape when Potiphar’s wife grabbed him?",
+        "correctAnswer": "He ran away and left his coat.",
+        "choices": [
+          {
+            "text": "He hid behind a door.",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "He ran away and left his coat.",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "He screamed for help.",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "sourceQuestionIds": [
+          "q-19",
+          "q-24"
+        ],
+        "sourceIds": [
+          "sn-05"
+        ],
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-06",
+        "question": "What did Potiphar do after he believed his wife’s story?",
+        "correctAnswer": "He sent Joseph to prison.",
+        "choices": [
+          {
+            "text": "He sold Joseph to someone else.",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "He sent Joseph to prison.",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "He let Joseph go free.",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "sourceQuestionIds": [
+          "q-46",
+          "q-55"
+        ],
+        "sourceIds": [
+          "sn-06",
+          "sn-07"
+        ],
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      }
+    ],
+    "sortStory": [
+      {
+        "statement": "Joseph was sold to Potiphar in Egypt.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": false,
+        "source": {
+          "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+          "section": "STORY NOTE",
+          "page": 1,
+          "sourceParagraphIndex": 29
+        },
+        "factId": "tf-01"
+      },
+      {
+        "statement": "God was with Joseph while he worked for Potiphar.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": false,
+        "source": {
+          "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+          "section": "STORY NOTE",
+          "page": 2,
+          "sourceParagraphIndex": 44
+        },
+        "factId": "tf-03"
+      },
+      {
+        "statement": "Potiphar trusted Joseph to care for his house.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": false,
+        "source": {
+          "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+          "section": "STORY NOTE",
+          "page": 2,
+          "sourceParagraphIndex": 59
+        },
+        "factId": "tf-05"
+      },
+      {
+        "statement": "Potiphar’s wife asked Joseph to do wrong, but he said no.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ],
+        "teacherReviewRequired": false,
+        "source": {
+          "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+          "section": "STORY NOTE",
+          "page": 3,
+          "sourceParagraphIndex": 74
+        },
+        "factId": "tf-07"
+      },
+      {
+        "statement": "Joseph agreed to do what Potiphar’s wife asked.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-04"
+        ],
+        "teacherReviewRequired": true,
+        "factId": "tf-08"
+      },
+      {
+        "statement": "Joseph left his coat behind and ran away.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ],
+        "teacherReviewRequired": false,
+        "source": {
+          "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+          "section": "STORY NOTE",
+          "page": 3,
+          "sourceParagraphIndex": 93
+        },
+        "factId": "tf-09"
+      },
+      {
+        "statement": "Potiphar’s wife lied about Joseph.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ],
+        "teacherReviewRequired": false,
+        "source": {
+          "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+          "section": "STORY NOTE",
+          "page": 4,
+          "sourceParagraphIndex": 110
+        },
+        "factId": "tf-11"
+      },
+      {
+        "statement": "Joseph lied about Potiphar's wife.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-06"
+        ],
+        "teacherReviewRequired": true,
+        "factId": "tf-12"
+      }
+    ],
+    "trueFalse": {
+      "statement": "Potiphar sent Joseph to prison.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "STORY NOTE",
+        "page": 4,
+        "sourceParagraphIndex": 129
+      },
+      "factId": "tf-13"
+    },
+    "trueFalseMaze": {
+      "statement": "God forgot about Joseph after he was sent to prison.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": true,
+      "factId": "tf-14"
+    },
+    "firstLetters": {
+      "reference": "Matthew 28:20",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 206,
+        "details": "Original ESV: “And behold, I am with you always, to the end of the age.” Proposed BSB wording checked at https://ebible.org/engbsb/MAT28.htm ; teacher should confirm approved translation and excerpt selection."
+      },
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": true,
+      "verse": "And surely I am with you always, even to the end of the age.”"
+    },
+    "upsideDownVerse": {
+      "reference": "Matthew 28:20",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 206,
+        "details": "Original ESV: “And behold, I am with you always, to the end of the age.” Proposed BSB wording checked at https://ebible.org/engbsb/MAT28.htm ; teacher should confirm approved translation and excerpt selection."
+      },
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": true,
+      "verse": "And surely I am with you always, even to the end of the age.”"
+    },
+    "verseCryptogram": {
+      "reference": "Matthew 28:20",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 206,
+        "details": "Original ESV: “And behold, I am with you always, to the end of the age.” Proposed BSB wording checked at https://ebible.org/engbsb/MAT28.htm ; teacher should confirm approved translation and excerpt selection."
+      },
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": true,
+      "verse": "And surely I am with you always, even to the end of the age.”"
+    },
+    "spiralVerse": {
+      "reference": "Matthew 28:20",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 206,
+        "details": "Original ESV: “And behold, I am with you always, to the end of the age.” Proposed BSB wording checked at https://ebible.org/engbsb/MAT28.htm ; teacher should confirm approved translation and excerpt selection."
+      },
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": true,
+      "verse": "And surely I am with you always, even to the end of the age.”"
+    },
+    "connectVerse": {
+      "reference": "Matthew 28:20",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 206,
+        "details": "Original ESV: “And behold, I am with you always, to the end of the age.” Proposed BSB wording checked at https://ebible.org/engbsb/MAT28.htm ; teacher should confirm approved translation and excerpt selection."
+      },
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": true,
+      "verse": "And surely I am with you always, even to the end of the age.”"
+    },
+    "finishVerse": {
+      "reference": "Matthew 28:20",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 206,
+        "details": "Original ESV: “And behold, I am with you always, to the end of the age.” Proposed BSB wording checked at https://ebible.org/engbsb/MAT28.htm ; teacher should confirm approved translation and excerpt selection."
+      },
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": true,
+      "markedVerse": "And [surely] I am [with] you [always], even to the [end] of the [age].”",
+      "sourceVerse": "And surely I am with you always, even to the end of the age.”"
+    },
+    "unscrambleVerse": {
+      "reference": "Matthew 28:20",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 206,
+        "details": "Original ESV: “And behold, I am with you always, to the end of the age.” Proposed BSB wording checked at https://ebible.org/engbsb/MAT28.htm ; teacher should confirm approved translation and excerpt selection."
+      },
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": true,
+      "markedVerse": "And [surely] I am [with] you [always], even to the [end] of the [age].”",
+      "sourceVerse": "And surely I am with you always, even to the end of the age.”"
+    },
+    "oddWords": {
+      "related": [
+        "JOSEPH",
+        "POTIPHAR",
+        "EGYPT",
+        "COAT",
+        "PRISON"
+      ],
+      "unrelated": [
+        "road",
+        "coin",
+        "grapes",
+        "angel"
+      ],
+      "unrelatedOrigin": "suggested",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "unscrambleWords": {
+      "answers": [
+        "POTIPHAR",
+        "coat"
+      ],
+      "origin": "suggested",
+      "sourceIds": [],
+      "teacherReviewRequired": true
+    },
+    "checkboxes": {
+      "correct": [
+        "GUARD",
+        "SERVANT",
+        "JAILER",
+        "WIFE",
+        "GOD"
+      ],
+      "incorrect": [
+        "LION",
+        "FURNACE",
+        "WALL",
+        "SHEPHERD"
+      ],
+      "incorrectOrigin": "suggested",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "whoAmI": {
+      "clue": "I worked for Pharaoh. Because Joseph took care of house, I didn't have to worry about a thing.",
+      "answer": "Potiphar",
+      "origin": "suggested",
+      "sourceIds": [],
+      "teacherReviewRequired": true
+    },
+    "matchWords": [
+      {
+        "id": "mp-01",
+        "left": "Joseph",
+        "right": "Servant",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "id": "mp-02",
+        "left": "Potiphar",
+        "right": "Pharaoh's Captain",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-03",
+        "left": "Wife",
+        "right": "Lied",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-04",
+        "left": "Left behind",
+        "right": "Coat",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-05"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-05",
+        "left": "God",
+        "right": "With Joseph",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-07"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-06",
+        "left": "Punshiment",
+        "right": "Jail",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": true
+      }
+    ],
+    "circleMistakes": {
+      "paragraph": "Joseph was taken to Israel and sold to Pharaoh. God helped Joseph do his work well, but Potiphar put him in charge of Pharaoh's army. One day, Potiphar’s wife grabbed onto Joseph, and Joseph stayed in the house with her. Later, she told Potiphar the truth about Joseph. Potiphar sent Joseph to Pharaoh's palace. Even there, God stayed with Joseph.",
+      "mistakeCount": 6,
+      "mistakes": [
+        {
+          "incorrect": "Israel",
+          "correction": "Egypt"
+        },
+        {
+          "incorrect": "sold to Pharaoh",
+          "correction": "sold to Potiphar"
+        },
+        {
+          "incorrect": "Pharaoh's army",
+          "correction": "his whole house"
+        },
+        {
+          "incorrect": "stayed in the house",
+          "correction": "ran away"
+        },
+        {
+          "incorrect": "the truth about Joseph",
+          "correction": "a lie about Joseph"
+        },
+        {
+          "incorrect": "Pharaoh's palace",
+          "correction": "to prison"
+        }
+      ],
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "mediumWordSearch": {
+      "words": [
+        "JOSEPH",
+        "COAT",
+        "HOUSE",
+        "POTIPHAR",
+        "PRISON",
+        "GOD"
+      ],
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "bigIdeaCryptogram": {
+      "phrase": "God is always with us, in good times and bad.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Important Idea",
+        "page": 5,
+        "sourceParagraphIndex": 144,
+        "details": "Source uses a font/display layout that shows “god”; capitalization normalized for God in the prepared Big Idea. Original source remains unchanged."
+      },
+      "sourceIds": [
+        "sn-02",
+        "sn-07"
+      ],
+      "teacherReviewRequired": false
+    },
+    "connectBigIdea": {
+      "phrase": "God is always with us, in good times and bad.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Important Idea",
+        "page": 5,
+        "sourceParagraphIndex": 144,
+        "details": "Source uses a font/display layout that shows “god”; capitalization normalized for God in the prepared Big Idea. Original source remains unchanged."
+      },
+      "sourceIds": [
+        "sn-02",
+        "sn-07"
+      ],
+      "teacherReviewRequired": false
+    },
+    "pixelPicture": {
+      "phrase": "God is always with us, in good times and bad.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02",
+        "sn-07"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 21 Lesson (Joseph Works for Potiphar).odt",
+        "section": "Important Idea",
+        "page": 5,
+        "sourceParagraphIndex": 144,
+        "details": "Source uses a font/display layout that shows “god”; capitalization normalized for God in the prepared Big Idea. Original source remains unchanged."
+      }
+    },
+    "finishStory": {
+      "markedParagraph": "Joseph was taken to [Egypt]. He was sold as a [slave] to  [Potiphar], a man who worked for [Pharaoh]. God was with Joseph and gave him great [success]. Because of this Potiphar put [Joseph] in charge of his entire [house]. He didn't have to [worry] about anything. Later, Potiphar's [wife] asked Joseph to commit adultery with her. But when Potiphar’s wife grabbed him, Joseph ran away, leaving his [coat]  behind. She told a [lie] to her husband, and Joseph was thrown in [prison]. But even in prison, God was still with him.",
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "storyOrder": [
+      {
+        "order": 1,
+        "text": "Joseph was taken to Egypt and sold to Potiphar.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "order": 2,
+        "text": "God was with Joseph and helped him do his work well.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "order": 3,
+        "text": "Potiphar trusted Joseph to take care of his whole house.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "order": 4,
+        "text": "Potiphar’s wife asked Joseph to do something wrong, but he said no.",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-04"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 5,
+        "text": "Joseph ran away when Potiphar’s wife grabbed his coat.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "order": 6,
+        "text": "Potiphar’s wife told a lie about Joseph.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "order": 7,
+        "text": "Potiphar sent Joseph to prison, but God was still with him.",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-07"
+        ],
+        "teacherReviewRequired": true
+      }
+    ],
+    "drawStory": [
+      {
+        "prompt": "Joseph was taken to Egypt and sold to Potiphar.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "prompt": "God was with Joseph and helped him do his work well.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "prompt": "Potiphar trusted Joseph to take care of his whole house.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "prompt": "Joseph ran away when Potiphar’s wife grabbed his coat.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "prompt": "Potiphar’s wife told a lie about Joseph.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "prompt": "Potiphar sent Joseph to prison, but God was still with him.",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-07"
+        ],
+        "teacherReviewRequired": true
+      }
+    ],
+    "wordSearch": {
+      "words": [
+        "JOSEPH",
+        "POTIPHAR",
+        "EGYPT",
+        "PHARAOH",
+        "HOUSE",
+        "COAT",
+        "PRISON",
+        "GUARD",
+        "SERVANT",
+        "JAILER",
+        "BLESS",
+        "WIFE"
+      ],
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "crossword": [
+      {
+        "answer": "JOSEPH",
+        "clue": "This man was sold and taken to Egypt.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "answer": "POTIPHAR",
+        "clue": "The captain who bought Joseph as a slave.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "answer": "EGYPT",
+        "clue": "The country where Joseph had to work.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "answer": "wife",
+        "clue": "The person who told a lie about Joseph.",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "HOUSE",
+        "clue": "Joseph was put in charge of Potiphar’s _____.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "answer": "COAT",
+        "clue": "Joseph left this behind when he ran away.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "answer": "PRISON",
+        "clue": "Potiphar sent Joseph to this place.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "answer": "GUARD",
+        "clue": "Potiphar was captain of the palace _____.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "answer": "LIE",
+        "clue": "Potiphar’s wife told one of these about Joseph.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "answer": "GOD",
+        "clue": "He stayed with Joseph in good times and bad.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02",
+          "sn-07"
+        ]
+      }
+    ]
+  },
+  "moduleReadiness": [
+    {
+      "moduleName": "Draw a Picture",
+      "moduleId": "draw-picture",
+      "size": "Small",
+      "preparedActivityKey": "drawPicture",
+      "status": "READY",
+      "contentValidation": "Local structural/content/source-reference checks only; repository validator and live generators/presets NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means prepared draft content exists, not that a worksheet has been successfully generated or approved."
+    },
+    {
+      "moduleName": "Multiple Choice",
+      "moduleId": "multiple-choice",
+      "size": "Small",
+      "preparedActivityKey": "multipleChoice",
+      "status": "READY",
+      "contentValidation": "Local structural/content/source-reference checks only; repository validator and live generators/presets NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means prepared draft content exists, not that a worksheet has been successfully generated or approved."
+    },
+    {
+      "moduleName": "True / False",
+      "moduleId": "true-false",
+      "size": "Small",
+      "preparedActivityKey": "trueFalse",
+      "status": "READY",
+      "contentValidation": "Local structural/content/source-reference checks only; repository validator and live generators/presets NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means prepared draft content exists, not that a worksheet has been successfully generated or approved."
+    },
+    {
+      "moduleName": "First Letters",
+      "moduleId": "first-letters",
+      "size": "Small",
+      "preparedActivityKey": "firstLetters",
+      "status": "READY",
+      "contentValidation": "Local structural/content/source-reference checks only; repository validator and live generators/presets NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means prepared draft content exists, not that a worksheet has been successfully generated or approved."
+    },
+    {
+      "moduleName": "Odd Words",
+      "moduleId": "odd-words",
+      "size": "Small",
+      "preparedActivityKey": "oddWords",
+      "status": "READY",
+      "contentValidation": "Local structural/content/source-reference checks only; repository validator and live generators/presets NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means prepared draft content exists, not that a worksheet has been successfully generated or approved."
+    },
+    {
+      "moduleName": "Unscramble Words",
+      "moduleId": "unscramble-words",
+      "size": "Small",
+      "preparedActivityKey": "unscrambleWords",
+      "status": "READY",
+      "contentValidation": "Local structural/content/source-reference checks only; repository validator and live generators/presets NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means prepared draft content exists, not that a worksheet has been successfully generated or approved."
+    },
+    {
+      "moduleName": "Checkboxes",
+      "moduleId": "checkboxes",
+      "size": "Small",
+      "preparedActivityKey": "checkboxes",
+      "status": "READY",
+      "contentValidation": "Local structural/content/source-reference checks only; repository validator and live generators/presets NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means prepared draft content exists, not that a worksheet has been successfully generated or approved."
+    },
+    {
+      "moduleName": "Who Am I?",
+      "moduleId": "who-am-i",
+      "size": "Small",
+      "preparedActivityKey": "whoAmI",
+      "status": "READY",
+      "contentValidation": "Local structural/content/source-reference checks only; repository validator and live generators/presets NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means prepared draft content exists, not that a worksheet has been successfully generated or approved."
+    },
+    {
+      "moduleName": "Match the Words",
+      "moduleId": "match-words",
+      "size": "Medium",
+      "preparedActivityKey": "matchWords",
+      "status": "READY",
+      "contentValidation": "Local structural/content/source-reference checks only; repository validator and live generators/presets NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means prepared draft content exists, not that a worksheet has been successfully generated or approved."
+    },
+    {
+      "moduleName": "Finish the Verse",
+      "moduleId": "finish-verse",
+      "size": "Medium",
+      "preparedActivityKey": "finishVerse",
+      "status": "READY",
+      "contentValidation": "Local structural/content/source-reference checks only; repository validator and live generators/presets NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means prepared draft content exists, not that a worksheet has been successfully generated or approved."
+    },
+    {
+      "moduleName": "Unscramble the Verse",
+      "moduleId": "unscramble-verse",
+      "size": "Medium",
+      "preparedActivityKey": "unscrambleVerse",
+      "status": "READY",
+      "contentValidation": "Local structural/content/source-reference checks only; repository validator and live generators/presets NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means prepared draft content exists, not that a worksheet has been successfully generated or approved."
+    },
+    {
+      "moduleName": "Circle the Mistakes",
+      "moduleId": "circle-mistakes",
+      "size": "Medium",
+      "preparedActivityKey": "circleMistakes",
+      "status": "READY",
+      "contentValidation": "Local structural/content/source-reference checks only; repository validator and live generators/presets NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means prepared draft content exists, not that a worksheet has been successfully generated or approved."
+    },
+    {
+      "moduleName": "Medium Word Search",
+      "moduleId": "medium-word-search",
+      "size": "Medium",
+      "preparedActivityKey": "mediumWordSearch",
+      "status": "READY",
+      "contentValidation": "Local structural/content/source-reference checks only; repository validator and live generators/presets NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means prepared draft content exists, not that a worksheet has been successfully generated or approved."
+    },
+    {
+      "moduleName": "True / False Maze",
+      "moduleId": "true-false-maze",
+      "size": "Medium",
+      "preparedActivityKey": "trueFalseMaze",
+      "status": "READY",
+      "contentValidation": "Local structural/content/source-reference checks only; repository validator and live generators/presets NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means prepared draft content exists, not that a worksheet has been successfully generated or approved."
+    },
+    {
+      "moduleName": "Big Idea Cryptogram",
+      "moduleId": "big-idea-cryptogram",
+      "size": "Medium",
+      "preparedActivityKey": "bigIdeaCryptogram",
+      "status": "READY",
+      "contentValidation": "Local structural/content/source-reference checks only; repository validator and live generators/presets NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means prepared draft content exists, not that a worksheet has been successfully generated or approved."
+    },
+    {
+      "moduleName": "Upside-Down Verse",
+      "moduleId": "upside-down-verse",
+      "size": "Medium",
+      "preparedActivityKey": "upsideDownVerse",
+      "status": "READY",
+      "contentValidation": "Local structural/content/source-reference checks only; repository validator and live generators/presets NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means prepared draft content exists, not that a worksheet has been successfully generated or approved."
+    },
+    {
+      "moduleName": "Connect the Big Idea",
+      "moduleId": "connect-big-idea",
+      "size": "Medium",
+      "preparedActivityKey": "connectBigIdea",
+      "status": "READY",
+      "contentValidation": "Local structural/content/source-reference checks only; repository validator and live generators/presets NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means prepared draft content exists, not that a worksheet has been successfully generated or approved."
+    },
+    {
+      "moduleName": "Pixel Picture",
+      "moduleId": "pixel-picture",
+      "size": "Medium",
+      "preparedActivityKey": "pixelPicture",
+      "status": "READY",
+      "contentValidation": "Local structural/content/source-reference checks only; repository validator and live generators/presets NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means prepared draft content exists, not that a worksheet has been successfully generated or approved."
+    },
+    {
+      "moduleName": "Finish the Story",
+      "moduleId": "finish-story",
+      "size": "Large",
+      "preparedActivityKey": "finishStory",
+      "status": "READY",
+      "contentValidation": "Local structural/content/source-reference checks only; repository validator and live generators/presets NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means prepared draft content exists, not that a worksheet has been successfully generated or approved."
+    },
+    {
+      "moduleName": "Story Order",
+      "moduleId": "story-order",
+      "size": "Large",
+      "preparedActivityKey": "storyOrder",
+      "status": "READY",
+      "contentValidation": "Local structural/content/source-reference checks only; repository validator and live generators/presets NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means prepared draft content exists, not that a worksheet has been successfully generated or approved."
+    },
+    {
+      "moduleName": "Sort the Story",
+      "moduleId": "sort-story",
+      "size": "Large",
+      "preparedActivityKey": "sortStory",
+      "status": "READY",
+      "contentValidation": "Local structural/content/source-reference checks only; repository validator and live generators/presets NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means prepared draft content exists, not that a worksheet has been successfully generated or approved."
+    },
+    {
+      "moduleName": "Draw the Story",
+      "moduleId": "draw-story",
+      "size": "Large",
+      "preparedActivityKey": "drawStory",
+      "status": "READY",
+      "contentValidation": "Local structural/content/source-reference checks only; repository validator and live generators/presets NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means prepared draft content exists, not that a worksheet has been successfully generated or approved."
+    },
+    {
+      "moduleName": "Word Search",
+      "moduleId": "word-search",
+      "size": "Large",
+      "preparedActivityKey": "wordSearch",
+      "status": "READY",
+      "contentValidation": "Local structural/content/source-reference checks only; repository validator and live generators/presets NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means prepared draft content exists, not that a worksheet has been successfully generated or approved."
+    },
+    {
+      "moduleName": "Verse Cryptogram",
+      "moduleId": "verse-cryptogram",
+      "size": "Large",
+      "preparedActivityKey": "verseCryptogram",
+      "status": "READY",
+      "contentValidation": "Local structural/content/source-reference checks only; repository validator and live generators/presets NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means prepared draft content exists, not that a worksheet has been successfully generated or approved."
+    },
+    {
+      "moduleName": "Crossword",
+      "moduleId": "crossword",
+      "size": "Large",
+      "preparedActivityKey": "crossword",
+      "status": "READY",
+      "contentValidation": "Local structural/content/source-reference checks only; repository validator and live generators/presets NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means prepared draft content exists, not that a worksheet has been successfully generated or approved."
+    },
+    {
+      "moduleName": "Spiral Verse",
+      "moduleId": "spiral-verse",
+      "size": "Large",
+      "preparedActivityKey": "spiralVerse",
+      "status": "READY",
+      "contentValidation": "Local structural/content/source-reference checks only; repository validator and live generators/presets NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means prepared draft content exists, not that a worksheet has been successfully generated or approved."
+    },
+    {
+      "moduleName": "Connect the Verse",
+      "moduleId": "connect-verse",
+      "size": "Large",
+      "preparedActivityKey": "connectVerse",
+      "status": "READY",
+      "contentValidation": "Local structural/content/source-reference checks only; repository validator and live generators/presets NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means prepared draft content exists, not that a worksheet has been successfully generated or approved."
+    }
+  ],
+  "reviewFlags": [
+    {
+      "id": "rf-01",
+      "priority": "high",
+      "type": "scripture-review",
+      "text": "The source gives Matthew 28:20b in ESV (“And behold, I am with you always, to the end of the age.”). Prepared verse activities propose BSB “And surely I am with you always, even to the end of the age.” Review exact translation, word boundaries, and rights.",
+      "affectedModules": [
+        "first-letters",
+        "finish-verse",
+        "unscramble-verse",
+        "upside-down-verse",
+        "verse-cryptogram",
+        "spiral-verse",
+        "connect-verse"
+      ]
+    },
+    {
+      "id": "rf-02",
+      "priority": "high",
+      "type": "teacher-approval",
+      "text": "Approve or edit the 12 suggested incorrect Multiple Choice answer options (six questions).",
+      "affectedModules": [
+        "multiple-choice"
+      ]
+    },
+    {
+      "id": "rf-03",
+      "priority": "high",
+      "type": "teacher-approval",
+      "text": "Approve seven deliberately false statements; ensure statements stay clear and suitable for children.",
+      "affectedModules": [
+        "sort-story",
+        "true-false",
+        "true-false-maze"
+      ]
+    },
+    {
+      "id": "rf-04",
+      "priority": "high",
+      "type": "sensitive-content",
+      "text": "The source includes a married adult asking Joseph to commit adultery, grabbing his coat, and falsely accusing him of assault. These original source statements are preserved; proposed child-facing modules use simpler language. Review how directly to discuss the events with different age groups.",
+      "affectedModules": [
+        "multiple-choice",
+        "circle-mistakes",
+        "story-order",
+        "finish-story"
+      ]
+    },
+    {
+      "id": "rf-05",
+      "priority": "medium",
+      "type": "teacher-approval",
+      "text": "Check the six Circle the Mistakes changes and their corrections; ensure there are exactly six and no accidental extra errors.",
+      "affectedModules": [
+        "circle-mistakes"
+      ]
+    },
+    {
+      "id": "rf-06",
+      "priority": "medium",
+      "type": "teacher-approval",
+      "text": "Review the unrelated word suggestions in Odd Words and Checkboxes; lists are intentionally distinct.",
+      "affectedModules": [
+        "odd-words",
+        "checkboxes"
+      ]
+    },
+    {
+      "id": "rf-07",
+      "priority": "medium",
+      "type": "teacher-approval",
+      "text": "Check all six matching pairs for unambiguous single-word associations.",
+      "affectedModules": [
+        "match-words"
+      ]
+    },
+    {
+      "id": "rf-08",
+      "priority": "medium",
+      "type": "teacher-approval",
+      "text": "Check four small drawing prompts and six large narrative captions for age suitability and scene variety.",
+      "affectedModules": [
+        "draw-picture",
+        "draw-story"
+      ]
+    },
+    {
+      "id": "rf-09",
+      "priority": "high",
+      "type": "generator-validation",
+      "text": "Run repository schema validator, app preflight and all three numbered presets before publication. Ten unique True/False statements are allocated, but renderer/preset behavior has not been tested.",
+      "affectedModules": []
+    },
+    {
+      "id": "rf-10",
+      "priority": "medium",
+      "type": "source-provenance",
+      "text": "Review the originally quoted Bible teaching and any context-dependent discussion prompts; original source records are preserved while worksheet text is adapted.",
+      "affectedModules": []
+    }
+  ],
+  "publication": {
+    "status": "approved",
+    "approved": true,
+    "notes": "Do not publish; teacher review, official validator, generator testing and preset testing required.",
+    "teacherSignoff": {
+      "reviewer": "Andrew Doane",
+      "date": "2026-11-05",
+      "notes": "Approved with verified BSB verse through Curriculum Review Studio"
+    },
+    "scriptureRights": {
+      "status": "cleared",
+      "basis": "Berean Standard Bible (BSB), dedicated to the public domain on April 30, 2023. Official terms: https://berean.bible/terms.htm. Scripture text confirmed against https://bereanbible.com/bsb.txt.",
+      "reviewedBy": "Andrew Doane",
+      "reviewedOn": "2026-11-05"
+    },
+    "resolvedReviewFlagIds": [
+      "rf-02",
+      "rf-03",
+      "rf-05",
+      "rf-06",
+      "rf-07",
+      "rf-08"
+    ]
+  },
+  "validation": {
+    "basis": "Original conversion tests predate teacher-approved BSB; revalidate actual engines and content after export.",
+    "allTextChecksPassed": false,
+    "checks": [
+      {
+        "name": "Seven source Story Notes, original and clean text separate",
+        "passed": true
+      },
+      {
+        "name": "Original notes extracted verbatim from source",
+        "passed": true
+      },
+      {
+        "name": "All source questions tracked with source paragraph indices",
+        "passed": true
+      },
+      {
+        "name": "All ten original Review Questions retained",
+        "passed": true
+      },
+      {
+        "name": "All nine who-said-it statements retained",
+        "passed": true
+      },
+      {
+        "name": "Scripture display is Bible book name only",
+        "passed": true
+      },
+      {
+        "name": "Big Idea capitalizes God",
+        "passed": true
+      },
+      {
+        "name": "Multiple Choice within 4-6 and exactly three options",
+        "passed": true
+      },
+      {
+        "name": "Multiple Choice has exactly one correct option and two suggested distractors",
+        "passed": true
+      },
+      {
+        "name": "True/False 12-16 facts",
+        "passed": true
+      },
+      {
+        "name": "True/False seven true seven false",
+        "passed": true
+      },
+      {
+        "name": "Suggested false statements require teacher review",
+        "passed": true
+      },
+      {
+        "name": "Eight distinct Sort the Story facts",
+        "passed": true
+      },
+      {
+        "name": "TF, Maze, Sort disjoint within Preset 3",
+        "passed": true
+      },
+      {
+        "name": "Four alternative T/F facts remain",
+        "passed": true
+      },
+      {
+        "name": "Exactly four Small drawing scenes",
+        "passed": true
+      },
+      {
+        "name": "Matching pairs short",
+        "passed": true
+      },
+      {
+        "name": "Circle the Mistakes has six mapped errors",
+        "passed": true
+      },
+      {
+        "name": "Odd Words and Checkboxes word banks are different",
+        "passed": true
+      },
+      {
+        "name": "27 activity modules prepared",
+        "passed": true
+      },
+      {
+        "name": "All prepared activity source references exist",
+        "passed": true
+      },
+      {
+        "name": "Four to six Large Draw the Story captions",
+        "passed": true
+      },
+      {
+        "name": "DrawStory captions match StoryOrder",
+        "passed": true
+      },
+      {
+        "name": "Crossword clues distinct, readable, single-word answers",
+        "passed": true
+      },
+      {
+        "name": "Proposed Scripture consistent across modules",
+        "passed": true
+      },
+      {
+        "name": "Everything remains pending and generators untested",
+        "passed": true
+      },
+      {
+        "name": "No identical prepared Multiple Choice questions",
+        "passed": true
+      },
+      {
+        "name": "No identical facts",
+        "passed": true
+      }
+    ],
+    "schemaValidated": false,
+    "officialPreflightPassed": false,
+    "liveGeneratorsTested": false,
+    "allThreePresetsTested": false,
+    "actualGeneratorTested": false
+  }
+}

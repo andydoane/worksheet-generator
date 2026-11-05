@@ -1,0 +1,3476 @@
+{
+  "schemaVersion": 1,
+  "schemaStatus": "proposed-v1; pending teacher and generator verification",
+  "id": "ot-018-jacobs-family",
+  "curriculum": {
+    "series": "Old Testament",
+    "lessonNumber": 18
+  },
+  "lessonDetails": {
+    "title": "Jacob’s Family",
+    "scripturePassages": [
+      "Genesis 29",
+      "Genesis 30",
+      "Genesis 35",
+      "Romans 15:4",
+      "Ezra 3:11",
+      "Psalm 136:1"
+    ],
+    "scriptureDisplay": "Genesis",
+    "bigIdeas": [
+      {
+        "origin": "adapted",
+        "text": "When we don’t follow God’s plan, we’re headed for trouble.",
+        "source": {
+          "filename": "OT 18 Lesson (Jacob's Family).odt",
+          "section": "Important Idea",
+          "page": 5,
+          "sourceParagraphIndex": 170,
+          "details": "Original source graphic contains lowercase “god” and irregular line breaks; capitalization and spacing corrected in display text; original ODT left unchanged."
+        },
+        "sourceOriginalText": "when we don’tfollow god’s plan,we’re headed fortrouble.",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ]
+      },
+      {
+        "origin": "adapted",
+        "text": "God loves His people with a steadfast, never-stopping love.",
+        "source": {
+          "filename": "OT 18 Lesson (Jacob's Family).odt",
+          "section": "Important Idea",
+          "page": 6,
+          "sourceParagraphIndex": 199,
+          "details": "Original source graphic contains lowercase “god” and irregular line breaks; capitalization and spacing corrected in display text; original ODT left unchanged."
+        },
+        "sourceOriginalText": "god loves hispeople with a steadfast, never-stopping love.",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ]
+      }
+    ],
+    "memoryVerse": {
+      "reference": "Psalm 136:1",
+      "translation": "BSB",
+      "text": "Give thanks to the LORD, for He is good. His loving devotion endures forever.",
+      "isExcerpt": false,
+      "hasEllipses": false,
+      "requiresTextReview": false,
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Memory Verse Activity",
+        "page": 8,
+        "sourceParagraphIndex": 244,
+        "details": "Original ESV verse: “Give thanks to the Lord, for he is good, for his steadfast love endures forever.” Proposed BSB full verse: “Give thanks to the LORD, for He is good. His loving devotion endures forever.” BSB text verified at https://biblehub.com/bsb/psalms/136.htm ; teacher must approve the change."
+      },
+      "originalTranslation": "BSB",
+      "bsbSource": {
+        "reference": "Psalm 136:1",
+        "sourceUrl": "https://bereanbible.com/bsb.txt",
+        "publicDomainTerms": "https://berean.bible/terms.htm",
+        "startWord": 0,
+        "endWord": 13
+      }
+    }
+  },
+  "sourceFiles": [
+    {
+      "filename": "OT 18 Lesson (Jacob's Family).odt",
+      "format": "odt",
+      "role": "primary teaching source",
+      "note": "Original 13-page OT18 lesson, preserving seven actual labeled Story Notes and source questions. Story Sheet instructions mention nine pieces (teacher review flag). Original ESV memory verse retained in provenance."
+    }
+  ],
+  "storyNotes": [
+    {
+      "id": "sn-01",
+      "order": 1,
+      "originalText": "Jacob loved Rachel MORE than Leah. God let Leah have children, but Rachel could not.",
+      "cleanText": "Jacob loved Rachel more than Leah. God let Leah have children, but Rachel could not.",
+      "emphasizedWords": [
+        "MORE"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "STORY NOTE",
+        "page": 1,
+        "sourceParagraphIndex": 31
+      }
+    },
+    {
+      "id": "sn-02",
+      "order": 2,
+      "originalText": "Leah gave birth to four SONS. She hoped this would make Jacob love her more.",
+      "cleanText": "Leah gave birth to four sons. She hoped this would make Jacob love her more.",
+      "emphasizedWords": [
+        "SONS"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "STORY NOTE",
+        "page": 2,
+        "sourceParagraphIndex": 50
+      }
+    },
+    {
+      "id": "sn-03",
+      "order": 3,
+      "originalText": "Rachel couldn’t have kids. She gave her SERVANT Bilhah to Jacob to have children in her place.",
+      "cleanText": "Rachel couldn’t have kids. She gave her servant Bilhah to Jacob to have children in her place.",
+      "emphasizedWords": [
+        "SERVANT"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "STORY NOTE",
+        "page": 3,
+        "sourceParagraphIndex": 77
+      }
+    },
+    {
+      "id": "sn-04",
+      "order": 4,
+      "originalText": "Leah gave her servant Zilpah to become Jacob's FOURTH wife. She gave birth to two sons.",
+      "cleanText": "Leah gave her servant Zilpah to become Jacob's fourth wife. She gave birth to two sons.",
+      "emphasizedWords": [
+        "FOURTH"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "STORY NOTE",
+        "page": 3,
+        "sourceParagraphIndex": 98
+      }
+    },
+    {
+      "id": "sn-05",
+      "order": 5,
+      "originalText": "God allowed Leah to have children again. She had two more sons and a DAUGHTER.",
+      "cleanText": "God allowed Leah to have children again. She had two more sons and a daughter.",
+      "emphasizedWords": [
+        "DAUGHTER"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "STORY NOTE",
+        "page": 4,
+        "sourceParagraphIndex": 119
+      }
+    },
+    {
+      "id": "sn-06",
+      "order": 6,
+      "originalText": "God listened to Rachel's prayers. She finally gave birth to her FIRST son.",
+      "cleanText": "God listened to Rachel's prayers. She finally gave birth to her first son.",
+      "emphasizedWords": [
+        "FIRST"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "STORY NOTE",
+        "page": 4,
+        "sourceParagraphIndex": 136
+      }
+    },
+    {
+      "id": "sn-07",
+      "order": 7,
+      "originalText": "Rachel became pregnant again. As she gave birth to her second son, she DIED.",
+      "cleanText": "Rachel became pregnant again. As she gave birth to her second son, she died.",
+      "emphasizedWords": [
+        "DIED"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "STORY NOTE",
+        "page": 5,
+        "sourceParagraphIndex": 155
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q-01",
+      "question": "What is a marriage?",
+      "answer": "When a man and woman promise to love only each other for the rest of their lives.",
+      "kind": "discussion",
+      "scope": "introduction",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 9
+      },
+      "notes": "Original wording from the ODT; contextual or quoted prompts may need teacher framing."
+    },
+    {
+      "id": "q-02",
+      "question": "So why are we showing a picture of Jacob with two women?",
+      "answer": "Laban tricked Jacob into marrying the wrong daughter, so he ended up marrying two sisters, Leah and Rachel.",
+      "kind": "discussion",
+      "scope": "introduction",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 23
+      },
+      "notes": "Original wording from the ODT; contextual or quoted prompts may need teacher framing."
+    },
+    {
+      "id": "q-03",
+      "question": "Which wife did he love the most?",
+      "answer": "Rachel.",
+      "kind": "discussion",
+      "scope": "story",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 33
+      },
+      "notes": "Original wording from the ODT; contextual or quoted prompts may need teacher framing."
+    },
+    {
+      "id": "q-04",
+      "question": "How do you think Leah felt about this?",
+      "answer": "Jealous, angry, sad.",
+      "kind": "discussion",
+      "scope": "story",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 35
+      },
+      "notes": "Original wording from the ODT; contextual or quoted prompts may need teacher framing."
+    },
+    {
+      "id": "q-05",
+      "question": "What did God do for Leah?",
+      "answer": "Allow her to have children.",
+      "kind": "discussion",
+      "scope": "story",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 37
+      },
+      "notes": "Original wording from the ODT; contextual or quoted prompts may need teacher framing."
+    },
+    {
+      "id": "q-06",
+      "question": "How many children did Leah have?",
+      "answer": "Four.",
+      "kind": "discussion",
+      "scope": "story",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 52
+      },
+      "notes": "Original wording from the ODT; contextual or quoted prompts may need teacher framing."
+    },
+    {
+      "id": "q-07",
+      "question": "Did that happen?",
+      "answer": "No.",
+      "kind": "discussion",
+      "scope": "story",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 64
+      },
+      "notes": "Original wording from the ODT; contextual or quoted prompts may need teacher framing."
+    },
+    {
+      "id": "q-08",
+      "question": "Instead, she chose to give thanks… to who?",
+      "answer": "God.",
+      "kind": "discussion",
+      "scope": "story",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 66
+      },
+      "notes": "Original wording from the ODT; contextual or quoted prompts may need teacher framing."
+    },
+    {
+      "id": "q-09",
+      "question": "Why?",
+      "answer": "Because she couldn’t have kids.",
+      "kind": "discussion",
+      "scope": "story",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Story",
+        "page": 3,
+        "sourceParagraphIndex": 79
+      },
+      "notes": "Original wording from the ODT; contextual or quoted prompts may need teacher framing."
+    },
+    {
+      "id": "q-10",
+      "question": "How many wives would that make for Jacob?",
+      "answer": "Three.",
+      "kind": "discussion",
+      "scope": "story",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Story",
+        "page": 3,
+        "sourceParagraphIndex": 81
+      },
+      "notes": "Original wording from the ODT; contextual or quoted prompts may need teacher framing."
+    },
+    {
+      "id": "q-11",
+      "question": "How many kids did Bilhah have?",
+      "answer": "Two.",
+      "kind": "discussion",
+      "scope": "story",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Story",
+        "page": 3,
+        "sourceParagraphIndex": 85
+      },
+      "notes": "Original wording from the ODT; contextual or quoted prompts may need teacher framing."
+    },
+    {
+      "id": "q-12",
+      "question": "What did she do?",
+      "answer": "Gave her servant to Jacob to have kids.",
+      "kind": "discussion",
+      "scope": "story",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 100
+      },
+      "notes": "Original wording from the ODT; contextual or quoted prompts may need teacher framing."
+    },
+    {
+      "id": "q-13",
+      "question": "How many wives does that make for Jacob now?",
+      "answer": "Four.",
+      "kind": "discussion",
+      "scope": "story",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 102
+      },
+      "notes": "Original wording from the ODT; contextual or quoted prompts may need teacher framing."
+    },
+    {
+      "id": "q-14",
+      "question": "How many is a man supposed to have?",
+      "answer": "One.",
+      "kind": "discussion",
+      "scope": "story",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 104
+      },
+      "notes": "Original wording from the ODT; contextual or quoted prompts may need teacher framing."
+    },
+    {
+      "id": "q-15",
+      "question": "How many?",
+      "answer": "Two.",
+      "kind": "discussion",
+      "scope": "story",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 106
+      },
+      "notes": "Original wording from the ODT; contextual or quoted prompts may need teacher framing."
+    },
+    {
+      "id": "q-16",
+      "question": "After Zilpah had two boys for her, what was the score in Rachel and Leah’s baby battle?",
+      "answer": "Six for Leah’s side, two for Rachel’s.",
+      "kind": "discussion",
+      "scope": "story",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 108
+      },
+      "notes": "Original wording from the ODT; contextual or quoted prompts may need teacher framing."
+    },
+    {
+      "id": "q-17",
+      "question": "How many total people would that be?",
+      "answer": "13.",
+      "kind": "discussion",
+      "scope": "story",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 110
+      },
+      "notes": "Original wording from the ODT; contextual or quoted prompts may need teacher framing."
+    },
+    {
+      "id": "q-18",
+      "question": "Who did God allow to start having kids again?",
+      "answer": "Leah.",
+      "kind": "discussion",
+      "scope": "story",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 121
+      },
+      "notes": "Original wording from the ODT; contextual or quoted prompts may need teacher framing."
+    },
+    {
+      "id": "q-19",
+      "question": "How many more kids did Leah have and what kind?",
+      "answer": "Three; two boys and a girl.",
+      "kind": "discussion",
+      "scope": "story",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 123
+      },
+      "notes": "Original wording from the ODT; contextual or quoted prompts may need teacher framing."
+    },
+    {
+      "id": "q-20",
+      "question": "Does anyone know the score in Leah and Rachel’s baby battle?",
+      "answer": "Eight sons and one daughter for Leah’s side, two for Rachel’s side.",
+      "kind": "discussion",
+      "scope": "story",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 129
+      },
+      "notes": "Original wording from the ODT; contextual or quoted prompts may need teacher framing."
+    },
+    {
+      "id": "q-21",
+      "question": "What did he do?",
+      "answer": "Made her able to have a baby.",
+      "kind": "discussion",
+      "scope": "story",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 138
+      },
+      "notes": "Original wording from the ODT; contextual or quoted prompts may need teacher framing."
+    },
+    {
+      "id": "q-22",
+      "question": "What did Rachel name her firstborn son?",
+      "answer": "Joseph.",
+      "kind": "discussion",
+      "scope": "story",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 140
+      },
+      "notes": "Original wording from the ODT; contextual or quoted prompts may need teacher framing."
+    },
+    {
+      "id": "q-23",
+      "question": "May I please have another?",
+      "answer": "Rachel asked God for another son.",
+      "kind": "quoted-speech",
+      "scope": "story",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 144
+      },
+      "notes": "Original wording from the ODT; contextual or quoted prompts may need teacher framing."
+    },
+    {
+      "id": "q-24",
+      "question": "So what’s the score in the baby battle now?",
+      "answer": "Eight sons and a daughter for Leah’s side, three sons for Rachel’s side.",
+      "kind": "discussion",
+      "scope": "story",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 146
+      },
+      "notes": "Original wording from the ODT; contextual or quoted prompts may need teacher framing."
+    },
+    {
+      "id": "q-25",
+      "question": "What happened as her son was born?",
+      "answer": "She died.",
+      "kind": "discussion",
+      "scope": "story",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Story",
+        "page": 5,
+        "sourceParagraphIndex": 157
+      },
+      "notes": "Original wording from the ODT; contextual or quoted prompts may need teacher framing."
+    },
+    {
+      "id": "q-26",
+      "question": "What was it?",
+      "answer": "Benjamin.",
+      "kind": "discussion",
+      "scope": "story",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Story",
+        "page": 5,
+        "sourceParagraphIndex": 159
+      },
+      "notes": "Original wording from the ODT; contextual or quoted prompts may need teacher framing."
+    },
+    {
+      "id": "q-27",
+      "question": "How many people is that?",
+      "answer": "18.",
+      "kind": "discussion",
+      "scope": "story",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Story",
+        "page": 5,
+        "sourceParagraphIndex": 165
+      },
+      "notes": "Original wording from the ODT; contextual or quoted prompts may need teacher framing."
+    },
+    {
+      "id": "q-28",
+      "question": "So how does the story of Jacob’s family teach us, strengthen us, encourage us, or give us hope?",
+      "answer": "The lesson introduces two Important Ideas about God’s plan and His steadfast love.",
+      "kind": "discussion",
+      "scope": "application",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Important Idea",
+        "page": 5,
+        "sourceParagraphIndex": 169
+      },
+      "notes": "Original wording from the ODT; contextual or quoted prompts may need teacher framing."
+    },
+    {
+      "id": "q-29",
+      "question": "What is God's plan for marriage?",
+      "answer": "One man and one woman.",
+      "kind": "discussion",
+      "scope": "application",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Important Idea",
+        "page": 6,
+        "sourceParagraphIndex": 179
+      },
+      "notes": "Original wording from the ODT; contextual or quoted prompts may need teacher framing."
+    },
+    {
+      "id": "q-30",
+      "question": "What does this verse tell us about the Lord God?",
+      "answer": "He’s good; his steadfast, never-stopping love lasts forever.",
+      "kind": "discussion",
+      "scope": "memory-verse",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Memory Verse Activity",
+        "page": 8,
+        "sourceParagraphIndex": 246
+      },
+      "notes": "Original wording from the ODT; contextual or quoted prompts may need teacher framing."
+    },
+    {
+      "id": "q-31",
+      "question": "How did Jacob feel about his two wives, Rachel and Leah?",
+      "answer": "He loved Rachel more.",
+      "kind": "review",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 294
+      },
+      "notes": "Original wording from the ODT; contextual or quoted prompts may need teacher framing."
+    },
+    {
+      "id": "q-32",
+      "question": "At the beginning, which of Jacob’s two wives could have children?",
+      "answer": "Leah",
+      "kind": "review",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 295
+      },
+      "notes": "Original wording from the ODT; contextual or quoted prompts may need teacher framing."
+    },
+    {
+      "id": "q-33",
+      "question": "What did Leah think would happen after she had sons for Jacob?",
+      "answer": "Jacob would love her more",
+      "kind": "review",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 296
+      },
+      "notes": "Original wording from the ODT; contextual or quoted prompts may need teacher framing."
+    },
+    {
+      "id": "q-34",
+      "question": "Because she couldn’t have children, what did Rachel do?",
+      "answer": "Gave her servant Bilhah to be Jacob’s wife",
+      "kind": "review",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 297
+      },
+      "notes": "Original wording from the ODT; contextual or quoted prompts may need teacher framing."
+    },
+    {
+      "id": "q-35",
+      "question": "How many children did Rachel’s servant Bilhah have?",
+      "answer": "Two",
+      "kind": "review",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 298
+      },
+      "notes": "Original wording from the ODT; contextual or quoted prompts may need teacher framing."
+    },
+    {
+      "id": "q-36",
+      "question": "After Rachel gave her servant to Jacob, what did Leah do?",
+      "answer": "Gave her servant Zilpah to be Jacob’s wife",
+      "kind": "review",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 299
+      },
+      "notes": "Original wording from the ODT; contextual or quoted prompts may need teacher framing."
+    },
+    {
+      "id": "q-37",
+      "question": "After Leah’s servant had two children, what happened to Leah?",
+      "answer": "She had two more sons and a daughter",
+      "kind": "review",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 300
+      },
+      "notes": "Original wording from the ODT; contextual or quoted prompts may need teacher framing."
+    },
+    {
+      "id": "q-38",
+      "question": "After waiting for years, what did God do for Rachel?",
+      "answer": "Gave her a son, who she named Joseph",
+      "kind": "review",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 301
+      },
+      "notes": "Original wording from the ODT; contextual or quoted prompts may need teacher framing."
+    },
+    {
+      "id": "q-39",
+      "question": "What happened when Rachel gave birth to her second son Benjamin?",
+      "answer": "She died",
+      "kind": "review",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 302
+      },
+      "notes": "Original wording from the ODT; contextual or quoted prompts may need teacher framing."
+    },
+    {
+      "id": "q-40",
+      "question": "How many wives did Jacob have?",
+      "answer": "4 wives",
+      "kind": "review",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 303
+      },
+      "notes": "Original wording from the ODT; contextual or quoted prompts may need teacher framing."
+    },
+    {
+      "id": "q-41",
+      "question": "How many kids?",
+      "answer": "13 kids",
+      "kind": "review",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 303
+      },
+      "notes": "Original wording from the ODT; contextual or quoted prompts may need teacher framing."
+    },
+    {
+      "id": "q-42",
+      "question": "How many people in his family?",
+      "answer": "18 total",
+      "kind": "review",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 303
+      },
+      "notes": "Original wording from the ODT; contextual or quoted prompts may need teacher framing."
+    },
+    {
+      "id": "q-43",
+      "question": "Who was Jacob’s first wife?",
+      "answer": "Leah",
+      "kind": "discussion",
+      "scope": "extra-activity",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Extra Activity",
+        "page": 12,
+        "sourceParagraphIndex": 337
+      },
+      "notes": "Original wording from the ODT; contextual or quoted prompts may need teacher framing."
+    }
+  ],
+  "facts": [
+    {
+      "id": "tf-01",
+      "statement": "Jacob loved Rachel more than Leah.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "STORY NOTE",
+        "page": 1,
+        "sourceParagraphIndex": 31
+      }
+    },
+    {
+      "id": "tf-02",
+      "statement": "Jacob loved Leah and Rachel exactly the same.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "teacherReviewRequired": true,
+      "notes": "Newly composed false statement; teacher approval required."
+    },
+    {
+      "id": "tf-03",
+      "statement": "Leah’s first four sons included Reuben, Simeon, Levi, and Judah.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "STORY NOTE",
+        "page": 2,
+        "sourceParagraphIndex": 50
+      }
+    },
+    {
+      "id": "tf-04",
+      "statement": "Rachel gave her servant Bilhah to Jacob as a wife.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "STORY NOTE",
+        "page": 3,
+        "sourceParagraphIndex": 77
+      }
+    },
+    {
+      "id": "tf-05",
+      "statement": "Bilhah had three sons.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-03"
+      ],
+      "teacherReviewRequired": true,
+      "notes": "Newly composed false statement; teacher approval required."
+    },
+    {
+      "id": "tf-06",
+      "statement": "Bilhah’s two sons were Dan and Naphtali.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "STORY NOTE",
+        "page": 3,
+        "sourceParagraphIndex": 77
+      }
+    },
+    {
+      "id": "tf-07",
+      "statement": "Leah’s servant Zilpah had two sons.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "STORY NOTE",
+        "page": 3,
+        "sourceParagraphIndex": 98
+      }
+    },
+    {
+      "id": "tf-08",
+      "statement": "Zilpah’s sons were Joseph and Benjamin.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-04",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true,
+      "notes": "Newly composed false statement; teacher approval required."
+    },
+    {
+      "id": "tf-09",
+      "statement": "Leah later had two more sons and a daughter.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "STORY NOTE",
+        "page": 4,
+        "sourceParagraphIndex": 119
+      }
+    },
+    {
+      "id": "tf-10",
+      "statement": "Leah named her daughter Rachel.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": true,
+      "notes": "Newly composed false statement; teacher approval required."
+    },
+    {
+      "id": "tf-11",
+      "statement": "God allowed Rachel to have her first son, Joseph.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "STORY NOTE",
+        "page": 4,
+        "sourceParagraphIndex": 136
+      }
+    },
+    {
+      "id": "tf-12",
+      "statement": "Benjamin was the oldest son.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true,
+      "notes": "Newly composed false statement; teacher approval required."
+    },
+    {
+      "id": "tf-13",
+      "statement": "Rachel died when her second son was born.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "STORY NOTE",
+        "page": 5,
+        "sourceParagraphIndex": 155
+      }
+    },
+    {
+      "id": "tf-14",
+      "statement": "Jacob had a son named Jacob Jr.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": true,
+      "notes": "Newly composed false statement; teacher approval required."
+    }
+  ],
+  "vocabulary": {
+    "related": [
+      "JACOB",
+      "LEAH",
+      "RACHEL",
+      "SONS",
+      "DAUGHTER",
+      "BILHAH",
+      "ZILPAH",
+      "REUBEN",
+      "SIMEON",
+      "LEVI",
+      "JUDAH",
+      "DAN",
+      "NAPHTALI",
+      "GAD",
+      "ASHER",
+      "ISSACHAR",
+      "ZEBULUN",
+      "DINAH",
+      "JOSEPH",
+      "BENJAMIN",
+      "FAMILY",
+      "WIVES",
+      "PRAYER",
+      "LOVE",
+      "PROMISE",
+      "GOD"
+    ],
+    "unrelated": [
+      "DOVE",
+      "BRICKS",
+      "TRUMPETS",
+      "ALTAR",
+      "FISH",
+      "SHIP",
+      "LIONS",
+      "MANGER",
+      "SCEPTER",
+      "ROOFTOP"
+    ],
+    "entries": [
+      {
+        "id": "v-01",
+        "term": "JACOB",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-02",
+        "term": "LEAH",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-03",
+        "term": "RACHEL",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-04",
+        "term": "SONS",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-05",
+        "term": "DAUGHTER",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-06",
+        "term": "BILHAH",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-07",
+        "term": "ZILPAH",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-08",
+        "term": "REUBEN",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-09",
+        "term": "SIMEON",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-10",
+        "term": "LEVI",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-11",
+        "term": "JUDAH",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-12",
+        "term": "DAN",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-13",
+        "term": "NAPHTALI",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-14",
+        "term": "GAD",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-15",
+        "term": "ASHER",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-16",
+        "term": "ISSACHAR",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-17",
+        "term": "ZEBULUN",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-18",
+        "term": "DINAH",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-19",
+        "term": "JOSEPH",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-20",
+        "term": "BENJAMIN",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-21",
+        "term": "FAMILY",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-22",
+        "term": "WIVES",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-23",
+        "term": "PRAYER",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-24",
+        "term": "LOVE",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-25",
+        "term": "PROMISE",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-26",
+        "term": "GOD",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-27",
+        "term": "DOVE",
+        "origin": "suggested",
+        "category": "suggested-distractor",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-28",
+        "term": "BRICKS",
+        "origin": "suggested",
+        "category": "suggested-distractor",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-29",
+        "term": "TRUMPETS",
+        "origin": "suggested",
+        "category": "suggested-distractor",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-30",
+        "term": "ALTAR",
+        "origin": "suggested",
+        "category": "suggested-distractor",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-31",
+        "term": "FISH",
+        "origin": "suggested",
+        "category": "suggested-distractor",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-32",
+        "term": "SHIP",
+        "origin": "suggested",
+        "category": "suggested-distractor",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-33",
+        "term": "LIONS",
+        "origin": "suggested",
+        "category": "suggested-distractor",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-34",
+        "term": "MANGER",
+        "origin": "suggested",
+        "category": "suggested-distractor",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-35",
+        "term": "SCEPTER",
+        "origin": "suggested",
+        "category": "suggested-distractor",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-36",
+        "term": "ROOFTOP",
+        "origin": "suggested",
+        "category": "suggested-distractor",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      }
+    ]
+  },
+  "characters": [
+    {
+      "id": "ch-01",
+      "name": "Jacob",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "clues": [
+        {
+          "text": "I had twelve sons and one daughter.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-01",
+            "sn-02",
+            "sn-03",
+            "sn-04",
+            "sn-05",
+            "sn-06",
+            "sn-07"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch-02",
+      "name": "Leah",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-05"
+      ],
+      "clues": [
+        {
+          "text": "My daughter was Dinah.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-05"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch-03",
+      "name": "Rachel",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-03",
+        "sn-06",
+        "sn-07"
+      ],
+      "clues": [
+        {
+          "text": "My sons were Joseph and Benjamin.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-06",
+            "sn-07"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch-04",
+      "name": "Bilhah",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ],
+      "clues": [
+        {
+          "text": "I was the mother of Dan and Naphtali.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-03"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch-05",
+      "name": "Zilpah",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ],
+      "clues": [
+        {
+          "text": "I was the mother of Gad and Asher.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-04"
+          ]
+        }
+      ]
+    }
+  ],
+  "matchingPairs": [
+    {
+      "id": "mp-01",
+      "left": "Leah",
+      "right": "Six sons",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02",
+        "sn-05"
+      ]
+    },
+    {
+      "id": "mp-02",
+      "left": "Rachel",
+      "right": "Joseph",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ]
+    },
+    {
+      "id": "mp-03",
+      "left": "Bilhah",
+      "right": "Dan",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ]
+    },
+    {
+      "id": "mp-04",
+      "left": "Zilpah",
+      "right": "Gad",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ]
+    },
+    {
+      "id": "mp-05",
+      "left": "Dinah",
+      "right": "Daughter",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ]
+    },
+    {
+      "id": "mp-06",
+      "left": "Benjamin",
+      "right": "Youngest",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ]
+    }
+  ],
+  "drawingPrompts": [
+    {
+      "id": "draw-01",
+      "prompt": "Jacob standing with Leah and Rachel",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    {
+      "id": "draw-02",
+      "prompt": "Leah with her first four sons",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ]
+    },
+    {
+      "id": "draw-03",
+      "prompt": "Leah and her daughter Dinah",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ]
+    },
+    {
+      "id": "draw-04",
+      "prompt": "Rachel holding baby Joseph",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ]
+    }
+  ],
+  "keyPhrases": [
+    {
+      "id": "kp-01",
+      "text": "Jacob loved Rachel more than Leah, but God let Leah have children first.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    {
+      "id": "kp-02",
+      "text": "Leah had four sons named Reuben, Simeon, Levi, and Judah.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ]
+    },
+    {
+      "id": "kp-03",
+      "text": "Rachel gave Bilhah to Jacob as a wife, and Bilhah had two sons.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ]
+    },
+    {
+      "id": "kp-04",
+      "text": "Leah gave Zilpah to Jacob as a wife, and Zilpah had two sons.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ]
+    },
+    {
+      "id": "kp-05",
+      "text": "Leah later had two more sons and a daughter named Dinah.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ]
+    },
+    {
+      "id": "kp-06",
+      "text": "God heard Rachel’s prayers, and she gave birth to Joseph.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ]
+    },
+    {
+      "id": "kp-07",
+      "text": "Rachel gave birth to Benjamin and died soon afterward.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ]
+    }
+  ],
+  "theologicalApplications": [
+    {
+      "id": "app-01",
+      "text": "When we don’t follow God’s plan, we’re headed for trouble.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Important Idea",
+        "page": 5,
+        "sourceParagraphIndex": 170,
+        "details": "Original source graphic contains lowercase “god” and irregular line breaks; capitalization and spacing corrected in display text; original ODT left unchanged."
+      }
+    },
+    {
+      "id": "app-02",
+      "text": "God loves His people with a steadfast, never-stopping love.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Important Idea",
+        "page": 6,
+        "sourceParagraphIndex": 199,
+        "details": "Original source graphic contains lowercase “god” and irregular line breaks; capitalization and spacing corrected in display text; original ODT left unchanged."
+      }
+    },
+    {
+      "id": "app-03",
+      "text": "The lesson teaches that God kept loving Jacob’s family, even though their relationships were troubled.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ]
+    },
+    {
+      "id": "app-04",
+      "text": "The lesson points to Jesus as the way God shows His faithful love for His people.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ]
+    }
+  ],
+  "preparedActivities": {
+    "drawPicture": {
+      "prompt": "Jacob standing with Leah and Rachel",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ]
+    },
+    "multipleChoice": [
+      {
+        "id": "mc-01",
+        "question": "Which wife did Jacob love more?",
+        "correctAnswer": "Rachel",
+        "choices": [
+          {
+            "text": "Rachel",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Leah",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Zilpah",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-02",
+        "question": "How many sons did Leah have?",
+        "correctAnswer": "Six",
+        "choices": [
+          {
+            "text": "Six",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Two",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Four",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-03",
+        "question": "Who was Rachel’s servant who had two sons?",
+        "correctAnswer": "Bilhah",
+        "choices": [
+          {
+            "text": "Bilhah",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Zilpah",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Dinah",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-04",
+        "question": "How many sons did Jacob have?",
+        "correctAnswer": "6",
+        "choices": [
+          {
+            "text": "6",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "12",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "10",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-05",
+        "question": "What was the name of Leah’s daughter?",
+        "correctAnswer": "Dinah",
+        "choices": [
+          {
+            "text": "Dinah",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Rachel",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Rebekah",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-06",
+        "question": "What did Rachel name her first son?",
+        "correctAnswer": "Joseph",
+        "choices": [
+          {
+            "text": "Joseph",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Benjamin",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Judah",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ],
+        "teacherReviewRequired": true
+      }
+    ],
+    "trueFalse": {
+      "factId": "tf-13",
+      "statement": "Rachel died when her second son was born.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "STORY NOTE",
+        "page": 5,
+        "sourceParagraphIndex": 155
+      }
+    },
+    "firstLetters": {
+      "reference": "Psalm 136:1",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Memory Verse Activity",
+        "page": 8,
+        "sourceParagraphIndex": 244,
+        "details": "Original ESV verse: “Give thanks to the Lord, for he is good, for his steadfast love endures forever.” Proposed BSB full verse: “Give thanks to the LORD, for He is good. His loving devotion endures forever.” BSB text verified at https://biblehub.com/bsb/psalms/136.htm ; teacher must approve the change."
+      },
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true,
+      "verse": "Give thanks to the LORD, for He is good. His loving devotion endures forever."
+    },
+    "oddWords": {
+      "related": [
+        "JACOB",
+        "LEAH",
+        "RACHEL",
+        "SONS",
+        "Twelve"
+      ],
+      "unrelated": [
+        "Thomas",
+        "Road",
+        "Heaven",
+        "Stones",
+        "Fire"
+      ],
+      "unrelatedOrigin": "suggested",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "unscrambleWords": {
+      "answers": [
+        "ZILPAH",
+        "RACHEL"
+      ],
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "checkboxes": {
+      "correct": [
+        "JOSEPH",
+        "BENJAMIN",
+        "DINAH",
+        "WIFE",
+        "FAMILY"
+      ],
+      "incorrect": [
+        "Nails",
+        "Donkeys",
+        "Palm Trees",
+        "Camel",
+        "Waves"
+      ],
+      "incorrectOrigin": "suggested",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "whoAmI": {
+      "clue": "I was Rachel’s first son. My younger brother was Benjamin.",
+      "answer": "Joseph",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06",
+        "sn-07"
+      ]
+    },
+    "matchWords": [
+      {
+        "id": "mp-01",
+        "left": "Leah",
+        "right": "Six sons",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02",
+          "sn-05"
+        ]
+      },
+      {
+        "id": "mp-02",
+        "left": "Rachel",
+        "right": "Joseph",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "id": "mp-03",
+        "left": "Bilhah",
+        "right": "Third Wife",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-04",
+        "left": "Zilpah",
+        "right": "Fourth Wife",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-04"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-05",
+        "left": "Dinah",
+        "right": "Daughter",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "id": "mp-06",
+        "left": "Benjamin",
+        "right": "Youngest",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      }
+    ],
+    "finishVerse": {
+      "reference": "Psalm 136:1",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Memory Verse Activity",
+        "page": 8,
+        "sourceParagraphIndex": 244,
+        "details": "Original ESV verse: “Give thanks to the Lord, for he is good, for his steadfast love endures forever.” Proposed BSB full verse: “Give thanks to the LORD, for He is good. His loving devotion endures forever.” BSB text verified at https://biblehub.com/bsb/psalms/136.htm ; teacher must approve the change."
+      },
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true,
+      "markedVerse": "Give [thanks] to the [LORD], for [He] is [good]. His [loving] devotion endures [forever].",
+      "sourceVerse": "Give thanks to the LORD, for He is good. His loving devotion endures forever."
+    },
+    "unscrambleVerse": {
+      "reference": "Psalm 136:1",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Memory Verse Activity",
+        "page": 8,
+        "sourceParagraphIndex": 244,
+        "details": "Original ESV verse: “Give thanks to the Lord, for he is good, for his steadfast love endures forever.” Proposed BSB full verse: “Give thanks to the LORD, for He is good. His loving devotion endures forever.” BSB text verified at https://biblehub.com/bsb/psalms/136.htm ; teacher must approve the change."
+      },
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true,
+      "markedVerse": "Give [thanks] to the [LORD], for [He] is [good]. His [loving] devotion endures [forever].",
+      "sourceVerse": "Give thanks to the LORD, for He is good. His loving devotion endures forever."
+    },
+    "circleMistakes": {
+      "paragraph": "Jacob was married to one woman. Jacob loved Leah more than Rachel. Leah had six daughters and one son. Rachel never had problems having children. Leah later gave her servant Sarah to Jacob as a wife. After many years of waiting, Rachel had her first son, Benjamin. After she had her second son, Rachel lived a long time.",
+      "mistakeCount": 6,
+      "mistakes": [
+        {
+          "incorrect": "one woman",
+          "correction": "four women"
+        },
+        {
+          "incorrect": "Leah more than Rachel",
+          "correction": "Rachel more than Leah"
+        },
+        {
+          "incorrect": "six daughters and one son",
+          "correction": "six sons and one daughter"
+        },
+        {
+          "incorrect": "never had problems having children",
+          "correction": "had problems having children."
+        },
+        {
+          "incorrect": "servant Sarah",
+          "correction": "servant Zilpah"
+        },
+        {
+          "incorrect": "lived a long time",
+          "correction": "died"
+        }
+      ],
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "mediumWordSearch": {
+      "words": [
+        "JACOB",
+        "LEAH",
+        "RACHEL",
+        "DINAH",
+        "JOSEPH",
+        "BENJAMIN"
+      ],
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ]
+    },
+    "trueFalseMaze": {
+      "statement": "Benjamin was the oldest son.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true,
+      "factId": "tf-12"
+    },
+    "bigIdeaCryptogram": {
+      "phrase": "When we don’t follow God’s plan, we’re headed for trouble.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Important Idea",
+        "page": 5,
+        "sourceParagraphIndex": 170,
+        "details": "Original source graphic contains lowercase “god” and irregular line breaks; capitalization and spacing corrected in display text; original ODT left unchanged."
+      },
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ]
+    },
+    "upsideDownVerse": {
+      "reference": "Psalm 136:1",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Memory Verse Activity",
+        "page": 8,
+        "sourceParagraphIndex": 244,
+        "details": "Original ESV verse: “Give thanks to the Lord, for he is good, for his steadfast love endures forever.” Proposed BSB full verse: “Give thanks to the LORD, for He is good. His loving devotion endures forever.” BSB text verified at https://biblehub.com/bsb/psalms/136.htm ; teacher must approve the change."
+      },
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true,
+      "verse": "Give thanks to the LORD, for He is good. His loving devotion endures forever."
+    },
+    "connectBigIdea": {
+      "phrase": "When we don’t follow God’s plan, we’re headed for trouble.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Important Idea",
+        "page": 5,
+        "sourceParagraphIndex": 170,
+        "details": "Original source graphic contains lowercase “god” and irregular line breaks; capitalization and spacing corrected in display text; original ODT left unchanged."
+      },
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": false
+    },
+    "pixelPicture": {
+      "phrase": "God loves His people with a steadfast, never-stopping love.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Important Idea",
+        "page": 6,
+        "sourceParagraphIndex": 199,
+        "details": "Original source graphic contains lowercase “god” and irregular line breaks; capitalization and spacing corrected in display text; original ODT left unchanged."
+      },
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": false
+    },
+    "finishStory": {
+      "markedParagraph": "Jacob [married] two women. He loved [Rachel] more than Leah. God let Leah have children first. She had four sons: Reuben, Simeon, Levi, and [Judah]. Rachel could not have children, so she gave her servant [Bilhah] to Jacob as a third wife. Bilhah had two boys. Leah later gave her servant [Zilpah] to Jacob, and Zilpah also had two sons. Later, Leah had two more boys and a daughter named [Dinah]. Finally, God heard Rachel’s prayers, and she gave birth to her first son, [Joseph]. Later Rachel gave birth to another son, but she [died] soon after. Jacob named that baby [Benjamin]. Jacob’s family now included [twelve] sons and one daughter. Through this [messy] family, God still kept His [promises] and showed His faithful love.",
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "storyOrder": [
+      {
+        "order": 1,
+        "text": "Jacob loved Rachel more than Leah, but God let Leah have children first.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "order": 2,
+        "text": "Leah had four sons named Reuben, Simeon, Levi, and Judah.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "order": 3,
+        "text": "Rachel gave Bilhah to Jacob as a wife, and Bilhah had two sons.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "order": 4,
+        "text": "Leah gave Zilpah to Jacob as a wife, and Zilpah had two sons.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "order": 5,
+        "text": "Leah later had two more sons and a daughter named Dinah.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "order": 6,
+        "text": "God heard Rachel’s prayers, and she gave birth to Joseph.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "order": 7,
+        "text": "Rachel gave birth to Benjamin and died soon afterward.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      }
+    ],
+    "sortStory": [
+      {
+        "statement": "Jacob loved Rachel more than Leah.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": false,
+        "source": {
+          "filename": "OT 18 Lesson (Jacob's Family).odt",
+          "section": "STORY NOTE",
+          "page": 1,
+          "sourceParagraphIndex": 31
+        },
+        "factId": "tf-01"
+      },
+      {
+        "statement": "Leah’s first four sons included Reuben, Simeon, Levi, and Judah.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": false,
+        "source": {
+          "filename": "OT 18 Lesson (Jacob's Family).odt",
+          "section": "STORY NOTE",
+          "page": 2,
+          "sourceParagraphIndex": 50
+        },
+        "factId": "tf-03"
+      },
+      {
+        "statement": "Bilhah had three sons.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": true,
+        "factId": "tf-05"
+      },
+      {
+        "statement": "Bilhah’s two sons were Dan and Naphtali.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": false,
+        "source": {
+          "filename": "OT 18 Lesson (Jacob's Family).odt",
+          "section": "STORY NOTE",
+          "page": 3,
+          "sourceParagraphIndex": 77
+        },
+        "factId": "tf-06"
+      },
+      {
+        "statement": "Leah’s servant Zilpah had two sons.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ],
+        "teacherReviewRequired": false,
+        "source": {
+          "filename": "OT 18 Lesson (Jacob's Family).odt",
+          "section": "STORY NOTE",
+          "page": 3,
+          "sourceParagraphIndex": 98
+        },
+        "factId": "tf-07"
+      },
+      {
+        "statement": "Leah named her daughter Rachel.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-05"
+        ],
+        "teacherReviewRequired": true,
+        "factId": "tf-10"
+      },
+      {
+        "statement": "God allowed Rachel to have her first son, Joseph.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ],
+        "teacherReviewRequired": false,
+        "source": {
+          "filename": "OT 18 Lesson (Jacob's Family).odt",
+          "section": "STORY NOTE",
+          "page": 4,
+          "sourceParagraphIndex": 136
+        },
+        "factId": "tf-11"
+      },
+      {
+        "statement": "Jacob had a son named Jacob Jr.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-07"
+        ],
+        "teacherReviewRequired": true,
+        "factId": "tf-14"
+      }
+    ],
+    "drawStory": [
+      {
+        "prompt": "Jacob loved Rachel more than Leah, but God let Leah have children first.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "prompt": "Leah had four sons named Reuben, Simeon, Levi, and Judah.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "prompt": "Leah gave Zilpah to Jacob as a wife, and Zilpah had two sons.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "prompt": "Leah later had two more sons and a daughter named Dinah.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "prompt": "God heard Rachel’s prayers, and she gave birth to Joseph.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "prompt": "Rachel gave birth to Benjamin and died soon afterward.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      }
+    ],
+    "wordSearch": {
+      "words": [
+        "JACOB",
+        "LEAH",
+        "RACHEL",
+        "BILHAH",
+        "ZILPAH",
+        "REUBEN",
+        "JUDAH",
+        "DINAH",
+        "JOSEPH",
+        "BENJAMIN",
+        "FAMILY"
+      ],
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ]
+    },
+    "verseCryptogram": {
+      "reference": "Psalm 136:1",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Memory Verse Activity",
+        "page": 8,
+        "sourceParagraphIndex": 244,
+        "details": "Original ESV verse: “Give thanks to the Lord, for he is good, for his steadfast love endures forever.” Proposed BSB full verse: “Give thanks to the LORD, for He is good. His loving devotion endures forever.” BSB text verified at https://biblehub.com/bsb/psalms/136.htm ; teacher must approve the change."
+      },
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true,
+      "verse": "Give thanks to the LORD, for He is good. His loving devotion endures forever."
+    },
+    "crossword": [
+      {
+        "answer": "JACOB",
+        "clue": "He was the father of twelve sons and one daughter.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01",
+          "sn-07"
+        ]
+      },
+      {
+        "answer": "LEAH",
+        "clue": "She had six sons and a daughter named Dinah.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02",
+          "sn-05"
+        ]
+      },
+      {
+        "answer": "RACHEL",
+        "clue": "She was the mother of Joseph and Benjamin.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06",
+          "sn-07"
+        ]
+      },
+      {
+        "answer": "BILHAH",
+        "clue": "Rachel’s servant who had Dan and Naphtali.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "answer": "ZILPAH",
+        "clue": "Leah’s servant who had Gad and Asher.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "answer": "REUBEN",
+        "clue": "Leah’s first son.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "answer": "DINAH",
+        "clue": "Jacob’s daughter.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "answer": "JOSEPH",
+        "clue": "Rachel’s first son.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "answer": "BENJAMIN",
+        "clue": "Rachel’s second son.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "answer": "DIED",
+        "clue": "What happened to Rachel after Benjamin was born.",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": true
+      }
+    ],
+    "spiralVerse": {
+      "reference": "Psalm 136:1",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Memory Verse Activity",
+        "page": 8,
+        "sourceParagraphIndex": 244,
+        "details": "Original ESV verse: “Give thanks to the Lord, for he is good, for his steadfast love endures forever.” Proposed BSB full verse: “Give thanks to the LORD, for He is good. His loving devotion endures forever.” BSB text verified at https://biblehub.com/bsb/psalms/136.htm ; teacher must approve the change."
+      },
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true,
+      "verse": "Give thanks to the LORD, for He is good. His loving devotion endures forever."
+    },
+    "connectVerse": {
+      "reference": "Psalm 136:1",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 18 Lesson (Jacob's Family).odt",
+        "section": "Memory Verse Activity",
+        "page": 8,
+        "sourceParagraphIndex": 244,
+        "details": "Original ESV verse: “Give thanks to the Lord, for he is good, for his steadfast love endures forever.” Proposed BSB full verse: “Give thanks to the LORD, for He is good. His loving devotion endures forever.” BSB text verified at https://biblehub.com/bsb/psalms/136.htm ; teacher must approve the change."
+      },
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true,
+      "verse": "Give thanks to the LORD, for He is good. His loving devotion endures forever."
+    }
+  },
+  "moduleReadiness": [
+    {
+      "moduleName": "Draw a Picture",
+      "moduleId": "draw-picture",
+      "size": "Small",
+      "preparedActivityKey": "drawPicture",
+      "status": "READY",
+      "contentValidation": "Prepared content and local validation only. Official repository validation, live generator, and preset checks not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means draft prepared content exists, not that the live generator or numbered presets passed."
+    },
+    {
+      "moduleName": "Multiple Choice",
+      "moduleId": "multiple-choice",
+      "size": "Small",
+      "preparedActivityKey": "multipleChoice",
+      "status": "READY",
+      "contentValidation": "Prepared content and local validation only. Official repository validation, live generator, and preset checks not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means draft prepared content exists, not that the live generator or numbered presets passed."
+    },
+    {
+      "moduleName": "True / False",
+      "moduleId": "true-false",
+      "size": "Small",
+      "preparedActivityKey": "trueFalse",
+      "status": "READY",
+      "contentValidation": "Prepared content and local validation only. Official repository validation, live generator, and preset checks not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means draft prepared content exists, not that the live generator or numbered presets passed."
+    },
+    {
+      "moduleName": "First Letters",
+      "moduleId": "first-letters",
+      "size": "Small",
+      "preparedActivityKey": "firstLetters",
+      "status": "READY",
+      "contentValidation": "Prepared content and local validation only. Official repository validation, live generator, and preset checks not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means draft prepared content exists, not that the live generator or numbered presets passed."
+    },
+    {
+      "moduleName": "Odd Words",
+      "moduleId": "odd-words",
+      "size": "Small",
+      "preparedActivityKey": "oddWords",
+      "status": "READY",
+      "contentValidation": "Prepared content and local validation only. Official repository validation, live generator, and preset checks not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means draft prepared content exists, not that the live generator or numbered presets passed."
+    },
+    {
+      "moduleName": "Unscramble Words",
+      "moduleId": "unscramble-words",
+      "size": "Small",
+      "preparedActivityKey": "unscrambleWords",
+      "status": "READY",
+      "contentValidation": "Prepared content and local validation only. Official repository validation, live generator, and preset checks not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means draft prepared content exists, not that the live generator or numbered presets passed."
+    },
+    {
+      "moduleName": "Checkboxes",
+      "moduleId": "checkboxes",
+      "size": "Small",
+      "preparedActivityKey": "checkboxes",
+      "status": "READY",
+      "contentValidation": "Prepared content and local validation only. Official repository validation, live generator, and preset checks not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means draft prepared content exists, not that the live generator or numbered presets passed."
+    },
+    {
+      "moduleName": "Who Am I?",
+      "moduleId": "who-am-i",
+      "size": "Small",
+      "preparedActivityKey": "whoAmI",
+      "status": "READY",
+      "contentValidation": "Prepared content and local validation only. Official repository validation, live generator, and preset checks not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means draft prepared content exists, not that the live generator or numbered presets passed."
+    },
+    {
+      "moduleName": "Match the Words",
+      "moduleId": "match-words",
+      "size": "Medium",
+      "preparedActivityKey": "matchWords",
+      "status": "READY",
+      "contentValidation": "Prepared content and local validation only. Official repository validation, live generator, and preset checks not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means draft prepared content exists, not that the live generator or numbered presets passed."
+    },
+    {
+      "moduleName": "Finish the Verse",
+      "moduleId": "finish-verse",
+      "size": "Medium",
+      "preparedActivityKey": "finishVerse",
+      "status": "READY",
+      "contentValidation": "Prepared content and local validation only. Official repository validation, live generator, and preset checks not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means draft prepared content exists, not that the live generator or numbered presets passed."
+    },
+    {
+      "moduleName": "Unscramble the Verse",
+      "moduleId": "unscramble-verse",
+      "size": "Medium",
+      "preparedActivityKey": "unscrambleVerse",
+      "status": "READY",
+      "contentValidation": "Prepared content and local validation only. Official repository validation, live generator, and preset checks not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means draft prepared content exists, not that the live generator or numbered presets passed."
+    },
+    {
+      "moduleName": "Circle the Mistakes",
+      "moduleId": "circle-mistakes",
+      "size": "Medium",
+      "preparedActivityKey": "circleMistakes",
+      "status": "READY",
+      "contentValidation": "Prepared content and local validation only. Official repository validation, live generator, and preset checks not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means draft prepared content exists, not that the live generator or numbered presets passed."
+    },
+    {
+      "moduleName": "Medium Word Search",
+      "moduleId": "medium-word-search",
+      "size": "Medium",
+      "preparedActivityKey": "mediumWordSearch",
+      "status": "READY",
+      "contentValidation": "Prepared content and local validation only. Official repository validation, live generator, and preset checks not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means draft prepared content exists, not that the live generator or numbered presets passed."
+    },
+    {
+      "moduleName": "True / False Maze",
+      "moduleId": "true-false-maze",
+      "size": "Medium",
+      "preparedActivityKey": "trueFalseMaze",
+      "status": "READY",
+      "contentValidation": "Prepared content and local validation only. Official repository validation, live generator, and preset checks not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means draft prepared content exists, not that the live generator or numbered presets passed."
+    },
+    {
+      "moduleName": "Big Idea Cryptogram",
+      "moduleId": "big-idea-cryptogram",
+      "size": "Medium",
+      "preparedActivityKey": "bigIdeaCryptogram",
+      "status": "READY",
+      "contentValidation": "Prepared content and local validation only. Official repository validation, live generator, and preset checks not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means draft prepared content exists, not that the live generator or numbered presets passed."
+    },
+    {
+      "moduleName": "Upside-Down Verse",
+      "moduleId": "upside-down-verse",
+      "size": "Medium",
+      "preparedActivityKey": "upsideDownVerse",
+      "status": "READY",
+      "contentValidation": "Prepared content and local validation only. Official repository validation, live generator, and preset checks not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means draft prepared content exists, not that the live generator or numbered presets passed."
+    },
+    {
+      "moduleName": "Connect the Big Idea",
+      "moduleId": "connect-big-idea",
+      "size": "Medium",
+      "preparedActivityKey": "connectBigIdea",
+      "status": "READY",
+      "contentValidation": "Prepared content and local validation only. Official repository validation, live generator, and preset checks not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means draft prepared content exists, not that the live generator or numbered presets passed."
+    },
+    {
+      "moduleName": "Pixel Picture",
+      "moduleId": "pixel-picture",
+      "size": "Medium",
+      "preparedActivityKey": "pixelPicture",
+      "status": "READY",
+      "contentValidation": "Prepared content and local validation only. Official repository validation, live generator, and preset checks not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means draft prepared content exists, not that the live generator or numbered presets passed."
+    },
+    {
+      "moduleName": "Finish the Story",
+      "moduleId": "finish-story",
+      "size": "Large",
+      "preparedActivityKey": "finishStory",
+      "status": "READY",
+      "contentValidation": "Prepared content and local validation only. Official repository validation, live generator, and preset checks not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means draft prepared content exists, not that the live generator or numbered presets passed."
+    },
+    {
+      "moduleName": "Story Order",
+      "moduleId": "story-order",
+      "size": "Large",
+      "preparedActivityKey": "storyOrder",
+      "status": "READY",
+      "contentValidation": "Prepared content and local validation only. Official repository validation, live generator, and preset checks not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means draft prepared content exists, not that the live generator or numbered presets passed."
+    },
+    {
+      "moduleName": "Sort the Story",
+      "moduleId": "sort-story",
+      "size": "Large",
+      "preparedActivityKey": "sortStory",
+      "status": "READY",
+      "contentValidation": "Prepared content and local validation only. Official repository validation, live generator, and preset checks not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means draft prepared content exists, not that the live generator or numbered presets passed."
+    },
+    {
+      "moduleName": "Draw the Story",
+      "moduleId": "draw-story",
+      "size": "Large",
+      "preparedActivityKey": "drawStory",
+      "status": "READY",
+      "contentValidation": "Prepared content and local validation only. Official repository validation, live generator, and preset checks not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means draft prepared content exists, not that the live generator or numbered presets passed."
+    },
+    {
+      "moduleName": "Word Search",
+      "moduleId": "word-search",
+      "size": "Large",
+      "preparedActivityKey": "wordSearch",
+      "status": "READY",
+      "contentValidation": "Prepared content and local validation only. Official repository validation, live generator, and preset checks not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means draft prepared content exists, not that the live generator or numbered presets passed."
+    },
+    {
+      "moduleName": "Verse Cryptogram",
+      "moduleId": "verse-cryptogram",
+      "size": "Large",
+      "preparedActivityKey": "verseCryptogram",
+      "status": "READY",
+      "contentValidation": "Prepared content and local validation only. Official repository validation, live generator, and preset checks not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means draft prepared content exists, not that the live generator or numbered presets passed."
+    },
+    {
+      "moduleName": "Crossword",
+      "moduleId": "crossword",
+      "size": "Large",
+      "preparedActivityKey": "crossword",
+      "status": "READY",
+      "contentValidation": "Prepared content and local validation only. Official repository validation, live generator, and preset checks not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means draft prepared content exists, not that the live generator or numbered presets passed."
+    },
+    {
+      "moduleName": "Spiral Verse",
+      "moduleId": "spiral-verse",
+      "size": "Large",
+      "preparedActivityKey": "spiralVerse",
+      "status": "READY",
+      "contentValidation": "Prepared content and local validation only. Official repository validation, live generator, and preset checks not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means draft prepared content exists, not that the live generator or numbered presets passed."
+    },
+    {
+      "moduleName": "Connect the Verse",
+      "moduleId": "connect-verse",
+      "size": "Large",
+      "preparedActivityKey": "connectVerse",
+      "status": "READY",
+      "contentValidation": "Prepared content and local validation only. Official repository validation, live generator, and preset checks not run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means draft prepared content exists, not that the live generator or numbered presets passed."
+    }
+  ],
+  "reviewFlags": [
+    {
+      "id": "rf-01",
+      "priority": "high",
+      "type": "scripture-review",
+      "text": "Original curriculum uses the ESV text of Psalm 136:1. The worksheet draft proposes the BSB translation with “loving devotion.” Verify wording and permission before approving.",
+      "affectedModules": [
+        "first-letters",
+        "finish-verse",
+        "unscramble-verse",
+        "upside-down-verse",
+        "verse-cryptogram",
+        "spiral-verse",
+        "connect-verse"
+      ]
+    },
+    {
+      "id": "rf-02",
+      "priority": "medium",
+      "type": "source-formatting",
+      "text": "Two original Important Ideas have lowercase “god” in the all-caps-styled text layer. Capitalization was corrected for display without modifying the source.",
+      "affectedModules": [
+        "big-idea-cryptogram",
+        "connect-big-idea",
+        "pixel-picture"
+      ]
+    },
+    {
+      "id": "rf-03",
+      "priority": "medium",
+      "type": "source-count",
+      "text": "The source Story Sheet instructions refer to nine pieces, but seven labeled STORY NOTE blocks were present. Confirm whether two additional pieces exist outside the supplied ODT.",
+      "affectedModules": [
+        "story-order",
+        "draw-story"
+      ]
+    },
+    {
+      "id": "rf-04",
+      "priority": "high",
+      "type": "sensitive-content",
+      "text": "The source discusses family marriage arrangements, infertility, favoritism, and Rachel’s death. Review age-appropriate language while preserving the original theology and source facts.",
+      "affectedModules": [
+        "finish-story",
+        "multiple-choice",
+        "story-order",
+        "draw-story"
+      ]
+    },
+    {
+      "id": "rf-05",
+      "priority": "medium",
+      "type": "suggested-content",
+      "text": "Review false facts, wrong multiple-choice options, Circle the Mistakes errors, and vocabulary decoys.",
+      "affectedModules": [
+        "multiple-choice",
+        "true-false",
+        "true-false-maze",
+        "sort-story",
+        "circle-the-mistakes",
+        "odd-words",
+        "checkboxes"
+      ]
+    },
+    {
+      "id": "rf-06",
+      "priority": "medium",
+      "type": "source-provenance",
+      "text": "Original source contains a few contextual and quoted questions; these were kept in the source-question pool and were not silently dropped.",
+      "affectedModules": [
+        "multiple-choice"
+      ]
+    },
+    {
+      "id": "rf-07",
+      "priority": "medium",
+      "type": "puzzle-layout",
+      "text": "Check whether ten name-heavy crossword clues fit the live crossword generator.",
+      "affectedModules": [
+        "crossword"
+      ]
+    },
+    {
+      "id": "rf-08",
+      "priority": "high",
+      "type": "preset-test",
+      "text": "Generate and inspect all three numbered presets and confirm Preset 3 uses ten distinct True/False facts.",
+      "affectedModules": [
+        "sort-story",
+        "true-false",
+        "true-false-maze"
+      ]
+    },
+    {
+      "id": "rf-09",
+      "priority": "medium",
+      "type": "teacher-approval",
+      "text": "Teacher sign-off, official schema validation, generator testing, and booklet checks remain outstanding.",
+      "affectedModules": []
+    }
+  ],
+  "publication": {
+    "status": "approved",
+    "approved": true,
+    "notes": "Not published; teacher approval, official repository validator, live worksheet generators, and all three presets remain pending.",
+    "teacherSignoff": {
+      "reviewer": "Andrew Doane",
+      "date": "2026-11-05",
+      "notes": "Approved with verified BSB verse through Curriculum Review Studio"
+    },
+    "scriptureRights": {
+      "status": "cleared",
+      "basis": "Berean Standard Bible (BSB), dedicated to the public domain on April 30, 2023. Official terms: https://berean.bible/terms.htm. Scripture text confirmed against https://bereanbible.com/bsb.txt.",
+      "reviewedBy": "Andrew Doane",
+      "reviewedOn": "2026-11-05"
+    },
+    "resolvedReviewFlagIds": [
+      "rf-09"
+    ]
+  },
+  "validation": {
+    "basis": "Original conversion tests predate teacher-approved BSB; revalidate actual engines and content after export.",
+    "allTextChecksPassed": false,
+    "checks": [
+      {
+        "check": "Seven exact original Story Notes retained",
+        "passed": true
+      },
+      {
+        "check": "All uppercase cue words retained",
+        "passed": true
+      },
+      {
+        "check": "All teacher questions from story, memory verse, and review retained with exact source substrings",
+        "passed": true
+      },
+      {
+        "check": "All ten original review rows represented",
+        "passed": true
+      },
+      {
+        "check": "Original questions have page and paragraph provenance",
+        "passed": true
+      },
+      {
+        "check": "Two corrected capitalization Big Ideas",
+        "passed": true
+      },
+      {
+        "check": "scriptureDisplay has Bible book only",
+        "passed": true
+      },
+      {
+        "check": "Six Multiple Choice questions with three distinct options and one correct",
+        "passed": true
+      },
+      {
+        "check": "Two suggested incorrect choices per Multiple Choice",
+        "passed": true
+      },
+      {
+        "check": "Fourteen True/False with eight true six false",
+        "passed": true
+      },
+      {
+        "check": "All false facts tagged as suggested for teacher review",
+        "passed": true
+      },
+      {
+        "check": "Sort eight distinct facts",
+        "passed": true
+      },
+      {
+        "check": "True/False and Maze have different facts from Sort",
+        "passed": true
+      },
+      {
+        "check": "Four spare facts available",
+        "passed": true
+      },
+      {
+        "check": "Four small drawing candidates",
+        "passed": true
+      },
+      {
+        "check": "Six matching pairs with short sides",
+        "passed": true
+      },
+      {
+        "check": "Six clear Circle the Mistakes corrections",
+        "passed": true
+      },
+      {
+        "check": "Both odd words and checkboxes have five related story words",
+        "passed": true
+      },
+      {
+        "check": "Odd Words and Checkboxes have no overlap",
+        "passed": true
+      },
+      {
+        "check": "Who Am I clue omits auto-supplied phrase",
+        "passed": true
+      },
+      {
+        "check": "Finish Story is 600-700 characters",
+        "passed": true
+      },
+      {
+        "check": "Draw Story has 4-6 brief complete captions",
+        "passed": true
+      },
+      {
+        "check": "Crossword has ten unique one-word answers",
+        "passed": true
+      },
+      {
+        "check": "All 27 prepared activity keys present",
+        "passed": true
+      },
+      {
+        "check": "No live generator tests claimed",
+        "passed": true
+      },
+      {
+        "check": "All fact and selected activity note IDs valid",
+        "passed": true
+      },
+      {
+        "check": "All source-file refs match uploaded ODT",
+        "passed": true
+      },
+      {
+        "check": "Publication remains unapproved",
+        "passed": true
+      }
+    ],
+    "officialValidatorTested": false,
+    "liveGeneratorsTested": false,
+    "actualGeneratorTested": false,
+    "jsonParseTested": true,
+    "numberedPresetsTested": false,
+    "notes": "Schema structure based on previous curriculum v1 files. Import and live generator compatibility remain unverified."
+  }
+}

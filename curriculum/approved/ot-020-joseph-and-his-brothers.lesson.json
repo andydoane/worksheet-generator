@@ -1,0 +1,3263 @@
+{
+  "schemaVersion": 1,
+  "schemaStatus": "proposed-v1; pending teacher and generator verification",
+  "id": "ot-020-joseph-and-his-brothers",
+  "curriculum": {
+    "series": "Old Testament",
+    "lessonNumber": 20
+  },
+  "lessonDetails": {
+    "title": "Joseph and His Brothers",
+    "scripturePassages": [
+      "Genesis 37",
+      "Romans 15:4",
+      "Romans 8:28"
+    ],
+    "scriptureDisplay": "Genesis",
+    "bigIdeas": [
+      {
+        "origin": "adapted",
+        "text": "Even when things are going bad, God has a good plan.",
+        "sourceIds": [
+          "sn-06",
+          "sn-07"
+        ],
+        "source": {
+          "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+          "section": "Important Idea",
+          "page": 5,
+          "sourceParagraphIndex": 143,
+          "details": "Original display uses lowercase “god” and joins words in the source export; display capitalization and spacing normalized for proposed Big Idea. The source ODT is unchanged."
+        }
+      }
+    ],
+    "memoryVerse": {
+      "reference": "Romans 8:28",
+      "translation": "BSB",
+      "text": "And we know that God works all things together for the good of those who love Him, who are called according to His purpose.",
+      "isExcerpt": false,
+      "hasEllipses": false,
+      "requiresTextReview": false,
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Memory Verse Activity",
+        "page": 8,
+        "sourceParagraphIndex": 191,
+        "details": "Source ESV reads “And we know that for those who love God all things work together for good...” BSB 8:28a proposed as an excerpt: “And we know that God works all things together for the good of those who love Him.” Verify with the teacher and https://ebible.org/engbsb/ROM08.htm before publication."
+      },
+      "alsoVerifiedAt": {
+        "filename": "https://ebible.org/engbsb/ROM08.htm",
+        "section": "Romans 8:28, Berean Standard Bible",
+        "details": "Proposed excerpt from a public BSB text, teacher review needed."
+      },
+      "originalTranslation": "BSB",
+      "bsbSource": {
+        "reference": "Romans 8:28",
+        "sourceUrl": "https://bereanbible.com/bsb.txt",
+        "publicDomainTerms": "https://berean.bible/terms.htm",
+        "startWord": 0,
+        "endWord": 23
+      }
+    }
+  },
+  "sourceFiles": [
+    {
+      "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+      "format": "odt",
+      "role": "primary teaching source",
+      "note": "Original 12-page OT20 lesson, with seven Story Notes, teacher discussion questions, ten original review questions, memory verse, and extra activities. ESV source excerpt preserved in provenance; BSB proposed for worksheet display."
+    }
+  ],
+  "storyNotes": [
+    {
+      "id": "sn-01",
+      "order": 1,
+      "originalText": "Jacob loved Joseph the most and gave him a beautiful robe. His brothers HATED him.",
+      "cleanText": "Jacob loved Joseph the most and gave him a beautiful robe. His brothers hated him.",
+      "emphasizedWords": [
+        "HATED"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "STORY NOTE",
+        "page": 1,
+        "sourceParagraphIndex": 29
+      }
+    },
+    {
+      "id": "sn-02",
+      "order": 2,
+      "originalText": "Joseph had a dream where his brothers' bundles of GRAIN bowed down to his.",
+      "cleanText": "Joseph had a dream where his brothers' bundles of grain bowed down to his.",
+      "emphasizedWords": [
+        "GRAIN"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "STORY NOTE",
+        "page": 2,
+        "sourceParagraphIndex": 46
+      }
+    },
+    {
+      "id": "sn-03",
+      "order": 3,
+      "originalText": "Joseph dreamed of the sun, moon, and 11 STARS bowing to him. His brothers hated him more.",
+      "cleanText": "Joseph dreamed of the sun, moon, and 11 stars bowing to him. His brothers hated him more.",
+      "emphasizedWords": [
+        "STARS"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "STORY NOTE",
+        "page": 2,
+        "sourceParagraphIndex": 63
+      }
+    },
+    {
+      "id": "sn-04",
+      "order": 4,
+      "originalText": "Jacob sent Joseph to check on his brothers. When they saw him coming, they said, “Let’s KILL him!”",
+      "cleanText": "Jacob sent Joseph to check on his brothers. When they saw him coming, they said, “Let’s kill him!”",
+      "emphasizedWords": [
+        "KILL"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "STORY NOTE",
+        "page": 3,
+        "sourceParagraphIndex": 82
+      }
+    },
+    {
+      "id": "sn-05",
+      "order": 5,
+      "originalText": "Reuben convinced them to throw Joseph into an empty PIT. He planned to rescue him later.",
+      "cleanText": "Reuben convinced them to throw Joseph into an empty pit. He planned to rescue him later.",
+      "emphasizedWords": [
+        "PIT"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "STORY NOTE",
+        "page": 4,
+        "sourceParagraphIndex": 99
+      }
+    },
+    {
+      "id": "sn-06",
+      "order": 6,
+      "originalText": "Instead of killing Joseph, they sold him as a SLAVE to traders headed for Egypt.",
+      "cleanText": "Instead of killing Joseph, they sold him as a slave to traders headed for Egypt.",
+      "emphasizedWords": [
+        "SLAVE"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "STORY NOTE",
+        "page": 4,
+        "sourceParagraphIndex": 113
+      }
+    },
+    {
+      "id": "sn-07",
+      "order": 7,
+      "originalText": "Using Joseph's robe, they fooled their father. He believed an ANIMAL ate Joseph.",
+      "cleanText": "Using Joseph's robe, they fooled their father. He believed an animal ate Joseph.",
+      "emphasizedWords": [
+        "ANIMAL"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "STORY NOTE",
+        "page": 5,
+        "sourceParagraphIndex": 130
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q-01",
+      "question": "How many of you have a brother or a sister?",
+      "answer": "Have the kids answer with a raised hand.",
+      "kind": "discussion",
+      "scope": "introduction",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 5
+      },
+      "notes": "Original lesson question/answer retained; contextual or rhetorical prompts may not be standalone worksheet questions."
+    },
+    {
+      "id": "q-02",
+      "question": "Do you remember his name?",
+      "answer": "Jacob.",
+      "kind": "factual",
+      "scope": "introduction",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 11
+      },
+      "notes": "Original lesson question/answer retained; contextual or rhetorical prompts may not be standalone worksheet questions."
+    },
+    {
+      "id": "q-03",
+      "question": "What was it like?",
+      "answer": "Four wives, twelve sons, one daughter.",
+      "kind": "factual",
+      "scope": "introduction",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 19
+      },
+      "notes": "Original lesson question/answer retained; contextual or rhetorical prompts may not be standalone worksheet questions."
+    },
+    {
+      "id": "q-04",
+      "question": "Out of Jacob's 12 boys, who did he love most?",
+      "answer": "Joseph.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Story Teaching",
+        "page": 1,
+        "sourceParagraphIndex": 31
+      },
+      "notes": "Original lesson question/answer retained; contextual or rhetorical prompts may not be standalone worksheet questions."
+    },
+    {
+      "id": "q-05",
+      "question": "How do you think Joseph's brothers felt about him being dad's favorite?",
+      "answer": "Jealous.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Story Teaching",
+        "page": 1,
+        "sourceParagraphIndex": 33
+      },
+      "notes": "Original lesson question/answer retained; contextual or rhetorical prompts may not be standalone worksheet questions."
+    },
+    {
+      "id": "q-06",
+      "question": "Is that a bad thing?",
+      "answer": "No!",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Story Teaching",
+        "page": 2,
+        "sourceParagraphIndex": 35
+      },
+      "notes": "Original lesson question/answer retained; contextual or rhetorical prompts may not be standalone worksheet questions."
+    },
+    {
+      "id": "q-07",
+      "question": "What was the second thing that made them hate Joseph?",
+      "answer": "His dad gave him a beautiful robe, but not them.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Story Teaching",
+        "page": 2,
+        "sourceParagraphIndex": 37
+      },
+      "notes": "Original lesson question/answer retained; contextual or rhetorical prompts may not be standalone worksheet questions."
+    },
+    {
+      "id": "q-08",
+      "question": "Playing favorites and giving special gifts to only one kid?",
+      "answer": "Context-setting rhetorical question; no separate answer is given.",
+      "kind": "discussion",
+      "scope": "teaching",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Story Teaching",
+        "page": 2,
+        "sourceParagraphIndex": 39
+      },
+      "notes": "Original lesson question/answer retained; contextual or rhetorical prompts may not be standalone worksheet questions."
+    },
+    {
+      "id": "q-09",
+      "question": "How did the brothers treat Joseph after this?",
+      "answer": "They never said a kind word to him.",
+      "kind": "discussion",
+      "scope": "teaching",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Story Teaching",
+        "page": 2,
+        "sourceParagraphIndex": 39
+      },
+      "notes": "Original lesson question/answer retained; contextual or rhetorical prompts may not be standalone worksheet questions."
+    },
+    {
+      "id": "q-10",
+      "question": "What did the grain bundles do?",
+      "answer": "Joseph's stood up, the brothers’ bowed down to his.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Story Teaching",
+        "page": 2,
+        "sourceParagraphIndex": 50
+      },
+      "notes": "Original lesson question/answer retained; contextual or rhetorical prompts may not be standalone worksheet questions."
+    },
+    {
+      "id": "q-11",
+      "question": "How did they treat Joseph after hearing about it?",
+      "answer": "They hated him even more.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Story Teaching",
+        "page": 2,
+        "sourceParagraphIndex": 54
+      },
+      "notes": "Original lesson question/answer retained; contextual or rhetorical prompts may not be standalone worksheet questions."
+    },
+    {
+      "id": "q-12",
+      "question": "Did Joseph do anything to deserve being so hated?",
+      "answer": "No.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Story Teaching",
+        "page": 2,
+        "sourceParagraphIndex": 56
+      },
+      "notes": "Original lesson question/answer retained; contextual or rhetorical prompts may not be standalone worksheet questions."
+    },
+    {
+      "id": "q-13",
+      "question": "What happened?",
+      "answer": "The sun, moon, and 11 stars bowed down to Joseph.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Story Teaching",
+        "page": 2,
+        "sourceParagraphIndex": 65
+      },
+      "notes": "Original lesson question/answer retained; contextual or rhetorical prompts may not be standalone worksheet questions."
+    },
+    {
+      "id": "q-14",
+      "question": "The eleven stars?",
+      "answer": "They were a picture of Joseph's eleven brothers.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Story Teaching",
+        "page": 3,
+        "sourceParagraphIndex": 71
+      },
+      "notes": "Original lesson question/answer retained; contextual or rhetorical prompts may not be standalone worksheet questions."
+    },
+    {
+      "id": "q-15",
+      "question": "The sun and moon -- who do you think they were a picture of?",
+      "answer": "His mom and dad.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Story Teaching",
+        "page": 3,
+        "sourceParagraphIndex": 71
+      },
+      "notes": "Original lesson question/answer retained; contextual or rhetorical prompts may not be standalone worksheet questions."
+    },
+    {
+      "id": "q-16",
+      "question": "How did Joseph's brothers feel after hearing yet another dream where they bowed down to their bratty brother?",
+      "answer": "Jealousy and hatred.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Story Teaching",
+        "page": 3,
+        "sourceParagraphIndex": 75
+      },
+      "notes": "Original lesson question/answer retained; contextual or rhetorical prompts may not be standalone worksheet questions."
+    },
+    {
+      "id": "q-17",
+      "question": "Who did he send to check on them?",
+      "answer": "Joseph.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Story Teaching",
+        "page": 3,
+        "sourceParagraphIndex": 84
+      },
+      "notes": "Original lesson question/answer retained; contextual or rhetorical prompts may not be standalone worksheet questions."
+    },
+    {
+      "id": "q-18",
+      "question": "What did the brothers say?",
+      "answer": "Let’s kill him.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Story Teaching",
+        "page": 3,
+        "sourceParagraphIndex": 86
+      },
+      "notes": "Original lesson question/answer retained; contextual or rhetorical prompts may not be standalone worksheet questions."
+    },
+    {
+      "id": "q-19",
+      "question": "What did they plan to say happened to Joseph?",
+      "answer": "A wild animal ate him.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Story Teaching",
+        "page": 3,
+        "sourceParagraphIndex": 92
+      },
+      "notes": "Original lesson question/answer retained; contextual or rhetorical prompts may not be standalone worksheet questions."
+    },
+    {
+      "id": "q-20",
+      "question": "Instead of killing Joseph, what did Reuben ask them to do?",
+      "answer": "Throw Joseph in a pit.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Story Teaching",
+        "page": 4,
+        "sourceParagraphIndex": 101
+      },
+      "notes": "Original lesson question/answer retained; contextual or rhetorical prompts may not be standalone worksheet questions."
+    },
+    {
+      "id": "q-21",
+      "question": "If they left Joseph in that pit, what would happen?",
+      "answer": "He’d starve to death.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Story Teaching",
+        "page": 4,
+        "sourceParagraphIndex": 103
+      },
+      "notes": "Original lesson question/answer retained; contextual or rhetorical prompts may not be standalone worksheet questions."
+    },
+    {
+      "id": "q-22",
+      "question": "But what did Reuben plan to do later?",
+      "answer": "Rescue Joseph and return him to his dad.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Story Teaching",
+        "page": 4,
+        "sourceParagraphIndex": 105
+      },
+      "notes": "Original lesson question/answer retained; contextual or rhetorical prompts may not be standalone worksheet questions."
+    },
+    {
+      "id": "q-23",
+      "question": "But before they chucked Joseph in, what did they take off of him?",
+      "answer": "His beautiful robe.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Story Teaching",
+        "page": 4,
+        "sourceParagraphIndex": 107
+      },
+      "notes": "Original lesson question/answer retained; contextual or rhetorical prompts may not be standalone worksheet questions."
+    },
+    {
+      "id": "q-24",
+      "question": "Who?",
+      "answer": "Traders.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Story Teaching",
+        "page": 4,
+        "sourceParagraphIndex": 115
+      },
+      "notes": "Original lesson question/answer retained; contextual or rhetorical prompts may not be standalone worksheet questions."
+    },
+    {
+      "id": "q-25",
+      "question": "What is a slave?",
+      "answer": "Somebody who is owned by and has to work for another person.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Story Teaching",
+        "page": 4,
+        "sourceParagraphIndex": 117
+      },
+      "notes": "Original lesson question/answer retained; contextual or rhetorical prompts may not be standalone worksheet questions."
+    },
+    {
+      "id": "q-26",
+      "question": "Where did the traders plan to take Joseph?",
+      "answer": "To Egypt.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Story Teaching",
+        "page": 4,
+        "sourceParagraphIndex": 123
+      },
+      "notes": "Original lesson question/answer retained; contextual or rhetorical prompts may not be standalone worksheet questions."
+    },
+    {
+      "id": "q-27",
+      "question": "What did they do with Joseph’s robe?",
+      "answer": "Dipped it in blood.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Story Teaching",
+        "page": 5,
+        "sourceParagraphIndex": 132
+      },
+      "notes": "Original lesson question/answer retained; contextual or rhetorical prompts may not be standalone worksheet questions."
+    },
+    {
+      "id": "q-28",
+      "question": "Why would they do that?",
+      "answer": "To make it look like Joseph had been attacked by an animal.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Story Teaching",
+        "page": 5,
+        "sourceParagraphIndex": 134
+      },
+      "notes": "Original lesson question/answer retained; contextual or rhetorical prompts may not be standalone worksheet questions."
+    },
+    {
+      "id": "q-29",
+      "question": "When they showed this bloody and ripped-up robe to their dad, what did Jacob say?",
+      "answer": "An animal has torn him to pieces.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Story Teaching",
+        "page": 5,
+        "sourceParagraphIndex": 136
+      },
+      "notes": "Original lesson question/answer retained; contextual or rhetorical prompts may not be standalone worksheet questions."
+    },
+    {
+      "id": "q-30",
+      "question": "So how does the story of Joseph and his brothers teach us, strengthen us, encourage us, or give us hope?",
+      "answer": "Open discussion; no answer is supplied.",
+      "kind": "discussion",
+      "scope": "big-idea",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Important Idea",
+        "page": 5,
+        "sourceParagraphIndex": 142
+      },
+      "notes": "Original lesson question/answer retained; contextual or rhetorical prompts may not be standalone worksheet questions."
+    },
+    {
+      "id": "q-31",
+      "question": "Where did Joseph end up?",
+      "answer": "Stuck as a slave in Egypt.",
+      "kind": "discussion",
+      "scope": "big-idea",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Important Idea",
+        "page": 5,
+        "sourceParagraphIndex": 151
+      },
+      "notes": "Original lesson question/answer retained; contextual or rhetorical prompts may not be standalone worksheet questions."
+    },
+    {
+      "id": "q-32",
+      "question": "Remember those two dreams Joseph had?",
+      "answer": "Context-setting rhetorical question; no separate answer is supplied.",
+      "kind": "discussion",
+      "scope": "big-idea",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Important Idea",
+        "page": 5,
+        "sourceParagraphIndex": 157
+      },
+      "notes": "Original lesson question/answer retained; contextual or rhetorical prompts may not be standalone worksheet questions."
+    },
+    {
+      "id": "q-33",
+      "question": "The dreams where things kept bowing down to him?",
+      "answer": "Context-setting rhetorical question; no separate answer is supplied.",
+      "kind": "discussion",
+      "scope": "big-idea",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Important Idea",
+        "page": 5,
+        "sourceParagraphIndex": 157
+      },
+      "notes": "Original lesson question/answer retained; contextual or rhetorical prompts may not be standalone worksheet questions."
+    },
+    {
+      "id": "q-34",
+      "question": "This verse from Romans teaches us this: for people who love and believe in God, all things work together for... what?",
+      "answer": "Good.",
+      "kind": "factual",
+      "scope": "memory-verse",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Memory Verse Activity",
+        "page": 8,
+        "sourceParagraphIndex": 193
+      },
+      "notes": "Original lesson question/answer retained; contextual or rhetorical prompts may not be standalone worksheet questions."
+    },
+    {
+      "id": "q-35",
+      "question": "Which son did Jacob love more than the others?",
+      "answer": "Joseph",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Review Questions",
+        "page": 9,
+        "sourceParagraphIndex": 231
+      },
+      "notes": "Original lesson question/answer retained; contextual or rhetorical prompts may not be standalone worksheet questions."
+    },
+    {
+      "id": "q-36",
+      "question": "What did Jacob give to Joseph? How did his brothers feel?",
+      "answer": "A beautiful robe; they hated him",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Review Questions",
+        "page": 9,
+        "sourceParagraphIndex": 232
+      },
+      "notes": "Original lesson question/answer retained; contextual or rhetorical prompts may not be standalone worksheet questions."
+    },
+    {
+      "id": "q-37",
+      "question": "What did Joseph see in his first dream?",
+      "answer": "His bundle of grain stood up; his brothers’ bundles bowed to his bundle",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Review Questions",
+        "page": 9,
+        "sourceParagraphIndex": 233
+      },
+      "notes": "Original lesson question/answer retained; contextual or rhetorical prompts may not be standalone worksheet questions."
+    },
+    {
+      "id": "q-38",
+      "question": "What did Joseph see in his second dream?",
+      "answer": "The sun, moon, and 11 stars bowed to him",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Review Questions",
+        "page": 9,
+        "sourceParagraphIndex": 234
+      },
+      "notes": "Original lesson question/answer retained; contextual or rhetorical prompts may not be standalone worksheet questions."
+    },
+    {
+      "id": "q-39",
+      "question": "How did his brothers treat him after all this?",
+      "answer": "They couldn’t say a kind word to him",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Review Questions",
+        "page": 9,
+        "sourceParagraphIndex": 235
+      },
+      "notes": "Original lesson question/answer retained; contextual or rhetorical prompts may not be standalone worksheet questions."
+    },
+    {
+      "id": "q-40",
+      "question": "When the brothers saw Joseph coming to check on them, what did they say?",
+      "answer": "Let’s kill that dreamer!",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Review Questions",
+        "page": 9,
+        "sourceParagraphIndex": 236
+      },
+      "notes": "Original lesson question/answer retained; contextual or rhetorical prompts may not be standalone worksheet questions."
+    },
+    {
+      "id": "q-41",
+      "question": "Instead of killing Joseph, where did they put him?",
+      "answer": "In an empty pit",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Review Questions",
+        "page": 9,
+        "sourceParagraphIndex": 237
+      },
+      "notes": "Original lesson question/answer retained; contextual or rhetorical prompts may not be standalone worksheet questions."
+    },
+    {
+      "id": "q-42",
+      "question": "In the end, what did the brothers do with Joseph?",
+      "answer": "They sold him to traders headed to Egypt",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Review Questions",
+        "page": 9,
+        "sourceParagraphIndex": 238
+      },
+      "notes": "Original lesson question/answer retained; contextual or rhetorical prompts may not be standalone worksheet questions."
+    },
+    {
+      "id": "q-43",
+      "question": "What did the brothers do with Joseph’s coat?",
+      "answer": "They ripped it up, soaked it in blood",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Review Questions",
+        "page": 9,
+        "sourceParagraphIndex": 239
+      },
+      "notes": "Original lesson question/answer retained; contextual or rhetorical prompts may not be standalone worksheet questions."
+    },
+    {
+      "id": "q-44",
+      "question": "When Jacob saw the robe, what did he think happened?",
+      "answer": "An animal ate him",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Review Questions",
+        "page": 9,
+        "sourceParagraphIndex": 240
+      },
+      "notes": "Original lesson question/answer retained; contextual or rhetorical prompts may not be standalone worksheet questions."
+    }
+  ],
+  "facts": [
+    {
+      "id": "tf-01",
+      "statement": "Jacob gave Joseph a beautiful robe.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "STORY NOTE",
+        "page": 1,
+        "sourceParagraphIndex": 29
+      }
+    },
+    {
+      "id": "tf-02",
+      "statement": "Joseph’s brothers were happy that he received a special robe.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-03",
+      "statement": "In Joseph’s dream, his brothers’ grain bundles bowed to his bundle.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "STORY NOTE",
+        "page": 2,
+        "sourceParagraphIndex": 46
+      }
+    },
+    {
+      "id": "tf-04",
+      "statement": "Joseph dreamed that his brothers’ sheep bowed to his sheep.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-02"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-05",
+      "statement": "Joseph dreamed of the sun, moon, and eleven stars bowing to him.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "STORY NOTE",
+        "page": 2,
+        "sourceParagraphIndex": 63
+      }
+    },
+    {
+      "id": "tf-06",
+      "statement": "In Joseph’s second dream, twelve birds flew around a tree.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-03"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-07",
+      "statement": "Jacob sent Joseph to see how his brothers were doing.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "STORY NOTE",
+        "page": 3,
+        "sourceParagraphIndex": 82
+      }
+    },
+    {
+      "id": "tf-08",
+      "statement": "Joseph's brothers always spoke kindly to him.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-04"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-09",
+      "statement": "Reuben planned to rescue Joseph from the empty pit.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "STORY NOTE",
+        "page": 4,
+        "sourceParagraphIndex": 99
+      }
+    },
+    {
+      "id": "tf-10",
+      "statement": "Reuben wanted Joseph to stay in the pit forever.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-11",
+      "statement": "Joseph’s brothers sold him to traders going to Egypt.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "STORY NOTE",
+        "page": 4,
+        "sourceParagraphIndex": 113
+      }
+    },
+    {
+      "id": "tf-12",
+      "statement": "The traders took Joseph straight home to Jacob.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-06"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-13",
+      "statement": "The brothers showed Jacob Joseph’s bloodstained robe.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "STORY NOTE",
+        "page": 5,
+        "sourceParagraphIndex": 130
+      }
+    },
+    {
+      "id": "tf-14",
+      "statement": "Jacob believed that Joseph had run away from home.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    }
+  ],
+  "vocabulary": {
+    "related": [
+      "JOSEPH",
+      "JACOB",
+      "ROBE",
+      "GRAIN",
+      "STARS",
+      "MOON",
+      "DREAM",
+      "PIT",
+      "REUBEN",
+      "JUDAH",
+      "TRADERS",
+      "EGYPT",
+      "GOAT",
+      "BROTHERS",
+      "SILVER",
+      "FATHER",
+      "SHEEP",
+      "SUN"
+    ],
+    "unrelated": [
+      "ARK",
+      "TOWER",
+      "FROG",
+      "FISH",
+      "SANDALS",
+      "BOAT",
+      "JERICHO",
+      "CROWN",
+      "FLOOD",
+      "CAMP",
+      "SHIELD",
+      "HARP"
+    ],
+    "entries": [
+      {
+        "id": "v-01",
+        "term": "JOSEPH",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-02",
+        "term": "JACOB",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-03",
+        "term": "ROBE",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-04",
+        "term": "GRAIN",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-05",
+        "term": "STARS",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-06",
+        "term": "MOON",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-07",
+        "term": "DREAM",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-08",
+        "term": "PIT",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-09",
+        "term": "REUBEN",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-10",
+        "term": "JUDAH",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-11",
+        "term": "TRADERS",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-12",
+        "term": "EGYPT",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-13",
+        "term": "GOAT",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-14",
+        "term": "BROTHERS",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-15",
+        "term": "SILVER",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-16",
+        "term": "FATHER",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-17",
+        "term": "SHEEP",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-18",
+        "term": "SUN",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-19",
+        "term": "ARK",
+        "origin": "suggested",
+        "category": "unrelated-distractor",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-20",
+        "term": "TOWER",
+        "origin": "suggested",
+        "category": "unrelated-distractor",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-21",
+        "term": "FROG",
+        "origin": "suggested",
+        "category": "unrelated-distractor",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-22",
+        "term": "FISH",
+        "origin": "suggested",
+        "category": "unrelated-distractor",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-23",
+        "term": "SANDALS",
+        "origin": "suggested",
+        "category": "unrelated-distractor",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-24",
+        "term": "BOAT",
+        "origin": "suggested",
+        "category": "unrelated-distractor",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-25",
+        "term": "JERICHO",
+        "origin": "suggested",
+        "category": "unrelated-distractor",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-26",
+        "term": "CROWN",
+        "origin": "suggested",
+        "category": "unrelated-distractor",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-27",
+        "term": "FLOOD",
+        "origin": "suggested",
+        "category": "unrelated-distractor",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-28",
+        "term": "CAMP",
+        "origin": "suggested",
+        "category": "unrelated-distractor",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-29",
+        "term": "SHIELD",
+        "origin": "suggested",
+        "category": "unrelated-distractor",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-30",
+        "term": "HARP",
+        "origin": "suggested",
+        "category": "unrelated-distractor",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      }
+    ]
+  },
+  "characters": [
+    {
+      "id": "ch-01",
+      "name": "Joseph",
+      "origin": "adapted",
+      "scope": "current-story",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "clues": [
+        {
+          "text": "My brothers sold me to traders going to Egypt.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-06"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch-02",
+      "name": "Jacob",
+      "origin": "adapted",
+      "scope": "current-story",
+      "sourceIds": [
+        "sn-01",
+        "sn-04",
+        "sn-07"
+      ],
+      "clues": [
+        {
+          "text": "I gave my son Joseph a beautiful robe.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-01"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch-03",
+      "name": "Reuben",
+      "origin": "adapted",
+      "scope": "current-story",
+      "sourceIds": [
+        "sn-05"
+      ],
+      "clues": [
+        {
+          "text": "I wanted to rescue Joseph from a deep pit.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-05"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch-04",
+      "name": "Judah",
+      "origin": "adapted",
+      "scope": "current-story",
+      "sourceIds": [
+        "sn-06"
+      ],
+      "clues": [
+        {
+          "text": "I suggested selling Joseph to traders.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-06"
+          ]
+        }
+      ]
+    }
+  ],
+  "matchingPairs": [
+    {
+      "id": "mp-01",
+      "left": "Jacob",
+      "right": "Father",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    {
+      "id": "mp-02",
+      "left": "Joseph",
+      "right": "Dreamer",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ]
+    },
+    {
+      "id": "mp-03",
+      "left": "Reuben",
+      "right": "Oldest",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ]
+    },
+    {
+      "id": "mp-04",
+      "left": "Egypt",
+      "right": "Country",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ]
+    },
+    {
+      "id": "mp-05",
+      "left": "Grain",
+      "right": "Plant",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ]
+    },
+    {
+      "id": "mp-06",
+      "left": "Robe",
+      "right": "Clothing",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    }
+  ],
+  "drawingPrompts": [
+    {
+      "id": "draw-01",
+      "prompt": "Joseph wearing his beautiful robe",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    {
+      "id": "draw-02",
+      "prompt": "Bundles of grain bowing in Joseph’s dream",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ]
+    },
+    {
+      "id": "draw-03",
+      "prompt": "The sun, moon, and eleven stars in Joseph’s dream",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ]
+    },
+    {
+      "id": "draw-04",
+      "prompt": "Joseph sitting inside an empty pit",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ]
+    }
+  ],
+  "keyPhrases": [
+    {
+      "id": "kp-01",
+      "text": "Jacob gave Joseph a beautiful robe, and his brothers hated him.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    {
+      "id": "kp-02",
+      "text": "Joseph dreamed that his brothers’ grain bundles bowed to his.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ]
+    },
+    {
+      "id": "kp-03",
+      "text": "Joseph dreamed that the sun, moon, and eleven stars bowed to him.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ]
+    },
+    {
+      "id": "kp-04",
+      "text": "Jacob sent Joseph to check on his brothers, who planned to hurt him.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ]
+    },
+    {
+      "id": "kp-05",
+      "text": "Reuben convinced the brothers to put Joseph into an empty pit.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ]
+    },
+    {
+      "id": "kp-06",
+      "text": "The brothers sold Joseph to traders who were going to Egypt.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ]
+    },
+    {
+      "id": "kp-07",
+      "text": "The brothers showed Jacob Joseph’s stained robe, and Jacob thought an animal ate him.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ]
+    }
+  ],
+  "theologicalApplications": [
+    {
+      "id": "app-01",
+      "text": "God knows the future, even when people cannot see what will happen.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02",
+        "sn-03"
+      ]
+    },
+    {
+      "id": "app-02",
+      "text": "Jealousy and hatred led Joseph’s brothers to do terrible things.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-04",
+        "sn-06"
+      ]
+    },
+    {
+      "id": "app-03",
+      "text": "God had a good plan even when Joseph was suffering.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06",
+        "sn-07"
+      ]
+    },
+    {
+      "id": "app-04",
+      "text": "God used Joseph’s hard story for good in the following lessons.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02",
+        "sn-06",
+        "sn-07"
+      ]
+    }
+  ],
+  "preparedActivities": {
+    "drawPicture": {
+      "prompt": "Joseph wearing his beautiful robe",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    "multipleChoice": [
+      {
+        "id": "mc-01",
+        "question": "What special gift did Jacob give Joseph?",
+        "correctAnswer": "A beautiful robe",
+        "choices": [
+          {
+            "text": "A beautiful robe",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "A silver necklace",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "A sword",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "sourceQuestionIds": [
+          "q-07",
+          "q-23",
+          "q-27"
+        ],
+        "sourceIds": [
+          "sn-01"
+        ],
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-02",
+        "question": "What bowed to Joseph’s bundle in his first dream?",
+        "correctAnswer": "His brothers’ grain bundles",
+        "choices": [
+          {
+            "text": "His brothers’ grain bundles",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Twelve trees",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "His brothers’ sheep",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "sourceQuestionIds": [
+          "q-10",
+          "q-37"
+        ],
+        "sourceIds": [
+          "sn-02"
+        ],
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-03",
+        "question": "What did Joseph see in his second dream?",
+        "correctAnswer": "The sun, moon, and eleven stars",
+        "choices": [
+          {
+            "text": "A river full of fish",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "The sun, moon, and eleven stars",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Twelve planets",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "sourceQuestionIds": [
+          "q-38"
+        ],
+        "sourceIds": [
+          "sn-03"
+        ],
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-04",
+        "question": "Where did the brothers throw Joseph?",
+        "correctAnswer": "In the river",
+        "choices": [
+          {
+            "text": "Into a pit",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "In jail",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "In the river",
+            "isCorrect": true,
+            "origin": "adapted"
+          }
+        ],
+        "sourceQuestionIds": [
+          "q-20",
+          "q-22"
+        ],
+        "sourceIds": [
+          "sn-05"
+        ],
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-05",
+        "question": "How did the brothers get rid of Joseph?",
+        "correctAnswer": "Sold him to traders",
+        "choices": [
+          {
+            "text": "Left him to die",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Sold him to traders",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Took up up a mountain",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "sourceQuestionIds": [
+          "q-24",
+          "q-26",
+          "q-42"
+        ],
+        "sourceIds": [
+          "sn-06"
+        ],
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-06",
+        "question": "What did Jacob believe had happened to Joseph?",
+        "correctAnswer": "A wild animal had eaten him",
+        "choices": [
+          {
+            "text": "Joseph ran away",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "A wild animal had eaten him",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Joseph was on vacation",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "sourceQuestionIds": [
+          "q-07",
+          "q-23",
+          "q-27"
+        ],
+        "sourceIds": [
+          "sn-07"
+        ],
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      }
+    ],
+    "sortStory": [
+      {
+        "statement": "Jacob gave Joseph a beautiful robe.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": false,
+        "source": {
+          "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+          "section": "STORY NOTE",
+          "page": 1,
+          "sourceParagraphIndex": 29
+        },
+        "factId": "tf-01"
+      },
+      {
+        "statement": "Joseph’s brothers were happy that he received a special robe.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": true,
+        "factId": "tf-02"
+      },
+      {
+        "statement": "In Joseph’s dream, his brothers’ grain bundles bowed to his bundle.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": false,
+        "source": {
+          "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+          "section": "STORY NOTE",
+          "page": 2,
+          "sourceParagraphIndex": 46
+        },
+        "factId": "tf-03"
+      },
+      {
+        "statement": "Joseph dreamed that his brothers’ sheep bowed to his sheep.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": true,
+        "factId": "tf-04"
+      },
+      {
+        "statement": "Jacob sent Joseph to see how his brothers were doing.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ],
+        "teacherReviewRequired": false,
+        "source": {
+          "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+          "section": "STORY NOTE",
+          "page": 3,
+          "sourceParagraphIndex": 82
+        },
+        "factId": "tf-07"
+      },
+      {
+        "statement": "Reuben planned to rescue Joseph from the empty pit.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ],
+        "teacherReviewRequired": false,
+        "source": {
+          "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+          "section": "STORY NOTE",
+          "page": 4,
+          "sourceParagraphIndex": 99
+        },
+        "factId": "tf-09"
+      },
+      {
+        "statement": "Joseph’s brothers sold him to traders going to Egypt.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ],
+        "teacherReviewRequired": false,
+        "source": {
+          "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+          "section": "STORY NOTE",
+          "page": 4,
+          "sourceParagraphIndex": 113
+        },
+        "factId": "tf-11"
+      },
+      {
+        "statement": "Jacob believed that Joseph had run away from home.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-07"
+        ],
+        "teacherReviewRequired": true,
+        "factId": "tf-14"
+      }
+    ],
+    "trueFalse": {
+      "statement": "The brothers showed Jacob Joseph’s bloodstained robe.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "STORY NOTE",
+        "page": 5,
+        "sourceParagraphIndex": 130
+      },
+      "factId": "tf-13"
+    },
+    "trueFalseMaze": {
+      "statement": "The traders took Joseph straight home to Jacob.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-06"
+      ],
+      "teacherReviewRequired": true,
+      "factId": "tf-12"
+    },
+    "firstLetters": {
+      "reference": "Romans 8:28",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Memory Verse Activity",
+        "page": 8,
+        "sourceParagraphIndex": 191,
+        "details": "Source ESV reads “And we know that for those who love God all things work together for good...” BSB 8:28a proposed as an excerpt: “And we know that God works all things together for the good of those who love Him.” Verify with the teacher and https://ebible.org/engbsb/ROM08.htm before publication."
+      },
+      "sourceIds": [
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true,
+      "verse": "And we know that God works all things together for the good of those who love Him, who are called according to His purpose."
+    },
+    "upsideDownVerse": {
+      "reference": "Romans 8:28",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Memory Verse Activity",
+        "page": 8,
+        "sourceParagraphIndex": 191,
+        "details": "Source ESV reads “And we know that for those who love God all things work together for good...” BSB 8:28a proposed as an excerpt: “And we know that God works all things together for the good of those who love Him.” Verify with the teacher and https://ebible.org/engbsb/ROM08.htm before publication."
+      },
+      "sourceIds": [
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true,
+      "verse": "And we know that God works all things together for the good of those who love Him, who are called according to His purpose."
+    },
+    "verseCryptogram": {
+      "reference": "Romans 8:28",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Memory Verse Activity",
+        "page": 8,
+        "sourceParagraphIndex": 191,
+        "details": "Source ESV reads “And we know that for those who love God all things work together for good...” BSB 8:28a proposed as an excerpt: “And we know that God works all things together for the good of those who love Him.” Verify with the teacher and https://ebible.org/engbsb/ROM08.htm before publication."
+      },
+      "sourceIds": [
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true,
+      "verse": "And we know that God works all things together for the good of those who love Him, who are called according to His purpose."
+    },
+    "spiralVerse": {
+      "reference": "Romans 8:28",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Memory Verse Activity",
+        "page": 8,
+        "sourceParagraphIndex": 191,
+        "details": "Source ESV reads “And we know that for those who love God all things work together for good...” BSB 8:28a proposed as an excerpt: “And we know that God works all things together for the good of those who love Him.” Verify with the teacher and https://ebible.org/engbsb/ROM08.htm before publication."
+      },
+      "sourceIds": [
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true,
+      "verse": "And we know that God works all things together for the good of those who love Him, who are called according to His purpose."
+    },
+    "connectVerse": {
+      "reference": "Romans 8:28",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Memory Verse Activity",
+        "page": 8,
+        "sourceParagraphIndex": 191,
+        "details": "Source ESV reads “And we know that for those who love God all things work together for good...” BSB 8:28a proposed as an excerpt: “And we know that God works all things together for the good of those who love Him.” Verify with the teacher and https://ebible.org/engbsb/ROM08.htm before publication."
+      },
+      "sourceIds": [
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true,
+      "verse": "And we know that God works all things together for the good of those who love Him, who are called according to His purpose."
+    },
+    "finishVerse": {
+      "reference": "Romans 8:28",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Memory Verse Activity",
+        "page": 8,
+        "sourceParagraphIndex": 191,
+        "details": "Source ESV reads “And we know that for those who love God all things work together for good...” BSB 8:28a proposed as an excerpt: “And we know that God works all things together for the good of those who love Him.” Verify with the teacher and https://ebible.org/engbsb/ROM08.htm before publication."
+      },
+      "sourceIds": [
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true,
+      "markedVerse": "And we [know] that God works [all] things [together] for the [good] of those who [love] Him, who are [called] according to His [purpose].",
+      "sourceVerse": "And we know that God works all things together for the good of those who love Him, who are called according to His purpose."
+    },
+    "unscrambleVerse": {
+      "reference": "Romans 8:28",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Memory Verse Activity",
+        "page": 8,
+        "sourceParagraphIndex": 191,
+        "details": "Source ESV reads “And we know that for those who love God all things work together for good...” BSB 8:28a proposed as an excerpt: “And we know that God works all things together for the good of those who love Him.” Verify with the teacher and https://ebible.org/engbsb/ROM08.htm before publication."
+      },
+      "sourceIds": [
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true,
+      "markedVerse": "And we [know] that God works [all] things [together] for the [good] of those who [love] Him, who are [called] according to His [purpose].",
+      "sourceVerse": "And we know that God works all things together for the good of those who love Him, who are called according to His purpose."
+    },
+    "oddWords": {
+      "related": [
+        "JOSEPH",
+        "ROBE",
+        "GRAIN",
+        "DREAM",
+        "PIT"
+      ],
+      "unrelated": [
+        "Sarah",
+        "bricks",
+        "tribe",
+        "wrestle",
+        "baker"
+      ],
+      "unrelatedOrigin": "suggested",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "unscrambleWords": {
+      "answers": [
+        "DREAMS",
+        "TRADERS"
+      ],
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "checkboxes": {
+      "correct": [
+        "JACOB",
+        "REUBEN",
+        "JUDAH",
+        "STARS",
+        "SILVER"
+      ],
+      "incorrect": [
+        "idol",
+        "JERICHO",
+        "fire",
+        "FLOOD",
+        "lightning"
+      ],
+      "incorrectOrigin": "suggested",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "whoAmI": {
+      "clue": "I gave my favorite son a beautiful robe. I believed an animal had attacked him.",
+      "answer": "JACOB",
+      "origin": "suggested",
+      "sourceIds": [],
+      "teacherReviewRequired": true
+    },
+    "matchWords": [
+      {
+        "id": "mp-01",
+        "left": "Jacob",
+        "right": "Sad",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-02",
+        "left": "Joseph",
+        "right": "Favorite",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-03",
+        "left": "Dream #1",
+        "right": "Grain Bundles",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-05"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-04",
+        "left": "Brothers",
+        "right": "Jealous",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-06"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-05",
+        "left": "Sun Moon & Stars",
+        "right": "Bowed Down",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-06",
+        "left": "Robe",
+        "right": "Bloody",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": true
+      }
+    ],
+    "circleMistakes": {
+      "paragraph": "Jacob gave Joseph a pair of sandals. His brothers were happy to hear about Joseph’s dreams. In his first dream, sheep bowed to his bundle of grain. Later, the brothers decided to throw Joseph into a river. The brothers sold Joseph to traders headed for Babylon. To hide the truth, they brought Jacob Joseph’s blood-soaked robe. Jacob believed Joseph had run away.",
+      "mistakeCount": 6,
+      "mistakes": [
+        {
+          "incorrect": "a pair of sandals",
+          "correction": "a beautiful robe"
+        },
+        {
+          "incorrect": "were happy to hear",
+          "correction": "were angry to hear"
+        },
+        {
+          "incorrect": "sheep bowed",
+          "correction": "the brothers’ bundles of grain bowed"
+        },
+        {
+          "incorrect": "into a river",
+          "correction": "into an empty pit"
+        },
+        {
+          "incorrect": "headed for Babylon",
+          "correction": "headed for Egypt"
+        },
+        {
+          "incorrect": "run away",
+          "correction": "been eaten by an animal"
+        }
+      ],
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "mediumWordSearch": {
+      "words": [
+        "JOSEPH",
+        "JACOB",
+        "DREAM",
+        "ROBE",
+        "PIT",
+        "GRAIN"
+      ],
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ]
+    },
+    "bigIdeaCryptogram": {
+      "phrase": "Even when things are going bad, God has a good plan.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Important Idea",
+        "page": 5,
+        "sourceParagraphIndex": 143,
+        "details": "Original display uses lowercase “god” and joins words in the source export; display capitalization and spacing normalized for proposed Big Idea. The source ODT is unchanged."
+      },
+      "sourceIds": [
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": false
+    },
+    "connectBigIdea": {
+      "phrase": "Even when things are going bad, God has a good plan.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Important Idea",
+        "page": 5,
+        "sourceParagraphIndex": 143,
+        "details": "Original display uses lowercase “god” and joins words in the source export; display capitalization and spacing normalized for proposed Big Idea. The source ODT is unchanged."
+      },
+      "sourceIds": [
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": false
+    },
+    "pixelPicture": {
+      "phrase": "Even when things are going bad, God has a good plan.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 20 Lesson (Joseph and his Brothers).odt",
+        "section": "Important Idea",
+        "page": 5,
+        "sourceParagraphIndex": 143,
+        "details": "Original display uses lowercase “god” and joins words in the source export; display capitalization and spacing normalized for proposed Big Idea. The source ODT is unchanged."
+      }
+    },
+    "finishStory": {
+      "markedParagraph": "Joseph was one of Jacob’s [twelve] sons. His father loved him very much and gave him a beautiful [robe]. Joseph’s brothers were [jealous] and would not speak kindly to him. God gave Joseph two [dreams]. In one dream, his brothers’ bundles of [grain] bowed to his bundle. In another, the sun, moon, and eleven [stars] bowed to him. Later, Jacob sent Joseph to check on his brothers. They took his robe and threw him in an empty [pit]. Reuben wanted to help him, but the brothers sold Joseph to [traders] going to [Egypt]. Then they stained his robe with [blood] and showed it to Jacob. Jacob thought a wild [animal] had killed Joseph. He was [sad] for a very long time.",
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "storyOrder": [
+      {
+        "order": 1,
+        "text": "Jacob gave Joseph a beautiful robe, and his brothers hated him.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "order": 2,
+        "text": "Joseph dreamed that his brothers’ grain bundles bowed to his.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "order": 3,
+        "text": "Joseph dreamed that the sun, moon, and eleven stars bowed to him.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "order": 4,
+        "text": "Jacob sent Joseph to check on his brothers, who planned to hurt him.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "order": 5,
+        "text": "Reuben convinced the brothers to put Joseph into an empty pit.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "order": 6,
+        "text": "The brothers sold Joseph to traders who were going to Egypt.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "order": 7,
+        "text": "The brothers showed Jacob Joseph’s stained robe, and Jacob thought an animal ate him.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      }
+    ],
+    "drawStory": [
+      {
+        "prompt": "Jacob gave Joseph a beautiful robe, and his brothers hated him.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "prompt": "Joseph dreamed that his brothers’ grain bundles bowed to his.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "prompt": "Joseph dreamed that the sun, moon, and eleven stars bowed to him.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "prompt": "Reuben convinced the brothers to put Joseph into an empty pit.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "prompt": "The brothers sold Joseph to traders who were going to Egypt.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "prompt": "The brothers showed Jacob Joseph’s stained robe, and Jacob thought an animal ate him.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      }
+    ],
+    "wordSearch": {
+      "words": [
+        "JOSEPH",
+        "JACOB",
+        "ROBE",
+        "GRAIN",
+        "STARS",
+        "DREAM",
+        "PIT",
+        "REUBEN",
+        "JUDAH",
+        "EGYPT",
+        "SILVER",
+        "GOAT"
+      ],
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ]
+    },
+    "crossword": [
+      {
+        "answer": "JOSEPH",
+        "clue": "Jacob gave this son a beautiful robe.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "answer": "JACOB",
+        "clue": "The father of Joseph and his brothers.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "answer": "ROBE",
+        "clue": "Joseph’s father gave him this special clothing.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "answer": "GRAIN",
+        "clue": "Bundles of this plant bowed in Joseph’s dream.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "answer": "STARS",
+        "clue": "Eleven of these bowed to Joseph in a dream.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "answer": "DREAM",
+        "clue": "Joseph saw his family bowing in one of these.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02",
+          "sn-03"
+        ]
+      },
+      {
+        "answer": "REUBEN",
+        "clue": "The brother who wanted to rescue Joseph.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "answer": "PIT",
+        "clue": "Joseph’s brothers put him into this deep hole.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "answer": "TRADERS",
+        "clue": "These travelers bought Joseph and took him away.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "answer": "JEALOUS",
+        "clue": "How Joseph's brothers felt",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-06"
+        ],
+        "teacherReviewRequired": true
+      }
+    ]
+  },
+  "moduleReadiness": [
+    {
+      "moduleName": "Draw a Picture",
+      "moduleId": "draw-picture",
+      "size": "Small",
+      "preparedActivityKey": "drawPicture",
+      "status": "READY",
+      "contentValidation": "Local structural/content/source-reference checks only; official repository validator and live generators/presets NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means prepared draft content exists; generator compatibility and teacher approval are not asserted."
+    },
+    {
+      "moduleName": "Multiple Choice",
+      "moduleId": "multiple-choice",
+      "size": "Small",
+      "preparedActivityKey": "multipleChoice",
+      "status": "READY",
+      "contentValidation": "Local structural/content/source-reference checks only; official repository validator and live generators/presets NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means prepared draft content exists; generator compatibility and teacher approval are not asserted."
+    },
+    {
+      "moduleName": "True / False",
+      "moduleId": "true-false",
+      "size": "Small",
+      "preparedActivityKey": "trueFalse",
+      "status": "READY",
+      "contentValidation": "Local structural/content/source-reference checks only; official repository validator and live generators/presets NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means prepared draft content exists; generator compatibility and teacher approval are not asserted."
+    },
+    {
+      "moduleName": "First Letters",
+      "moduleId": "first-letters",
+      "size": "Small",
+      "preparedActivityKey": "firstLetters",
+      "status": "READY",
+      "contentValidation": "Local structural/content/source-reference checks only; official repository validator and live generators/presets NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means prepared draft content exists; generator compatibility and teacher approval are not asserted."
+    },
+    {
+      "moduleName": "Odd Words",
+      "moduleId": "odd-words",
+      "size": "Small",
+      "preparedActivityKey": "oddWords",
+      "status": "READY",
+      "contentValidation": "Local structural/content/source-reference checks only; official repository validator and live generators/presets NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means prepared draft content exists; generator compatibility and teacher approval are not asserted."
+    },
+    {
+      "moduleName": "Unscramble Words",
+      "moduleId": "unscramble-words",
+      "size": "Small",
+      "preparedActivityKey": "unscrambleWords",
+      "status": "READY",
+      "contentValidation": "Local structural/content/source-reference checks only; official repository validator and live generators/presets NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means prepared draft content exists; generator compatibility and teacher approval are not asserted."
+    },
+    {
+      "moduleName": "Checkboxes",
+      "moduleId": "checkboxes",
+      "size": "Small",
+      "preparedActivityKey": "checkboxes",
+      "status": "READY",
+      "contentValidation": "Local structural/content/source-reference checks only; official repository validator and live generators/presets NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means prepared draft content exists; generator compatibility and teacher approval are not asserted."
+    },
+    {
+      "moduleName": "Who Am I?",
+      "moduleId": "who-am-i",
+      "size": "Small",
+      "preparedActivityKey": "whoAmI",
+      "status": "READY",
+      "contentValidation": "Local structural/content/source-reference checks only; official repository validator and live generators/presets NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means prepared draft content exists; generator compatibility and teacher approval are not asserted."
+    },
+    {
+      "moduleName": "Match the Words",
+      "moduleId": "match-words",
+      "size": "Medium",
+      "preparedActivityKey": "matchWords",
+      "status": "READY",
+      "contentValidation": "Local structural/content/source-reference checks only; official repository validator and live generators/presets NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means prepared draft content exists; generator compatibility and teacher approval are not asserted."
+    },
+    {
+      "moduleName": "Finish the Verse",
+      "moduleId": "finish-verse",
+      "size": "Medium",
+      "preparedActivityKey": "finishVerse",
+      "status": "READY",
+      "contentValidation": "Local structural/content/source-reference checks only; official repository validator and live generators/presets NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means prepared draft content exists; generator compatibility and teacher approval are not asserted."
+    },
+    {
+      "moduleName": "Unscramble the Verse",
+      "moduleId": "unscramble-verse",
+      "size": "Medium",
+      "preparedActivityKey": "unscrambleVerse",
+      "status": "READY",
+      "contentValidation": "Local structural/content/source-reference checks only; official repository validator and live generators/presets NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means prepared draft content exists; generator compatibility and teacher approval are not asserted."
+    },
+    {
+      "moduleName": "Circle the Mistakes",
+      "moduleId": "circle-mistakes",
+      "size": "Medium",
+      "preparedActivityKey": "circleMistakes",
+      "status": "READY",
+      "contentValidation": "Local structural/content/source-reference checks only; official repository validator and live generators/presets NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means prepared draft content exists; generator compatibility and teacher approval are not asserted."
+    },
+    {
+      "moduleName": "Medium Word Search",
+      "moduleId": "medium-word-search",
+      "size": "Medium",
+      "preparedActivityKey": "mediumWordSearch",
+      "status": "READY",
+      "contentValidation": "Local structural/content/source-reference checks only; official repository validator and live generators/presets NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means prepared draft content exists; generator compatibility and teacher approval are not asserted."
+    },
+    {
+      "moduleName": "True / False Maze",
+      "moduleId": "true-false-maze",
+      "size": "Medium",
+      "preparedActivityKey": "trueFalseMaze",
+      "status": "READY",
+      "contentValidation": "Local structural/content/source-reference checks only; official repository validator and live generators/presets NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means prepared draft content exists; generator compatibility and teacher approval are not asserted."
+    },
+    {
+      "moduleName": "Big Idea Cryptogram",
+      "moduleId": "big-idea-cryptogram",
+      "size": "Medium",
+      "preparedActivityKey": "bigIdeaCryptogram",
+      "status": "READY",
+      "contentValidation": "Local structural/content/source-reference checks only; official repository validator and live generators/presets NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means prepared draft content exists; generator compatibility and teacher approval are not asserted."
+    },
+    {
+      "moduleName": "Upside-Down Verse",
+      "moduleId": "upside-down-verse",
+      "size": "Medium",
+      "preparedActivityKey": "upsideDownVerse",
+      "status": "READY",
+      "contentValidation": "Local structural/content/source-reference checks only; official repository validator and live generators/presets NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means prepared draft content exists; generator compatibility and teacher approval are not asserted."
+    },
+    {
+      "moduleName": "Connect the Big Idea",
+      "moduleId": "connect-big-idea",
+      "size": "Medium",
+      "preparedActivityKey": "connectBigIdea",
+      "status": "READY",
+      "contentValidation": "Local structural/content/source-reference checks only; official repository validator and live generators/presets NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means prepared draft content exists; generator compatibility and teacher approval are not asserted."
+    },
+    {
+      "moduleName": "Pixel Picture",
+      "moduleId": "pixel-picture",
+      "size": "Medium",
+      "preparedActivityKey": "pixelPicture",
+      "status": "READY",
+      "contentValidation": "Local structural/content/source-reference checks only; official repository validator and live generators/presets NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means prepared draft content exists; generator compatibility and teacher approval are not asserted."
+    },
+    {
+      "moduleName": "Finish the Story",
+      "moduleId": "finish-story",
+      "size": "Large",
+      "preparedActivityKey": "finishStory",
+      "status": "READY",
+      "contentValidation": "Local structural/content/source-reference checks only; official repository validator and live generators/presets NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means prepared draft content exists; generator compatibility and teacher approval are not asserted."
+    },
+    {
+      "moduleName": "Story Order",
+      "moduleId": "story-order",
+      "size": "Large",
+      "preparedActivityKey": "storyOrder",
+      "status": "READY",
+      "contentValidation": "Local structural/content/source-reference checks only; official repository validator and live generators/presets NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means prepared draft content exists; generator compatibility and teacher approval are not asserted."
+    },
+    {
+      "moduleName": "Sort the Story",
+      "moduleId": "sort-story",
+      "size": "Large",
+      "preparedActivityKey": "sortStory",
+      "status": "READY",
+      "contentValidation": "Local structural/content/source-reference checks only; official repository validator and live generators/presets NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means prepared draft content exists; generator compatibility and teacher approval are not asserted."
+    },
+    {
+      "moduleName": "Draw the Story",
+      "moduleId": "draw-story",
+      "size": "Large",
+      "preparedActivityKey": "drawStory",
+      "status": "READY",
+      "contentValidation": "Local structural/content/source-reference checks only; official repository validator and live generators/presets NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means prepared draft content exists; generator compatibility and teacher approval are not asserted."
+    },
+    {
+      "moduleName": "Word Search",
+      "moduleId": "word-search",
+      "size": "Large",
+      "preparedActivityKey": "wordSearch",
+      "status": "READY",
+      "contentValidation": "Local structural/content/source-reference checks only; official repository validator and live generators/presets NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means prepared draft content exists; generator compatibility and teacher approval are not asserted."
+    },
+    {
+      "moduleName": "Verse Cryptogram",
+      "moduleId": "verse-cryptogram",
+      "size": "Large",
+      "preparedActivityKey": "verseCryptogram",
+      "status": "READY",
+      "contentValidation": "Local structural/content/source-reference checks only; official repository validator and live generators/presets NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means prepared draft content exists; generator compatibility and teacher approval are not asserted."
+    },
+    {
+      "moduleName": "Crossword",
+      "moduleId": "crossword",
+      "size": "Large",
+      "preparedActivityKey": "crossword",
+      "status": "READY",
+      "contentValidation": "Local structural/content/source-reference checks only; official repository validator and live generators/presets NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means prepared draft content exists; generator compatibility and teacher approval are not asserted."
+    },
+    {
+      "moduleName": "Spiral Verse",
+      "moduleId": "spiral-verse",
+      "size": "Large",
+      "preparedActivityKey": "spiralVerse",
+      "status": "READY",
+      "contentValidation": "Local structural/content/source-reference checks only; official repository validator and live generators/presets NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means prepared draft content exists; generator compatibility and teacher approval are not asserted."
+    },
+    {
+      "moduleName": "Connect the Verse",
+      "moduleId": "connect-verse",
+      "size": "Large",
+      "preparedActivityKey": "connectVerse",
+      "status": "READY",
+      "contentValidation": "Local structural/content/source-reference checks only; official repository validator and live generators/presets NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means prepared draft content exists; generator compatibility and teacher approval are not asserted."
+    }
+  ],
+  "reviewFlags": [
+    {
+      "id": "rf-01",
+      "priority": "high",
+      "type": "scripture-review",
+      "text": "Original source uses an ESV excerpt of Romans 8:28a. Prepared worksheet verses propose the BSB excerpt “And we know that God works all things together for the good of those who love Him.” Teacher must confirm translation, exact excerpt boundary, punctuation and rights.",
+      "affectedModules": [
+        "first-letters",
+        "finish-verse",
+        "unscramble-verse",
+        "upside-down-verse",
+        "verse-cryptogram",
+        "spiral-verse",
+        "connect-verse"
+      ]
+    },
+    {
+      "id": "rf-02",
+      "priority": "high",
+      "type": "teacher-approval",
+      "text": "Review six prepared Multiple Choice questions and twelve proposed incorrect answers.",
+      "affectedModules": [
+        "multiple-choice"
+      ]
+    },
+    {
+      "id": "rf-03",
+      "priority": "high",
+      "type": "teacher-approval",
+      "text": "Approve seven newly suggested false statements; inspect balance and clarity of the ten separately allocated Sort/True-False/Maze facts.",
+      "affectedModules": [
+        "sort-story",
+        "true-false",
+        "true-false-maze"
+      ]
+    },
+    {
+      "id": "rf-04",
+      "priority": "medium",
+      "type": "source-provenance",
+      "text": "The source Big Idea displays lowercase “god” and joined words due to font/export layout. Prepared text normalizes it to “God”; original source remains unchanged.",
+      "affectedModules": [
+        "big-idea-cryptogram",
+        "connect-big-idea"
+      ]
+    },
+    {
+      "id": "rf-05",
+      "priority": "medium",
+      "type": "sensitive-content",
+      "text": "The source describes Joseph’s brothers planning to kill him, throwing him into a pit, and selling him into slavery. Prepared activities use gentle wording where possible without changing the account; teacher should review for age group.",
+      "affectedModules": [
+        "multiple-choice",
+        "finish-story",
+        "story-order",
+        "draw-story"
+      ]
+    },
+    {
+      "id": "rf-06",
+      "priority": "medium",
+      "type": "teacher-approval",
+      "text": "Inspect all six deliberate Circle the Mistakes errors and correction key for clarity and no accidental additional error.",
+      "affectedModules": [
+        "circle-mistakes"
+      ]
+    },
+    {
+      "id": "rf-07",
+      "priority": "medium",
+      "type": "teacher-approval",
+      "text": "Verify suggested wrong words in Odd Words and Checkboxes; separate word banks have no overlap.",
+      "affectedModules": [
+        "odd-words",
+        "checkboxes"
+      ]
+    },
+    {
+      "id": "rf-08",
+      "priority": "medium",
+      "type": "teacher-approval",
+      "text": "Review four Small drawing prompts, six short Match the Words pairs, ten Crossword clues, and six Large Draw the Story captions.",
+      "affectedModules": [
+        "draw-picture",
+        "match-words",
+        "crossword",
+        "draw-story"
+      ]
+    },
+    {
+      "id": "rf-09",
+      "priority": "medium",
+      "type": "teacher-approval",
+      "text": "Finish the Story has 678 characters including blanks, within the new 600–700 target; review whether the wording suits the age group.",
+      "affectedModules": [
+        "finish-story"
+      ]
+    },
+    {
+      "id": "rf-10",
+      "priority": "high",
+      "type": "generator-validation",
+      "text": "Run the official repository validator, preflight, all relevant generators, and three numbered presets before publication. Ten different fact IDs are assigned but live print output is untested.",
+      "affectedModules": []
+    }
+  ],
+  "publication": {
+    "status": "approved",
+    "approved": true,
+    "notes": "Draft only; not published. Teacher approval, official validator, preflight and live preset/generator checks required.",
+    "teacherSignoff": {
+      "reviewer": "Andrew Doane",
+      "date": "2026-11-05",
+      "notes": "Approved with verified BSB verse through Curriculum Review Studio"
+    },
+    "scriptureRights": {
+      "status": "cleared",
+      "basis": "Berean Standard Bible (BSB), dedicated to the public domain on April 30, 2023. Official terms: https://berean.bible/terms.htm. Scripture text confirmed against https://bereanbible.com/bsb.txt.",
+      "reviewedBy": "Andrew Doane",
+      "reviewedOn": "2026-11-05"
+    },
+    "resolvedReviewFlagIds": [
+      "rf-02",
+      "rf-03",
+      "rf-06",
+      "rf-07",
+      "rf-08",
+      "rf-09"
+    ]
+  },
+  "validation": {
+    "basis": "Original conversion tests predate teacher-approved BSB; revalidate actual engines and content after export.",
+    "allTextChecksPassed": false,
+    "checks": [
+      {
+        "name": "Original seven Story Notes preserved verbatim",
+        "passed": true
+      },
+      {
+        "name": "Original questions and answers preserved with source paragraph indices",
+        "passed": true
+      },
+      {
+        "name": "All ten original review questions included",
+        "passed": true
+      },
+      {
+        "name": "Bible book only in scriptureDisplay",
+        "passed": true
+      },
+      {
+        "name": "The Big Idea correctly capitalizes God",
+        "passed": true
+      },
+      {
+        "name": "Four to six multiple choice questions and three answer choices each",
+        "passed": true
+      },
+      {
+        "name": "Multiple Choice uses one correct and two suggested answers",
+        "passed": true
+      },
+      {
+        "name": "True/False fact pool has 12 to 16 distinct statements",
+        "passed": true
+      },
+      {
+        "name": "True/False statements balanced 7 true and 7 false",
+        "passed": true
+      },
+      {
+        "name": "Every false fact is suggested and requires approval",
+        "passed": true
+      },
+      {
+        "name": "Sort the Story gets eight facts",
+        "passed": true
+      },
+      {
+        "name": "Sort the Story, True/False and Maze share no fact ID",
+        "passed": true
+      },
+      {
+        "name": "Four alternative true/false facts remain",
+        "passed": true
+      },
+      {
+        "name": "Four distinct, age-appropriate Small drawing prompts",
+        "passed": true
+      },
+      {
+        "name": "Six short Match the Words pairs",
+        "passed": true
+      },
+      {
+        "name": "Circle the Mistakes contains six listed mistakes exactly once",
+        "passed": true
+      },
+      {
+        "name": "Odd Words and Checkboxes use distinct word sets",
+        "passed": true
+      },
+      {
+        "name": "Finish the Story passage is 600–700 characters",
+        "passed": true
+      },
+      {
+        "name": "All marked Finish the Story blanks are intact",
+        "passed": true
+      },
+      {
+        "name": "Prepared content exists for all 27 modules",
+        "passed": true
+      },
+      {
+        "name": "Module IDs are unique and generators marked untested",
+        "passed": true
+      },
+      {
+        "name": "All referenced Story Notes exist",
+        "passed": true
+      },
+      {
+        "name": "Large drawing captions are 4–6 full, short event sentences",
+        "passed": true
+      },
+      {
+        "name": "Large drawing captions reuse Story Order entries",
+        "passed": true
+      },
+      {
+        "name": "Crossword has ten distinct single-word answers",
+        "passed": true
+      },
+      {
+        "name": "BSB verse is consistent across all seven scripture activities",
+        "passed": true
+      },
+      {
+        "name": "All required metadata is kept pending",
+        "passed": true
+      },
+      {
+        "name": "Prepared multiple-choice questions are distinct",
+        "passed": true
+      }
+    ],
+    "schemaValidated": false,
+    "officialPreflightPassed": false,
+    "liveGeneratorsTested": false,
+    "allThreePresetsTested": false,
+    "actualGeneratorTested": false
+  }
+}
