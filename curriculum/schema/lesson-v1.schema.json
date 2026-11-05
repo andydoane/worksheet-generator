@@ -154,7 +154,7 @@
               "type": "boolean"
             },
             "alsoVerifiedAt": {
-              "$ref": "#/$defs/source"
+              "$ref": "#/$defs/verificationSource"
             }
           },
           "additionalProperties": true
@@ -1989,6 +1989,36 @@
         "filename",
         "section",
         "page"
+      ],
+      "properties": {
+        "filename": {
+          "type": "string",
+          "minLength": 1
+        },
+        "section": {
+          "type": "string",
+          "minLength": 1
+        },
+        "page": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "sourceParagraphIndex": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "details": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "verificationSource": {
+      "type": "object",
+      "description": "Optional secondary verification may be a web reference without a page. Primary curriculum sources continue to require a source page.",
+      "required": [
+        "filename",
+        "section"
       ],
       "properties": {
         "filename": {
