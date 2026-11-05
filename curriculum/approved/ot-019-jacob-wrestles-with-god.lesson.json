@@ -1,0 +1,3211 @@
+{
+  "schemaVersion": 1,
+  "schemaStatus": "proposed-v1; pending teacher and generator verification",
+  "id": "ot-019-jacob-wrestles-with-god",
+  "curriculum": {
+    "series": "Old Testament",
+    "lessonNumber": 19
+  },
+  "lessonDetails": {
+    "title": "Jacob Wrestles with God",
+    "scripturePassages": [
+      "Genesis 31",
+      "Genesis 32",
+      "Genesis 33",
+      "Romans 15:4",
+      "Proverbs 3:5"
+    ],
+    "scriptureDisplay": "Genesis",
+    "bigIdeas": [
+      {
+        "origin": "adapted",
+        "text": "Hold on to Jesus, and never let go.",
+        "sourceIds": [
+          "sn-04",
+          "sn-05"
+        ],
+        "source": {
+          "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+          "section": "Important Idea",
+          "page": 5,
+          "sourceParagraphIndex": 166,
+          "details": "Source appears in an all-caps-styled graphic with lowercase “jesus” in the text layer and split words; only capitalization and spacing normalized. The original ODT is unchanged."
+        }
+      }
+    ],
+    "memoryVerse": {
+      "reference": "Proverbs 3:5",
+      "translation": "BSB",
+      "text": "Trust in the LORD with all your heart, and lean not on your own understanding;",
+      "isExcerpt": false,
+      "hasEllipses": false,
+      "requiresTextReview": false,
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 209,
+        "details": "Source ESV reads “Trust in the Lord with all your heart, and do not lean on your own understanding...” Prepared BSB uses “Trust in the LORD with all your heart, and lean not on your own understanding;” Verify wording/excerpt and punctuation before publication. BSB: https://ebible.org/study/content/texts/engbsb/PR3.html"
+      },
+      "originalTranslation": "BSB",
+      "bsbSource": {
+        "reference": "Proverbs 3:5",
+        "sourceUrl": "https://bereanbible.com/bsb.txt",
+        "publicDomainTerms": "https://berean.bible/terms.htm",
+        "startWord": 0,
+        "endWord": 14
+      }
+    }
+  },
+  "sourceFiles": [
+    {
+      "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+      "format": "odt",
+      "role": "primary teaching source",
+      "note": "Original 14-page OT19 lesson. Seven source Story Notes and all instructional/review questions retained; memory verse ESV excerpt separately preserved in provenance."
+    }
+  ],
+  "storyNotes": [
+    {
+      "id": "sn-01",
+      "order": 1,
+      "originalText": "God told Jacob to RETURN to his father's land. God promised to be with him.",
+      "cleanText": "God told Jacob to return to his father's land. God promised to be with him.",
+      "emphasizedWords": [
+        "RETURN"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "STORY NOTE",
+        "page": 2,
+        "sourceParagraphIndex": 38
+      }
+    },
+    {
+      "id": "sn-02",
+      "order": 2,
+      "originalText": "Esau headed to Jacob with 400 men. Jacob prayed, “Keep your PROMISE and save me from Esau!”",
+      "cleanText": "Esau headed to Jacob with 400 men. Jacob prayed, “Keep your promise and save me from Esau!”",
+      "emphasizedWords": [
+        "PROMISE"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "STORY NOTE",
+        "page": 2,
+        "sourceParagraphIndex": 59
+      }
+    },
+    {
+      "id": "sn-03",
+      "order": 3,
+      "originalText": "To stop Esau from attacking, Jacob sent his servants with a gift of many ANIMALS.",
+      "cleanText": "To stop Esau from attacking, Jacob sent his servants with a gift of many animals.",
+      "emphasizedWords": [
+        "ANIMALS"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "STORY NOTE",
+        "page": 3,
+        "sourceParagraphIndex": 76
+      }
+    },
+    {
+      "id": "sn-04",
+      "order": 4,
+      "originalText": "A man WRESTLED Jacob all night long. Jacob would not let go until the man blessed him.",
+      "cleanText": "A man wrestled Jacob all night long. Jacob would not let go until the man blessed him.",
+      "emphasizedWords": [
+        "WRESTLED"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "STORY NOTE",
+        "page": 3,
+        "sourceParagraphIndex": 89
+      }
+    },
+    {
+      "id": "sn-05",
+      "order": 5,
+      "originalText": "The man changed Jacob's NAME to Israel. He said, \"You have struggled with God and won.\"",
+      "cleanText": "The man changed Jacob's name to Israel. He said, \"You have struggled with God and won.\"",
+      "emphasizedWords": [
+        "NAME"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "STORY NOTE",
+        "page": 4,
+        "sourceParagraphIndex": 106
+      }
+    },
+    {
+      "id": "sn-06",
+      "order": 6,
+      "originalText": "That morning, Jacob said, \"I have seen God FACE to face. But I'm still alive!\"",
+      "cleanText": "That morning, Jacob said, \"I have seen God face to face. But I'm still alive!\"",
+      "emphasizedWords": [
+        "FACE"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "STORY NOTE",
+        "page": 4,
+        "sourceParagraphIndex": 123
+      }
+    },
+    {
+      "id": "sn-07",
+      "order": 7,
+      "originalText": "Jacob's family bowed before Esau. But Esau was no longer angry and GLAD to see them.",
+      "cleanText": "Jacob's family bowed before Esau. But Esau was no longer angry and glad to see them.",
+      "emphasizedWords": [
+        "GLAD"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "STORY NOTE",
+        "page": 5,
+        "sourceParagraphIndex": 142
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q-01",
+      "question": "How many of you have ever wrestled with a parent or a friend?",
+      "answer": "Have the kids answer with a thumbs up or down.",
+      "kind": "discussion",
+      "scope": "introduction",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 9
+      },
+      "notes": "Original question retained from the lesson; contextual prompts may require teacher wording before use."
+    },
+    {
+      "id": "q-02",
+      "question": "Why was he living with his uncle in the first place?",
+      "answer": "He stole Esau’s blessing; Esau wanted to kill him.",
+      "kind": "discussion",
+      "scope": "story",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 40
+      },
+      "notes": "Original question retained from the lesson; contextual prompts may require teacher wording before use."
+    },
+    {
+      "id": "q-03",
+      "question": "Do you remember how many?",
+      "answer": "Twelve sons and a daughter.",
+      "kind": "discussion",
+      "scope": "story",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 42
+      },
+      "notes": "Original question retained from the lesson; contextual prompts may require teacher wording before use."
+    },
+    {
+      "id": "q-04",
+      "question": "How did he know?",
+      "answer": "God told him.",
+      "kind": "discussion",
+      "scope": "story",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 44
+      },
+      "notes": "Original question retained from the lesson; contextual prompts may require teacher wording before use."
+    },
+    {
+      "id": "q-05",
+      "question": "What did God promise to do?",
+      "answer": "Be with Jacob on his trip home.",
+      "kind": "discussion",
+      "scope": "story",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 46
+      },
+      "notes": "Original question retained from the lesson; contextual prompts may require teacher wording before use."
+    },
+    {
+      "id": "q-06",
+      "question": "What did Jacob see?",
+      "answer": "Angels.",
+      "kind": "discussion",
+      "scope": "story",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 48
+      },
+      "notes": "Original question retained from the lesson; contextual prompts may require teacher wording before use."
+    },
+    {
+      "id": "q-07",
+      "question": "When the messengers returned, they said, “Esau’s coming your way with…” what?",
+      "answer": "400 men.",
+      "kind": "discussion",
+      "scope": "story",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 63
+      },
+      "notes": "Original question retained from the lesson; contextual prompts may require teacher wording before use."
+    },
+    {
+      "id": "q-08",
+      "question": "What was it?",
+      "answer": "God would be with him.",
+      "kind": "discussion",
+      "scope": "story",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 65
+      },
+      "notes": "Original question retained from the lesson; contextual prompts may require teacher wording before use."
+    },
+    {
+      "id": "q-09",
+      "question": "However, do you think God ever forgets?",
+      "answer": "No.",
+      "kind": "discussion",
+      "scope": "story",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 71
+      },
+      "notes": "Original question retained from the lesson; contextual prompts may require teacher wording before use."
+    },
+    {
+      "id": "q-10",
+      "question": "What did he hope would happen?",
+      "answer": "It would keep angry Esau from attacking.",
+      "kind": "discussion",
+      "scope": "story",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "Story",
+        "page": 3,
+        "sourceParagraphIndex": 82
+      },
+      "notes": "Original question retained from the lesson; contextual prompts may require teacher wording before use."
+    },
+    {
+      "id": "q-11",
+      "question": "What happened?",
+      "answer": "A mystery man wrestled with him.",
+      "kind": "discussion",
+      "scope": "story",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "Story",
+        "page": 3,
+        "sourceParagraphIndex": 91
+      },
+      "notes": "Original question retained from the lesson; contextual prompts may require teacher wording before use."
+    },
+    {
+      "id": "q-12",
+      "question": "Who was this stranger?",
+      "answer": "The lesson says the verses do not name the stranger.",
+      "kind": "discussion",
+      "scope": "story",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "Story",
+        "page": 3,
+        "sourceParagraphIndex": 93
+      },
+      "notes": "Original question retained from the lesson; contextual prompts may require teacher wording before use."
+    },
+    {
+      "id": "q-13",
+      "question": "But did Jacob give up?",
+      "answer": "No.",
+      "kind": "discussion",
+      "scope": "story",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "Story",
+        "page": 3,
+        "sourceParagraphIndex": 97
+      },
+      "notes": "Original question retained from the lesson; contextual prompts may require teacher wording before use."
+    },
+    {
+      "id": "q-14",
+      "question": "He said, “I won’t let go unless...” what?",
+      "answer": "The man blessed him.",
+      "kind": "discussion",
+      "scope": "story",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "Story",
+        "page": 3,
+        "sourceParagraphIndex": 99
+      },
+      "notes": "Original question retained from the lesson; contextual prompts may require teacher wording before use."
+    },
+    {
+      "id": "q-15",
+      "question": "What is your name?",
+      "answer": "Jacob.",
+      "kind": "scripture",
+      "scope": "scripture",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 103
+      },
+      "notes": "Original question retained from the lesson; contextual prompts may require teacher wording before use."
+    },
+    {
+      "id": "q-16",
+      "question": "What was that name?",
+      "answer": "Israel.",
+      "kind": "discussion",
+      "scope": "story",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 108
+      },
+      "notes": "Original question retained from the lesson; contextual prompts may require teacher wording before use."
+    },
+    {
+      "id": "q-17",
+      "question": "Now, do you remember why Jacob wouldn’t let the man go?",
+      "answer": "He wanted his blessing.",
+      "kind": "discussion",
+      "scope": "story",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 116
+      },
+      "notes": "Original question retained from the lesson; contextual prompts may require teacher wording before use."
+    },
+    {
+      "id": "q-18",
+      "question": "What did he say?",
+      "answer": "I saw God face to face and I’m still alive.",
+      "kind": "discussion",
+      "scope": "story",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 129
+      },
+      "notes": "Original question retained from the lesson; contextual prompts may require teacher wording before use."
+    },
+    {
+      "id": "q-19",
+      "question": "Could God have out-wrestled Jacob if he wanted?",
+      "answer": "Of course.",
+      "kind": "discussion",
+      "scope": "story",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 133
+      },
+      "notes": "Original question retained from the lesson; contextual prompts may require teacher wording before use."
+    },
+    {
+      "id": "q-20",
+      "question": "What did Jacob do as he came close to Esau?",
+      "answer": "He bowed seven times.",
+      "kind": "discussion",
+      "scope": "story",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "Story",
+        "page": 5,
+        "sourceParagraphIndex": 144
+      },
+      "notes": "Original question retained from the lesson; contextual prompts may require teacher wording before use."
+    },
+    {
+      "id": "q-21",
+      "question": "And when he reached Jacob, what did he do?",
+      "answer": "He hugged and kissed his brother.",
+      "kind": "discussion",
+      "scope": "story",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "Story",
+        "page": 5,
+        "sourceParagraphIndex": 146
+      },
+      "notes": "Original question retained from the lesson; contextual prompts may require teacher wording before use."
+    },
+    {
+      "id": "q-22",
+      "question": "Pound him into dust?",
+      "answer": "No!",
+      "kind": "rhetorical",
+      "scope": "story",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "Story",
+        "page": 5,
+        "sourceParagraphIndex": 146
+      },
+      "notes": "Original question retained from the lesson; contextual prompts may require teacher wording before use."
+    },
+    {
+      "id": "q-23",
+      "question": "Chop him in half with a sword?",
+      "answer": "No!",
+      "kind": "rhetorical",
+      "scope": "story",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "Story",
+        "page": 5,
+        "sourceParagraphIndex": 146
+      },
+      "notes": "Original question retained from the lesson; contextual prompts may require teacher wording before use."
+    },
+    {
+      "id": "q-24",
+      "question": "Instead of attacking, what did Esau do?",
+      "answer": "He hugged and kissed his brother.",
+      "kind": "discussion",
+      "scope": "story",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "Story",
+        "page": 5,
+        "sourceParagraphIndex": 146
+      },
+      "notes": "Original question retained from the lesson; contextual prompts may require teacher wording before use."
+    },
+    {
+      "id": "q-25",
+      "question": "Do you remember Jacob’s prayer?",
+      "answer": "Keep my family and me safe from Esau!",
+      "kind": "rhetorical",
+      "scope": "story",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "Story",
+        "page": 5,
+        "sourceParagraphIndex": 148
+      },
+      "notes": "Original question retained from the lesson; contextual prompts may require teacher wording before use."
+    },
+    {
+      "id": "q-26",
+      "question": "Did God answer Jacob’s prayer?",
+      "answer": "Yes.",
+      "kind": "discussion",
+      "scope": "story",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "Story",
+        "page": 5,
+        "sourceParagraphIndex": 148
+      },
+      "notes": "Original question retained from the lesson; contextual prompts may require teacher wording before use."
+    },
+    {
+      "id": "q-27",
+      "question": "So how does the story of Jacob wrestling with God teach us, strengthen us, encourage us, or give us hope?",
+      "answer": "Open discussion; the lesson develops several applications.",
+      "kind": "discussion",
+      "scope": "application",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "Important Idea",
+        "page": 5,
+        "sourceParagraphIndex": 154
+      },
+      "notes": "Original question retained from the lesson; contextual prompts may require teacher wording before use."
+    },
+    {
+      "id": "q-28",
+      "question": "As Jacob wrestled the heavenly stranger, what did he do and say?",
+      "answer": "He held on and wouldn’t let go until the man blessed him.",
+      "kind": "discussion",
+      "scope": "application",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "Important Idea",
+        "page": 5,
+        "sourceParagraphIndex": 162
+      },
+      "notes": "Original question retained from the lesson; contextual prompts may require teacher wording before use."
+    },
+    {
+      "id": "q-29",
+      "question": "What?",
+      "answer": "Contextual exclamation in a rhetorical teacher prompt.",
+      "kind": "rhetorical",
+      "scope": "story",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "Important Idea",
+        "page": 5,
+        "sourceParagraphIndex": 171
+      },
+      "notes": "Original question retained from the lesson; contextual prompts may require teacher wording before use."
+    },
+    {
+      "id": "q-30",
+      "question": "Am I going to wrestle Jesus?",
+      "answer": "Of course not!",
+      "kind": "rhetorical",
+      "scope": "story",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "Important Idea",
+        "page": 5,
+        "sourceParagraphIndex": 171
+      },
+      "notes": "Original question retained from the lesson; contextual prompts may require teacher wording before use."
+    },
+    {
+      "id": "q-31",
+      "question": "Who can tell us what it is?",
+      "answer": "Jesus died to save us from our sins, rose from the dead.",
+      "kind": "discussion",
+      "scope": "application",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "Important Idea",
+        "page": 6,
+        "sourceParagraphIndex": 175
+      },
+      "notes": "Original question retained from the lesson; contextual prompts may require teacher wording before use."
+    },
+    {
+      "id": "q-32",
+      "question": "What does the Bible say will happen if we believe the good news of Jesus?",
+      "answer": "We’ll spend forever in God’s good kingdom.",
+      "kind": "discussion",
+      "scope": "application",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "Important Idea",
+        "page": 6,
+        "sourceParagraphIndex": 179
+      },
+      "notes": "Original question retained from the lesson; contextual prompts may require teacher wording before use."
+    },
+    {
+      "id": "q-33",
+      "question": "After all, whose understanding of the world is greater: God’s or ours?",
+      "answer": "God’s!",
+      "kind": "discussion",
+      "scope": "memory-verse-activity",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 212
+      },
+      "notes": "Original question retained from the lesson; contextual prompts may require teacher wording before use."
+    },
+    {
+      "id": "q-34",
+      "question": "After twenty years with Laban, what did God say to Jacob?",
+      "answer": "Return home; I’ll be with you",
+      "kind": "review",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 256
+      },
+      "notes": "Original question retained from the lesson; contextual prompts may require teacher wording before use."
+    },
+    {
+      "id": "q-35",
+      "question": "What did the messengers tell Jacob?",
+      "answer": "Esau is coming with 400 men",
+      "kind": "review",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 257
+      },
+      "notes": "Original question retained from the lesson; contextual prompts may require teacher wording before use."
+    },
+    {
+      "id": "q-36",
+      "question": "What did Jacob pray about?",
+      "answer": "That God would remember his promise and keep him safe from Esau",
+      "kind": "review",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 258
+      },
+      "notes": "Original question retained from the lesson; contextual prompts may require teacher wording before use."
+    },
+    {
+      "id": "q-37",
+      "question": "What gift did Jacob give to Esau? Why?",
+      "answer": "Over 500 animals; he wanted to get on Esau’s good side",
+      "kind": "review",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 259
+      },
+      "notes": "Original question retained from the lesson; contextual prompts may require teacher wording before use."
+    },
+    {
+      "id": "q-38",
+      "question": "What happened to Jacob the night before he met Esau?",
+      "answer": "A stranger wrestled him",
+      "kind": "review",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 260
+      },
+      "notes": "Original question retained from the lesson; contextual prompts may require teacher wording before use."
+    },
+    {
+      "id": "q-39",
+      "question": "What did the stranger do to Jacob as they wrestled?",
+      "answer": "Touched his hip and knocked it out of place",
+      "kind": "review",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 261
+      },
+      "notes": "Original question retained from the lesson; contextual prompts may require teacher wording before use."
+    },
+    {
+      "id": "q-40",
+      "question": "What did Jacob do as they wrestled?",
+      "answer": "Held on; wouldn’t let go until the stranger blessed him",
+      "kind": "review",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 262
+      },
+      "notes": "Original question retained from the lesson; contextual prompts may require teacher wording before use."
+    },
+    {
+      "id": "q-41",
+      "question": "What new name did the stranger give to Jacob? What does it mean?",
+      "answer": "Israel; it means “struggles with God”",
+      "kind": "review",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 263
+      },
+      "notes": "Original question retained from the lesson; contextual prompts may require teacher wording before use."
+    },
+    {
+      "id": "q-42",
+      "question": "What did Jacob say the next morning? What did Jacob name the place?",
+      "answer": "I saw God face to face and lived; Peniel, which means “face of God”",
+      "kind": "review",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 264
+      },
+      "notes": "Original question retained from the lesson; contextual prompts may require teacher wording before use."
+    },
+    {
+      "id": "q-43",
+      "question": "What happened when Jacob met Esau?",
+      "answer": "Esau hugged him; was glad to see him",
+      "kind": "review",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 265
+      },
+      "notes": "Original question retained from the lesson; contextual prompts may require teacher wording before use."
+    }
+  ],
+  "facts": [
+    {
+      "id": "tf-01",
+      "statement": "God told Jacob to return to his father’s land.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "STORY NOTE",
+        "page": 2,
+        "sourceParagraphIndex": 38
+      }
+    },
+    {
+      "id": "tf-02",
+      "statement": "God told Jacob to stay with Laban forever.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "teacherReviewRequired": true,
+      "notes": "Proposed false contrast, composed for worksheet; requires teacher approval."
+    },
+    {
+      "id": "tf-03",
+      "statement": "Esau was coming to meet Jacob with four hundred men.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "STORY NOTE",
+        "page": 2,
+        "sourceParagraphIndex": 59
+      }
+    },
+    {
+      "id": "tf-04",
+      "statement": "Jacob and Esau wrestled each other. ",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-02"
+      ],
+      "teacherReviewRequired": true,
+      "notes": "Proposed false contrast, composed for worksheet; requires teacher approval."
+    },
+    {
+      "id": "tf-05",
+      "statement": "Jacob sent Esau a gift of many animals.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "STORY NOTE",
+        "page": 3,
+        "sourceParagraphIndex": 76
+      }
+    },
+    {
+      "id": "tf-06",
+      "statement": "Jacob sent Esau baskets of bread as a gift.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-03"
+      ],
+      "teacherReviewRequired": true,
+      "notes": "Proposed false contrast, composed for worksheet; requires teacher approval."
+    },
+    {
+      "id": "tf-07",
+      "statement": "A man wrestled with Jacob all night long.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "STORY NOTE",
+        "page": 3,
+        "sourceParagraphIndex": 89
+      }
+    },
+    {
+      "id": "tf-08",
+      "statement": "Jacob let go of the stranger as soon as they began wrestling.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-04"
+      ],
+      "teacherReviewRequired": true,
+      "notes": "Proposed false contrast, composed for worksheet; requires teacher approval."
+    },
+    {
+      "id": "tf-09",
+      "statement": "The stranger gave Jacob the name Israel.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "STORY NOTE",
+        "page": 4,
+        "sourceParagraphIndex": 106
+      }
+    },
+    {
+      "id": "tf-10",
+      "statement": "The stranger gave Jacob the new name Esau.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": true,
+      "notes": "Proposed false contrast, composed for worksheet; requires teacher approval."
+    },
+    {
+      "id": "tf-11",
+      "statement": "Jacob named the place Peniel.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "STORY NOTE",
+        "page": 4,
+        "sourceParagraphIndex": 123
+      }
+    },
+    {
+      "id": "tf-12",
+      "statement": "Jacob named the place Babel after the wrestling match.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-06"
+      ],
+      "teacherReviewRequired": true,
+      "notes": "Proposed false contrast, composed for worksheet; requires teacher approval."
+    },
+    {
+      "id": "tf-13",
+      "statement": "Esau ran to hug Jacob when they met.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "STORY NOTE",
+        "page": 5,
+        "sourceParagraphIndex": 142
+      }
+    },
+    {
+      "id": "tf-14",
+      "statement": "Esau chased Jacob and his family away when they met.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": true,
+      "notes": "Proposed false contrast, composed for worksheet; requires teacher approval."
+    }
+  ],
+  "vocabulary": {
+    "related": [
+      "JACOB",
+      "ESAU",
+      "ISRAEL",
+      "LABAN",
+      "ANGELS",
+      "PROMISE",
+      "GIFT",
+      "GOATS",
+      "CAMELS",
+      "RIVER",
+      "HIP",
+      "PENIEL",
+      "WRESTLE",
+      "WRESTLING",
+      "BLESSING",
+      "FAMILY",
+      "FATHER",
+      "PRAYER",
+      "SHEEP",
+      "COWS",
+      "DONKEYS",
+      "BROTHER"
+    ],
+    "unrelated": [
+      "ARK",
+      "TOWER",
+      "FURNACE",
+      "TRUMPETS",
+      "FISH",
+      "FLEECE",
+      "LION",
+      "MANGER",
+      "SLING",
+      "LAMPSTAND"
+    ],
+    "entries": [
+      {
+        "id": "v-01",
+        "term": "JACOB",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-02",
+        "term": "ESAU",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-03",
+        "term": "ISRAEL",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-04",
+        "term": "LABAN",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-05",
+        "term": "ANGELS",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-06",
+        "term": "PROMISE",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-07",
+        "term": "GIFT",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-08",
+        "term": "GOATS",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-09",
+        "term": "CAMELS",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-10",
+        "term": "RIVER",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-11",
+        "term": "HIP",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-12",
+        "term": "PENIEL",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-13",
+        "term": "WRESTLE",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-14",
+        "term": "WRESTLING",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-15",
+        "term": "BLESSING",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-16",
+        "term": "FAMILY",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-17",
+        "term": "FATHER",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-18",
+        "term": "PRAYER",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-19",
+        "term": "SHEEP",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-20",
+        "term": "COWS",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-21",
+        "term": "DONKEYS",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-22",
+        "term": "BROTHER",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-23",
+        "term": "ARK",
+        "origin": "suggested",
+        "category": "suggested-distractor",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-24",
+        "term": "TOWER",
+        "origin": "suggested",
+        "category": "suggested-distractor",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-25",
+        "term": "FURNACE",
+        "origin": "suggested",
+        "category": "suggested-distractor",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-26",
+        "term": "TRUMPETS",
+        "origin": "suggested",
+        "category": "suggested-distractor",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-27",
+        "term": "FISH",
+        "origin": "suggested",
+        "category": "suggested-distractor",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-28",
+        "term": "FLEECE",
+        "origin": "suggested",
+        "category": "suggested-distractor",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-29",
+        "term": "LION",
+        "origin": "suggested",
+        "category": "suggested-distractor",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-30",
+        "term": "MANGER",
+        "origin": "suggested",
+        "category": "suggested-distractor",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-31",
+        "term": "SLING",
+        "origin": "suggested",
+        "category": "suggested-distractor",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-32",
+        "term": "LAMPSTAND",
+        "origin": "suggested",
+        "category": "suggested-distractor",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      }
+    ]
+  },
+  "characters": [
+    {
+      "id": "ch-01",
+      "name": "Jacob",
+      "origin": "adapted",
+      "scope": "current-story",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-04",
+        "sn-05"
+      ],
+      "clues": [
+        {
+          "text": "I was given the name Israel after wrestling through the night.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-04",
+            "sn-05"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch-02",
+      "name": "Esau",
+      "origin": "adapted",
+      "scope": "current-story",
+      "sourceIds": [
+        "sn-02",
+        "sn-03",
+        "sn-07"
+      ],
+      "clues": [
+        {
+          "text": "I came with four hundred men, but I ran to hug my brother.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-02",
+            "sn-07"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch-03",
+      "name": "Laban",
+      "origin": "adapted",
+      "scope": "background",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "clues": [
+        {
+          "text": "Jacob lived with me before he traveled back home.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-01"
+          ]
+        }
+      ]
+    }
+  ],
+  "matchingPairs": [
+    {
+      "id": "mp-01",
+      "left": "Jacob",
+      "right": "Israel",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ]
+    },
+    {
+      "id": "mp-02",
+      "left": "Esau",
+      "right": "Brother",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02",
+        "sn-07"
+      ]
+    },
+    {
+      "id": "mp-03",
+      "left": "Laban",
+      "right": "Uncle",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    {
+      "id": "mp-04",
+      "left": "Peniel",
+      "right": "Place",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ]
+    },
+    {
+      "id": "mp-05",
+      "left": "Camels",
+      "right": "Animals",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ]
+    },
+    {
+      "id": "mp-06",
+      "left": "Jabbok",
+      "right": "River",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ]
+    }
+  ],
+  "drawingPrompts": [
+    {
+      "id": "draw-01",
+      "prompt": "Jacob seeing angels on his journey home",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    {
+      "id": "draw-02",
+      "prompt": "Servants leading goats, sheep, and camels to Esau",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ]
+    },
+    {
+      "id": "draw-03",
+      "prompt": "Jacob wrestling a man beside the river at night",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ]
+    },
+    {
+      "id": "draw-04",
+      "prompt": "Esau running to hug Jacob",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ]
+    }
+  ],
+  "keyPhrases": [
+    {
+      "id": "kp-01",
+      "text": "God told Jacob to return to his father’s land, promising to be with him.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    {
+      "id": "kp-02",
+      "text": "Jacob heard that Esau was coming with four hundred men, so he prayed.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ]
+    },
+    {
+      "id": "kp-03",
+      "text": "Jacob sent Esau many animals as a gift.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ]
+    },
+    {
+      "id": "kp-04",
+      "text": "A man wrestled with Jacob all night beside the river.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ]
+    },
+    {
+      "id": "kp-05",
+      "text": "The man blessed Jacob and gave him the name Israel.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ]
+    },
+    {
+      "id": "kp-06",
+      "text": "Jacob called the place Peniel because he said he had seen God face to face.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ]
+    },
+    {
+      "id": "kp-07",
+      "text": "When Jacob met Esau, Esau ran to hug him.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ]
+    },
+    {
+      "id": "kp-review-1",
+      "text": "God gave Jacob the name Israel. It means Wrestles with God.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "theologicalApplications": [
+    {
+      "id": "app-01",
+      "text": "Jacob prayed when he was worried about meeting his brother.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ]
+    },
+    {
+      "id": "app-02",
+      "text": "Esau welcomed Jacob with a hug after many years apart.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ]
+    },
+    {
+      "id": "app-03",
+      "text": "The lesson encourages children to trust in Jesus and never let go of that trust.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04",
+        "sn-05"
+      ]
+    },
+    {
+      "id": "app-04",
+      "text": "God kept His promise to be with Jacob as he returned home.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-07"
+      ]
+    }
+  ],
+  "preparedActivities": {
+    "drawPicture": {
+      "prompt": "Jacob wrestling a man beside the river at night",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ]
+    },
+    "multipleChoice": [
+      {
+        "id": "mc-01",
+        "question": "What did God tell Jacob to do after living with Laban?",
+        "correctAnswer": "Return to his father’s land",
+        "choices": [
+          {
+            "text": "Return to his father’s land",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Build a tall tower",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Stay with Laban",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "sourceIds": [
+          "sn-01"
+        ],
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-02",
+        "question": "How many men came with Esau to meet Jacob?",
+        "correctAnswer": "400",
+        "choices": [
+          {
+            "text": "400",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "40",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "700",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "sourceIds": [
+          "sn-02"
+        ],
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-03",
+        "question": "What gift did Jacob send to Esau?",
+        "correctAnswer": "Many animals",
+        "choices": [
+          {
+            "text": "Many animals",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "A pile of gold",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "A basket of grain",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "sourceIds": [
+          "sn-03"
+        ],
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-04",
+        "question": "Why did Jacob hold onto the stranger while they wrestled?",
+        "correctAnswer": "He wanted a blessing",
+        "choices": [
+          {
+            "text": "He wanted a blessing",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "He wanted to win",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "He wanted to steal his sandals",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "sourceIds": [
+          "sn-04"
+        ],
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-05",
+        "question": "What new name did the man give Jacob?",
+        "correctAnswer": "Israel",
+        "choices": [
+          {
+            "text": "Israel",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Peniel",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Laban",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "sourceIds": [
+          "sn-05"
+        ],
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-06",
+        "question": "What did Esau do when Jacob came to meet him?",
+        "correctAnswer": "He ran to hug Jacob",
+        "choices": [
+          {
+            "text": "He ran to hug Jacob",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "He put Jacob in prison",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": " He attacked Jacob",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "sourceIds": [
+          "sn-07"
+        ],
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      }
+    ],
+    "trueFalse": {
+      "statement": "Jacob sent Esau a gift of many animals.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "STORY NOTE",
+        "page": 3,
+        "sourceParagraphIndex": 76
+      },
+      "factId": "tf-05"
+    },
+    "firstLetters": {
+      "reference": "Proverbs 3:5",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 209,
+        "details": "Source ESV reads “Trust in the Lord with all your heart, and do not lean on your own understanding...” Prepared BSB uses “Trust in the LORD with all your heart, and lean not on your own understanding;” Verify wording/excerpt and punctuation before publication. BSB: https://ebible.org/study/content/texts/engbsb/PR3.html"
+      },
+      "sourceIds": [
+        "sn-04",
+        "sn-05"
+      ],
+      "teacherReviewRequired": true,
+      "verse": "Trust in the LORD with all your heart, and lean not on your own understanding;"
+    },
+    "oddWords": {
+      "related": [
+        "JACOB",
+        "ESAU",
+        "WRESTLING",
+        "HIP",
+        "ISRAEL"
+      ],
+      "unrelated": [
+        "ARK",
+        "TOWER",
+        "FURNACE",
+        "Babel",
+        "FISH"
+      ],
+      "unrelatedOrigin": "suggested",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-04",
+        "sn-05"
+      ],
+      "teacherReviewRequired": true
+    },
+    "unscrambleWords": {
+      "answers": [
+        "LABAN",
+        "WRESTLE"
+      ],
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "checkboxes": {
+      "correct": [
+        "ANGELS",
+        "CAMELS",
+        "RIVER",
+        "BLESSING",
+        "FATHER"
+      ],
+      "incorrect": [
+        "FLEECE",
+        "LION",
+        "MANGER",
+        "SLING",
+        "LAMPSTAND"
+      ],
+      "incorrectOrigin": "suggested",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-03",
+        "sn-04",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "whoAmI": {
+      "clue": "I was afraid to meet Esau. I wrestled a stranger who  gave me the new name Israel.",
+      "answer": "Jacob",
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-02",
+        "sn-05"
+      ],
+      "teacherReviewRequired": true
+    },
+    "matchWords": [
+      {
+        "id": "mp-01",
+        "left": "Jacob",
+        "right": "Israel",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-05"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-02",
+        "left": "Esau",
+        "right": "Hugged",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-02",
+          "sn-07"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-03",
+        "left": "Laban",
+        "right": "Uncle",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "id": "mp-04",
+        "left": "Peniel",
+        "right": "Face of God",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-06"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-05",
+        "left": "Gift",
+        "right": "Animals",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": true
+      }
+    ],
+    "finishVerse": {
+      "reference": "Proverbs 3:5",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 209,
+        "details": "Source ESV reads “Trust in the Lord with all your heart, and do not lean on your own understanding...” Prepared BSB uses “Trust in the LORD with all your heart, and lean not on your own understanding;” Verify wording/excerpt and punctuation before publication. BSB: https://ebible.org/study/content/texts/engbsb/PR3.html"
+      },
+      "sourceIds": [
+        "sn-04",
+        "sn-05"
+      ],
+      "teacherReviewRequired": true,
+      "markedVerse": "[Trust] in the [LORD] with [all] your [heart], and [lean] not on your [own] understanding;",
+      "sourceVerse": "Trust in the LORD with all your heart, and lean not on your own understanding;"
+    },
+    "unscrambleVerse": {
+      "reference": "Proverbs 3:5",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 209,
+        "details": "Source ESV reads “Trust in the Lord with all your heart, and do not lean on your own understanding...” Prepared BSB uses “Trust in the LORD with all your heart, and lean not on your own understanding;” Verify wording/excerpt and punctuation before publication. BSB: https://ebible.org/study/content/texts/engbsb/PR3.html"
+      },
+      "sourceIds": [
+        "sn-04",
+        "sn-05"
+      ],
+      "teacherReviewRequired": true,
+      "markedVerse": "[Trust] in the [LORD] with [all] your [heart], and [lean] not on your [own] understanding;",
+      "sourceVerse": "Trust in the LORD with all your heart, and lean not on your own understanding;"
+    },
+    "circleMistakes": {
+      "paragraph": "God told Jacob to stay with Laban for the rest of his life. On the way home, Jacob heard that Esau was coming with four men. To make peace, Jacob sent his brother baskets of bread. That night, a stranger wrestled with Jacob for one hour. The stranger gave Jacob the new name Moses. When the brothers finally met, Esau ran to attack Jacob.",
+      "mistakeCount": 6,
+      "mistakes": [
+        {
+          "incorrect": "stay with Laban for the rest of his life",
+          "correction": "return to his father’s land"
+        },
+        {
+          "incorrect": "four men",
+          "correction": "four hundred men"
+        },
+        {
+          "incorrect": "baskets of bread",
+          "correction": "many animals"
+        },
+        {
+          "incorrect": "for one hour",
+          "correction": "all night long"
+        },
+        {
+          "incorrect": "the new name Moses",
+          "correction": "the new name Israel"
+        },
+        {
+          "incorrect": "ran to attack Jacob",
+          "correction": "ran to hug Jacob"
+        }
+      ],
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "mediumWordSearch": {
+      "words": [
+        "JACOB",
+        "ESAU",
+        "ANGELS",
+        "CAMELS",
+        "HIP",
+        "ISRAEL"
+      ],
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ]
+    },
+    "trueFalseMaze": {
+      "statement": "Jacob let go of the stranger as soon as they began wrestling.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-04"
+      ],
+      "teacherReviewRequired": true,
+      "factId": "tf-08"
+    },
+    "bigIdeaCryptogram": {
+      "phrase": "God gave Jacob the name Israel. It means Wrestles with God.",
+      "origin": "suggested",
+      "sourceIds": [],
+      "teacherReviewRequired": true
+    },
+    "upsideDownVerse": {
+      "reference": "Proverbs 3:5",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 209,
+        "details": "Source ESV reads “Trust in the Lord with all your heart, and do not lean on your own understanding...” Prepared BSB uses “Trust in the LORD with all your heart, and lean not on your own understanding;” Verify wording/excerpt and punctuation before publication. BSB: https://ebible.org/study/content/texts/engbsb/PR3.html"
+      },
+      "sourceIds": [
+        "sn-04",
+        "sn-05"
+      ],
+      "teacherReviewRequired": true,
+      "verse": "Trust in the LORD with all your heart, and lean not on your own understanding;"
+    },
+    "connectBigIdea": {
+      "phrase": "Hold on to Jesus, and never let go.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "Important Idea",
+        "page": 5,
+        "sourceParagraphIndex": 166,
+        "details": "Source appears in an all-caps-styled graphic with lowercase “jesus” in the text layer and split words; only capitalization and spacing normalized. The original ODT is unchanged."
+      },
+      "sourceIds": [
+        "sn-04",
+        "sn-05"
+      ],
+      "teacherReviewRequired": false
+    },
+    "pixelPicture": {
+      "phrase": "A man wrestled with Jacob all night beside the river.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ],
+      "teacherReviewRequired": false
+    },
+    "finishStory": {
+      "markedParagraph": "After twenty years with his uncle Laban, [Jacob] heard God tell him to return to his father's land. God promised to be with him. On the trip home, Jacob was afraid because his brother [Esau] was coming with four hundred men. Jacob [prayed] for help and sent his brother a gift of many [animals]. That night, after his family crossed the [river], a man [wrestled] with Jacob until morning. Jacob would not let go until he received a [blessing]. The man gave Jacob a new name: [Israel]. Jacob named the place [Peniel] because he said he had seen God face to face. The next day, Jacob bowed before Esau. Instead of attacking him, Esau ran to [hug] his brother.",
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "storyOrder": [
+      {
+        "order": 1,
+        "text": "God told Jacob to return to his father’s land, promising to be with him.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "order": 2,
+        "text": "Jacob heard that Esau was coming with four hundred men, so he prayed.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "order": 3,
+        "text": "Jacob sent Esau many animals as a gift.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "order": 4,
+        "text": "A man wrestled with Jacob all night beside the river.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "order": 5,
+        "text": "The man blessed Jacob and gave him the name Israel.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "order": 6,
+        "text": "Jacob called the place Peniel because he said he had seen God face to face.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "order": 7,
+        "text": "When Jacob met Esau, Esau ran to hug him.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      }
+    ],
+    "sortStory": [
+      {
+        "statement": "God told Jacob to return to his father’s land.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": false,
+        "source": {
+          "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+          "section": "STORY NOTE",
+          "page": 2,
+          "sourceParagraphIndex": 38
+        },
+        "factId": "tf-01"
+      },
+      {
+        "statement": "God told Jacob to stay with Laban forever.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": true,
+        "factId": "tf-02"
+      },
+      {
+        "statement": "Esau was coming to meet Jacob with four hundred men.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": false,
+        "source": {
+          "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+          "section": "STORY NOTE",
+          "page": 2,
+          "sourceParagraphIndex": 59
+        },
+        "factId": "tf-03"
+      },
+      {
+        "statement": "Jacob sent Esau baskets of bread as a gift.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": true,
+        "factId": "tf-06"
+      },
+      {
+        "statement": "A man wrestled with Jacob all night long.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ],
+        "teacherReviewRequired": false,
+        "source": {
+          "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+          "section": "STORY NOTE",
+          "page": 3,
+          "sourceParagraphIndex": 89
+        },
+        "factId": "tf-07"
+      },
+      {
+        "statement": "The stranger gave Jacob the new name Esau.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-05"
+        ],
+        "teacherReviewRequired": true,
+        "factId": "tf-10"
+      },
+      {
+        "statement": "Jacob named the place Peniel.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ],
+        "teacherReviewRequired": false,
+        "source": {
+          "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+          "section": "STORY NOTE",
+          "page": 4,
+          "sourceParagraphIndex": 123
+        },
+        "factId": "tf-11"
+      },
+      {
+        "statement": "Esau chased Jacob and his family away when they met.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-07"
+        ],
+        "teacherReviewRequired": true,
+        "factId": "tf-14"
+      }
+    ],
+    "drawStory": [
+      {
+        "prompt": "God told Jacob to return to his father’s land, promising to be with him.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "prompt": "Jacob heard that Esau was coming with four hundred men, so he prayed.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "prompt": "Jacob sent Esau many animals as a gift.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "prompt": "A man wrestled with Jacob all night beside the river.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "prompt": "The man blessed Jacob and gave him the name Israel.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "prompt": "When Jacob met Esau, Esau ran to hug him.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      }
+    ],
+    "wordSearch": {
+      "words": [
+        "JACOB",
+        "ESAU",
+        "ISRAEL",
+        "LABAN",
+        "ANGELS",
+        "GIFT",
+        "CAMELS",
+        "RIVER",
+        "HIP",
+        "PENIEL",
+        "WRESTLE",
+        "PRAYER"
+      ],
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ]
+    },
+    "verseCryptogram": {
+      "reference": "Proverbs 3:5",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 209,
+        "details": "Source ESV reads “Trust in the Lord with all your heart, and do not lean on your own understanding...” Prepared BSB uses “Trust in the LORD with all your heart, and lean not on your own understanding;” Verify wording/excerpt and punctuation before publication. BSB: https://ebible.org/study/content/texts/engbsb/PR3.html"
+      },
+      "sourceIds": [
+        "sn-04",
+        "sn-05"
+      ],
+      "teacherReviewRequired": true,
+      "verse": "Trust in the LORD with all your heart, and lean not on your own understanding;"
+    },
+    "crossword": [
+      {
+        "answer": "JACOB",
+        "clue": "God told this man to return to his father’s land.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "answer": "ESAU",
+        "clue": "Jacob was afraid to meet this twin brother.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "answer": "LABAN",
+        "clue": "Jacob had lived with this uncle for twenty years.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "answer": "ANGELS",
+        "clue": "Jacob met these messengers from God on his journey.",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "CAMELS",
+        "clue": "Some of the animals Jacob gave Esau had humps.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "answer": "RIVER",
+        "clue": "Jacob sent his family across this before the wrestling match.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "answer": "HIP",
+        "clue": "The stranger touched this part of Jacob’s body.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "answer": "ISRAEL",
+        "clue": "The new name given to Jacob.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "answer": "PENIEL",
+        "clue": "Jacob gave this name to the place where he wrestled.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "answer": "HUG",
+        "clue": "Esau greeted Jacob with one of these.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      }
+    ],
+    "spiralVerse": {
+      "reference": "Proverbs 3:5",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 209,
+        "details": "Source ESV reads “Trust in the Lord with all your heart, and do not lean on your own understanding...” Prepared BSB uses “Trust in the LORD with all your heart, and lean not on your own understanding;” Verify wording/excerpt and punctuation before publication. BSB: https://ebible.org/study/content/texts/engbsb/PR3.html"
+      },
+      "sourceIds": [
+        "sn-04",
+        "sn-05"
+      ],
+      "teacherReviewRequired": true,
+      "verse": "Trust in the LORD with all your heart, and lean not on your own understanding;"
+    },
+    "connectVerse": {
+      "reference": "Proverbs 3:5",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 19 Lesson (Jacob Wrestles with God).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 209,
+        "details": "Source ESV reads “Trust in the Lord with all your heart, and do not lean on your own understanding...” Prepared BSB uses “Trust in the LORD with all your heart, and lean not on your own understanding;” Verify wording/excerpt and punctuation before publication. BSB: https://ebible.org/study/content/texts/engbsb/PR3.html"
+      },
+      "sourceIds": [
+        "sn-04",
+        "sn-05"
+      ],
+      "teacherReviewRequired": true,
+      "verse": "Trust in the LORD with all your heart, and lean not on your own understanding;"
+    }
+  },
+  "moduleReadiness": [
+    {
+      "moduleName": "Draw a Picture",
+      "moduleId": "draw-picture",
+      "size": "Small",
+      "preparedActivityKey": "drawPicture",
+      "status": "READY",
+      "contentValidation": "Local structural, source-text, provenance, and activity-allocation checks only; official validator and live generator/preset tests NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means draft content has been supplied, not that live generation or preset testing has passed."
+    },
+    {
+      "moduleName": "Multiple Choice",
+      "moduleId": "multiple-choice",
+      "size": "Small",
+      "preparedActivityKey": "multipleChoice",
+      "status": "READY",
+      "contentValidation": "Local structural, source-text, provenance, and activity-allocation checks only; official validator and live generator/preset tests NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means draft content has been supplied, not that live generation or preset testing has passed."
+    },
+    {
+      "moduleName": "True / False",
+      "moduleId": "true-false",
+      "size": "Small",
+      "preparedActivityKey": "trueFalse",
+      "status": "READY",
+      "contentValidation": "Local structural, source-text, provenance, and activity-allocation checks only; official validator and live generator/preset tests NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means draft content has been supplied, not that live generation or preset testing has passed."
+    },
+    {
+      "moduleName": "First Letters",
+      "moduleId": "first-letters",
+      "size": "Small",
+      "preparedActivityKey": "firstLetters",
+      "status": "READY",
+      "contentValidation": "Local structural, source-text, provenance, and activity-allocation checks only; official validator and live generator/preset tests NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means draft content has been supplied, not that live generation or preset testing has passed."
+    },
+    {
+      "moduleName": "Odd Words",
+      "moduleId": "odd-words",
+      "size": "Small",
+      "preparedActivityKey": "oddWords",
+      "status": "READY",
+      "contentValidation": "Local structural, source-text, provenance, and activity-allocation checks only; official validator and live generator/preset tests NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means draft content has been supplied, not that live generation or preset testing has passed."
+    },
+    {
+      "moduleName": "Unscramble Words",
+      "moduleId": "unscramble-words",
+      "size": "Small",
+      "preparedActivityKey": "unscrambleWords",
+      "status": "READY",
+      "contentValidation": "Local structural, source-text, provenance, and activity-allocation checks only; official validator and live generator/preset tests NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means draft content has been supplied, not that live generation or preset testing has passed."
+    },
+    {
+      "moduleName": "Checkboxes",
+      "moduleId": "checkboxes",
+      "size": "Small",
+      "preparedActivityKey": "checkboxes",
+      "status": "READY",
+      "contentValidation": "Local structural, source-text, provenance, and activity-allocation checks only; official validator and live generator/preset tests NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means draft content has been supplied, not that live generation or preset testing has passed."
+    },
+    {
+      "moduleName": "Who Am I?",
+      "moduleId": "who-am-i",
+      "size": "Small",
+      "preparedActivityKey": "whoAmI",
+      "status": "READY",
+      "contentValidation": "Local structural, source-text, provenance, and activity-allocation checks only; official validator and live generator/preset tests NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means draft content has been supplied, not that live generation or preset testing has passed."
+    },
+    {
+      "moduleName": "Match the Words",
+      "moduleId": "match-words",
+      "size": "Medium",
+      "preparedActivityKey": "matchWords",
+      "status": "READY",
+      "contentValidation": "Local structural, source-text, provenance, and activity-allocation checks only; official validator and live generator/preset tests NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means draft content has been supplied, not that live generation or preset testing has passed."
+    },
+    {
+      "moduleName": "Finish the Verse",
+      "moduleId": "finish-verse",
+      "size": "Medium",
+      "preparedActivityKey": "finishVerse",
+      "status": "READY",
+      "contentValidation": "Local structural, source-text, provenance, and activity-allocation checks only; official validator and live generator/preset tests NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means draft content has been supplied, not that live generation or preset testing has passed."
+    },
+    {
+      "moduleName": "Unscramble the Verse",
+      "moduleId": "unscramble-verse",
+      "size": "Medium",
+      "preparedActivityKey": "unscrambleVerse",
+      "status": "READY",
+      "contentValidation": "Local structural, source-text, provenance, and activity-allocation checks only; official validator and live generator/preset tests NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means draft content has been supplied, not that live generation or preset testing has passed."
+    },
+    {
+      "moduleName": "Circle the Mistakes",
+      "moduleId": "circle-mistakes",
+      "size": "Medium",
+      "preparedActivityKey": "circleMistakes",
+      "status": "READY",
+      "contentValidation": "Local structural, source-text, provenance, and activity-allocation checks only; official validator and live generator/preset tests NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means draft content has been supplied, not that live generation or preset testing has passed."
+    },
+    {
+      "moduleName": "Medium Word Search",
+      "moduleId": "medium-word-search",
+      "size": "Medium",
+      "preparedActivityKey": "mediumWordSearch",
+      "status": "READY",
+      "contentValidation": "Local structural, source-text, provenance, and activity-allocation checks only; official validator and live generator/preset tests NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means draft content has been supplied, not that live generation or preset testing has passed."
+    },
+    {
+      "moduleName": "True / False Maze",
+      "moduleId": "true-false-maze",
+      "size": "Medium",
+      "preparedActivityKey": "trueFalseMaze",
+      "status": "READY",
+      "contentValidation": "Local structural, source-text, provenance, and activity-allocation checks only; official validator and live generator/preset tests NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means draft content has been supplied, not that live generation or preset testing has passed."
+    },
+    {
+      "moduleName": "Big Idea Cryptogram",
+      "moduleId": "big-idea-cryptogram",
+      "size": "Medium",
+      "preparedActivityKey": "bigIdeaCryptogram",
+      "status": "READY",
+      "contentValidation": "Local structural, source-text, provenance, and activity-allocation checks only; official validator and live generator/preset tests NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means draft content has been supplied, not that live generation or preset testing has passed."
+    },
+    {
+      "moduleName": "Upside-Down Verse",
+      "moduleId": "upside-down-verse",
+      "size": "Medium",
+      "preparedActivityKey": "upsideDownVerse",
+      "status": "READY",
+      "contentValidation": "Local structural, source-text, provenance, and activity-allocation checks only; official validator and live generator/preset tests NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means draft content has been supplied, not that live generation or preset testing has passed."
+    },
+    {
+      "moduleName": "Connect the Big Idea",
+      "moduleId": "connect-big-idea",
+      "size": "Medium",
+      "preparedActivityKey": "connectBigIdea",
+      "status": "READY",
+      "contentValidation": "Local structural, source-text, provenance, and activity-allocation checks only; official validator and live generator/preset tests NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means draft content has been supplied, not that live generation or preset testing has passed."
+    },
+    {
+      "moduleName": "Pixel Picture",
+      "moduleId": "pixel-picture",
+      "size": "Medium",
+      "preparedActivityKey": "pixelPicture",
+      "status": "READY",
+      "contentValidation": "Local structural, source-text, provenance, and activity-allocation checks only; official validator and live generator/preset tests NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means draft content has been supplied, not that live generation or preset testing has passed."
+    },
+    {
+      "moduleName": "Finish the Story",
+      "moduleId": "finish-story",
+      "size": "Large",
+      "preparedActivityKey": "finishStory",
+      "status": "READY",
+      "contentValidation": "Local structural, source-text, provenance, and activity-allocation checks only; official validator and live generator/preset tests NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means draft content has been supplied, not that live generation or preset testing has passed."
+    },
+    {
+      "moduleName": "Story Order",
+      "moduleId": "story-order",
+      "size": "Large",
+      "preparedActivityKey": "storyOrder",
+      "status": "READY",
+      "contentValidation": "Local structural, source-text, provenance, and activity-allocation checks only; official validator and live generator/preset tests NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means draft content has been supplied, not that live generation or preset testing has passed."
+    },
+    {
+      "moduleName": "Sort the Story",
+      "moduleId": "sort-story",
+      "size": "Large",
+      "preparedActivityKey": "sortStory",
+      "status": "READY",
+      "contentValidation": "Local structural, source-text, provenance, and activity-allocation checks only; official validator and live generator/preset tests NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means draft content has been supplied, not that live generation or preset testing has passed."
+    },
+    {
+      "moduleName": "Draw the Story",
+      "moduleId": "draw-story",
+      "size": "Large",
+      "preparedActivityKey": "drawStory",
+      "status": "READY",
+      "contentValidation": "Local structural, source-text, provenance, and activity-allocation checks only; official validator and live generator/preset tests NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means draft content has been supplied, not that live generation or preset testing has passed."
+    },
+    {
+      "moduleName": "Word Search",
+      "moduleId": "word-search",
+      "size": "Large",
+      "preparedActivityKey": "wordSearch",
+      "status": "READY",
+      "contentValidation": "Local structural, source-text, provenance, and activity-allocation checks only; official validator and live generator/preset tests NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means draft content has been supplied, not that live generation or preset testing has passed."
+    },
+    {
+      "moduleName": "Verse Cryptogram",
+      "moduleId": "verse-cryptogram",
+      "size": "Large",
+      "preparedActivityKey": "verseCryptogram",
+      "status": "READY",
+      "contentValidation": "Local structural, source-text, provenance, and activity-allocation checks only; official validator and live generator/preset tests NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means draft content has been supplied, not that live generation or preset testing has passed."
+    },
+    {
+      "moduleName": "Crossword",
+      "moduleId": "crossword",
+      "size": "Large",
+      "preparedActivityKey": "crossword",
+      "status": "READY",
+      "contentValidation": "Local structural, source-text, provenance, and activity-allocation checks only; official validator and live generator/preset tests NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means draft content has been supplied, not that live generation or preset testing has passed."
+    },
+    {
+      "moduleName": "Spiral Verse",
+      "moduleId": "spiral-verse",
+      "size": "Large",
+      "preparedActivityKey": "spiralVerse",
+      "status": "READY",
+      "contentValidation": "Local structural, source-text, provenance, and activity-allocation checks only; official validator and live generator/preset tests NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means draft content has been supplied, not that live generation or preset testing has passed."
+    },
+    {
+      "moduleName": "Connect the Verse",
+      "moduleId": "connect-verse",
+      "size": "Large",
+      "preparedActivityKey": "connectVerse",
+      "status": "READY",
+      "contentValidation": "Local structural, source-text, provenance, and activity-allocation checks only; official validator and live generator/preset tests NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means draft content has been supplied, not that live generation or preset testing has passed."
+    }
+  ],
+  "reviewFlags": [
+    {
+      "id": "rf-01",
+      "priority": "high",
+      "type": "scripture-review",
+      "text": "The original curriculum uses an ESV excerpt of Proverbs 3:5. Prepared verse activities propose the complete BSB verse. Confirm translation, exact wording, punctuation, and whether the full verse is desired.",
+      "affectedModules": [
+        "first-letters",
+        "finish-verse",
+        "unscramble-verse",
+        "upside-down-verse",
+        "verse-cryptogram",
+        "spiral-verse",
+        "connect-verse"
+      ]
+    },
+    {
+      "id": "rf-02",
+      "priority": "medium",
+      "type": "source-formatting",
+      "text": "The source Important Idea uses lowercase “jesus” in its text layer. Display spelling is corrected to “Jesus” while the source is left unchanged.",
+      "affectedModules": [
+        "big-idea-cryptogram",
+        "connect-big-idea",
+        "pixel-picture"
+      ]
+    },
+    {
+      "id": "rf-03",
+      "priority": "high",
+      "type": "theology-review",
+      "text": "The Bible passage calls Jacob’s opponent a man, records Jacob saying he saw God face to face, and the lesson notes the stranger’s exact identity is not specified. Avoid declaring an identification more certain than the source.",
+      "affectedModules": [
+        "multiple-choice",
+        "draw-story",
+        "finish-story",
+        "story-order"
+      ]
+    },
+    {
+      "id": "rf-04",
+      "priority": "medium",
+      "type": "suggested-content",
+      "text": "Check all false statements, Circle the Mistakes errors, incorrect Multiple Choice options, and Odd Words/Checkboxes decoys for clarity and age appropriateness.",
+      "affectedModules": [
+        "multiple-choice",
+        "true-false",
+        "true-false-maze",
+        "sort-story",
+        "circle-mistakes",
+        "odd-words",
+        "checkboxes"
+      ]
+    },
+    {
+      "id": "rf-05",
+      "priority": "medium",
+      "type": "puzzle-layout",
+      "text": "Verify ten crossword words and sentence clues actually fit the crossword generator.",
+      "affectedModules": [
+        "crossword"
+      ]
+    },
+    {
+      "id": "rf-06",
+      "priority": "medium",
+      "type": "preset-test",
+      "text": "All three numbered worksheet presets need live generator testing, including ten distinct selected True/False facts within Preset 3.",
+      "affectedModules": [
+        "sort-story",
+        "true-false",
+        "true-false-maze"
+      ]
+    },
+    {
+      "id": "rf-07",
+      "priority": "low",
+      "type": "source-provenance",
+      "text": "Preserve source Story Notes with uppercase cue words and original questions. Prepared content remains separate from source data.",
+      "affectedModules": [
+        "story-order",
+        "finish-story"
+      ]
+    },
+    {
+      "id": "rf-08",
+      "priority": "medium",
+      "type": "teacher-approval",
+      "text": "This is a draft only. Teacher approval, official schema validation, import/preflight, generator and booklet checks are outstanding.",
+      "affectedModules": []
+    }
+  ],
+  "publication": {
+    "status": "approved",
+    "approved": true,
+    "notes": "Not published. Teacher approval, official repository schema validator, live generator preflight and all three preset checks are pending.",
+    "teacherSignoff": {
+      "reviewer": "Andrew Doane",
+      "date": "2026-11-05",
+      "notes": "Approved with verified BSB verse through Curriculum Review Studio"
+    },
+    "scriptureRights": {
+      "status": "cleared",
+      "basis": "Berean Standard Bible (BSB), dedicated to the public domain on April 30, 2023. Official terms: https://berean.bible/terms.htm. Scripture text confirmed against https://bereanbible.com/bsb.txt.",
+      "reviewedBy": "Andrew Doane",
+      "reviewedOn": "2026-11-05"
+    },
+    "resolvedReviewFlagIds": [
+      "rf-08"
+    ]
+  },
+  "validation": {
+    "basis": "Original conversion tests predate teacher-approved BSB; revalidate actual engines and content after export.",
+    "allTextChecksPassed": false,
+    "checks": [
+      {
+        "check": "All seven source Story Notes match the ODT text exactly",
+        "passed": true
+      },
+      {
+        "check": "Seven Story Notes retain uppercase cue words",
+        "passed": true
+      },
+      {
+        "check": "Original teacher questions remain in source collection with paragraph references",
+        "passed": true
+      },
+      {
+        "check": "All ten original review questions retained",
+        "passed": true
+      },
+      {
+        "check": "Question strings are taken from the source ODT",
+        "passed": true
+      },
+      {
+        "check": "scriptureDisplay contains Bible book name only",
+        "passed": true
+      },
+      {
+        "check": "Capitalization of Jesus in Big Idea corrected",
+        "passed": true
+      },
+      {
+        "check": "Four to six distinct prepared Multiple Choice questions",
+        "passed": true
+      },
+      {
+        "check": "Each Multiple Choice question has one true choice and two suggested false choices",
+        "passed": true
+      },
+      {
+        "check": "Twelve to sixteen distinct True/False facts",
+        "passed": true
+      },
+      {
+        "check": "True/False facts balanced seven true seven false",
+        "passed": true
+      },
+      {
+        "check": "All proposed false facts require teacher approval",
+        "passed": true
+      },
+      {
+        "check": "Sort the Story contains eight separate facts",
+        "passed": true
+      },
+      {
+        "check": "Sort, True/False, Maze have ten distinct fact IDs",
+        "passed": true
+      },
+      {
+        "check": "Four other True/False facts remain",
+        "passed": true
+      },
+      {
+        "check": "Four Small drawing candidates",
+        "passed": true
+      },
+      {
+        "check": "Six matching pairs with one- or two-word entries",
+        "passed": true
+      },
+      {
+        "check": "Circle the Mistakes has six intentional corrections each occurring once",
+        "passed": true
+      },
+      {
+        "check": "Odd Words includes at most five related story words",
+        "passed": true
+      },
+      {
+        "check": "Checkboxes includes at most five correct story words",
+        "passed": true
+      },
+      {
+        "check": "Odd Words and Checkboxes use twenty different tokens with no overlap",
+        "passed": true
+      },
+      {
+        "check": "Who Am I? clue does not include auto-added question",
+        "passed": true
+      },
+      {
+        "check": "Finish the Story contains 600–700 marked characters",
+        "passed": true
+      },
+      {
+        "check": "Draw the Story contains four to six complete story sentences",
+        "passed": true
+      },
+      {
+        "check": "Crossword includes ten concise clues with unique single-word answers",
+        "passed": true
+      },
+      {
+        "check": "All 27 activity modules have prepared content",
+        "passed": true
+      },
+      {
+        "check": "Every module marked not live-generator-tested",
+        "passed": true
+      },
+      {
+        "check": "All facts and prepared activity references point to this lesson notes",
+        "passed": true
+      },
+      {
+        "check": "All source references point to the actual uploaded filename",
+        "passed": true
+      },
+      {
+        "check": "Publication not approved",
+        "passed": true
+      }
+    ],
+    "officialValidatorTested": false,
+    "liveGeneratorsTested": false,
+    "actualGeneratorTested": false,
+    "jsonParseTested": true,
+    "numberedPresetsTested": false,
+    "notes": "Schema structure patterned on the current lesson-v1 schema and previous review files. Import and live generator compatibility remain unverified."
+  }
+}
