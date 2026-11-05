@@ -2,8 +2,8 @@
 
 > **Snapshot, not source of truth.** This document is a starting point for future ChatGPT conversations and contributors, **not** a replacement for the current GitHub repository, tests, CI results, or the owner's newest instructions. The project changes frequently. Verify `main`, open issues/PRs, and recent Actions runs before making recommendations, editing code, or declaring work complete. Do not assume a roadmap item is still open because it appears below.
 
-**Last checked against `main`:** 2026-11-05 (repository version was `0.16.52` before this documentation PR)  
-**Package version represented by this change:** `0.16.53`  
+**Last checked against `main`:** 2026-11-05 (`main` version `0.16.53` after PR #101; this PR proposes `0.16.54`)  
+**Package version represented by this change:** `0.16.54`  
 **Repository:** https://github.com/andydoane/worksheet-generator  
 **Worksheet Studio:** https://andydoane.github.io/worksheet-generator/  
 **Curriculum Review Studio:** https://andydoane.github.io/worksheet-generator/review.html  
@@ -93,18 +93,20 @@ For a proposed change, explain it plainly, inspect the current implementation, i
 | [#98](https://github.com/andydoane/worksheet-generator/pull/98) | Fixed approved OT18/OT20/OT21 metadata/schema errors without changing lesson content |
 | [#99](https://github.com/andydoane/worksheet-generator/pull/99) | Shared structural schema validation in Review Studio and CI, confirmed metadata repairs, final approved-download gate, conversion guide, direct-to-main publishing instructions |
 
+The living handoff was introduced in [PR #101](https://github.com/andydoane/worksheet-generator/pull/101); its README link, PR checklist and freshness tests make this guide easier to discover and maintain.
+
 Do not infer current merge status from this table; verify in GitHub. If a future PR changes one of these behaviors, update the *current* explanation instead of endlessly appending release notes.
 
 ## 7. Current work and upcoming plans
 
-**Status last checked:** 2026-11-05, against `main` after PR #99 merged. **At that check, there were no open PRs.** These states are historical as soon as new work occurs; refresh GitHub before acting.
+**Status last checked:** 2026-11-05, against `main` after PR #101 merged. At that check, **PR #102** was opened as a draft for issue #95; there were no other open PRs. These states change as reviews and merges occur; refresh GitHub before acting.
 
 | Status at last check | Item | Next action or caveat |
 | --- | --- | --- |
 | **Merged** | [#99 — schema validation & conversion guide](https://github.com/andydoane/worksheet-generator/pull/99) | Apply the new Review Studio approval/schema safeguards to future lessons; watch for teacher feedback |
 | **Merged** | [#97 — Crossword editing responsiveness](https://github.com/andydoane/worksheet-generator/pull/97) | Verify hands-on behavior if new feedback arrives; do not reimplement it |
-| **Open issue** | [#95 — Connect the Verse long words](https://github.com/andydoane/worksheet-generator/issues/95) | `src/specialtyModules.ts` still rejects *any* word longer than 12 characters, including `understanding` in OT19 Proverbs 3:5. Replace the blanket restriction with measured printable fit; add successful and impossible-to-fit tests, keep BSB wording intact |
-| **This documentation PR** | [#100 — living handoff](https://github.com/andydoane/worksheet-generator/issues/100) | Add this guide, README link, PR checklist, and automated freshness check; confirm merge/issue state before marking complete |
+| **Draft PR; issue #95 open until merge** | [#102 — measured Connect the Verse fit](https://github.com/andydoane/worksheet-generator/pull/102) ([issue #95](https://github.com/andydoane/worksheet-generator/issues/95)) | Removes only Connect Verse’s 12-letter cap; Review Studio checks actual PDF-matched Large word-box fit, with tests for OT19 `understanding`, impossible words, and preview/PDF parity. Check final CI and teacher print review before merging; never alter Scripture to satisfy a layout |
+| **Merged** | [#101 — living project handoff](https://github.com/andydoane/worksheet-generator/pull/101) ([issue #100](https://github.com/andydoane/worksheet-generator/issues/100)) | This guide, README entrypoint, PR template and handoff regression tests are in `main`; maintain the focused roadmap and version details in each code PR |
 | **Proposed; not tracked by a separate issue at last check** | Remove redundant trailing “Who am I?” in rendered clues | Normalize display/print text without rewriting approved source; verify matching measurement and tests |
 | **Proposed; not tracked by a separate issue at last check** | Sidebar Home action and collapsible navigation | Keep existing top-right Home; consider accessibility, mobile layout, focus, and saved preference; inspect `src/App.tsx` and styles |
 
