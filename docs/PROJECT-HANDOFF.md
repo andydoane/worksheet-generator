@@ -2,8 +2,8 @@
 
 > **Snapshot, not source of truth.** This document is a starting point for future ChatGPT conversations and contributors, **not** a replacement for the current GitHub repository, tests, CI results, or the owner's newest instructions. The project changes frequently. Verify `main`, open issues/PRs, and recent Actions runs before making recommendations, editing code, or declaring work complete. Do not assume a roadmap item is still open because it appears below.
 
-**Last checked against `main`:** 2026-11-05 (`main` version `0.16.53` after PR #101; this PR proposes `0.16.54`)  
-**Package version represented by this change:** `0.16.54`  
+**Last checked against `main`:** 2026-11-05 (`main` version `0.16.54` after PR #102; this PR proposes `0.16.55`)  
+**Package version represented by this change:** `0.16.55`  
 **Repository:** https://github.com/andydoane/worksheet-generator  
 **Worksheet Studio:** https://andydoane.github.io/worksheet-generator/  
 **Curriculum Review Studio:** https://andydoane.github.io/worksheet-generator/review.html  
@@ -92,6 +92,7 @@ For a proposed change, explain it plainly, inspect the current implementation, i
 | [#97](https://github.com/andydoane/worksheet-generator/pull/97) | Crossword editor typing stays responsive; costly grid checks/preview debounced while preflight remains authoritative |
 | [#98](https://github.com/andydoane/worksheet-generator/pull/98) | Fixed approved OT18/OT20/OT21 metadata/schema errors without changing lesson content |
 | [#99](https://github.com/andydoane/worksheet-generator/pull/99) | Shared structural schema validation in Review Studio and CI, confirmed metadata repairs, final approved-download gate, conversion guide, direct-to-main publishing instructions |
+| [#102](https://github.com/andydoane/worksheet-generator/pull/102) | Measured Large Connect the Verse word boxes replace the 12-letter cap; OT19 “understanding” now passes when the printed layout fits, with preview/PDF regression coverage |
 
 The living handoff was introduced in [PR #101](https://github.com/andydoane/worksheet-generator/pull/101); its README link, PR checklist and freshness tests make this guide easier to discover and maintain.
 
@@ -99,16 +100,16 @@ Do not infer current merge status from this table; verify in GitHub. If a future
 
 ## 7. Current work and upcoming plans
 
-**Status last checked:** 2026-11-05, against `main` after PR #101 merged. At that check, **PR #102** was opened as a draft for issue #95; there were no other open PRs. These states change as reviews and merges occur; refresh GitHub before acting.
+**Status last checked:** 2026-11-05, against `main` after PR #102 merged and issue #95 closed; there were no open PRs before the new Who Am I work. Refresh GitHub before acting; this table describes the status during this PR.
 
 | Status at last check | Item | Next action or caveat |
 | --- | --- | --- |
 | **Merged** | [#99 — schema validation & conversion guide](https://github.com/andydoane/worksheet-generator/pull/99) | Apply the new Review Studio approval/schema safeguards to future lessons; watch for teacher feedback |
 | **Merged** | [#97 — Crossword editing responsiveness](https://github.com/andydoane/worksheet-generator/pull/97) | Verify hands-on behavior if new feedback arrives; do not reimplement it |
-| **Draft PR; issue #95 open until merge** | [#102 — measured Connect the Verse fit](https://github.com/andydoane/worksheet-generator/pull/102) ([issue #95](https://github.com/andydoane/worksheet-generator/issues/95)) | Removes only Connect Verse’s 12-letter cap; Review Studio checks actual PDF-matched Large word-box fit, with tests for OT19 `understanding`, impossible words, and preview/PDF parity. Check final CI and teacher print review before merging; never alter Scripture to satisfy a layout |
+| **Merged; #95 closed** | [#102 — measured Connect the Verse fit](https://github.com/andydoane/worksheet-generator/pull/102) ([issue #95](https://github.com/andydoane/worksheet-generator/issues/95)) | Real PDF-matched Large word-box validation accepts OT19 `understanding` when it fits; teacher confirmed the fix works. Keep Scripture text untouched and preserve the fit checks |
 | **Merged** | [#101 — living project handoff](https://github.com/andydoane/worksheet-generator/pull/101) ([issue #100](https://github.com/andydoane/worksheet-generator/issues/100)) | This guide, README entrypoint, PR template and handoff regression tests are in `main`; maintain the focused roadmap and version details in each code PR |
-| **Proposed; not tracked by a separate issue at last check** | Remove redundant trailing “Who am I?” in rendered clues | Normalize display/print text without rewriting approved source; verify matching measurement and tests |
-| **Proposed; not tracked by a separate issue at last check** | Sidebar Home action and collapsible navigation | Keep existing top-right Home; consider accessibility, mobile layout, focus, and saved preference; inspect `src/App.tsx` and styles |
+| **In this PR (Plan C, remaining rendering fix)** | Hide redundant trailing “Who am I?” from printed clues | Add shared display-only cleanup for a standalone final question; leave approved and teacher-authored source data unchanged, validate the printed text, and test SVG/PDF geometry, empty clues, and punctuation variants |
+| **Next proposed PR (Plan D)** | Sidebar Home action and collapsible navigation | Add Home above Your Workspace and a keyboard-accessible collapsing icon rail without affecting the existing top-right Home; test responsive/mobile behavior and saved preference separately |
 
 **To maintain this table in every future feature/bug-fix PR:** replace stale statuses rather than simply adding rows; add the PR/issue link, brief outcome or current blocker, and accurate next step. Update **Status last checked**, package version above, and milestone context based on actual GitHub information. Never invent a date, merge, approval, or test result. Avoid documenting every small curriculum upload. Documentation-only changes may update the handoff without requiring a release; new direct-to-main approved JSON uploads are exempt.
 

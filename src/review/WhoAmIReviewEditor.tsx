@@ -19,7 +19,8 @@ export default function WhoAmIReviewEditor({lesson,onChange,onError}:{
    <h3>Who Am I? · character clue</h3>
    <p>Choose a character and its reviewed clue from the lesson, or write your own.
     Selecting a character copies the <strong>correct answer and clue together</strong>.
-    New teacher-written text is marked suggested and requires your review.</p>
+    New teacher-written text is marked suggested and requires your review.
+    A redundant trailing “Who am I?” is hidden only in the worksheet preview/PDF; the original clue remains in your lesson data.</p>
   </div>
   <label>Use an existing character clue
    <select value={source?.id??''} onChange={e=>{
