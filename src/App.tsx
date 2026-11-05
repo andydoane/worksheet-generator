@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import pkg from '../package.json';
 import {MODULE_GUIDANCE,isAutofilledModule,samplePlaceholder} from './moduleGuidance.ts';
-import {migrateDraftValue} from './draftMigration.ts';
+import {migrateDraftValue,type OriginalLessonContent} from './draftMigration.ts';
+import type {ActivityContentLinks} from './lessonContentLinks.ts';
 import {contentLinkForModule} from './lessonContentSync.ts';
 import {upgradeSavedDrawingCaptions} from './drawingDraftUpgrade.ts';
 import {hasMeaningfulDraft,exampleWorksheetDraft} from './welcomeFlow.ts';
@@ -59,6 +60,7 @@ type Draft = {
   bigIdea: string;
   verseReference: string;
   verseText: string;
+  verseTranslation?: string;
   layouts: Record<2 | 3 | 4, LayoutId>;
   modules: ModuleAssignments;
   activityBorders: ActivityBorders;
@@ -66,6 +68,8 @@ type Draft = {
   curriculumLessonId?:string;
   worksheetPresetId?:'preset-1'|'preset-2'|'preset-3'|'build-own';
   activityDefaults?:ModuleAssignments;
+  activityContentLinks?:ActivityContentLinks;
+  originalLessonContent?:OriginalLessonContent;
 };
 
 type EditorTab = 'details' | 'layouts' | 'activities';
