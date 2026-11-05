@@ -63,7 +63,7 @@ export function createSameStoryPresetWithContent(
    ?(current.verseTranslation??'')!==(original.verseTranslation??'')
    :current.verseTranslation!==undefined&&
     current.verseTranslation!==(original.verseTranslation??''));
- const apply=(change:LessonContentChange,label:'Big Idea'|'Memory Verse)=>{
+ const apply=(change:LessonContentChange,label:'Big Idea'|'Memory Verse')=>{
   const plan=planLessonContentChange(next,change,{print});
   if(!plan.updatedDraft){
    const messages=changePlanMessages(next,plan);
