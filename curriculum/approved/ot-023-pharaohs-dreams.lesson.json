@@ -1,0 +1,3269 @@
+{
+  "schemaVersion": 1,
+  "schemaStatus": "proposed-v1; pending teacher and generator verification",
+  "id": "ot-023-pharaohs-dreams",
+  "curriculum": {
+    "series": "Old Testament",
+    "lessonNumber": 23
+  },
+  "lessonDetails": {
+    "title": "Pharaoh's Dreams",
+    "scripturePassages": [
+      "Genesis 41",
+      "Romans 15:4",
+      "Isaiah 46:9-10"
+    ],
+    "scriptureDisplay": "Genesis",
+    "bigIdeas": [
+      {
+        "origin": "adapted",
+        "text": "God is in charge of the future.",
+        "sourceIds": [
+          "sn-07"
+        ],
+        "source": {
+          "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+          "section": "Important Idea",
+          "page": 8,
+          "sourceParagraphIndex": 82,
+          "details": "Original design uses an all-caps font, although ODT embedded text is not consistently capitalized; corrected case for God."
+        }
+      }
+    ],
+    "memoryVerse": {
+      "reference": "Isaiah 46:9-10",
+      "translation": "BSB",
+      "text": "I am God, and there is no other; I am God, and there is none like Me. I declare the end from the beginning,",
+      "isExcerpt": true,
+      "hasEllipses": false,
+      "requiresTextReview": false,
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Memory Verse Activity",
+        "page": 10,
+        "sourceParagraphIndex": 114,
+        "details": "Source ESV excerpt: I am God, and there is none like me, declaring the end from the beginning... Proposed BSB worksheet excerpt starts with the second \"I am God\" in Isaiah 46:9; check passage boundaries and rights before approval."
+      },
+      "alsoVerifiedAt": {
+        "filename": "https://mail.biblehub.com/passage/isaiah/46/9-10",
+        "section": "Berean Standard Bible, Isaiah 46:9–10",
+        "details": "Public online verification of exact BSB wording. Not a publication approval."
+      },
+      "originalTranslation": "BSB",
+      "bsbSource": {
+        "reference": "Isaiah 46:9-10",
+        "sourceUrl": "https://bereanbible.com/bsb.txt",
+        "publicDomainTerms": "https://berean.bible/terms.htm",
+        "startWord": 6,
+        "endWord": 29
+      }
+    }
+  },
+  "sourceFiles": [
+    {
+      "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+      "format": "odt",
+      "role": "primary teaching source",
+      "note": "Original OT23 ODT, 16 pages. Source contains seven Story Notes, narrative teaching questions, memory-verse discussion, and ten formal review questions. ESV Isaiah 46:9b–10a is preserved as source, with a proposed BSB excerpt requiring teacher review."
+    }
+  ],
+  "storyNotes": [
+    {
+      "id": "sn-01",
+      "order": 1,
+      "originalText": "Pharaoh dreamed of seven fat COWS being eaten by seven skinny cows.",
+      "cleanText": "Pharaoh dreamed about seven fat cows being eaten by seven skinny cows.",
+      "emphasizedWords": [
+        "COWS"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "STORY NOTE",
+        "page": 2,
+        "sourceParagraphIndex": 21
+      }
+    },
+    {
+      "id": "sn-02",
+      "order": 2,
+      "originalText": "He also dreamed of seven healthy heads of GRAIN being eaten by seven thin heads of grain.",
+      "cleanText": "Pharaoh also dreamed about seven healthy heads of grain being eaten by seven thin heads of grain.",
+      "emphasizedWords": [
+        "GRAIN"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "STORY NOTE",
+        "page": 2,
+        "sourceParagraphIndex": 29
+      }
+    },
+    {
+      "id": "sn-03",
+      "order": 3,
+      "originalText": "Pharaoh’s WISE men couldn’t explain the dreams. The wine taster said, “I know someone who can!”",
+      "cleanText": "Pharaoh’s wise men could not explain the dreams. The wine taster remembered Joseph.",
+      "emphasizedWords": [
+        "WISE"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "STORY NOTE",
+        "page": 4,
+        "sourceParagraphIndex": 40
+      }
+    },
+    {
+      "id": "sn-04",
+      "order": 4,
+      "originalText": "Joseph was taken from PRISON, cleaned up, and sent to Pharaoh. Pharaoh told him his dreams.",
+      "cleanText": "Joseph came from prison, cleaned up, and listened to Pharaoh’s dreams.",
+      "emphasizedWords": [
+        "PRISON"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "STORY NOTE",
+        "page": 5,
+        "sourceParagraphIndex": 48
+      }
+    },
+    {
+      "id": "sn-05",
+      "order": 5,
+      "originalText": "Joseph said, “God is showing you that Egypt will have SEVEN good years, then seven bad years.”",
+      "cleanText": "God showed Pharaoh seven years with plenty of food, followed by seven years without enough food.",
+      "emphasizedWords": [
+        "SEVEN"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "STORY NOTE",
+        "page": 6,
+        "sourceParagraphIndex": 56
+      }
+    },
+    {
+      "id": "sn-06",
+      "order": 6,
+      "originalText": "Joseph told Pharaoh to put someone in charge of STORING up food during the seven good years.",
+      "cleanText": "Joseph told Pharaoh to choose someone to store food during the seven good years.",
+      "emphasizedWords": [
+        "STORING"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "STORY NOTE",
+        "page": 6,
+        "sourceParagraphIndex": 66
+      }
+    },
+    {
+      "id": "sn-07",
+      "order": 7,
+      "originalText": "Pharaoh chose Joseph for that job. He placed Joseph SECOND in charge of all of Egypt.",
+      "cleanText": "Pharaoh put Joseph second in charge of Egypt.",
+      "emphasizedWords": [
+        "SECOND"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "STORY NOTE",
+        "page": 7,
+        "sourceParagraphIndex": 75
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q-01",
+      "question": "Does anyone know the highest point on planet Earth?",
+      "answer": "Mount Everest.",
+      "kind": "factual",
+      "scope": "introduction",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 3
+      },
+      "notes": "Original question / prompt retained verbatim. Answer follows the original lesson; where no direct answer was supplied, it is a contextual explanation for review."
+    },
+    {
+      "id": "q-02",
+      "question": "What about the lowest place?",
+      "answer": "Challenger Deep, in the Pacific Ocean.",
+      "kind": "rhetorical",
+      "scope": "introduction",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 6
+      },
+      "notes": "Original question / prompt retained verbatim. Answer follows the original lesson; where no direct answer was supplied, it is a contextual explanation for review."
+    },
+    {
+      "id": "q-03",
+      "question": "Why are we talking about the highest and lowest points of our planet?",
+      "answer": "The story shows Joseph going from prison to great responsibility in Egypt.",
+      "kind": "rhetorical",
+      "scope": "introduction",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 10
+      },
+      "notes": "Original question / prompt retained verbatim. Answer follows the original lesson; where no direct answer was supplied, it is a contextual explanation for review."
+    },
+    {
+      "id": "q-04",
+      "question": "Who can remind us how Joseph ended up there?",
+      "answer": "Father’s favorite, given beautiful robe, hated and sold into slavery by brothers, Potiphar’s wife lied and he ended up in prison for something he didn’t do.",
+      "kind": "factual",
+      "scope": "introduction",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 14
+      },
+      "notes": "Original question / prompt retained verbatim. Answer follows the original lesson; where no direct answer was supplied, it is a contextual explanation for review."
+    },
+    {
+      "id": "q-05",
+      "question": "What did Joseph do for these men?",
+      "answer": "Explained what their dreams meant.",
+      "kind": "factual",
+      "scope": "introduction",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 16
+      },
+      "notes": "Original question / prompt retained verbatim. Answer follows the original lesson; where no direct answer was supplied, it is a contextual explanation for review."
+    },
+    {
+      "id": "q-06",
+      "question": "What seven things did he see?",
+      "answer": "He saw seven fat cows.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Story / Teaching",
+        "page": 2,
+        "sourceParagraphIndex": 23
+      },
+      "notes": "Original question / prompt retained verbatim. Answer follows the original lesson; where no direct answer was supplied, it is a contextual explanation for review."
+    },
+    {
+      "id": "q-07",
+      "question": "What did they do?",
+      "answer": "They ate the seven fat cows.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Story / Teaching",
+        "page": 2,
+        "sourceParagraphIndex": 24
+      },
+      "notes": "Original question / prompt retained verbatim. Answer follows the original lesson; where no direct answer was supplied, it is a contextual explanation for review."
+    },
+    {
+      "id": "q-08",
+      "question": "Do cows normally eat other cows?",
+      "answer": "No.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Story / Teaching",
+        "page": 2,
+        "sourceParagraphIndex": 25
+      },
+      "notes": "Original question / prompt retained verbatim. Answer follows the original lesson; where no direct answer was supplied, it is a contextual explanation for review."
+    },
+    {
+      "id": "q-09",
+      "question": "How in the world can cannibal cows be a message from God?",
+      "answer": "The dreams showed seven hungry years would follow seven good years.",
+      "kind": "rhetorical",
+      "scope": "teaching",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Story / Teaching",
+        "page": 2,
+        "sourceParagraphIndex": 26
+      },
+      "notes": "Original question / prompt retained verbatim. Answer follows the original lesson; where no direct answer was supplied, it is a contextual explanation for review."
+    },
+    {
+      "id": "q-10",
+      "question": "What happened in Pharaoh’s dream of grain?",
+      "answer": "First, there were seven healthy heads of grain; seven thin and sick ones came and ate the healthy ones.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Story / Teaching",
+        "page": 2,
+        "sourceParagraphIndex": 33
+      },
+      "notes": "Original question / prompt retained verbatim. Answer follows the original lesson; where no direct answer was supplied, it is a contextual explanation for review."
+    },
+    {
+      "id": "q-11",
+      "question": "do plants swallow up other plants?",
+      "answer": "No.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Story / Teaching",
+        "page": 2,
+        "sourceParagraphIndex": 34
+      },
+      "notes": "Original question / prompt retained verbatim. Answer follows the original lesson; where no direct answer was supplied, it is a contextual explanation for review."
+    },
+    {
+      "id": "q-12",
+      "question": "How were these two dreams alike?",
+      "answer": "They both had seven fat and healthy things that were swallowed up and eaten by seven skinny things.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Story / Teaching",
+        "page": 2,
+        "sourceParagraphIndex": 35
+      },
+      "notes": "Original question / prompt retained verbatim. Answer follows the original lesson; where no direct answer was supplied, it is a contextual explanation for review."
+    },
+    {
+      "id": "q-13",
+      "question": "But what was God trying to say?",
+      "answer": "Pharaoh did not know yet; Joseph would explain that the dreams showed the next fourteen years.",
+      "kind": "rhetorical",
+      "scope": "teaching",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Story / Teaching",
+        "page": 2,
+        "sourceParagraphIndex": 36
+      },
+      "notes": "Original question / prompt retained verbatim. Answer follows the original lesson; where no direct answer was supplied, it is a contextual explanation for review."
+    },
+    {
+      "id": "q-14",
+      "question": "could Pharaoh’s biggest brainiacs solve the mystery of his dreams?",
+      "answer": "No.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Story / Teaching",
+        "page": 4,
+        "sourceParagraphIndex": 41
+      },
+      "notes": "Original question / prompt retained verbatim. Answer follows the original lesson; where no direct answer was supplied, it is a contextual explanation for review."
+    },
+    {
+      "id": "q-15",
+      "question": "Who?",
+      "answer": "Joseph.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Story / Teaching",
+        "page": 4,
+        "sourceParagraphIndex": 43
+      },
+      "notes": "Original question / prompt retained verbatim. Answer follows the original lesson; where no direct answer was supplied, it is a contextual explanation for review. Context: the wine taster remembered who had explained his prison dream."
+    },
+    {
+      "id": "q-16",
+      "question": "What was it?",
+      "answer": "To speak to Pharaoh for him and ask for help.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Story / Teaching",
+        "page": 4,
+        "sourceParagraphIndex": 44
+      },
+      "notes": "Original question / prompt retained verbatim. Answer follows the original lesson; where no direct answer was supplied, it is a contextual explanation for review."
+    },
+    {
+      "id": "q-17",
+      "question": "What did they do to make Joseph look nice and neat for Pharaoh?",
+      "answer": "They shaved him; changed his clothes.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Story / Teaching",
+        "page": 5,
+        "sourceParagraphIndex": 50
+      },
+      "notes": "Original question / prompt retained verbatim. Answer follows the original lesson; where no direct answer was supplied, it is a contextual explanation for review."
+    },
+    {
+      "id": "q-18",
+      "question": "And the next?",
+      "answer": "He was standing before Pharaoh.",
+      "kind": "rhetorical",
+      "scope": "teaching",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Story / Teaching",
+        "page": 5,
+        "sourceParagraphIndex": 51
+      },
+      "notes": "Original question / prompt retained verbatim. Answer follows the original lesson; where no direct answer was supplied, it is a contextual explanation for review."
+    },
+    {
+      "id": "q-19",
+      "question": "How did Joseph respond?",
+      "answer": "I can’t do it, but my God can!",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Story / Teaching",
+        "page": 5,
+        "sourceParagraphIndex": 52
+      },
+      "notes": "Original question / prompt retained verbatim. Answer follows the original lesson; where no direct answer was supplied, it is a contextual explanation for review."
+    },
+    {
+      "id": "q-20",
+      "question": "what were those seven fat things a picture of?",
+      "answer": "Seven good years with lots of food.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Story / Teaching",
+        "page": 6,
+        "sourceParagraphIndex": 59
+      },
+      "notes": "Original question / prompt retained verbatim. Answer follows the original lesson; where no direct answer was supplied, it is a contextual explanation for review."
+    },
+    {
+      "id": "q-21",
+      "question": "What were those seven skinny things a picture of?",
+      "answer": "Seven bad years where food wouldn’t grow, probably because it would stop raining.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Story / Teaching",
+        "page": 6,
+        "sourceParagraphIndex": 61
+      },
+      "notes": "Original question / prompt retained verbatim. Answer follows the original lesson; where no direct answer was supplied, it is a contextual explanation for review."
+    },
+    {
+      "id": "q-22",
+      "question": "Why would God let Pharaoh know this?",
+      "answer": "So Pharaoh could prepare for the years without enough food.",
+      "kind": "rhetorical",
+      "scope": "teaching",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Story / Teaching",
+        "page": 6,
+        "sourceParagraphIndex": 63
+      },
+      "notes": "Original question / prompt retained verbatim. Answer follows the original lesson; where no direct answer was supplied, it is a contextual explanation for review."
+    },
+    {
+      "id": "q-23",
+      "question": "What did the seven skinny cows do to the fat cows?",
+      "answer": "They ate them.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Story / Teaching",
+        "page": 6,
+        "sourceParagraphIndex": 68
+      },
+      "notes": "Original question / prompt retained verbatim. Answer follows the original lesson; where no direct answer was supplied, it is a contextual explanation for review."
+    },
+    {
+      "id": "q-24",
+      "question": "What did the seven skinny heads of grain do with the seven fat heads of grain?",
+      "answer": "They ate them.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Story / Teaching",
+        "page": 6,
+        "sourceParagraphIndex": 69
+      },
+      "notes": "Original question / prompt retained verbatim. Answer follows the original lesson; where no direct answer was supplied, it is a contextual explanation for review."
+    },
+    {
+      "id": "q-25",
+      "question": "What advice did Joseph give to Pharaoh?",
+      "answer": "Pick a smart person; have them save up the extra food during the seven good food-filled years so they’ll have something to eat during the seven bad food-less years.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Story / Teaching",
+        "page": 6,
+        "sourceParagraphIndex": 72
+      },
+      "notes": "Original question / prompt retained verbatim. Answer follows the original lesson; where no direct answer was supplied, it is a contextual explanation for review."
+    },
+    {
+      "id": "q-26",
+      "question": "What advice did Joseph give to Pharaoh?",
+      "answer": "Put a smart person in charge of saving food during the seven food-filled years to eat during the seven food-less years.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Story / Teaching",
+        "page": 7,
+        "sourceParagraphIndex": 76
+      },
+      "notes": "Original question / prompt retained verbatim. Answer follows the original lesson; where no direct answer was supplied, it is a contextual explanation for review."
+    },
+    {
+      "id": "q-27",
+      "question": "Who?",
+      "answer": "Pharaoh.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Story / Teaching",
+        "page": 7,
+        "sourceParagraphIndex": 78
+      },
+      "notes": "Original question / prompt retained verbatim. Answer follows the original lesson; where no direct answer was supplied, it is a contextual explanation for review. Context: the only person in Egypt not required to obey Joseph."
+    },
+    {
+      "id": "q-28",
+      "question": "So how does the story of Pharaoh’s dreams teach us, strengthen us, encourage us, or give us hope?",
+      "answer": "It shows that God knows and rules the future.",
+      "kind": "reflection",
+      "scope": "teaching",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Story / Teaching",
+        "page": 7,
+        "sourceParagraphIndex": 81
+      },
+      "notes": "Original question / prompt retained verbatim. Answer follows the original lesson; where no direct answer was supplied, it is a contextual explanation for review."
+    },
+    {
+      "id": "q-29",
+      "question": "Why?",
+      "answer": "Because it’s his world and he’s in charge of it!",
+      "kind": "rhetorical",
+      "scope": "teaching",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Story / Teaching",
+        "page": 8,
+        "sourceParagraphIndex": 86
+      },
+      "notes": "Original question / prompt retained verbatim. Answer follows the original lesson; where no direct answer was supplied, it is a contextual explanation for review. Context: why God knows what will happen before it does."
+    },
+    {
+      "id": "q-30",
+      "question": "But why should we care that God knows the future?",
+      "answer": "Because God is never surprised and has a plan.",
+      "kind": "reflection",
+      "scope": "teaching",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Story / Teaching",
+        "page": 8,
+        "sourceParagraphIndex": 91
+      },
+      "notes": "Original question / prompt retained verbatim. Answer follows the original lesson; where no direct answer was supplied, it is a contextual explanation for review."
+    },
+    {
+      "id": "q-31",
+      "question": "is there anyone like him?",
+      "answer": "No.",
+      "kind": "factual",
+      "scope": "memory-verse",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Memory Verse Activity",
+        "page": 10,
+        "sourceParagraphIndex": 116
+      },
+      "notes": "Original question / prompt retained verbatim. Answer follows the original lesson; where no direct answer was supplied, it is a contextual explanation for review."
+    },
+    {
+      "id": "q-32",
+      "question": "What does that mean?",
+      "answer": "God can tell the future from the beginning.",
+      "kind": "factual",
+      "scope": "memory-verse",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Memory Verse Activity",
+        "page": 10,
+        "sourceParagraphIndex": 117
+      },
+      "notes": "Original question / prompt retained verbatim. Answer follows the original lesson; where no direct answer was supplied, it is a contextual explanation for review."
+    },
+    {
+      "id": "q-33",
+      "question": "Why?",
+      "answer": "Because it’s all part of his great plan to show us his glory.",
+      "kind": "factual",
+      "scope": "memory-verse",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Memory Verse Activity",
+        "page": 10,
+        "sourceParagraphIndex": 117
+      },
+      "notes": "Original question / prompt retained verbatim. Answer follows the original lesson; where no direct answer was supplied, it is a contextual explanation for review."
+    },
+    {
+      "id": "q-34",
+      "question": "what did God tell Pharaoh about the future?",
+      "answer": "There would be seven food-filled years followed by seven food-less years.",
+      "kind": "factual",
+      "scope": "memory-verse",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Memory Verse Activity",
+        "page": 10,
+        "sourceParagraphIndex": 117
+      },
+      "notes": "Original question / prompt retained verbatim. Answer follows the original lesson; where no direct answer was supplied, it is a contextual explanation for review."
+    },
+    {
+      "id": "q-35",
+      "question": "What did they do?",
+      "answer": "Wash and shave him.",
+      "kind": "factual",
+      "scope": "memory-verse",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Memory Verse Activity",
+        "page": 10,
+        "sourceParagraphIndex": 118
+      },
+      "notes": "Original question / prompt retained verbatim. Answer follows the original lesson; where no direct answer was supplied, it is a contextual explanation for review."
+    },
+    {
+      "id": "q-36",
+      "question": "Describe Pharaoh’s first dream.",
+      "answer": "Seven fat cows were swallowed by seven skinny cows",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Review Questions",
+        "page": 13,
+        "sourceParagraphIndex": 152
+      },
+      "notes": "Original question / prompt retained verbatim."
+    },
+    {
+      "id": "q-37",
+      "question": "Describe Pharaoh’s second dream.",
+      "answer": "Seven healthy heads of grain were swallowed by seven skinny ones",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Review Questions",
+        "page": 13,
+        "sourceParagraphIndex": 153
+      },
+      "notes": "Original question / prompt retained verbatim."
+    },
+    {
+      "id": "q-38",
+      "question": "How did Pharaoh feel about these two dreams? Why?",
+      "answer": "Worried because he couldn’t understand their meaning",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Review Questions",
+        "page": 13,
+        "sourceParagraphIndex": 154
+      },
+      "notes": "Original question / prompt retained verbatim."
+    },
+    {
+      "id": "q-39",
+      "question": "What happened when Pharaoh told his wise men to explain his dreams?",
+      "answer": "They couldn’t",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Review Questions",
+        "page": 13,
+        "sourceParagraphIndex": 155
+      },
+      "notes": "Original question / prompt retained verbatim."
+    },
+    {
+      "id": "q-40",
+      "question": "What did the wine taster say?",
+      "answer": "When I was in prison, a man explained my dream to me",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Review Questions",
+        "page": 13,
+        "sourceParagraphIndex": 156
+      },
+      "notes": "Original question / prompt retained verbatim."
+    },
+    {
+      "id": "q-41",
+      "question": "When Pharaoh said, “I heard you can explain dreams,” what did Joseph say?",
+      "answer": "God will tell me the answer",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Review Questions",
+        "page": 13,
+        "sourceParagraphIndex": 157
+      },
+      "notes": "Original question / prompt retained verbatim."
+    },
+    {
+      "id": "q-42",
+      "question": "What did the seven fat cows and seven fat heads of grain represent?",
+      "answer": "Seven food-filled years to come",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Review Questions",
+        "page": 13,
+        "sourceParagraphIndex": 158
+      },
+      "notes": "Original question / prompt retained verbatim."
+    },
+    {
+      "id": "q-43",
+      "question": "What did the seven skinny cows and seven skinny heads of grain represent?",
+      "answer": "Seven food-less years to follow",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Review Questions",
+        "page": 13,
+        "sourceParagraphIndex": 159
+      },
+      "notes": "Original question / prompt retained verbatim."
+    },
+    {
+      "id": "q-44",
+      "question": "What advice did Joseph give to Pharaoh?",
+      "answer": "Put a man in charge of saving food during the first seven years to eat during the seven food-less years to follow",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Review Questions",
+        "page": 13,
+        "sourceParagraphIndex": 160
+      },
+      "notes": "Original question / prompt retained verbatim."
+    },
+    {
+      "id": "q-45",
+      "question": "What job did Pharaoh give to Joseph?",
+      "answer": "He put him second-in-command of his kingdom; his job was to store food",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Review Questions",
+        "page": 13,
+        "sourceParagraphIndex": 161
+      },
+      "notes": "Original question / prompt retained verbatim."
+    },
+    {
+      "id": "q-46",
+      "question": "What will the coin be: heads or tails?",
+      "answer": "Open-ended prediction exercise.",
+      "kind": "activity-instruction",
+      "scope": "supplemental",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Extra Activity Instructions",
+        "page": 12,
+        "sourceParagraphIndex": 146
+      },
+      "notes": "Original question / prompt retained verbatim."
+    },
+    {
+      "id": "q-47",
+      "question": "What number will we roll: 1-6?",
+      "answer": "Open-ended prediction exercise.",
+      "kind": "activity-instruction",
+      "scope": "supplemental",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Extra Activity Instructions",
+        "page": 12,
+        "sourceParagraphIndex": 147
+      },
+      "notes": "Original question / prompt retained verbatim."
+    },
+    {
+      "id": "q-48",
+      "question": "What card will be chosen from the deck?",
+      "answer": "Open-ended prediction exercise.",
+      "kind": "activity-instruction",
+      "scope": "supplemental",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Extra Activity Instructions",
+        "page": 12,
+        "sourceParagraphIndex": 148
+      },
+      "notes": "Original question / prompt retained verbatim."
+    },
+    {
+      "id": "q-49",
+      "question": "What color crayon will be chosen?",
+      "answer": "Open-ended prediction exercise.",
+      "kind": "activity-instruction",
+      "scope": "supplemental",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Extra Activity Instructions",
+        "page": 12,
+        "sourceParagraphIndex": 149
+      },
+      "notes": "Original question / prompt retained verbatim."
+    },
+    {
+      "id": "q-50",
+      "question": "What word will be chosen?",
+      "answer": "Open-ended prediction exercise.",
+      "kind": "activity-instruction",
+      "scope": "supplemental",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Extra Activity Instructions",
+        "page": 12,
+        "sourceParagraphIndex": 150
+      },
+      "notes": "Original question / prompt retained verbatim."
+    }
+  ],
+  "facts": [
+    {
+      "id": "tf-01",
+      "statement": "Pharaoh dreamed about seven fat cows and seven skinny cows.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "STORY NOTE",
+        "page": 2,
+        "sourceParagraphIndex": 21
+      }
+    },
+    {
+      "id": "tf-02",
+      "statement": "In Pharaoh’s dream, the fat cows ate the skinny cows.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-03",
+      "statement": "Pharaoh dreamed about healthy grain being swallowed by thin grain.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "STORY NOTE",
+        "page": 2,
+        "sourceParagraphIndex": 29
+      }
+    },
+    {
+      "id": "tf-04",
+      "statement": "Pharaoh dreamed about seven grapevines.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-02"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-05",
+      "statement": "Pharaoh’s wise men could not explain his dreams.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "STORY NOTE",
+        "page": 4,
+        "sourceParagraphIndex": 40
+      }
+    },
+    {
+      "id": "tf-06",
+      "statement": "The wine taster remembered Joseph, who had explained dreams in prison.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "STORY NOTE",
+        "page": 4,
+        "sourceParagraphIndex": 40
+      }
+    },
+    {
+      "id": "tf-07",
+      "statement": "The baker told Pharaoh that Joseph could understand dreams.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-04"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-08",
+      "statement": "Joseph said God could give Pharaoh the meaning of his dreams.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "STORY NOTE",
+        "page": 5,
+        "sourceParagraphIndex": 48
+      }
+    },
+    {
+      "id": "tf-09",
+      "statement": "Joseph said Egypt would have seven hungry years, then seven good years.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-10",
+      "statement": "Joseph told Pharaoh to save extra food during the good years.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "STORY NOTE",
+        "page": 6,
+        "sourceParagraphIndex": 66
+      }
+    },
+    {
+      "id": "tf-11",
+      "statement": "Joseph told Pharaoh to eat up all the food during the seven good years.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-06"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-12",
+      "statement": "Pharaoh put Joseph second in charge of Egypt.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "STORY NOTE",
+        "page": 7,
+        "sourceParagraphIndex": 75
+      }
+    },
+    {
+      "id": "tf-13",
+      "statement": "Pharaoh sent Joseph back to prison after hearing his advice.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-14",
+      "statement": "Pharaoh’s dreams showed that Egypt would have five good years and five bad years.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": true
+    }
+  ],
+  "vocabulary": {
+    "related": [
+      "JOSEPH",
+      "PHARAOH",
+      "EGYPT",
+      "NILE",
+      "COWS",
+      "GRAIN",
+      "DREAM",
+      "SEVEN",
+      "PRISON",
+      "WINE TASTER",
+      "STORE",
+      "FUTURE",
+      "HUNGER",
+      "PALACE",
+      "KING"
+    ],
+    "unrelated": [
+      "SHEPHERD",
+      "HARP",
+      "SANDALS",
+      "SPEAR",
+      "ALTAR",
+      "TENT",
+      "SHIELD",
+      "SLING",
+      "LAMP",
+      "BOAT"
+    ],
+    "entries": [
+      {
+        "id": "v-01",
+        "term": "JOSEPH",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-02",
+        "term": "PHARAOH",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-03",
+        "term": "EGYPT",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-04",
+        "term": "NILE",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-05",
+        "term": "COWS",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-06",
+        "term": "GRAIN",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-07",
+        "term": "DREAM",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-08",
+        "term": "SEVEN",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-09",
+        "term": "PRISON",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-10",
+        "term": "WINE TASTER",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-11",
+        "term": "STORE",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-12",
+        "term": "FUTURE",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-13",
+        "term": "HUNGER",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-14",
+        "term": "PALACE",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-15",
+        "term": "KING",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-16",
+        "term": "SHEPHERD",
+        "origin": "suggested",
+        "category": "possible distractor",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-17",
+        "term": "HARP",
+        "origin": "suggested",
+        "category": "possible distractor",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-18",
+        "term": "SANDALS",
+        "origin": "suggested",
+        "category": "possible distractor",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-19",
+        "term": "SPEAR",
+        "origin": "suggested",
+        "category": "possible distractor",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-20",
+        "term": "ALTAR",
+        "origin": "suggested",
+        "category": "possible distractor",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-21",
+        "term": "TENT",
+        "origin": "suggested",
+        "category": "possible distractor",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-22",
+        "term": "SHIELD",
+        "origin": "suggested",
+        "category": "possible distractor",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-23",
+        "term": "SLING",
+        "origin": "suggested",
+        "category": "possible distractor",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-24",
+        "term": "LAMP",
+        "origin": "suggested",
+        "category": "possible distractor",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-25",
+        "term": "BOAT",
+        "origin": "suggested",
+        "category": "possible distractor",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      }
+    ]
+  },
+  "characters": [
+    {
+      "id": "ch-01",
+      "name": "Joseph",
+      "origin": "adapted",
+      "scope": "current-story",
+      "sourceIds": [
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "clues": [
+        {
+          "origin": "adapted",
+          "text": "God helped me explain Pharaoh’s dreams, and I was put in charge of saving food.",
+          "sourceIds": [
+            "sn-04",
+            "sn-05",
+            "sn-06",
+            "sn-07"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch-02",
+      "name": "Pharaoh",
+      "origin": "adapted",
+      "scope": "current-story",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-07"
+      ],
+      "clues": [
+        {
+          "origin": "adapted",
+          "text": "I was the king of Egypt and had two strange dreams.",
+          "sourceIds": [
+            "sn-01",
+            "sn-02",
+            "sn-07"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch-03",
+      "name": "Wine taster",
+      "origin": "adapted",
+      "scope": "current-story",
+      "sourceIds": [
+        "sn-03"
+      ],
+      "clues": [
+        {
+          "origin": "adapted",
+          "text": "I remembered that Joseph explained a dream when I was in prison.",
+          "sourceIds": [
+            "sn-03"
+          ]
+        }
+      ]
+    }
+  ],
+  "matchingPairs": [
+    {
+      "id": "mp-01",
+      "left": "Pharaoh",
+      "right": "King",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ]
+    },
+    {
+      "id": "mp-02",
+      "left": "Joseph",
+      "right": "Leader",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ]
+    },
+    {
+      "id": "mp-03",
+      "left": "Cows",
+      "right": "Animals",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    {
+      "id": "mp-04",
+      "left": "Grain",
+      "right": "Bread",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ]
+    },
+    {
+      "id": "mp-05",
+      "left": "Prison",
+      "right": "Jail",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ]
+    },
+    {
+      "id": "mp-06",
+      "left": "Dreams",
+      "right": "Sleep",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-02"
+      ]
+    }
+  ],
+  "drawingPrompts": [
+    {
+      "id": "draw-01",
+      "prompt": "seven skinny cows eating seven fat cows",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    {
+      "id": "draw-02",
+      "prompt": "thin heads of grain swallowing healthy heads of grain",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ]
+    },
+    {
+      "id": "draw-03",
+      "prompt": "Joseph wearing clean clothes as he stands before Pharaoh",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ]
+    },
+    {
+      "id": "draw-04",
+      "prompt": "people putting sacks of grain inside a big storehouse",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ]
+    }
+  ],
+  "keyPhrases": [
+    {
+      "id": "kp-01",
+      "text": "Seven skinny cows ate seven fat cows in Pharaoh’s dream.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    {
+      "id": "kp-02",
+      "text": "Seven thin heads of grain swallowed seven healthy heads of grain.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ]
+    },
+    {
+      "id": "kp-03",
+      "text": "Pharaoh’s wise men could not explain either dream.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ]
+    },
+    {
+      "id": "kp-04",
+      "text": "The wine taster remembered Joseph.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ]
+    },
+    {
+      "id": "kp-05",
+      "text": "God helped Joseph tell Pharaoh what his dreams meant.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04",
+        "sn-05"
+      ]
+    },
+    {
+      "id": "kp-06",
+      "text": "Joseph said seven good years would come before seven hungry years.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ]
+    },
+    {
+      "id": "kp-07",
+      "text": "Joseph advised Pharaoh to store food for later.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ]
+    },
+    {
+      "id": "kp-08",
+      "text": "Pharaoh put Joseph in charge of Egypt, second only to the king.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ]
+    }
+  ],
+  "theologicalApplications": [
+    {
+      "id": "app-01",
+      "text": "God knows what will happen before it happens.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ]
+    },
+    {
+      "id": "app-02",
+      "text": "Joseph gave God credit for explaining Pharaoh’s dreams.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04",
+        "sn-05"
+      ]
+    },
+    {
+      "id": "app-03",
+      "text": "God used Joseph’s hard years in prison as part of a plan to save people.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04",
+        "sn-06",
+        "sn-07"
+      ]
+    },
+    {
+      "id": "app-04",
+      "text": "The lesson teaches children to trust God when they do not know what comes next.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ]
+    }
+  ],
+  "preparedActivities": {
+    "drawPicture": {
+      "prompt": "seven skinny cows eating seven fat cows",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    "multipleChoice": [
+      {
+        "id": "mc-01",
+        "question": "What did the seven skinny cows do in Pharaoh’s dream?",
+        "correctAnswer": "Ate the seven fat cows",
+        "choices": [
+          {
+            "text": "Ate the seven fat cows",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "They died",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "They swam in the Nile River",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "sourceQuestionIds": [
+          "q-06"
+        ],
+        "sourceIds": [
+          "sn-01"
+        ],
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-02",
+        "question": "What happened to the healthy grain in Pharaoh’s second dream?",
+        "correctAnswer": "The thin grain swallowed it",
+        "choices": [
+          {
+            "text": "It burned in a fire",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "The thin grain swallowed it",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "It was eaten by seven fat cows",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "sourceQuestionIds": [
+          "q-10"
+        ],
+        "sourceIds": [
+          "sn-02"
+        ],
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-03",
+        "question": "Who reminded Pharaoh about Joseph?",
+        "correctAnswer": "The wine taster",
+        "choices": [
+          {
+            "text": "One of Pharaoh’s wise men",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "The wine taster",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Pharaoh's daughter",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "sourceQuestionIds": [
+          "q-15"
+        ],
+        "sourceIds": [
+          "sn-03"
+        ],
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-04",
+        "question": "Who did Joseph say could explain Pharaoh’s dreams?",
+        "correctAnswer": "God",
+        "choices": [
+          {
+            "text": "The wine taster",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Pharaoh's baker",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "God",
+            "isCorrect": true,
+            "origin": "adapted"
+          }
+        ],
+        "sourceQuestionIds": [
+          "q-19"
+        ],
+        "sourceIds": [
+          "sn-04"
+        ],
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-05",
+        "question": "What did the seven fat cows mean?",
+        "correctAnswer": "Seven years with plenty of food",
+        "choices": [
+          {
+            "text": "Seven years with plenty of food",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Pharaoh needed to eat a burger",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Seven days with plenty of food",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "sourceQuestionIds": [
+          "q-20"
+        ],
+        "sourceIds": [
+          "sn-05"
+        ],
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-06",
+        "question": "What job did Pharaoh give Joseph?",
+        "correctAnswer": "To lead the work of saving food",
+        "choices": [
+          {
+            "text": "To guard the king’s treasure",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "To lead the work of saving food",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "To take care of the king's cows",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "sourceQuestionIds": [
+          "q-26"
+        ],
+        "sourceIds": [
+          "sn-06",
+          "sn-07"
+        ],
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      }
+    ],
+    "trueFalse": {
+      "statement": "Joseph told Pharaoh to save extra food during the good years.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ],
+      "teacherReviewRequired": false,
+      "factId": "tf-10",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "STORY NOTE",
+        "page": 6,
+        "sourceParagraphIndex": 66
+      }
+    },
+    "trueFalseMaze": {
+      "statement": "Pharaoh sent Joseph back to prison after hearing his advice.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": true,
+      "factId": "tf-13"
+    },
+    "sortStory": [
+      {
+        "statement": "Pharaoh dreamed about seven fat cows and seven skinny cows.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": false,
+        "factId": "tf-01",
+        "source": {
+          "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+          "section": "STORY NOTE",
+          "page": 2,
+          "sourceParagraphIndex": 21
+        }
+      },
+      {
+        "statement": "In Pharaoh’s dream, the fat cows ate the skinny cows.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": true,
+        "factId": "tf-02"
+      },
+      {
+        "statement": "Pharaoh dreamed about healthy grain being swallowed by thin grain.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": false,
+        "factId": "tf-03",
+        "source": {
+          "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+          "section": "STORY NOTE",
+          "page": 2,
+          "sourceParagraphIndex": 29
+        }
+      },
+      {
+        "statement": "Pharaoh dreamed about seven grapevines.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": true,
+        "factId": "tf-04"
+      },
+      {
+        "statement": "Pharaoh’s wise men could not explain his dreams.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": false,
+        "factId": "tf-05",
+        "source": {
+          "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+          "section": "STORY NOTE",
+          "page": 4,
+          "sourceParagraphIndex": 40
+        }
+      },
+      {
+        "statement": "The wine taster remembered Joseph, who had explained dreams in prison.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": false,
+        "factId": "tf-06",
+        "source": {
+          "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+          "section": "STORY NOTE",
+          "page": 4,
+          "sourceParagraphIndex": 40
+        }
+      },
+      {
+        "statement": "Joseph said Egypt would have seven hungry years, then seven good years.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-05"
+        ],
+        "teacherReviewRequired": true,
+        "factId": "tf-09"
+      },
+      {
+        "statement": "Pharaoh put Joseph second in charge of Egypt.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ],
+        "teacherReviewRequired": false,
+        "factId": "tf-12",
+        "source": {
+          "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+          "section": "STORY NOTE",
+          "page": 7,
+          "sourceParagraphIndex": 75
+        }
+      }
+    ],
+    "firstLetters": {
+      "reference": "Isaiah 46:9-10",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Memory Verse Activity",
+        "page": 10,
+        "sourceParagraphIndex": 114,
+        "details": "Source ESV excerpt: I am God, and there is none like me, declaring the end from the beginning... Proposed BSB worksheet excerpt starts with the second \"I am God\" in Isaiah 46:9; check passage boundaries and rights before approval."
+      },
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": true,
+      "verse": "I am God, and there is no other; I am God, and there is none like Me. I declare the end from the beginning,"
+    },
+    "oddWords": {
+      "related": [
+        "COWS",
+        "GRAIN",
+        "NILE",
+        "DREAM"
+      ],
+      "unrelated": [
+        "Ducks",
+        "Ocean",
+        "mountain",
+        "bowl",
+        "Noah"
+      ],
+      "unrelatedOrigin": "suggested",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-02"
+      ],
+      "teacherReviewRequired": true
+    },
+    "unscrambleWords": {
+      "answers": [
+        "skinny cows",
+        "grain"
+      ],
+      "origin": "suggested",
+      "sourceIds": [],
+      "teacherReviewRequired": true
+    },
+    "checkboxes": {
+      "correct": [
+        "Joseph",
+        "Pharaoh",
+        "Prison",
+        "Palace"
+      ],
+      "incorrect": [
+        "Shepherd",
+        "Spear",
+        "Moses",
+        "Stones",
+        "Tower"
+      ],
+      "incorrectOrigin": "suggested",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03",
+        "sn-04",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "whoAmI": {
+      "clue": "I was in prison. God helped me explain Pharaoh’s two dreams. Then I was put in charge off Egypt. Who am I?",
+      "answer": "Joseph",
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-04",
+        "sn-05",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "matchWords": [
+      {
+        "id": "mp-01",
+        "left": "Pharaoh",
+        "right": "Two dreams",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-07"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-02",
+        "left": "Joseph",
+        "right": "explained dream",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-07"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-03",
+        "left": "fat cows",
+        "right": "eaten up",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-04",
+        "left": "Wine taster",
+        "right": "remembered",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-05",
+        "left": "7 good years",
+        "right": "Save food",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-04"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-06",
+        "left": "Dreams",
+        "right": "message",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-01",
+          "sn-02"
+        ],
+        "teacherReviewRequired": true
+      }
+    ],
+    "finishVerse": {
+      "reference": "Isaiah 46:9-10",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Memory Verse Activity",
+        "page": 10,
+        "sourceParagraphIndex": 114,
+        "details": "Source ESV excerpt: I am God, and there is none like me, declaring the end from the beginning... Proposed BSB worksheet excerpt starts with the second \"I am God\" in Isaiah 46:9; check passage boundaries and rights before approval."
+      },
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": true,
+      "markedVerse": "I am [God], and there is no [other]; I am God, and there is [none] like [Me]. I [declare] the [end] from the [beginning],",
+      "sourceVerse": "I am God, and there is no other; I am God, and there is none like Me. I declare the end from the beginning,"
+    },
+    "unscrambleVerse": {
+      "reference": "Isaiah 46:9-10",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Memory Verse Activity",
+        "page": 10,
+        "sourceParagraphIndex": 114,
+        "details": "Source ESV excerpt: I am God, and there is none like me, declaring the end from the beginning... Proposed BSB worksheet excerpt starts with the second \"I am God\" in Isaiah 46:9; check passage boundaries and rights before approval."
+      },
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": true,
+      "markedVerse": "I am [God], and there is no [other]; I am God, and there is [none] like [Me]. I [declare] the [end] from the [beginning],",
+      "sourceVerse": "I am God, and there is no other; I am God, and there is none like Me. I declare the end from the beginning,"
+    },
+    "circleMistakes": {
+      "paragraph": "Pharaoh dreamed of seven fat chickens that were eaten by seven skinny cows. In his next dream, healthy grain swallowed the thin grain. Pharaoh’s wise men quickly explained his dreams. The wine taster explained what the dream meant: Egypt would have seven hungry years before seven good years. He told Pharaoh to throw away all the extra grain. Pharaoh put Joseph second in charge of Egypt.",
+      "mistakeCount": 6,
+      "mistakes": [
+        {
+          "incorrect": "seven fat chickens",
+          "correction": "seven fat cows"
+        },
+        {
+          "incorrect": "healthy grain swallowed the thin grain",
+          "correction": "thin grain swallowed the healthy grain"
+        },
+        {
+          "incorrect": "wise men quickly explained",
+          "correction": "wise men could not explain"
+        },
+        {
+          "incorrect": "The wine taster",
+          "correction": "Joseph"
+        },
+        {
+          "incorrect": "hungry years before seven good years",
+          "correction": "good years before seven hungry years"
+        },
+        {
+          "incorrect": "throw away all the extra grain",
+          "correction": "save the extra grain"
+        }
+      ],
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "mediumWordSearch": {
+      "words": [
+        "JOSEPH",
+        "COWS",
+        "GRAIN",
+        "DREAM",
+        "NILE",
+        "SEVEN"
+      ],
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-04",
+        "sn-05"
+      ]
+    },
+    "bigIdeaCryptogram": {
+      "phrase": "God is in charge of the future.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Important Idea",
+        "page": 8,
+        "sourceParagraphIndex": 82
+      },
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": false
+    },
+    "connectBigIdea": {
+      "phrase": "God is in charge of the future.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Important Idea",
+        "page": 8,
+        "sourceParagraphIndex": 82
+      },
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": false
+    },
+    "upsideDownVerse": {
+      "reference": "Isaiah 46:9-10",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Memory Verse Activity",
+        "page": 10,
+        "sourceParagraphIndex": 114,
+        "details": "Source ESV excerpt: I am God, and there is none like me, declaring the end from the beginning... Proposed BSB worksheet excerpt starts with the second \"I am God\" in Isaiah 46:9; check passage boundaries and rights before approval."
+      },
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": true,
+      "verse": "I am God, and there is no other; I am God, and there is none like Me. I declare the end from the beginning,"
+    },
+    "verseCryptogram": {
+      "reference": "Isaiah 46:9-10",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Memory Verse Activity",
+        "page": 10,
+        "sourceParagraphIndex": 114,
+        "details": "Source ESV excerpt: I am God, and there is none like me, declaring the end from the beginning... Proposed BSB worksheet excerpt starts with the second \"I am God\" in Isaiah 46:9; check passage boundaries and rights before approval."
+      },
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": true,
+      "verse": "I am God, and there is no other; I am God, and there is none like Me. I declare the end from the beginning,"
+    },
+    "spiralVerse": {
+      "reference": "Isaiah 46:9-10",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Memory Verse Activity",
+        "page": 10,
+        "sourceParagraphIndex": 114,
+        "details": "Source ESV excerpt: I am God, and there is none like me, declaring the end from the beginning... Proposed BSB worksheet excerpt starts with the second \"I am God\" in Isaiah 46:9; check passage boundaries and rights before approval."
+      },
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": true,
+      "verse": "I am God, and there is no other; I am God, and there is none like Me. I declare the end from the beginning,"
+    },
+    "connectVerse": {
+      "reference": "Isaiah 46:9-10",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 23 Lesson (Pharaoh's Dreams).odt",
+        "section": "Memory Verse Activity",
+        "page": 10,
+        "sourceParagraphIndex": 114,
+        "details": "Source ESV excerpt: I am God, and there is none like me, declaring the end from the beginning... Proposed BSB worksheet excerpt starts with the second \"I am God\" in Isaiah 46:9; check passage boundaries and rights before approval."
+      },
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": true,
+      "verse": "I am God, and there is no other; I am God, and there is none like Me. I declare the end from the beginning,"
+    },
+    "pixelPicture": {
+      "phrase": "God helped Joseph understand Pharaoh’s dreams.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04",
+        "sn-05"
+      ]
+    },
+    "finishStory": {
+      "markedParagraph": "[Pharaoh] dreamed of [seven] fat cows and seven skinny [cows]. He also dreamed of seven heads of healthy [grain] and seven thin heads. His [wise] men could not explain the [dreams]. The [wine] taster said \"Joseph can [explain] these dreams.\" With God’s help, [Joseph] explained that seven good [years] would be followed by seven [hungry] years. Pharaoh put Joseph in charge of saving [food].",
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "storyOrder": [
+      {
+        "order": 1,
+        "text": "Pharaoh dreamed that seven skinny cows ate seven fat cows.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "order": 2,
+        "text": "Pharaoh dreamed seven thin heads of grain swallowed seven healthy heads.",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 3,
+        "text": "Pharaoh’s wise men could not explain the dreams, so the wine taster spoke up.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "order": 4,
+        "text": "Joseph left prison and went to speak with Pharaoh.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "order": 5,
+        "text": "God helped Joseph explain seven good years followed by seven hungry years.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "order": 6,
+        "text": "Joseph told Pharaoh to save extra food during the good years.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "order": 7,
+        "text": "Pharaoh made Joseph second in charge of Egypt.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      }
+    ],
+    "drawStory": [
+      {
+        "prompt": "Pharaoh dreamed that seven skinny cows ate seven fat cows.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "prompt": "Pharaoh dreamed seven thin heads of grain swallowed seven healthy heads.",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "Pharaoh’s wise men could not explain the dreams, so the wine taster spoke up.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "prompt": "Joseph left prison and went to speak with Pharaoh.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "prompt": "Joseph told Pharaoh to save extra food during the good years.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "prompt": "Pharaoh made Joseph second in charge of Egypt.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      }
+    ],
+    "wordSearch": {
+      "words": [
+        "JOSEPH",
+        "PHARAOH",
+        "EGYPT",
+        "NILE",
+        "COWS",
+        "GRAIN",
+        "DREAM",
+        "SEVEN",
+        "PRISON",
+        "PALACE",
+        "FOOD",
+        "FUTURE"
+      ],
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ]
+    },
+    "crossword": [
+      {
+        "answer": "PHARAOH",
+        "clue": "The king who had two strange dreams.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01",
+          "sn-02"
+        ]
+      },
+      {
+        "answer": "JOSEPH",
+        "clue": "God helped this man explain the dreams.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04",
+          "sn-05"
+        ]
+      },
+      {
+        "answer": "COWS",
+        "clue": "Seven of this animal appeared in a dream",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "GRAIN",
+        "clue": "This food plant appeared in the second dream.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "answer": "NILE",
+        "clue": "Pharaoh stood by this river in his dream.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "answer": "SEVEN",
+        "clue": "The number of good years before the hungry years.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "answer": "PRISON",
+        "clue": "Joseph came out of this place to meet the king.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "answer": "DREAMS",
+        "clue": "Pharaoh had two of these while he slept.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01",
+          "sn-02"
+        ]
+      },
+      {
+        "answer": "FOOD",
+        "clue": "Joseph told Pharaoh to save this for later.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "answer": "FUTURE",
+        "clue": "God knows what will happen in the _____.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      }
+    ]
+  },
+  "moduleReadiness": [
+    {
+      "moduleName": "Draw a Picture",
+      "moduleId": "draw-picture",
+      "size": "Small",
+      "preparedActivityKey": "drawPicture",
+      "status": "READY",
+      "contentValidation": "Local structural, provenance and text checks performed. Official repository validator and live generator/preset tests NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means draft content is present, not that the worksheet generator has succeeded. Final teacher review, rights clearance and application checks remain required."
+    },
+    {
+      "moduleName": "Multiple Choice",
+      "moduleId": "multiple-choice",
+      "size": "Small",
+      "preparedActivityKey": "multipleChoice",
+      "status": "READY",
+      "contentValidation": "Local structural, provenance and text checks performed. Official repository validator and live generator/preset tests NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means draft content is present, not that the worksheet generator has succeeded. Final teacher review, rights clearance and application checks remain required."
+    },
+    {
+      "moduleName": "True / False",
+      "moduleId": "true-false",
+      "size": "Small",
+      "preparedActivityKey": "trueFalse",
+      "status": "READY",
+      "contentValidation": "Local structural, provenance and text checks performed. Official repository validator and live generator/preset tests NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means draft content is present, not that the worksheet generator has succeeded. Final teacher review, rights clearance and application checks remain required."
+    },
+    {
+      "moduleName": "First Letters",
+      "moduleId": "first-letters",
+      "size": "Small",
+      "preparedActivityKey": "firstLetters",
+      "status": "READY",
+      "contentValidation": "Local structural, provenance and text checks performed. Official repository validator and live generator/preset tests NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means draft content is present, not that the worksheet generator has succeeded. Final teacher review, rights clearance and application checks remain required."
+    },
+    {
+      "moduleName": "Odd Words",
+      "moduleId": "odd-words",
+      "size": "Small",
+      "preparedActivityKey": "oddWords",
+      "status": "READY",
+      "contentValidation": "Local structural, provenance and text checks performed. Official repository validator and live generator/preset tests NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means draft content is present, not that the worksheet generator has succeeded. Final teacher review, rights clearance and application checks remain required."
+    },
+    {
+      "moduleName": "Unscramble Words",
+      "moduleId": "unscramble-words",
+      "size": "Small",
+      "preparedActivityKey": "unscrambleWords",
+      "status": "READY",
+      "contentValidation": "Local structural, provenance and text checks performed. Official repository validator and live generator/preset tests NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means draft content is present, not that the worksheet generator has succeeded. Final teacher review, rights clearance and application checks remain required."
+    },
+    {
+      "moduleName": "Checkboxes",
+      "moduleId": "checkboxes",
+      "size": "Small",
+      "preparedActivityKey": "checkboxes",
+      "status": "READY",
+      "contentValidation": "Local structural, provenance and text checks performed. Official repository validator and live generator/preset tests NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means draft content is present, not that the worksheet generator has succeeded. Final teacher review, rights clearance and application checks remain required."
+    },
+    {
+      "moduleName": "Who Am I?",
+      "moduleId": "who-am-i",
+      "size": "Small",
+      "preparedActivityKey": "whoAmI",
+      "status": "READY",
+      "contentValidation": "Local structural, provenance and text checks performed. Official repository validator and live generator/preset tests NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means draft content is present, not that the worksheet generator has succeeded. Final teacher review, rights clearance and application checks remain required."
+    },
+    {
+      "moduleName": "Match the Words",
+      "moduleId": "match-words",
+      "size": "Medium",
+      "preparedActivityKey": "matchWords",
+      "status": "READY",
+      "contentValidation": "Local structural, provenance and text checks performed. Official repository validator and live generator/preset tests NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means draft content is present, not that the worksheet generator has succeeded. Final teacher review, rights clearance and application checks remain required."
+    },
+    {
+      "moduleName": "Finish the Verse",
+      "moduleId": "finish-verse",
+      "size": "Medium",
+      "preparedActivityKey": "finishVerse",
+      "status": "READY",
+      "contentValidation": "Local structural, provenance and text checks performed. Official repository validator and live generator/preset tests NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means draft content is present, not that the worksheet generator has succeeded. Final teacher review, rights clearance and application checks remain required."
+    },
+    {
+      "moduleName": "Unscramble the Verse",
+      "moduleId": "unscramble-verse",
+      "size": "Medium",
+      "preparedActivityKey": "unscrambleVerse",
+      "status": "READY",
+      "contentValidation": "Local structural, provenance and text checks performed. Official repository validator and live generator/preset tests NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means draft content is present, not that the worksheet generator has succeeded. Final teacher review, rights clearance and application checks remain required."
+    },
+    {
+      "moduleName": "Circle the Mistakes",
+      "moduleId": "circle-mistakes",
+      "size": "Medium",
+      "preparedActivityKey": "circleMistakes",
+      "status": "READY",
+      "contentValidation": "Local structural, provenance and text checks performed. Official repository validator and live generator/preset tests NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means draft content is present, not that the worksheet generator has succeeded. Final teacher review, rights clearance and application checks remain required."
+    },
+    {
+      "moduleName": "Medium Word Search",
+      "moduleId": "medium-word-search",
+      "size": "Medium",
+      "preparedActivityKey": "mediumWordSearch",
+      "status": "READY",
+      "contentValidation": "Local structural, provenance and text checks performed. Official repository validator and live generator/preset tests NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means draft content is present, not that the worksheet generator has succeeded. Final teacher review, rights clearance and application checks remain required."
+    },
+    {
+      "moduleName": "True / False Maze",
+      "moduleId": "true-false-maze",
+      "size": "Medium",
+      "preparedActivityKey": "trueFalseMaze",
+      "status": "READY",
+      "contentValidation": "Local structural, provenance and text checks performed. Official repository validator and live generator/preset tests NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means draft content is present, not that the worksheet generator has succeeded. Final teacher review, rights clearance and application checks remain required."
+    },
+    {
+      "moduleName": "Big Idea Cryptogram",
+      "moduleId": "big-idea-cryptogram",
+      "size": "Medium",
+      "preparedActivityKey": "bigIdeaCryptogram",
+      "status": "READY",
+      "contentValidation": "Local structural, provenance and text checks performed. Official repository validator and live generator/preset tests NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means draft content is present, not that the worksheet generator has succeeded. Final teacher review, rights clearance and application checks remain required."
+    },
+    {
+      "moduleName": "Upside-Down Verse",
+      "moduleId": "upside-down-verse",
+      "size": "Medium",
+      "preparedActivityKey": "upsideDownVerse",
+      "status": "READY",
+      "contentValidation": "Local structural, provenance and text checks performed. Official repository validator and live generator/preset tests NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means draft content is present, not that the worksheet generator has succeeded. Final teacher review, rights clearance and application checks remain required."
+    },
+    {
+      "moduleName": "Connect the Big Idea",
+      "moduleId": "connect-big-idea",
+      "size": "Medium",
+      "preparedActivityKey": "connectBigIdea",
+      "status": "READY",
+      "contentValidation": "Local structural, provenance and text checks performed. Official repository validator and live generator/preset tests NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means draft content is present, not that the worksheet generator has succeeded. Final teacher review, rights clearance and application checks remain required."
+    },
+    {
+      "moduleName": "Pixel Picture",
+      "moduleId": "pixel-picture",
+      "size": "Medium",
+      "preparedActivityKey": "pixelPicture",
+      "status": "READY",
+      "contentValidation": "Local structural, provenance and text checks performed. Official repository validator and live generator/preset tests NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means draft content is present, not that the worksheet generator has succeeded. Final teacher review, rights clearance and application checks remain required."
+    },
+    {
+      "moduleName": "Finish the Story",
+      "moduleId": "finish-story",
+      "size": "Large",
+      "preparedActivityKey": "finishStory",
+      "status": "READY",
+      "contentValidation": "Local structural, provenance and text checks performed. Official repository validator and live generator/preset tests NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means draft content is present, not that the worksheet generator has succeeded. Final teacher review, rights clearance and application checks remain required."
+    },
+    {
+      "moduleName": "Story Order",
+      "moduleId": "story-order",
+      "size": "Large",
+      "preparedActivityKey": "storyOrder",
+      "status": "READY",
+      "contentValidation": "Local structural, provenance and text checks performed. Official repository validator and live generator/preset tests NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means draft content is present, not that the worksheet generator has succeeded. Final teacher review, rights clearance and application checks remain required."
+    },
+    {
+      "moduleName": "Sort the Story",
+      "moduleId": "sort-story",
+      "size": "Large",
+      "preparedActivityKey": "sortStory",
+      "status": "READY",
+      "contentValidation": "Local structural, provenance and text checks performed. Official repository validator and live generator/preset tests NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means draft content is present, not that the worksheet generator has succeeded. Final teacher review, rights clearance and application checks remain required."
+    },
+    {
+      "moduleName": "Draw the Story",
+      "moduleId": "draw-story",
+      "size": "Large",
+      "preparedActivityKey": "drawStory",
+      "status": "READY",
+      "contentValidation": "Local structural, provenance and text checks performed. Official repository validator and live generator/preset tests NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means draft content is present, not that the worksheet generator has succeeded. Final teacher review, rights clearance and application checks remain required."
+    },
+    {
+      "moduleName": "Word Search",
+      "moduleId": "word-search",
+      "size": "Large",
+      "preparedActivityKey": "wordSearch",
+      "status": "READY",
+      "contentValidation": "Local structural, provenance and text checks performed. Official repository validator and live generator/preset tests NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means draft content is present, not that the worksheet generator has succeeded. Final teacher review, rights clearance and application checks remain required."
+    },
+    {
+      "moduleName": "Verse Cryptogram",
+      "moduleId": "verse-cryptogram",
+      "size": "Large",
+      "preparedActivityKey": "verseCryptogram",
+      "status": "READY",
+      "contentValidation": "Local structural, provenance and text checks performed. Official repository validator and live generator/preset tests NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means draft content is present, not that the worksheet generator has succeeded. Final teacher review, rights clearance and application checks remain required."
+    },
+    {
+      "moduleName": "Crossword",
+      "moduleId": "crossword",
+      "size": "Large",
+      "preparedActivityKey": "crossword",
+      "status": "READY",
+      "contentValidation": "Local structural, provenance and text checks performed. Official repository validator and live generator/preset tests NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means draft content is present, not that the worksheet generator has succeeded. Final teacher review, rights clearance and application checks remain required."
+    },
+    {
+      "moduleName": "Spiral Verse",
+      "moduleId": "spiral-verse",
+      "size": "Large",
+      "preparedActivityKey": "spiralVerse",
+      "status": "READY",
+      "contentValidation": "Local structural, provenance and text checks performed. Official repository validator and live generator/preset tests NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means draft content is present, not that the worksheet generator has succeeded. Final teacher review, rights clearance and application checks remain required."
+    },
+    {
+      "moduleName": "Connect the Verse",
+      "moduleId": "connect-verse",
+      "size": "Large",
+      "preparedActivityKey": "connectVerse",
+      "status": "READY",
+      "contentValidation": "Local structural, provenance and text checks performed. Official repository validator and live generator/preset tests NOT run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means draft content is present, not that the worksheet generator has succeeded. Final teacher review, rights clearance and application checks remain required."
+    }
+  ],
+  "reviewFlags": [
+    {
+      "id": "rf-01",
+      "priority": "high",
+      "type": "scripture-review",
+      "text": "Source memory verse is the ESV excerpt Isaiah 46:9b–10a. Draft uses BSB excerpt “I am God, and there is none like Me. I declare the end from the beginning,” ending with a comma; verify intended passage boundaries, exact words, punctuation, age suitability and Scripture distribution before approval.",
+      "affectedModules": [
+        "first-letters",
+        "finish-verse",
+        "unscramble-verse",
+        "upside-down-verse",
+        "verse-cryptogram",
+        "spiral-verse",
+        "connect-verse"
+      ]
+    },
+    {
+      "id": "rf-02",
+      "priority": "high",
+      "type": "teacher-approval",
+      "text": "Review all six prepared Multiple Choice questions and their two suggested wrong answers each.",
+      "affectedModules": [
+        "multiple-choice"
+      ]
+    },
+    {
+      "id": "rf-03",
+      "priority": "high",
+      "type": "teacher-approval",
+      "text": "Review seven suggested false statements, their clarity, and the four retained alternative facts.",
+      "affectedModules": [
+        "sort-story",
+        "true-false",
+        "true-false-maze"
+      ]
+    },
+    {
+      "id": "rf-04",
+      "priority": "medium",
+      "type": "vocabulary",
+      "text": "Odd Words and Checkboxes use different lists. Check that each proposed unrelated word is truly unrelated to this lesson for children.",
+      "affectedModules": [
+        "odd-words",
+        "checkboxes"
+      ]
+    },
+    {
+      "id": "rf-05",
+      "priority": "medium",
+      "type": "circle-mistakes",
+      "text": "Check six deliberately wrong details and the correction key for clarity and difficulty.",
+      "affectedModules": [
+        "circle-mistakes"
+      ]
+    },
+    {
+      "id": "rf-06",
+      "priority": "medium",
+      "type": "source-meaning",
+      "text": "Keep the dream pictures distinct from actual events. The cows and grain swallowed each other in dreams, not in real life.",
+      "affectedModules": [
+        "multiple-choice",
+        "true-false",
+        "sort-story",
+        "circle-mistakes",
+        "finish-story"
+      ]
+    },
+    {
+      "id": "rf-07",
+      "priority": "medium",
+      "type": "generator-test",
+      "text": "Crossword grid generation, 27 live generators and all three presets must be tested in the app before publishing.",
+      "affectedModules": [
+        "draw-picture",
+        "multiple-choice",
+        "true-false",
+        "first-letters",
+        "odd-words",
+        "unscramble-words",
+        "checkboxes",
+        "who-am-i",
+        "match-words",
+        "finish-verse",
+        "unscramble-verse",
+        "circle-mistakes",
+        "medium-word-search",
+        "true-false-maze",
+        "big-idea-cryptogram",
+        "upside-down-verse",
+        "connect-big-idea",
+        "pixel-picture",
+        "finish-story",
+        "story-order",
+        "sort-story",
+        "draw-story",
+        "word-search",
+        "verse-cryptogram",
+        "crossword",
+        "spiral-verse",
+        "connect-verse"
+      ]
+    },
+    {
+      "id": "rf-08",
+      "priority": "low",
+      "type": "source-provenance",
+      "text": "All seven Story Notes are preserved verbatim from the ODT, including capitalized emphasis. Prepared wording is adapted separately.",
+      "affectedModules": [
+        "story-order",
+        "draw-story",
+        "finish-story"
+      ]
+    },
+    {
+      "id": "rf-09",
+      "priority": "low",
+      "type": "child-reading-level",
+      "text": "Review words such as “Pharaoh,” “grain,” and “future” for the intended age group; they are essential lesson vocabulary but may need brief teaching.",
+      "affectedModules": [
+        "crossword",
+        "odd-words",
+        "checkboxes",
+        "word-search"
+      ]
+    }
+  ],
+  "publication": {
+    "status": "approved",
+    "approved": true,
+    "notes": "Teacher review only. No repository publication, official schema validator, importer preflight, live generator or preset test has been performed.",
+    "teacherSignoff": {
+      "reviewer": "Andrew Doane",
+      "date": "2026-11-05",
+      "notes": "Approved with verified BSB verse through Curriculum Review Studio"
+    },
+    "scriptureRights": {
+      "status": "cleared",
+      "basis": "Berean Standard Bible (BSB), dedicated to the public domain on April 30, 2023. Official terms: https://berean.bible/terms.htm. Scripture text confirmed against https://bereanbible.com/bsb.txt.",
+      "reviewedBy": "Andrew Doane",
+      "reviewedOn": "2026-11-05"
+    },
+    "resolvedReviewFlagIds": [
+      "rf-02",
+      "rf-03"
+    ]
+  },
+  "validation": {
+    "basis": "Original conversion tests predate teacher-approved BSB; revalidate actual engines and content after export.",
+    "allTextChecksPassed": false,
+    "checks": [
+      {
+        "check": "Seven original Story Notes preserved verbatim",
+        "passed": true
+      },
+      {
+        "check": "All teaching and review questions explicitly indexed and sourced",
+        "passed": true
+      },
+      {
+        "check": "Original review questions all preserved",
+        "passed": true
+      },
+      {
+        "check": "Prepared six Multiple Choice questions",
+        "passed": true
+      },
+      {
+        "check": "Each Multiple Choice has three unique choices and one correct",
+        "passed": true
+      },
+      {
+        "check": "True/False pool has 14 statements",
+        "passed": true
+      },
+      {
+        "check": "True/False statements balance 7 true / 7 false",
+        "passed": true
+      },
+      {
+        "check": "False facts clearly marked suggested and teacher review",
+        "passed": true
+      },
+      {
+        "check": "Sort the Story has eight statements",
+        "passed": true
+      },
+      {
+        "check": "All three Preset 3 fact slots reference unique facts",
+        "passed": true
+      },
+      {
+        "check": "Four distinct alternative facts remain",
+        "passed": true
+      },
+      {
+        "check": "Prepared four Small drawing scenes",
+        "passed": true
+      },
+      {
+        "check": "Small drawing prompts are under 105 chars and short scenes",
+        "passed": true
+      },
+      {
+        "check": "Six short unique matching pairs",
+        "passed": true
+      },
+      {
+        "check": "Odd Words and Checkboxes lists do not overlap",
+        "passed": true
+      },
+      {
+        "check": "Six Circle the Mistakes errors with corrections",
+        "passed": true
+      },
+      {
+        "check": "Scripture display includes only the book Genesis",
+        "passed": true
+      },
+      {
+        "check": "Capitalization of God in Big Idea",
+        "passed": true
+      },
+      {
+        "check": "Seven Story Order entries use unique numbers",
+        "passed": true
+      },
+      {
+        "check": "Six Draw the Story captions have punctuation and stay under 105 chars",
+        "passed": true
+      },
+      {
+        "check": "Verse marked blanks reconstruct the exact proposed verse",
+        "passed": true
+      },
+      {
+        "check": "Exactly 27 prepared activity keys",
+        "passed": true
+      },
+      {
+        "check": "ModuleReadiness has 27 distinct modules",
+        "passed": true
+      },
+      {
+        "check": "Every readiness entry references prepared activity",
+        "passed": true
+      },
+      {
+        "check": "No generator was incorrectly marked tested",
+        "passed": true
+      },
+      {
+        "check": "Publication pending and not approved",
+        "passed": true
+      },
+      {
+        "check": "All source question ID pointers resolve",
+        "passed": true
+      },
+      {
+        "check": "All Story Note references resolve",
+        "passed": true
+      },
+      {
+        "check": "Crossword answers are distinct and clues are child-friendly",
+        "passed": true
+      },
+      {
+        "check": "Source ESV excerpt preserved separately from BSB draft",
+        "passed": true
+      },
+      {
+        "check": "Top-level properties match existing lesson-v1 sample",
+        "passed": true
+      }
+    ],
+    "jsonParseTested": true,
+    "actualGeneratorTested": false
+  }
+}

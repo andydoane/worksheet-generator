@@ -1,0 +1,3264 @@
+{
+  "schemaVersion": 1,
+  "schemaStatus": "proposed-v1; pending teacher and generator verification",
+  "id": "ot-022-joseph-in-prison",
+  "curriculum": {
+    "series": "Old Testament",
+    "lessonNumber": 22
+  },
+  "lessonDetails": {
+    "title": "Joseph in Prison",
+    "scripturePassages": [
+      "Genesis 40",
+      "Romans 15:4",
+      "Psalm 23:4",
+      "Matthew 28:20"
+    ],
+    "scriptureDisplay": "Genesis",
+    "bigIdeas": [
+      {
+        "origin": "adapted",
+        "text": "No matter how bad things look, we are never forgotten by God.",
+        "sourceIds": [
+          "sn-07"
+        ],
+        "source": {
+          "filename": "OT 22 Lesson (Joseph in Prison).odt",
+          "section": "Important Idea",
+          "page": 5,
+          "sourceParagraphIndex": 150,
+          "details": "Original ODT important-idea text uses display styling that can hide capitalization; the God reference is capitalized in the adapted text."
+        }
+      }
+    ],
+    "memoryVerse": {
+      "reference": "Psalm 23:4",
+      "translation": "BSB",
+      "text": "Even though I walk through the valley of the shadow of death, I will fear no evil, for You are with me; Your rod and Your staff, they comfort me.",
+      "isExcerpt": false,
+      "hasEllipses": false,
+      "requiresTextReview": false,
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 215,
+        "details": "Source ESV excerpt: Even though I walk through the valley of the shadow of death, I will fear no evil, for you are with me... Proposed BSB excerpt preserves the BSB capitalization of “You” and ends at the semicolon; check exact excerpt end punctuation and age suitability before approval."
+      },
+      "alsoVerifiedAt": {
+        "filename": "https://ebible.org/engbsb/PSA023.htm",
+        "section": "Berean Standard Bible, Psalm 23:4",
+        "details": "BSB text checked online; does not constitute publication approval."
+      },
+      "originalTranslation": "BSB",
+      "bsbSource": {
+        "reference": "Psalm 23:4",
+        "sourceUrl": "https://bereanbible.com/bsb.txt",
+        "publicDomainTerms": "https://berean.bible/terms.htm",
+        "startWord": 0,
+        "endWord": 29
+      }
+    }
+  },
+  "sourceFiles": [
+    {
+      "filename": "OT 22 Lesson (Joseph in Prison).odt",
+      "format": "odt",
+      "role": "primary teaching source",
+      "note": "Original OT22 ODT teaching source. Seven Story Notes; narrative teaching, memory verse, ten review questions and activity ideas are indexed. ESV Psalm 23:4a is source; BSB proposed for worksheets subject to review."
+    }
+  ],
+  "storyNotes": [
+    {
+      "id": "sn-01",
+      "order": 1,
+      "originalText": "Pharaoh's wine taster and baker were thrown in prison. Both had special DREAMS from God.",
+      "cleanText": "Pharaoh's wine taster and baker were thrown in prison. Both had special dreams from God.",
+      "emphasizedWords": [
+        "DREAMS"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "STORY NOTE",
+        "page": 2,
+        "sourceParagraphIndex": 41
+      }
+    },
+    {
+      "id": "sn-02",
+      "order": 2,
+      "originalText": "In the wine taster's dream, he squeezed GRAPES from a vine into Pharaoh's cup.",
+      "cleanText": "In the wine taster's dream, he squeezed grapes from a vine into Pharaoh's cup.",
+      "emphasizedWords": [
+        "GRAPES"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "STORY NOTE",
+        "page": 2,
+        "sourceParagraphIndex": 56
+      }
+    },
+    {
+      "id": "sn-03",
+      "order": 3,
+      "originalText": "Joseph explained, \"In three days, Pharaoh will give you back your old JOB.\"",
+      "cleanText": "Joseph explained, \"In three days, Pharaoh will give you back your old job.\"",
+      "emphasizedWords": [
+        "JOB"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "STORY NOTE",
+        "page": 3,
+        "sourceParagraphIndex": 75
+      }
+    },
+    {
+      "id": "sn-04",
+      "order": 4,
+      "originalText": "Joseph said, \"Speak to PHARAOH about my story. Ask him to get me out of this prison.\"",
+      "cleanText": "Joseph said, \"Speak to pharaoh about my story. Ask him to get me out of this prison.\"",
+      "emphasizedWords": [
+        "PHARAOH"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "STORY NOTE",
+        "page": 3,
+        "sourceParagraphIndex": 88
+      }
+    },
+    {
+      "id": "sn-05",
+      "order": 5,
+      "originalText": "In the baker's dream, BIRDS picked at the bread baskets he carried on his head.",
+      "cleanText": "In the baker's dream, birds picked at the bread baskets he carried on his head.",
+      "emphasizedWords": [
+        "BIRDS"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "STORY NOTE",
+        "page": 4,
+        "sourceParagraphIndex": 105
+      }
+    },
+    {
+      "id": "sn-06",
+      "order": 6,
+      "originalText": "Joseph explained, \"In three days, Pharaoh will have you KILLED.\"",
+      "cleanText": "Joseph explained, \"In three days, Pharaoh will have you killed.\"",
+      "emphasizedWords": [
+        "KILLED"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "STORY NOTE",
+        "page": 4,
+        "sourceParagraphIndex": 120
+      }
+    },
+    {
+      "id": "sn-07",
+      "order": 7,
+      "originalText": "Everything happened just as Joseph said, but the wine taster FORGOT about Joseph.",
+      "cleanText": "Everything happened just as Joseph said, but the wine taster forgot about Joseph.",
+      "emphasizedWords": [
+        "FORGOT"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "STORY NOTE",
+        "page": 5,
+        "sourceParagraphIndex": 136
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q-01",
+      "question": "Have you ever had a really strange dream?",
+      "answer": "Various responses.",
+      "kind": "discussion",
+      "scope": "introduction",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 5
+      },
+      "notes": "Original question preserved verbatim. Open-ended/contextual response requires teacher review."
+    },
+    {
+      "id": "q-02",
+      "question": "Who can explain what we've learned about Joseph?",
+      "answer": "Father's favorite son, given a beautiful robe, had dreams about his family bowing to him like a king, his brothers wanted to kill him, sold him as a slave to Egypt, worked for Potiphar, was thrown into prison for something he didn't do.",
+      "kind": "factual",
+      "scope": "introduction",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 21
+      },
+      "notes": "Original question preserved verbatim. Answer follows the source lesson; contextual answer, where needed, is offered for teacher review."
+    },
+    {
+      "id": "q-03",
+      "question": "...who was there with Joseph the entire time?",
+      "answer": "God.",
+      "kind": "factual",
+      "scope": "introduction",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 27
+      },
+      "notes": "Original question preserved verbatim. Answer follows the source lesson; contextual answer, where needed, is offered for teacher review."
+    },
+    {
+      "id": "q-04",
+      "question": "Where was he?",
+      "answer": "In an Egyptian prison.",
+      "kind": "factual",
+      "scope": "introduction",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 29
+      },
+      "notes": "Original question preserved verbatim. Answer follows the source lesson; contextual answer, where needed, is offered for teacher review."
+    },
+    {
+      "id": "q-05",
+      "question": "Why?",
+      "answer": "They didn't understand what their dreams meant.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Story Teaching",
+        "page": 2,
+        "sourceParagraphIndex": 47
+      },
+      "notes": "Original question preserved verbatim. Answer follows the source lesson; contextual answer, where needed, is offered for teacher review."
+    },
+    {
+      "id": "q-06",
+      "question": "Who?",
+      "answer": "God.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Story Teaching",
+        "page": 2,
+        "sourceParagraphIndex": 49
+      },
+      "notes": "Original question preserved verbatim. Answer follows the source lesson; contextual answer, where needed, is offered for teacher review."
+    },
+    {
+      "id": "q-07",
+      "question": "How many branches did it have?",
+      "answer": "Three.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Story Teaching",
+        "page": 2,
+        "sourceParagraphIndex": 60
+      },
+      "notes": "Original question preserved verbatim. Answer follows the source lesson; contextual answer, where needed, is offered for teacher review."
+    },
+    {
+      "id": "q-08",
+      "question": "What kind of drinks can you make from squishing the juice out of grapes?",
+      "answer": "Grape juice and wine.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Story Teaching",
+        "page": 2,
+        "sourceParagraphIndex": 66
+      },
+      "notes": "Original question preserved verbatim. Answer follows the source lesson; contextual answer, where needed, is offered for teacher review."
+    },
+    {
+      "id": "q-09",
+      "question": "What did the wine taster do with the cup of wine he made from the grapes?",
+      "answer": "Put it in Pharaoh's hand.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Story Teaching",
+        "page": 2,
+        "sourceParagraphIndex": 68
+      },
+      "notes": "Original question preserved verbatim. Answer follows the source lesson; contextual answer, where needed, is offered for teacher review."
+    },
+    {
+      "id": "q-10",
+      "question": "What could that dream mean?",
+      "answer": "Joseph explains that the wine taster would return to his job.",
+      "kind": "discussion",
+      "scope": "teaching",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Story Teaching",
+        "page": 2,
+        "sourceParagraphIndex": 70
+      },
+      "notes": "Original question preserved verbatim. Open-ended/contextual response requires teacher review."
+    },
+    {
+      "id": "q-11",
+      "question": "How could Joseph know what the wine taster's dream meant?",
+      "answer": "God gave him understanding.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Story Teaching",
+        "page": 3,
+        "sourceParagraphIndex": 77
+      },
+      "notes": "Original question preserved verbatim. Answer follows the source lesson; contextual answer, where needed, is offered for teacher review."
+    },
+    {
+      "id": "q-12",
+      "question": "What did Joseph say those three branches represented?",
+      "answer": "Three days.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Story Teaching",
+        "page": 3,
+        "sourceParagraphIndex": 79
+      },
+      "notes": "Original question preserved verbatim. Answer follows the source lesson; contextual answer, where needed, is offered for teacher review."
+    },
+    {
+      "id": "q-13",
+      "question": "What did Joseph say that represented?",
+      "answer": "In three days, Pharaoh would give the wine taster his old job back.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Story Teaching",
+        "page": 3,
+        "sourceParagraphIndex": 81
+      },
+      "notes": "Original question preserved verbatim. Answer follows the source lesson; contextual answer, where needed, is offered for teacher review."
+    },
+    {
+      "id": "q-14",
+      "question": "How do you think the wine taster felt when he heard the meaning of his dream? Why?",
+      "answer": "Glad, he would be let out of prison.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Story Teaching",
+        "page": 3,
+        "sourceParagraphIndex": 83
+      },
+      "notes": "Original question preserved verbatim. Answer follows the source lesson; contextual answer, where needed, is offered for teacher review."
+    },
+    {
+      "id": "q-15",
+      "question": "What did Joseph ask the wine taster to do?",
+      "answer": "Tell Pharaoh about the trouble he was in.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Story Teaching",
+        "page": 3,
+        "sourceParagraphIndex": 90
+      },
+      "notes": "Original question preserved verbatim. Answer follows the source lesson; contextual answer, where needed, is offered for teacher review."
+    },
+    {
+      "id": "q-16",
+      "question": "Why was he stuck in an Egyptian prison?",
+      "answer": "Because Potiphar's wife lied about him.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Story Teaching",
+        "page": 3,
+        "sourceParagraphIndex": 92
+      },
+      "notes": "Original question preserved verbatim. Answer follows the source lesson; contextual answer, where needed, is offered for teacher review."
+    },
+    {
+      "id": "q-17",
+      "question": "Why was he in Egypt as a slave in the first place?",
+      "answer": "His brothers sold him.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Story Teaching",
+        "page": 3,
+        "sourceParagraphIndex": 94
+      },
+      "notes": "Original question preserved verbatim. Answer follows the source lesson; contextual answer, where needed, is offered for teacher review."
+    },
+    {
+      "id": "q-18",
+      "question": "What was it?",
+      "answer": "Three baskets of bread.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Story Teaching",
+        "page": 4,
+        "sourceParagraphIndex": 109
+      },
+      "notes": "Original question preserved verbatim. Answer follows the source lesson; contextual answer, where needed, is offered for teacher review."
+    },
+    {
+      "id": "q-19",
+      "question": "In the dream, what happened as the baker wore his basket hat?",
+      "answer": "Birds picked at the bread.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Story Teaching",
+        "page": 4,
+        "sourceParagraphIndex": 111
+      },
+      "notes": "Original question preserved verbatim. Answer follows the source lesson; contextual answer, where needed, is offered for teacher review."
+    },
+    {
+      "id": "q-20",
+      "question": "What could such a strange dream mean?",
+      "answer": "God only knows; Joseph explained it with God’s help.",
+      "kind": "discussion",
+      "scope": "teaching",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Story Teaching",
+        "page": 4,
+        "sourceParagraphIndex": 115
+      },
+      "notes": "Original question preserved verbatim. Open-ended/contextual response requires teacher review."
+    },
+    {
+      "id": "q-21",
+      "question": "But did he hear good news?",
+      "answer": "No.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Story Teaching",
+        "page": 4,
+        "sourceParagraphIndex": 122
+      },
+      "notes": "Original question preserved verbatim. Answer follows the source lesson; contextual answer, where needed, is offered for teacher review."
+    },
+    {
+      "id": "q-22",
+      "question": "What did the three baskets represent in the baker's dream?",
+      "answer": "Three days.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Story Teaching",
+        "page": 4,
+        "sourceParagraphIndex": 124
+      },
+      "notes": "Original question preserved verbatim. Answer follows the source lesson; contextual answer, where needed, is offered for teacher review."
+    },
+    {
+      "id": "q-23",
+      "question": "And that would happen in... how many days?",
+      "answer": "Three days.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Story Teaching",
+        "page": 4,
+        "sourceParagraphIndex": 125
+      },
+      "notes": "Original question preserved verbatim. Answer follows the source lesson; contextual answer, where needed, is offered for teacher review."
+    },
+    {
+      "id": "q-24",
+      "question": "Like the birds pecked at the bread in the baker's dream, what did Joseph say would happen to the baker's body?",
+      "answer": "Birds would peck at it.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Story Teaching",
+        "page": 4,
+        "sourceParagraphIndex": 127
+      },
+      "notes": "Original question preserved verbatim. Answer follows the source lesson; contextual answer, where needed, is offered for teacher review."
+    },
+    {
+      "id": "q-25",
+      "question": "What happened to the wine taster?",
+      "answer": "He was given his job back.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Story Teaching",
+        "page": 5,
+        "sourceParagraphIndex": 140
+      },
+      "notes": "Original question preserved verbatim. Answer follows the source lesson; contextual answer, where needed, is offered for teacher review."
+    },
+    {
+      "id": "q-26",
+      "question": "What happened to the baker?",
+      "answer": "He was killed.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Story Teaching",
+        "page": 5,
+        "sourceParagraphIndex": 142
+      },
+      "notes": "Original question preserved verbatim. Answer follows the source lesson; contextual answer, where needed, is offered for teacher review."
+    },
+    {
+      "id": "q-27",
+      "question": "What was it?",
+      "answer": "To tell Pharaoh his story, that he shouldn't be a slave or in prison.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Story Teaching",
+        "page": 5,
+        "sourceParagraphIndex": 144
+      },
+      "notes": "Original question preserved verbatim. Answer follows the source lesson; contextual answer, where needed, is offered for teacher review."
+    },
+    {
+      "id": "q-28",
+      "question": "Why?",
+      "answer": "The wine taster completely forgot about Joseph.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Story Teaching",
+        "page": 5,
+        "sourceParagraphIndex": 145
+      },
+      "notes": "Original question preserved verbatim. Answer follows the source lesson; contextual answer, where needed, is offered for teacher review."
+    },
+    {
+      "id": "q-29",
+      "question": "So how does the story of Joseph in prison teach us, strengthen us, encourage us, or give us hope?",
+      "answer": "God had not forgotten Joseph and was with him.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Story Teaching",
+        "page": 5,
+        "sourceParagraphIndex": 149
+      },
+      "notes": "Original question preserved verbatim. Answer follows the source lesson; contextual answer, where needed, is offered for teacher review."
+    },
+    {
+      "id": "q-30",
+      "question": "Who was it?",
+      "answer": "God.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Story Teaching",
+        "page": 5,
+        "sourceParagraphIndex": 159
+      },
+      "notes": "Original question preserved verbatim. Answer follows the source lesson; contextual answer, where needed, is offered for teacher review."
+    },
+    {
+      "id": "q-31",
+      "question": "Why?",
+      "answer": "Because someone was with him.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Story Teaching",
+        "page": 6,
+        "sourceParagraphIndex": 181
+      },
+      "notes": "Original question preserved verbatim. Answer follows the source lesson; contextual answer, where needed, is offered for teacher review."
+    },
+    {
+      "id": "q-32",
+      "question": "Who?",
+      "answer": "God.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Story Teaching",
+        "page": 6,
+        "sourceParagraphIndex": 181
+      },
+      "notes": "Original question preserved verbatim. Answer follows the source lesson; contextual answer, where needed, is offered for teacher review."
+    },
+    {
+      "id": "q-33",
+      "question": "What promise did Jesus make to his disciples?",
+      "answer": "To always be with them, to the end.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Story Teaching",
+        "page": 6,
+        "sourceParagraphIndex": 191
+      },
+      "notes": "Original question preserved verbatim. Answer follows the source lesson; contextual answer, where needed, is offered for teacher review."
+    },
+    {
+      "id": "q-34",
+      "question": "What's the good news of Jesus?",
+      "answer": "He died for our sins and rose from the dead.",
+      "kind": "factual",
+      "scope": "teaching",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Story Teaching",
+        "page": 6,
+        "sourceParagraphIndex": 197
+      },
+      "notes": "Original question preserved verbatim. Answer follows the source lesson; contextual answer, where needed, is offered for teacher review."
+    },
+    {
+      "id": "q-35",
+      "question": "Do you remember what the word \"psalm\" means?",
+      "answer": "Song.",
+      "kind": "factual",
+      "scope": "memory-verse",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 217
+      },
+      "notes": "Original question preserved verbatim. Answer follows the source lesson; contextual answer, where needed, is offered for teacher review."
+    },
+    {
+      "id": "q-36",
+      "question": "Why?",
+      "answer": "Because God was with him.",
+      "kind": "factual",
+      "scope": "memory-verse",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 217
+      },
+      "notes": "Original question preserved verbatim. Answer follows the source lesson; contextual answer, where needed, is offered for teacher review."
+    },
+    {
+      "id": "q-37",
+      "question": "What does that have to do with our story?",
+      "answer": "It reminds us of the wine taster and baker.",
+      "kind": "factual",
+      "scope": "memory-verse",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 218
+      },
+      "notes": "Original question preserved verbatim. Answer follows the source lesson; contextual answer, where needed, is offered for teacher review."
+    },
+    {
+      "id": "q-38",
+      "question": "What two men were thrown into prison with Joseph?",
+      "answer": "Pharaoh's baker and wine taster",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Review Questions",
+        "page": 9,
+        "sourceParagraphIndex": 259
+      },
+      "notes": "Original question preserved verbatim. Answer follows the source lesson; contextual answer, where needed, is offered for teacher review."
+    },
+    {
+      "id": "q-39",
+      "question": "What happened to both men while they were in prison?",
+      "answer": "They had special dreams from God",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Review Questions",
+        "page": 9,
+        "sourceParagraphIndex": 260
+      },
+      "notes": "Original question preserved verbatim. Answer follows the source lesson; contextual answer, where needed, is offered for teacher review."
+    },
+    {
+      "id": "q-40",
+      "question": "What did Joseph say about dreams?",
+      "answer": "Only God knows what dreams mean",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Review Questions",
+        "page": 9,
+        "sourceParagraphIndex": 261
+      },
+      "notes": "Original question preserved verbatim. Answer follows the source lesson; contextual answer, where needed, is offered for teacher review."
+    },
+    {
+      "id": "q-41",
+      "question": "What did the wine taster dream?",
+      "answer": "He saw a grapevine with three branches; he squeezed the grapes into Pharaoh's special cup",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Review Questions",
+        "page": 9,
+        "sourceParagraphIndex": 262
+      },
+      "notes": "Original question preserved verbatim. Answer follows the source lesson; contextual answer, where needed, is offered for teacher review."
+    },
+    {
+      "id": "q-42",
+      "question": "What did Joseph say the wine taster's dream meant?",
+      "answer": "In three days, he would get his old job back",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Review Questions",
+        "page": 9,
+        "sourceParagraphIndex": 263
+      },
+      "notes": "Original question preserved verbatim. Answer follows the source lesson; contextual answer, where needed, is offered for teacher review."
+    },
+    {
+      "id": "q-43",
+      "question": "What favor did Joseph ask of the wine taster?",
+      "answer": "Tell Pharaoh that he didn't deserve to be a slave or in prison",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Review Questions",
+        "page": 9,
+        "sourceParagraphIndex": 264
+      },
+      "notes": "Original question preserved verbatim. Answer follows the source lesson; contextual answer, where needed, is offered for teacher review."
+    },
+    {
+      "id": "q-44",
+      "question": "What did the baker dream about?",
+      "answer": "He carried three baskets of bread on his head; birds pecked at the baskets",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 265
+      },
+      "notes": "Original question preserved verbatim. Answer follows the source lesson; contextual answer, where needed, is offered for teacher review."
+    },
+    {
+      "id": "q-45",
+      "question": "What did Joseph say the baker's dream meant?",
+      "answer": "In three days, Pharaoh would kill him; birds would peck at his body",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 266
+      },
+      "notes": "Original question preserved verbatim. Answer follows the source lesson; contextual answer, where needed, is offered for teacher review."
+    },
+    {
+      "id": "q-46",
+      "question": "What happened three days later?",
+      "answer": "The baker was killed; the wine taster got his job back",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 267
+      },
+      "notes": "Original question preserved verbatim. Answer follows the source lesson; contextual answer, where needed, is offered for teacher review."
+    },
+    {
+      "id": "q-47",
+      "question": "What did the wine taster do after he got his job back?",
+      "answer": "He completely forgot about Joseph",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 268
+      },
+      "notes": "Original question preserved verbatim. Answer follows the source lesson; contextual answer, where needed, is offered for teacher review."
+    }
+  ],
+  "facts": [
+    {
+      "id": "tf-01",
+      "statement": "Pharaoh’s wine taster and baker joined Joseph in prison.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "STORY NOTE",
+        "page": 2,
+        "sourceParagraphIndex": 41
+      }
+    },
+    {
+      "id": "tf-02",
+      "statement": "The wine taster and baker were thrown into a bottomless pit.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-03",
+      "statement": "Both men had dreams that Joseph helped them understand.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "STORY NOTE",
+        "page": 2,
+        "sourceParagraphIndex": 41
+      }
+    },
+    {
+      "id": "tf-04",
+      "statement": "The wine taster dreamed about baskets of eggs on his head.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-02"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-05",
+      "statement": "The wine taster dreamed about a vine with three branches.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "STORY NOTE",
+        "page": 2,
+        "sourceParagraphIndex": 56
+      }
+    },
+    {
+      "id": "tf-06",
+      "statement": "The vine in the wine taster’s dream had seven branches.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-02"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-07",
+      "statement": "Joseph said the wine taster would get his job back in three days.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "STORY NOTE",
+        "page": 3,
+        "sourceParagraphIndex": 75
+      }
+    },
+    {
+      "id": "tf-08",
+      "statement": "Joseph told the baker he would get his job back in three days.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-06"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-09",
+      "statement": "Birds ate bread from baskets in the baker’s dream.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "STORY NOTE",
+        "page": 4,
+        "sourceParagraphIndex": 105
+      }
+    },
+    {
+      "id": "tf-10",
+      "statement": "In the baker’s dream, cows ate the bread from his baskets.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-11",
+      "statement": "Joseph asked the wine taster to tell Pharaoh about him.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "STORY NOTE",
+        "page": 3,
+        "sourceParagraphIndex": 88
+      }
+    },
+    {
+      "id": "tf-12",
+      "statement": "The wine taster told Pharaoh about Joseph as soon as he left prison.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-13",
+      "statement": "Pharaoh had the baker killed three days later.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "STORY NOTE",
+        "page": 4,
+        "sourceParagraphIndex": 120
+      }
+    },
+    {
+      "id": "tf-14",
+      "statement": "The wine taster got his job back but forgot Joseph.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "STORY NOTE",
+        "page": 5,
+        "sourceParagraphIndex": 136
+      }
+    }
+  ],
+  "vocabulary": {
+    "related": [
+      "JOSEPH",
+      "PRISON",
+      "PHARAOH",
+      "BAKER",
+      "WINE TASTER",
+      "DREAM",
+      "GRAPES",
+      "VINE",
+      "BRANCHES",
+      "CUP",
+      "BIRDS",
+      "BREAD",
+      "BASKETS",
+      "THREE",
+      "DAVID",
+      "FORGOT",
+      "GOD"
+    ],
+    "unrelated": [
+      "LION",
+      "HARP",
+      "ARMOR",
+      "SPEAR",
+      "BOAT",
+      "SHEPHERD",
+      "RIVER",
+      "TENT",
+      "SHIELD",
+      "ALTAR"
+    ],
+    "entries": [
+      {
+        "id": "v-01",
+        "term": "JOSEPH",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-02",
+        "term": "PRISON",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-03",
+        "term": "PHARAOH",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-04",
+        "term": "BAKER",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-05",
+        "term": "WINE TASTER",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-06",
+        "term": "DREAM",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-07",
+        "term": "GRAPES",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-08",
+        "term": "VINE",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-09",
+        "term": "BRANCHES",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-10",
+        "term": "CUP",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-11",
+        "term": "BIRDS",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-12",
+        "term": "BREAD",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-13",
+        "term": "BASKETS",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-14",
+        "term": "THREE",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-15",
+        "term": "DAVID",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-16",
+        "term": "FORGOT",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-17",
+        "term": "GOD",
+        "origin": "adapted",
+        "category": "story-related",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-18",
+        "term": "LION",
+        "origin": "suggested",
+        "category": "unrelated-distractor",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-19",
+        "term": "HARP",
+        "origin": "suggested",
+        "category": "unrelated-distractor",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-20",
+        "term": "ARMOR",
+        "origin": "suggested",
+        "category": "unrelated-distractor",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-21",
+        "term": "SPEAR",
+        "origin": "suggested",
+        "category": "unrelated-distractor",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-22",
+        "term": "BOAT",
+        "origin": "suggested",
+        "category": "unrelated-distractor",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-23",
+        "term": "SHEPHERD",
+        "origin": "suggested",
+        "category": "unrelated-distractor",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-24",
+        "term": "RIVER",
+        "origin": "suggested",
+        "category": "unrelated-distractor",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-25",
+        "term": "TENT",
+        "origin": "suggested",
+        "category": "unrelated-distractor",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-26",
+        "term": "SHIELD",
+        "origin": "suggested",
+        "category": "unrelated-distractor",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-27",
+        "term": "ALTAR",
+        "origin": "suggested",
+        "category": "unrelated-distractor",
+        "teacherReviewRequired": true
+      }
+    ]
+  },
+  "characters": [
+    {
+      "id": "ch-01",
+      "name": "Joseph",
+      "origin": "adapted",
+      "scope": "current-story",
+      "sourceIds": [
+        "sn-01",
+        "sn-03",
+        "sn-04",
+        "sn-06",
+        "sn-07"
+      ],
+      "clues": [
+        {
+          "text": "God helped me explain two dreams while I was in prison.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-01",
+            "sn-03"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch-02",
+      "name": "Wine taster",
+      "origin": "adapted",
+      "scope": "current-story",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-07"
+      ],
+      "clues": [
+        {
+          "text": "I squeezed grapes into Pharaoh’s cup in my dream.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-02"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch-03",
+      "name": "Baker",
+      "origin": "adapted",
+      "scope": "current-story",
+      "sourceIds": [
+        "sn-01",
+        "sn-05",
+        "sn-06"
+      ],
+      "clues": [
+        {
+          "text": "I dreamed about baskets of bread and birds.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-05"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch-04",
+      "name": "Pharaoh",
+      "origin": "adapted",
+      "scope": "current-story",
+      "sourceIds": [
+        "sn-01",
+        "sn-03",
+        "sn-06"
+      ],
+      "clues": [
+        {
+          "text": "I was the king of Egypt.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-01"
+          ]
+        }
+      ]
+    }
+  ],
+  "matchingPairs": [
+    {
+      "id": "mp-01",
+      "left": "Joseph",
+      "right": "Prisoner",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    {
+      "id": "mp-02",
+      "left": "Pharaoh",
+      "right": "King",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    {
+      "id": "mp-03",
+      "left": "Grapes",
+      "right": "Vine",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ]
+    },
+    {
+      "id": "mp-04",
+      "left": "Baker",
+      "right": "Bread",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ]
+    },
+    {
+      "id": "mp-05",
+      "left": "Wine Taster",
+      "right": "Cup",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ]
+    },
+    {
+      "id": "mp-06",
+      "left": "Dream",
+      "right": "Message",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    }
+  ],
+  "drawingPrompts": [
+    {
+      "id": "draw-01",
+      "prompt": "Joseph, the baker, and the wine taster in prison",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    {
+      "id": "draw-02",
+      "prompt": "the wine taster squeezing grapes into a cup",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ]
+    },
+    {
+      "id": "draw-03",
+      "prompt": "birds eating bread from baskets on the baker’s head",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ]
+    },
+    {
+      "id": "draw-04",
+      "prompt": "the wine taster giving Pharaoh his cup at a feast",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ]
+    }
+  ],
+  "keyPhrases": [
+    {
+      "id": "kp-01",
+      "text": "The wine taster and baker dreamed while they were in prison.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    {
+      "id": "kp-02",
+      "text": "Joseph said that only God knows what dreams mean.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    {
+      "id": "kp-03",
+      "text": "The wine taster dreamed about squeezing grapes into Pharaoh’s cup.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ]
+    },
+    {
+      "id": "kp-04",
+      "text": "The three branches stood for three days.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ]
+    },
+    {
+      "id": "kp-05",
+      "text": "The baker dreamed that birds ate bread from baskets.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ]
+    },
+    {
+      "id": "kp-06",
+      "text": "Joseph told the baker that Pharaoh would have him killed.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ]
+    },
+    {
+      "id": "kp-07",
+      "text": "The wine taster forgot about Joseph after he left prison.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ]
+    },
+    {
+      "id": "kp-08",
+      "text": "No matter how bad things look, we are never forgotten by God.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ]
+    },
+    {
+      "id": "kp-review-1",
+      "text": "No matter what happens, we are never forgotten by God.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "theologicalApplications": [
+    {
+      "id": "app-01",
+      "text": "God knew the meaning of both dreams.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-03",
+        "sn-06"
+      ]
+    },
+    {
+      "id": "app-02",
+      "text": "Even though the wine taster forgot Joseph, God did not forget him.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ]
+    },
+    {
+      "id": "app-03",
+      "text": "God is with His people through hard and frightening times.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ]
+    },
+    {
+      "id": "app-04",
+      "text": "Jesus promises to be with His followers.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ]
+    }
+  ],
+  "preparedActivities": {
+    "drawPicture": {
+      "prompt": "Joseph, the baker, and the wine taster in prison",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    "multipleChoice": [
+      {
+        "id": "mc-01",
+        "question": "Who was in prison with Joseph?",
+        "correctAnswer": "Pharaoh’s baker and wine taster",
+        "choices": [
+          {
+            "text": "Joseph's brothers",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Pharaoh’s baker and wine taster",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Pharaoh's bodyguard",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "sourceQuestionIds": [
+          "q-38"
+        ],
+        "sourceIds": [
+          "sn-01"
+        ],
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-02",
+        "question": "Who did Joseph say knows what dreams mean?",
+        "correctAnswer": "God",
+        "choices": [
+          {
+            "text": "Pharaoh",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Himself",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "God",
+            "isCorrect": true,
+            "origin": "adapted"
+          }
+        ],
+        "sourceQuestionIds": [
+          "q-40"
+        ],
+        "sourceIds": [
+          "sn-01"
+        ],
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-03",
+        "question": "What did the wine taster squeeze into Pharaoh’s cup?",
+        "correctAnswer": "Grapes",
+        "choices": [
+          {
+            "text": "Figs",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Grapes",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Olives",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "sourceQuestionIds": [
+          "q-41"
+        ],
+        "sourceIds": [
+          "sn-02"
+        ],
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-04",
+        "question": "What did the three branches in the wine taster’s dream mean?",
+        "correctAnswer": "Three days",
+        "choices": [
+          {
+            "text": "Three years",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Three days",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Three kings",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "sourceQuestionIds": [
+          "q-42"
+        ],
+        "sourceIds": [
+          "sn-03"
+        ],
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-05",
+        "question": "What ate the bread in the baker’s dream?",
+        "correctAnswer": "Birds",
+        "choices": [
+          {
+            "text": "Mice",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Birds",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Pharaoh",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "sourceQuestionIds": [
+          "q-44"
+        ],
+        "sourceIds": [
+          "sn-05"
+        ],
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-06",
+        "question": "What did the wine taster do after he got his job back?",
+        "correctAnswer": "He forgot Joseph",
+        "choices": [
+          {
+            "text": "He told Pharaoh about Joseph",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "He forgot Joseph",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "He helped Joseph escape",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "sourceQuestionIds": [
+          "q-47"
+        ],
+        "sourceIds": [
+          "sn-07"
+        ],
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      }
+    ],
+    "sortStory": [
+      {
+        "statement": "Pharaoh’s wine taster and baker joined Joseph in prison.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": false,
+        "source": {
+          "filename": "OT 22 Lesson (Joseph in Prison).odt",
+          "section": "STORY NOTE",
+          "page": 2,
+          "sourceParagraphIndex": 41
+        },
+        "factId": "tf-01"
+      },
+      {
+        "statement": "The wine taster and baker were thrown into a bottomless pit.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": true,
+        "factId": "tf-02"
+      },
+      {
+        "statement": "Both men had dreams that Joseph helped them understand.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": false,
+        "source": {
+          "filename": "OT 22 Lesson (Joseph in Prison).odt",
+          "section": "STORY NOTE",
+          "page": 2,
+          "sourceParagraphIndex": 41
+        },
+        "factId": "tf-03"
+      },
+      {
+        "statement": "The wine taster dreamed about baskets of eggs on his head.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": true,
+        "factId": "tf-04"
+      },
+      {
+        "statement": "The wine taster dreamed about a vine with three branches.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": false,
+        "source": {
+          "filename": "OT 22 Lesson (Joseph in Prison).odt",
+          "section": "STORY NOTE",
+          "page": 2,
+          "sourceParagraphIndex": 56
+        },
+        "factId": "tf-05"
+      },
+      {
+        "statement": "Joseph told the baker he would get his job back in three days.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-06"
+        ],
+        "teacherReviewRequired": true,
+        "factId": "tf-08"
+      },
+      {
+        "statement": "Birds ate bread from baskets in the baker’s dream.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ],
+        "teacherReviewRequired": false,
+        "source": {
+          "filename": "OT 22 Lesson (Joseph in Prison).odt",
+          "section": "STORY NOTE",
+          "page": 4,
+          "sourceParagraphIndex": 105
+        },
+        "factId": "tf-09"
+      },
+      {
+        "statement": "Pharaoh had the baker killed three days later.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ],
+        "teacherReviewRequired": false,
+        "source": {
+          "filename": "OT 22 Lesson (Joseph in Prison).odt",
+          "section": "STORY NOTE",
+          "page": 4,
+          "sourceParagraphIndex": 120
+        },
+        "factId": "tf-13"
+      }
+    ],
+    "trueFalse": {
+      "statement": "The wine taster got his job back but forgot Joseph.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "STORY NOTE",
+        "page": 5,
+        "sourceParagraphIndex": 136
+      },
+      "factId": "tf-14"
+    },
+    "trueFalseMaze": {
+      "factId": "tf-10",
+      "statement": "In the baker’s dream, cows ate the bread from his baskets.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": true
+    },
+    "firstLetters": {
+      "reference": "Psalm 23:4",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 215,
+        "details": "Source ESV excerpt: Even though I walk through the valley of the shadow of death, I will fear no evil, for you are with me... Proposed BSB excerpt preserves the BSB capitalization of “You” and ends at the semicolon; check exact excerpt end punctuation and age suitability before approval."
+      },
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": true,
+      "verse": "Even though I walk through the valley of the shadow of death, I will fear no evil, for You are with me; Your rod and Your staff, they comfort me."
+    },
+    "upsideDownVerse": {
+      "reference": "Psalm 23:4",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 215,
+        "details": "Source ESV excerpt: Even though I walk through the valley of the shadow of death, I will fear no evil, for you are with me... Proposed BSB excerpt preserves the BSB capitalization of “You” and ends at the semicolon; check exact excerpt end punctuation and age suitability before approval."
+      },
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": true,
+      "verse": "Even though I walk through the valley of the shadow of death, I will fear no evil, for You are with me; Your rod and Your staff, they comfort me."
+    },
+    "verseCryptogram": {
+      "reference": "Psalm 23:4",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 215,
+        "details": "Source ESV excerpt: Even though I walk through the valley of the shadow of death, I will fear no evil, for you are with me... Proposed BSB excerpt preserves the BSB capitalization of “You” and ends at the semicolon; check exact excerpt end punctuation and age suitability before approval."
+      },
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": true,
+      "verse": "Even though I walk through the valley of the shadow of death, I will fear no evil, for You are with me; Your rod and Your staff, they comfort me."
+    },
+    "spiralVerse": {
+      "reference": "Psalm 23:4",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 215,
+        "details": "Source ESV excerpt: Even though I walk through the valley of the shadow of death, I will fear no evil, for you are with me... Proposed BSB excerpt preserves the BSB capitalization of “You” and ends at the semicolon; check exact excerpt end punctuation and age suitability before approval."
+      },
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": true,
+      "verse": "Even though I walk through the valley of the shadow of death, I will fear no evil, for You are with me; Your rod and Your staff, they comfort me."
+    },
+    "connectVerse": {
+      "reference": "Psalm 23:4",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 215,
+        "details": "Source ESV excerpt: Even though I walk through the valley of the shadow of death, I will fear no evil, for you are with me... Proposed BSB excerpt preserves the BSB capitalization of “You” and ends at the semicolon; check exact excerpt end punctuation and age suitability before approval."
+      },
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": true,
+      "verse": "Even though I walk through the valley of the shadow of death, I will fear no evil, for You are with me; Your rod and Your staff, they comfort me."
+    },
+    "finishVerse": {
+      "reference": "Psalm 23:4",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 215,
+        "details": "Source ESV excerpt: Even though I walk through the valley of the shadow of death, I will fear no evil, for you are with me... Proposed BSB excerpt preserves the BSB capitalization of “You” and ends at the semicolon; check exact excerpt end punctuation and age suitability before approval."
+      },
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": true,
+      "markedVerse": "Even though I [walk] through the [valley] of the [shadow] of [death], I will fear no [evil], for You are [with] me; Your rod and Your [staff], they comfort me.",
+      "sourceVerse": "Even though I walk through the valley of the shadow of death, I will fear no evil, for You are with me; Your rod and Your staff, they comfort me."
+    },
+    "unscrambleVerse": {
+      "reference": "Psalm 23:4",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 215,
+        "details": "Source ESV excerpt: Even though I walk through the valley of the shadow of death, I will fear no evil, for you are with me... Proposed BSB excerpt preserves the BSB capitalization of “You” and ends at the semicolon; check exact excerpt end punctuation and age suitability before approval."
+      },
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": true,
+      "markedVerse": "Even though I [walk] through the [valley] of the [shadow] of [death], I will fear no [evil], for You are [with] me; Your rod and Your [staff], they comfort me.",
+      "sourceVerse": "Even though I walk through the valley of the shadow of death, I will fear no evil, for You are with me; Your rod and Your staff, they comfort me."
+    },
+    "oddWords": {
+      "related": [
+        "GRAPES",
+        "VINE",
+        "BRANCHES",
+        "CUP"
+      ],
+      "unrelated": [
+        "Fish",
+        "Bananas",
+        "Rocks",
+        "Nose",
+        "Ring"
+      ],
+      "unrelatedOrigin": "suggested",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ],
+      "teacherReviewRequired": true
+    },
+    "unscrambleWords": {
+      "answers": [
+        "BAKER",
+        "GRAPEVINE"
+      ],
+      "origin": "suggested",
+      "sourceIds": [],
+      "teacherReviewRequired": true
+    },
+    "checkboxes": {
+      "correct": [
+        "Joseph",
+        "Baker",
+        "Prison",
+        "Birds"
+      ],
+      "incorrect": [
+        "Lion",
+        "Manger",
+        "Money",
+        "Disciple",
+        "Nail"
+      ],
+      "incorrectOrigin": "suggested",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-05"
+      ],
+      "teacherReviewRequired": true
+    },
+    "whoAmI": {
+      "clue": "Pharaoh threw me in prison. I dreamed of a grape vine. I squeezed grapes into Pharaoh's cup. Who am I?",
+      "answer": "Wine Taster",
+      "origin": "suggested",
+      "sourceIds": [],
+      "teacherReviewRequired": true
+    },
+    "matchWords": [
+      {
+        "id": "mp-01",
+        "left": "Prisoner",
+        "right": "Joseph",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-02",
+        "left": "Pharaoh",
+        "right": "King",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "id": "mp-03",
+        "left": "Grapes",
+        "right": "Vine",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "id": "mp-04",
+        "left": "Baker",
+        "right": "Bread",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-05"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-05",
+        "left": "Wine Taster",
+        "right": "Cup",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "id": "mp-06",
+        "left": "Dreams",
+        "right": "Message",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": true
+      }
+    ],
+    "circleMistakes": {
+      "paragraph": "Pharaoh's wine taster and bodyguard were thrown into prison with Joseph. The wine taster dreamed of a banana vine with three branches. He squeezed grapes into a basket for Pharaoh. Joseph explained that the wine taster would get his job back in three years. The baker dreamed of birds eating fish from baskets on his head. When the wine taster went free, he remembered Joseph right away.",
+      "mistakeCount": 6,
+      "mistakes": [
+        {
+          "incorrect": "bodyguard",
+          "correction": "baker"
+        },
+        {
+          "incorrect": "banana",
+          "correction": "grape"
+        },
+        {
+          "incorrect": "basket",
+          "correction": "Pharaoh’s cup"
+        },
+        {
+          "incorrect": "years",
+          "correction": "days"
+        },
+        {
+          "incorrect": "fish ",
+          "correction": "bread"
+        },
+        {
+          "incorrect": "remembered",
+          "correction": "forgot"
+        }
+      ],
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-05",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "mediumWordSearch": {
+      "words": [
+        "JOSEPH",
+        "BAKER",
+        "PRISON",
+        "GRAPES",
+        "BIRDS",
+        "THREE"
+      ],
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-05"
+      ]
+    },
+    "bigIdeaCryptogram": {
+      "phrase": "No matter what happens, we are never forgotten by God.",
+      "origin": "suggested",
+      "sourceIds": [],
+      "teacherReviewRequired": true
+    },
+    "connectBigIdea": {
+      "phrase": "No matter how bad things look, we are never forgotten by God.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 22 Lesson (Joseph in Prison).odt",
+        "section": "Important Idea",
+        "page": 5,
+        "sourceParagraphIndex": 150,
+        "details": "Original ODT important-idea text uses display styling that can hide capitalization; the God reference is capitalized in the adapted text."
+      },
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": false
+    },
+    "pixelPicture": {
+      "phrase": "No matter what happens, we are never forgotten by God.",
+      "origin": "suggested",
+      "sourceIds": [],
+      "teacherReviewRequired": true
+    },
+    "finishStory": {
+      "markedParagraph": "Pharaoh's [wine] taster and [baker] went sent to [prison]. They were there with Joseph. Both of them had [dreams] that troubled them. The wine taster dreamed about squeezing [grapes] into Pharaoh's cup. The baker dreamed of birds eating [bread] from baskets on his [head]. The two men explained their dreams to Joseph. Because of God's [help], Joseph explained the [meaning] of these dreams. Three days later, Pharaoh punished the baker, but gave the wine taster his [job] back, just like Joseph said. After [leaving] prison, the wine taster [forgot] Joseph.",
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-05",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "storyOrder": [
+      {
+        "order": 1,
+        "text": "Pharaoh threw his baker and wine taster into prison with Joseph.",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 2,
+        "text": "The wine taster dreamed of squeezing grapes into Pharaoh’s cup.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "order": 3,
+        "text": "Joseph said the wine taster would get his job back in three days.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "order": 4,
+        "text": "Joseph asked the wine taster to speak to Pharaoh for him.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "order": 5,
+        "text": "The baker dreamed that birds ate bread from baskets on his head.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "order": 6,
+        "text": "Joseph told the baker that Pharaoh would punish him in three days.",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-06"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 7,
+        "text": "The wine taster got his job back but forgot Joseph.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      }
+    ],
+    "drawStory": [
+      {
+        "prompt": "Pharaoh threw his baker and wine taster into prison with Joseph.",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "The wine taster dreamed of squeezing grapes into Pharaoh’s cup.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "prompt": "Joseph said the wine taster would get his job back in three days.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "prompt": "Joseph asked the wine taster to speak to Pharaoh for him.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "prompt": "The baker dreamed that birds ate bread from baskets on his head.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "prompt": "The wine taster got his job back but forgot Joseph.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      }
+    ],
+    "wordSearch": {
+      "words": [
+        "JOSEPH",
+        "wine taster",
+        "PRISON",
+        "BAKER",
+        "GRAPES",
+        "VINE",
+        "BREAD",
+        "BIRDS",
+        "CUP",
+        "DREAM",
+        "THREE",
+        "FORGOT"
+      ],
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "crossword": [
+      {
+        "answer": "JOSEPH",
+        "clue": "This man explained the two prisoners’ dreams.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "answer": "WINE TASTER",
+        "clue": "This man received his job back.",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "BAKER",
+        "clue": "This man dreamed about baskets of bread.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "answer": "GRAPES",
+        "clue": "The fruit squeezed into Pharaoh’s cup.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "answer": "VINE",
+        "clue": "The plant that grew grapes in the dream.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "answer": "BIRDS",
+        "clue": "They ate the bread in the baker’s dream.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "answer": "THREE",
+        "clue": "The number of branches and baskets in the dreams.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02",
+          "sn-05"
+        ]
+      },
+      {
+        "answer": "PRISON",
+        "clue": "The place where Joseph was kept.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "answer": "CUP",
+        "clue": "The wine taster filled this for Pharaoh.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "answer": "DREAM",
+        "clue": "A special message God gave each man while he slept.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      }
+    ]
+  },
+  "moduleReadiness": [
+    {
+      "moduleName": "Draw a Picture",
+      "moduleId": "draw-picture",
+      "size": "Small",
+      "preparedActivityKey": "drawPicture",
+      "status": "READY",
+      "contentValidation": "Local structure, source links and text checks only. Official repository validator and live generators/presets have NOT been run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means proposed content is supplied; generator success and publication approval are not implied."
+    },
+    {
+      "moduleName": "Multiple Choice",
+      "moduleId": "multiple-choice",
+      "size": "Small",
+      "preparedActivityKey": "multipleChoice",
+      "status": "READY",
+      "contentValidation": "Local structure, source links and text checks only. Official repository validator and live generators/presets have NOT been run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means proposed content is supplied; generator success and publication approval are not implied."
+    },
+    {
+      "moduleName": "True / False",
+      "moduleId": "true-false",
+      "size": "Small",
+      "preparedActivityKey": "trueFalse",
+      "status": "READY",
+      "contentValidation": "Local structure, source links and text checks only. Official repository validator and live generators/presets have NOT been run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means proposed content is supplied; generator success and publication approval are not implied."
+    },
+    {
+      "moduleName": "First Letters",
+      "moduleId": "first-letters",
+      "size": "Small",
+      "preparedActivityKey": "firstLetters",
+      "status": "READY",
+      "contentValidation": "Local structure, source links and text checks only. Official repository validator and live generators/presets have NOT been run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means proposed content is supplied; generator success and publication approval are not implied."
+    },
+    {
+      "moduleName": "Odd Words",
+      "moduleId": "odd-words",
+      "size": "Small",
+      "preparedActivityKey": "oddWords",
+      "status": "READY",
+      "contentValidation": "Local structure, source links and text checks only. Official repository validator and live generators/presets have NOT been run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means proposed content is supplied; generator success and publication approval are not implied."
+    },
+    {
+      "moduleName": "Unscramble Words",
+      "moduleId": "unscramble-words",
+      "size": "Small",
+      "preparedActivityKey": "unscrambleWords",
+      "status": "READY",
+      "contentValidation": "Local structure, source links and text checks only. Official repository validator and live generators/presets have NOT been run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means proposed content is supplied; generator success and publication approval are not implied."
+    },
+    {
+      "moduleName": "Checkboxes",
+      "moduleId": "checkboxes",
+      "size": "Small",
+      "preparedActivityKey": "checkboxes",
+      "status": "READY",
+      "contentValidation": "Local structure, source links and text checks only. Official repository validator and live generators/presets have NOT been run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means proposed content is supplied; generator success and publication approval are not implied."
+    },
+    {
+      "moduleName": "Who Am I?",
+      "moduleId": "who-am-i",
+      "size": "Small",
+      "preparedActivityKey": "whoAmI",
+      "status": "READY",
+      "contentValidation": "Local structure, source links and text checks only. Official repository validator and live generators/presets have NOT been run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means proposed content is supplied; generator success and publication approval are not implied."
+    },
+    {
+      "moduleName": "Match the Words",
+      "moduleId": "match-words",
+      "size": "Medium",
+      "preparedActivityKey": "matchWords",
+      "status": "READY",
+      "contentValidation": "Local structure, source links and text checks only. Official repository validator and live generators/presets have NOT been run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means proposed content is supplied; generator success and publication approval are not implied."
+    },
+    {
+      "moduleName": "Finish the Verse",
+      "moduleId": "finish-verse",
+      "size": "Medium",
+      "preparedActivityKey": "finishVerse",
+      "status": "READY",
+      "contentValidation": "Local structure, source links and text checks only. Official repository validator and live generators/presets have NOT been run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means proposed content is supplied; generator success and publication approval are not implied."
+    },
+    {
+      "moduleName": "Unscramble the Verse",
+      "moduleId": "unscramble-verse",
+      "size": "Medium",
+      "preparedActivityKey": "unscrambleVerse",
+      "status": "READY",
+      "contentValidation": "Local structure, source links and text checks only. Official repository validator and live generators/presets have NOT been run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means proposed content is supplied; generator success and publication approval are not implied."
+    },
+    {
+      "moduleName": "Circle the Mistakes",
+      "moduleId": "circle-mistakes",
+      "size": "Medium",
+      "preparedActivityKey": "circleMistakes",
+      "status": "READY",
+      "contentValidation": "Local structure, source links and text checks only. Official repository validator and live generators/presets have NOT been run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means proposed content is supplied; generator success and publication approval are not implied."
+    },
+    {
+      "moduleName": "Medium Word Search",
+      "moduleId": "medium-word-search",
+      "size": "Medium",
+      "preparedActivityKey": "mediumWordSearch",
+      "status": "READY",
+      "contentValidation": "Local structure, source links and text checks only. Official repository validator and live generators/presets have NOT been run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means proposed content is supplied; generator success and publication approval are not implied."
+    },
+    {
+      "moduleName": "True / False Maze",
+      "moduleId": "true-false-maze",
+      "size": "Medium",
+      "preparedActivityKey": "trueFalseMaze",
+      "status": "READY",
+      "contentValidation": "Local structure, source links and text checks only. Official repository validator and live generators/presets have NOT been run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means proposed content is supplied; generator success and publication approval are not implied."
+    },
+    {
+      "moduleName": "Big Idea Cryptogram",
+      "moduleId": "big-idea-cryptogram",
+      "size": "Medium",
+      "preparedActivityKey": "bigIdeaCryptogram",
+      "status": "READY",
+      "contentValidation": "Local structure, source links and text checks only. Official repository validator and live generators/presets have NOT been run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means proposed content is supplied; generator success and publication approval are not implied."
+    },
+    {
+      "moduleName": "Upside-Down Verse",
+      "moduleId": "upside-down-verse",
+      "size": "Medium",
+      "preparedActivityKey": "upsideDownVerse",
+      "status": "READY",
+      "contentValidation": "Local structure, source links and text checks only. Official repository validator and live generators/presets have NOT been run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means proposed content is supplied; generator success and publication approval are not implied."
+    },
+    {
+      "moduleName": "Connect the Big Idea",
+      "moduleId": "connect-big-idea",
+      "size": "Medium",
+      "preparedActivityKey": "connectBigIdea",
+      "status": "READY",
+      "contentValidation": "Local structure, source links and text checks only. Official repository validator and live generators/presets have NOT been run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means proposed content is supplied; generator success and publication approval are not implied."
+    },
+    {
+      "moduleName": "Pixel Picture",
+      "moduleId": "pixel-picture",
+      "size": "Medium",
+      "preparedActivityKey": "pixelPicture",
+      "status": "READY",
+      "contentValidation": "Local structure, source links and text checks only. Official repository validator and live generators/presets have NOT been run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means proposed content is supplied; generator success and publication approval are not implied."
+    },
+    {
+      "moduleName": "Finish the Story",
+      "moduleId": "finish-story",
+      "size": "Large",
+      "preparedActivityKey": "finishStory",
+      "status": "READY",
+      "contentValidation": "Local structure, source links and text checks only. Official repository validator and live generators/presets have NOT been run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means proposed content is supplied; generator success and publication approval are not implied."
+    },
+    {
+      "moduleName": "Story Order",
+      "moduleId": "story-order",
+      "size": "Large",
+      "preparedActivityKey": "storyOrder",
+      "status": "READY",
+      "contentValidation": "Local structure, source links and text checks only. Official repository validator and live generators/presets have NOT been run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means proposed content is supplied; generator success and publication approval are not implied."
+    },
+    {
+      "moduleName": "Sort the Story",
+      "moduleId": "sort-story",
+      "size": "Large",
+      "preparedActivityKey": "sortStory",
+      "status": "READY",
+      "contentValidation": "Local structure, source links and text checks only. Official repository validator and live generators/presets have NOT been run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means proposed content is supplied; generator success and publication approval are not implied."
+    },
+    {
+      "moduleName": "Draw the Story",
+      "moduleId": "draw-story",
+      "size": "Large",
+      "preparedActivityKey": "drawStory",
+      "status": "READY",
+      "contentValidation": "Local structure, source links and text checks only. Official repository validator and live generators/presets have NOT been run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means proposed content is supplied; generator success and publication approval are not implied."
+    },
+    {
+      "moduleName": "Word Search",
+      "moduleId": "word-search",
+      "size": "Large",
+      "preparedActivityKey": "wordSearch",
+      "status": "READY",
+      "contentValidation": "Local structure, source links and text checks only. Official repository validator and live generators/presets have NOT been run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means proposed content is supplied; generator success and publication approval are not implied."
+    },
+    {
+      "moduleName": "Verse Cryptogram",
+      "moduleId": "verse-cryptogram",
+      "size": "Large",
+      "preparedActivityKey": "verseCryptogram",
+      "status": "READY",
+      "contentValidation": "Local structure, source links and text checks only. Official repository validator and live generators/presets have NOT been run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means proposed content is supplied; generator success and publication approval are not implied."
+    },
+    {
+      "moduleName": "Crossword",
+      "moduleId": "crossword",
+      "size": "Large",
+      "preparedActivityKey": "crossword",
+      "status": "READY",
+      "contentValidation": "Local structure, source links and text checks only. Official repository validator and live generators/presets have NOT been run.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "READY means proposed content is supplied; generator success and publication approval are not implied."
+    },
+    {
+      "moduleName": "Spiral Verse",
+      "moduleId": "spiral-verse",
+      "size": "Large",
+      "preparedActivityKey": "spiralVerse",
+      "status": "READY",
+      "contentValidation": "Local structure, source links and text checks only. Official repository validator and live generators/presets have NOT been run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means proposed content is supplied; generator success and publication approval are not implied."
+    },
+    {
+      "moduleName": "Connect the Verse",
+      "moduleId": "connect-verse",
+      "size": "Large",
+      "preparedActivityKey": "connectVerse",
+      "status": "READY",
+      "contentValidation": "Local structure, source links and text checks only. Official repository validator and live generators/presets have NOT been run.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "READY means proposed content is supplied; generator success and publication approval are not implied."
+    }
+  ],
+  "reviewFlags": [
+    {
+      "id": "rf-01",
+      "priority": "high",
+      "type": "scripture-review",
+      "text": "Source memory verse is an ESV excerpt of Psalm 23:4a. Prepared activities use a BSB excerpt ending “for You are with me;” Verify the exact passage boundary, punctuation, child readability and intended publication permissions.",
+      "affectedModules": [
+        "first-letters",
+        "finish-verse",
+        "unscramble-verse",
+        "upside-down-verse",
+        "verse-cryptogram",
+        "spiral-verse",
+        "connect-verse"
+      ]
+    },
+    {
+      "id": "rf-02",
+      "priority": "high",
+      "type": "teacher-approval",
+      "text": "Review the six Multiple Choice questions and their twelve suggested wrong answers for age suitability and clarity.",
+      "affectedModules": [
+        "multiple-choice"
+      ]
+    },
+    {
+      "id": "rf-03",
+      "priority": "high",
+      "type": "teacher-approval",
+      "text": "Review the six newly composed false facts and the three non-overlapping True/False-related module selections.",
+      "affectedModules": [
+        "sort-story",
+        "true-false",
+        "true-false-maze"
+      ]
+    },
+    {
+      "id": "rf-04",
+      "priority": "medium",
+      "type": "source-meaning",
+      "text": "The original lesson describes the baker being killed and the later fate of his body. Preserve the original Story Note and questions; check whether the child-facing activities use the right level of detail.",
+      "affectedModules": [
+        "story-order",
+        "sort-story",
+        "multiple-choice",
+        "true-false",
+        "true-false-maze",
+        "draw-story"
+      ]
+    },
+    {
+      "id": "rf-05",
+      "priority": "medium",
+      "type": "vocabulary",
+      "text": "Check that Odd Words and Checkboxes are truly distinct and that suggested distractors are clearly not part of the current story.",
+      "affectedModules": [
+        "odd-words",
+        "checkboxes"
+      ]
+    },
+    {
+      "id": "rf-06",
+      "priority": "medium",
+      "type": "circle-mistakes",
+      "text": "Review six deliberate errors and the correction key. They should be clear, not too hard or repetitive.",
+      "affectedModules": [
+        "circle-mistakes"
+      ]
+    },
+    {
+      "id": "rf-07",
+      "priority": "medium",
+      "type": "source-chronology",
+      "text": "Do not suggest Joseph was freed in Genesis 40; the wine taster returned to his work, the baker was killed, and Joseph remained in prison and was forgotten.",
+      "affectedModules": [
+        "story-order",
+        "draw-story",
+        "true-false",
+        "sort-story"
+      ]
+    },
+    {
+      "id": "rf-08",
+      "priority": "medium",
+      "type": "generator-test",
+      "text": "Before approving, test every live generator, the official preflight and all three numbered worksheet presets. Draft content has not been tested in the app.",
+      "affectedModules": [
+        "draw-picture",
+        "multiple-choice",
+        "true-false",
+        "first-letters",
+        "odd-words",
+        "unscramble-words",
+        "checkboxes",
+        "who-am-i",
+        "match-words",
+        "finish-verse",
+        "unscramble-verse",
+        "circle-mistakes",
+        "medium-word-search",
+        "true-false-maze",
+        "big-idea-cryptogram",
+        "upside-down-verse",
+        "connect-big-idea",
+        "pixel-picture",
+        "finish-story",
+        "story-order",
+        "sort-story",
+        "draw-story",
+        "word-search",
+        "verse-cryptogram",
+        "crossword",
+        "spiral-verse",
+        "connect-verse"
+      ]
+    },
+    {
+      "id": "rf-09",
+      "priority": "low",
+      "type": "source-provenance",
+      "text": "All seven Story Notes are preserved exactly, with the original emphasized words, and all teaching/review questions are separately retained.",
+      "affectedModules": [
+        "story-order",
+        "finish-story",
+        "draw-story"
+      ]
+    },
+    {
+      "id": "rf-10",
+      "priority": "low",
+      "type": "reading-level",
+      "text": "Review harder lesson words such as Pharaoh, wine taster, prison and the memory verse’s “shadow of death” for the intended ages.",
+      "affectedModules": [
+        "crossword",
+        "multiple-choice",
+        "finish-verse",
+        "first-letters"
+      ]
+    }
+  ],
+  "publication": {
+    "status": "approved",
+    "approved": true,
+    "notes": "For teacher review only. No publication, importer preflight, official validator, live worksheet generators or preset tests have been performed.",
+    "teacherSignoff": {
+      "reviewer": "Andrew Doane",
+      "date": "2026-11-05",
+      "notes": "Approved with verified BSB verse through Curriculum Review Studio"
+    },
+    "scriptureRights": {
+      "status": "cleared",
+      "basis": "Berean Standard Bible (BSB), dedicated to the public domain on April 30, 2023. Official terms: https://berean.bible/terms.htm. Scripture text confirmed against https://bereanbible.com/bsb.txt.",
+      "reviewedBy": "Andrew Doane",
+      "reviewedOn": "2026-11-05"
+    },
+    "resolvedReviewFlagIds": [
+      "rf-02",
+      "rf-03"
+    ]
+  },
+  "validation": {
+    "basis": "Original conversion tests predate teacher-approved BSB; revalidate actual engines and content after export.",
+    "allTextChecksPassed": false,
+    "checks": [
+      {
+        "check": "All seven original Story Notes preserved verbatim",
+        "passed": true
+      },
+      {
+        "check": "Each Story Note carries uppercase emphasis",
+        "passed": true
+      },
+      {
+        "check": "All original Q&A prompt paragraphs are represented",
+        "passed": true
+      },
+      {
+        "check": "All ten formal review questions preserved",
+        "passed": true
+      },
+      {
+        "check": "Every question exactly matches source wording",
+        "passed": true
+      },
+      {
+        "check": "Six Multiple Choice questions",
+        "passed": true
+      },
+      {
+        "check": "Each MC has exactly one correct and two unique incorrect options",
+        "passed": true
+      },
+      {
+        "check": "All MC original question IDs are resolvable",
+        "passed": true
+      },
+      {
+        "check": "14 True/False facts with 8 true and 6 false",
+        "passed": true
+      },
+      {
+        "check": "Suggested false statements are all flagged for review",
+        "passed": true
+      },
+      {
+        "check": "True/False statement texts all distinct",
+        "passed": true
+      },
+      {
+        "check": "Sort the Story has eight facts",
+        "passed": true
+      },
+      {
+        "check": "Ten non-overlapping facts across Preset 3 activities",
+        "passed": true
+      },
+      {
+        "check": "Four alternative True/False facts remain",
+        "passed": true
+      },
+      {
+        "check": "Four child-friendly drawing candidates",
+        "passed": true
+      },
+      {
+        "check": "Six short non-ambiguous matching pairs",
+        "passed": true
+      },
+      {
+        "check": "Odd Words and Checkboxes share no vocabulary",
+        "passed": true
+      },
+      {
+        "check": "Exactly six deliberate mistakes with keys",
+        "passed": true
+      },
+      {
+        "check": "Six mistake target tokens present",
+        "passed": true
+      },
+      {
+        "check": "scriptureDisplay includes just Genesis",
+        "passed": true
+      },
+      {
+        "check": "Big Idea capitalizes God",
+        "passed": true
+      },
+      {
+        "check": "Memory verse is BSB excerpt and source ESV remains documented",
+        "passed": true
+      },
+      {
+        "check": "Verse blanks reconstruct proposed BSB verse",
+        "passed": true
+      },
+      {
+        "check": "27 unique activity keys and readiness records",
+        "passed": true
+      },
+      {
+        "check": "Six Draw the Story captions end with punctuation",
+        "passed": true
+      },
+      {
+        "check": "All seven Story Order events have unique ordinal numbers",
+        "passed": true
+      },
+      {
+        "check": "Crossword clues are child-friendly, short, and have unique answers",
+        "passed": true
+      },
+      {
+        "check": "All sourceIds of activities refer to Story Notes",
+        "passed": true
+      },
+      {
+        "check": "No approvals or generator success claims",
+        "passed": true
+      },
+      {
+        "check": "All review flags contain valid module IDs",
+        "passed": true
+      },
+      {
+        "check": "Question bank is strictly separate from Multiple Choice bank",
+        "passed": true
+      }
+    ],
+    "schemaValidated": false,
+    "officialPreflightPassed": false,
+    "liveGeneratorsTested": false,
+    "allThreePresetsTested": false,
+    "actualGeneratorTested": false
+  }
+}
