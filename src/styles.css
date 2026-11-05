@@ -141,3 +141,61 @@ button:focus-visible { outline: 3px solid #dfaa65; outline-offset: 2px; }
   .start-fresh-button { padding: 9px 10px; font-size: 11px; }
   .main { padding-top: 16px; }
 }
+
+
+/* Plan D: desktop sidebar can collapse into a usable 76px icon/number rail.
+ * Layout remains a single column on mobile; the top-right Home stays visible.
+ */
+.sidebar-header { margin-bottom: 26px; }
+.sidebar-header .brand { margin: 0 0 12px 8px; }
+.sidebar-header .brand-icon { flex: 0 0 43px; }
+.sidebar-toggle { display: grid; place-items: center; margin-left: auto;
+  height: 35px; width: 38px; border: 1px solid #71988e; border-radius: 9px;
+  background: #255553; color: #e7f3ea; font: 700 24px/1 'Nunito',sans-serif; }
+.sidebar-toggle:hover, .sidebar-home:hover { background: #2b5a57; color: #fff; }
+.sidebar-navigation { width: 100%; }
+.sidebar-home { width: 100%; display: flex; align-items: center; gap: 12px;
+  min-height: 44px; margin-bottom: 24px; padding: 7px 12px;
+  border: 1px solid #71988e; border-radius: 10px; background: transparent;
+  color: #e7f3ea; text-align: left; font-size: 12px; font-weight: 900; }
+.sidebar-home-icon { flex: 0 0 32px; text-align: center; font: 700 30px/1 'Nunito',sans-serif; }
+.sidebar-home-copy, .sidebar-page-copy { display: inline-block; }
+.sidebar .step { width: 100%; border: 0; background: transparent; text-align: left; }
+.sidebar .step.current { background: #2b5a57; }
+.sidebar .step:hover { background: #2b5a57; color: #fff; }
+
+.app-shell.sidebar-is-collapsed { grid-template-columns: 76px minmax(0, 1fr); }
+.sidebar-is-collapsed .sidebar { padding: 23px 10px 20px; }
+.sidebar-is-collapsed .sidebar-header { display: flex; align-items: center;
+  flex-direction: column; gap: 10px; margin-bottom: 21px; }
+.sidebar-is-collapsed .sidebar-header .brand { justify-content: center; margin: 0; }
+.sidebar-is-collapsed .sidebar-toggle { margin: 0; }
+.sidebar-is-collapsed .sidebar-brand-copy,
+.sidebar-is-collapsed .nav-label,
+.sidebar-is-collapsed .sidebar-home-copy,
+.sidebar-is-collapsed .sidebar-step-copy,
+.sidebar-is-collapsed .sidebar-page-copy,
+.sidebar-is-collapsed .sidebar-foot { display: none; }
+.sidebar-is-collapsed .sidebar-home,
+.sidebar-is-collapsed .sidebar .step,
+.sidebar-is-collapsed .sidebar .page-link { width: 100%; min-height: 44px;
+  padding: 6px; justify-content: center; gap: 0; }
+.sidebar-is-collapsed .sidebar-home { margin-bottom: 18px; }
+.sidebar-is-collapsed .sidebar-home-icon { flex-basis: auto; }
+.sidebar-is-collapsed .sidebar-group { margin-bottom: 15px; padding-bottom: 14px;
+  border-bottom: 1px solid #386360; }
+.sidebar-is-collapsed .sidebar-group.page-nav { border: 0; }
+.sidebar-is-collapsed .sidebar .step-number { flex: 0 0 32px; }
+.sidebar-is-collapsed .sidebar .page-number { flex: 0 0 26px; }
+
+@media (max-width: 700px) {
+  /* Mobile retains the original brand-only strip. A desktop collapse
+   * preference must not turn the mobile header into an icon-only rail. */
+  .app-shell.sidebar-is-collapsed { display: block; }
+  .app-shell.sidebar-is-collapsed .sidebar { min-height: 0; padding: 14px 16px; }
+  .sidebar-header, .sidebar-is-collapsed .sidebar-header { display: block; margin: 0; }
+  .sidebar-header .brand, .sidebar-is-collapsed .sidebar-header .brand {
+    justify-content: flex-start; margin: 0; }
+  .sidebar-is-collapsed .sidebar-brand-copy { display: block; }
+  .sidebar-toggle, .sidebar-navigation { display: none; }
+}

@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import pkg from '../package.json';
+import {readSidebarCollapsed,saveSidebarCollapsed} from './sidebarPreference.ts';
 import {MODULE_GUIDANCE,isAutofilledModule,samplePlaceholder} from './moduleGuidance.ts';
 import {migrateDraftValue,type OriginalLessonContent} from './draftMigration.ts';
 import type {ActivityContentLinks} from './lessonContentLinks.ts';
@@ -230,6 +231,7 @@ export default function App() {
   const [draft, setDraft] = useState<Draft>(readDraft);
   // Every new app visit starts on the welcome screen, even with a saved draft.
   const [view,setView] = useState<'welcome'|'editor'>('welcome');
+  const [sidebarCollapsed,setSidebarCollapsed]=useState(readSidebarCollapsed);
   const storyInputRef = useRef<HTMLTextAreaElement>(null);
   const titleInputRef = useRef<HTMLInputElement>(null);
   const [page, setPage] = useState<PageNumber>(1);
@@ -249,6 +251,8 @@ export default function App() {
   const [borderSettingsOpen,setBorderSettingsOpen]=useState(false);
   const [contentDialog,setContentDialog]=useState<{kind:LessonContentKind;restoreOriginal?:boolean}|null>(null);
   const [contentNotice,setContentNotice]=useState<string|null>(null);
+
+  useEffect(()=>{saveSidebarCollapsed(sidebarCollapsed);},[sidebarCollapsed]);
 
   useEffect(() => {
     try {
@@ -625,33 +629,65 @@ export default function App() {
   />;
 
   return (
-    <div className="app-shell">
-      <aside className="sidebar">
-        <div className="brand">
-          <span className="brand-icon" aria-hidden="true">W<span>✦</span></span>
-          <div><strong>Worksheet Studio</strong><small>Bible booklet maker</small></div>
-        </div>
-        <div className="sidebar-group">
-          <div className="nav-label">YOUR WORKSPACE</div>
-          <button type="button" className={'step ' + (tab === 'details' ? 'current' : '')} onClick={() => setTab('details')}>
-            <span className="step-number">01</span><span><strong>Worksheet details</strong><small>Title, Scripture & verse</small></span>
-          </button>
-          <button type="button" className={'step ' + (tab === 'layouts' ? 'current' : '')} onClick={() => setTab('layouts')}>
-            <span className="step-number">02</span><span><strong>Page layouts</strong><small>Ready to customize</small></span>
-          </button>
-          <button type="button" className={'step ' + (tab === 'activities' ? 'current' : '')} onClick={() => setTab('activities')}>
-            <span className="step-number">03</span><span><strong>Activity modules</strong><small>Choose and edit activities</small></span>
+    <div className={'app-shell'+(sidebarCollapsed?' sidebar-is-collapsed':'')}>
+      <aside className="sidebar" aria-label="Worksheet sidebar">
+        <div className="sidebar-header">
+          <div className="brand">
+            <span className="brand-icon" aria-hidden="true">W<span>✦</span></span>
+            <div className="sidebar-brand-copy"><strong>Worksheet Studio</strong><small>Bible booklet maker</small></div>
+          </div>
+          <button type="button" className="sidebar-toggle"
+            aria-label={sidebarCollapsed?'Expand sidebar':'Collapse sidebar'}
+            title={sidebarCollapsed?'Expand sidebar':'Collapse sidebar'}
+            aria-expanded={!sidebarCollapsed} aria-controls="worksheet-sidebar-navigation"
+            onClick={()=>setSidebarCollapsed(value=>!value)}>
+            <span aria-hidden="true">{sidebarCollapsed?'»':'«'}</span>
           </button>
         </div>
-        <div className="sidebar-group page-nav">
-          <div className="nav-label">BOOKLET PAGES</div>
-          {pages.map((item) => (
-            <button key={item.number} type="button" className={page === item.number ? 'page-link active' : 'page-link'}
-              onClick={() => selectPage(item.number)} aria-current={page === item.number ? 'page' : undefined}>
-              <span className="page-number">{item.number}</span>{item.label}
+        <nav id="worksheet-sidebar-navigation" className="sidebar-navigation"
+          aria-label="Worksheet navigation">
+          <button type="button" className="sidebar-home" onClick={()=>setView('welcome')}
+            aria-label="Home" title="Home">
+            <span className="sidebar-home-icon" aria-hidden="true">⌂</span>
+            <span className="sidebar-home-copy">Home</span>
+          </button>
+          <div className="sidebar-group">
+            <div className="nav-label">YOUR WORKSPACE</div>
+            <button type="button" className={'step ' + (tab === 'details' ? 'current' : '')}
+              aria-label="Worksheet details" title="Worksheet details"
+              aria-current={tab === 'details' ? 'step' : undefined}
+              onClick={() => setTab('details')}>
+              <span className="step-number" aria-hidden="true">01</span>
+              <span className="sidebar-step-copy"><strong>Worksheet details</strong><small>Title, Scripture & verse</small></span>
             </button>
-          ))}
-        </div>
+            <button type="button" className={'step ' + (tab === 'layouts' ? 'current' : '')}
+              aria-label="Page layouts" title="Page layouts"
+              aria-current={tab === 'layouts' ? 'step' : undefined}
+              onClick={() => setTab('layouts')}>
+              <span className="step-number" aria-hidden="true">02</span>
+              <span className="sidebar-step-copy"><strong>Page layouts</strong><small>Ready to customize</small></span>
+            </button>
+            <button type="button" className={'step ' + (tab === 'activities' ? 'current' : '')}
+              aria-label="Activity modules" title="Activity modules"
+              aria-current={tab === 'activities' ? 'step' : undefined}
+              onClick={() => setTab('activities')}>
+              <span className="step-number" aria-hidden="true">03</span>
+              <span className="sidebar-step-copy"><strong>Activity modules</strong><small>Choose and edit activities</small></span>
+            </button>
+          </div>
+          <div className="sidebar-group page-nav">
+            <div className="nav-label">BOOKLET PAGES</div>
+            {pages.map((item) => (
+              <button key={item.number} type="button" className={page === item.number ? 'page-link active' : 'page-link'}
+                aria-label={'Page '+item.number+': '+item.label}
+                title={'Page '+item.number+': '+item.label}
+                onClick={() => selectPage(item.number)} aria-current={page === item.number ? 'page' : undefined}>
+                <span className="page-number" aria-hidden="true">{item.number}</span>
+                <span className="sidebar-page-copy">{item.label}</span>
+              </button>
+            ))}
+          </div>
+        </nav>
         <div className="sidebar-foot"><span aria-hidden="true">●</span> Specialty activities · PR 9b</div>
       </aside>
 
