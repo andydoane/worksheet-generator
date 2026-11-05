@@ -273,10 +273,13 @@ export function planLessonContentChange(
  if(issues.length||blockingConflicts)return {
   kind,linkedSlots,updatedSlots:[],preservedSlots:[],conflicts,issues,
  };
- const updatedDraft:StoredDraft={...draft,modules,
-  activityDefaults:Object.keys(defaults).length?defaults:undefined,
-  activityContentLinks:Object.keys(nextLinks).length?nextLinks:undefined,
- };
+ const updatedDraft:StoredDraft={...draft,modules};
+ // Do not leave optional keys set to undefined. localStorage JSON omits them,
+ // and Build My Own drafts should round-trip without changing their shape.
+ if(Object.keys(defaults).length)updatedDraft.activityDefaults=defaults;
+ else delete updatedDraft.activityDefaults;
+ if(Object.keys(nextLinks).length)updatedDraft.activityContentLinks=nextLinks;
+ else delete updatedDraft.activityContentLinks;
  if(change.kind==='bigIdea')updatedDraft.bigIdea=text;
  else{
   updatedDraft.verseReference=change.reference.trim();
