@@ -103,7 +103,9 @@ test('Review studio is isolated from the normal public app and only includes app
  ]);
  assert.match(config,/review\.html/u);
  assert.match(html,/noindex,nofollow/u);
- assert.match(workflow,/npm run prepare:bsb/u);
+ assert.match(workflow,/npm run verify:bsb/u);
+ assert.doesNotMatch(workflow,/npm run prepare:bsb/u,
+  'CI should validate the committed BSB corpus without re-downloading it');
  assert.match(catalog,/curriculum\/approved/u);
  assert.doesNotMatch(catalog,/import\.meta\.glob\([^\n]*curriculum\/review/u);
 });

@@ -235,7 +235,9 @@ test('Source and activity editors are mounted, and expensive historical PDF gene
  assert.match(mc,/<SmallModulePreview module=/u);
  assert.doesNotMatch(workflow,/Generate sample PDFs|Upload sample PDF for review|sample-bifold-booklet/u);
  assert.match(workflow,/npm run test/u);
- assert.match(workflow,/npm run prepare:bsb/u);
+ assert.match(workflow,/npm run verify:bsb/u);
+ assert.doesNotMatch(workflow,/npm run prepare:bsb/u,
+  'CI should validate the committed BSB corpus without re-downloading it');
  assert.match(workflow,/npm run build/u);
  assert.match(workflow,/Upload site artifact/u);
  assert.match(workflow,/Deploy to GitHub Pages/u);
