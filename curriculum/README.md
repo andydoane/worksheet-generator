@@ -26,6 +26,12 @@ The Important Idea in `lessonDetails.bigIdeas[0].text` is the curriculum author'
 - Preserve `origin`, `sourceIds`, teacher-review flags, original Story Notes, chronological order and all Scripture records. Distinct source-linked captions must refer to identifiable events; never fabricate a sentence or silently truncate an overlong one.
 - For new curricula, the **Review Studio** has a Drawing activities task with editable fields, source-note comparisons and explicit buttons to normalize legacy Small commands or reuse corresponding Story Order sentences for Large captions. Its preflight rejects incorrect forms. The approved-lesson schema/semantic validator independently rejects malformed drawing text in CI before publication. The original preapproval fixture is intentionally left unchanged as a historical source artifact.
 
+## Recommended quantities for prepared lesson content
+
+The [Curriculum Conversion Guide](../docs/CURRICULUM-CONVERSION-GUIDE.md) now documents an audit of 15 older approved lessons (OT18–OT29 and OT31–OT33). The **median was 14 canonical True/False facts and six prepared Multiple Choice questions**. Normally prepare **about 14** distinct useful facts (7–8 TRUE, 6–7 FALSE) and **six** thoughtfully selected worksheet questions. These are **editorial defaults, not schema minima or hard maxima**; do not pad a weak question pool or remove good items to hit a quota. Reserve distinct short canonical fact IDs for Sort the Story, Small True/False and Maze.
+
+Preserve **all original source questions and their answers in `questions[]`**, no matter how many there are. Only the authored candidates in `preparedActivities.multipleChoice[]` normally number six. Include the actual TRUE/FALSE/prepared-question/original-question counts and reasons for deviations in the delivery handoff.
+
 ## Version 1 contract
 
 - The machine-readable JSON Schema is [schema/lesson-v1.schema.json](schema/lesson-v1.schema.json). The developer validation command is `npm run validate:curriculum`.
