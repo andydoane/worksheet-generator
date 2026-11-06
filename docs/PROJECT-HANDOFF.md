@@ -2,8 +2,8 @@
 
 > **Snapshot, not source of truth.** This document is a starting point for future ChatGPT conversations and contributors, **not** a replacement for the current GitHub repository, tests, CI results, or the owner's newest instructions. The project changes frequently. Verify `main`, open issues/PRs, and recent Actions runs before making recommendations, editing code, or declaring work complete. Do not assume a roadmap item is still open because it appears below.
 
-**Last checked against `main`:** 2026-11-05 (`main` version `0.16.57` after merged PR #105; this PR proposes `0.16.58`)  
-**Package version represented by this change:** `0.16.58`  
+**Last checked against `main`:** 2026-11-05 (`main` version `0.16.58` after merged PR #106; this PR proposes `0.16.59`)  
+**Package version represented by this change:** `0.16.59`  
 **Repository:** https://github.com/andydoane/worksheet-generator  
 **Worksheet Studio:** https://andydoane.github.io/worksheet-generator/  
 **Curriculum Review Studio:** https://andydoane.github.io/worksheet-generator/review.html  
@@ -102,7 +102,7 @@ Do not infer current merge status from this table; verify in GitHub. If a future
 
 ## 7. Current work and upcoming plans
 
-**Status last checked:** 2026-11-05, against `main` after merged PR #105. This PR addresses OT30 canonical fact editing, malformed string clues and converter documentation. Refresh GitHub before acting.
+**Status last checked:** 2026-11-05, against `main` after merged PR #106. This PR is a comprehensive documentation accuracy and conversion reliability update: all 27 activity authoring contracts, example JSON, draft-specific validation guidance and reconciled companion docs. Refresh GitHub before acting.
 
 | Status at last check | Item | Next action or caveat |
 | --- | --- | --- |
@@ -114,7 +114,9 @@ Do not infer current merge status from this table; verify in GitHub. If a future
 | **Merged; owner confirmed working** | [#104 — Plan D: sidebar Home and collapsible navigation](https://github.com/andydoane/worksheet-generator/pull/104) | Sidebar Home, 255px/76px desktop navigation, separate remembered preference, accessible controls and preserved mobile header |
 | **Merged** | [#105 — Review Studio chronological Story Order + random decoys](https://github.com/andydoane/worksheet-generator/pull/105) | Show Story Order chronologically only during teacher review, keep student shuffling. Add case-insensitively deduplicated teacher vocabulary pool, sample 5 different words excluding both activities’ correct choices and the opposite activity’s decoys, preserve raw sources/teacher approvals and require renewed review after generating |
 
-| **Draft PR** | [#106 — canonical fact, clue-schema and conversion-guide repair](https://github.com/andydoane/worksheet-generator/pull/106) | New teacher-reviewed fact adaptations with distinct IDs, safe movement from Sort the Story, batch clue repair, invalid review-state feedback, and regression/documentation updates. No approved curriculum rewritten. |
+| **Merged** | [#106 — canonical fact, clue-schema and conversion-guide repair](https://github.com/andydoane/worksheet-generator/pull/106) | New teacher-reviewed fact adaptations with distinct IDs, safe movement from Sort the Story, batch clue repair, invalid review-state feedback, and regression/documentation updates. No approved curriculum rewritten. |
+
+| **In this PR** | Comprehensive, self-contained curriculum-conversion manual | Detailed, schema-checked JSON recipes for 27 activity types; explicit grammar and source-contract rules; full pre-delivery audit; revised unapproved starter; reconciled Finish Story/drawing/publishing guidance; test coverage for manual drift. No approved curriculum rewritten. |
 
 **To maintain this table in every future feature/bug-fix PR:** replace stale statuses rather than simply adding rows; add the PR/issue link, brief outcome or current blocker, and accurate next step. Update **Status last checked**, package version above, and milestone context based on actual GitHub information. Never invent a date, merge, approval, or test result. Avoid documenting every small curriculum upload. Documentation-only changes may update the handoff without requiring a release; new direct-to-main approved JSON uploads are exempt.
 
