@@ -1,0 +1,3511 @@
+{
+  "schemaVersion": 1,
+  "schemaStatus": "approved; Review Studio 27/27 preflight passed",
+  "id": "ot-014-jacob-esau-and-the-birthright",
+  "curriculum": {
+    "series": "Old Testament",
+    "lessonNumber": 14
+  },
+  "lessonDetails": {
+    "title": "Jacob, Esau, and the Birthright",
+    "scripturePassages": [
+      "Genesis 25:20–34",
+      "Genesis 26:2–4",
+      "Romans 15:4",
+      "Psalm 105:8"
+    ],
+    "scriptureDisplay": "Genesis",
+    "bigIdeas": [
+      {
+        "text": "God hears us when we PRAY.",
+        "origin": "adapted",
+        "source": {
+          "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+          "section": "IMPORTANT IDEA",
+          "page": 7,
+          "sourceParagraphIndex": 165,
+          "details": "Displayed across paragraph shapes 165–166; original wording and uppercase cue retained."
+        },
+        "sourceIds": [
+          "sn-01",
+          "sn-02"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "text": "God kept every one of the PROMISES he made to Abraham.",
+        "origin": "adapted",
+        "source": {
+          "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+          "section": "IMPORTANT IDEA",
+          "page": 7,
+          "sourceParagraphIndex": 187,
+          "details": "Displayed across paragraph shapes 187–190; exact phrasing and uppercase cue retained."
+        },
+        "sourceIds": [
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      }
+    ],
+    "memoryVerse": {
+      "reference": "Psalm 105:8",
+      "translation": "BSB",
+      "text": "He remembers His covenant forever, the word He ordained for a thousand generations—",
+      "isExcerpt": false,
+      "hasEllipses": false,
+      "requiresTextReview": false,
+      "originalTranslation": "ESV",
+      "originalReference": "Psalm 105:8",
+      "originalText": "He remembers his covenant forever, the word that he commanded, for a thousand generations...",
+      "alsoVerifiedAt": {
+        "filename": "https://biblehub.com/psalms/105-8.htm",
+        "section": "Berean Standard Bible / Psalm 105:8",
+        "details": "Public BSB text cross-checked; teacher verification still pending."
+      },
+      "bsbSource": {
+        "reference": "Psalm 105:8",
+        "sourceUrl": "https://bereanbible.com/bsb.txt",
+        "publicDomainTerms": "https://berean.bible/terms.htm",
+        "startWord": 0,
+        "endWord": 12
+      },
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "MEMORY VERSE ACTIVITY",
+        "page": 9,
+        "sourceParagraphIndex": 236,
+        "details": "Original ESV wording is “He remembers his covenant forever, the word that he commanded, for a thousand generations...” Proposed BSB wording verified against Bible Hub Psalm 105:8 (https://biblehub.com/psalms/105-8.htm). Teacher must confirm exact BSB passage, verse-ending em dash, and Scripture rights."
+      },
+      "teacherReviewRequired": true
+    }
+  },
+  "sourceFiles": [
+    {
+      "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+      "format": "odt",
+      "role": "primary teaching source",
+      "note": "One 16-page OT14 teaching ODT. Seven exact source Story Notes, the two Important Idea graphics, narrative questions, ten original review Q&A, and the original ESV Psalm 105:8 memory verse were inspected. Embedded illustrations present; separate slide/resources not supplied. Proposed BSB reading needs teacher signoff."
+    }
+  ],
+  "storyNotes": [
+    {
+      "id": "sn-01",
+      "order": 1,
+      "originalText": "Rebekah couldn’t have children. Isaac PRAYED for her and she became pregnant.",
+      "cleanText": "Rebekah couldn’t have children. Isaac prayed for her and she became pregnant.",
+      "emphasizedWords": [
+        "PRAYED"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "STORY NOTE",
+        "page": 2,
+        "sourceParagraphIndex": 34
+      }
+    },
+    {
+      "id": "sn-02",
+      "order": 2,
+      "originalText": "When the babies struggled inside her, Rebekah prayed. God said, “Two NATIONS are inside you.”",
+      "cleanText": "When the babies struggled inside her, Rebekah prayed. God said, “Two nations are inside you.”",
+      "emphasizedWords": [
+        "NATIONS"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "STORY NOTE",
+        "page": 2,
+        "sourceParagraphIndex": 51
+      }
+    },
+    {
+      "id": "sn-03",
+      "order": 3,
+      "originalText": "Rebekah gave birth to TWINS. Esau was born red and hairy, with Jacob grabbing onto his heel.",
+      "cleanText": "Rebekah gave birth to twins. Esau was born red and hairy, with Jacob grabbing onto his heel.",
+      "emphasizedWords": [
+        "TWINS"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "STORY NOTE",
+        "page": 3,
+        "sourceParagraphIndex": 68
+      }
+    },
+    {
+      "id": "sn-04",
+      "order": 4,
+      "originalText": "As they grew, outdoorsy Esau was Isaac’s FAVORITE, while Jacob the homebody was Rebekah’s.",
+      "cleanText": "As they grew, outdoorsy Esau was Isaac’s favorite, while Jacob the homebody was Rebekah’s.",
+      "emphasizedWords": [
+        "FAVORITE"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "STORY NOTE",
+        "page": 4,
+        "sourceParagraphIndex": 86
+      }
+    },
+    {
+      "id": "sn-05",
+      "order": 5,
+      "originalText": "Esau asked to eat some of Jacob’s stew. Jacob said, “First, SELL me your birthright.”",
+      "cleanText": "Esau asked to eat some of Jacob’s stew. Jacob said, “First, sell me your birthright.”",
+      "emphasizedWords": [
+        "SELL"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "STORY NOTE",
+        "page": 4,
+        "sourceParagraphIndex": 111
+      }
+    },
+    {
+      "id": "sn-06",
+      "order": 6,
+      "originalText": "Because he didn’t CARE about his birthright, Esau sold it to Jacob for some stew.",
+      "cleanText": "Because he didn’t care about his birthright, Esau sold it to Jacob for some stew.",
+      "emphasizedWords": [
+        "CARE"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "STORY NOTE",
+        "page": 6,
+        "sourceParagraphIndex": 132
+      }
+    },
+    {
+      "id": "sn-07",
+      "order": 7,
+      "originalText": "God made the same PROMISES to Isaac that he had made to Isaac’s father Abraham.",
+      "cleanText": "God made the same promises to Isaac that he had made to Isaac’s father Abraham.",
+      "emphasizedWords": [
+        "PROMISES"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "STORY NOTE",
+        "page": 6,
+        "sourceParagraphIndex": 146
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q-01",
+      "question": "What did God tell Abraham to do?",
+      "answer": "Go to a land God would show him.",
+      "kind": "factual",
+      "scope": "introduction",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 9
+      }
+    },
+    {
+      "id": "q-02",
+      "question": "What were they?",
+      "answer": "To give him a great blessing, grow his family into a great nation, give them a great land, and bless the whole world.",
+      "kind": "factual",
+      "scope": "introduction",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 13
+      }
+    },
+    {
+      "id": "q-03",
+      "question": "What was her name?",
+      "answer": "Rebekah.",
+      "kind": "factual",
+      "scope": "introduction",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "Introduction",
+        "page": 2,
+        "sourceParagraphIndex": 22
+      }
+    },
+    {
+      "id": "q-04",
+      "question": "What problem did Rebekah have?",
+      "answer": "She couldn’t have children.",
+      "kind": "factual",
+      "scope": "story",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 36
+      }
+    },
+    {
+      "id": "q-05",
+      "question": "Would that be possible if Isaac never had any kids?",
+      "answer": "No.",
+      "kind": "discussion",
+      "scope": "story",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 38
+      }
+    },
+    {
+      "id": "q-06",
+      "question": "How did he know that?",
+      "answer": "Because Isaac was one of those miracle babies from God!",
+      "kind": "factual",
+      "scope": "story",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 40
+      },
+      "notes": "Exact source question; answer is contextual or teacher discussion guidance, not a verbatim parenthesized source answer."
+    },
+    {
+      "id": "q-07",
+      "question": "How did God fix that problem?",
+      "answer": "God gave Sarah a baby at age 90.",
+      "kind": "factual",
+      "scope": "story",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 42
+      }
+    },
+    {
+      "id": "q-08",
+      "question": "And what happened after Isaac prayed?",
+      "answer": "Rebekah became pregnant.",
+      "kind": "factual",
+      "scope": "story",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 44
+      }
+    },
+    {
+      "id": "q-09",
+      "question": "What did Rebekah do about her worries?",
+      "answer": "Prayed to God.",
+      "kind": "factual",
+      "scope": "story",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 55
+      }
+    },
+    {
+      "id": "q-10",
+      "question": "What is it called when two babies are born at once?",
+      "answer": "Twins.",
+      "kind": "factual",
+      "scope": "story",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 57
+      }
+    },
+    {
+      "id": "q-11",
+      "question": "Which one?",
+      "answer": "The older would serve the younger.",
+      "kind": "factual",
+      "scope": "story",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "Story",
+        "page": 3,
+        "sourceParagraphIndex": 63
+      }
+    },
+    {
+      "id": "q-12",
+      "question": "Why wasn’t this a surprise to her?",
+      "answer": "God told her it would happen.",
+      "kind": "factual",
+      "scope": "story",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "Story",
+        "page": 3,
+        "sourceParagraphIndex": 70
+      }
+    },
+    {
+      "id": "q-13",
+      "question": "What was it?",
+      "answer": "His brother’s hand.",
+      "kind": "factual",
+      "scope": "story",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "Story",
+        "page": 3,
+        "sourceParagraphIndex": 74
+      }
+    },
+    {
+      "id": "q-14",
+      "question": "What did they name twin #2?",
+      "answer": "Jacob.",
+      "kind": "factual",
+      "scope": "story",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "Story",
+        "page": 3,
+        "sourceParagraphIndex": 80
+      }
+    },
+    {
+      "id": "q-15",
+      "question": "What kinds of things did big, hairy Esau like to do?",
+      "answer": "Be outdoors, hunt for food.",
+      "kind": "factual",
+      "scope": "story",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 90
+      }
+    },
+    {
+      "id": "q-16",
+      "question": "Unlike outdoorsy Esau, what did smooth and small Jacob like to do?",
+      "answer": "Stay at home.",
+      "kind": "factual",
+      "scope": "story",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 94
+      }
+    },
+    {
+      "id": "q-17",
+      "question": "What problems do you think it can cause when parents have favorite children?",
+      "answer": "Various responses.",
+      "kind": "discussion",
+      "scope": "story",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 98
+      }
+    },
+    {
+      "id": "q-18",
+      "question": "Which of you are more like Esau, who liked being outdoors best?",
+      "answer": "Children respond by raising hands.",
+      "kind": "discussion",
+      "scope": "story",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 100
+      },
+      "notes": "Exact source question; answer is contextual or teacher discussion guidance, not a verbatim parenthesized source answer."
+    },
+    {
+      "id": "q-19",
+      "question": "Which of you are more like Jacob, who liked staying at home best?",
+      "answer": "Children respond by raising hands.",
+      "kind": "discussion",
+      "scope": "story",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 104
+      },
+      "notes": "Exact source question; answer is contextual or teacher discussion guidance, not a verbatim parenthesized source answer."
+    },
+    {
+      "id": "q-20",
+      "question": "What was Jacob making?",
+      "answer": "Stew.",
+      "kind": "factual",
+      "scope": "story",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 113
+      }
+    },
+    {
+      "id": "q-21",
+      "question": "So… what’s a birthright?",
+      "answer": "The firstborn receives twice as much as the other son from the father’s inheritance.",
+      "kind": "discussion",
+      "scope": "story",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 115
+      },
+      "notes": "Exact source question; answer is contextual or teacher discussion guidance, not a verbatim parenthesized source answer."
+    },
+    {
+      "id": "q-22",
+      "question": "Do you think trading a million-dollar birthright for some stew was a fair deal?",
+      "answer": "Not at all.",
+      "kind": "discussion",
+      "scope": "story",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "Story",
+        "page": 5,
+        "sourceParagraphIndex": 123
+      }
+    },
+    {
+      "id": "q-23",
+      "question": "Do you think Esau was really going to die of starvation?",
+      "answer": "No, he was exaggerating.",
+      "kind": "discussion",
+      "scope": "story",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "Story",
+        "page": 6,
+        "sourceParagraphIndex": 136
+      }
+    },
+    {
+      "id": "q-24",
+      "question": "Who?",
+      "answer": "The Lord God.",
+      "kind": "factual",
+      "scope": "story",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "Story",
+        "page": 6,
+        "sourceParagraphIndex": 148
+      }
+    },
+    {
+      "id": "q-25",
+      "question": "So how does the story of Jacob and Esau teach us, strengthen us, encourage us, or give us hope?",
+      "answer": "Open-ended discussion; the lesson presents God hearing prayer and keeping His promises.",
+      "kind": "discussion",
+      "scope": "application",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "Important Idea / Application",
+        "page": 7,
+        "sourceParagraphIndex": 160
+      },
+      "notes": "Exact source question; answer is contextual or teacher discussion guidance, not a verbatim parenthesized source answer."
+    },
+    {
+      "id": "q-26",
+      "question": "And how did God answer that prayer?",
+      "answer": "He sent Rebekah to the well.",
+      "kind": "factual",
+      "scope": "application",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "Important Idea / Application",
+        "page": 7,
+        "sourceParagraphIndex": 172
+      }
+    },
+    {
+      "id": "q-27",
+      "question": "How did God answer Isaac’s prayer?",
+      "answer": "Rebekah became pregnant.",
+      "kind": "factual",
+      "scope": "application",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "Important Idea / Application",
+        "page": 7,
+        "sourceParagraphIndex": 176
+      }
+    },
+    {
+      "id": "q-28",
+      "question": "How did God answer her prayer?",
+      "answer": "Told her about her twins.",
+      "kind": "factual",
+      "scope": "application",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "Important Idea / Application",
+        "page": 7,
+        "sourceParagraphIndex": 180
+      }
+    },
+    {
+      "id": "q-29",
+      "question": "If Abraham’s servant, Isaac, and Rebekah were here with us today, what do you think they’d tell us to do when we’re facing a problem?",
+      "answer": "Pray.",
+      "kind": "discussion",
+      "scope": "application",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "Important Idea / Application",
+        "page": 7,
+        "sourceParagraphIndex": 182
+      }
+    },
+    {
+      "id": "q-30",
+      "question": "How did he start keeping that promise to Isaac?",
+      "answer": "Gave him twins.",
+      "kind": "factual",
+      "scope": "application",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "Important Idea / Application",
+        "page": 8,
+        "sourceParagraphIndex": 208
+      }
+    },
+    {
+      "id": "q-31",
+      "question": "Who was he?",
+      "answer": "Jesus.",
+      "kind": "factual",
+      "scope": "application",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "Important Idea / Application",
+        "page": 8,
+        "sourceParagraphIndex": 218
+      }
+    },
+    {
+      "id": "q-32",
+      "question": "How did Jesus do that?",
+      "answer": "By dying for our sins and rising from the dead.",
+      "kind": "factual",
+      "scope": "application",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "Important Idea / Application",
+        "page": 8,
+        "sourceParagraphIndex": 222
+      }
+    },
+    {
+      "id": "q-33",
+      "question": "What does the Bible say happens to anyone who believes the good news of Jesus?",
+      "answer": "They’ll live forever in God’s good kingdom.",
+      "kind": "factual",
+      "scope": "application",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "Important Idea / Application",
+        "page": 8,
+        "sourceParagraphIndex": 226
+      }
+    },
+    {
+      "id": "q-34",
+      "question": "And guess who that includes?",
+      "answer": "You and me!",
+      "kind": "discussion",
+      "scope": "application",
+      "standaloneReady": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "Important Idea / Application",
+        "page": 8,
+        "sourceParagraphIndex": 230
+      },
+      "notes": "Exact source question; answer is contextual or teacher discussion guidance, not a verbatim parenthesized source answer."
+    },
+    {
+      "id": "q-35",
+      "question": "What problem did Rebekah have?",
+      "answer": "She couldn’t have children",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "REVIEW QUESTIONS",
+        "page": 12,
+        "sourceParagraphIndex": 312
+      }
+    },
+    {
+      "id": "q-36",
+      "question": "What did Isaac do about Rebekah’s problem? What happened?",
+      "answer": "He prayed and Rebekah became pregnant",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "REVIEW QUESTIONS",
+        "page": 12,
+        "sourceParagraphIndex": 313
+      }
+    },
+    {
+      "id": "q-37",
+      "question": "Why did Rebekah pray to God?",
+      "answer": "Her babies were struggling inside her",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "REVIEW QUESTIONS",
+        "page": 12,
+        "sourceParagraphIndex": 314
+      }
+    },
+    {
+      "id": "q-38",
+      "question": "What did God say to Rebekah?",
+      "answer": "Two nations are in you, the older will serve the younger",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "REVIEW QUESTIONS",
+        "page": 12,
+        "sourceParagraphIndex": 315
+      }
+    },
+    {
+      "id": "q-39",
+      "question": "What were Rebekah’s two babies like?",
+      "answer": "Esau was born first, he was hairy; Jacob was born second, grabbing onto Esau’s heel",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "REVIEW QUESTIONS",
+        "page": 12,
+        "sourceParagraphIndex": 316
+      }
+    },
+    {
+      "id": "q-40",
+      "question": "What were the boys like as they grew?",
+      "answer": "Esau hunted, was Isaac’s favorite; Jacob stayed at home, was Rebekah’s favorite",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "REVIEW QUESTIONS",
+        "page": 12,
+        "sourceParagraphIndex": 317
+      }
+    },
+    {
+      "id": "q-41",
+      "question": "What is a birthright?",
+      "answer": "The firstborn son receives double of their father’s things after their father dies",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "REVIEW QUESTIONS",
+        "page": 12,
+        "sourceParagraphIndex": 318
+      }
+    },
+    {
+      "id": "q-42",
+      "question": "What did Esau sell his birthright for?",
+      "answer": "Some of Jacob’s stew",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "REVIEW QUESTIONS",
+        "page": 12,
+        "sourceParagraphIndex": 319
+      }
+    },
+    {
+      "id": "q-43",
+      "question": "Who came to speak to Isaac?",
+      "answer": "The Lord God",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "REVIEW QUESTIONS",
+        "page": 12,
+        "sourceParagraphIndex": 320
+      }
+    },
+    {
+      "id": "q-44",
+      "question": "What did God say to Isaac?",
+      "answer": "Stay in the land. God repeated the same promises he made to Abraham",
+      "kind": "factual",
+      "scope": "review",
+      "standaloneReady": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "REVIEW QUESTIONS",
+        "page": 12,
+        "sourceParagraphIndex": 321
+      }
+    }
+  ],
+  "facts": [
+    {
+      "id": "tf-01",
+      "statement": "Isaac prayed for Rebekah, and she became pregnant.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "STORY NOTE",
+        "page": 2,
+        "sourceParagraphIndex": 34
+      }
+    },
+    {
+      "id": "tf-02",
+      "statement": "Isaac refused to pray for Rebekah.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "teacherReviewRequired": true,
+      "notes": "Deliberately false editorial contrast; review before classroom use."
+    },
+    {
+      "id": "tf-03",
+      "statement": "God told Rebekah she was carrying two nations.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "STORY NOTE",
+        "page": 2,
+        "sourceParagraphIndex": 51
+      }
+    },
+    {
+      "id": "tf-04",
+      "statement": "God said Rebekah would have three babies.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-02"
+      ],
+      "teacherReviewRequired": true,
+      "notes": "Deliberately false editorial contrast; review before classroom use."
+    },
+    {
+      "id": "tf-05",
+      "statement": "Esau was born first, and Jacob held his heel.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "STORY NOTE",
+        "page": 3,
+        "sourceParagraphIndex": 68
+      }
+    },
+    {
+      "id": "tf-06",
+      "statement": "Jacob was born first and covered with red hair.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-03"
+      ],
+      "teacherReviewRequired": true,
+      "notes": "Deliberately false editorial contrast; review before classroom use."
+    },
+    {
+      "id": "tf-07",
+      "statement": "Esau liked hunting, while Jacob preferred staying home.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "STORY NOTE",
+        "page": 4,
+        "sourceParagraphIndex": 86
+      }
+    },
+    {
+      "id": "tf-08",
+      "statement": "Isaac favored Jacob, while Rebekah favored Esau.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-04"
+      ],
+      "teacherReviewRequired": true,
+      "notes": "Deliberately false editorial contrast; review before classroom use."
+    },
+    {
+      "id": "tf-09",
+      "statement": "Esau asked Jacob for some stew.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "STORY NOTE",
+        "page": 4,
+        "sourceParagraphIndex": 111
+      }
+    },
+    {
+      "id": "tf-10",
+      "statement": "Esau traded his birthright for a horse.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-06"
+      ],
+      "teacherReviewRequired": true,
+      "notes": "Deliberately false editorial contrast; review before classroom use."
+    },
+    {
+      "id": "tf-11",
+      "statement": "Jacob asked Esau to sell his birthright for stew.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "STORY NOTE",
+        "page": 4,
+        "sourceParagraphIndex": 111
+      }
+    },
+    {
+      "id": "tf-12",
+      "statement": "Esau refused to sell Jacob his birthright.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-06"
+      ],
+      "teacherReviewRequired": true,
+      "notes": "Deliberately false editorial contrast; review before classroom use."
+    },
+    {
+      "id": "tf-13",
+      "statement": "God repeated His promises to Isaac.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "STORY NOTE",
+        "page": 6,
+        "sourceParagraphIndex": 146
+      }
+    },
+    {
+      "id": "tf-14",
+      "statement": "God said His promises to Abraham were canceled.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": true,
+      "notes": "Deliberately false editorial contrast; review before classroom use."
+    }
+  ],
+  "vocabulary": {
+    "related": [
+      "ISAAC",
+      "REBEKAH",
+      "JACOB",
+      "ESAU",
+      "TWINS",
+      "HEELS",
+      "HAIRY",
+      "HUNTER",
+      "TENTS",
+      "STEW",
+      "BIRTHRIGHT",
+      "PRAYER",
+      "PROMISES",
+      "COVENANT",
+      "ABRAHAM",
+      "LENTILS",
+      "FAVORITE",
+      "NATIONS",
+      "BROTHERS"
+    ],
+    "unrelated": [
+      "ROCKET",
+      "SHUTTLE",
+      "BANANA",
+      "TIGER",
+      "PIRATE",
+      "DRAGON",
+      "SUBWAY",
+      "CARPET",
+      "ANCHOR",
+      "LANTERN"
+    ],
+    "entries": [
+      {
+        "id": "voc-01",
+        "term": "ISAAC",
+        "scope": "story",
+        "category": "story-related",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01",
+          "sn-04",
+          "sn-07"
+        ]
+      },
+      {
+        "id": "voc-02",
+        "term": "REBEKAH",
+        "scope": "story",
+        "category": "story-related",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01",
+          "sn-02",
+          "sn-03",
+          "sn-04"
+        ]
+      },
+      {
+        "id": "voc-03",
+        "term": "JACOB",
+        "scope": "story",
+        "category": "story-related",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06"
+        ]
+      },
+      {
+        "id": "voc-04",
+        "term": "ESAU",
+        "scope": "story",
+        "category": "story-related",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03",
+          "sn-04",
+          "sn-05",
+          "sn-06"
+        ]
+      },
+      {
+        "id": "voc-05",
+        "term": "TWINS",
+        "scope": "story",
+        "category": "story-related",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02",
+          "sn-03"
+        ]
+      },
+      {
+        "id": "voc-06",
+        "term": "HEELS",
+        "scope": "story",
+        "category": "story-related",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "id": "voc-07",
+        "term": "HAIRY",
+        "scope": "story",
+        "category": "story-related",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "id": "voc-08",
+        "term": "HUNTER",
+        "scope": "story",
+        "category": "story-related",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "id": "voc-09",
+        "term": "TENTS",
+        "scope": "story",
+        "category": "story-related",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "id": "voc-10",
+        "term": "STEW",
+        "scope": "story",
+        "category": "story-related",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05",
+          "sn-06"
+        ]
+      },
+      {
+        "id": "voc-11",
+        "term": "BIRTHRIGHT",
+        "scope": "story",
+        "category": "story-related",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05",
+          "sn-06"
+        ]
+      },
+      {
+        "id": "voc-12",
+        "term": "PRAYER",
+        "scope": "story",
+        "category": "story-related",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01",
+          "sn-02"
+        ]
+      },
+      {
+        "id": "voc-13",
+        "term": "PROMISES",
+        "scope": "story",
+        "category": "story-related",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "id": "voc-14",
+        "term": "COVENANT",
+        "scope": "story",
+        "category": "story-related",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "id": "voc-15",
+        "term": "ABRAHAM",
+        "scope": "story",
+        "category": "story-related",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "id": "voc-16",
+        "term": "LENTILS",
+        "scope": "story",
+        "category": "story-related",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "id": "voc-17",
+        "term": "FAVORITE",
+        "scope": "story",
+        "category": "story-related",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "id": "voc-18",
+        "term": "NATIONS",
+        "scope": "story",
+        "category": "story-related",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "id": "voc-19",
+        "term": "BROTHERS",
+        "scope": "story",
+        "category": "story-related",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03",
+          "sn-04"
+        ]
+      },
+      {
+        "id": "voc-20",
+        "term": "ROCKET",
+        "scope": "decoy",
+        "category": "unrelated",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-21",
+        "term": "SHUTTLE",
+        "scope": "decoy",
+        "category": "unrelated",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-22",
+        "term": "BANANA",
+        "scope": "decoy",
+        "category": "unrelated",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-23",
+        "term": "TIGER",
+        "scope": "decoy",
+        "category": "unrelated",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-24",
+        "term": "PIRATE",
+        "scope": "decoy",
+        "category": "unrelated",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-25",
+        "term": "DRAGON",
+        "scope": "decoy",
+        "category": "unrelated",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-26",
+        "term": "SUBWAY",
+        "scope": "decoy",
+        "category": "unrelated",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-27",
+        "term": "CARPET",
+        "scope": "decoy",
+        "category": "unrelated",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-28",
+        "term": "ANCHOR",
+        "scope": "decoy",
+        "category": "unrelated",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-29",
+        "term": "LANTERN",
+        "scope": "decoy",
+        "category": "unrelated",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ]
+  },
+  "characters": [
+    {
+      "id": "ch-01",
+      "name": "Isaac",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true,
+      "clues": [
+        {
+          "text": "I prayed for my wife when she could not have children.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-01",
+            "sn-07"
+          ],
+          "teacherReviewRequired": true
+        },
+        {
+          "text": "God repeated His promises to me.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-01",
+            "sn-07"
+          ],
+          "teacherReviewRequired": true
+        }
+      ],
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "REVIEW ACTIVITY — Character Descriptions",
+        "page": 11,
+        "sourceParagraphIndex": 286
+      }
+    },
+    {
+      "id": "ch-02",
+      "name": "Rebekah",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02",
+        "sn-03"
+      ],
+      "teacherReviewRequired": true,
+      "clues": [
+        {
+          "text": "I carried twin boys who struggled inside me.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-02",
+            "sn-03"
+          ],
+          "teacherReviewRequired": true
+        },
+        {
+          "text": "I prayed and God told me about two nations.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-02",
+            "sn-03"
+          ],
+          "teacherReviewRequired": true
+        }
+      ],
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "REVIEW ACTIVITY — Character Descriptions",
+        "page": 11,
+        "sourceParagraphIndex": 291
+      }
+    },
+    {
+      "id": "ch-03",
+      "name": "Esau",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03",
+        "sn-04",
+        "sn-06"
+      ],
+      "teacherReviewRequired": true,
+      "clues": [
+        {
+          "text": "I was the firstborn twin and loved to hunt.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-03",
+            "sn-04",
+            "sn-06"
+          ],
+          "teacherReviewRequired": true
+        },
+        {
+          "text": "I traded away my birthright for a bowl of stew.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-03",
+            "sn-04",
+            "sn-06"
+          ],
+          "teacherReviewRequired": true
+        }
+      ],
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "REVIEW ACTIVITY — Character Descriptions",
+        "page": 11,
+        "sourceParagraphIndex": 296
+      }
+    },
+    {
+      "id": "ch-04",
+      "name": "Jacob",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03",
+        "sn-05"
+      ],
+      "teacherReviewRequired": true,
+      "clues": [
+        {
+          "text": "I was born grabbing my brother’s heel.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-03",
+            "sn-05"
+          ],
+          "teacherReviewRequired": true
+        },
+        {
+          "text": "I cooked the stew my brother wanted.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-03",
+            "sn-05"
+          ],
+          "teacherReviewRequired": true
+        }
+      ],
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "REVIEW ACTIVITY — Character Descriptions",
+        "page": 11,
+        "sourceParagraphIndex": 301
+      }
+    }
+  ],
+  "matchingPairs": [
+    {
+      "id": "mp-01",
+      "left": "Isaac",
+      "right": "Prayed for a baby",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    {
+      "id": "mp-02",
+      "left": "Rebekah",
+      "right": "Mother of twins",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02",
+        "sn-03"
+      ]
+    },
+    {
+      "id": "mp-03",
+      "left": "Esau",
+      "right": "Hunter",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03",
+        "sn-04"
+      ]
+    },
+    {
+      "id": "mp-04",
+      "left": "Jacob",
+      "right": "Heel grabber",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ]
+    },
+    {
+      "id": "mp-05",
+      "left": "Abraham",
+      "right": "Received promises",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ]
+    }
+  ],
+  "drawingPrompts": [
+    {
+      "id": "draw-01",
+      "prompt": "Isaac praying for Rebekah beside their home",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    {
+      "id": "draw-02",
+      "prompt": "two twin babies with Jacob holding Esau’s heel",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ]
+    },
+    {
+      "id": "draw-03",
+      "prompt": "Esau carrying his bow after hunting outdoors",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ]
+    },
+    {
+      "id": "draw-04",
+      "prompt": "Jacob offering a bowl of stew to hungry Esau",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05",
+        "sn-06"
+      ]
+    },
+    {
+      "id": "draw-05",
+      "prompt": "Isaac listening as God speaks of His promises",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ]
+    }
+  ],
+  "keyPhrases": [
+    {
+      "id": "kp-01",
+      "text": "Isaac prayed, and God answered by giving Rebekah twins.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-03"
+      ]
+    },
+    {
+      "id": "kp-02",
+      "text": "God told Rebekah that the older son would serve the younger.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ]
+    },
+    {
+      "id": "kp-03",
+      "text": "Jacob grabbed Esau’s heel when they were born.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ]
+    },
+    {
+      "id": "kp-04",
+      "text": "Esau preferred hunting, while Jacob liked staying in the tents.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ]
+    },
+    {
+      "id": "kp-05",
+      "text": "Jacob asked Esau for his birthright in exchange for stew.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05",
+        "sn-06"
+      ]
+    },
+    {
+      "id": "kp-06",
+      "text": "Esau sold his birthright because he did not value it.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ]
+    },
+    {
+      "id": "kp-07",
+      "text": "God repeated to Isaac the promises He had made to Abraham.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ]
+    },
+    {
+      "id": "kp-08",
+      "text": "God hears us when we pray.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-02"
+      ]
+    },
+    {
+      "id": "kp-09",
+      "text": "God keeps every promise He makes.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ]
+    }
+  ],
+  "theologicalApplications": [
+    {
+      "id": "app-01",
+      "text": "God hears us when we pray.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-02"
+      ]
+    },
+    {
+      "id": "app-02",
+      "text": "God kept every one of the promises He made to Abraham.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ]
+    },
+    {
+      "id": "app-03",
+      "text": "The lesson connects God’s promise to bless the nations with Jesus.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": true,
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "IMPORTANT IDEA / Application",
+        "page": 8,
+        "sourceParagraphIndex": 221
+      }
+    }
+  ],
+  "preparedActivities": {
+    "drawPicture": {
+      "prompt": "Jacob offering a bowl of stew to hungry Esau",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05",
+        "sn-06"
+      ]
+    },
+    "multipleChoice": [
+      {
+        "id": "mc-01",
+        "question": "What problem did Rebekah have?",
+        "correctAnswer": "She could not have children.",
+        "choices": [
+          {
+            "text": "She could not have children.",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "She lost her home.",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "She was blind.",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          }
+        ],
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": true,
+        "sourceQuestionIds": [
+          "q-04"
+        ]
+      },
+      {
+        "id": "mc-02",
+        "question": "When Rebekah couldn't have children, what did Isaac do?",
+        "correctAnswer": "Prayed for her.",
+        "choices": [
+          {
+            "text": "Prayed for her.",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Traveled to Egypt.",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "Bought her a gift.",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          }
+        ],
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": true,
+        "sourceQuestionIds": [
+          "q-36"
+        ]
+      },
+      {
+        "id": "mc-03",
+        "question": "What did God tell Rebekah about her twins?",
+        "correctAnswer": "They would become two nations.",
+        "choices": [
+          {
+            "text": "They would become two nations.",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "They would be identical.",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "They would be best friends.",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          }
+        ],
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": true,
+        "sourceQuestionIds": [
+          "q-38"
+        ]
+      },
+      {
+        "id": "mc-04",
+        "question": "Which twin was born first?",
+        "correctAnswer": "Esau",
+        "choices": [
+          {
+            "text": "Esau",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Jacob",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "Isaac",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          }
+        ],
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": true,
+        "sourceQuestionIds": [
+          "q-39"
+        ]
+      },
+      {
+        "id": "mc-05",
+        "question": "What did Jacob ask Esau to sell?",
+        "correctAnswer": "His birthright",
+        "choices": [
+          {
+            "text": "His birthright",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "His hunting bow",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "His favorite tent",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          }
+        ],
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-06",
+        "question": "What did Esau receive for his birthright?",
+        "correctAnswer": "Stew",
+        "choices": [
+          {
+            "text": "Stew",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Silver and gold",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "A flock of sheep",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          }
+        ],
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ],
+        "teacherReviewRequired": true,
+        "sourceQuestionIds": [
+          "q-42"
+        ]
+      }
+    ],
+    "trueFalse": {
+      "statement": "Esau asked Jacob for some stew.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": false,
+      "factId": "tf-09"
+    },
+    "firstLetters": {
+      "reference": "Psalm 105:8",
+      "verse": "He remembers His covenant forever, the word He ordained for a thousand generations—",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "MEMORY VERSE ACTIVITY",
+        "page": 9,
+        "sourceParagraphIndex": 236,
+        "details": "Original ESV wording is “He remembers his covenant forever, the word that he commanded, for a thousand generations...” Proposed BSB wording verified against Bible Hub Psalm 105:8 (https://biblehub.com/psalms/105-8.htm). Teacher must confirm exact BSB passage, verse-ending em dash, and Scripture rights."
+      },
+      "teacherReviewRequired": true
+    },
+    "oddWords": {
+      "related": [
+        "JACOB",
+        "ESAU",
+        "STEW",
+        "TWINS",
+        "PRAYER"
+      ],
+      "unrelated": [
+        "spies",
+        "Daniel",
+        "grain",
+        "sling",
+        "lamb"
+      ],
+      "unrelatedOrigin": "suggested",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-05",
+        "sn-06"
+      ],
+      "teacherReviewRequired": true
+    },
+    "unscrambleWords": {
+      "answers": [
+        "BROTHERS",
+        "BIRTHRIGHT"
+      ],
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06"
+      ],
+      "teacherReviewRequired": true
+    },
+    "checkboxes": {
+      "correct": [
+        "ISAAC",
+        "REBEKAH",
+        "HUNTER",
+        "BIRTHRIGHT",
+        "COVENANT"
+      ],
+      "incorrect": [
+        "storm",
+        "heaven",
+        "Solomon",
+        "daughters",
+        "king"
+      ],
+      "incorrectOrigin": "suggested",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-04",
+        "sn-05",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "whoAmI": {
+      "clue": "I was born first. I was very hairy. I traded away my birthright for a bowl of stew.",
+      "answer": "Esau",
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-03",
+        "sn-06"
+      ],
+      "teacherReviewRequired": true
+    },
+    "matchWords": [
+      {
+        "left": "Isaac",
+        "right": "Prayed",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "left": "Rebekah",
+        "right": "Pregnant",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-02",
+          "sn-03"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "left": "Esau",
+        "right": "Hunter",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03",
+          "sn-04"
+        ]
+      },
+      {
+        "left": "Jacob",
+        "right": "Heel grabber",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "left": "Twins",
+        "right": "Wrestled",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-07"
+        ],
+        "teacherReviewRequired": true
+      }
+    ],
+    "finishVerse": {
+      "reference": "Psalm 105:8",
+      "markedVerse": "He [remembers] His [covenant] [forever], the [word] He ordained for a [thousand] generations—",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "MEMORY VERSE ACTIVITY",
+        "page": 9,
+        "sourceParagraphIndex": 236,
+        "details": "Original ESV wording is “He remembers his covenant forever, the word that he commanded, for a thousand generations...” Proposed BSB wording verified against Bible Hub Psalm 105:8 (https://biblehub.com/psalms/105-8.htm). Teacher must confirm exact BSB passage, verse-ending em dash, and Scripture rights."
+      },
+      "teacherReviewRequired": true,
+      "sourceVerse": "He remembers His covenant forever, the word He ordained for a thousand generations—"
+    },
+    "unscrambleVerse": {
+      "reference": "Psalm 105:8",
+      "markedVerse": "He [remembers] His [covenant] [forever], the [word] He ordained for a [thousand] generations—",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "MEMORY VERSE ACTIVITY",
+        "page": 9,
+        "sourceParagraphIndex": 236,
+        "details": "Original ESV wording is “He remembers his covenant forever, the word that he commanded, for a thousand generations...” Proposed BSB wording verified against Bible Hub Psalm 105:8 (https://biblehub.com/psalms/105-8.htm). Teacher must confirm exact BSB passage, verse-ending em dash, and Scripture rights."
+      },
+      "teacherReviewRequired": true,
+      "sourceVerse": "He remembers His covenant forever, the word He ordained for a thousand generations—"
+    },
+    "circleMistakes": {
+      "paragraph": "Rebekah was unable to have fun. Isaac prayed to God for her. Rebekah became pregnant. The babies danced in her belly. God told Rebekah she would have three sons. Jacob was born before Esau. When they grew, Esau traded his birthright to Jacob for a sandwich.",
+      "mistakeCount": 5,
+      "mistakes": [
+        {
+          "incorrect": "have fun",
+          "correction": "have babies",
+          "origin": "suggested",
+          "sourceIds": [
+            "sn-01"
+          ],
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "three sons",
+          "correction": "twin boys",
+          "origin": "suggested",
+          "sourceIds": [
+            "sn-02",
+            "sn-03"
+          ],
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "danced",
+          "correction": "wrestled",
+          "origin": "suggested",
+          "sourceIds": [
+            "sn-03"
+          ],
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "Jacob was born before Esau",
+          "correction": "Esau was born before Jacob",
+          "origin": "suggested",
+          "sourceIds": [
+            "sn-05",
+            "sn-06"
+          ],
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "a sandwich",
+          "correction": "some stew",
+          "origin": "suggested",
+          "sourceIds": [
+            "sn-07"
+          ],
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "mediumWordSearch": {
+      "words": [
+        "JACOB",
+        "ESAU",
+        "ISAAC",
+        "TWINS",
+        "STEW",
+        "PRAYER"
+      ],
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-05",
+        "sn-06"
+      ]
+    },
+    "trueFalseMaze": {
+      "statement": "Esau traded his birthright for a horse.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-06"
+      ],
+      "teacherReviewRequired": true,
+      "factId": "tf-10"
+    },
+    "bigIdeaCryptogram": {
+      "phrase": "God hears us when we pray.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-02"
+      ]
+    },
+    "upsideDownVerse": {
+      "reference": "Psalm 105:8",
+      "verse": "He remembers His covenant forever, the word He ordained for a thousand generations—",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "MEMORY VERSE ACTIVITY",
+        "page": 9,
+        "sourceParagraphIndex": 236,
+        "details": "Original ESV wording is “He remembers his covenant forever, the word that he commanded, for a thousand generations...” Proposed BSB wording verified against Bible Hub Psalm 105:8 (https://biblehub.com/psalms/105-8.htm). Teacher must confirm exact BSB passage, verse-ending em dash, and Scripture rights."
+      },
+      "teacherReviewRequired": true
+    },
+    "connectBigIdea": {
+      "phrase": "God hears us when we PRAY.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-02"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "IMPORTANT IDEA",
+        "page": 7,
+        "sourceParagraphIndex": 165,
+        "details": "Displayed across paragraph shapes 165–166; original wording and uppercase cue retained."
+      }
+    },
+    "pixelPicture": {
+      "phrase": "God told Rebekah that the older son would serve the younger.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ],
+      "teacherReviewRequired": false
+    },
+    "finishStory": {
+      "markedParagraph": "[Rebekah] was not able to have [children], so Isaac [prayed] for her. God answered, and Rebekah became pregnant with [twins]. One night, the babies were [wrestling] in her belly. God told her the two boys would become two [nations]. The firstborn boy, [Esau], was red and hairy. His brother [Jacob] came out holding his heel. Esau grew up to be a [hunter], while Jacob liked staying near the tents. One day Esau was [hungry] and wanted Jacob’s [stew]. Jacob asked him to trade away his [birthright]. Foolishly, Esau agreed to this deal, showing he didn't care about his birthright.",
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "storyOrder": [
+      {
+        "order": 1,
+        "text": "Isaac prayed for Rebekah, and she became pregnant.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "order": 2,
+        "text": "God told Rebekah the twins would become two nations.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "order": 3,
+        "text": "Esau was born first, and Jacob held onto his heel.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "order": 4,
+        "text": "Esau became a hunter, while Jacob preferred the tents.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "order": 5,
+        "text": "Esau asked Jacob for stew, and Jacob demanded his birthright.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "order": 6,
+        "text": "Esau sold his birthright for bread and lentil stew.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "order": 7,
+        "text": "God repeated His promises to Isaac.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      }
+    ],
+    "sortStory": [
+      {
+        "factId": "tf-01",
+        "statement": "Isaac prayed for Rebekah, and she became pregnant.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": false,
+        "source": {
+          "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+          "section": "STORY NOTE",
+          "page": 2,
+          "sourceParagraphIndex": 34
+        }
+      },
+      {
+        "factId": "tf-02",
+        "statement": "Isaac refused to pray for Rebekah.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-03",
+        "statement": "God told Rebekah she was carrying two nations.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": false,
+        "source": {
+          "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+          "section": "STORY NOTE",
+          "page": 2,
+          "sourceParagraphIndex": 51
+        }
+      },
+      {
+        "factId": "tf-04",
+        "statement": "God said Rebekah would have three babies.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-05",
+        "statement": "Esau was born first, and Jacob held his heel.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": false,
+        "source": {
+          "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+          "section": "STORY NOTE",
+          "page": 3,
+          "sourceParagraphIndex": 68
+        }
+      },
+      {
+        "factId": "tf-06",
+        "statement": "Jacob was born first and covered with red hair.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-07",
+        "statement": "Esau liked hunting, while Jacob preferred staying home.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ],
+        "teacherReviewRequired": false,
+        "source": {
+          "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+          "section": "STORY NOTE",
+          "page": 4,
+          "sourceParagraphIndex": 86
+        }
+      },
+      {
+        "factId": "tf-08",
+        "statement": "Isaac favored Jacob, while Rebekah favored Esau.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-04"
+        ],
+        "teacherReviewRequired": true
+      }
+    ],
+    "drawStory": [
+      {
+        "prompt": "Isaac prayed for Rebekah, and she became pregnant.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "prompt": "God told Rebekah the twins would become two nations.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "prompt": "Esau was born first, and Jacob held onto his heel.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "prompt": "Esau became a hunter, while Jacob preferred the tents.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "prompt": "Esau asked Jacob for stew, and Jacob demanded his birthright.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "prompt": "Esau sold his birthright for bread and lentil stew.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      }
+    ],
+    "wordSearch": {
+      "words": [
+        "ISAAC",
+        "REBEKAH",
+        "JACOB",
+        "ESAU",
+        "TWINS",
+        "HUNTER",
+        "COVENANT",
+        "PROMISE",
+        "STEW",
+        "BIRTHRIGHT",
+        "Abraham",
+        "Wrestle"
+      ],
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "verseCryptogram": {
+      "reference": "Psalm 105:8",
+      "verse": "He remembers His covenant forever, the word He ordained for a thousand generations—",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "MEMORY VERSE ACTIVITY",
+        "page": 9,
+        "sourceParagraphIndex": 236,
+        "details": "Original ESV wording is “He remembers his covenant forever, the word that he commanded, for a thousand generations...” Proposed BSB wording verified against Bible Hub Psalm 105:8 (https://biblehub.com/psalms/105-8.htm). Teacher must confirm exact BSB passage, verse-ending em dash, and Scripture rights."
+      },
+      "teacherReviewRequired": true
+    },
+    "crossword": [
+      {
+        "answer": "ISAAC",
+        "clue": "He prayed for his wife.",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "REBEKAH",
+        "clue": "She gave birth to twin boys",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-01",
+          "sn-03"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "JACOB",
+        "clue": "The twin who grabbed his brother’s heel.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "answer": "ESAU",
+        "clue": "The firstborn brother who sold his birthright.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03",
+          "sn-06"
+        ]
+      },
+      {
+        "answer": "TWINS",
+        "clue": "What Rebekah gave birth to.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "answer": "HUNTER",
+        "clue": "Esau became a skillful one of these.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "answer": "BIRTHRIGHT",
+        "clue": "What Esau traded away for some stew.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05",
+          "sn-06"
+        ]
+      },
+      {
+        "answer": "STEW",
+        "clue": "The food Jacob gave his brother.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05",
+          "sn-06"
+        ]
+      },
+      {
+        "answer": "Hairy",
+        "clue": "Esau was very ___.",
+        "origin": "suggested",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      }
+    ],
+    "spiralVerse": {
+      "reference": "Psalm 105:8",
+      "verse": "He remembers His covenant forever, the word He ordained for a thousand generations—",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "MEMORY VERSE ACTIVITY",
+        "page": 9,
+        "sourceParagraphIndex": 236,
+        "details": "Original ESV wording is “He remembers his covenant forever, the word that he commanded, for a thousand generations...” Proposed BSB wording verified against Bible Hub Psalm 105:8 (https://biblehub.com/psalms/105-8.htm). Teacher must confirm exact BSB passage, verse-ending em dash, and Scripture rights."
+      },
+      "teacherReviewRequired": true
+    },
+    "connectVerse": {
+      "reference": "Psalm 105:8",
+      "verse": "He remembers His covenant forever, the word He ordained for a thousand generations—",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 14 Lesson (Jacob, Esau, and the Birthright).odt",
+        "section": "MEMORY VERSE ACTIVITY",
+        "page": 9,
+        "sourceParagraphIndex": 236,
+        "details": "Original ESV wording is “He remembers his covenant forever, the word that he commanded, for a thousand generations...” Proposed BSB wording verified against Bible Hub Psalm 105:8 (https://biblehub.com/psalms/105-8.htm). Teacher must confirm exact BSB passage, verse-ending em dash, and Scripture rights."
+      },
+      "teacherReviewRequired": true
+    }
+  },
+  "moduleReadiness": [
+    {
+      "moduleName": "Draw a Picture",
+      "moduleId": "draw-picture",
+      "size": "Small",
+      "preparedActivityKey": "drawPicture",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and three preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Multiple Choice",
+      "moduleId": "multiple-choice",
+      "size": "Small",
+      "preparedActivityKey": "multipleChoice",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and three preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "True or False",
+      "moduleId": "true-false",
+      "size": "Small",
+      "preparedActivityKey": "trueFalse",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and three preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "First Letter Challenge",
+      "moduleId": "first-letters",
+      "size": "Small",
+      "preparedActivityKey": "firstLetters",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and three preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "What Does Not Belong?",
+      "moduleId": "odd-words",
+      "size": "Small",
+      "preparedActivityKey": "oddWords",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and three preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Unscramble the Words",
+      "moduleId": "unscramble-words",
+      "size": "Small",
+      "preparedActivityKey": "unscrambleWords",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and three preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Checkboxes",
+      "moduleId": "checkboxes",
+      "size": "Small",
+      "preparedActivityKey": "checkboxes",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and three preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Who Am I?",
+      "moduleId": "who-am-i",
+      "size": "Small",
+      "preparedActivityKey": "whoAmI",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and three preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Match Words",
+      "moduleId": "match-words",
+      "size": "Small",
+      "preparedActivityKey": "matchWords",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and three preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Finish the Verse",
+      "moduleId": "finish-verse",
+      "size": "Medium",
+      "preparedActivityKey": "finishVerse",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and three preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Unscramble the Verse",
+      "moduleId": "unscramble-verse",
+      "size": "Medium",
+      "preparedActivityKey": "unscrambleVerse",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and three preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Circle the Mistakes",
+      "moduleId": "circle-mistakes",
+      "size": "Medium",
+      "preparedActivityKey": "circleMistakes",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and three preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Medium Word Search",
+      "moduleId": "medium-word-search",
+      "size": "Medium",
+      "preparedActivityKey": "mediumWordSearch",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and three preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "True/False Maze",
+      "moduleId": "true-false-maze",
+      "size": "Medium",
+      "preparedActivityKey": "trueFalseMaze",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and three preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Solve the Code",
+      "moduleId": "big-idea-cryptogram",
+      "size": "Medium",
+      "preparedActivityKey": "bigIdeaCryptogram",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and three preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Upside-Down Verse",
+      "moduleId": "upside-down-verse",
+      "size": "Medium",
+      "preparedActivityKey": "upsideDownVerse",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and three preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Connect the Big Idea",
+      "moduleId": "connect-big-idea",
+      "size": "Medium",
+      "preparedActivityKey": "connectBigIdea",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and three preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Pixel Picture",
+      "moduleId": "pixel-picture",
+      "size": "Medium",
+      "preparedActivityKey": "pixelPicture",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and three preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Finish the Story",
+      "moduleId": "finish-story",
+      "size": "Large",
+      "preparedActivityKey": "finishStory",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and three preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Story Order",
+      "moduleId": "story-order",
+      "size": "Large",
+      "preparedActivityKey": "storyOrder",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and three preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Sort the Story",
+      "moduleId": "sort-story",
+      "size": "Large",
+      "preparedActivityKey": "sortStory",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and three preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Draw the Story",
+      "moduleId": "draw-story",
+      "size": "Large",
+      "preparedActivityKey": "drawStory",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and three preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Word Search",
+      "moduleId": "word-search",
+      "size": "Large",
+      "preparedActivityKey": "wordSearch",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and three preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Verse Cryptogram",
+      "moduleId": "verse-cryptogram",
+      "size": "Large",
+      "preparedActivityKey": "verseCryptogram",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and three preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Crossword",
+      "moduleId": "crossword",
+      "size": "Large",
+      "preparedActivityKey": "crossword",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and three preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Spiral Verse",
+      "moduleId": "spiral-verse",
+      "size": "Large",
+      "preparedActivityKey": "spiralVerse",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and three preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Connect the Verse",
+      "moduleId": "connect-verse",
+      "size": "Large",
+      "preparedActivityKey": "connectVerse",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and three preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    }
+  ],
+  "reviewFlags": [
+    {
+      "id": "rf-01",
+      "priority": "high",
+      "type": "scripture-text",
+      "text": "Original lesson prints Psalm 105:8 in the ESV. This draft proposes the publicly verified BSB reading, but the teacher must confirm exact BSB excerpt/capitalization/end dash and rights; no signoff is claimed.",
+      "affectedModules": [
+        "first-letters",
+        "finish-verse",
+        "unscramble-verse",
+        "upside-down-verse",
+        "verse-cryptogram",
+        "spiral-verse",
+        "connect-verse"
+      ]
+    },
+    {
+      "id": "rf-02",
+      "priority": "high",
+      "type": "validation",
+      "text": "Candidate-specific official Review Studio 27/27 preflight, all three numbered worksheet presets, actual PDF layout, crossword and word-search engines NOT RUN in this chat. Run Review Studio before approval.",
+      "affectedModules": [
+        "draw-picture",
+        "multiple-choice",
+        "true-false",
+        "first-letters",
+        "odd-words",
+        "unscramble-words",
+        "checkboxes",
+        "who-am-i",
+        "match-words",
+        "finish-verse",
+        "unscramble-verse",
+        "circle-mistakes",
+        "medium-word-search",
+        "true-false-maze",
+        "big-idea-cryptogram",
+        "upside-down-verse",
+        "connect-big-idea",
+        "pixel-picture",
+        "finish-story",
+        "story-order",
+        "sort-story",
+        "draw-story",
+        "word-search",
+        "verse-cryptogram",
+        "crossword",
+        "spiral-verse",
+        "connect-verse"
+      ]
+    },
+    {
+      "id": "rf-03",
+      "priority": "medium",
+      "type": "content-sensitivity",
+      "text": "Teacher review: prenatal struggle, parental favoritism, trading away the birthright, and references to Jesus/dying for sins; select age-appropriate wording without rewriting original lesson source.",
+      "affectedModules": [
+        "who-am-i",
+        "story-order",
+        "sort-story",
+        "finish-story",
+        "draw-story",
+        "circle-mistakes"
+      ]
+    },
+    {
+      "id": "rf-04",
+      "priority": "medium",
+      "type": "teacher-approval",
+      "text": "Teacher approval needed for all deliberately false statements, suggested MC distractors, and unrelated word-bank decoys. These are editorial suggestions, not verbatim source claims.",
+      "affectedModules": [
+        "true-false",
+        "true-false-maze",
+        "sort-story",
+        "multiple-choice",
+        "odd-words",
+        "checkboxes",
+        "circle-mistakes"
+      ]
+    },
+    {
+      "id": "rf-05",
+      "priority": "medium",
+      "type": "source-formatting",
+      "text": "Both Important Idea graphics are split among visual text runs in the source ODT; normalized display spacing preserves the visible wording and uppercase emphasis. Verify during review.",
+      "affectedModules": [
+        "big-idea-cryptogram",
+        "connect-big-idea",
+        "pixel-picture"
+      ]
+    },
+    {
+      "id": "rf-06",
+      "priority": "low",
+      "type": "source-inventory",
+      "text": "Only the 16-page OT14 ODT was supplied. The document contains embedded pictures, but a separate slide deck or supplemental resource files were not supplied; no citations to those unseen files were fabricated.",
+      "affectedModules": [
+        "draw-picture",
+        "draw-story",
+        "story-order"
+      ]
+    },
+    {
+      "id": "rf-07",
+      "priority": "medium",
+      "type": "teacher-approval",
+      "text": "The original source question pool includes rhetorical, contextual, group-response questions. Only six adapted worksheet MC questions were prepared; verify the remaining narrative question bank is faithfully preserved.",
+      "affectedModules": [
+        "multiple-choice"
+      ]
+    }
+  ],
+  "validation": {
+    "basis": "Historical conversion-stage checks, not final Review Studio results. The passing review evidence is at publication.reviewStudioVerification.",
+    "allTextChecksPassed": false,
+    "jsonParseTested": true,
+    "actualGeneratorTested": false,
+    "checks": [
+      {
+        "check": "All seven exact original Story Notes preserve source ODT wording and uppercase cues",
+        "passed": true
+      },
+      {
+        "check": "All 10 original Review Question rows retain exact question and answer text",
+        "passed": true
+      },
+      {
+        "check": "All narrative question strings appear verbatim in source ODT",
+        "passed": true
+      },
+      {
+        "check": "Exactly 14 canonical True/False facts with seven true and seven false",
+        "passed": true
+      },
+      {
+        "check": "Six multiple-choice candidates, each with three unique choices and exactly one truthful flag",
+        "passed": true
+      },
+      {
+        "check": "Sort (8), True/False, and Maze each use unique canonical fact IDs with exact wording/truth",
+        "passed": true
+      },
+      {
+        "check": "Character clue records are nested objects, not strings",
+        "passed": true
+      },
+      {
+        "check": "All small drawing scenes are <=105-character phrases without terminal punctuation",
+        "passed": true
+      },
+      {
+        "check": "Large drawing captions are complete, chronological <=105-character sentences",
+        "passed": true
+      },
+      {
+        "check": "Story Order is chronological and contains 5–8 distinct <=115-character events",
+        "passed": true
+      },
+      {
+        "check": "oddWords selected word banks have disjoint distinct words",
+        "passed": true
+      },
+      {
+        "check": "checkboxes selected word banks have disjoint distinct words",
+        "passed": true
+      },
+      {
+        "check": "Odd Words and Checkboxes have non-overlapping selected decoys",
+        "passed": true
+      },
+      {
+        "check": "Unscramble Words has exactly two distinct 3–10-letter answers",
+        "passed": true
+      },
+      {
+        "check": "Circle the Mistakes has exactly five present and distinct incorrect substrings",
+        "passed": true
+      },
+      {
+        "check": "Finish the Story uses 6–12 single-word <=16-character blanks and <=1100 characters",
+        "passed": true
+      },
+      {
+        "check": "finishVerse exact BSB verse restoration and bracket count/length",
+        "passed": true
+      },
+      {
+        "check": "unscrambleVerse exact BSB verse restoration and bracket count/length",
+        "passed": true
+      },
+      {
+        "check": "All seven prepared verse activities share exact proposed BSB reference and text",
+        "passed": true
+      },
+      {
+        "check": "All 27 registered prepared keys and readiness rows are present",
+        "passed": true
+      },
+      {
+        "check": "All sourceIds and sourceQuestionIds resolve to actual source records",
+        "passed": true
+      },
+      {
+        "check": "Official Review Studio preflight, three numbered presets and live puzzle solvers verified",
+        "passed": false,
+        "detail": "NOT RUN: Only Review Studio itself can certify measured print fit and 27/27 preset conversion."
+      },
+      {
+        "check": "Teacher verified BSB excerpt and separate rights confirmation",
+        "passed": false,
+        "detail": "NOT RUN: Proposed BSB is sourced from a public Bible Hub edition but the teacher must approve it."
+      }
+    ],
+    "originalBasis": "Original conversion tests predate teacher-approved BSB; revalidate actual engines and content after export.",
+    "checksScope": "original-conversion-before-teacher-review",
+    "originalModuleReadiness": [
+      {
+        "moduleName": "Draw a Picture",
+        "moduleId": "draw-picture",
+        "size": "Small",
+        "preparedActivityKey": "drawPicture",
+        "status": "READY",
+        "contentValidation": "Local JSON shape, original source-text, candidate count, string-length, and cross-activity checks performed. Official Review Studio full 27/27 preflight, three presets, measured rendering and puzzle generators NOT RUN.",
+        "generatorTested": false,
+        "teacherReviewRequired": false,
+        "notes": "READY means candidate prepared, not a claim that the actual app preflight or PDF engines passed."
+      },
+      {
+        "moduleName": "Multiple Choice",
+        "moduleId": "multiple-choice",
+        "size": "Small",
+        "preparedActivityKey": "multipleChoice",
+        "status": "READY",
+        "contentValidation": "Local JSON shape, original source-text, candidate count, string-length, and cross-activity checks performed. Official Review Studio full 27/27 preflight, three presets, measured rendering and puzzle generators NOT RUN.",
+        "generatorTested": false,
+        "teacherReviewRequired": true,
+        "notes": "READY means candidate prepared, not a claim that the actual app preflight or PDF engines passed."
+      },
+      {
+        "moduleName": "True or False",
+        "moduleId": "true-false",
+        "size": "Small",
+        "preparedActivityKey": "trueFalse",
+        "status": "READY",
+        "contentValidation": "Local JSON shape, original source-text, candidate count, string-length, and cross-activity checks performed. Official Review Studio full 27/27 preflight, three presets, measured rendering and puzzle generators NOT RUN.",
+        "generatorTested": false,
+        "teacherReviewRequired": true,
+        "notes": "READY means candidate prepared, not a claim that the actual app preflight or PDF engines passed."
+      },
+      {
+        "moduleName": "First Letter Challenge",
+        "moduleId": "first-letters",
+        "size": "Small",
+        "preparedActivityKey": "firstLetters",
+        "status": "READY",
+        "contentValidation": "Local JSON shape, original source-text, candidate count, string-length, and cross-activity checks performed. Official Review Studio full 27/27 preflight, three presets, measured rendering and puzzle generators NOT RUN.",
+        "generatorTested": false,
+        "teacherReviewRequired": true,
+        "notes": "BSB wording is publicly cross-checked but requires teacher verification and separate rights approval. READY means candidate prepared, not a claim that the actual app preflight or PDF engines passed."
+      },
+      {
+        "moduleName": "What Does Not Belong?",
+        "moduleId": "odd-words",
+        "size": "Small",
+        "preparedActivityKey": "oddWords",
+        "status": "READY",
+        "contentValidation": "Local JSON shape, original source-text, candidate count, string-length, and cross-activity checks performed. Official Review Studio full 27/27 preflight, three presets, measured rendering and puzzle generators NOT RUN.",
+        "generatorTested": false,
+        "teacherReviewRequired": true,
+        "notes": "READY means candidate prepared, not a claim that the actual app preflight or PDF engines passed."
+      },
+      {
+        "moduleName": "Unscramble the Words",
+        "moduleId": "unscramble-words",
+        "size": "Small",
+        "preparedActivityKey": "unscrambleWords",
+        "status": "READY",
+        "contentValidation": "Local JSON shape, original source-text, candidate count, string-length, and cross-activity checks performed. Official Review Studio full 27/27 preflight, three presets, measured rendering and puzzle generators NOT RUN.",
+        "generatorTested": false,
+        "teacherReviewRequired": false,
+        "notes": "READY means candidate prepared, not a claim that the actual app preflight or PDF engines passed."
+      },
+      {
+        "moduleName": "Checkboxes",
+        "moduleId": "checkboxes",
+        "size": "Small",
+        "preparedActivityKey": "checkboxes",
+        "status": "READY",
+        "contentValidation": "Local JSON shape, original source-text, candidate count, string-length, and cross-activity checks performed. Official Review Studio full 27/27 preflight, three presets, measured rendering and puzzle generators NOT RUN.",
+        "generatorTested": false,
+        "teacherReviewRequired": true,
+        "notes": "READY means candidate prepared, not a claim that the actual app preflight or PDF engines passed."
+      },
+      {
+        "moduleName": "Who Am I?",
+        "moduleId": "who-am-i",
+        "size": "Small",
+        "preparedActivityKey": "whoAmI",
+        "status": "READY",
+        "contentValidation": "Local JSON shape, original source-text, candidate count, string-length, and cross-activity checks performed. Official Review Studio full 27/27 preflight, three presets, measured rendering and puzzle generators NOT RUN.",
+        "generatorTested": false,
+        "teacherReviewRequired": false,
+        "notes": "READY means candidate prepared, not a claim that the actual app preflight or PDF engines passed."
+      },
+      {
+        "moduleName": "Match Words",
+        "moduleId": "match-words",
+        "size": "Small",
+        "preparedActivityKey": "matchWords",
+        "status": "READY",
+        "contentValidation": "Local JSON shape, original source-text, candidate count, string-length, and cross-activity checks performed. Official Review Studio full 27/27 preflight, three presets, measured rendering and puzzle generators NOT RUN.",
+        "generatorTested": false,
+        "teacherReviewRequired": false,
+        "notes": "READY means candidate prepared, not a claim that the actual app preflight or PDF engines passed."
+      },
+      {
+        "moduleName": "Finish the Verse",
+        "moduleId": "finish-verse",
+        "size": "Medium",
+        "preparedActivityKey": "finishVerse",
+        "status": "READY",
+        "contentValidation": "Local JSON shape, original source-text, candidate count, string-length, and cross-activity checks performed. Official Review Studio full 27/27 preflight, three presets, measured rendering and puzzle generators NOT RUN.",
+        "generatorTested": false,
+        "teacherReviewRequired": true,
+        "notes": "BSB wording is publicly cross-checked but requires teacher verification and separate rights approval. READY means candidate prepared, not a claim that the actual app preflight or PDF engines passed."
+      },
+      {
+        "moduleName": "Unscramble the Verse",
+        "moduleId": "unscramble-verse",
+        "size": "Medium",
+        "preparedActivityKey": "unscrambleVerse",
+        "status": "READY",
+        "contentValidation": "Local JSON shape, original source-text, candidate count, string-length, and cross-activity checks performed. Official Review Studio full 27/27 preflight, three presets, measured rendering and puzzle generators NOT RUN.",
+        "generatorTested": false,
+        "teacherReviewRequired": true,
+        "notes": "BSB wording is publicly cross-checked but requires teacher verification and separate rights approval. READY means candidate prepared, not a claim that the actual app preflight or PDF engines passed."
+      },
+      {
+        "moduleName": "Circle the Mistakes",
+        "moduleId": "circle-mistakes",
+        "size": "Medium",
+        "preparedActivityKey": "circleMistakes",
+        "status": "READY",
+        "contentValidation": "Local JSON shape, original source-text, candidate count, string-length, and cross-activity checks performed. Official Review Studio full 27/27 preflight, three presets, measured rendering and puzzle generators NOT RUN.",
+        "generatorTested": false,
+        "teacherReviewRequired": true,
+        "notes": "READY means candidate prepared, not a claim that the actual app preflight or PDF engines passed."
+      },
+      {
+        "moduleName": "Medium Word Search",
+        "moduleId": "medium-word-search",
+        "size": "Medium",
+        "preparedActivityKey": "mediumWordSearch",
+        "status": "READY",
+        "contentValidation": "Local JSON shape, original source-text, candidate count, string-length, and cross-activity checks performed. Official Review Studio full 27/27 preflight, three presets, measured rendering and puzzle generators NOT RUN.",
+        "generatorTested": false,
+        "teacherReviewRequired": false,
+        "notes": "READY means candidate prepared, not a claim that the actual app preflight or PDF engines passed."
+      },
+      {
+        "moduleName": "True/False Maze",
+        "moduleId": "true-false-maze",
+        "size": "Medium",
+        "preparedActivityKey": "trueFalseMaze",
+        "status": "READY",
+        "contentValidation": "Local JSON shape, original source-text, candidate count, string-length, and cross-activity checks performed. Official Review Studio full 27/27 preflight, three presets, measured rendering and puzzle generators NOT RUN.",
+        "generatorTested": false,
+        "teacherReviewRequired": true,
+        "notes": "READY means candidate prepared, not a claim that the actual app preflight or PDF engines passed."
+      },
+      {
+        "moduleName": "Solve the Code",
+        "moduleId": "big-idea-cryptogram",
+        "size": "Medium",
+        "preparedActivityKey": "bigIdeaCryptogram",
+        "status": "READY",
+        "contentValidation": "Local JSON shape, original source-text, candidate count, string-length, and cross-activity checks performed. Official Review Studio full 27/27 preflight, three presets, measured rendering and puzzle generators NOT RUN.",
+        "generatorTested": false,
+        "teacherReviewRequired": false,
+        "notes": "READY means candidate prepared, not a claim that the actual app preflight or PDF engines passed."
+      },
+      {
+        "moduleName": "Upside-Down Verse",
+        "moduleId": "upside-down-verse",
+        "size": "Medium",
+        "preparedActivityKey": "upsideDownVerse",
+        "status": "READY",
+        "contentValidation": "Local JSON shape, original source-text, candidate count, string-length, and cross-activity checks performed. Official Review Studio full 27/27 preflight, three presets, measured rendering and puzzle generators NOT RUN.",
+        "generatorTested": false,
+        "teacherReviewRequired": true,
+        "notes": "BSB wording is publicly cross-checked but requires teacher verification and separate rights approval. READY means candidate prepared, not a claim that the actual app preflight or PDF engines passed."
+      },
+      {
+        "moduleName": "Connect the Big Idea",
+        "moduleId": "connect-big-idea",
+        "size": "Medium",
+        "preparedActivityKey": "connectBigIdea",
+        "status": "READY",
+        "contentValidation": "Local JSON shape, original source-text, candidate count, string-length, and cross-activity checks performed. Official Review Studio full 27/27 preflight, three presets, measured rendering and puzzle generators NOT RUN.",
+        "generatorTested": false,
+        "teacherReviewRequired": false,
+        "notes": "READY means candidate prepared, not a claim that the actual app preflight or PDF engines passed."
+      },
+      {
+        "moduleName": "Pixel Picture",
+        "moduleId": "pixel-picture",
+        "size": "Medium",
+        "preparedActivityKey": "pixelPicture",
+        "status": "READY",
+        "contentValidation": "Local JSON shape, original source-text, candidate count, string-length, and cross-activity checks performed. Official Review Studio full 27/27 preflight, three presets, measured rendering and puzzle generators NOT RUN.",
+        "generatorTested": false,
+        "teacherReviewRequired": false,
+        "notes": "READY means candidate prepared, not a claim that the actual app preflight or PDF engines passed."
+      },
+      {
+        "moduleName": "Finish the Story",
+        "moduleId": "finish-story",
+        "size": "Large",
+        "preparedActivityKey": "finishStory",
+        "status": "READY",
+        "contentValidation": "Local JSON shape, original source-text, candidate count, string-length, and cross-activity checks performed. Official Review Studio full 27/27 preflight, three presets, measured rendering and puzzle generators NOT RUN.",
+        "generatorTested": false,
+        "teacherReviewRequired": true,
+        "notes": "READY means candidate prepared, not a claim that the actual app preflight or PDF engines passed."
+      },
+      {
+        "moduleName": "Story Order",
+        "moduleId": "story-order",
+        "size": "Large",
+        "preparedActivityKey": "storyOrder",
+        "status": "READY",
+        "contentValidation": "Local JSON shape, original source-text, candidate count, string-length, and cross-activity checks performed. Official Review Studio full 27/27 preflight, three presets, measured rendering and puzzle generators NOT RUN.",
+        "generatorTested": false,
+        "teacherReviewRequired": false,
+        "notes": "READY means candidate prepared, not a claim that the actual app preflight or PDF engines passed."
+      },
+      {
+        "moduleName": "Sort the Story",
+        "moduleId": "sort-story",
+        "size": "Large",
+        "preparedActivityKey": "sortStory",
+        "status": "READY",
+        "contentValidation": "Local JSON shape, original source-text, candidate count, string-length, and cross-activity checks performed. Official Review Studio full 27/27 preflight, three presets, measured rendering and puzzle generators NOT RUN.",
+        "generatorTested": false,
+        "teacherReviewRequired": true,
+        "notes": "READY means candidate prepared, not a claim that the actual app preflight or PDF engines passed."
+      },
+      {
+        "moduleName": "Draw the Story",
+        "moduleId": "draw-story",
+        "size": "Large",
+        "preparedActivityKey": "drawStory",
+        "status": "READY",
+        "contentValidation": "Local JSON shape, original source-text, candidate count, string-length, and cross-activity checks performed. Official Review Studio full 27/27 preflight, three presets, measured rendering and puzzle generators NOT RUN.",
+        "generatorTested": false,
+        "teacherReviewRequired": false,
+        "notes": "READY means candidate prepared, not a claim that the actual app preflight or PDF engines passed."
+      },
+      {
+        "moduleName": "Word Search",
+        "moduleId": "word-search",
+        "size": "Large",
+        "preparedActivityKey": "wordSearch",
+        "status": "READY",
+        "contentValidation": "Local JSON shape, original source-text, candidate count, string-length, and cross-activity checks performed. Official Review Studio full 27/27 preflight, three presets, measured rendering and puzzle generators NOT RUN.",
+        "generatorTested": false,
+        "teacherReviewRequired": false,
+        "notes": "READY means candidate prepared, not a claim that the actual app preflight or PDF engines passed."
+      },
+      {
+        "moduleName": "Verse Cryptogram",
+        "moduleId": "verse-cryptogram",
+        "size": "Large",
+        "preparedActivityKey": "verseCryptogram",
+        "status": "READY",
+        "contentValidation": "Local JSON shape, original source-text, candidate count, string-length, and cross-activity checks performed. Official Review Studio full 27/27 preflight, three presets, measured rendering and puzzle generators NOT RUN.",
+        "generatorTested": false,
+        "teacherReviewRequired": true,
+        "notes": "BSB wording is publicly cross-checked but requires teacher verification and separate rights approval. READY means candidate prepared, not a claim that the actual app preflight or PDF engines passed."
+      },
+      {
+        "moduleName": "Crossword",
+        "moduleId": "crossword",
+        "size": "Large",
+        "preparedActivityKey": "crossword",
+        "status": "READY",
+        "contentValidation": "Local JSON shape, original source-text, candidate count, string-length, and cross-activity checks performed. Official Review Studio full 27/27 preflight, three presets, measured rendering and puzzle generators NOT RUN.",
+        "generatorTested": false,
+        "teacherReviewRequired": false,
+        "notes": "READY means candidate prepared, not a claim that the actual app preflight or PDF engines passed."
+      },
+      {
+        "moduleName": "Spiral Verse",
+        "moduleId": "spiral-verse",
+        "size": "Large",
+        "preparedActivityKey": "spiralVerse",
+        "status": "READY",
+        "contentValidation": "Local JSON shape, original source-text, candidate count, string-length, and cross-activity checks performed. Official Review Studio full 27/27 preflight, three presets, measured rendering and puzzle generators NOT RUN.",
+        "generatorTested": false,
+        "teacherReviewRequired": true,
+        "notes": "BSB wording is publicly cross-checked but requires teacher verification and separate rights approval. READY means candidate prepared, not a claim that the actual app preflight or PDF engines passed."
+      },
+      {
+        "moduleName": "Connect the Verse",
+        "moduleId": "connect-verse",
+        "size": "Large",
+        "preparedActivityKey": "connectVerse",
+        "status": "READY",
+        "contentValidation": "Local JSON shape, original source-text, candidate count, string-length, and cross-activity checks performed. Official Review Studio full 27/27 preflight, three presets, measured rendering and puzzle generators NOT RUN.",
+        "generatorTested": false,
+        "teacherReviewRequired": true,
+        "notes": "BSB wording is publicly cross-checked but requires teacher verification and separate rights approval. READY means candidate prepared, not a claim that the actual app preflight or PDF engines passed."
+      }
+    ]
+  },
+  "publication": {
+    "status": "approved",
+    "approved": true,
+    "notes": "Approved through Review Studio after teacher review and a successful 27/27 content/preflight check of three numbered presets. Original conversion notes and checks remain as historical records.",
+    "teacherSignoff": {
+      "reviewer": "Andrew Doane",
+      "date": "2026-11-06",
+      "notes": "Approved with verified BSB verse through Curriculum Review Studio"
+    },
+    "scriptureRights": {
+      "status": "cleared",
+      "basis": "Berean Standard Bible (BSB), dedicated to the public domain on April 30, 2023. Official terms: https://berean.bible/terms.htm. Scripture text confirmed against https://bereanbible.com/bsb.txt.",
+      "reviewedBy": "Andrew Doane",
+      "reviewedOn": "2026-11-06"
+    },
+    "resolvedReviewFlagIds": [
+      "rf-04",
+      "rf-07",
+      "rf-01",
+      "rf-03"
+    ],
+    "originalSchemaStatus": "Source-preserving OT14 conversion draft; initial text/shape checks only; teacher BSB review and actual Review Studio preflight pending.",
+    "originalConversionNotes": "UNAPPROVED candidate from OT14. Source ESV preserved; proposed BSB Psalm 105:8 needs teacher verification and separate rights approval. All 27 activity candidates are provided, but measured preflight and student PDF/presets are NOT RUN.",
+    "reviewStudioVerification": {
+      "source": "Review Studio measured preflight",
+      "checkedAt": "2026-11-06T13:42:40.990Z",
+      "convertedCount": 27,
+      "totalCount": 27,
+      "issueCount": 0,
+      "numberedPresetsChecked": 3,
+      "scope": "Candidate-specific content conversion, three numbered preset content checks, and measured Connect the Verse fit. Standalone repository commands and independently rendered PDFs are not claimed.",
+      "matchingWorksheetSource": "preparedActivities.matchWords",
+      "matchingCandidatePool": "matchingPairs is retained separately as historical/source candidate material"
+    },
+    "reviewFlagDisposition": [
+      {
+        "id": "rf-01",
+        "status": "resolved",
+        "detail": "Resolved by explicit teacher review, BSB choice, or signed approval, as applicable."
+      },
+      {
+        "id": "rf-02",
+        "status": "partially-verified",
+        "detail": "Review Studio preflight passed; the separate original converter/CI or standalone generator tests are NOT automatically claimed."
+      },
+      {
+        "id": "rf-03",
+        "status": "resolved",
+        "detail": "Resolved by explicit teacher review, BSB choice, or signed approval, as applicable."
+      },
+      {
+        "id": "rf-04",
+        "status": "resolved",
+        "detail": "Resolved by explicit teacher review, BSB choice, or signed approval, as applicable."
+      },
+      {
+        "id": "rf-05",
+        "status": "requires-review",
+        "detail": "Original flag retained; no implicit resolution was recorded."
+      },
+      {
+        "id": "rf-06",
+        "status": "historical",
+        "detail": "Historical record of material supplied; not a task to fabricate missing documents."
+      },
+      {
+        "id": "rf-07",
+        "status": "resolved",
+        "detail": "Resolved by explicit teacher review, BSB choice, or signed approval, as applicable."
+      }
+    ]
+  }
+}

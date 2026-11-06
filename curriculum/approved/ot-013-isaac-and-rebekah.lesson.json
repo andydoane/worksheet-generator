@@ -1,0 +1,3274 @@
+{
+  "schemaVersion": 1,
+  "schemaStatus": "approved; Review Studio 27/27 preflight passed",
+  "id": "ot-013-isaac-and-rebekah",
+  "curriculum": {
+    "series": "Old Testament",
+    "lessonNumber": 13
+  },
+  "lessonDetails": {
+    "title": "Isaac and Rebekah",
+    "scripturePassages": [
+      "Genesis 24"
+    ],
+    "scriptureDisplay": "Genesis 24",
+    "bigIdeas": [
+      {
+        "text": "God hears us when we PRAY.",
+        "origin": "source",
+        "source": {
+          "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+          "section": "Important Idea",
+          "page": 6,
+          "sourceParagraphIndex": 77,
+          "details": "Exact wording and capitalization checked on page-6 blue Important Idea graphic; visible text spans ODT display paragraphs 151–152. The joined duplicate at paragraph 150 has spacing lost in extraction."
+        }
+      },
+      {
+        "text": "We can be SURE God will keep his promises.",
+        "origin": "source",
+        "source": {
+          "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+          "section": "Important Idea",
+          "page": 6,
+          "sourceParagraphIndex": 91,
+          "details": "Exact wording and capitalization checked on page-6 green Important Idea graphic; visible text spans ODT display paragraphs 175–177. The joined duplicate at paragraph 174 has spacing lost in extraction."
+        }
+      }
+    ],
+    "memoryVerse": {
+      "reference": "James 5:13",
+      "translation": "BSB",
+      "text": "Is any one of you suffering? He should pray. Is anyone cheerful? He should sing praises.",
+      "isExcerpt": false,
+      "hasEllipses": false,
+      "requiresTextReview": false,
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Memory Verse Activity",
+        "page": 8,
+        "sourceParagraphIndex": 111
+      },
+      "alsoVerifiedAt": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Verse and Motions",
+        "page": 8,
+        "sourceParagraphIndex": 116
+      },
+      "originalTranslation": "ESV",
+      "bsbSource": {
+        "reference": "James 5:13",
+        "sourceUrl": "https://bereanbible.com/bsb.txt",
+        "publicDomainTerms": "https://berean.bible/terms.htm",
+        "startWord": 0,
+        "endWord": 15
+      }
+    }
+  },
+  "sourceFiles": [
+    {
+      "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+      "format": "odt",
+      "role": "primary teaching source",
+      "note": "14-page ODT; no separate slides or resource sheets. Original Story Sheet instructions say to draw only (no fill-in words). Original James 5:13 ESV text preserved pending teacher BSB selection."
+    }
+  ],
+  "storyNotes": [
+    {
+      "id": "sn-01",
+      "order": 1,
+      "originalText": "Abraham sent his servant back to his home country to find a WIFE for Isaac from his relatives.",
+      "cleanText": "Abraham sent his servant back to his home country to find a wife for Isaac from his relatives.",
+      "emphasizedWords": [
+        "WIFE"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "STORY NOTE",
+        "page": 1,
+        "sourceParagraphIndex": 13
+      }
+    },
+    {
+      "id": "sn-02",
+      "order": 2,
+      "originalText": "At the well, the servant prayed, “May the woman you’ve chosen offer to bring WATER to my camels.”",
+      "cleanText": "At the well, the servant prayed, “May the woman you’ve chosen offer to bring water to my camels.”",
+      "emphasizedWords": [
+        "WATER"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "STORY NOTE",
+        "page": 2,
+        "sourceParagraphIndex": 23
+      }
+    },
+    {
+      "id": "sn-03",
+      "order": 3,
+      "originalText": "When the servant asked her for a drink, Rebekah also brought WATER to his camels.",
+      "cleanText": "When the servant asked her for a drink, Rebekah also brought water to his camels.",
+      "emphasizedWords": [
+        "WATER"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "STORY NOTE",
+        "page": 3,
+        "sourceParagraphIndex": 34
+      }
+    },
+    {
+      "id": "sn-04",
+      "order": 4,
+      "originalText": "The servant PRAISED God for answering his prayer and giving him success on his mission.",
+      "cleanText": "The servant praised God for answering his prayer and giving him success on his mission.",
+      "emphasizedWords": [
+        "PRAISED"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "STORY NOTE",
+        "page": 3,
+        "sourceParagraphIndex": 42
+      }
+    },
+    {
+      "id": "sn-05",
+      "order": 5,
+      "originalText": "The servant TOLD Rebekah’s father Bethuel and brother Laban all that God had done.",
+      "cleanText": "The servant told Rebekah’s father Bethuel and brother Laban all that God had done.",
+      "emphasizedWords": [
+        "TOLD"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "STORY NOTE",
+        "page": 4,
+        "sourceParagraphIndex": 51
+      }
+    },
+    {
+      "id": "sn-06",
+      "order": 6,
+      "originalText": "Rebekah agreed to leave with the servant. Her father and brother gave her their BLESSING.",
+      "cleanText": "Rebekah agreed to leave with the servant. Her father and brother gave her their blessing.",
+      "emphasizedWords": [
+        "BLESSING"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "STORY NOTE",
+        "page": 5,
+        "sourceParagraphIndex": 61
+      }
+    },
+    {
+      "id": "sn-07",
+      "order": 7,
+      "originalText": "Isaac saw them as they arrived home. He MARRIED Rebekah and loved her.",
+      "cleanText": "Isaac saw them as they arrived home. He married Rebekah and loved her.",
+      "emphasizedWords": [
+        "MARRIED"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "STORY NOTE",
+        "page": 5,
+        "sourceParagraphIndex": 68
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q-01",
+      "question": "Do you remember that baby's name?",
+      "answer": "Isaac.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "introduction",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 7
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-02",
+      "question": "Where did he send the servant?",
+      "answer": "To his own country, where his relatives lived.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Story",
+        "page": 1,
+        "sourceParagraphIndex": 14
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-03",
+      "question": "What had God promised Abraham?",
+      "answer": "To grow his family into a great nation.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 18
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-04",
+      "question": "What is a well?",
+      "answer": "A deep hole in the ground filled with water.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 25
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-05",
+      "question": "How could he know which girl would be a good fit for Isaac?",
+      "answer": "",
+      "kind": "discussion",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 26
+      },
+      "standaloneReady": false,
+      "notes": "Original open/rhetorical teaching question without a printed parenthetical answer; not automatically used on stand-alone worksheets."
+    },
+    {
+      "id": "q-06",
+      "question": "What did he do instead?",
+      "answer": "He prayed.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 26
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-07",
+      "question": "What special words was he waiting to hear?",
+      "answer": "I’ll get some for your camels, too.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Story",
+        "page": 3,
+        "sourceParagraphIndex": 32
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-08",
+      "question": "What was her name?",
+      "answer": "Rebekah.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Story",
+        "page": 3,
+        "sourceParagraphIndex": 35
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-09",
+      "question": "What did Rebekah say?",
+      "answer": "Yes. I'll get some for your camels, too!",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Story",
+        "page": 3,
+        "sourceParagraphIndex": 36
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-10",
+      "question": "What did that mean?",
+      "answer": "Rebekah was the girl God had chosen for Isaac.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Story",
+        "page": 3,
+        "sourceParagraphIndex": 37
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-11",
+      "question": "At this point, did Rebekah know what was going on?",
+      "answer": "No.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Story",
+        "page": 3,
+        "sourceParagraphIndex": 39
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-12",
+      "question": "So what did Eliezer do after God made his search a smashing success?",
+      "answer": "He prayed to God again!",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 46
+      },
+      "standaloneReady": true,
+      "notes": "Printed answer immediately follows question in running prose (not in parentheses)."
+    },
+    {
+      "id": "q-13",
+      "question": "What did the servant have to say to Rebekah’s brother and father?",
+      "answer": "",
+      "kind": "discussion",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 50
+      },
+      "standaloneReady": false,
+      "notes": "Original open/rhetorical teaching question without a printed parenthetical answer; not automatically used on stand-alone worksheets."
+    },
+    {
+      "id": "q-14",
+      "question": "What was the name of Rebekah's brother?",
+      "answer": "Laban.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 52
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-15",
+      "question": "What do you think he wanted to tell Laban?",
+      "answer": "How God answered his prayer.",
+      "kind": "discussion",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 53
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-16",
+      "question": "What did Rebekah's father Bethuel and brother Laban say after hearing about God’s amazingly quick answer to Eliezer’s prayer?",
+      "answer": "The Lord God has done this.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Story",
+        "page": 5,
+        "sourceParagraphIndex": 62
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-17",
+      "question": "What did he give?",
+      "answer": "Gold and silver jewelry, clothing.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Story",
+        "page": 5,
+        "sourceParagraphIndex": 63
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-18",
+      "question": "What did she say?",
+      "answer": "Yes.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Story",
+        "page": 5,
+        "sourceParagraphIndex": 64
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-19",
+      "question": "What did they ask God to do?",
+      "answer": "Grow Rebekah’s family by thousands.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Story",
+        "page": 5,
+        "sourceParagraphIndex": 65
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-20",
+      "question": "As he did, what did he happen to see?",
+      "answer": "Abraham’s servant and Rebekah riding into town on their camels!",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Story",
+        "page": 5,
+        "sourceParagraphIndex": 70
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-21",
+      "question": "After meeting, what did Isaac and Rebekah do?",
+      "answer": "They got married.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Story",
+        "page": 5,
+        "sourceParagraphIndex": 71
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-22",
+      "question": "What does the Bible say about Isaac's feelings for Rebekah?",
+      "answer": "He loved her.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Story",
+        "page": 5,
+        "sourceParagraphIndex": 73
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-23",
+      "question": "So, how does the story of Isaac and Rebekah teach us, strengthen us, encourage us, or give us hope?",
+      "answer": "",
+      "kind": "discussion",
+      "origin": "source",
+      "scope": "story application",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Story Application",
+        "page": 5,
+        "sourceParagraphIndex": 75
+      },
+      "standaloneReady": false,
+      "notes": "Original open/rhetorical teaching question without a printed parenthetical answer; not automatically used on stand-alone worksheets."
+    },
+    {
+      "id": "q-24",
+      "question": "What is prayer?",
+      "answer": "Talking with God.",
+      "kind": "theological",
+      "origin": "source",
+      "scope": "story application",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Story Application",
+        "page": 6,
+        "sourceParagraphIndex": 79
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-25",
+      "question": "What does this tell us about praying?",
+      "answer": "To never stop.",
+      "kind": "theological",
+      "origin": "source",
+      "scope": "story application",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Story Application",
+        "page": 6,
+        "sourceParagraphIndex": 85
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-26",
+      "question": "Why?",
+      "answer": "Because of God’s promise.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story application",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Story Application",
+        "page": 6,
+        "sourceParagraphIndex": 94
+      },
+      "standaloneReady": false,
+      "notes": "Printed answer immediately follows question in running prose (not in parentheses)."
+    },
+    {
+      "id": "q-27",
+      "question": "What did Jesus do to bless the whole world?",
+      "answer": "Died for our sins, rose from the dead.",
+      "kind": "theological",
+      "origin": "source",
+      "scope": "story application",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Story Application",
+        "page": 7,
+        "sourceParagraphIndex": 104
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-28",
+      "question": "What did she do?",
+      "answer": "Got water for his camels.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "memory verse activity",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Memory Verse Activity",
+        "page": 8,
+        "sourceParagraphIndex": 114
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-29",
+      "question": "What did Abraham send his servant Eliezer to do?",
+      "answer": "Find a wife for Isaac",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 149
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-30",
+      "question": "Why was Abraham certain the servant would be successful?",
+      "answer": "God promised to grow his family into a great nation",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 150
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-31",
+      "question": "What did the servant pray?",
+      "answer": "Let the woman you've chosen for Isaac say, \"I'll get water for your camels, too.\"",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 151
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-32",
+      "question": "Who came to the well before the servant finished praying?",
+      "answer": "Rebekah",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 152
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-33",
+      "question": "When the servant asked for a drink, what did Rebekah say?",
+      "answer": "I'll get some water for your camels, too",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 153
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-34",
+      "question": "What did the servant give to Rebekah?",
+      "answer": "Gold jewelry",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 154
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-35",
+      "question": "Who were Bethuel and Laban?",
+      "answer": "Rebekah's father and brother",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Review Questions",
+        "page": 11,
+        "sourceParagraphIndex": 155
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-36",
+      "question": "When the servant told Bethuel and Laban what happened, what did they say?",
+      "answer": "The Lord has done this, let Rebekah marry Isaac",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Review Questions",
+        "page": 11,
+        "sourceParagraphIndex": 156
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-37",
+      "question": "Where was Isaac when Rebekah and the servant returned?",
+      "answer": "Thinking in a field",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Review Questions",
+        "page": 11,
+        "sourceParagraphIndex": 157
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-38",
+      "question": "What did Isaac do after meeting Rebekah? How did he feel about her?",
+      "answer": "He married her and loved her",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Review Questions",
+        "page": 11,
+        "sourceParagraphIndex": 158
+      },
+      "standaloneReady": true
+    }
+  ],
+  "facts": [
+    {
+      "id": "tf-01",
+      "statement": "Abraham sent his servant to find a wife for Isaac among relatives.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-02",
+      "statement": "Abraham wanted Isaac to marry a woman from Canaan.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "teacherReviewRequired": true,
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Story",
+        "page": 1,
+        "sourceParagraphIndex": 15
+      }
+    },
+    {
+      "id": "tf-03",
+      "statement": "Eliezer took ten camels on the journey to find a wife for Isaac.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 24
+      }
+    },
+    {
+      "id": "tf-04",
+      "statement": "Eliezer stopped to pray  at the bottom of a well.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-02"
+      ],
+      "teacherReviewRequired": true,
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 25
+      }
+    },
+    {
+      "id": "tf-05",
+      "statement": "Eliezer asked God for a woman who would water his camels.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-06",
+      "statement": "Rebekah offered water to Eliezer and his camels.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-07",
+      "statement": "Rebekah demanded to be paid before watering the camels.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-03"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-08",
+      "statement": "Eliezer praised God after his prayer was answered.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-09",
+      "statement": "Laban refused to welcome Abraham’s servant into his home.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": true,
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 53
+      }
+    },
+    {
+      "id": "tf-10",
+      "statement": "Rebekah’s father was Bethuel, and her brother was Laban.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 52
+      }
+    },
+    {
+      "id": "tf-11",
+      "statement": "Rebekah was Abraham’s daughter.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": true,
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Story",
+        "page": 3,
+        "sourceParagraphIndex": 43
+      }
+    },
+    {
+      "id": "tf-12",
+      "statement": "Rebekah agreed to leave home with Abraham’s servant.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-13",
+      "statement": "Isaac first met Rebekah beside the well.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": true,
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Story",
+        "page": 5,
+        "sourceParagraphIndex": 70
+      }
+    },
+    {
+      "id": "tf-14",
+      "statement": "Isaac married Rebekah and loved her.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": false
+    }
+  ],
+  "vocabulary": {
+    "related": [
+      "ABRAHAM",
+      "ISAAC",
+      "REBEKAH",
+      "ELIEZER",
+      "SERVANT",
+      "WIFE",
+      "CAMELS",
+      "WATER",
+      "WELL",
+      "PRAYER",
+      "PRAISED",
+      "TOLD",
+      "BETHUEL",
+      "LABAN",
+      "NAHOR",
+      "FAMILY",
+      "BLESSING",
+      "MARRIED",
+      "GOLD",
+      "BRACELETS",
+      "JEWELRY",
+      "RELATIVES",
+      "JOURNEY",
+      "GIFTS",
+      "GOD",
+      "PRAISE",
+      "HEAR",
+      "PROMISES",
+      "FIELD",
+      "LOVE"
+    ],
+    "unrelated": [
+      "JONAH",
+      "GOLIATH",
+      "MANNA",
+      "JERICHO",
+      "DANIEL",
+      "DEBORAH",
+      "PHARAOH",
+      "RAVEN",
+      "LOAVES",
+      "GIDEON"
+    ],
+    "entries": [
+      {
+        "id": "v-01",
+        "term": "ABRAHAM",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "id": "v-02",
+        "term": "ISAAC",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "id": "v-03",
+        "term": "REBEKAH",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "id": "v-04",
+        "term": "ELIEZER",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "source": {
+          "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+          "section": "Story",
+          "page": 2,
+          "sourceParagraphIndex": 24
+        }
+      },
+      {
+        "id": "v-05",
+        "term": "SERVANT",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "id": "v-06",
+        "term": "WIFE",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "id": "v-07",
+        "term": "CAMELS",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "id": "v-08",
+        "term": "WATER",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "id": "v-09",
+        "term": "WELL",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "id": "v-10",
+        "term": "PRAYER",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "id": "v-11",
+        "term": "PRAISED",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "id": "v-12",
+        "term": "TOLD",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "id": "v-13",
+        "term": "BETHUEL",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "id": "v-14",
+        "term": "LABAN",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "id": "v-15",
+        "term": "NAHOR",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ],
+        "source": {
+          "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+          "section": "Story",
+          "page": 4,
+          "sourceParagraphIndex": 45
+        }
+      },
+      {
+        "id": "v-16",
+        "term": "FAMILY",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "id": "v-17",
+        "term": "BLESSING",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "id": "v-18",
+        "term": "MARRIED",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "id": "v-19",
+        "term": "GOLD",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ],
+        "source": {
+          "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+          "section": "Story",
+          "page": 5,
+          "sourceParagraphIndex": 63
+        }
+      },
+      {
+        "id": "v-20",
+        "term": "BRACELETS",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ],
+        "source": {
+          "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+          "section": "Story",
+          "page": 3,
+          "sourceParagraphIndex": 40
+        }
+      },
+      {
+        "id": "v-21",
+        "term": "JEWELRY",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "id": "v-22",
+        "term": "RELATIVES",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "id": "v-23",
+        "term": "JOURNEY",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "id": "v-24",
+        "term": "GIFTS",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "id": "v-25",
+        "term": "GOD",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "id": "v-26",
+        "term": "PRAISE",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "id": "v-27",
+        "term": "HEAR",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ],
+        "source": {
+          "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+          "section": "Important Idea",
+          "page": 6,
+          "sourceParagraphIndex": 77
+        }
+      },
+      {
+        "id": "v-28",
+        "term": "PROMISES",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "source": {
+          "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+          "section": "Introduction",
+          "page": 1,
+          "sourceParagraphIndex": 5
+        }
+      },
+      {
+        "id": "v-29",
+        "term": "FIELD",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ],
+        "source": {
+          "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+          "section": "Story",
+          "page": 5,
+          "sourceParagraphIndex": 70
+        }
+      },
+      {
+        "id": "v-30",
+        "term": "LOVE",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      }
+    ]
+  },
+  "characters": [
+    {
+      "id": "ch-01",
+      "name": "Abraham",
+      "origin": "source",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "clues": [
+        {
+          "text": "I asked my trusted servant to find a wife for my son Isaac.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-01"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch-02",
+      "name": "Eliezer",
+      "origin": "source",
+      "sourceIds": [
+        "sn-02",
+        "sn-04",
+        "sn-05"
+      ],
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 24
+      },
+      "clues": [
+        {
+          "text": "I prayed beside a well and asked God to guide me in finding Isaac’s wife.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-02",
+            "sn-04"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch-03",
+      "name": "Rebekah",
+      "origin": "source",
+      "sourceIds": [
+        "sn-03",
+        "sn-06",
+        "sn-07"
+      ],
+      "clues": [
+        {
+          "text": "I gave a traveler water and offered to water his camels too.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-03"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch-04",
+      "name": "Laban",
+      "origin": "source",
+      "sourceIds": [
+        "sn-05",
+        "sn-06"
+      ],
+      "clues": [
+        {
+          "text": "My sister Rebekah met Abraham’s servant at the well.",
+          "origin": "adapted",
+          "source": {
+            "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+            "section": "Story",
+            "page": 4,
+            "sourceParagraphIndex": 52
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch-05",
+      "name": "Isaac",
+      "origin": "source",
+      "sourceIds": [
+        "sn-01",
+        "sn-07"
+      ],
+      "clues": [
+        {
+          "text": "My father sent a servant to find me a wife, and I married Rebekah.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-01",
+            "sn-07"
+          ]
+        }
+      ]
+    }
+  ],
+  "matchingPairs": [
+    {
+      "id": "mp-01",
+      "left": "Abraham",
+      "right": "Sent the servant",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    {
+      "id": "mp-02",
+      "left": "Eliezer",
+      "right": "Prayed for help",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ]
+    },
+    {
+      "id": "mp-03",
+      "left": "Rebekah",
+      "right": "Watered camels",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ]
+    },
+    {
+      "id": "mp-04",
+      "left": "Laban",
+      "right": "Brother",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ]
+    },
+    {
+      "id": "mp-05",
+      "left": "Bethuel",
+      "right": "Father",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ]
+    },
+    {
+      "id": "mp-06",
+      "left": "Isaac",
+      "right": "Married Rebekah",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ]
+    }
+  ],
+  "drawingPrompts": [
+    {
+      "id": "dp-01",
+      "prompt": "Abraham sending his servant to find a wife for Isaac",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    {
+      "id": "dp-02",
+      "prompt": "Abraham’s servant praying beside a well with his camels",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ]
+    },
+    {
+      "id": "dp-03",
+      "prompt": "Rebekah drawing water from the well for the servant and camels",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ]
+    },
+    {
+      "id": "dp-04",
+      "prompt": "the servant bowing to praise God near the well",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ]
+    },
+    {
+      "id": "dp-05",
+      "prompt": "Eliezer telling Rebekah’s family about his journey",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ]
+    },
+    {
+      "id": "dp-06",
+      "prompt": "Rebekah leaving home with the servant and the camels",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ]
+    },
+    {
+      "id": "dp-07",
+      "prompt": "Isaac meeting Rebekah when she arrives on the camels",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ]
+    }
+  ],
+  "keyPhrases": [
+    {
+      "id": "kp-01",
+      "text": "God hears us when we PRAY.",
+      "origin": "source",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Important Idea",
+        "page": 6,
+        "sourceParagraphIndex": 77,
+        "details": "Exact wording and capitalization checked on page-6 blue Important Idea graphic; visible text spans ODT display paragraphs 151–152. The joined duplicate at paragraph 150 has spacing lost in extraction."
+      }
+    },
+    {
+      "id": "kp-02",
+      "text": "We can be SURE God will keep his promises.",
+      "origin": "source",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Important Idea",
+        "page": 6,
+        "sourceParagraphIndex": 91,
+        "details": "Exact wording and capitalization checked on page-6 green Important Idea graphic; visible text spans ODT display paragraphs 175–177. The joined duplicate at paragraph 174 has spacing lost in extraction."
+      }
+    },
+    {
+      "id": "kp-03",
+      "text": "Eliezer prayed for help and then praised God when his prayer was answered.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 46
+      }
+    },
+    {
+      "id": "kp-04",
+      "text": "Rebekah agreed to leave her family and marry Isaac.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Story",
+        "page": 5,
+        "sourceParagraphIndex": 64
+      }
+    }
+  ],
+  "theologicalApplications": [
+    {
+      "id": "app-01",
+      "text": "God hears us when we PRAY.",
+      "origin": "source",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Important Idea",
+        "page": 6,
+        "sourceParagraphIndex": 77,
+        "details": "Exact wording and capitalization checked on page-6 blue Important Idea graphic; visible text spans ODT display paragraphs 151–152. The joined duplicate at paragraph 150 has spacing lost in extraction."
+      }
+    },
+    {
+      "id": "app-02",
+      "text": "We can be SURE God will keep his promises.",
+      "origin": "source",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Important Idea",
+        "page": 6,
+        "sourceParagraphIndex": 91,
+        "details": "Exact wording and capitalization checked on page-6 green Important Idea graphic; visible text spans ODT display paragraphs 175–177. The joined duplicate at paragraph 174 has spacing lost in extraction."
+      }
+    },
+    {
+      "id": "app-03",
+      "text": "The lesson invites children to pray when they need help and to thank God for good things.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Story Application",
+        "page": 6,
+        "sourceParagraphIndex": 88
+      },
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "app-04",
+      "text": "The lesson connects God’s promise to Abraham with the coming of Jesus.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Story Application",
+        "page": 7,
+        "sourceParagraphIndex": 103
+      },
+      "teacherReviewRequired": true
+    }
+  ],
+  "preparedActivities": {
+    "drawPicture": {
+      "prompt": "Rebekah drawing water from the well for the servant and camels",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ]
+    },
+    "multipleChoice": [
+      {
+        "id": "mc-01",
+        "question": "Why did Abraham send his servant on a long journey?",
+        "correctAnswer": "To find a wife for Isaac",
+        "choices": [
+          {
+            "text": "To find a wife for Isaac",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "To find hidden treasure",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "To find his lost donkeys",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceQuestionIds": [
+          "q-29"
+        ],
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-02",
+        "question": "What sign did the servant ask God to give him?",
+        "correctAnswer": "A woman would get water for the camels",
+        "choices": [
+          {
+            "text": "A woman would get water for the camels",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "A rainbow would appear over the well",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "A stranger would bring him bread",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceQuestionIds": [
+          "q-31"
+        ],
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-03",
+        "question": "Who came to the well while the servant was praying?",
+        "correctAnswer": "Rebekah",
+        "choices": [
+          {
+            "text": "Rebekah",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Sarah",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Deborah",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceQuestionIds": [
+          "q-32"
+        ],
+        "sourceIds": [
+          "sn-02",
+          "sn-03"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-04",
+        "question": "What did Rebekah do after giving the servant a drink?",
+        "correctAnswer": "She watered his camels",
+        "choices": [
+          {
+            "text": "She watered his camels",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "She asked him for a gift",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "She stole his camels",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceQuestionIds": [
+          "q-33"
+        ],
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-05",
+        "question": "How did Rebekah’s family respond to the servant’s story?",
+        "correctAnswer": "They said the Lord had done this",
+        "choices": [
+          {
+            "text": "They said the Lord had done this",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "They told him to go away",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "They didn't believe him",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceQuestionIds": [
+          "q-36"
+        ],
+        "sourceIds": [
+          "sn-05",
+          "sn-06"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-06",
+        "question": "What happened after Isaac met Rebekah?",
+        "correctAnswer": "They married and he loved her",
+        "choices": [
+          {
+            "text": "They married and he loved her",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "They didn't like each other",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Rebekah ran back home",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceQuestionIds": [
+          "q-38"
+        ],
+        "sourceIds": [
+          "sn-07"
+        ],
+        "teacherReviewRequired": true
+      }
+    ],
+    "trueFalse": {
+      "statement": "Isaac married Rebekah and loved her.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": false,
+      "factId": "tf-14"
+    },
+    "firstLetters": {
+      "reference": "James 5:13",
+      "verse": "Is any one of you suffering? He should pray. Is anyone cheerful? He should sing praises.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "oddWords": {
+      "related": [
+        "ABRAHAM",
+        "CAMELS",
+        "REBEKAH",
+        "WELL",
+        "WATER"
+      ],
+      "unrelated": [
+        "rainbow",
+        "bush",
+        "whirlwind",
+        "gnats",
+        "Joseph"
+      ],
+      "unrelatedOrigin": "suggested",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "unscrambleWords": {
+      "answers": [
+        "REBEKAH",
+        "CAMELS"
+      ],
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02",
+        "sn-03"
+      ]
+    },
+    "checkboxes": {
+      "correct": [
+        "SERVANT",
+        "PRAYER",
+        "GIFTS",
+        "LABAN",
+        "ISAAC"
+      ],
+      "incorrect": [
+        "storm",
+        "offering",
+        "waves",
+        "jar",
+        "Assyria"
+      ],
+      "incorrectOrigin": "suggested",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "whoAmI": {
+      "clue": "I helped get water for ten camels. I was married to Isaac, and he loved me.",
+      "answer": "Rebekah",
+      "origin": "suggested",
+      "sourceIds": [],
+      "teacherReviewRequired": true
+    },
+    "matchWords": [
+      {
+        "left": "Abraham",
+        "right": "Father",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "left": "Eliezer",
+        "right": "Servant",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "left": "Rebekah",
+        "right": "Watered camels",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "left": "Laban",
+        "right": "Brother",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "left": "Camels",
+        "right": "Drank",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-05"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "left": "Isaac",
+        "right": "Son",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-07"
+        ],
+        "teacherReviewRequired": true
+      }
+    ],
+    "finishVerse": {
+      "reference": "James 5:13",
+      "sourceVerse": "Is any one of you suffering? He should pray. Is anyone cheerful? He should sing praises.",
+      "markedVerse": "Is any [one] of you [suffering]? He should [pray]. Is anyone [cheerful]? He should [sing] praises.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "unscrambleVerse": {
+      "reference": "James 5:13",
+      "sourceVerse": "Is any one of you suffering? He should pray. Is anyone cheerful? He should sing praises.",
+      "markedVerse": "Is any [one] of you [suffering]? He should [pray]. Is anyone [cheerful]? He should [sing] praises.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "circleMistakes": {
+      "paragraph": "When Isaac was ready to marry, David sent his trusted servant on a long journey to Egypt to find a bride. The servant traveled with five horses. He prayed at the city well that the right young woman would offer him a basket of bread. Soon, Rachel stepped forward and offered to feed his animals. The servant gave her a bag of gold. She willingly agreed to return with him to marry Isaac. Isaac married her, but didn't love her.",
+      "mistakeCount": 7,
+      "mistakes": [
+        {
+          "incorrect": "David",
+          "correction": "Abraham",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "Egypt",
+          "correction": "Abraham's homeland",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "five horses",
+          "correction": "ten camels",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "him a basket of bread",
+          "correction": "to water his camels.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "feed",
+          "correction": "water",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "bag of gold",
+          "correction": "jewelery",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "didn't love her",
+          "correction": "loved her",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "mediumWordSearch": {
+      "words": [
+        "ISAAC",
+        "WELL",
+        "CAMELS",
+        "WATER",
+        "PRAY",
+        "LABAN"
+      ],
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02",
+        "sn-03",
+        "sn-05",
+        "sn-07"
+      ]
+    },
+    "trueFalseMaze": {
+      "statement": "Isaac first met Rebekah beside the well.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": true,
+      "factId": "tf-13"
+    },
+    "bigIdeaCryptogram": {
+      "phrase": "God hears us when we PRAY.",
+      "origin": "source",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Important Idea",
+        "page": 6,
+        "sourceParagraphIndex": 77,
+        "details": "Exact wording and capitalization checked on page-6 blue Important Idea graphic; visible text spans ODT display paragraphs 151–152. The joined duplicate at paragraph 150 has spacing lost in extraction."
+      }
+    },
+    "upsideDownVerse": {
+      "reference": "James 5:13",
+      "verse": "Is any one of you suffering? He should pray. Is anyone cheerful? He should sing praises.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "connectBigIdea": {
+      "phrase": "We can be SURE God will keep his promises.",
+      "origin": "source",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Important Idea",
+        "page": 6,
+        "sourceParagraphIndex": 91,
+        "details": "Exact wording and capitalization checked on page-6 green Important Idea graphic; visible text spans ODT display paragraphs 175–177. The joined duplicate at paragraph 174 has spacing lost in extraction."
+      }
+    },
+    "pixelPicture": {
+      "phrase": "When we need help, we can pray. God hears our prayers.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 13 Lesson (Isaac and Rebekah).odt",
+        "section": "Story Application",
+        "page": 6,
+        "sourceParagraphIndex": 88
+      },
+      "teacherReviewRequired": true
+    },
+    "finishStory": {
+      "markedParagraph": "Abraham sent his servant to find a [WIFE] for his son [Isaac]. The servant traveled with ten camels and stopped by a [well]. He [prayed] to God, asking for a sign: the right woman would offer [WATER] to his camels. Before his prayer was finished, [Rebekah] arrived and gave the servant and his camels a drink. The servant [PRAISED] God for the answer. He [TOLD] her father Bethuel and brother Laban what had happened. Rebekah agreed to [leave], and her family gave her their [BLESSING]. When she arrived at Isaac’s home with the servant, Isaac [MARRIED] her and [loved] her.",
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "storyOrder": [
+      {
+        "order": 1,
+        "text": "Abraham sent his servant to find a wife for Isaac among his relatives.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "order": 2,
+        "text": "At the well, the servant asked God for a woman who would water his camels.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "order": 3,
+        "text": "Rebekah came to the well and gave water to the servant and his camels.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "order": 4,
+        "text": "The servant praised God for answering his prayer.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "order": 5,
+        "text": "The servant told Bethuel and Laban how God had guided his journey.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "order": 6,
+        "text": "Rebekah agreed to leave with the servant, and her family blessed her.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "order": 7,
+        "text": "Isaac met Rebekah when she arrived, married her, and loved her.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      }
+    ],
+    "sortStory": [
+      {
+        "statement": "Abraham sent his servant to find a wife for Isaac among relatives.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": false,
+        "factId": "tf-01"
+      },
+      {
+        "statement": "Abraham wanted Isaac to marry a woman from Canaan.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": true,
+        "factId": "tf-02"
+      },
+      {
+        "statement": "Eliezer stopped to pray  at the bottom of a well.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": true,
+        "factId": "tf-04"
+      },
+      {
+        "statement": "Eliezer asked God for a woman who would water his camels.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": false,
+        "factId": "tf-05"
+      },
+      {
+        "statement": "Rebekah offered water to Eliezer and his camels.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": false,
+        "factId": "tf-06"
+      },
+      {
+        "statement": "Laban refused to welcome Abraham’s servant into his home.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-05"
+        ],
+        "teacherReviewRequired": true,
+        "factId": "tf-09"
+      },
+      {
+        "statement": "Rebekah’s father was Bethuel, and her brother was Laban.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ],
+        "teacherReviewRequired": false,
+        "factId": "tf-10"
+      },
+      {
+        "statement": "Rebekah agreed to leave home with Abraham’s servant.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ],
+        "teacherReviewRequired": false,
+        "factId": "tf-12"
+      }
+    ],
+    "drawStory": [
+      {
+        "prompt": "Abraham sent his servant to find a wife for Isaac among his relatives.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "prompt": "At the well, the servant asked God for a woman who would water his camels.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "prompt": "Rebekah came to the well and gave water to the servant and his camels.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "prompt": "The servant praised God for answering his prayer.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "prompt": "Rebekah agreed to leave with the servant, and her family blessed her.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "prompt": "Isaac met Rebekah when she arrived, married her, and loved her.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      }
+    ],
+    "wordSearch": {
+      "words": [
+        "ABRAHAM",
+        "ISAAC",
+        "REBEKAH",
+        "ELIEZER",
+        "CAMELS",
+        "WATER",
+        "WELL",
+        "PRAYER",
+        "LABAN",
+        "BETHUEL",
+        "GOLD",
+        "BLESSING"
+      ],
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ]
+    },
+    "verseCryptogram": {
+      "reference": "James 5:13",
+      "verse": "Is any one of you suffering? He should pray. Is anyone cheerful? He should sing praises.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "crossword": [
+      {
+        "answer": "ABRAHAM",
+        "clue": "Who sent the servant to find Isaac a wife?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "answer": "ISAAC",
+        "clue": "Who married Rebekah?",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-07"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "REBEKAH",
+        "clue": "She offered to get water for the camels.",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "ELIEZER",
+        "clue": "The name of Abraham's servant.",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "CAMELS",
+        "clue": "Which animals traveled with the servant?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "answer": "WELL",
+        "clue": "Where did the servant stop and pray?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "answer": "PRAYER",
+        "clue": "What did the servant offer to God when he needed help?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "answer": "LABAN",
+        "clue": "Who was Rebekah’s brother?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "answer": "Gifts",
+        "clue": "What did the servant give to Rebekah and her family?",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-05"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "GOLD",
+        "clue": "What metal were some of the jewelry gifts made from?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      }
+    ],
+    "spiralVerse": {
+      "reference": "James 5:13",
+      "verse": "Is any one of you suffering? He should pray. Is anyone cheerful? He should sing praises.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "connectVerse": {
+      "reference": "James 5:13",
+      "verse": "Is any one of you suffering? He should pray. Is anyone cheerful? He should sing praises.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    }
+  },
+  "moduleReadiness": [
+    {
+      "moduleName": "Draw a Picture",
+      "moduleId": "draw-picture",
+      "size": "Small",
+      "preparedActivityKey": "drawPicture",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and three preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Multiple Choice Question",
+      "moduleId": "multiple-choice",
+      "size": "Small",
+      "preparedActivityKey": "multipleChoice",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and three preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "True/False",
+      "moduleId": "true-false",
+      "size": "Small",
+      "preparedActivityKey": "trueFalse",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and three preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "First Letter Challenge",
+      "moduleId": "first-letters",
+      "size": "Small",
+      "preparedActivityKey": "firstLetters",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and three preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Odd Words",
+      "moduleId": "odd-words",
+      "size": "Small",
+      "preparedActivityKey": "oddWords",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and three preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Unscramble the Words",
+      "moduleId": "unscramble-words",
+      "size": "Small",
+      "preparedActivityKey": "unscrambleWords",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and three preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Checkboxes",
+      "moduleId": "checkboxes",
+      "size": "Small",
+      "preparedActivityKey": "checkboxes",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and three preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Who Am I?",
+      "moduleId": "who-am-i",
+      "size": "Small",
+      "preparedActivityKey": "whoAmI",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and three preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Match Words",
+      "moduleId": "match-words",
+      "size": "Small",
+      "preparedActivityKey": "matchWords",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and three preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Finish the Verse",
+      "moduleId": "finish-verse",
+      "size": "Medium",
+      "preparedActivityKey": "finishVerse",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and three preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Unscramble the Verse",
+      "moduleId": "unscramble-verse",
+      "size": "Medium",
+      "preparedActivityKey": "unscrambleVerse",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and three preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Circle the Mistakes",
+      "moduleId": "circle-mistakes",
+      "size": "Medium",
+      "preparedActivityKey": "circleMistakes",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and three preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Word Search",
+      "moduleId": "medium-word-search",
+      "size": "Medium",
+      "preparedActivityKey": "mediumWordSearch",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and three preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "True/False Maze",
+      "moduleId": "true-false-maze",
+      "size": "Medium",
+      "preparedActivityKey": "trueFalseMaze",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and three preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Solve the Code",
+      "moduleId": "big-idea-cryptogram",
+      "size": "Medium",
+      "preparedActivityKey": "bigIdeaCryptogram",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and three preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Upside-Down Verse",
+      "moduleId": "upside-down-verse",
+      "size": "Medium",
+      "preparedActivityKey": "upsideDownVerse",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and three preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Connect the Big Idea",
+      "moduleId": "connect-big-idea",
+      "size": "Medium",
+      "preparedActivityKey": "connectBigIdea",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and three preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Pixel Picture",
+      "moduleId": "pixel-picture",
+      "size": "Medium",
+      "preparedActivityKey": "pixelPicture",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and three preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Finish the Story",
+      "moduleId": "finish-story",
+      "size": "Large",
+      "preparedActivityKey": "finishStory",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and three preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Story Order",
+      "moduleId": "story-order",
+      "size": "Large",
+      "preparedActivityKey": "storyOrder",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and three preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Sort the Story",
+      "moduleId": "sort-story",
+      "size": "Large",
+      "preparedActivityKey": "sortStory",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and three preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Draw the Story",
+      "moduleId": "draw-story",
+      "size": "Large",
+      "preparedActivityKey": "drawStory",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and three preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Word Search",
+      "moduleId": "word-search",
+      "size": "Large",
+      "preparedActivityKey": "wordSearch",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and three preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Verse Cryptogram",
+      "moduleId": "verse-cryptogram",
+      "size": "Large",
+      "preparedActivityKey": "verseCryptogram",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and three preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Crossword",
+      "moduleId": "crossword",
+      "size": "Large",
+      "preparedActivityKey": "crossword",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and three preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Spiral Verse",
+      "moduleId": "spiral-verse",
+      "size": "Large",
+      "preparedActivityKey": "spiralVerse",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and three preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Connect the Verse",
+      "moduleId": "connect-verse",
+      "size": "Large",
+      "preparedActivityKey": "connectVerse",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and three preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    }
+  ],
+  "reviewFlags": [
+    {
+      "id": "rf-01",
+      "priority": "high",
+      "type": "scripture-text",
+      "text": "Original lesson quotes James 5:13 ESV. Seven verse activities preserve the source verse pending teacher-selected, verified canonical BSB text and synchronized reauthoring.",
+      "affectedModules": [
+        "first-letters",
+        "finish-verse",
+        "unscramble-verse",
+        "upside-down-verse",
+        "verse-cryptogram",
+        "spiral-verse",
+        "connect-verse"
+      ]
+    },
+    {
+      "id": "rf-02",
+      "priority": "high",
+      "type": "teacher-approval",
+      "text": "Review six prepared Multiple Choice questions, including twelve suggested distractors. All 38 original questions remain separately preserved.",
+      "affectedModules": [
+        "multiple-choice"
+      ]
+    },
+    {
+      "id": "rf-03",
+      "priority": "medium",
+      "type": "teacher-approval",
+      "text": "Check eight true and six false proposed canonical facts and their sources. Sort uses eight distinct fact IDs; Small True/False and Maze have separately reserved fact IDs.",
+      "affectedModules": [
+        "true-false",
+        "true-false-maze",
+        "sort-story"
+      ]
+    },
+    {
+      "id": "rf-04",
+      "priority": "medium",
+      "type": "teacher-approval",
+      "text": "Bible-related but lesson-unrelated Odd Words and Checkboxes distractors require review; none should accidentally be valid OT13 story vocabulary.",
+      "affectedModules": [
+        "odd-words",
+        "checkboxes"
+      ]
+    },
+    {
+      "id": "rf-05",
+      "priority": "medium",
+      "type": "teacher-approval",
+      "text": "Review seven deliberate Circle the Mistakes changes, the eleven-blank Finish Story, chronological event descriptions and drawing captions. The original Story Sheet uses no blanks.",
+      "affectedModules": [
+        "circle-mistakes",
+        "finish-story",
+        "story-order",
+        "draw-story",
+        "draw-picture"
+      ]
+    },
+    {
+      "id": "rf-06",
+      "priority": "high",
+      "type": "theological-content",
+      "text": "Two Important Ideas on page 6 are quoted verbatim. Teacher should review prayer/promise application and Jesus connection for age-appropriate theological accuracy.",
+      "affectedModules": [
+        "big-idea-cryptogram",
+        "connect-big-idea",
+        "pixel-picture",
+        "finish-story"
+      ]
+    },
+    {
+      "id": "rf-07",
+      "priority": "high",
+      "type": "generator-validation",
+      "text": "Live crossword interlock, word-search placement, verse and pixel puzzle engines, measured print fit, all 27 Review Studio activities and all three numbered presets NOT RUN.",
+      "affectedModules": [
+        "draw-picture",
+        "multiple-choice",
+        "true-false",
+        "first-letters",
+        "odd-words",
+        "unscramble-words",
+        "checkboxes",
+        "who-am-i",
+        "match-words",
+        "finish-verse",
+        "unscramble-verse",
+        "circle-mistakes",
+        "medium-word-search",
+        "true-false-maze",
+        "big-idea-cryptogram",
+        "upside-down-verse",
+        "connect-big-idea",
+        "pixel-picture",
+        "finish-story",
+        "story-order",
+        "sort-story",
+        "draw-story",
+        "word-search",
+        "verse-cryptogram",
+        "crossword",
+        "spiral-verse",
+        "connect-verse"
+      ]
+    },
+    {
+      "id": "rf-08",
+      "priority": "medium",
+      "type": "source-material",
+      "text": "Only the 14-page ODT was supplied. Referenced slide deck, Story Script and other printable resources are not available for independent verification.",
+      "affectedModules": [
+        "draw-picture",
+        "draw-story",
+        "story-order",
+        "match-words"
+      ]
+    },
+    {
+      "id": "rf-09",
+      "priority": "medium",
+      "type": "teacher-approval",
+      "text": "Simplified six matching pairs and crossword clues require teacher review and actual crossword interlock testing. Source names the servant Eliezer; preserve that attribution from this lesson.",
+      "affectedModules": [
+        "match-words",
+        "crossword",
+        "who-am-i"
+      ]
+    }
+  ],
+  "publication": {
+    "status": "approved",
+    "approved": true,
+    "notes": "Approved through Review Studio after teacher review and a successful 27/27 content/preflight check of three numbered presets. Original conversion notes and checks remain as historical records.",
+    "teacherSignoff": {
+      "reviewer": "Andrew Doane",
+      "date": "2026-11-06",
+      "notes": "Approved with verified BSB verse through Curriculum Review Studio"
+    },
+    "scriptureRights": {
+      "status": "cleared",
+      "basis": "Berean Standard Bible (BSB), dedicated to the public domain on April 30, 2023. Official terms: https://berean.bible/terms.htm. Scripture text confirmed against https://bereanbible.com/bsb.txt.",
+      "reviewedBy": "Andrew Doane",
+      "reviewedOn": "2026-11-06"
+    },
+    "resolvedReviewFlagIds": [
+      "rf-02",
+      "rf-03",
+      "rf-04",
+      "rf-05",
+      "rf-09",
+      "rf-01"
+    ],
+    "originalSchemaStatus": "unapproved-source-preserving-draft",
+    "originalConversionNotes": "Unapproved OT13 conversion: teacher must review invented choices, verify selected BSB verse, run full Review Studio 27-activity and 3-preset measured preflight, confirm rights and explicitly sign off.",
+    "reviewStudioVerification": {
+      "source": "Review Studio measured preflight",
+      "checkedAt": "2026-11-06T14:08:00.060Z",
+      "convertedCount": 27,
+      "totalCount": 27,
+      "issueCount": 0,
+      "numberedPresetsChecked": 3,
+      "scope": "Candidate-specific content conversion, three numbered preset content checks, and measured Connect the Verse fit. Standalone repository commands and independently rendered PDFs are not claimed.",
+      "matchingWorksheetSource": "preparedActivities.matchWords",
+      "matchingCandidatePool": "matchingPairs is retained separately as historical/source candidate material"
+    },
+    "reviewFlagDisposition": [
+      {
+        "id": "rf-01",
+        "status": "resolved",
+        "detail": "Resolved by explicit teacher review, BSB choice, or signed approval, as applicable."
+      },
+      {
+        "id": "rf-02",
+        "status": "resolved",
+        "detail": "Resolved by explicit teacher review, BSB choice, or signed approval, as applicable."
+      },
+      {
+        "id": "rf-03",
+        "status": "resolved",
+        "detail": "Resolved by explicit teacher review, BSB choice, or signed approval, as applicable."
+      },
+      {
+        "id": "rf-04",
+        "status": "resolved",
+        "detail": "Resolved by explicit teacher review, BSB choice, or signed approval, as applicable."
+      },
+      {
+        "id": "rf-05",
+        "status": "resolved",
+        "detail": "Resolved by explicit teacher review, BSB choice, or signed approval, as applicable."
+      },
+      {
+        "id": "rf-06",
+        "status": "requires-review",
+        "detail": "Original flag retained; no implicit resolution was recorded."
+      },
+      {
+        "id": "rf-07",
+        "status": "requires-review",
+        "detail": "Original flag retained; no implicit resolution was recorded."
+      },
+      {
+        "id": "rf-08",
+        "status": "requires-review",
+        "detail": "Original flag retained; no implicit resolution was recorded."
+      },
+      {
+        "id": "rf-09",
+        "status": "resolved",
+        "detail": "Resolved by explicit teacher review, BSB choice, or signed approval, as applicable."
+      }
+    ]
+  },
+  "validation": {
+    "basis": "Historical conversion-stage checks, not final Review Studio results. The passing review evidence is at publication.reviewStudioVerification.",
+    "allTextChecksPassed": false,
+    "actualGeneratorTested": false,
+    "jsonParseTested": true,
+    "checks": [
+      {
+        "check": "14-page source ODT parsed with page-checked source paragraph links",
+        "passed": true,
+        "detail": 198
+      },
+      {
+        "check": "All seven verbatim Story Notes and emphasis preserved",
+        "passed": true,
+        "detail": "WIFE, WATER, WATER, PRAISED, TOLD, BLESSING, MARRIED"
+      },
+      {
+        "check": "Original teaching and review questions preserved",
+        "passed": true,
+        "detail": "38 records including all ten formal review Q/A pairs"
+      },
+      {
+        "check": "Both page-6 Important Ideas and ESV verse attributed accurately",
+        "passed": true,
+        "detail": "James 5:13 ESV retained, BSB pending"
+      },
+      {
+        "check": "Editorial quantity targets: 8 true, 6 false, 6 multiple choice",
+        "passed": true,
+        "detail": "14 canonical facts and 6 candidate multiple choice questions"
+      },
+      {
+        "check": "27 exact prepared keys and 27 readiness records",
+        "passed": true,
+        "detail": 27
+      },
+      {
+        "check": "Canonical Sort, True/False and Maze fact IDs distinct and exact",
+        "passed": true,
+        "detail": "10 unique selections"
+      },
+      {
+        "check": "Local puzzle/word limits, source IDs, bracket reconstruction, content shapes",
+        "passed": true,
+        "detail": "11 Finish Story blanks; valid text limits"
+      },
+      {
+        "check": "Current repository validator run on this exact file",
+        "passed": false,
+        "detail": "NOT RUN: repository checkout and validator unavailable here"
+      },
+      {
+        "check": "Review Studio live 27/27 and 3 numbered preset preflight",
+        "passed": false,
+        "detail": "NOT RUN"
+      },
+      {
+        "check": "Actual crossword interlock, word search placement and measured print geometry",
+        "passed": false,
+        "detail": "NOT RUN"
+      },
+      {
+        "check": "Canonical BSB verse selection, rights and teacher approval",
+        "passed": false,
+        "detail": "PENDING TEACHER"
+      }
+    ],
+    "originalBasis": "Original conversion tests predate teacher-approved BSB; revalidate actual engines and content after export.",
+    "checksScope": "original-conversion-before-teacher-review",
+    "originalModuleReadiness": [
+      {
+        "moduleName": "Draw a Picture",
+        "moduleId": "draw-picture",
+        "size": "Small",
+        "preparedActivityKey": "drawPicture",
+        "status": "READY",
+        "contentValidation": "Candidate locally checked; official schema validator and Review Studio preflight NOT RUN",
+        "generatorTested": false,
+        "teacherReviewRequired": false,
+        "notes": "Prepared draft; generator, puzzle and numbered preset testing NOT RUN."
+      },
+      {
+        "moduleName": "Multiple Choice Question",
+        "moduleId": "multiple-choice",
+        "size": "Small",
+        "preparedActivityKey": "multipleChoice",
+        "status": "READY",
+        "contentValidation": "Candidate locally checked; official schema validator and Review Studio preflight NOT RUN",
+        "generatorTested": false,
+        "teacherReviewRequired": true,
+        "notes": "Prepared draft; generator, puzzle and numbered preset testing NOT RUN."
+      },
+      {
+        "moduleName": "True/False",
+        "moduleId": "true-false",
+        "size": "Small",
+        "preparedActivityKey": "trueFalse",
+        "status": "READY",
+        "contentValidation": "Candidate locally checked; official schema validator and Review Studio preflight NOT RUN",
+        "generatorTested": false,
+        "teacherReviewRequired": false,
+        "notes": "Prepared draft; generator, puzzle and numbered preset testing NOT RUN."
+      },
+      {
+        "moduleName": "First Letter Challenge",
+        "moduleId": "first-letters",
+        "size": "Small",
+        "preparedActivityKey": "firstLetters",
+        "status": "ADAPTATION NEEDED",
+        "contentValidation": "Candidate locally checked; official schema validator and Review Studio preflight NOT RUN",
+        "generatorTested": false,
+        "teacherReviewRequired": true,
+        "notes": "Original ESV text preserved; teacher must select exact verified BSB excerpt. Measured print fit pending."
+      },
+      {
+        "moduleName": "Odd Words",
+        "moduleId": "odd-words",
+        "size": "Small",
+        "preparedActivityKey": "oddWords",
+        "status": "READY",
+        "contentValidation": "Candidate locally checked; official schema validator and Review Studio preflight NOT RUN",
+        "generatorTested": false,
+        "teacherReviewRequired": true,
+        "notes": "Prepared draft; generator, puzzle and numbered preset testing NOT RUN."
+      },
+      {
+        "moduleName": "Unscramble the Words",
+        "moduleId": "unscramble-words",
+        "size": "Small",
+        "preparedActivityKey": "unscrambleWords",
+        "status": "READY",
+        "contentValidation": "Candidate locally checked; official schema validator and Review Studio preflight NOT RUN",
+        "generatorTested": false,
+        "teacherReviewRequired": false,
+        "notes": "Prepared draft; generator, puzzle and numbered preset testing NOT RUN."
+      },
+      {
+        "moduleName": "Checkboxes",
+        "moduleId": "checkboxes",
+        "size": "Small",
+        "preparedActivityKey": "checkboxes",
+        "status": "READY",
+        "contentValidation": "Candidate locally checked; official schema validator and Review Studio preflight NOT RUN",
+        "generatorTested": false,
+        "teacherReviewRequired": true,
+        "notes": "Prepared draft; generator, puzzle and numbered preset testing NOT RUN."
+      },
+      {
+        "moduleName": "Who Am I?",
+        "moduleId": "who-am-i",
+        "size": "Small",
+        "preparedActivityKey": "whoAmI",
+        "status": "READY",
+        "contentValidation": "Candidate locally checked; official schema validator and Review Studio preflight NOT RUN",
+        "generatorTested": false,
+        "teacherReviewRequired": true,
+        "notes": "Prepared draft; generator, puzzle and numbered preset testing NOT RUN."
+      },
+      {
+        "moduleName": "Match Words",
+        "moduleId": "match-words",
+        "size": "Small",
+        "preparedActivityKey": "matchWords",
+        "status": "READY",
+        "contentValidation": "Candidate locally checked; official schema validator and Review Studio preflight NOT RUN",
+        "generatorTested": false,
+        "teacherReviewRequired": true,
+        "notes": "Prepared draft; generator, puzzle and numbered preset testing NOT RUN."
+      },
+      {
+        "moduleName": "Finish the Verse",
+        "moduleId": "finish-verse",
+        "size": "Medium",
+        "preparedActivityKey": "finishVerse",
+        "status": "ADAPTATION NEEDED",
+        "contentValidation": "Candidate locally checked; official schema validator and Review Studio preflight NOT RUN",
+        "generatorTested": false,
+        "teacherReviewRequired": true,
+        "notes": "Original ESV text preserved; teacher must select exact verified BSB excerpt. Measured print fit pending."
+      },
+      {
+        "moduleName": "Unscramble the Verse",
+        "moduleId": "unscramble-verse",
+        "size": "Medium",
+        "preparedActivityKey": "unscrambleVerse",
+        "status": "ADAPTATION NEEDED",
+        "contentValidation": "Candidate locally checked; official schema validator and Review Studio preflight NOT RUN",
+        "generatorTested": false,
+        "teacherReviewRequired": true,
+        "notes": "Original ESV text preserved; teacher must select exact verified BSB excerpt. Measured print fit pending."
+      },
+      {
+        "moduleName": "Circle the Mistakes",
+        "moduleId": "circle-mistakes",
+        "size": "Medium",
+        "preparedActivityKey": "circleMistakes",
+        "status": "READY",
+        "contentValidation": "Candidate locally checked; official schema validator and Review Studio preflight NOT RUN",
+        "generatorTested": false,
+        "teacherReviewRequired": true,
+        "notes": "Prepared draft; generator, puzzle and numbered preset testing NOT RUN."
+      },
+      {
+        "moduleName": "Word Search",
+        "moduleId": "medium-word-search",
+        "size": "Medium",
+        "preparedActivityKey": "mediumWordSearch",
+        "status": "READY",
+        "contentValidation": "Candidate locally checked; official schema validator and Review Studio preflight NOT RUN",
+        "generatorTested": false,
+        "teacherReviewRequired": false,
+        "notes": "Prepared draft; generator, puzzle and numbered preset testing NOT RUN."
+      },
+      {
+        "moduleName": "True/False Maze",
+        "moduleId": "true-false-maze",
+        "size": "Medium",
+        "preparedActivityKey": "trueFalseMaze",
+        "status": "READY",
+        "contentValidation": "Candidate locally checked; official schema validator and Review Studio preflight NOT RUN",
+        "generatorTested": false,
+        "teacherReviewRequired": true,
+        "notes": "Prepared draft; generator, puzzle and numbered preset testing NOT RUN."
+      },
+      {
+        "moduleName": "Solve the Code",
+        "moduleId": "big-idea-cryptogram",
+        "size": "Medium",
+        "preparedActivityKey": "bigIdeaCryptogram",
+        "status": "READY",
+        "contentValidation": "Candidate locally checked; official schema validator and Review Studio preflight NOT RUN",
+        "generatorTested": false,
+        "teacherReviewRequired": false,
+        "notes": "Prepared draft; generator, puzzle and numbered preset testing NOT RUN."
+      },
+      {
+        "moduleName": "Upside-Down Verse",
+        "moduleId": "upside-down-verse",
+        "size": "Medium",
+        "preparedActivityKey": "upsideDownVerse",
+        "status": "ADAPTATION NEEDED",
+        "contentValidation": "Candidate locally checked; official schema validator and Review Studio preflight NOT RUN",
+        "generatorTested": false,
+        "teacherReviewRequired": true,
+        "notes": "Original ESV text preserved; teacher must select exact verified BSB excerpt. Measured print fit pending."
+      },
+      {
+        "moduleName": "Connect the Big Idea",
+        "moduleId": "connect-big-idea",
+        "size": "Medium",
+        "preparedActivityKey": "connectBigIdea",
+        "status": "READY",
+        "contentValidation": "Candidate locally checked; official schema validator and Review Studio preflight NOT RUN",
+        "generatorTested": false,
+        "teacherReviewRequired": false,
+        "notes": "Prepared draft; generator, puzzle and numbered preset testing NOT RUN."
+      },
+      {
+        "moduleName": "Pixel Picture",
+        "moduleId": "pixel-picture",
+        "size": "Medium",
+        "preparedActivityKey": "pixelPicture",
+        "status": "READY",
+        "contentValidation": "Candidate locally checked; official schema validator and Review Studio preflight NOT RUN",
+        "generatorTested": false,
+        "teacherReviewRequired": true,
+        "notes": "Prepared draft; generator, puzzle and numbered preset testing NOT RUN."
+      },
+      {
+        "moduleName": "Finish the Story",
+        "moduleId": "finish-story",
+        "size": "Large",
+        "preparedActivityKey": "finishStory",
+        "status": "READY",
+        "contentValidation": "Candidate locally checked; official schema validator and Review Studio preflight NOT RUN",
+        "generatorTested": false,
+        "teacherReviewRequired": true,
+        "notes": "Prepared draft; generator, puzzle and numbered preset testing NOT RUN."
+      },
+      {
+        "moduleName": "Story Order",
+        "moduleId": "story-order",
+        "size": "Large",
+        "preparedActivityKey": "storyOrder",
+        "status": "READY",
+        "contentValidation": "Candidate locally checked; official schema validator and Review Studio preflight NOT RUN",
+        "generatorTested": false,
+        "teacherReviewRequired": true,
+        "notes": "Prepared draft; generator, puzzle and numbered preset testing NOT RUN."
+      },
+      {
+        "moduleName": "Sort the Story",
+        "moduleId": "sort-story",
+        "size": "Large",
+        "preparedActivityKey": "sortStory",
+        "status": "READY",
+        "contentValidation": "Candidate locally checked; official schema validator and Review Studio preflight NOT RUN",
+        "generatorTested": false,
+        "teacherReviewRequired": true,
+        "notes": "Prepared draft; generator, puzzle and numbered preset testing NOT RUN."
+      },
+      {
+        "moduleName": "Draw the Story",
+        "moduleId": "draw-story",
+        "size": "Large",
+        "preparedActivityKey": "drawStory",
+        "status": "READY",
+        "contentValidation": "Candidate locally checked; official schema validator and Review Studio preflight NOT RUN",
+        "generatorTested": false,
+        "teacherReviewRequired": true,
+        "notes": "Prepared draft; generator, puzzle and numbered preset testing NOT RUN."
+      },
+      {
+        "moduleName": "Word Search",
+        "moduleId": "word-search",
+        "size": "Large",
+        "preparedActivityKey": "wordSearch",
+        "status": "READY",
+        "contentValidation": "Candidate locally checked; official schema validator and Review Studio preflight NOT RUN",
+        "generatorTested": false,
+        "teacherReviewRequired": false,
+        "notes": "Prepared draft; generator, puzzle and numbered preset testing NOT RUN."
+      },
+      {
+        "moduleName": "Verse Cryptogram",
+        "moduleId": "verse-cryptogram",
+        "size": "Large",
+        "preparedActivityKey": "verseCryptogram",
+        "status": "ADAPTATION NEEDED",
+        "contentValidation": "Candidate locally checked; official schema validator and Review Studio preflight NOT RUN",
+        "generatorTested": false,
+        "teacherReviewRequired": true,
+        "notes": "Original ESV text preserved; teacher must select exact verified BSB excerpt. Measured print fit pending."
+      },
+      {
+        "moduleName": "Crossword",
+        "moduleId": "crossword",
+        "size": "Large",
+        "preparedActivityKey": "crossword",
+        "status": "READY",
+        "contentValidation": "Candidate locally checked; official schema validator and Review Studio preflight NOT RUN",
+        "generatorTested": false,
+        "teacherReviewRequired": true,
+        "notes": "Prepared draft; generator, puzzle and numbered preset testing NOT RUN."
+      },
+      {
+        "moduleName": "Spiral Verse",
+        "moduleId": "spiral-verse",
+        "size": "Large",
+        "preparedActivityKey": "spiralVerse",
+        "status": "ADAPTATION NEEDED",
+        "contentValidation": "Candidate locally checked; official schema validator and Review Studio preflight NOT RUN",
+        "generatorTested": false,
+        "teacherReviewRequired": true,
+        "notes": "Original ESV text preserved; teacher must select exact verified BSB excerpt. Measured print fit pending."
+      },
+      {
+        "moduleName": "Connect the Verse",
+        "moduleId": "connect-verse",
+        "size": "Large",
+        "preparedActivityKey": "connectVerse",
+        "status": "ADAPTATION NEEDED",
+        "contentValidation": "Candidate locally checked; official schema validator and Review Studio preflight NOT RUN",
+        "generatorTested": false,
+        "teacherReviewRequired": true,
+        "notes": "Original ESV text preserved; teacher must select exact verified BSB excerpt. Measured print fit pending."
+      }
+    ]
+  }
+}
