@@ -129,7 +129,7 @@ test('Manual distinguishes the levels of validation and requires actionable teac
   'NOT RUN',
   'node --experimental-strip-types scripts/validate-curriculum.mjs',
   '27/27',
-  'three numbered worksheet presets',
+  'four numbered worksheet presets',
   'pending-teacher-approval',
   'teacherReviewRequired',
   'sourceIds',

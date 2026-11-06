@@ -62,5 +62,5 @@ test('Conversion documentation distinguishes nonbinding targets from original so
  assert.match(readme,/editorial defaults, not schema minima or hard maxima/u);
  assert.match(readme,/Preserve \*\*all original source questions and their answers/u);
  const pkg=JSON.parse(await read('package.json'));
- assert.equal(pkg.version,'0.16.61');
+ assert.equal(pkg.version,'0.16.62');
 });
