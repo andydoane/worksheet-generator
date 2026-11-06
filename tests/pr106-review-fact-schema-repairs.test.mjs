@@ -23,7 +23,7 @@ const trueShort='The angel passed over Israelite homes marked with lamb’s bloo
 const mazeShort='The Israelites put lamb’s blood on their doorframes.';
 const ot30Like=()=>{
  const lesson=structuredClone(approved);
- const source=structuredClone(approved.facts[0].source);
+ const source=structuredClone(approved.storyNotes[0].source);
  lesson.facts.push({
   id:'tf-ot30-long',statement:longStatement,isTrue:true,
   origin:'source',source,

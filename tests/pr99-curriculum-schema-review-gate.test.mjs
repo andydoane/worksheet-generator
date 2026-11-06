@@ -126,7 +126,8 @@ test('UI requires teacher confirmation, clears affected review and invalidates p
  assert.match(app,/function repairSchemaIssue\(issue:ReviewIssue\)/u);
  assert.match(app,/window\.confirm\('Apply this metadata-only correction/u);
  assert.match(app,/applyReviewSchemaRepair\(lesson,issue\.schemaRepair\)/u);
- assert.match(app,/setReviewed\(previous=>previous\.filter\(id=>id!==issue\.taskId\)\)/u);
+ assert.match(app,/setReviewed\\(previous=>issue\\.schemaRepair\\?\\.kind==='character-clue-strings'\\?/u);
+ assert.match(app,/previous\\.filter\\(id=>id!==issue\\.taskId\\)/u);
  assert.match(app,/setRightsConfirmed\(false\)/u);
  assert.match(app,/schemaRepairLabel\(issue\.schemaRepair\)/u);
  const model=await read('src/review/model.ts');
