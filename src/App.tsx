@@ -72,7 +72,7 @@ type Draft = {
   activityBorders: ActivityBorders;
   borderArrangement?:PresetBorderSettings;
   curriculumLessonId?:string;
-  worksheetPresetId?:'preset-1'|'preset-2'|'preset-3'|'build-own';
+  worksheetPresetId?:'preset-1'|'preset-2'|'preset-3'|'preset-4'|'build-own';
   activityDefaults?:ModuleAssignments;
   activityContentLinks?:ActivityContentLinks;
   originalLessonContent?:OriginalLessonContent;

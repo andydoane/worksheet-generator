@@ -24,7 +24,8 @@ export type LessonWorksheetSource=LessonActivityData&{
   memoryVerse?:{reference:string;text:string;translation?:string;bsbSource?:{sourceUrl:string}};
  };
 };
-export type RecipeId='preset-1'|'preset-2'|'preset-3'|'story-review'|'fun-and-games';
+export type NumberedRecipeId='preset-1'|'preset-2'|'preset-3'|'preset-4';
+export type RecipeId=NumberedRecipeId|'story-review'|'fun-and-games';
 export type RecipeStep={
  page:PageNumber;
  regionId:string;
@@ -133,6 +134,24 @@ export const WORKSHEET_RECIPES:readonly WorksheetRecipe[]=[
    {page:4,regionId:'bottom-medium',moduleId:'unscramble-verse'},
   ],
  },
+ {
+  id:'preset-4',name:'Preset 4',
+  description:'Crossword, word search, verse reading, drawing and short story puzzles.',
+  layouts:{2:'large-medium',3:'small-small-medium-medium',4:'medium-small-small-medium'},
+  steps:[
+   {page:1,regionId:'cover-activity',moduleId:'crossword'},
+   {page:2,regionId:'top-large',moduleId:'word-search'},
+   {page:2,regionId:'bottom-medium',moduleId:'upside-down-verse'},
+   {page:3,regionId:'top-left-small',moduleId:'multiple-choice'},
+   {page:3,regionId:'top-right-small',moduleId:'draw-picture'},
+   {page:3,regionId:'middle-medium',moduleId:'pixel-picture'},
+   {page:3,regionId:'bottom-medium',moduleId:'big-idea-cryptogram'},
+   {page:4,regionId:'top-medium',moduleId:'match-words'},
+   {page:4,regionId:'middle-left-small',moduleId:'true-false'},
+   {page:4,regionId:'middle-right-small',moduleId:'odd-words'},
+   {page:4,regionId:'bottom-medium',moduleId:'unscramble-verse'},
+  ],
+ },
 ] as const;
 
 export type RecipeSelection={
@@ -236,7 +255,10 @@ export function buildWorksheetRecipe(
  const selections:RecipeSelection[]=[];
  const usedContentIds=new Set<string>();
  const usedClaims=new Set<string>();
- let reservedPreset2Search:LessonContentChoice|undefined;
+ // Preset 2 selects Odd Words before Word Search. Preset 4 reverses that
+ // order. Reserve a non-overlapping pair before selecting either activity.
+ let reservedSearch:LessonContentChoice|undefined;
+ let reservedOddWords:LessonContentChoice|undefined;
  for(const step of recipe.steps){
   const key=slotKey(step.page,step.regionId);
   const region=regionBySlot.get(key);
@@ -256,12 +278,17 @@ export function buildWorksheetRecipe(
    if(id==='preset-2'&&step.moduleId==='odd-words'){
     const future=pool!.candidates.filter(c=>c.moduleId==='word-search');
     const plan=chooseDistinctPresetWordBanks(choices,future,usedClaims);
-    if(plan){preselected=plan.odd;reservedPreset2Search=plan.search;}
+    if(plan){preselected=plan.odd;reservedSearch=plan.search;}
    }
-   if(id==='preset-2'&&step.moduleId==='word-search'&&reservedPreset2Search&&
-    choices.includes(reservedPreset2Search)){
-    preselected=reservedPreset2Search;
+   if(id==='preset-4'&&step.moduleId==='word-search'){
+    const laterOdd=pool!.candidates.filter(c=>c.moduleId==='odd-words');
+    const plan=chooseDistinctPresetWordBanks(laterOdd,choices,usedClaims);
+    if(plan){preselected=plan.search;reservedOddWords=plan.odd;}
    }
+   if(step.moduleId==='word-search'&&reservedSearch&&
+    choices.includes(reservedSearch))preselected=reservedSearch;
+   if(step.moduleId==='odd-words'&&reservedOddWords&&
+    choices.includes(reservedOddWords))preselected=reservedOddWords;
    const picked=preselected?{
     candidate:preselected,reused:preselected.claims.filter(claim=>usedClaims.has(claim)),
    }:chooseUnusedLessonContent(choices,usedClaims,{preferFullBank:true});
@@ -324,7 +351,7 @@ export function buildWorksheetRecipe(
   // Review-only sample data never becomes a public lesson context.
   ...(options.purpose==='published'?{
    curriculumLessonId:lesson.id,
-   ...(!isLegacy?{worksheetPresetId:id as 'preset-1'|'preset-2'|'preset-3'}:{}),
+   ...(!isLegacy?{worksheetPresetId:id as NumberedRecipeId}:{}),
    activityDefaults:structuredClone(modules),
    ...(Object.keys(linked).length?{activityContentLinks:linked}:{}),
    originalLessonContent:structuredClone(originalLessonContent),

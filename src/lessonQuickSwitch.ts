@@ -8,7 +8,7 @@ import {planLessonContentChange,applyLessonContentChange,type LessonContentPrint
 import {changePlanMessages} from './lessonContentDialogModel.ts';
 
 export const BUILD_OWN='build-own' as const;
-export type WorksheetStartId='preset-1'|'preset-2'|'preset-3'|typeof BUILD_OWN;
+export type WorksheetStartId='preset-1'|'preset-2'|'preset-3'|'preset-4'|typeof BUILD_OWN;
 const publicIds=new Set<string>(WORKSHEET_RECIPES.map(recipe=>recipe.id));
 export function isWorksheetStartId(value:unknown):value is WorksheetStartId{
  return value===BUILD_OWN||(typeof value==='string'&&publicIds.has(value));

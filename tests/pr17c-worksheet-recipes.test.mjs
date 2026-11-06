@@ -20,7 +20,7 @@ const clone=()=>structuredClone(lesson);
 
 test('Both explicitly review-only recipes produce standalone, fully editable v1 drafts from the exact Red Sea lesson',()=>{
  assert.deepEqual(validateLesson(lesson,schema),[]);
- assert.deepEqual(WORKSHEET_RECIPES.map(r=>r.id),['preset-1','preset-2','preset-3']);
+ assert.deepEqual(WORKSHEET_RECIPES.map(r=>r.id),['preset-1','preset-2','preset-3','preset-4']);
  const before=clone();
  for(const id of ids){
   const output=build(id);

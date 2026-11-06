@@ -29,9 +29,13 @@ const expected=[
  {id:'preset-3',layouts:['medium-small-small-medium','large-medium','large-medium'],
   types:['sort-story','upside-down-verse','true-false','checkboxes','connect-big-idea',
    'spiral-verse','true-false-maze','story-order','unscramble-verse']},
+ {id:'preset-4',layouts:['large-medium','small-small-medium-medium','medium-small-small-medium'],
+  types:['crossword','word-search','upside-down-verse','multiple-choice','draw-picture',
+   'pixel-picture','big-idea-cryptogram','match-words','true-false','odd-words',
+   'unscramble-verse']},
 ];
 
-test('Three numbered preset definitions match the author spreadsheet and fill every activity region',()=>{
+test('All four numbered preset definitions match the author layouts and fill every activity region',()=>{
  assert.deepEqual(WORKSHEET_RECIPES.map(r=>r.id),expected.map(x=>x.id));
  assert.ok(LAYOUTS.some(x=>x.id==='small-small-large'));
  const regions=getRegions(3,'small-small-large');
