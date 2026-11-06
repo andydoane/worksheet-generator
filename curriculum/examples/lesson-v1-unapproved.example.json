@@ -146,10 +146,10 @@
         "ISRAEL"
       ],
       "incorrect": [
-        "ROCKET",
-        "CROWN",
-        "WAGON",
-        "CANDLE"
+        "SPOON",
+        "BANANA",
+        "CARPET",
+        "LANTERN"
       ],
       "origin": "suggested",
       "sourceIds": [
@@ -187,6 +187,90 @@
         "sn-01"
       ],
       "teacherReviewRequired": true
+    },
+    "drawPicture": {
+      "prompt": "Moses speaking to Pharaoh about the people of Israel",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "drawStory": [
+      {
+        "prompt": "Moses spoke to Pharaoh.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "The people prepared to leave Egypt.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "The people left Egypt.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "The people reached the sea.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "storyOrder": [
+      {
+        "order": 1,
+        "text": "Moses spoke to Pharaoh.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 2,
+        "text": "The people prepared to leave Egypt.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 3,
+        "text": "The people left Egypt.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 4,
+        "text": "The people reached the sea.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 5,
+        "text": "The people crossed on dry ground.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "circleMistakes": {
+      "paragraph": "Moses built a ship to leave Egypt. The people crossed the sea by train.",
+      "mistakeCount": 2,
+      "mistakes": [
+        {
+          "incorrect": "built a ship",
+          "correction": "led God's people",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "by train",
+          "correction": "on dry ground",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "pixelPicture": {
+      "phrase": "God helped the people walk on dry ground.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
     }
   },
   "moduleReadiness": [],
@@ -218,7 +302,7 @@
   "publication": {
     "status": "pending-teacher-approval",
     "approved": false,
-    "notes": "Unapproved illustrative starter. Never upload this file under curriculum/approved."
+    "notes": "EXAMPLE ONLY. Unapproved; the newly illustrated drawing, Story Order, Pixel Picture and Circle Mistakes are not sourced or reviewed. Replace all placeholder content and provide every missing activity before Review Studio preflight."
   },
   "characters": [
     {
@@ -236,6 +320,20 @@
           "teacherReviewRequired": true
         }
       ]
+    }
+  ],
+  "drawingPrompts": [
+    {
+      "id": "scene-demo-01",
+      "prompt": "Moses speaking to Pharaoh about the people of Israel",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "scene-demo-02",
+      "prompt": "the Israelites walking beside a wall of water",
+      "origin": "suggested",
+      "teacherReviewRequired": true
     }
   ]
 }
