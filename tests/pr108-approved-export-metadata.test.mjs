@@ -79,7 +79,7 @@ test('OT30-style approved export records current verified review while archiving
  assert.equal(verification.checkedAt,stamp);
  assert.equal(verification.convertedCount,27);
  assert.equal(verification.issueCount,0);
- assert.equal(verification.numberedPresetsChecked,3);
+ assert.equal(verification.numberedPresetsChecked,4);
  assert.match(verification.scope,/not claimed/u);
  assert.equal(verification.matchingWorksheetSource,'preparedActivities.matchWords');
  assert.deepEqual(approved.preparedActivities,source.preparedActivities);

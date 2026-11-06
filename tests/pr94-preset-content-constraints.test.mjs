@@ -28,7 +28,7 @@ const catalog=assemblePublicLessonCatalog({
 const redEntry=catalog.find(x=>x.lesson.id===redSea.id);
 const wildernessEntry=catalog.find(x=>x.lesson.id===wilderness.id);
 assert.ok(redEntry&&wildernessEntry);
-const choices=['preset-1','preset-2','preset-3','build-own'];
+const choices=['preset-1','preset-2','preset-3','preset-4','build-own'];
 const bigIdea='God always keeps His promises.';
 const verse={kind:'memoryVerse',reference:'Psalm 23:1',
  text:'The LORD is my shepherd; I shall not want.',translation:'BSB'};

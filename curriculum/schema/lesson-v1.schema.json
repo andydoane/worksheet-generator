@@ -1979,7 +1979,11 @@
             },
             "numberedPresetsChecked": {
               "type": "integer",
-              "const": 3
+              "enum": [
+                3,
+                4
+              ],
+              "description": "Number of numbered presets verified by the Review Studio build at export time; 3 is retained for historical approvals, new exports verify all 4."
             },
             "scope": {
               "type": "string",

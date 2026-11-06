@@ -40,9 +40,9 @@ test('Real current Red Sea review lesson is schema-valid and all 27 types pass a
  assert.equal(crossword.technicalStatus,'ready');
  assert.equal(crossword.contentStatus,'ADAPTATION NEEDED',
   'author content assessment remains separate from tested generator success');
- assert.equal(audit.recipeReadiness.length,3);
+ assert.equal(audit.recipeReadiness.length,4);
  assert.ok(audit.recipeReadiness.every(x=>x.ready));
- assert.deepEqual(audit.recipeReadiness.map(x=>x.selectedModules),[11,10,9]);
+ assert.deepEqual(audit.recipeReadiness.map(x=>x.selectedModules),[11,10,9,11]);
  assert.ok(audit.recipeReadiness.every(x=>x.openSlots===0));
  assert.ok(audit.teacherReviewFlagsOutstanding.length>=4);
  assert.equal(audit.eligibleForPublication,false);
@@ -150,7 +150,7 @@ test('Public auto-discovery requires a self-contained approved file; no shared r
  assert.doesNotMatch(appCatalog,/rights-manifest\.json/u);
 });
 
-test('Live repository scan validates every approved lesson and all three numbered presets',async()=>{
+test('Live repository scan validates every approved lesson and all four numbered presets',async()=>{
  const report=await inspectCurriculumLibrary();
  assert.equal(report.passed,true,JSON.stringify(report.errors));
  assert.equal(report.errors.length,0);
@@ -165,7 +165,7 @@ test('Live repository scan validates every approved lesson and all three numbere
   assert.equal(entry.eligibleForPublication,true,entry.id);
   assert.equal(entry.rightsCleared,true,entry.id);
   assert.equal(entry.teacherReviewFlagsOutstanding.length,0,entry.id);
-  assert.equal(entry.recipeReadiness.length,3,entry.id);
+  assert.equal(entry.recipeReadiness.length,4,entry.id);
   assert.ok(entry.recipeReadiness.every(x=>x.ready&&x.openSlots===0),
    entry.id+': '+JSON.stringify(entry.recipeReadiness));
  }

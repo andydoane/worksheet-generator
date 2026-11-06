@@ -15,7 +15,7 @@ export type ApprovedExportEvidence={
  reviewedTaskIds?:readonly string[];
 };
 const clone=<T,>(value:T):T=>structuredClone(value);
-const PRESETS_CHECKED=3;
+const PRESETS_CHECKED=4;
 const MODULES_CHECKED=27;
 
 function verifiedPreflight(evidence:ApprovedExportEvidence):ApprovedExportPreflight|undefined{
@@ -59,7 +59,7 @@ export function finalizeApprovedMetadata(lesson:Lesson,evidence:ApprovedExportEv
     !/^Approved through Review Studio/iu.test(publication.notes))
   publication.originalConversionNotes=publication.notes;
  publication.notes=preflight?
-  'Approved through Review Studio after teacher review and a successful 27/27 content/preflight check of three numbered presets. Original conversion notes and checks remain as historical records.':
+  'Approved through Review Studio after teacher review and a successful 27/27 content/preflight check of four numbered presets. Original conversion notes and checks remain as historical records.':
   'Approved through Review Studio with teacher signoff and BSB rights; independent preflight evidence was not supplied to this export call. Original conversion notes remain historical.';
 
  // Do not erase that the ORIGINAL curriculum was ESV, or rewrite filenames
@@ -95,7 +95,7 @@ export function finalizeApprovedMetadata(lesson:Lesson,evidence:ApprovedExportEv
    totalCount:MODULES_CHECKED,
    issueCount:0,
    numberedPresetsChecked:PRESETS_CHECKED,
-   scope:'Candidate-specific content conversion, three numbered preset content checks, and measured Connect the Verse fit. Standalone repository commands and independently rendered PDFs are not claimed.',
+   scope:'Candidate-specific content conversion, four numbered preset content checks, and measured Connect the Verse fit. Standalone repository commands and independently rendered PDFs are not claimed.',
    matchingWorksheetSource:'preparedActivities.matchWords',
    matchingCandidatePool:'matchingPairs is retained separately as historical/source candidate material',
   };
@@ -107,7 +107,7 @@ export function finalizeApprovedMetadata(lesson:Lesson,evidence:ApprovedExportEv
     next.validation.originalModuleReadiness=clone(next.moduleReadiness);
    for(const item of next.moduleReadiness){
     item.status='READY';
-    item.contentValidation='Review Studio preflight: 27/27 content and three preset content checks passed.';
+    item.contentValidation='Review Studio preflight: 27/27 content and four preset content checks passed.';
     item.notes='Current approved worksheet passed Review Studio preflight. '+
      'generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification.';
     // Neither this metadata update nor preflight proves independent

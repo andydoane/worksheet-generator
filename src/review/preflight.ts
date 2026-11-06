@@ -169,7 +169,7 @@ export function buildReviewPreflight(lesson:Lesson,
  const recipeIssues:ReviewIssue[]=[];
  // All 27 activities may convert successfully while an assembled booklet
  // still fails (for example, two regions need distinct approved content).
- // Check the actual three numbered recipes after content checks are clean.
+ // Check every current numbered recipe after content checks are clean.
  if(messages.length===0&&structural.length===0){
   for(const recipe of WORKSHEET_RECIPES){
    try{
