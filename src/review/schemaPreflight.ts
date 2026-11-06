@@ -7,7 +7,8 @@ import type {Lesson} from './model.ts';
  */
 export type SchemaRepair=
  |{kind:'validation-check-name';index:number}
- |{kind:'known-module-alias';flagIndex:number;moduleIndex:number;oldId:string;newId:string};
+ |{kind:'known-module-alias';flagIndex:number;moduleIndex:number;oldId:string;newId:string}
+ |{kind:'character-clue-strings';count:number};
 export type ReviewSchemaIssue={
  path:string;message:string;taskId:string;fieldId:string;repair?:SchemaRepair;
 };
@@ -16,7 +17,7 @@ const moduleAliases:Record<string,string>={
 };
 function taskForPath(path:string):{taskId:string;fieldId:string}{
  const taskId=path.startsWith('$.lessonDetails')?'lesson-details':
-  /^(?:\$\.(?:sourceFiles|storyNotes|questions|facts|vocabulary))/u.test(path)?'lesson-sources':
+  /^(?:\$\.(?:sourceFiles|storyNotes|questions|facts|vocabulary|characters))/u.test(path)?'lesson-sources':
   path.startsWith('$.moduleReadiness')?'lesson-readiness':
   path.startsWith('$.reviewFlags')||path.startsWith('$.publication')?'lesson-publication':
   'review-general';
@@ -26,10 +27,23 @@ export function reviewSchemaErrors(lesson:unknown):string[]{
  return validateLessonSchema(lesson,lessonSchema);
 }
 export function reviewSchemaIssues(lesson:Lesson):ReviewSchemaIssue[]{
+ // Report every schema failure, but offer one deliberate batch action for all
+ // legacy string clues. Empty strings require actual teacher editing instead.
+ const legacy=(lesson.characters??[]).flatMap((character:any)=>
+  Array.isArray(character?.clues)?
+   character.clues.filter((clue:unknown)=>typeof clue==='string'):[]
+ );
+ const safeLegacy=legacy.length>0&&legacy.every((clue:string)=>clue.trim().length>0);
+ let offered=false;
  return reviewSchemaErrors(lesson).map(raw=>{
   const path=raw.match(/^(\$[^:]*):/u)?.[1]??'$';
   const message='Curriculum schema '+raw;
   let repair:SchemaRepair|undefined;
+  if(safeLegacy&&!offered&&
+   /^\$\.characters\[\d+\]\.clues\[\d+\]: expected an object$/u.test(raw)){
+   repair={kind:'character-clue-strings',count:legacy.length};
+   offered=true;
+  }
   const check=path.match(/^\$\.validation\.checks\[(\d+)\]\.check$/u);
   if(check&&raw.endsWith('required field missing')){
    const index=Number(check[1]),record=lesson.validation?.checks?.[index];
@@ -50,12 +64,30 @@ export function reviewSchemaIssues(lesson:Lesson):ReviewSchemaIssue[]{
  });
 }
 export function schemaRepairLabel(repair:SchemaRepair):string{
- return repair.kind==='validation-check-name'
-  ?'Rename “name” to “check” (keep the original description)'
-  :'Replace “'+repair.oldId+'” with “'+repair.newId+'”';
+ if(repair.kind==='character-clue-strings')
+  return 'Convert '+repair.count+' character clues to reviewed text/origin objects (keep every word)';
+ if(repair.kind==='validation-check-name')
+  return 'Rename “name” to “check” (keep the original description)';
+ return 'Replace “'+repair.oldId+'” with “'+repair.newId+'”';
 }
 export function applyReviewSchemaRepair(lesson:Lesson,repair:SchemaRepair):Lesson{
  const next=structuredClone(lesson);
+ if(repair.kind==='character-clue-strings'){
+  const current=(next.characters??[]).flatMap((character:any)=>
+   Array.isArray(character?.clues)?
+    character.clues.filter((clue:unknown)=>typeof clue==='string'):[]
+  );
+  if(current.length!==repair.count||current.some((clue:string)=>!clue.trim()))
+   throw Error('Character clues have changed. Run preflight again before repairing.');
+  for(const character of next.characters??[]){
+   if(!Array.isArray(character.clues))continue;
+   character.clues=character.clues.map((clue:unknown)=>
+    typeof clue==='string'?
+     {text:clue,origin:'suggested',teacherReviewRequired:true}:clue
+   );
+  }
+  return next;
+ }
  if(repair.kind==='validation-check-name'){
   const record=next.validation?.checks?.[repair.index];
   if(!record||typeof record.name!=='string'||Object.hasOwn(record,'check'))

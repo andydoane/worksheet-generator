@@ -1,14 +1,15 @@
+import {useEffect,useState} from 'react';
 import TrueFalsePrintPreview from '../TrueFalsePrintPreview.tsx';
 import PuzzlePreview from '../PuzzlePreview.tsx';
 import type {Lesson} from './model.ts';
 import {
- eligibleFacts,factSelectionIssues,factUsage,selectFact,selectedFact,
- suggestUnusedFact,type FactUse,
+ createAdaptedFact,eligibleFacts,factSelectionIssues,factUsage,
+ movableSortFacts,moveSortFactToChoice,selectFact,selectedFact,suggestUnusedFact,
 } from './storyFactEditor.ts';
 
 export default function FactChoiceReviewEditor({lesson,kind,onChange,onError}:{
  lesson:Lesson;kind:'trueFalse'|'trueFalseMaze';
- onChange:(next:Lesson)=>void;onError:(message:string)=>void;
+ onChange:(next:Lesson,changedSort?:boolean)=>void;onError:(message:string)=>void;
 }){
  const selected=selectedFact(lesson,kind);
  const canonical=lesson.facts?.find((fact:any)=>fact.id===selected?.factId);
@@ -21,27 +22,58 @@ export default function FactChoiceReviewEditor({lesson,kind,onChange,onError}:{
  const isMaze=kind==='trueFalseMaze';
  const title=isMaze?'True/False Maze':'True/False';
  const limit=isMaze?65:80;
+ const [sourceId,setSourceId]=useState(selected?.factId??'');
+ const [draft,setDraft]=useState(selected?.statement??'');
+ const [moveId,setMoveId]=useState('');
+ useEffect(()=>{
+  setSourceId(selected?.factId??'');
+  setDraft(selected?.statement??'');
+  setMoveId('');
+ },[kind,selected?.factId]);
+ const source=lesson.facts?.find((fact:any)=>fact.id===sourceId);
+ const movable=movableSortFacts(lesson,kind);
  const apply=(id:string)=>{
   try{onChange(selectFact(lesson,kind,id));onError('');}
+  catch(e){onError(e instanceof Error?e.message:String(e));}
+ };
+ const saveAdaptation=()=>{
+  if(!source)return;
+  if(!window.confirm(
+   'Create a NEW canonical fact adapted from '+source.id+' and use it for '+title+'?\n\n'+
+   'Confirm that the shortened statement is true or false exactly as the source fact says. '+
+   'The original statement and truth value will remain unchanged. '+
+   'The new adaptation will require your review before publication.'
+  ))return;
+  try{onChange(createAdaptedFact(lesson,kind,source.id,draft));onError('');}
+  catch(e){onError(e instanceof Error?e.message:String(e));}
+ };
+ const moveFromSort=()=>{
+  if(!moveId)return;
+  if(!window.confirm('Move '+moveId+' from Sort the Story to '+title+'?\n\n'+
+    'The Sort the Story activity will lose this row and require renewed review.'))return;
+  try{onChange(moveSortFactToChoice(lesson,kind,moveId),true);onError('');}
   catch(e){onError(e instanceof Error?e.message:String(e));}
  };
  return <div id={'review-field-'+(isMaze?'true-false-maze':'true-false')}
   tabIndex={-1} className="review-fields">
   <div className="review-note">
    <h3>{title} · choose a canonical fact</h3>
-   <p>The wording and correct TRUE/FALSE answer come directly from an existing fact in the lesson. This editor changes the prepared selection only; it does not rewrite canonical facts, change the truth value, or invent a new statement.</p>
-   <p>Choose a different unused fact if it overlaps Sort the Story or the other True/False activity. {title} supports a statement of up to {limit} characters.</p>
+   <p>Every prepared statement and correct answer must match its selected canonical fact. The original fact is never edited by this activity.</p>
+   <p>Choose an unused fact, move a fitting fact from Sort the Story, or create a shorter teacher-reviewed adaptation linked to a source fact. {title} permits up to {limit} characters.</p>
   </div>
   <label>Selected canonical fact
    <select value={selected?.factId??''} onChange={e=>{if(e.target.value)apply(e.target.value);}}>
     {!selected?.factId&&<option value="">Choose a canonical fact…</option>}
     {selected?.factId&&!options.some((f:any)=>f.id===selected.factId)&&
-     <option value={selected.factId}>Unusable / unknown: {selected.factId}</option>}
+     <option value={selected.factId}>{canonical?
+      'Too long ('+String(canonical.statement).trim().length+'/'+limit+'): '+selected.factId:
+      'Canonical fact not found: '+selected.factId}</option>}
     {options.map((fact:any)=>{
      const other=(usage.get(fact.id)??[]).filter(label=>
       label!==(isMaze?'True/False Maze':'True/False'));
      return <option key={fact.id} value={fact.id} disabled={other.length>0}>
       {fact.isTrue?'TRUE':'FALSE'} · {fact.id} · {fact.statement}
+      {other.length?' (used: '+other.join(', ')+')':''}
      </option>;
     })}
    </select>
@@ -50,14 +82,17 @@ export default function FactChoiceReviewEditor({lesson,kind,onChange,onError}:{
    <div className="review-match-heading">
     <strong>{canonical?.isTrue===true?'Correct answer: TRUE':
      canonical?.isTrue===false?'Correct answer: FALSE':'Canonical fact missing'}</strong>
-    <small>{canonical?.id??selected.factId}</small>
+    <small>{canonical?.id??selected.factId??'No fact linked'}</small>
    </div>
    <p className="review-fact-statement">{canonical?.statement??selected.statement}</p>
    <p className="review-source">Origin: {canonical?.origin??'unknown'} ·
-    {canonical?.sourceIds?.join(', ')??' no sources'}
+    {canonical?.sourceIds?.length?canonical.sourceIds.join(', '):
+     canonical?.source?.filename?
+      canonical.source.filename+' · page '+(canonical.source.page??'?'):
+      'no recorded citation'}
     {canonical?.teacherReviewRequired?' · teacher review required':''}</p>
    {otherUses.length>0&&<p className="review-warning" role="status">
-    Also selected for: {otherUses.join(', ')}. Choose an unused fact to prevent repeated printed content.
+    Also selected for: {otherUses.join(', ')}. Choose a distinct fact to avoid repeated printed content.
    </p>}
    {canonical?.sourceIds?.length>0&&<details className="review-sources">
     <summary>Compare with original Story Notes</summary>
@@ -75,11 +110,59 @@ export default function FactChoiceReviewEditor({lesson,kind,onChange,onError}:{
    <button type="button" className="review-secondary" disabled={!alternative}
     onClick={()=>alternative&&apply(alternative)}>Choose another unused fact</button>
    {canonical&&issues.some(issue=>issue.message.includes('differs from canonical'))&&
+    canonical.statement.trim().length<=limit&&
     <button type="button" className="review-secondary"
      onClick={()=>apply(canonical.id)}>Restore exact canonical wording and answer</button>}
   </div>
-  {!alternative&&<p className="review-source">
-   No unused canonical fact fits this activity. Review the lesson's fact pool to add or approve additional material; the generator cannot invent a substitute.
+  <div className="review-note review-fact-repair">
+   <h3>Create a shorter, source-linked fact</h3>
+   <p>Use this when the original canonical statement is too long, already used, or your prepared statement has no fact ID. You supply and approve the truthful wording; the editor does not invent or verify new facts.</p>
+   <label>Original canonical fact to adapt
+    <select value={sourceId} onChange={e=>{
+     const id=e.target.value,record=lesson.facts?.find((f:any)=>f.id===id);
+     setDraft(sourceId===''&&selected?.statement?.trim()?
+      selected.statement:String(record?.statement??''));
+     setSourceId(id);
+    }}>
+     <option value="">Choose the original fact…</option>
+     {(lesson.facts??[]).map((fact:any)=><option key={fact.id} value={fact.id}>
+      {fact.isTrue?'TRUE':'FALSE'} · {fact.id} · {fact.statement}
+     </option>)}
+    </select>
+   </label>
+   {source&&<p className="review-source">
+    Source: {source.id} · {source.isTrue?'TRUE':'FALSE'} ·
+    {source.source?.filename?
+     ' '+source.source.filename+' · page '+(source.source.page??'?'):
+     (source.sourceIds?.length?' '+source.sourceIds.join(', '):' no recorded citation')}
+   </p>}
+   <label>Shorter statement (you confirm that the truth value stays the same)
+    <textarea value={draft} onChange={e=>setDraft(e.target.value)}
+     rows={3} maxLength={limit+40}/>
+   </label>
+   <p className="review-source">{draft.trim().length}/{limit} characters ·
+    Correct answer remains {source?.isTrue?'TRUE':source?.isTrue===false?'FALSE':'unknown'}.
+    A new fact ID is created and teacher review is required.</p>
+   <button type="button" className="review-secondary"
+    disabled={!source||!draft.trim()||draft.trim().length>limit}
+    onClick={saveAdaptation}>Save as new adapted fact and select</button>
+  </div>
+  {movable.length>0&&<div className="review-note review-fact-repair">
+   <h3>Or move a fact from Sort the Story</h3>
+   <p>Only facts that fit {limit} characters and leave Sort the Story with at least four facts and both TRUE/FALSE answers are available.</p>
+   <label>Eligible Sort the Story fact
+    <select value={moveId} onChange={e=>setMoveId(e.target.value)}>
+     <option value="">Choose a fact to move…</option>
+     {movable.map((f:any)=><option key={f.id} value={f.id}>
+      {f.isTrue?'TRUE':'FALSE'} · {f.id} · {f.statement}
+     </option>)}
+    </select>
+   </label>
+   <button type="button" className="review-secondary" disabled={!moveId}
+    onClick={moveFromSort}>Move this fact here</button>
+  </div>}
+  {!alternative&&movable.length===0&&<p className="review-source">
+   No unused canonical fact currently fits. Create a shorter, teacher-reviewed adaptation above, or adjust the fact pool. The editor does not invent a statement.
   </p>}
   <section className="review-activity-preview">
    <h3>{title} print preview</h3>

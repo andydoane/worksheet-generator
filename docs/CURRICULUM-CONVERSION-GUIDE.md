@@ -75,12 +75,62 @@ Optional sections include `schemaStatus`, `characters`, `matchingPairs`, `drawin
 - Each `storyNotes[]` entry needs `id`, `order` (1-based chronological sequence), `originalText`, `cleanText`, `emphasizedWords`, `origin`, and `source`.
 - Each `questions[]` entry needs `id`, `question`, `answer`, `kind`, and `origin`.
 - Each `facts[]` entry needs `id`, `statement`, `isTrue` (boolean), and `origin`.
+- If `characters` is present, each `characters[].clues[]` entry is a **clue object** with `text` and `origin`, never a bare string. See the example below.
 - Each `lessonDetails.bigIdeas[]` entry needs `text` and `origin`.
 - `lessonDetails.memoryVerse` needs `reference`, `translation`, `text`, `isExcerpt`. Keep the original unverified translation in the draft; the teacher applies the BSB excerpt in Review Studio.
 - Each `moduleReadiness[]` record needs `moduleName`, `moduleId`, `size` (`Small`, `Medium`, `Large`), `preparedActivityKey`, `status`, `contentValidation`, `generatorTested` (boolean), and `teacherReviewRequired` (boolean).
 - Each `reviewFlags[]` record needs `id`, `priority` (`high`/`medium`/`low`), `type`, `text`, and an `affectedModules` array.
 - Each `validation.checks[]` record must have **`"check"`** (string) and **`"passed"`** (boolean). **`"name"` is not a substitute.**
 - `publication` in conversion output must be **`{"status":"pending-teacher-approval","approved":false}`** with any truthful notes. Do not copy `teacherSignoff`, `scriptureRights`, or `resolvedReviewFlagIds` from an approved example.
+
+
+### Character clues: objects, never bare strings
+
+`characters` is optional, but **each entry** in `characters[].clues[]` must be an object with at least `text` and `origin`. The shorthand `"clues":["My clue"]` **fails schema validation and stops all 27 conversions**. A valid illustrative structure is:
+
+```json
+{
+  "characters": [{
+    "id": "ch-01",
+    "name": "Moses",
+    "origin": "adapted",
+    "sourceIds": ["sn-01"],
+    "clues": [{
+      "text": "I warned Pharaoh before the tenth plague. Who am I?",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    }]
+  }]
+}
+```
+
+Use actual source links only when the supplied curriculum supports them. `text` preserves the clue and `origin` records whether it was sourced, faithfully adapted or suggested. Proposed changes require teacher review. The unapproved starter demonstrates the shape. Review Studio offers a **confirmed batch repair** for legacy string clues: it keeps all wording and marks the origins `suggested` so no source attribution is invented.
+
+### Canonical facts, IDs and length budgets
+
+Every prepared record in `preparedActivities.trueFalse`, `preparedActivities.trueFalseMaze` and `preparedActivities.sortStory[]` needs a real `factId` from `facts[]`. Its `statement` and boolean `isTrue` must match that canonical fact **exactly**. Never copy a shortened paraphrase into a prepared selection while retaining the old long fact ID. Review Studio prohibits reusing the same ID across these three activities, so reserve distinct facts.
+
+**Historical reference warning:** the approved OT31 sample predates this uniqueness guard and reuses `tf-07` in multiple prepared activities. Use its field shapes, **not** its repeated fact selections, when preparing new curricula.
+
+- **True/False:** 80-character maximum. **Maze:** 65-character maximum. **Sort the Story:** 4–8 distinct canonical facts, each ≤115 characters, including at least one TRUE and one FALSE. Reserve unused suitable facts for True/False and Maze; don't allocate all short facts to Sort.
+- For a faithfully shortened version, create a **new canonical fact ID**, an appropriately sourced/adapted `statement`, the **same `isTrue`**, `origin:"adapted"` (or `"suggested"` when unverifiable), `teacherReviewRequired:true`, and only real `sourceIds` or `source` citations. Keep the original fact unchanged; `adaptedFromFactId` may record lineage. Select the new fact ID in the prepared activity.
+- If the source does not support a shortened statement, mark a review decision instead of inventing a sourced fact. Review Studio now supports teacher-confirmed adaptations and moving eligible facts out of Sort the Story when its remaining rows stay valid.
+
+Prepared True/False example, **only after** its new canonical fact `tf-review-01` has the exact same statement and truth:
+
+```json
+{
+  "trueFalse": {
+    "factId": "tf-review-01",
+    "statement": "The angel passed over homes marked with lamb's blood.",
+    "isTrue": true,
+    "origin": "adapted",
+    "teacherReviewRequired": true
+  }
+}
+```
+
+This belongs **inside** `preparedActivities`. Never omit its `factId`.
 
 ## 4. All 27 module IDs and prepared activity keys
 
@@ -90,7 +140,7 @@ Optional sections include `schemaStatus`, `characters`, `matchingPairs`, `drawin
 |---|---|---|
 | `draw-picture` | `drawPicture` | Small scene `prompt` up to 105 chars; avoid a repetitive "Draw…" command |
 | `multiple-choice` | `multipleChoice` | Question up to 105 chars; **three distinct choices**, exactly one correct, choices up to 42 chars; source answer stays true |
-| `true-false` | `trueFalse` | Statement up to 80 chars, correct `isTrue`; match the canonical fact |
+| `true-false` | `trueFalse` | Statement up to 80 chars, correct `isTrue`, unique canonical `factId`, exact matching wording |
 | `first-letters` | `firstLetters` | Memory Verse text 3–75 words; reference up to 32 chars |
 | `odd-words` | `oddWords` | **1–5 `related`** and **1–5 `unrelated`**; 6–10 total; each entry ≤12 chars |
 | `unscramble-words` | `unscrambleWords` | **Exactly 2** distinct usable `answers`; 3–10 letters each, one/two words, genuinely scrambleable |
@@ -101,14 +151,14 @@ Optional sections include `schemaStatus`, `characters`, `matchingPairs`, `drawin
 | `unscramble-verse` | `unscrambleVerse` | 4–8 bracketed blanks; marked passage ≤240 chars; reference ≤38 |
 | `circle-mistakes` | `circleMistakes` | Error-filled paragraph ≤475 chars; specified mistake count 1–8; distinguish deliberate mistakes from original Scripture |
 | `medium-word-search` | `mediumWordSearch` | 1–6 distinct A–Z words/phrases, 2–9 letters each excluding spaces |
-| `true-false-maze` | `trueFalseMaze` | True/false statement ≤65 chars with truthful `isTrue` |
+| `true-false-maze` | `trueFalseMaze` | Statement ≤65 chars; truthful `isTrue`, distinct canonical `factId`, exact matching wording |
 | `big-idea-cryptogram` | `bigIdeaCryptogram` | Code phrase ≤62 chars and ≤18 distinct letters; can use approved story phrase instead of canonical Big Idea |
 | `upside-down-verse` | `upsideDownVerse` | Memory Verse ≤240 total chars and ≤160 letters; reference ≤42 |
 | `connect-big-idea` | `connectBigIdea` | 4–20 words, ≤125 chars, each word ≤12; may use a separate approved story phrase |
 | `pixel-picture` | `pixelPicture` | Teacher-reviewed story-related phrase; detailed pixel/word-wrap limits in validator and preview |
 | `finish-story` | `finishStory` | Story paragraph with **6–12** `[WORD]` blanks; genuine coherent story and printable fit |
 | `story-order` | `storyOrder` | **5–8** chronological events, each ≤115 chars; preserve true event order |
-| `sort-story` | `sortStory` | 4–8 true/false statements, each ≤115 chars, at least one of each truth value |
+| `sort-story` | `sortStory` | 4–8 separate canonical `factId`s, matching wording/truth, each ≤115 chars, at least one TRUE and FALSE; reserve suitable facts for True/False and Maze |
 | `draw-story` | `drawStory` | 4–6 narrative drawing captions, each ≤105 chars; complete sentences, not "Draw…" instructions |
 | `word-search` | `wordSearch` | 4–12 distinct A–Z words/phrases, each 2–12 letters excluding spaces |
 | `verse-cryptogram` | `verseCryptogram` | Exact verse ≤145 chars, reference ≤42; puzzle letter and print-fit checks |
@@ -165,9 +215,9 @@ For a full **27-activity completed and teacher-approved** structural reference, 
 
 1. Parse the result as JSON. It must contain only the intended lesson record, with no surrounding Markdown, explanatory prose inside the file, or duplicate JSON fields.
 2. Validate the result against the **current** `curriculum/schema/lesson-v1.schema.json`. Use the repo validator if execution is available; do not claim validation without running it.
-3. Check all exact registered module IDs and camelCase prepared keys. Never use `circle-the-mistakes` instead of `circle-mistakes`.
+3. Check exact registered module IDs and camelCase keys. Never use `circle-the-mistakes`. Ensure every `characters[].clues[]` is an object with nonempty `text` and a valid `origin`, never a string.
 4. Verify every `validation.checks[]` record has `check` and `passed` (not `name`).
-5. Check the 27 required activity slots, counts, word limits, duplicates, source links, and teacher-review flags.
+5. Check all 27 activity slots, word limits, duplicates, sources and review flags. For True/False, Maze and Sort, verify that every prepared `factId` exists, IDs do not overlap, wording/truth is exact and statements fit 80/65/115 characters respectively.
 6. Verify facts' truth values, exact original source wording, original question answers, real page/paragraph references, and source-file names.
 7. Check `oddWords` and `checkboxes` both have no more than **five entries on either side**; `oddWords` must have at least six total.
 8. Verify Unscramble the Words has exactly two truly scrambleable choices.
@@ -208,12 +258,13 @@ You can keep the familiar, simple workflow:
 | OT20 and OT21 validation summaries failed CI | `validation.checks[].name` used instead of required `check` | Shared schema check and confirmed metadata-only rename |
 | OT21 word banks showed 25/27 | Six story-related/correct words where max five allowed | Review Studio two-sided word-bank editing and converter checklist |
 | Unscramble editor demanded "Keep these two" repeatedly | More than two prepared answers | Two default choices with recoverable alternatives, plus future conversions specifying exactly two |
-| Connect the Verse rejected "understanding" | Current blanket 12-character word limit | [Open issue #95](https://github.com/andydoane/worksheet-generator/issues/95); **not yet resolved** |
+| Connect the Verse rejected "understanding" | Former blanket 12-character word limit | [PR #102](https://github.com/andydoane/worksheet-generator/pull/102) merged and issue #95 closed; real print fit is now measured |
+| OT30 blocked preflight at 0/27 | Seven string character clues instead of `{text,origin}` objects, plus separate overlong/missing True/False fact references | One-confirmation schema repair, source-preserving fact adaptation/move, and explicit converter examples and audits |
 | GitHub `main` workflow failed after direct upload | Direct-to-main commits execute CI *after* upload | Full schema check before Review Studio approval; GitHub CI still independently runs and can catch later issues |
 
 ## 11. Copy-ready opening instruction for a new conversion chat
 
-> I am preparing an **unapproved** Bible curriculum JSON file for Worksheet Studio. Before doing anything, read the **latest** [Curriculum Conversion Guide](https://github.com/andydoane/worksheet-generator/blob/main/docs/CURRICULUM-CONVERSION-GUIDE.md), the [JSON Schema](https://github.com/andydoane/worksheet-generator/blob/main/curriculum/schema/lesson-v1.schema.json), the [unapproved starter](https://github.com/andydoane/worksheet-generator/blob/main/curriculum/examples/lesson-v1-unapproved.example.json), and the [full OT31 reference](https://github.com/andydoane/worksheet-generator/blob/main/curriculum/approved/ot-031-god-parts-the-red-sea.lesson.json). I will provide the source lesson and any slides. Preserve exact original Story Notes/questions, source filenames/pages, Scripture attribution, and review flags. Prepare all **27** activities where supported, clearly label suggestions, and use only correct schema field names. **Never** copy approval/rights/signoff from the sample or claim tests passed unless you ran them. Deliver the unapproved JSON for my Review Studio; tell me what remains to be verified by a teacher.
+> I am preparing an **unapproved** Bible curriculum JSON file for Worksheet Studio. Before doing anything, read the **latest** [Curriculum Conversion Guide](https://github.com/andydoane/worksheet-generator/blob/main/docs/CURRICULUM-CONVERSION-GUIDE.md), the [JSON Schema](https://github.com/andydoane/worksheet-generator/blob/main/curriculum/schema/lesson-v1.schema.json), the [unapproved starter](https://github.com/andydoane/worksheet-generator/blob/main/curriculum/examples/lesson-v1-unapproved.example.json), and the [full OT31 reference](https://github.com/andydoane/worksheet-generator/blob/main/curriculum/approved/ot-031-god-parts-the-red-sea.lesson.json). I will provide the source lesson and any slides. Preserve exact original Story Notes/questions, source filenames/pages, Scripture attribution, and review flags. Prepare all **27** activities where supported, clearly label suggestions, and use only correct schema field names. **Never** copy approval/rights/signoff from the sample or claim tests passed unless you ran them. Make each `characters[].clues[]` an object with `text` and `origin`, and ensure True/False and Maze have distinct `factId`s, exact matching canonical statements/truth, and 80/65-character print fit. Deliver the unapproved JSON for my Review Studio; tell me what remains to be verified by a teacher.
 
 ---
 

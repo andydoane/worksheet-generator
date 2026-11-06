@@ -77,6 +77,16 @@
         "sn-01"
       ],
       "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-02",
+      "statement": "EXAMPLE ONLY: Replace with a supported FALSE fact.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "teacherReviewRequired": true
     }
   ],
   "vocabulary": {
@@ -157,6 +167,26 @@
         "sn-01"
       ],
       "teacherReviewRequired": true
+    },
+    "trueFalse": {
+      "factId": "tf-01",
+      "statement": "REPLACE with a true fact grounded in your Story Notes.",
+      "isTrue": true,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "teacherReviewRequired": true
+    },
+    "trueFalseMaze": {
+      "factId": "tf-02",
+      "statement": "EXAMPLE ONLY: Replace with a supported FALSE fact.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "teacherReviewRequired": true
     }
   },
   "moduleReadiness": [],
@@ -189,5 +219,23 @@
     "status": "pending-teacher-approval",
     "approved": false,
     "notes": "Unapproved illustrative starter. Never upload this file under curriculum/approved."
-  }
+  },
+  "characters": [
+    {
+      "id": "ch-01",
+      "name": "EXAMPLE CHARACTER — replace",
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "teacherReviewRequired": true,
+      "clues": [
+        {
+          "text": "EXAMPLE ONLY: replace with a faithful character clue.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ]
+    }
+  ]
 }

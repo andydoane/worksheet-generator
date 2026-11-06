@@ -212,6 +212,74 @@ export function selectFact(lesson:Lesson,kind:FactUse,factId:string,index?:numbe
  }
  return next;
 }
+
+/** A fact may be moved, not copied, from Sort the Story if its old puzzle
+ * remains 4–8 facts with at least one TRUE and one FALSE.
+ */
+export function movableSortFacts(lesson:Lesson,kind:'trueFalse'|'trueFalseMaze'){
+ const choices=eligibleFacts(lesson,kind);
+ const rows=sortSelections(lesson);
+ const other=kind==='trueFalse'?'trueFalseMaze':'trueFalse';
+ const otherId=selectedFact(lesson,other)?.factId;
+ return choices.filter((fact:any)=>{
+  if(fact.id===otherId)return false;
+  const index=rows.findIndex(row=>row.factId===fact.id);
+  if(index<0||rows.length<=4)return false;
+  const remaining=rows.filter((_,i)=>i!==index);
+  return remaining.some(row=>row.isTrue===true)&&
+   remaining.some(row=>row.isTrue===false);
+ });
+}
+export function moveSortFactToChoice(
+ lesson:Lesson,kind:'trueFalse'|'trueFalseMaze',factId:string,
+):Lesson{
+ if(!movableSortFacts(lesson,kind).some((f:any)=>f.id===factId))
+  throw Error('Moving this fact would leave Sort the Story invalid or reuse another activity’s selection.');
+ const next=clone(lesson);
+ next.preparedActivities.sortStory=sortSelections(next).filter(item=>item.factId!==factId);
+ return selectFact(next,kind,factId);
+}
+
+/** Create a *new* canonical, teacher-review-required adaptation. Never
+ * overwrite the source fact, change its truth, or invent a citation. The
+ * original fact ID is retained as an explicit editorial lineage link.
+ */
+export function createAdaptedFact(
+ lesson:Lesson,kind:'trueFalse'|'trueFalseMaze',
+ sourceFactId:string,statement:string,
+):Lesson{
+ const source=factOf(lesson,sourceFactId);
+ if(!source)throw Error('Select a real canonical fact as the source of the adaptation.');
+ if(typeof source.isTrue!=='boolean')throw Error('The source fact must have a verified TRUE/FALSE answer.');
+ const text=statement.trim(),limit=maxFactChars(kind);
+ if(!text||text.length>limit)
+  throw Error('Enter a shorter statement of 1–'+limit+' characters.');
+ if(text===String(source.statement).trim())
+  throw Error('This is the original wording. Select or move the existing fact instead.');
+ if(factsOf(lesson).some((f:any)=>
+  String(f.statement).trim().toLocaleLowerCase('en')===text.toLocaleLowerCase('en')))
+  throw Error('That exact statement is already in the canonical fact pool.');
+ const module:Parameters<typeof validateModule>[0]=kind==='trueFalse'
+  ?{type:'true-false',statement:text}
+  :{type:'true-false-maze',statement:text,answer:source.isTrue,seed:1};
+ const problems=validateModule(module);
+ if(problems.length)throw Error('Shortened statement cannot print: '+problems.join(' '));
+ const next=clone(lesson);
+ if(!Array.isArray(next.facts))next.facts=[];
+ let n=1,id='';
+ do{id='tf-review-'+String(n++).padStart(2,'0');}
+ while(next.facts.some((f:any)=>f.id===id));
+ const adapted:any={id,statement:text,isTrue:source.isTrue,
+  origin:source.origin==='suggested'?'suggested':'adapted',
+  teacherReviewRequired:true,adaptedFromFactId:sourceFactId};
+ if(Array.isArray(source.sourceIds))adapted.sourceIds=[...source.sourceIds];
+ if(source.source)adapted.source=clone(source.source);
+ next.facts.push(adapted);
+ next.preparedActivities??={};
+ next.preparedActivities[kind]=recordFromFact(adapted);
+ return next;
+}
+
 export function removeSortFact(lesson:Lesson,index:number):Lesson{
  const next=clone(lesson),items=sortSelections(next);
  if(items.length<=4)throw Error('Sort the Story needs at least four facts.');

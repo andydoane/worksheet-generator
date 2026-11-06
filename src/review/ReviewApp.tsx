@@ -28,6 +28,7 @@ import {cleanReviewExport} from './exportCleanup.ts';
 import {cryptogramLetters} from '../cryptograms.ts';
 import {buildReviewPreflight,PREPARED_ACTIVITY_KEYS,reviewIssueTarget,type ReviewPreflight,type ReviewIssue} from './preflight.ts';
 import {applyReviewSchemaRepair,schemaRepairLabel} from './schemaPreflight.ts';
+import {factSelectionIssues} from './storyFactEditor.ts';
 import {
  wordBankDrafts as draftWordBanks,changeWordBankList,wordBankIssues,wordBankCounts,
  type WordBankKind,type WordBankField,
@@ -132,8 +133,15 @@ export default function ReviewApp(){
   }
   setFocusIssueField(null);
  },[active?.id,focusIssueField]);
+ // A saved "Reviewed" checkmark is not proof that a canonical fact still
+ // fits or matches its source after loading a newer revision of a lesson.
+ const factValid=(id:string)=>!lesson?false:
+  id==='true-false'?factSelectionIssues(lesson,'trueFalse').length===0:
+  id==='true-false-maze'?factSelectionIssues(lesson,'trueFalseMaze').length===0:
+  true;
+ const isReviewed=(id:string)=>reviewed.includes(id)&&factValid(id);
  const requiredTasks=tasks.filter(t=>!t.optional);
- const complete=requiredTasks.filter(t=>reviewed.includes(t.id)).length;
+ const complete=requiredTasks.filter(t=>isReviewed(t.id)).length;
  const remaining=requiredTasks.length-complete;
  useEffect(()=>{
   if(!lesson)return;
@@ -280,7 +288,8 @@ export default function ReviewApp(){
   else setReviewed(previous=>previous.filter(id=>id!==active?.id));
   if(active?.id==='lesson-sources')setRightsConfirmed(false);
  }
- function applyStoryFactReview(next:Lesson){
+ function applyStoryFactReview(next:Lesson,changedSort=false){
+  if(changedSort)setReviewed(previous=>previous.filter(id=>id!=='sort-story'));
   if(activePreparedKey)
    setModuleEditorText(JSON.stringify(next.preparedActivities?.[activePreparedKey]??null,null,2));
   applyVisualReview(next);
@@ -419,6 +428,10 @@ export default function ReviewApp(){
  }
  function approveActive(){
   if(!active)return;
+  if(!factValid(active.id)){
+   setError('This canonical fact selection has blocking errors. Fix it before marking reviewed.');
+   return;
+  }
   setReviewed(prev=>prev.includes(active.id)?prev:[...prev,active.id]);
   const next=tasks.find(t=>!t.optional&&t.id!==active.id&&!reviewed.includes(t.id));
   if(next)setSelectedId(next.id);
@@ -432,14 +445,18 @@ export default function ReviewApp(){
  function repairSchemaIssue(issue:ReviewIssue){
   if(!lesson||!issue.schemaRepair)return;
   const label=schemaRepairLabel(issue.schemaRepair);
-  if(!window.confirm('Apply this metadata-only correction?\n\n'+label+
+  if(issue.schemaRepair.kind==='character-clue-strings'){
+   if(!window.confirm('Convert legacy character clues to the required object format?\n\n'+label+
+    '\n\nTheir text stays exactly the same. Each converted clue will be marked suggested and require teacher review. Existing source citations and other lesson material remain unchanged.'))return;
+  }else if(!window.confirm('Apply this metadata-only correction?\n\n'+label+
    '\n\nYour original lesson text and sources will not be edited. This change will require preflight and the affected section to be reviewed again.'))return;
   try{
    const next=applyReviewSchemaRepair(lesson,issue.schemaRepair);
    setLesson(next);setPreflight(null);
-   setReviewed(previous=>previous.filter(id=>id!==issue.taskId));
+   setReviewed(previous=>issue.schemaRepair?.kind==='character-clue-strings'?
+    []:previous.filter(id=>id!==issue.taskId));
    setRightsConfirmed(false);
-   setError('Metadata correction applied. Recheck this section and rerun preflight.');
+   setError('Schema correction applied. Review changed clues or metadata and rerun preflight.');
   }catch(error){setError(error instanceof Error?error.message:String(error));}
  }
  function downloadApproved(){
@@ -533,7 +550,9 @@ export default function ReviewApp(){
      {active&&<section className="review-panel">
       <div className="review-section-top">
        <div><small>{active.group}</small><h2>{active.label}</h2><p>{active.detail}</p></div>
-       {reviewed.includes(active.id)&&<span className="review-approved">Reviewed ✓</span>}
+       {isReviewed(active.id)&&<span className="review-approved">Reviewed ✓</span>}
+       {reviewed.includes(active.id)&&!factValid(active.id)&&
+        <span className="review-warning" role="status">Reviewed earlier · now needs repair</span>}
       </div>
       {mcIndex>=0&&(()=>{
        const mc=lesson.preparedActivities.multipleChoice[mcIndex];
@@ -946,7 +965,9 @@ export default function ReviewApp(){
         The generator and curriculum CI will independently validate all final content.</p>
       </div>}
       <div className="review-actions">
-       {!active.optional&&<button type="button" className="review-approve" onClick={approveActive}>{reviewed.includes(active.id)?'Reviewed — next':'Mark reviewed & continue'}</button>}
+       {!active.optional&&<button type="button" className="review-approve"
+        disabled={!factValid(active.id)} onClick={approveActive}>
+        {isReviewed(active.id)?'Reviewed — next':'Mark reviewed & continue'}</button>}
        {!active.optional&&<button type="button" className="review-secondary" onClick={()=>setReviewed(x=>x.filter(id=>id!==active.id))}>Needs more work</button>}
       </div>
      </section>}
@@ -962,7 +983,9 @@ export default function ReviewApp(){
       </div>
       {preflight&&<div className={preflight.issues.length||preflight.convertedCount!==preflight.totalCount?'review-errors':'review-success'} role="status">
        <p><strong>{preflight.convertedCount}/{preflight.totalCount} activity types converted.</strong>
-        {preflight.issues.length?' Select an issue below to edit the relevant activity.':
+        {preflight.issues.length&&preflight.issues.every(issue=>issue.id.startsWith('schema:'))?
+         ' Schema validation stopped before any of the 27 activities was attempted. Fix the structural errors below and rerun preflight.':
+         preflight.issues.length?' Select an issue below to edit the relevant activity.':
          preflight.convertedCount!==preflight.totalCount?' Conversion coverage is incomplete; inspect the prepared activity data.':
          ' Preflight passed: curriculum schema, 27 activities, and all three numbered presets are valid. GitHub CI independently checks the final approved file.'}</p>
        {preflight.issues.length>0&&<ul className="review-issue-list">
