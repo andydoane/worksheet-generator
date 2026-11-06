@@ -19,6 +19,7 @@ import FinishStoryReviewEditor from './FinishStoryReviewEditor.tsx';
 import LessonIntegrityReviewEditor from './LessonIntegrityReviewEditor.tsx';
 import MultipleChoiceBankReviewEditor from './MultipleChoiceBankReviewEditor.tsx';
 import {prepareUnscrambleReview} from './wordPuzzleEditors.ts';
+import {replaceWithSuggestedDecoys} from './decoySuggestions.ts';
 import {reviewChoiceOrder} from './multipleChoiceEditor.ts';
 import {sharedVerseBlankIssues} from './verseBlankSharing.ts';
 import {MODULE_REPAIR_REGISTRY} from './repairRegistry.ts';
@@ -238,6 +239,28 @@ export default function ReviewApp(){
    setReviewed(previous=>previous.filter(id=>id!==(key==='oddWords'?'odd-words':'checkboxes')));
    setError('');
   }catch(error){setError(String((error as Error).message??error));}
+ }
+ function suggestWordDecoys(key:WordBankKind){
+  if(!lesson)return;
+  const field=key==='oddWords'?'unrelated':'incorrect';
+  // Never silently replace teacher-reviewed words or unfinished edits.
+  const existing=key==='oddWords'?wordBankDrafts.oddWords.unrelated:
+   wordBankDrafts.checkboxes.incorrect;
+  if(existing.trim()&&!window.confirm(
+   'Replace your current unrelated words with five random suggestions? '+
+   'The old words will be replaced; you can edit the new choices before approval.'
+  ))return;
+  try{
+   const result=replaceWithSuggestedDecoys(lesson,key);
+   setWordBankDrafts(previous=>({...previous,
+    [key]:{...previous[key],[field]:result.words.join('\n')},
+   }));
+   setLesson(result.lesson);setPreflight(null);
+   // The other activity's existing review status stays intact.
+   setReviewed(previous=>previous.filter(id=>
+    id!==(key==='oddWords'?'odd-words':'checkboxes')));
+   setError('');
+  }catch(error){setError(error instanceof Error?error.message:String(error));}
  }
  function applyVisualReview(next:Lesson){
   setLesson(next);setPreflight(null);
@@ -702,6 +725,11 @@ export default function ReviewApp(){
         <textarea id="review-field-odd-words-unrelated" rows={6}
          value={wordBankDrafts.oddWords.unrelated}
          onChange={e=>changeWordList('oddWords','unrelated',e.target.value)}/></label>
+       <button type="button" className="review-secondary review-decoy-button"
+        aria-controls="review-field-odd-words-unrelated"
+        onClick={()=>suggestWordDecoys('oddWords')}>Suggest 5 random decoys</button>
+       <p className="review-source">Random decoys are suggestions, not verified story facts.
+        Confirm each word is unrelated to this lesson before marking it reviewed.</p>
        <p className="review-word-bank-total">Total: {wordBankCounts(lesson,'oddWords').total}/10 choices (minimum 6).</p>
        {wordBankIssues(lesson,'oddWords').length>0&&
         <div className="review-warning" role="alert">
@@ -722,6 +750,12 @@ export default function ReviewApp(){
         <textarea id="review-field-checkboxes-incorrect" rows={6}
          value={wordBankDrafts.checkboxes.incorrect}
          onChange={e=>changeWordList('checkboxes','incorrect',e.target.value)}/></label>
+       <button type="button" className="review-secondary review-decoy-button"
+        aria-controls="review-field-checkboxes-incorrect"
+        onClick={()=>suggestWordDecoys('checkboxes')}>Suggest 5 random decoys</button>
+       <p className="review-source">Random decoys are suggestions, not verified story facts.
+        Previously chosen Odd Words decoys are excluded, and vice versa.
+        Confirm the five words before marking this activity reviewed.</p>
        <p className="review-word-bank-total">Total: {wordBankCounts(lesson,'checkboxes').total}/10 choices.</p>
        {wordBankIssues(lesson,'checkboxes').length>0&&
         <div className="review-warning" role="alert">
