@@ -238,7 +238,7 @@ test('Print-matched story and fact previews, row controls, and advanced fallback
  for(const id of ['story-order','sort-story','true-false','true-false-maze'])
   assert.match(app,new RegExp("active\\.id==='"+id+"'"));
  assert.match(app,/Advanced: edit this activity's JSON only/u);
- assert.match(story,/<StoryVersePreview module=/u);
+ assert.match(story,/<StoryVersePreview storyOrderChronological module=/u);
  assert.match(story,/moveStoryEvent\(lesson,i,-1\)/u);
  assert.match(story,/replaceStoryEventFromNote/u);
  assert.match(sort,/<SortStoryPrintPreview module=/u);
