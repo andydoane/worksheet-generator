@@ -116,7 +116,7 @@ Do not infer current merge status from this table; verify in GitHub. If a future
 
 | **Merged** | [#106 — canonical fact, clue-schema and conversion-guide repair](https://github.com/andydoane/worksheet-generator/pull/106) | New teacher-reviewed fact adaptations with distinct IDs, safe movement from Sort the Story, batch clue repair, invalid review-state feedback, and regression/documentation updates. No approved curriculum rewritten. |
 
-| **In this PR** | Comprehensive, self-contained curriculum-conversion manual | Detailed, schema-checked JSON recipes for 27 activity types; explicit grammar and source-contract rules; full pre-delivery audit; revised unapproved starter; reconciled Finish Story/drawing/publishing guidance; test coverage for manual drift. No approved curriculum rewritten. |
+| **Draft PR** | [#107 — comprehensive curriculum conversion manual](https://github.com/andydoane/worksheet-generator/pull/107) | Detailed, schema-checked JSON recipes for 27 activity types; explicit grammar and source-contract rules; full pre-delivery audit; revised unapproved starter; reconciled Finish Story/drawing/publishing guidance; test coverage for manual drift. No approved curriculum rewritten. |
 
 **To maintain this table in every future feature/bug-fix PR:** replace stale statuses rather than simply adding rows; add the PR/issue link, brief outcome or current blocker, and accurate next step. Update **Status last checked**, package version above, and milestone context based on actual GitHub information. Never invent a date, merge, approval, or test result. Avoid documenting every small curriculum upload. Documentation-only changes may update the handoff without requiring a release; new direct-to-main approved JSON uploads are exempt.
 
