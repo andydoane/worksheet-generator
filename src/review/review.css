@@ -263,3 +263,6 @@ a{color:#267d68}
  color:#28614b;padding:10px 12px;font-size:12px;font-weight:800;cursor:pointer}
 .review-issue-list .review-schema-fix:hover{background:#e4f3e8}
 .review-issue-list .review-schema-fix:focus-visible{outline:3px solid #82b69d;outline-offset:2px}
+
+/* Review-only random decoy button follows its unrelated-words textarea. */
+.review-word-bank .review-decoy-button{justify-self:start;width:auto;max-width:100%;white-space:normal}
