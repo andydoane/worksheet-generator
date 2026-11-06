@@ -1,0 +1,2956 @@
+{
+  "schemaVersion": 1,
+  "schemaStatus": "draft-source-preserving; pending teacher and generator review",
+  "id": "ot-030-the-tenth-plague-and-passover",
+  "curriculum": {
+    "series": "Old Testament",
+    "lessonNumber": 30
+  },
+  "lessonDetails": {
+    "title": "The Tenth Plague and the Passover",
+    "scripturePassages": [
+      "Exodus 11",
+      "Exodus 12"
+    ],
+    "scriptureDisplay": "Exodus 11–12",
+    "bigIdeas": [
+      {
+        "text": "The Passover points us to Jesus.",
+        "origin": "source",
+        "source": {
+          "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+          "section": "Important Idea",
+          "page": 6,
+          "sourceParagraphIndex": 96,
+          "details": "Displayed across three adjacent ODT text paragraphs (The Passover / points us to / Jesus.); wording verified on the page-6 Important Idea graphic."
+        }
+      }
+    ],
+    "memoryVerse": {
+      "reference": "Deuteronomy 5:15",
+      "translation": "BSB",
+      "text": "Remember that you were a slave in the land of Egypt, and that the LORD your God brought you out of there with a mighty hand",
+      "isExcerpt": true,
+      "hasEllipses": false,
+      "requiresTextReview": false,
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Memory Verse Activity",
+        "page": 8,
+        "sourceParagraphIndex": 124
+      },
+      "alsoVerifiedAt": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Verse and Motions",
+        "page": 8,
+        "sourceParagraphIndex": 129
+      },
+      "teacherReviewRequired": true,
+      "originalTranslation": "ESV",
+      "bsbSource": {
+        "reference": "Deuteronomy 5:15",
+        "sourceUrl": "https://bereanbible.com/bsb.txt",
+        "publicDomainTerms": "https://berean.bible/terms.htm",
+        "startWord": 0,
+        "endWord": 25
+      }
+    }
+  },
+  "sourceFiles": [
+    {
+      "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+      "format": "odt",
+      "role": "primary teaching source",
+      "note": "16-page lesson; no separate slide deck or resource activity sheets supplied. Original memory verse quotes Deuteronomy 5:15a, ESV; BSB selection remains pending."
+    }
+  ],
+  "storyNotes": [
+    {
+      "id": "sn-01",
+      "order": 1,
+      "originalText": "Moses warned Pharaoh about the tenth plague: \"Every firstborn son in Egypt will DIE.\"",
+      "cleanText": "Moses warned Pharaoh about the tenth plague: \"Every firstborn son in Egypt will die.\"",
+      "emphasizedWords": [
+        "DIE"
+      ],
+      "origin": "source",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "STORY NOTE",
+        "page": 2,
+        "sourceParagraphIndex": 20
+      }
+    },
+    {
+      "id": "sn-02",
+      "order": 2,
+      "originalText": "God told the people to eat a MEAL of lamb, bitter plants, and bread without yeast.",
+      "cleanText": "God told the people to eat a meal of lamb, bitter plants, and bread without yeast.",
+      "emphasizedWords": [
+        "MEAL"
+      ],
+      "origin": "source",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "STORY NOTE",
+        "page": 2,
+        "sourceParagraphIndex": 30
+      }
+    },
+    {
+      "id": "sn-03",
+      "order": 3,
+      "originalText": "Moses said, \"Spread lamb's BLOOD on your doorframe. The Lord will pass over your home.\"",
+      "cleanText": "Moses said, \"Spread lamb's blood on your doorframe. The Lord will pass over your home.\"",
+      "emphasizedWords": [
+        "BLOOD"
+      ],
+      "origin": "source",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "STORY NOTE",
+        "page": 3,
+        "sourceParagraphIndex": 42
+      }
+    },
+    {
+      "id": "sn-04",
+      "order": 4,
+      "originalText": "That night, the Lord struck down EVERY firstborn son in Egypt. He passed over the homes of Israel.",
+      "cleanText": "That night, the Lord struck down every firstborn son in Egypt. He passed over the homes of Israel.",
+      "emphasizedWords": [
+        "EVERY"
+      ],
+      "origin": "source",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "STORY NOTE",
+        "page": 3,
+        "sourceParagraphIndex": 49
+      }
+    },
+    {
+      "id": "sn-05",
+      "order": 5,
+      "originalText": "After his firstborn son died, Pharaoh begged Moses and the Israelites to LEAVE.",
+      "cleanText": "After his firstborn son died, Pharaoh begged Moses and the Israelites to leave.",
+      "emphasizedWords": [
+        "LEAVE"
+      ],
+      "origin": "source",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "STORY NOTE",
+        "page": 4,
+        "sourceParagraphIndex": 57
+      }
+    },
+    {
+      "id": "sn-06",
+      "order": 6,
+      "originalText": "As the Israelites left, the Egyptians gave them expensive things like GOLD and silver.",
+      "cleanText": "As the Israelites left, the Egyptians gave them expensive things like gold and silver.",
+      "emphasizedWords": [
+        "GOLD"
+      ],
+      "origin": "source",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "STORY NOTE",
+        "page": 4,
+        "sourceParagraphIndex": 64
+      }
+    },
+    {
+      "id": "sn-07",
+      "order": 7,
+      "originalText": "The Israelites left in a HURRY. They didn't even have time to finish preparing their bread.",
+      "cleanText": "The Israelites left in a hurry. They didn't even have time to finish preparing their bread.",
+      "emphasizedWords": [
+        "HURRY"
+      ],
+      "origin": "source",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "STORY NOTE",
+        "page": 5,
+        "sourceParagraphIndex": 71
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q-01",
+      "question": "What things would you grab in those five minutes?",
+      "answer": "Various responses.",
+      "kind": "discussion",
+      "origin": "source",
+      "scope": "introduction",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 5
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-02",
+      "question": "We’ve been reading through the book of Exodus, a word which means what?",
+      "answer": "Exit.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "introduction",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 8
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-03",
+      "question": "Why would they want to exit Egypt?",
+      "answer": "They were slaves.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "introduction",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 9
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-04",
+      "question": "What was it?",
+      "answer": "To lead God’s people out of Egypt.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "introduction",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 11
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-05",
+      "question": "But when Moses told Pharaoh, the king of Egypt, to let God’s people go, what did the stubborn king say?",
+      "answer": "I don’t know the Lord, so no!",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "introduction",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 13
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-06",
+      "question": "But even after suffering all these dreadful wonders, what did Pharaoh say?",
+      "answer": "No.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "introduction",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 15
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-07",
+      "question": "What did Moses say would happen?",
+      "answer": "The firstborn son in every Egyptian home would die.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 21
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-08",
+      "question": "Why?",
+      "answer": "Parents crying after losing a child.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 23
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-09",
+      "question": "But what about God’s people, the Israelites? What did Moses say would happen?",
+      "answer": "They wouldn’t be harmed; not even a dog would bark at them.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 24
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-10",
+      "question": "What things did God tell them to eat?",
+      "answer": "Roasted lamb, bitter plants, bread without yeast.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 33
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-11",
+      "question": "What were they to do as they ate?",
+      "answer": "Tuck their coat into their belt, wear sandals, hold their walking stick, and eat quickly.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Story",
+        "page": 3,
+        "sourceParagraphIndex": 37
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-12",
+      "question": "If he saw blood on the edges of a house’s door, what did God promise to do?",
+      "answer": "Pass over that house, not strike down the firstborn.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Story",
+        "page": 3,
+        "sourceParagraphIndex": 45
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-13",
+      "question": "What does the Bible say?",
+      "answer": "There was loud crying because someone had died in every house.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Story",
+        "page": 3,
+        "sourceParagraphIndex": 50
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-14",
+      "question": "Why?",
+      "answer": "Because he saw the blood of the lamb on the door.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 53
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-15",
+      "question": "Why was Pharaoh in such a hurry to speak with Moses?",
+      "answer": "His son had died.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 58
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-16",
+      "question": "But after the death of his firstborn son, what did Pharaoh say to Moses?",
+      "answer": "Go! Take everything and leave.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 59
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-17",
+      "question": "Why would the Egyptians want the Israelites to leave?",
+      "answer": "So the plagues would stop.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 65
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-18",
+      "question": "As the Israelites prepared to leave, what did the Egyptians give them?",
+      "answer": "Gold, silver, and clothing.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Story",
+        "page": 5,
+        "sourceParagraphIndex": 67
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-19",
+      "question": "What happened to the Egyptian houses during the tenth plague?",
+      "answer": "The firstborn son died.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Story",
+        "page": 5,
+        "sourceParagraphIndex": 80
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-20",
+      "question": "Why?",
+      "answer": "Because of the lamb’s blood on the doorframe.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Story",
+        "page": 6,
+        "sourceParagraphIndex": 83
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-21",
+      "question": "Why?",
+      "answer": "Because the angel “passed over” the Israelite houses.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Story",
+        "page": 6,
+        "sourceParagraphIndex": 85
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-22",
+      "question": "And the lamb? What did that remind them of?",
+      "answer": "The blood of the lamb on the door.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Story",
+        "page": 6,
+        "sourceParagraphIndex": 93
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-23",
+      "question": "What did the Israelites need to be saved from?",
+      "answer": "Slavery in Egypt.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Story",
+        "page": 6,
+        "sourceParagraphIndex": 101
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-24",
+      "question": "How many of us have done it?",
+      "answer": "Everyone, including you and me.",
+      "kind": "theological",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Story",
+        "page": 6,
+        "sourceParagraphIndex": 105
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-25",
+      "question": "What punishment do we earn because of our sin?",
+      "answer": "Death.",
+      "kind": "theological",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Story",
+        "page": 7,
+        "sourceParagraphIndex": 109
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-26",
+      "question": "How were the Israelite sons saved from the destroying angel?",
+      "answer": "By the blood of the lamb on their doorframes.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Story",
+        "page": 7,
+        "sourceParagraphIndex": 113
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-27",
+      "question": "What did God want the Israelites to remember?",
+      "answer": "How God rescued them from being slaves in Egypt with mighty power.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "memory verse",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Memory Verse Activity",
+        "page": 8,
+        "sourceParagraphIndex": 126
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-28",
+      "question": "What did God do to save us?",
+      "answer": "Sent Jesus to die for our sins and rise from the dead.",
+      "kind": "theological",
+      "origin": "source",
+      "scope": "memory verse",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Memory Verse Activity",
+        "page": 8,
+        "sourceParagraphIndex": 126
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-29",
+      "question": "What was that meal called?",
+      "answer": "The Passover.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "memory verse",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Memory Verse Activity",
+        "page": 8,
+        "sourceParagraphIndex": 127
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-30",
+      "question": "Why?",
+      "answer": "That’s how God told the people to eat the Passover.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "memory verse",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Memory Verse Activity",
+        "page": 8,
+        "sourceParagraphIndex": 127
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-31",
+      "question": "Why?",
+      "answer": "Because after 430 years in Egypt, including many years as slaves, God’s chosen people were on their way to freedom!",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Story",
+        "page": 5,
+        "sourceParagraphIndex": 74
+      },
+      "standaloneReady": false,
+      "notes": "Answer in following source paragraph."
+    },
+    {
+      "id": "q-32",
+      "question": "So, how does the story of the Tenth Plague and the Passover teach us, strengthen us, encourage us, or give us hope?",
+      "answer": "",
+      "kind": "discussion",
+      "origin": "source",
+      "scope": "story application",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Story Application",
+        "page": 5,
+        "sourceParagraphIndex": 77
+      },
+      "standaloneReady": false,
+      "notes": "Open discussion prompt; the source provides no explicit parenthetical answer."
+    },
+    {
+      "id": "q-33",
+      "question": "Can you see how that points to Jesus?",
+      "answer": "",
+      "kind": "discussion",
+      "origin": "source",
+      "scope": "story application",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Story Application",
+        "page": 7,
+        "sourceParagraphIndex": 114
+      },
+      "standaloneReady": false,
+      "notes": "Open discussion prompt; the source provides no explicit parenthetical answer."
+    },
+    {
+      "id": "q-34",
+      "question": "What did Moses tell Pharaoh would happen in the tenth plague?",
+      "answer": "Every firstborn son in Egypt would die",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Review Questions",
+        "page": 12,
+        "sourceParagraphIndex": 172
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-35",
+      "question": "What did Moses tell the Israelites to do so the Lord would pass over their home?",
+      "answer": "Spread lamb’s blood on their doorframe, stay inside",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Review Questions",
+        "page": 12,
+        "sourceParagraphIndex": 173
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-36",
+      "question": "What did the Israelites do after Moses’ instructions?",
+      "answer": "Worshiped God, did everything God commanded",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Review Questions",
+        "page": 12,
+        "sourceParagraphIndex": 174
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-37",
+      "question": "What happened during the tenth plague?",
+      "answer": "God’s angel struck every firstborn son in Egypt, passed over Israel",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Review Questions",
+        "page": 12,
+        "sourceParagraphIndex": 175
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-38",
+      "question": "What did Pharaoh do after the tenth plague?",
+      "answer": "Begged Moses and the Israelites to leave",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Review Questions",
+        "page": 12,
+        "sourceParagraphIndex": 176
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-39",
+      "question": "What did the Egyptian people do as the Israelites left?",
+      "answer": "Gave them expensive gold, silver, and clothes",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Review Questions",
+        "page": 12,
+        "sourceParagraphIndex": 177
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-40",
+      "question": "What was the name of the meal God commanded his people to celebrate each year?",
+      "answer": "The Passover",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Review Questions",
+        "page": 12,
+        "sourceParagraphIndex": 178
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-41",
+      "question": "What did the Israelites eat at the Passover?",
+      "answer": "Roasted lamb, bitter herbs, bread without yeast",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Review Questions",
+        "page": 12,
+        "sourceParagraphIndex": 179
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-42",
+      "question": "What were the Israelites to do at the Passover?",
+      "answer": "Hold their walking stick, coat tucked into belt, ready to leave",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Review Questions",
+        "page": 12,
+        "sourceParagraphIndex": 180
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-43",
+      "question": "How long had the people of Israel been in Egypt before they left?",
+      "answer": "430 years",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Review Questions",
+        "page": 12,
+        "sourceParagraphIndex": 181
+      },
+      "standaloneReady": true
+    }
+  ],
+  "facts": [
+    {
+      "id": "tf-source-01",
+      "statement": "Moses told Pharaoh that, during the tenth plague, every child would die.",
+      "isTrue": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "True/False Statements",
+        "page": 10,
+        "sourceParagraphIndex": 160
+      },
+      "notes": "Original correction: only the firstborn son"
+    },
+    {
+      "id": "tf-source-02",
+      "statement": "Moses told the Israelites to spread blood on their doorframes and the angel would pass over their house.",
+      "isTrue": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "True/False Statements",
+        "page": 10,
+        "sourceParagraphIndex": 161
+      }
+    },
+    {
+      "id": "tf-source-03",
+      "statement": "The Israelites worshiped God. Then they ignored Moses’ instructions.",
+      "isTrue": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "True/False Statements",
+        "page": 10,
+        "sourceParagraphIndex": 162
+      },
+      "notes": "Original correction: they did what Moses said"
+    },
+    {
+      "id": "tf-source-04",
+      "statement": "During the tenth plague, every firstborn son in Egypt died. But the angel passed over the homes with blood on the doorframe.",
+      "isTrue": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "True/False Statements",
+        "page": 10,
+        "sourceParagraphIndex": 163
+      }
+    },
+    {
+      "id": "tf-source-05",
+      "statement": "Pharaoh called Moses and Aaron to come to him in the middle of the night. He begged the Israelites to leave.",
+      "isTrue": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "True/False Statements",
+        "page": 10,
+        "sourceParagraphIndex": 164
+      }
+    },
+    {
+      "id": "tf-source-06",
+      "statement": "As the Israelites left, they stole gold, silver, and clothing.",
+      "isTrue": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "True/False Statements",
+        "page": 11,
+        "sourceParagraphIndex": 165
+      },
+      "notes": "Original correction: the Egyptians gave them these things"
+    },
+    {
+      "id": "tf-source-07",
+      "statement": "The Israelites waited for their bread dough to rise before they left Egypt.",
+      "isTrue": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "True/False Statements",
+        "page": 11,
+        "sourceParagraphIndex": 166
+      },
+      "notes": "Original correction: they left in a hurry"
+    },
+    {
+      "id": "tf-source-08",
+      "statement": "God commanded his people to celebrate the Passover meal every year.",
+      "isTrue": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "True/False Statements",
+        "page": 11,
+        "sourceParagraphIndex": 167
+      }
+    },
+    {
+      "id": "tf-source-09",
+      "statement": "At the Passover, God wanted the Israelites to eat lamb, bitter herbs, and flatbread.",
+      "isTrue": true,
+      "origin": "source",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "True/False Statements",
+        "page": 11,
+        "sourceParagraphIndex": 168
+      }
+    },
+    {
+      "id": "tf-source-10",
+      "statement": "During the Passover meal, God wanted them to hold their walking stick so they could be ready to hit the Egyptians if they attacked.",
+      "isTrue": false,
+      "origin": "source",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "True/False Statements",
+        "page": 11,
+        "sourceParagraphIndex": 169
+      },
+      "notes": "Original correction: it was a reminder that they had to leave in a hurry"
+    },
+    {
+      "id": "tf-a01",
+      "statement": "Moses warned Pharaoh that Egypt’s firstborn sons would die.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    {
+      "id": "tf-a02",
+      "statement": "God told the Israelites to eat lamb, bitter plants, and bread without yeast.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ]
+    },
+    {
+      "id": "tf-a03",
+      "statement": "God told Israel to paint their doors blue.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-03"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-a04",
+      "statement": "The destroying angel entered the marked Israelite homes.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-04"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-a05",
+      "statement": "Pharaoh begged Israel to leave after his son died.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ]
+    },
+    {
+      "id": "tf-a06",
+      "statement": "The Egyptians refused to give the Israelites treasures.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-06"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-a07",
+      "statement": "The Egyptians gave the Israelites gold and silver.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ]
+    },
+    {
+      "id": "tf-a08",
+      "statement": "The Israelites ate lamb, bitter herbs, and bread without yeast.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ]
+    },
+    {
+      "id": "tf-a09",
+      "statement": "The Israelites left Egypt in a hurry.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ]
+    },
+    {
+      "id": "tf-a10",
+      "statement": "Pharaoh told the Israelites to stay in Egypt forever.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-a11",
+      "statement": "God told the Israelites to put lamb’s blood on their doorframes.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ]
+    },
+    {
+      "id": "tf-a12",
+      "statement": "Moses told Israel to stay inside their homes until morning.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ]
+    },
+    {
+      "id": "tf-a13",
+      "statement": "The Israelites had 430 years of living in Egypt.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ]
+    },
+    {
+      "id": "tf-a14",
+      "statement": "The people had time to let their bread finish baking.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    }
+  ],
+  "vocabulary": {
+    "related": [
+      "PASSOVER",
+      "PHARAOH",
+      "ISRAELITES",
+      "MOSES",
+      "LAMB",
+      "BLOOD",
+      "DOORFRAME",
+      "FIRSTBORN",
+      "MEAL",
+      "EGYPT",
+      "HERBS",
+      "YEAST",
+      "GOLD",
+      "SILVER",
+      "BREAD",
+      "HURRY",
+      "SLAVE",
+      "DEATH",
+      "ANGEL",
+      "MIDNIGHT",
+      "RESCUE",
+      "MIGHTY HAND",
+      "WALKING STICK"
+    ],
+    "unrelated": [
+      "BANANA",
+      "ROCKET",
+      "NEPTUNE",
+      "WHALE",
+      "PENGUIN",
+      "TELESCOPE",
+      "VOLCANO",
+      "SPACESHIP",
+      "CIRCUS",
+      "SKATEBOARD"
+    ],
+    "entries": [
+      {
+        "id": "v-01",
+        "term": "PASSOVER",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "id": "v-02",
+        "term": "PHARAOH",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "id": "v-03",
+        "term": "ISRAELITES",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "id": "v-04",
+        "term": "MOSES",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "id": "v-05",
+        "term": "LAMB",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "id": "v-06",
+        "term": "BLOOD",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "id": "v-07",
+        "term": "DOORFRAME",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "id": "v-08",
+        "term": "FIRSTBORN",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "id": "v-09",
+        "term": "MEAL",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "id": "v-10",
+        "term": "EGYPT",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "id": "v-11",
+        "term": "HERBS",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "id": "v-12",
+        "term": "YEAST",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "id": "v-13",
+        "term": "GOLD",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "id": "v-14",
+        "term": "SILVER",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "id": "v-15",
+        "term": "BREAD",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "id": "v-16",
+        "term": "HURRY",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "id": "v-17",
+        "term": "SLAVE",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "id": "v-18",
+        "term": "DEATH",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "id": "v-19",
+        "term": "ANGEL",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "id": "v-20",
+        "term": "MIDNIGHT",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "id": "v-21",
+        "term": "RESCUE",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "id": "v-22",
+        "term": "MIGHTY HAND",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "id": "v-23",
+        "term": "WALKING STICK",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      }
+    ]
+  },
+  "characters": [
+    {
+      "id": "ch-01",
+      "name": "Moses",
+      "origin": "source",
+      "sourceIds": [
+        "sn-01",
+        "sn-03",
+        "sn-05"
+      ],
+      "clues": [
+        {
+          "text": "I warned Pharaoh about the tenth plague.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-01"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch-02",
+      "name": "Pharaoh",
+      "origin": "source",
+      "sourceIds": [
+        "sn-01",
+        "sn-05"
+      ],
+      "clues": [
+        {
+          "text": "I was king of Egypt and begged the Israelites to leave after my firstborn son died.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-05"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch-03",
+      "name": "Aaron",
+      "origin": "source",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 56
+      },
+      "clues": [
+        {
+          "text": "I was called with Moses to meet Pharaoh during the night.",
+          "origin": "adapted",
+          "teacherReviewRequired": true,
+          "source": {
+            "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+            "section": "Story",
+            "page": 4,
+            "sourceParagraphIndex": 56
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch-04",
+      "name": "Jesus",
+      "origin": "source",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Story Application",
+        "page": 7,
+        "sourceParagraphIndex": 120
+      },
+      "clues": [
+        {
+          "text": "The lesson says the Passover points to me and my rescue from sin.",
+          "origin": "adapted",
+          "teacherReviewRequired": true,
+          "source": {
+            "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+            "section": "Story Application",
+            "page": 7,
+            "sourceParagraphIndex": 120
+          }
+        }
+      ]
+    }
+  ],
+  "matchingPairs": [
+    {
+      "id": "mp-01",
+      "left": "Moses",
+      "right": "Warned Pharaoh",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    {
+      "id": "mp-02",
+      "left": "Pharaoh",
+      "right": "Begged them to leave",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ]
+    },
+    {
+      "id": "mp-03",
+      "left": "Lamb’s blood",
+      "right": "Marked doorframes",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ]
+    },
+    {
+      "id": "mp-04",
+      "left": "Passover",
+      "right": "Special rescue night",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ]
+    },
+    {
+      "id": "mp-05",
+      "left": "Egyptians",
+      "right": "Gave gold and silver",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ]
+    },
+    {
+      "id": "mp-06",
+      "left": "Israelites",
+      "right": "Left in a hurry",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ]
+    }
+  ],
+  "drawingPrompts": [
+    {
+      "id": "dp-01",
+      "prompt": "Moses warning Pharaoh about the tenth plague",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    {
+      "id": "dp-02",
+      "prompt": "an Israelite family preparing lamb, herbs, and flatbread",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ]
+    },
+    {
+      "id": "dp-03",
+      "prompt": "an Israelite family spreading lamb’s blood on a wooden doorframe",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ]
+    },
+    {
+      "id": "dp-04",
+      "prompt": "the Israelites safely inside a house with blood on its doorframe",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ]
+    },
+    {
+      "id": "dp-05",
+      "prompt": "Pharaoh begging Moses to leave Egypt",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ]
+    },
+    {
+      "id": "dp-06",
+      "prompt": "the Egyptians giving gold and silver to the Israelites",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ]
+    },
+    {
+      "id": "dp-07",
+      "prompt": "Israelite families carrying bread dough as they hurry out of Egypt",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ]
+    }
+  ],
+  "keyPhrases": [
+    {
+      "id": "kp-01",
+      "text": "The Passover points us to Jesus.",
+      "origin": "source",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Important Idea",
+        "page": 6,
+        "sourceParagraphIndex": 96,
+        "details": "Displayed across three adjacent ODT text paragraphs (The Passover / points us to / Jesus.); wording verified on the page-6 Important Idea graphic."
+      }
+    },
+    {
+      "id": "kp-02",
+      "text": "God rescued his people from slavery in Egypt.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Story Application",
+        "page": 6,
+        "sourceParagraphIndex": 88
+      }
+    },
+    {
+      "id": "kp-03",
+      "text": "Remember how God rescued his people.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Memory Verse Activity",
+        "page": 8,
+        "sourceParagraphIndex": 126
+      }
+    }
+  ],
+  "theologicalApplications": [
+    {
+      "id": "app-01",
+      "text": "The Passover points us to Jesus.",
+      "origin": "source",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Important Idea",
+        "page": 6,
+        "sourceParagraphIndex": 96,
+        "details": "Displayed across three adjacent ODT text paragraphs (The Passover / points us to / Jesus.); wording verified on the page-6 Important Idea graphic."
+      }
+    },
+    {
+      "id": "app-02",
+      "text": "The source lesson compares the lamb’s blood protecting Israelite sons from death with Jesus shedding his blood for sins.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Story Application",
+        "page": 7,
+        "sourceParagraphIndex": 113
+      },
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "app-03",
+      "text": "The source lesson teaches that Jesus died to rescue people from sin and then rose from the dead.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Story Application",
+        "page": 7,
+        "sourceParagraphIndex": 120
+      },
+      "teacherReviewRequired": true
+    }
+  ],
+  "preparedActivities": {
+    "drawPicture": {
+      "prompt": "an Israelite family spreading lamb’s blood on a wooden doorframe",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ]
+    },
+    "multipleChoice": [
+      {
+        "id": "mc-01",
+        "question": "What did Moses say would happen in the tenth plague?",
+        "correctAnswer": "Every firstborn son would die.",
+        "choices": [
+          {
+            "text": "Every firstborn son would die.",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "The ground would shake",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "The Nile would dry up.",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceQuestionIds": [
+          "q-34"
+        ],
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-02",
+        "question": "What did the Israelites spread on their doorframes?",
+        "correctAnswer": "Lamb’s blood",
+        "choices": [
+          {
+            "text": "Lamb’s blood",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Olive oil",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Wine",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceQuestionIds": [
+          "q-35"
+        ],
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-03",
+        "question": "How did the Israelites respond to Moses’ instructions?",
+        "correctAnswer": "They obeyed and worshiped God.",
+        "choices": [
+          {
+            "text": "They obeyed and worshiped God.",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "They laughed at the warning.",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "They ran to Pharaoh.",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceQuestionIds": [
+          "q-36"
+        ],
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-04",
+        "question": "What did the angel do when it saw the blood on the doorframes?",
+        "correctAnswer": "It passed over that house",
+        "choices": [
+          {
+            "text": "It passed over that house",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "The firstborn son in that house died",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "It carried the people inside out of Egypt",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceQuestionIds": [
+          "q-37"
+        ],
+        "sourceIds": [
+          "sn-04"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-05",
+        "question": "What did Pharaoh do after the tenth plague?",
+        "correctAnswer": "He begged the Israelites to leave.",
+        "choices": [
+          {
+            "text": "He begged the Israelites to leave.",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "He crowned Moses king.",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "He ran away from Egypt",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceQuestionIds": [
+          "q-38"
+        ],
+        "sourceIds": [
+          "sn-05"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-06",
+        "question": "What did the Egyptians give the Israelites?",
+        "correctAnswer": "Gold, silver, and clothing",
+        "choices": [
+          {
+            "text": "Gold, silver, and clothing",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Horses and chariots",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Weapons and Armor",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceQuestionIds": [
+          "q-39"
+        ],
+        "sourceIds": [
+          "sn-06"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-07",
+        "question": "What meal did God tell his people to remember each year?",
+        "correctAnswer": "The Passover meal",
+        "choices": [
+          {
+            "text": "The Passover meal",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "The Exodus Dinner",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "The Ten Plagues Meal",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceQuestionIds": [
+          "q-40"
+        ],
+        "sourceIds": [
+          "sn-02",
+          "sn-03"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-08",
+        "question": "How long had Israel lived in Egypt before leaving?",
+        "correctAnswer": "430 years",
+        "choices": [
+          {
+            "text": "430 years",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "40 days",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "12 years",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceQuestionIds": [
+          "q-43"
+        ],
+        "sourceIds": [
+          "sn-07"
+        ],
+        "teacherReviewRequired": true
+      }
+    ],
+    "trueFalse": {
+      "factId": "tf-source-08",
+      "statement": "God commanded his people to celebrate the Passover meal every year.",
+      "isTrue": true,
+      "origin": "source"
+    },
+    "firstLetters": {
+      "reference": "Deuteronomy 5:15",
+      "verse": "Remember that you were a slave in the land of Egypt, and that the LORD your God brought you out of there with a mighty hand",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "oddWords": {
+      "related": [
+        "LAMB",
+        "BLOOD",
+        "MOSES",
+        "EGYPT",
+        "PASSOVER"
+      ],
+      "unrelated": [
+        "desert",
+        "prophets",
+        "forest",
+        "Nehemiah",
+        "palm branch"
+      ],
+      "unrelatedOrigin": "suggested",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "unscrambleWords": {
+      "answers": [
+        "DOORFRAME",
+        "PASSOVER"
+      ],
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-03",
+        "sn-01"
+      ],
+      "teacherReviewRequired": true
+    },
+    "checkboxes": {
+      "correct": [
+        "PHARAOH",
+        "FIRSTBORN",
+        "GOLD",
+        "BREAD",
+        "SILVER"
+      ],
+      "incorrect": [
+        "rocks",
+        "mountain",
+        "Paul",
+        "Goliath",
+        "hair"
+      ],
+      "incorrectOrigin": "suggested",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "whoAmI": {
+      "clue": "I was the stubborn king of Egypt. I begged the Israelites to leave after my firstborn son died.",
+      "answer": "Pharaoh",
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": true
+    },
+    "matchWords": [
+      {
+        "left": "Moses",
+        "right": "Leader",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "left": "Pharaoh",
+        "right": "King",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-05"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "left": "Blood",
+        "right": "Door frames",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "left": "Angel",
+        "right": "Passed Over",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-04"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "left": "Gifts",
+        "right": "Gold and Silver",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-06"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "left": "Bread",
+        "right": "No yeast",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-07"
+        ],
+        "teacherReviewRequired": true
+      }
+    ],
+    "finishVerse": {
+      "reference": "Deuteronomy 5:15",
+      "sourceVerse": "Remember that you were a slave in the land of Egypt, and that the LORD your God brought you out of there with a mighty hand",
+      "markedVerse": "[Remember] that you were a [slave] in the land of [Egypt], and that the [LORD] your God brought you [out] of there with a mighty [hand]",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "unscrambleVerse": {
+      "reference": "Deuteronomy 5:15",
+      "sourceVerse": "Remember that you were a slave in the land of Egypt, and that the LORD your God brought you out of there with a mighty hand",
+      "markedVerse": "[Remember] that you were a [slave] in the land of [Egypt], and that the [LORD] your God brought you [out] of there with a mighty [hand]",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "circleMistakes": {
+      "paragraph": "Moses warned Pharaoh that Egypt’s firstborn daughters would die. God told the Israelites to mark their doors with green paint and to eat fish at their Passover meal. After his son was struck down, Pharaoh asked the Israelites to stay. The Egyptians gave the Israelites gifts of weapons and food as they left.",
+      "mistakeCount": 5,
+      "mistakes": [
+        {
+          "incorrect": "firstborn daughters",
+          "correction": "firstborn sons",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "green paint",
+          "correction": "lamb’s blood",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "fish",
+          "correction": "lamb",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "asked the Israelites to stay",
+          "correction": "begged the Israelites to leave",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "weapons and food",
+          "correction": "gold and silver and clothing",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-05",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "mediumWordSearch": {
+      "words": [
+        "MOSES",
+        "LAMB",
+        "BLOOD",
+        "Passover",
+        "HURRY",
+        "ANGEL"
+      ],
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-03",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "trueFalseMaze": {
+      "factId": "tf-a08",
+      "statement": "The Israelites ate lamb, bitter herbs, and bread without yeast.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ]
+    },
+    "bigIdeaCryptogram": {
+      "phrase": "The Passover points us to Jesus.",
+      "origin": "source",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Important Idea",
+        "page": 6,
+        "sourceParagraphIndex": 96,
+        "details": "Displayed across three adjacent ODT text paragraphs (The Passover / points us to / Jesus.); wording verified on the page-6 Important Idea graphic."
+      }
+    },
+    "upsideDownVerse": {
+      "reference": "Deuteronomy 5:15",
+      "verse": "Remember that you were a slave in the land of Egypt, and that the LORD your God brought you out of there with a mighty hand",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "connectBigIdea": {
+      "phrase": "The Passover points us to Jesus.",
+      "origin": "source",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Important Idea",
+        "page": 6,
+        "sourceParagraphIndex": 96,
+        "details": "Displayed across three adjacent ODT text paragraphs (The Passover / points us to / Jesus.); wording verified on the page-6 Important Idea graphic."
+      }
+    },
+    "pixelPicture": {
+      "phrase": "The Passover points us to Jesus, the great rescuer.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 30 Lesson (The Tenth Plague and Passover)(1).odt",
+        "section": "Story Application",
+        "page": 6,
+        "sourceParagraphIndex": 99
+      },
+      "teacherReviewRequired": true
+    },
+    "finishStory": {
+      "markedParagraph": "Moses warned Pharaoh that the [firstborn] sons of Egypt would [DIE]. God told his people to eat a special [MEAL] of lamb, bitter herbs, and bread without [yeast]. The Israelites spread lamb’s [BLOOD] on their doorframes. That night, [EVERY] firstborn son in Egypt was struck down. But when God's angel saw the blood on their [doorframes], it passed over their homes. After losing his own son, Pharaoh begged the Israelites to [LEAVE]. The Egyptians gave the departing Israelites [GOLD] and silver. Israel left Egypt in a [HURRY], without time to finish preparing bread.",
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "storyOrder": [
+      {
+        "order": 1,
+        "text": "Moses warned Pharaoh that the tenth plague would kill the firstborn sons of Egypt.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "order": 2,
+        "text": "God told the Israelites to eat a Passover meal of lamb, bitter herbs, and flatbread.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "order": 3,
+        "text": "The Israelites spread lamb’s blood on their doorframes as Moses instructed.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "order": 4,
+        "text": "The firstborn sons of Egypt died, while the marked Israelite homes were spared.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "order": 5,
+        "text": "After his son died, Pharaoh begged the Israelites to leave Egypt.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "order": 6,
+        "text": "The Egyptians gave the departing Israelites gold, silver, and clothing.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "order": 7,
+        "text": "The Israelites left Egypt so quickly that they could not finish preparing bread.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      }
+    ],
+    "sortStory": [
+      {
+        "factId": "tf-a01",
+        "statement": "Moses warned Pharaoh that Egypt’s firstborn sons would die.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "factId": "tf-a02",
+        "statement": "God told the Israelites to eat lamb, bitter plants, and bread without yeast.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "factId": "tf-a03",
+        "statement": "God told Israel to paint their doors blue.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-a04",
+        "statement": "The destroying angel entered the marked Israelite homes.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-04"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-a05",
+        "statement": "Pharaoh begged Israel to leave after his son died.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "factId": "tf-a06",
+        "statement": "The Egyptians refused to give the Israelites treasures.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-06"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-a07",
+        "statement": "The Egyptians gave the Israelites gold and silver.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "factId": "tf-source-07",
+        "statement": "The Israelites waited for their bread dough to rise before they left Egypt.",
+        "isTrue": false,
+        "origin": "source"
+      }
+    ],
+    "drawStory": [
+      {
+        "prompt": "Moses warned Pharaoh that the tenth plague would kill the firstborn sons of Egypt.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "prompt": "God told the Israelites to eat a Passover meal of lamb, bitter herbs, and flatbread.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "prompt": "The Israelites spread lamb’s blood on their doorframes as Moses instructed.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "prompt": "The firstborn sons of Egypt died, while the marked Israelite homes were spared.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "prompt": "After his son died, Pharaoh begged the Israelites to leave Egypt.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "prompt": "The Israelites left Egypt so quickly that they could not finish preparing bread.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      }
+    ],
+    "wordSearch": {
+      "words": [
+        "MOSES",
+        "PHARAOH",
+        "PASSOVER",
+        "FIRSTBORN",
+        "EGYPT",
+        "LAMB",
+        "BLOOD",
+        "GOLD",
+        "SILVER",
+        "HURRY",
+        "Yeast",
+        "Angel"
+      ],
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "verseCryptogram": {
+      "reference": "Deuteronomy 5:15",
+      "verse": "Remember that you were a slave in the land of Egypt, and that the LORD your God brought you out of there with a mighty hand",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "crossword": [
+      {
+        "answer": "MOSES",
+        "clue": "Who warned Pharaoh about the tenth plague?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "answer": "PHARAOH",
+        "clue": "Who was the stubborn king of Egypt?",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-05"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "PASSOVER",
+        "clue": "What was the special meal called?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "answer": "LAMB",
+        "clue": "Which animal supplied the blood for the doorframes?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "answer": "BLOOD",
+        "clue": "What marked the Israelites’ doorframes?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "answer": "EGYPT",
+        "clue": "From which country did the Israelites leave?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "answer": "FIRSTBORN",
+        "clue": "Which sons were threatened during the tenth plague?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "answer": "GOLD",
+        "clue": "What precious metal did the Egyptians give Israel?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "answer": "HURRY",
+        "clue": "How did the Israelites depart when Pharaoh said to go?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "answer": "BREAD",
+        "clue": "What food was still being prepared as Israel left?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      }
+    ],
+    "spiralVerse": {
+      "reference": "Deuteronomy 5:15",
+      "verse": "Remember that you were a slave in the land of Egypt, and that the LORD your God brought you out of there with a mighty hand",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "connectVerse": {
+      "reference": "Deuteronomy 5:15",
+      "verse": "Remember that you were a slave in the land of Egypt, and that the LORD your God brought you out of there with a mighty hand",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    }
+  },
+  "moduleReadiness": [
+    {
+      "moduleName": "Draw a Picture",
+      "moduleId": "draw-picture",
+      "size": "Small",
+      "preparedActivityKey": "drawPicture",
+      "status": "READY",
+      "contentValidation": "local content checks; generator/preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Candidate content prepared; needs actual Review Studio preflight, teacher review, and printable generator verification."
+    },
+    {
+      "moduleName": "Multiple Choice Question",
+      "moduleId": "multiple-choice",
+      "size": "Small",
+      "preparedActivityKey": "multipleChoice",
+      "status": "READY",
+      "contentValidation": "local content checks; generator/preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Candidate content prepared; needs actual Review Studio preflight, teacher review, and printable generator verification."
+    },
+    {
+      "moduleName": "True/False",
+      "moduleId": "true-false",
+      "size": "Small",
+      "preparedActivityKey": "trueFalse",
+      "status": "READY",
+      "contentValidation": "local content checks; generator/preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Candidate content prepared; needs actual Review Studio preflight, teacher review, and printable generator verification."
+    },
+    {
+      "moduleName": "First Letter Challenge",
+      "moduleId": "first-letters",
+      "size": "Small",
+      "preparedActivityKey": "firstLetters",
+      "status": "ADAPTATION NEEDED",
+      "contentValidation": "local content checks; generator/preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Original ESV excerpt retained; teacher must select/verify BSB and rerun text/print checks."
+    },
+    {
+      "moduleName": "Odd Words",
+      "moduleId": "odd-words",
+      "size": "Small",
+      "preparedActivityKey": "oddWords",
+      "status": "READY",
+      "contentValidation": "local content checks; generator/preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Candidate content prepared; needs actual Review Studio preflight, teacher review, and printable generator verification."
+    },
+    {
+      "moduleName": "Unscramble the Words",
+      "moduleId": "unscramble-words",
+      "size": "Small",
+      "preparedActivityKey": "unscrambleWords",
+      "status": "READY",
+      "contentValidation": "local content checks; generator/preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Candidate content prepared; needs actual Review Studio preflight, teacher review, and printable generator verification."
+    },
+    {
+      "moduleName": "Checkboxes",
+      "moduleId": "checkboxes",
+      "size": "Small",
+      "preparedActivityKey": "checkboxes",
+      "status": "READY",
+      "contentValidation": "local content checks; generator/preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Candidate content prepared; needs actual Review Studio preflight, teacher review, and printable generator verification."
+    },
+    {
+      "moduleName": "Who Am I?",
+      "moduleId": "who-am-i",
+      "size": "Small",
+      "preparedActivityKey": "whoAmI",
+      "status": "READY",
+      "contentValidation": "local content checks; generator/preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Candidate content prepared; needs actual Review Studio preflight, teacher review, and printable generator verification."
+    },
+    {
+      "moduleName": "Match Words",
+      "moduleId": "match-words",
+      "size": "Small",
+      "preparedActivityKey": "matchWords",
+      "status": "READY",
+      "contentValidation": "local content checks; generator/preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Candidate content prepared; needs actual Review Studio preflight, teacher review, and printable generator verification."
+    },
+    {
+      "moduleName": "Finish the Verse",
+      "moduleId": "finish-verse",
+      "size": "Medium",
+      "preparedActivityKey": "finishVerse",
+      "status": "ADAPTATION NEEDED",
+      "contentValidation": "local content checks; generator/preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Original ESV excerpt retained; teacher must select/verify BSB and rerun text/print checks."
+    },
+    {
+      "moduleName": "Unscramble the Verse",
+      "moduleId": "unscramble-verse",
+      "size": "Medium",
+      "preparedActivityKey": "unscrambleVerse",
+      "status": "ADAPTATION NEEDED",
+      "contentValidation": "local content checks; generator/preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Original ESV excerpt retained; teacher must select/verify BSB and rerun text/print checks."
+    },
+    {
+      "moduleName": "Circle the Mistakes",
+      "moduleId": "circle-mistakes",
+      "size": "Medium",
+      "preparedActivityKey": "circleMistakes",
+      "status": "READY",
+      "contentValidation": "local content checks; generator/preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Candidate content prepared; needs actual Review Studio preflight, teacher review, and printable generator verification."
+    },
+    {
+      "moduleName": "Word Search",
+      "moduleId": "medium-word-search",
+      "size": "Medium",
+      "preparedActivityKey": "mediumWordSearch",
+      "status": "READY",
+      "contentValidation": "local content checks; generator/preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Candidate content prepared; needs actual Review Studio preflight, teacher review, and printable generator verification."
+    },
+    {
+      "moduleName": "True/False Maze",
+      "moduleId": "true-false-maze",
+      "size": "Medium",
+      "preparedActivityKey": "trueFalseMaze",
+      "status": "READY",
+      "contentValidation": "local content checks; generator/preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Candidate content prepared; needs actual Review Studio preflight, teacher review, and printable generator verification."
+    },
+    {
+      "moduleName": "Solve the Code",
+      "moduleId": "big-idea-cryptogram",
+      "size": "Medium",
+      "preparedActivityKey": "bigIdeaCryptogram",
+      "status": "READY",
+      "contentValidation": "local content checks; generator/preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Candidate content prepared; needs actual Review Studio preflight, teacher review, and printable generator verification."
+    },
+    {
+      "moduleName": "Upside-Down Verse",
+      "moduleId": "upside-down-verse",
+      "size": "Medium",
+      "preparedActivityKey": "upsideDownVerse",
+      "status": "ADAPTATION NEEDED",
+      "contentValidation": "local content checks; generator/preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Original ESV excerpt retained; teacher must select/verify BSB and rerun text/print checks."
+    },
+    {
+      "moduleName": "Connect the Big Idea",
+      "moduleId": "connect-big-idea",
+      "size": "Medium",
+      "preparedActivityKey": "connectBigIdea",
+      "status": "READY",
+      "contentValidation": "local content checks; generator/preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Candidate content prepared; needs actual Review Studio preflight, teacher review, and printable generator verification."
+    },
+    {
+      "moduleName": "Pixel Picture",
+      "moduleId": "pixel-picture",
+      "size": "Medium",
+      "preparedActivityKey": "pixelPicture",
+      "status": "READY",
+      "contentValidation": "local content checks; generator/preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Candidate content prepared; needs actual Review Studio preflight, teacher review, and printable generator verification."
+    },
+    {
+      "moduleName": "Finish the Story",
+      "moduleId": "finish-story",
+      "size": "Large",
+      "preparedActivityKey": "finishStory",
+      "status": "READY",
+      "contentValidation": "local content checks; generator/preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Candidate content prepared; needs actual Review Studio preflight, teacher review, and printable generator verification."
+    },
+    {
+      "moduleName": "Story Order",
+      "moduleId": "story-order",
+      "size": "Large",
+      "preparedActivityKey": "storyOrder",
+      "status": "READY",
+      "contentValidation": "local content checks; generator/preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Candidate content prepared; needs actual Review Studio preflight, teacher review, and printable generator verification."
+    },
+    {
+      "moduleName": "Sort the Story",
+      "moduleId": "sort-story",
+      "size": "Large",
+      "preparedActivityKey": "sortStory",
+      "status": "READY",
+      "contentValidation": "local content checks; generator/preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Candidate content prepared; needs actual Review Studio preflight, teacher review, and printable generator verification."
+    },
+    {
+      "moduleName": "Draw the Story",
+      "moduleId": "draw-story",
+      "size": "Large",
+      "preparedActivityKey": "drawStory",
+      "status": "READY",
+      "contentValidation": "local content checks; generator/preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Candidate content prepared; needs actual Review Studio preflight, teacher review, and printable generator verification."
+    },
+    {
+      "moduleName": "Word Search",
+      "moduleId": "word-search",
+      "size": "Large",
+      "preparedActivityKey": "wordSearch",
+      "status": "READY",
+      "contentValidation": "local content checks; generator/preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Candidate content prepared; needs actual Review Studio preflight, teacher review, and printable generator verification."
+    },
+    {
+      "moduleName": "Verse Cryptogram",
+      "moduleId": "verse-cryptogram",
+      "size": "Large",
+      "preparedActivityKey": "verseCryptogram",
+      "status": "ADAPTATION NEEDED",
+      "contentValidation": "local content checks; generator/preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Original ESV excerpt retained; teacher must select/verify BSB and rerun text/print checks."
+    },
+    {
+      "moduleName": "Crossword",
+      "moduleId": "crossword",
+      "size": "Large",
+      "preparedActivityKey": "crossword",
+      "status": "READY",
+      "contentValidation": "local content checks; generator/preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Candidate content prepared; needs actual Review Studio preflight, teacher review, and printable generator verification."
+    },
+    {
+      "moduleName": "Spiral Verse",
+      "moduleId": "spiral-verse",
+      "size": "Large",
+      "preparedActivityKey": "spiralVerse",
+      "status": "ADAPTATION NEEDED",
+      "contentValidation": "local content checks; generator/preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Original ESV excerpt retained; teacher must select/verify BSB and rerun text/print checks."
+    },
+    {
+      "moduleName": "Connect the Verse",
+      "moduleId": "connect-verse",
+      "size": "Large",
+      "preparedActivityKey": "connectVerse",
+      "status": "ADAPTATION NEEDED",
+      "contentValidation": "local content checks; generator/preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Original ESV excerpt retained; teacher must select/verify BSB and rerun text/print checks."
+    }
+  ],
+  "reviewFlags": [
+    {
+      "id": "rf-01",
+      "priority": "high",
+      "type": "scripture-text",
+      "text": "Original lesson quotes Deuteronomy 5:15a in ESV with a trailing ellipsis. Verse-based draft activities deliberately retain ESV source wording, not verified BSB; teacher must select and verify the exact canonical BSB passage and revise all linked verse fields in Review Studio.",
+      "affectedModules": [
+        "first-letters",
+        "finish-verse",
+        "unscramble-verse",
+        "upside-down-verse",
+        "verse-cryptogram",
+        "spiral-verse",
+        "connect-verse"
+      ]
+    },
+    {
+      "id": "rf-02",
+      "priority": "high",
+      "type": "teacher-approval",
+      "text": "Review eight adapted multiple-choice questions and the sixteen newly authored incorrect answer choices. Source review questions and answers remain separately preserved.",
+      "affectedModules": [
+        "multiple-choice"
+      ]
+    },
+    {
+      "id": "rf-03",
+      "priority": "high",
+      "type": "teacher-approval",
+      "text": "Review suggested false facts and Sort the Story choices. All True/False prepared fact IDs must remain distinct and match the canonical statement and truth exactly.",
+      "affectedModules": [
+        "true-false",
+        "true-false-maze",
+        "sort-story"
+      ]
+    },
+    {
+      "id": "rf-04",
+      "priority": "medium",
+      "type": "teacher-approval",
+      "text": "Review new word-bank distractors in Odd Words and Checkboxes for suitability and unintentional story relevance.",
+      "affectedModules": [
+        "odd-words",
+        "checkboxes"
+      ]
+    },
+    {
+      "id": "rf-05",
+      "priority": "medium",
+      "type": "teacher-approval",
+      "text": "Review newly authored Circle the Mistakes paragraph, its five deliberate errors, and their corrections.",
+      "affectedModules": [
+        "circle-mistakes"
+      ]
+    },
+    {
+      "id": "rf-06",
+      "priority": "medium",
+      "type": "teacher-approval",
+      "text": "Review adapted Finish the Story, chronological event wording, and drawing captions; the original seven source Story Notes are preserved separately.",
+      "affectedModules": [
+        "finish-story",
+        "story-order",
+        "draw-story",
+        "draw-picture"
+      ]
+    },
+    {
+      "id": "rf-07",
+      "priority": "medium",
+      "type": "teacher-approval",
+      "text": "Review author-authored crossword and word-search answer sets for clarity and real puzzle-engine solvability; live generation has not been tested.",
+      "affectedModules": [
+        "crossword",
+        "word-search",
+        "medium-word-search"
+      ]
+    },
+    {
+      "id": "rf-08",
+      "priority": "high",
+      "type": "content-sensitivity",
+      "text": "Original curriculum discusses death of firstborn sons, divine judgment, the blood of a lamb, and Jesus’ death for sins. Teacher should review age appropriateness and theological presentation.",
+      "affectedModules": [
+        "multiple-choice",
+        "true-false",
+        "true-false-maze",
+        "circle-mistakes",
+        "finish-story",
+        "story-order",
+        "sort-story",
+        "draw-story",
+        "who-am-i"
+      ]
+    },
+    {
+      "id": "rf-09",
+      "priority": "medium",
+      "type": "teacher-approval",
+      "text": "Confirm the Important Idea “The Passover points us to Jesus.” and the suggested longer Pixel Picture phrase before use.",
+      "affectedModules": [
+        "big-idea-cryptogram",
+        "connect-big-idea",
+        "pixel-picture"
+      ]
+    },
+    {
+      "id": "rf-10",
+      "priority": "high",
+      "type": "validation",
+      "text": "Run official candidate schema and semantic validation, full Review Studio 27-activity preflight, all three numbered presets, actual puzzle generation and measured print-fit. None of these live checks has been run in this conversion.",
+      "affectedModules": [
+        "draw-picture",
+        "multiple-choice",
+        "true-false",
+        "first-letters",
+        "odd-words",
+        "unscramble-words",
+        "checkboxes",
+        "who-am-i",
+        "match-words",
+        "finish-verse",
+        "unscramble-verse",
+        "circle-mistakes",
+        "medium-word-search",
+        "true-false-maze",
+        "big-idea-cryptogram",
+        "upside-down-verse",
+        "connect-big-idea",
+        "pixel-picture",
+        "finish-story",
+        "story-order",
+        "sort-story",
+        "draw-story",
+        "word-search",
+        "verse-cryptogram",
+        "crossword",
+        "spiral-verse",
+        "connect-verse"
+      ]
+    },
+    {
+      "id": "rf-11",
+      "priority": "low",
+      "type": "source-inventory",
+      "text": "Only the 16-page lesson ODT was provided. No separate slide deck or original story chain/true-false doors resource sheets were supplied; no such materials have been fabricated.",
+      "affectedModules": [
+        "draw-picture",
+        "story-order",
+        "draw-story"
+      ]
+    }
+  ],
+  "publication": {
+    "status": "approved",
+    "approved": true,
+    "notes": "Unapproved conversion from the supplied OT30 ODT. Source text and ESV memory verse preserved; teacher must verify BSB, review suggestions and sensitivities, run preflight and separately confirm Scripture rights before publication.",
+    "teacherSignoff": {
+      "reviewer": "Andrew Doane",
+      "date": "2026-11-06",
+      "notes": "Approved with verified BSB verse through Curriculum Review Studio"
+    },
+    "scriptureRights": {
+      "status": "cleared",
+      "basis": "Berean Standard Bible (BSB), dedicated to the public domain on April 30, 2023. Official terms: https://berean.bible/terms.htm. Scripture text confirmed against https://bereanbible.com/bsb.txt.",
+      "reviewedBy": "Andrew Doane",
+      "reviewedOn": "2026-11-06"
+    },
+    "resolvedReviewFlagIds": [
+      "rf-02",
+      "rf-03",
+      "rf-04",
+      "rf-05",
+      "rf-06",
+      "rf-07",
+      "rf-09"
+    ]
+  },
+  "validation": {
+    "basis": "Original conversion tests predate teacher-approved BSB; revalidate actual engines and content after export.",
+    "allTextChecksPassed": false,
+    "actualGeneratorTested": false,
+    "jsonParseTested": true,
+    "checks": [
+      {
+        "check": "ODT source file opened and paragraphs extracted",
+        "passed": true,
+        "detail": "374 ODT text paragraphs in a 16-page source"
+      },
+      {
+        "check": "All seven exact source Story Notes and emphasized words",
+        "passed": true,
+        "detail": "DIE, MEAL, BLOOD, EVERY, LEAVE, GOLD, HURRY"
+      },
+      {
+        "check": "Source questions and answers indexed",
+        "passed": true,
+        "detail": "43 original question-answer records, including ten review questions"
+      },
+      {
+        "check": "Original True/False review statements indexed",
+        "passed": true,
+        "detail": "10 original statements preserved in facts[] with original truth and correction notes"
+      },
+      {
+        "check": "All 27 activity keys and module readiness records present",
+        "passed": true,
+        "detail": "27 prepared keys; 27 readiness entries"
+      },
+      {
+        "check": "Candidate local activity length, count and cross-reference checks",
+        "passed": true,
+        "detail": "Local Python checks only; not official schema/semantic validation or generator preflight"
+      },
+      {
+        "check": "True/False, Maze, Sort facts unique and exactly linked",
+        "passed": true,
+        "detail": "10 unique fact IDs"
+      },
+      {
+        "check": "Unmarking verse blanks reconstructs original ESV source text",
+        "passed": true,
+        "detail": "Teacher BSB excerpt selection is still pending"
+      },
+      {
+        "check": "Official candidate schema and semantic validation",
+        "passed": false,
+        "detail": "NOT RUN: current repository checkout / validator unavailable in this runtime"
+      },
+      {
+        "check": "Actual Review Studio 27-activity and three-preset preflight",
+        "passed": false,
+        "detail": "NOT RUN"
+      },
+      {
+        "check": "Actual crossword and word-search puzzle solvers and PDF layout",
+        "passed": false,
+        "detail": "NOT RUN"
+      },
+      {
+        "check": "Teacher BSB verification and rights approval",
+        "passed": false,
+        "detail": "PENDING TEACHER APPROVAL; source excerpt is ESV"
+      }
+    ]
+  }
+}
