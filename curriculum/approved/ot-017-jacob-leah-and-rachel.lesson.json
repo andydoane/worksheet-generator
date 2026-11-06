@@ -1,0 +1,3192 @@
+{
+  "schemaVersion": 1,
+  "schemaStatus": "draft-source-preserving; pending teacher and generator review",
+  "id": "ot-017-jacob-leah-and-rachel",
+  "curriculum": {
+    "series": "Old Testament",
+    "lessonNumber": 17
+  },
+  "lessonDetails": {
+    "title": "Jacob, Leah, and Rachel",
+    "scripturePassages": [
+      "Genesis 29"
+    ],
+    "scriptureDisplay": "Genesis 29",
+    "bigIdeas": [
+      {
+        "text": "sin hurts others.",
+        "origin": "source",
+        "source": {
+          "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+          "section": "Important Idea",
+          "page": 6,
+          "sourceParagraphIndex": 73,
+          "details": "Page-6 blue Important Idea graphic reads “sin hurts others.” The source ODT also contains a concatenated hidden/layout text run (“sin hurtsothers.”)."
+        }
+      },
+      {
+        "text": "Sin angers God. That's why we need Jesus.",
+        "origin": "source",
+        "source": {
+          "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+          "section": "Important Idea",
+          "page": 6,
+          "sourceParagraphIndex": 91,
+          "details": "Page-6 green Important Idea graphic reads “Sin angers God. That's why we need Jesus.”; original spans ODT text paragraphs 181–183."
+        }
+      }
+    ],
+    "memoryVerse": {
+      "reference": "Matthew 7:12",
+      "translation": "BSB",
+      "text": "In everything, then, do to others as you would have them do to you.",
+      "isExcerpt": true,
+      "hasEllipses": false,
+      "requiresTextReview": false,
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Memory Verse Activity",
+        "page": 8,
+        "sourceParagraphIndex": 114
+      },
+      "alsoVerifiedAt": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Verse and Motions",
+        "page": 8,
+        "sourceParagraphIndex": 120
+      },
+      "teacherReviewRequired": true,
+      "originalTranslation": "ESV",
+      "bsbSource": {
+        "reference": "Matthew 7:12",
+        "sourceUrl": "https://bereanbible.com/bsb.txt",
+        "publicDomainTerms": "https://berean.bible/terms.htm",
+        "startWord": 0,
+        "endWord": 13
+      }
+    }
+  },
+  "sourceFiles": [
+    {
+      "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+      "format": "odt",
+      "role": "primary teaching source",
+      "note": "14 printed pages, seven original Story Note boxes. The review activity incorrectly mentions eight cards. No separate presentation or activity resources supplied. Source memory verse is Matthew 7:12a, ESV, not teacher-verified BSB."
+    }
+  ],
+  "storyNotes": [
+    {
+      "id": "sn-01",
+      "order": 1,
+      "originalText": "Jacob stopped at a WELL. He met Rachel, the daughter of his uncle Laban.",
+      "cleanText": "Jacob stopped at a well. He met Rachel, the daughter of his uncle Laban.",
+      "emphasizedWords": [
+        "WELL"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "STORY NOTE",
+        "page": 1,
+        "sourceParagraphIndex": 19
+      }
+    },
+    {
+      "id": "sn-02",
+      "order": 2,
+      "originalText": "Laban brought Jacob to his HOME. Jacob stayed with him for a month.",
+      "cleanText": "Laban brought Jacob to his home. Jacob stayed with him for a month.",
+      "emphasizedWords": [
+        "HOME"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "STORY NOTE",
+        "page": 2,
+        "sourceParagraphIndex": 27
+      }
+    },
+    {
+      "id": "sn-03",
+      "order": 3,
+      "originalText": "Laban agreed to let Jacob MARRY his daughter Rachel in exchange for seven years of work.",
+      "cleanText": "Laban agreed to let Jacob marry his daughter Rachel in exchange for seven years of work.",
+      "emphasizedWords": [
+        "MARRY"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "STORY NOTE",
+        "page": 2,
+        "sourceParagraphIndex": 35
+      }
+    },
+    {
+      "id": "sn-04",
+      "order": 4,
+      "originalText": "Jacob worked for Laban for seven years. Because he LOVED Rachel, it seemed like just a few days.",
+      "cleanText": "Jacob worked for Laban for seven years. Because he loved Rachel, it seemed like just a few days.",
+      "emphasizedWords": [
+        "LOVED"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "STORY NOTE",
+        "page": 3,
+        "sourceParagraphIndex": 40
+      }
+    },
+    {
+      "id": "sn-05",
+      "order": 5,
+      "originalText": "After his wedding feast, Jacob realized he’d been TRICKED into marrying Rachel’s sister Leah.",
+      "cleanText": "After his wedding feast, Jacob realized he’d been tricked into marrying Rachel’s sister Leah.",
+      "emphasizedWords": [
+        "TRICKED"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "STORY NOTE",
+        "page": 4,
+        "sourceParagraphIndex": 48
+      }
+    },
+    {
+      "id": "sn-06",
+      "order": 6,
+      "originalText": "Laban said, “You can marry Rachel, too. But you must also WORK for me for seven more years.”",
+      "cleanText": "Laban said, “You can marry Rachel, too. But you must also work for me for seven more years.”",
+      "emphasizedWords": [
+        "WORK"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "STORY NOTE",
+        "page": 5,
+        "sourceParagraphIndex": 56
+      }
+    },
+    {
+      "id": "sn-07",
+      "order": 7,
+      "originalText": "Jacob married Rachel and loved her MORE than Leah. He worked for Laban for seven more years.",
+      "cleanText": "Jacob married Rachel and loved her more than Leah. He worked for Laban for seven more years.",
+      "emphasizedWords": [
+        "MORE"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "STORY NOTE",
+        "page": 5,
+        "sourceParagraphIndex": 64
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q-01",
+      "question": "Have you ever been tricked or pranked?",
+      "answer": "",
+      "kind": "discussion",
+      "origin": "source",
+      "scope": "introduction",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 3
+      },
+      "standaloneReady": false,
+      "notes": "Open or rhetorical prompt; no parenthetical answer supplied in this source."
+    },
+    {
+      "id": "q-02",
+      "question": "Or have you ever tricked or pranked someone?",
+      "answer": "Allow a few children to respond.",
+      "kind": "discussion",
+      "origin": "source",
+      "scope": "introduction",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 5
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-03",
+      "question": "What day is it?",
+      "answer": "April Fools’ Day.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "introduction",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 6
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-04",
+      "question": "What unkind trick did Jacob play and why did he do it?",
+      "answer": "He pretended to be Esau to fool his father so he could steal his brother’s blessing.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "introduction",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 9
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-05",
+      "question": "Because Esau was so angry, what did Jacob have to do?",
+      "answer": "Run away to live with his uncle.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "introduction",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 12
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-06",
+      "question": "Whose house was he trying to find?",
+      "answer": "His uncle Laban's.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 20
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-07",
+      "question": "What was Laban’s daughter’s name?",
+      "answer": "Rachel.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 22
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-08",
+      "question": "What two things did Jacob do to show how happy he was?",
+      "answer": "He kissed Rachel and started crying.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 23
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-09",
+      "question": "What did Laban do when he met Jacob?",
+      "answer": "He hugged and kissed him.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 29
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-10",
+      "question": "What do you think Jacob told his uncle about?",
+      "answer": "Running away from Esau; his dream where God made promises to him.",
+      "kind": "discussion",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 30
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-11",
+      "question": "How long did Jacob stay with Laban after arriving in town?",
+      "answer": "A month.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 31
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-12",
+      "question": "But what did Jacob say to Laban?",
+      "answer": "I'll work for you for seven years if I can marry your daughter, Rachel.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Story",
+        "page": 3,
+        "sourceParagraphIndex": 36
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-13",
+      "question": "How many years did he offer to work?",
+      "answer": "Seven.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Story",
+        "page": 3,
+        "sourceParagraphIndex": 37
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-14",
+      "question": "What was the name of Rachel's older sister?",
+      "answer": "Leah.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Story",
+        "page": 3,
+        "sourceParagraphIndex": 38
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-15",
+      "question": "What did Jacob say?",
+      "answer": "I'll work for seven years if I can marry Rachel.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Story",
+        "page": 3,
+        "sourceParagraphIndex": 41
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-16",
+      "question": "How many days do you think that is?",
+      "answer": "Have the kids shout out various guesses.",
+      "kind": "discussion",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Story",
+        "page": 3,
+        "sourceParagraphIndex": 43
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-17",
+      "question": "Why?",
+      "answer": "Because he loved Rachel so much.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Story",
+        "page": 3,
+        "sourceParagraphIndex": 45
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-18",
+      "question": "Who did he want to marry?",
+      "answer": "Rachel.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 50
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-19",
+      "question": "Who was it?",
+      "answer": "Rachel's sister, Leah.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 51
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-20",
+      "question": "How did Jacob not notice?",
+      "answer": "",
+      "kind": "discussion",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 52
+      },
+      "standaloneReady": false,
+      "notes": "Open or rhetorical prompt; no parenthetical answer supplied in this source."
+    },
+    {
+      "id": "q-21",
+      "question": "What was Laban’s answer?",
+      "answer": "It's our tradition to give away the older daughter to be married first.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Story",
+        "page": 5,
+        "sourceParagraphIndex": 57
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-22",
+      "question": "If he married Rachel, how many wives would he have?",
+      "answer": "Two.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Story",
+        "page": 5,
+        "sourceParagraphIndex": 61
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-23",
+      "question": "How many wives does the Bible tell us we're supposed to have?",
+      "answer": "One.",
+      "kind": "theological",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Story",
+        "page": 5,
+        "sourceParagraphIndex": 62
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-24",
+      "question": "What did Jacob decide to do?",
+      "answer": "Marry Rachel.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Story",
+        "page": 5,
+        "sourceParagraphIndex": 66
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-25",
+      "question": "What does the Bible say about Jacob's love for Rachel and Leah?",
+      "answer": "He loved Rachel more.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Story",
+        "page": 5,
+        "sourceParagraphIndex": 68
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-26",
+      "question": "How do you think Leah felt knowing Jacob loved Rachel more?",
+      "answer": "Jealous, angry, etc.",
+      "kind": "discussion",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Story",
+        "page": 5,
+        "sourceParagraphIndex": 69
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-27",
+      "question": "So how does the story of Jacob, Leah, and Rachel teach us, strengthen us, encourage us, or give us hope?",
+      "answer": "",
+      "kind": "discussion",
+      "origin": "source",
+      "scope": "application",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Story Application",
+        "page": 5,
+        "sourceParagraphIndex": 71
+      },
+      "standaloneReady": false,
+      "notes": "Open or rhetorical prompt; no parenthetical answer supplied in this source."
+    },
+    {
+      "id": "q-28",
+      "question": "How did Jacob's sinful trick hurt the people involved?",
+      "answer": "Esau was angry, Isaac felt hurt, Jacob had to run away from his family.",
+      "kind": "theological",
+      "origin": "source",
+      "scope": "application",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Story Application",
+        "page": 6,
+        "sourceParagraphIndex": 80
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-29",
+      "question": "How did Laban's sinful trick hurt the people involved?",
+      "answer": "Jacob's family became a jealous mess; Leah and Rachel fought, etc.",
+      "kind": "theological",
+      "origin": "source",
+      "scope": "application",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Story Application",
+        "page": 6,
+        "sourceParagraphIndex": 82
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-30",
+      "question": "When God sees the evil and sinful things people do, how does he feel?",
+      "answer": "Angry.",
+      "kind": "theological",
+      "origin": "source",
+      "scope": "application",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Story Application",
+        "page": 6,
+        "sourceParagraphIndex": 88
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-31",
+      "question": "To pay the price to rescue us from our sins, what did Jesus do?",
+      "answer": "Died on a cross.",
+      "kind": "theological",
+      "origin": "source",
+      "scope": "application",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Story Application",
+        "page": 7,
+        "sourceParagraphIndex": 101
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-32",
+      "question": "To show he was done paying for our sins, what happened to God's Son Jesus on the third day?",
+      "answer": "He rose from the dead.",
+      "kind": "theological",
+      "origin": "source",
+      "scope": "application",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Story Application",
+        "page": 7,
+        "sourceParagraphIndex": 103
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-33",
+      "question": "And though we've all sinned like Jacob and Laban, though we’ve hurt others and angered God, what does God promise to do if we believe the good news of Jesus?",
+      "answer": "Give us forever life in his good kingdom.",
+      "kind": "theological",
+      "origin": "source",
+      "scope": "application",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Story Application",
+        "page": 7,
+        "sourceParagraphIndex": 105
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-34",
+      "question": "What is he teaching us here?",
+      "answer": "To think about what we’d want done to us and do that to others.",
+      "kind": "theological",
+      "origin": "source",
+      "scope": "memory verse",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Memory Verse Activity",
+        "page": 8,
+        "sourceParagraphIndex": 116
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-35",
+      "question": "Would they want someone to trick them?",
+      "answer": "",
+      "kind": "discussion",
+      "origin": "source",
+      "scope": "memory verse",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Memory Verse Activity",
+        "page": 8,
+        "sourceParagraphIndex": 117
+      },
+      "standaloneReady": false,
+      "notes": "Open or rhetorical prompt; no parenthetical answer supplied in this source."
+    },
+    {
+      "id": "q-36",
+      "question": "What did Jacob learn from talking to the shepherds at the well?",
+      "answer": "He was near his Uncle Laban’s house",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Review Questions",
+        "page": 11,
+        "sourceParagraphIndex": 154
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-37",
+      "question": "Who came walking to the well while Jacob was talking?",
+      "answer": "Laban’s daughter, Rachel",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Review Questions",
+        "page": 11,
+        "sourceParagraphIndex": 155
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-38",
+      "question": "How long did Jacob live with his uncle?",
+      "answer": "A month",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Review Questions",
+        "page": 11,
+        "sourceParagraphIndex": 156
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-39",
+      "question": "When Laban said, “You shouldn’t work for free,” what did Jacob say?",
+      "answer": "I’ll work seven years if I can marry Rachel",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Review Questions",
+        "page": 11,
+        "sourceParagraphIndex": 157
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-40",
+      "question": "How did those seven years feel to Jacob? Why?",
+      "answer": "Like a few days because he loved her",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Review Questions",
+        "page": 11,
+        "sourceParagraphIndex": 158
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-41",
+      "question": "How did Laban trick Jacob?",
+      "answer": "He secretly gave his daughter Leah to be Jacob’s wife",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Review Questions",
+        "page": 11,
+        "sourceParagraphIndex": 159
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-42",
+      "question": "When Jacob asked, “Why did you trick me?”, what did Laban say?",
+      "answer": "It’s our custom for the older daughter to be married first",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Review Questions",
+        "page": 11,
+        "sourceParagraphIndex": 160
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-43",
+      "question": "After he married Leah, what deal did Jacob and Laban make?",
+      "answer": "Wait one week, marry Rachel, work for seven more years",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Review Questions",
+        "page": 11,
+        "sourceParagraphIndex": 161
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-44",
+      "question": "How did Jacob feel about his wives?",
+      "answer": "He loved Rachel more",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Review Questions",
+        "page": 11,
+        "sourceParagraphIndex": 162
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-45",
+      "question": "What is a marriage supposed to be?",
+      "answer": "One man and one woman",
+      "kind": "theological",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Review Questions",
+        "page": 11,
+        "sourceParagraphIndex": 163
+      },
+      "standaloneReady": true
+    }
+  ],
+  "facts": [
+    {
+      "id": "tf-01",
+      "statement": "Jacob met Rachel beside a well.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-02",
+      "statement": "Jacob first met Rachel on top of a mountain.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-03",
+      "statement": "Laban invited Jacob into his home.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-04",
+      "statement": "Jacob worked 70 years to marry Rachel.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-02"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-05",
+      "statement": "Jacob offered to work seven years to marry Rachel.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-06",
+      "statement": "Leah was Laban’s younger daughter.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-03",
+        "sn-05"
+      ],
+      "teacherReviewRequired": true,
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Story Scripture",
+        "page": 2,
+        "sourceParagraphIndex": 33
+      }
+    },
+    {
+      "id": "tf-07",
+      "statement": "Laban gave Leah to Jacob after the wedding feast.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-08",
+      "statement": "Jacob refused to work any more years for Laban.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-09",
+      "statement": "Jacob worked for seven years before his first wedding.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04",
+        "sn-05"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-10",
+      "statement": "Rachel was older than Leah.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-03",
+        "sn-05"
+      ],
+      "teacherReviewRequired": true,
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Story Scripture",
+        "page": 2,
+        "sourceParagraphIndex": 33
+      }
+    },
+    {
+      "id": "tf-11",
+      "statement": "Jacob loved Rachel, so seven years seemed like a few days.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-12",
+      "statement": "Jacob recognized Leah immediately at the wedding feast.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-13",
+      "statement": "Laban promised Rachel to Jacob for seven more years of work.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-14",
+      "statement": "Jacob married Rachel after Leah’s wedding week.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-15",
+      "statement": "Jacob loved Leah more than Rachel.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-16",
+      "statement": "Jacob met Rachel while she was tending sheep.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Story Scripture",
+        "page": 1,
+        "sourceParagraphIndex": 17
+      }
+    },
+    {
+      "id": "tf-17",
+      "statement": "Laban was Jacob’s uncle.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-02"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-18",
+      "statement": "Jacob worked for Laban for fourteen years altogether.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04",
+        "sn-07"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-19",
+      "statement": "Jacob was trying to find the home of Esau.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-20",
+      "statement": "Laban welcomed Jacob with a hug and a kiss.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-21",
+      "statement": "Laban gave Jacob Rachel as his first wife.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-05",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-22",
+      "statement": "Laban had two daughters named Leah and Rachel.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Story Scripture",
+        "page": 2,
+        "sourceParagraphIndex": 33
+      }
+    }
+  ],
+  "vocabulary": {
+    "related": [
+      "JACOB",
+      "RACHEL",
+      "LEAH",
+      "LABAN",
+      "SHEEP",
+      "WELL",
+      "STONE",
+      "HOME",
+      "UNCLE",
+      "SHEPHERD",
+      "FLOCK",
+      "MARRY",
+      "SEVEN YEARS",
+      "WEDDING",
+      "LOVE",
+      "TRICKED",
+      "VEIL",
+      "SISTER",
+      "WORK",
+      "FEAST",
+      "TWICE",
+      "JEALOUS",
+      "ESAU",
+      "ISAAC",
+      "JESUS",
+      "NEIGHBOR"
+    ],
+    "unrelated": [
+      "ROCKET",
+      "PENGUIN",
+      "BANANA",
+      "VOLCANO",
+      "CIRCUS",
+      "SATELLITE",
+      "DRAGON",
+      "NEPTUNE",
+      "SUBMARINE",
+      "ROBOT"
+    ],
+    "entries": [
+      {
+        "id": "v-01",
+        "term": "JACOB",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "id": "v-02",
+        "term": "RACHEL",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "id": "v-03",
+        "term": "LEAH",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "id": "v-04",
+        "term": "LABAN",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "id": "v-05",
+        "term": "SHEEP",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "id": "v-06",
+        "term": "WELL",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "id": "v-07",
+        "term": "STONE",
+        "origin": "adapted",
+        "source": {
+          "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+          "section": "Story Scripture",
+          "page": 1,
+          "sourceParagraphIndex": 17
+        }
+      },
+      {
+        "id": "v-08",
+        "term": "HOME",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "id": "v-09",
+        "term": "UNCLE",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "id": "v-10",
+        "term": "SHEPHERD",
+        "origin": "adapted",
+        "source": {
+          "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+          "section": "Story Scripture",
+          "page": 1,
+          "sourceParagraphIndex": 16
+        }
+      },
+      {
+        "id": "v-11",
+        "term": "FLOCK",
+        "origin": "adapted",
+        "source": {
+          "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+          "section": "Story Scripture",
+          "page": 1,
+          "sourceParagraphIndex": 16
+        }
+      },
+      {
+        "id": "v-12",
+        "term": "MARRY",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "id": "v-13",
+        "term": "SEVEN YEARS",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "id": "v-14",
+        "term": "WEDDING",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "id": "v-15",
+        "term": "LOVE",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "id": "v-16",
+        "term": "TRICKED",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "id": "v-17",
+        "term": "VEIL",
+        "origin": "adapted",
+        "source": {
+          "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+          "section": "Story",
+          "page": 4,
+          "sourceParagraphIndex": 53
+        }
+      },
+      {
+        "id": "v-18",
+        "term": "SISTER",
+        "origin": "adapted",
+        "source": {
+          "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+          "section": "Story",
+          "page": 3,
+          "sourceParagraphIndex": 38
+        }
+      },
+      {
+        "id": "v-19",
+        "term": "WORK",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "id": "v-20",
+        "term": "FEAST",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "id": "v-21",
+        "term": "TWICE",
+        "origin": "adapted",
+        "source": {
+          "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+          "section": "Story",
+          "page": 5,
+          "sourceParagraphIndex": 67
+        }
+      },
+      {
+        "id": "v-22",
+        "term": "JEALOUS",
+        "origin": "adapted",
+        "source": {
+          "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+          "section": "Story",
+          "page": 5,
+          "sourceParagraphIndex": 69
+        }
+      },
+      {
+        "id": "v-23",
+        "term": "ESAU",
+        "origin": "adapted",
+        "source": {
+          "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+          "section": "Introduction",
+          "page": 1,
+          "sourceParagraphIndex": 9
+        }
+      },
+      {
+        "id": "v-24",
+        "term": "ISAAC",
+        "origin": "adapted",
+        "source": {
+          "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+          "section": "Story Application",
+          "page": 6,
+          "sourceParagraphIndex": 80
+        }
+      },
+      {
+        "id": "v-25",
+        "term": "JESUS",
+        "origin": "adapted",
+        "source": {
+          "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+          "section": "Story Application",
+          "page": 7,
+          "sourceParagraphIndex": 101
+        }
+      },
+      {
+        "id": "v-26",
+        "term": "NEIGHBOR",
+        "origin": "adapted",
+        "source": {
+          "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+          "section": "Story Application",
+          "page": 6,
+          "sourceParagraphIndex": 78
+        }
+      }
+    ]
+  },
+  "characters": [
+    {
+      "id": "ch-01",
+      "name": "Jacob",
+      "origin": "source",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "clues": [
+        {
+          "text": "I worked for seven years because I wanted to marry Rachel.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-03",
+            "sn-04"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch-02",
+      "name": "Rachel",
+      "origin": "source",
+      "sourceIds": [
+        "sn-01",
+        "sn-03",
+        "sn-04",
+        "sn-07"
+      ],
+      "clues": [
+        {
+          "text": "I was the younger daughter of Laban, and Jacob met me near a well.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-01",
+            "sn-03"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch-03",
+      "name": "Leah",
+      "origin": "source",
+      "sourceIds": [
+        "sn-05",
+        "sn-07"
+      ],
+      "clues": [
+        {
+          "text": "I was Laban’s older daughter, and Jacob married me first.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-05"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch-04",
+      "name": "Laban",
+      "origin": "source",
+      "sourceIds": [
+        "sn-02",
+        "sn-03",
+        "sn-05",
+        "sn-06"
+      ],
+      "clues": [
+        {
+          "text": "I was Jacob’s uncle, and I tricked him into marrying Leah.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-02",
+            "sn-05"
+          ]
+        }
+      ]
+    }
+  ],
+  "matchingPairs": [
+    {
+      "id": "mp-01",
+      "left": "Jacob",
+      "right": "Worked seven years",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ]
+    },
+    {
+      "id": "mp-02",
+      "left": "Rachel",
+      "right": "Younger daughter",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ],
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Story Scripture",
+        "page": 2,
+        "sourceParagraphIndex": 33
+      }
+    },
+    {
+      "id": "mp-03",
+      "left": "Leah",
+      "right": "Older daughter",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ],
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Story Scripture",
+        "page": 2,
+        "sourceParagraphIndex": 33
+      }
+    },
+    {
+      "id": "mp-04",
+      "left": "Laban",
+      "right": "Jacob’s uncle",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ]
+    },
+    {
+      "id": "mp-05",
+      "left": "Well",
+      "right": "Meeting place",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    {
+      "id": "mp-06",
+      "left": "Sheep",
+      "right": "Laban’s flocks",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 32
+      }
+    }
+  ],
+  "drawingPrompts": [
+    {
+      "id": "dp-01",
+      "prompt": "Jacob meeting Rachel beside a well with sheep nearby",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    {
+      "id": "dp-02",
+      "prompt": "Laban welcoming Jacob into his home",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ]
+    },
+    {
+      "id": "dp-03",
+      "prompt": "Jacob caring for Laban’s sheep for seven years",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ]
+    },
+    {
+      "id": "dp-04",
+      "prompt": "Laban holding a wedding feast",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ]
+    },
+    {
+      "id": "dp-05",
+      "prompt": "Jacob discovering that Leah was his new wife",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ]
+    },
+    {
+      "id": "dp-06",
+      "prompt": "Laban offering Jacob a second seven-year work agreement",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ]
+    },
+    {
+      "id": "dp-07",
+      "prompt": "Jacob and Rachel together after their marriage",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ]
+    }
+  ],
+  "keyPhrases": [
+    {
+      "id": "kp-01",
+      "text": "sin hurts others.",
+      "origin": "source",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Important Idea",
+        "page": 6,
+        "sourceParagraphIndex": 73,
+        "details": "Page-6 blue Important Idea graphic reads “sin hurts others.” The source ODT also contains a concatenated hidden/layout text run (“sin hurtsothers.”)."
+      }
+    },
+    {
+      "id": "kp-02",
+      "text": "Sin angers God. That's why we need Jesus.",
+      "origin": "source",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Important Idea",
+        "page": 6,
+        "sourceParagraphIndex": 91,
+        "details": "Page-6 green Important Idea graphic reads “Sin angers God. That's why we need Jesus.”; original spans ODT text paragraphs 181–183."
+      }
+    },
+    {
+      "id": "kp-03",
+      "text": "Jacob worked seven years because he loved Rachel.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ]
+    },
+    {
+      "id": "kp-04",
+      "text": "Treat others the way you want to be treated.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Memory Verse Activity",
+        "page": 8,
+        "sourceParagraphIndex": 116
+      },
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "kp-review-1",
+      "text": "Sin hurts others and angers God.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "theologicalApplications": [
+    {
+      "id": "app-01",
+      "text": "sin hurts others.",
+      "origin": "source",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Important Idea",
+        "page": 6,
+        "sourceParagraphIndex": 73,
+        "details": "Page-6 blue Important Idea graphic reads “sin hurts others.” The source ODT also contains a concatenated hidden/layout text run (“sin hurtsothers.”)."
+      }
+    },
+    {
+      "id": "app-02",
+      "text": "Sin angers God. That's why we need Jesus.",
+      "origin": "source",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Important Idea",
+        "page": 6,
+        "sourceParagraphIndex": 91,
+        "details": "Page-6 green Important Idea graphic reads “Sin angers God. That's why we need Jesus.”; original spans ODT text paragraphs 181–183."
+      }
+    },
+    {
+      "id": "app-03",
+      "text": "The lesson interprets Jacob’s and Laban’s deceptions as sins that hurt other people.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Story Application",
+        "page": 6,
+        "sourceParagraphIndex": 82
+      },
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "app-04",
+      "text": "The lesson explains that Jesus died and rose again to save sinners.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Story Application",
+        "page": 7,
+        "sourceParagraphIndex": 101
+      },
+      "teacherReviewRequired": true
+    }
+  ],
+  "preparedActivities": {
+    "drawPicture": {
+      "prompt": "Jacob meeting Rachel beside a well with sheep nearby",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    "multipleChoice": [
+      {
+        "id": "mc-01",
+        "question": "Who did Jacob meet at the well?",
+        "correctAnswer": "Rachel",
+        "choices": [
+          {
+            "text": "Rachel",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Leah",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Rebekah",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "sourceQuestionIds": [
+          "q-37"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-02",
+        "question": "How long did Jacob stay at Laban’s home at first?",
+        "correctAnswer": "One month",
+        "choices": [
+          {
+            "text": "One month",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "One week",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "One year",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "sourceQuestionIds": [
+          "q-38"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-03",
+        "question": "What did Jacob offer to do to marry Rachel?",
+        "correctAnswer": "Work seven years",
+        "choices": [
+          {
+            "text": "Work seven years",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Pay with silver",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Build a house",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "sourceQuestionIds": [
+          "q-39"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-04",
+        "question": "Why did seven years seem like a few days to Jacob?",
+        "correctAnswer": "He loved Rachel",
+        "choices": [
+          {
+            "text": "He loved Rachel",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "He enjoyed being a shepherd",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "He was on vacation",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ],
+        "sourceQuestionIds": [
+          "q-40"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-05",
+        "question": "Who did Jacob marry at his first wedding?",
+        "correctAnswer": "Leah",
+        "choices": [
+          {
+            "text": "Leah",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Rachel",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Rebekah",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ],
+        "sourceQuestionIds": [
+          "q-41"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-06",
+        "question": "What reason did Laban give for tricking Jacob?",
+        "correctAnswer": "Leah was the older sister",
+        "choices": [
+          {
+            "text": "Leah was the older sister",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "He thought it would be funny",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Rachel didn't like Jacob",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05",
+          "sn-06"
+        ],
+        "sourceQuestionIds": [
+          "q-42"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-07",
+        "question": "What did Laban ask Jacob to do to marry Rachel?",
+        "correctAnswer": "Work seven more years",
+        "choices": [
+          {
+            "text": "Work seven more years",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Bring ten sheep",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Give a bag of gold",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ],
+        "sourceQuestionIds": [
+          "q-43"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-08",
+        "question": "Whom did Jacob love more?",
+        "correctAnswer": "Rachel",
+        "choices": [
+          {
+            "text": "Rachel",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Leah",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "His money",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ],
+        "sourceQuestionIds": [
+          "q-44"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-09",
+        "question": "What did Jacob find while looking for Laban?",
+        "correctAnswer": "A well",
+        "choices": [
+          {
+            "text": "A well",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "A castle",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "A ship",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "sourceQuestionIds": [
+          "q-36"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-10",
+        "question": "What is God's rule for marriage?",
+        "correctAnswer": "One man and one woman",
+        "choices": [
+          {
+            "text": "One man and one woman",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "There are no rules",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "One man and many wives",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ],
+        "sourceQuestionIds": [
+          "q-45"
+        ],
+        "teacherReviewRequired": true
+      }
+    ],
+    "trueFalse": {
+      "factId": "tf-09",
+      "statement": "Jacob worked for seven years before his first wedding.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04",
+        "sn-05"
+      ],
+      "teacherReviewRequired": false
+    },
+    "firstLetters": {
+      "reference": "Matthew 7:12",
+      "verse": "In everything, then, do to others as you would have them do to you.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "oddWords": {
+      "related": [
+        "JACOB",
+        "RACHEL",
+        "LEAH",
+        "LABAN",
+        "SHEEP"
+      ],
+      "unrelated": [
+        "Haman",
+        "rock",
+        "princess",
+        "Solomon",
+        "crown"
+      ],
+      "unrelatedOrigin": "suggested",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "unscrambleWords": {
+      "answers": [
+        "SEVEN YEARS",
+        "RACHEL"
+      ],
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-04",
+        "sn-01"
+      ],
+      "teacherReviewRequired": true
+    },
+    "checkboxes": {
+      "correct": [
+        "WEDDING",
+        "SISTER",
+        "SHEPHERD",
+        "SEVEN YEARS",
+        "WELL"
+      ],
+      "incorrect": [
+        "Rome",
+        "horses",
+        "Satan",
+        "Paul",
+        "cup"
+      ],
+      "incorrectOrigin": "suggested",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "whoAmI": {
+      "clue": "I was Jacob's uncle. I had two daughters. I tricked Jacob into marrying my oldest daughter.",
+      "answer": "Laban",
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-02",
+        "sn-05"
+      ],
+      "teacherReviewRequired": true
+    },
+    "matchWords": [
+      {
+        "left": "Jacob",
+        "right": "Worked",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-04"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "left": "Rachel",
+        "right": "Youngest",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "source": {
+          "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+          "section": "Story Scripture",
+          "page": 2,
+          "sourceParagraphIndex": 33
+        },
+        "teacherReviewRequired": true
+      },
+      {
+        "left": "Leah",
+        "right": "Oldest",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-05"
+        ],
+        "source": {
+          "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+          "section": "Story Scripture",
+          "page": 2,
+          "sourceParagraphIndex": 33
+        },
+        "teacherReviewRequired": true
+      },
+      {
+        "left": "Laban",
+        "right": "Uncle",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "left": "Work Time",
+        "right": "Seven Years",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "left": "Jacob's job",
+        "right": "Shepherd",
+        "origin": "suggested",
+        "source": {
+          "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+          "section": "Story",
+          "page": 2,
+          "sourceParagraphIndex": 32
+        },
+        "teacherReviewRequired": true
+      }
+    ],
+    "finishVerse": {
+      "reference": "Matthew 7:12",
+      "sourceVerse": "In everything, then, do to others as you would have them do to you.",
+      "markedVerse": "[In] everything, then, [do] to [others] as [you] would have them [do] to [you].",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "unscrambleVerse": {
+      "reference": "Matthew 7:12",
+      "sourceVerse": "In everything, then, do to others as you would have them do to you.",
+      "markedVerse": "[In] everything, then, [do] to [others] as [you] would have them [do] to [you].",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "circleMistakes": {
+      "paragraph": "Jacob met Rachel by a river. Laban had two daughters: Sarah and Mary. Jacob offered to work two years so he could marry Rachel. At the wedding feast, Laban secretly gave Jacob Rachel as his first wife. Afterward Jacob agreed to work one more year so he could marry Rachel.",
+      "mistakeCount": 5,
+      "mistakes": [
+        {
+          "incorrect": "a river",
+          "correction": "a well",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "Sarah and Mary",
+          "correction": "Leah and Rachel",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "two years",
+          "correction": "seven years",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "Rachel as his first wife",
+          "correction": "Leah as his first wife",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "one more year",
+          "correction": "seven more years",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-03",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "mediumWordSearch": {
+      "words": [
+        "JACOB",
+        "LEAH",
+        "LABAN",
+        "RACHEL",
+        "SHEEP",
+        "WELL"
+      ],
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-05"
+      ]
+    },
+    "trueFalseMaze": {
+      "factId": "tf-10",
+      "statement": "Rachel was older than Leah.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-03",
+        "sn-05"
+      ],
+      "teacherReviewRequired": true
+    },
+    "bigIdeaCryptogram": {
+      "phrase": "Sin hurts others and angers God.",
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "sourceIds": []
+    },
+    "upsideDownVerse": {
+      "reference": "Matthew 7:12",
+      "verse": "In everything, then, do to others as you would have them do to you.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "connectBigIdea": {
+      "phrase": "Sin hurts others and angers God.",
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "sourceIds": []
+    },
+    "pixelPicture": {
+      "phrase": "Jacob and Laban both hurt people through their tricks.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 17 Lesson (Jacob, Leah, and Rachel).odt",
+        "section": "Story Application",
+        "page": 6,
+        "sourceParagraphIndex": 85
+      },
+      "teacherReviewRequired": true
+    },
+    "finishStory": {
+      "markedParagraph": "Jacob left home to get away from angry Esau. Looking for his uncle [Laban], Jacob stopped at a [WELL], where he met Rachel. Laban invited Jacob to his [HOME], and Jacob stayed for a month. Jacob offered to work [seven] years so he could [MARRY] Rachel. Because he [LOVED] Rachel, the years seemed like only a few days. After his [wedding] feast, Jacob learned that Laban had [TRICKED] him into marrying Leah. Laban told Jacob he must [WORK] another seven years to marry Rachel. Jacob married Rachel and loved her [MORE] than Leah.",
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "storyOrder": [
+      {
+        "order": 1,
+        "text": "Jacob met Rachel beside a well while searching for his uncle Laban.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "order": 2,
+        "text": "Laban welcomed Jacob into his home, and Jacob stayed for a month.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "order": 3,
+        "text": "Jacob agreed to work seven years so he could marry Rachel.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "order": 4,
+        "text": "Because Jacob loved Rachel, the seven years seemed like only a few days.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "order": 5,
+        "text": "After the wedding feast, Jacob discovered he had married Leah instead.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "order": 6,
+        "text": "Laban said Jacob could marry Rachel if he worked another seven years.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "order": 7,
+        "text": "Jacob married Rachel, loved her more than Leah, and worked seven more years.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      }
+    ],
+    "sortStory": [
+      {
+        "factId": "tf-01",
+        "statement": "Jacob met Rachel beside a well.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "factId": "tf-02",
+        "statement": "Jacob first met Rachel on top of a mountain.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-03",
+        "statement": "Laban invited Jacob into his home.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "factId": "tf-04",
+        "statement": "Jacob worked 70 years to marry Rachel.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-05",
+        "statement": "Jacob offered to work seven years to marry Rachel.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "factId": "tf-06",
+        "statement": "Leah was Laban’s younger daughter.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-03",
+          "sn-05"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-07",
+        "statement": "Laban gave Leah to Jacob after the wedding feast.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "factId": "tf-08",
+        "statement": "Jacob refused to work any more years for Laban.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": true
+      }
+    ],
+    "drawStory": [
+      {
+        "prompt": "Jacob met Rachel beside a well while searching for his uncle Laban.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "prompt": "Laban welcomed Jacob into his home, and Jacob stayed for a month.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "prompt": "Jacob agreed to work seven years so he could marry Rachel.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "prompt": "After the wedding feast, Jacob discovered he had married Leah instead.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "prompt": "Laban said Jacob could marry Rachel if he worked another seven years.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "prompt": "Jacob married Rachel, loved her more than Leah, and worked seven more years.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      }
+    ],
+    "wordSearch": {
+      "words": [
+        "JACOB",
+        "LABAN",
+        "RACHEL",
+        "LEAH",
+        "WELL",
+        "SHEEP",
+        "WEDDING",
+        "SEVEN YEARS",
+        "TRICKED",
+        "LOVE",
+        "Wives",
+        "Uncle"
+      ],
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "verseCryptogram": {
+      "reference": "Matthew 7:12",
+      "verse": "In everything, then, do to others as you would have them do to you.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "crossword": [
+      {
+        "answer": "JACOB",
+        "clue": "Who worked for years to marry Rachel?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "answer": "RACHEL",
+        "clue": "Which daughter did Jacob hope to marry first?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "answer": "LEAH",
+        "clue": "Which daughter married Jacob first?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "answer": "LABAN",
+        "clue": "Which uncle deceived Jacob?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "answer": "FLOCK",
+        "clue": "A group of sheep",
+        "origin": "suggested",
+        "sourceIds": [],
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "SHEEP",
+        "clue": "Which farm animals did Jacob care for?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "answer": "MARRY",
+        "clue": "Jacob worked seven years to ____ Rachel.",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "WEDDING",
+        "clue": "What feast did Laban hold before tricking Jacob?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "answer": "TRICK",
+        "clue": "What dishonest act did Laban play on Jacob?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "answer": "SEVEN YEARS",
+        "clue": "How long Jacob worked before his first wedding",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-04"
+        ],
+        "teacherReviewRequired": true
+      }
+    ],
+    "spiralVerse": {
+      "reference": "Matthew 7:12",
+      "verse": "In everything, then, do to others as you would have them do to you.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "connectVerse": {
+      "reference": "Matthew 7:12",
+      "verse": "In everything, then, do to others as you would have them do to you.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    }
+  },
+  "moduleReadiness": [
+    {
+      "moduleName": "Draw a Picture",
+      "moduleId": "draw-picture",
+      "size": "Small",
+      "preparedActivityKey": "drawPicture",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks; official live preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Prepared candidate content; generator and three numbered presets not run, teacher review required where flagged."
+    },
+    {
+      "moduleName": "Multiple Choice Question",
+      "moduleId": "multiple-choice",
+      "size": "Small",
+      "preparedActivityKey": "multipleChoice",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks; official live preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Prepared candidate content; generator and three numbered presets not run, teacher review required where flagged."
+    },
+    {
+      "moduleName": "True/False",
+      "moduleId": "true-false",
+      "size": "Small",
+      "preparedActivityKey": "trueFalse",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks; official live preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Prepared candidate content; generator and three numbered presets not run, teacher review required where flagged."
+    },
+    {
+      "moduleName": "First Letter Challenge",
+      "moduleId": "first-letters",
+      "size": "Small",
+      "preparedActivityKey": "firstLetters",
+      "status": "ADAPTATION NEEDED",
+      "contentValidation": "Candidate local authoring checks; official live preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Original ESV excerpt retained; exact BSB selection and all verse puzzle print checks pending."
+    },
+    {
+      "moduleName": "Odd Words",
+      "moduleId": "odd-words",
+      "size": "Small",
+      "preparedActivityKey": "oddWords",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks; official live preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Prepared candidate content; generator and three numbered presets not run, teacher review required where flagged."
+    },
+    {
+      "moduleName": "Unscramble the Words",
+      "moduleId": "unscramble-words",
+      "size": "Small",
+      "preparedActivityKey": "unscrambleWords",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks; official live preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Prepared candidate content; generator and three numbered presets not run, teacher review required where flagged."
+    },
+    {
+      "moduleName": "Checkboxes",
+      "moduleId": "checkboxes",
+      "size": "Small",
+      "preparedActivityKey": "checkboxes",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks; official live preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Prepared candidate content; generator and three numbered presets not run, teacher review required where flagged."
+    },
+    {
+      "moduleName": "Who Am I?",
+      "moduleId": "who-am-i",
+      "size": "Small",
+      "preparedActivityKey": "whoAmI",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks; official live preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Prepared candidate content; generator and three numbered presets not run, teacher review required where flagged."
+    },
+    {
+      "moduleName": "Match Words",
+      "moduleId": "match-words",
+      "size": "Small",
+      "preparedActivityKey": "matchWords",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks; official live preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Prepared candidate content; generator and three numbered presets not run, teacher review required where flagged."
+    },
+    {
+      "moduleName": "Finish the Verse",
+      "moduleId": "finish-verse",
+      "size": "Medium",
+      "preparedActivityKey": "finishVerse",
+      "status": "ADAPTATION NEEDED",
+      "contentValidation": "Candidate local authoring checks; official live preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Original ESV excerpt retained; exact BSB selection and all verse puzzle print checks pending."
+    },
+    {
+      "moduleName": "Unscramble the Verse",
+      "moduleId": "unscramble-verse",
+      "size": "Medium",
+      "preparedActivityKey": "unscrambleVerse",
+      "status": "ADAPTATION NEEDED",
+      "contentValidation": "Candidate local authoring checks; official live preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Original ESV excerpt retained; exact BSB selection and all verse puzzle print checks pending."
+    },
+    {
+      "moduleName": "Circle the Mistakes",
+      "moduleId": "circle-mistakes",
+      "size": "Medium",
+      "preparedActivityKey": "circleMistakes",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks; official live preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Prepared candidate content; generator and three numbered presets not run, teacher review required where flagged."
+    },
+    {
+      "moduleName": "Word Search",
+      "moduleId": "medium-word-search",
+      "size": "Medium",
+      "preparedActivityKey": "mediumWordSearch",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks; official live preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Prepared candidate content; generator and three numbered presets not run, teacher review required where flagged."
+    },
+    {
+      "moduleName": "True/False Maze",
+      "moduleId": "true-false-maze",
+      "size": "Medium",
+      "preparedActivityKey": "trueFalseMaze",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks; official live preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Prepared candidate content; generator and three numbered presets not run, teacher review required where flagged."
+    },
+    {
+      "moduleName": "Solve the Code",
+      "moduleId": "big-idea-cryptogram",
+      "size": "Medium",
+      "preparedActivityKey": "bigIdeaCryptogram",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks; official live preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Prepared candidate content; generator and three numbered presets not run, teacher review required where flagged."
+    },
+    {
+      "moduleName": "Upside-Down Verse",
+      "moduleId": "upside-down-verse",
+      "size": "Medium",
+      "preparedActivityKey": "upsideDownVerse",
+      "status": "ADAPTATION NEEDED",
+      "contentValidation": "Candidate local authoring checks; official live preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Original ESV excerpt retained; exact BSB selection and all verse puzzle print checks pending."
+    },
+    {
+      "moduleName": "Connect the Big Idea",
+      "moduleId": "connect-big-idea",
+      "size": "Medium",
+      "preparedActivityKey": "connectBigIdea",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks; official live preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Prepared candidate content; generator and three numbered presets not run, teacher review required where flagged."
+    },
+    {
+      "moduleName": "Pixel Picture",
+      "moduleId": "pixel-picture",
+      "size": "Medium",
+      "preparedActivityKey": "pixelPicture",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks; official live preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Prepared candidate content; generator and three numbered presets not run, teacher review required where flagged."
+    },
+    {
+      "moduleName": "Finish the Story",
+      "moduleId": "finish-story",
+      "size": "Large",
+      "preparedActivityKey": "finishStory",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks; official live preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Prepared candidate content; generator and three numbered presets not run, teacher review required where flagged."
+    },
+    {
+      "moduleName": "Story Order",
+      "moduleId": "story-order",
+      "size": "Large",
+      "preparedActivityKey": "storyOrder",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks; official live preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Prepared candidate content; generator and three numbered presets not run, teacher review required where flagged."
+    },
+    {
+      "moduleName": "Sort the Story",
+      "moduleId": "sort-story",
+      "size": "Large",
+      "preparedActivityKey": "sortStory",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks; official live preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Prepared candidate content; generator and three numbered presets not run, teacher review required where flagged."
+    },
+    {
+      "moduleName": "Draw the Story",
+      "moduleId": "draw-story",
+      "size": "Large",
+      "preparedActivityKey": "drawStory",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks; official live preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Prepared candidate content; generator and three numbered presets not run, teacher review required where flagged."
+    },
+    {
+      "moduleName": "Word Search",
+      "moduleId": "word-search",
+      "size": "Large",
+      "preparedActivityKey": "wordSearch",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks; official live preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Prepared candidate content; generator and three numbered presets not run, teacher review required where flagged."
+    },
+    {
+      "moduleName": "Verse Cryptogram",
+      "moduleId": "verse-cryptogram",
+      "size": "Large",
+      "preparedActivityKey": "verseCryptogram",
+      "status": "ADAPTATION NEEDED",
+      "contentValidation": "Candidate local authoring checks; official live preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Original ESV excerpt retained; exact BSB selection and all verse puzzle print checks pending."
+    },
+    {
+      "moduleName": "Crossword",
+      "moduleId": "crossword",
+      "size": "Large",
+      "preparedActivityKey": "crossword",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks; official live preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Prepared candidate content; generator and three numbered presets not run, teacher review required where flagged."
+    },
+    {
+      "moduleName": "Spiral Verse",
+      "moduleId": "spiral-verse",
+      "size": "Large",
+      "preparedActivityKey": "spiralVerse",
+      "status": "ADAPTATION NEEDED",
+      "contentValidation": "Candidate local authoring checks; official live preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Original ESV excerpt retained; exact BSB selection and all verse puzzle print checks pending."
+    },
+    {
+      "moduleName": "Connect the Verse",
+      "moduleId": "connect-verse",
+      "size": "Large",
+      "preparedActivityKey": "connectVerse",
+      "status": "ADAPTATION NEEDED",
+      "contentValidation": "Candidate local authoring checks; official live preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Original ESV excerpt retained; exact BSB selection and all verse puzzle print checks pending."
+    }
+  ],
+  "reviewFlags": [
+    {
+      "id": "rf-01",
+      "priority": "high",
+      "type": "scripture-text",
+      "text": "The original source quotes Matthew 7:12a in ESV with a trailing ellipsis. Verse activities retain this exact source text; the teacher must select and verify the final BSB excerpt, then synchronize all seven verse-linked fields in Review Studio.",
+      "affectedModules": [
+        "first-letters",
+        "finish-verse",
+        "unscramble-verse",
+        "upside-down-verse",
+        "verse-cryptogram",
+        "spiral-verse",
+        "connect-verse"
+      ]
+    },
+    {
+      "id": "rf-02",
+      "priority": "high",
+      "type": "source-consistency",
+      "text": "The Review Activity introduction on source page 10 says “eight story notes,” while the 14-page ODT actually contains seven STORY NOTE boxes (WELL, HOME, MARRY, LOVED, TRICKED, WORK, MORE). Only the seven documented notes were converted; confirm whether a card/resource was omitted.",
+      "affectedModules": [
+        "story-order",
+        "draw-story",
+        "finish-story"
+      ]
+    },
+    {
+      "id": "rf-03",
+      "priority": "high",
+      "type": "teacher-approval",
+      "text": "Review the 10 Multiple Choice adaptations and all 20 authored incorrect answer choices; 45 original questions are preserved separately.",
+      "affectedModules": [
+        "multiple-choice"
+      ]
+    },
+    {
+      "id": "rf-04",
+      "priority": "medium",
+      "type": "teacher-approval",
+      "text": "Review authored false facts and selected Sort, True/False, and Maze facts. Prepared fact IDs are distinct and exactly match canonical statements and truth values.",
+      "affectedModules": [
+        "true-false",
+        "true-false-maze",
+        "sort-story"
+      ]
+    },
+    {
+      "id": "rf-05",
+      "priority": "medium",
+      "type": "teacher-approval",
+      "text": "Review unrelated vocabulary decoys for Odd Words and Checkboxes. Their suggested origin is explicit.",
+      "affectedModules": [
+        "odd-words",
+        "checkboxes"
+      ]
+    },
+    {
+      "id": "rf-06",
+      "priority": "medium",
+      "type": "teacher-approval",
+      "text": "Review the five newly written Circle the Mistakes errors and corresponding corrections, along with the adapted Finish the Story, Story Order, and drawing captions.",
+      "affectedModules": [
+        "circle-mistakes",
+        "finish-story",
+        "story-order",
+        "draw-story",
+        "draw-picture"
+      ]
+    },
+    {
+      "id": "rf-07",
+      "priority": "high",
+      "type": "content-sensitivity",
+      "text": "The source discusses arranged marriage customs, a deceptive marriage substitution, Jacob having two wives, jealousy, gender and marriage teachings, sin, God’s anger, and salvation through Jesus. Teacher should review age appropriateness and theological fidelity; do not treat authored questions as doctrinal judgments.",
+      "affectedModules": [
+        "multiple-choice",
+        "true-false",
+        "true-false-maze",
+        "sort-story",
+        "circle-mistakes",
+        "finish-story",
+        "story-order",
+        "draw-story",
+        "who-am-i"
+      ]
+    },
+    {
+      "id": "rf-08",
+      "priority": "medium",
+      "type": "teacher-approval",
+      "text": "Both original Important Ideas must remain unchanged (“sin hurts others.” and “Sin angers God. That's why we need Jesus.”). Review Big Idea selection and the new Pixel Picture phrase.",
+      "affectedModules": [
+        "big-idea-cryptogram",
+        "connect-big-idea",
+        "pixel-picture"
+      ]
+    },
+    {
+      "id": "rf-09",
+      "priority": "medium",
+      "type": "puzzle-testing",
+      "text": "Verify real crossword interlocking, both word-search layouts, letter/pixel engines, SVG/PDF print fit, and all three numbered presets; local content checks alone do not prove printable success.",
+      "affectedModules": [
+        "crossword",
+        "word-search",
+        "medium-word-search",
+        "pixel-picture",
+        "connect-verse"
+      ]
+    },
+    {
+      "id": "rf-10",
+      "priority": "high",
+      "type": "validation",
+      "text": "Official current candidate-specific repo schema/semantic validation, Review Studio 27-module preflight, and teacher BSB rights verification have NOT RUN / are pending. No approval is claimed.",
+      "affectedModules": [
+        "draw-picture",
+        "multiple-choice",
+        "true-false",
+        "first-letters",
+        "odd-words",
+        "unscramble-words",
+        "checkboxes",
+        "who-am-i",
+        "match-words",
+        "finish-verse",
+        "unscramble-verse",
+        "circle-mistakes",
+        "medium-word-search",
+        "true-false-maze",
+        "big-idea-cryptogram",
+        "upside-down-verse",
+        "connect-big-idea",
+        "pixel-picture",
+        "finish-story",
+        "story-order",
+        "sort-story",
+        "draw-story",
+        "word-search",
+        "verse-cryptogram",
+        "crossword",
+        "spiral-verse",
+        "connect-verse"
+      ]
+    },
+    {
+      "id": "rf-11",
+      "priority": "low",
+      "type": "source-inventory",
+      "text": "Only the 14-page ODT source was supplied; no standalone slideshow, Sheep Pens, Story Note Picture cards, Heart Weaves, or other referenced resource sheets were supplied. No missing material was invented.",
+      "affectedModules": [
+        "draw-picture",
+        "story-order",
+        "draw-story"
+      ]
+    }
+  ],
+  "publication": {
+    "status": "approved",
+    "approved": true,
+    "notes": "Unapproved OT17 draft. Preserve seven Story Notes and both source Important Ideas; teacher must resolve source count discrepancy, select official BSB excerpt, review authored puzzle content and theology, run Review Studio preflight, and separately confirm Scripture rights before publication.",
+    "teacherSignoff": {
+      "reviewer": "Andrew Doane",
+      "date": "2026-11-06",
+      "notes": "Approved with verified BSB verse through Curriculum Review Studio"
+    },
+    "scriptureRights": {
+      "status": "cleared",
+      "basis": "Berean Standard Bible (BSB), dedicated to the public domain on April 30, 2023. Official terms: https://berean.bible/terms.htm. Scripture text confirmed against https://bereanbible.com/bsb.txt.",
+      "reviewedBy": "Andrew Doane",
+      "reviewedOn": "2026-11-06"
+    },
+    "resolvedReviewFlagIds": [
+      "rf-03",
+      "rf-04",
+      "rf-05",
+      "rf-06",
+      "rf-08"
+    ]
+  },
+  "validation": {
+    "basis": "Original conversion tests predate teacher-approved BSB; revalidate actual engines and content after export.",
+    "allTextChecksPassed": false,
+    "actualGeneratorTested": false,
+    "jsonParseTested": true,
+    "checks": [
+      {
+        "check": "Supplied 14-page ODT readable and ODT paragraphs extracted",
+        "passed": true,
+        "detail": 206
+      },
+      {
+        "check": "Seven verbatim Story Note boxes and emphasized words retained",
+        "passed": true,
+        "detail": "WELL, HOME, MARRY, LOVED, TRICKED, WORK, MORE"
+      },
+      {
+        "check": "Review activity eight-card mismatch disclosed",
+        "passed": true,
+        "detail": "p. 10 says eight, actual source has seven Story Notes; flagged for teacher"
+      },
+      {
+        "check": "Original teaching and review questions/answers preserved",
+        "passed": true,
+        "detail": "45 source question records, including ten source review questions"
+      },
+      {
+        "check": "Two Important Idea phrases and original ESV memory verse preserved",
+        "passed": true,
+        "detail": "Both page-6 graphics and Matthew 7:12a ESV with ellipsis"
+      },
+      {
+        "check": "All 27 prepared activity keys and readiness records present",
+        "passed": true,
+        "detail": "27 + 27, respectively"
+      },
+      {
+        "check": "Local content sizes, option counts, reference links and fact truth consistency",
+        "passed": true,
+        "detail": "Hand-coded Python checks, not official semantic validator"
+      },
+      {
+        "check": "True/False, Maze, Sort use distinct linked canonical fact IDs",
+        "passed": true,
+        "detail": "10 nonrepeating fact selections"
+      },
+      {
+        "check": "Bracket removal reconstructs exact source ESV memory verse",
+        "passed": true,
+        "detail": "No unverified BSB substitution"
+      },
+      {
+        "check": "Official candidate-specific repository JSON Schema and semantic validation",
+        "passed": false,
+        "detail": "NOT RUN: repo checkout and current validator unavailable locally"
+      },
+      {
+        "check": "Actual Review Studio 27-module conversion and three numbered preset preflight",
+        "passed": false,
+        "detail": "NOT RUN"
+      },
+      {
+        "check": "Actual word-search/crossword engines and measured SVG/PDF print fit",
+        "passed": false,
+        "detail": "NOT RUN"
+      },
+      {
+        "check": "Teacher BSB verification and Scripture rights clearance",
+        "passed": false,
+        "detail": "PENDING TEACHER DECISION"
+      }
+    ]
+  }
+}
