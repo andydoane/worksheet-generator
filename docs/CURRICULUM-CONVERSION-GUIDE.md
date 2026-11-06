@@ -1008,23 +1008,53 @@ It uses **OBVIOUS PLACEHOLDERS**, which are not actual curriculum citations or e
 
 For a full **27-activity completed and teacher-approved** structural reference, read [OT31](../curriculum/approved/ot-031-god-parts-the-red-sea.lesson.json) carefully. Copy its *structural patterns*, not its narrative, original source citations, Scripture text, review decisions, publication signoff or rights evidence.
 
-## 8. Pre-delivery audit for the conversion chat
+## 8. Mandatory pre-delivery verification for the conversion chat
 
-1. Parse the result as JSON. It must contain only the intended lesson record, with no surrounding Markdown, explanatory prose inside the file, or duplicate JSON fields.
-2. Validate the result against the **current** `curriculum/schema/lesson-v1.schema.json`. Use the repo validator if execution is available; do not claim validation without running it.
-3. Check exact registered module IDs and camelCase keys. Never use `circle-the-mistakes`. Ensure every `characters[].clues[]` is an object with nonempty `text` and a valid `origin`, never a string.
-4. Verify every `validation.checks[]` record has `check` and `passed` (not `name`).
-5. Check all 27 activity slots, word limits, duplicates, sources and review flags. For True/False, Maze and Sort, verify that every prepared `factId` exists, IDs do not overlap, wording/truth is exact and statements fit 80/65/115 characters respectively.
-6. Verify facts' truth values, exact original source wording, original question answers, real page/paragraph references, and source-file names.
-7. Check `oddWords` and `checkboxes` both have no more than **five entries on either side**; `oddWords` must have at least six total.
-8. Verify Unscramble the Words has exactly two truly scrambleable choices.
-9. Preserve the original verse and translation; do not manufacture BSB provenance or signoff.
-10. Keep publication **pending**. List any unresolved reviewer choices, rights questions, unsupported puzzle types, or unverifiable source claims explicitly.
+**Run this checklist on the actual JSON being delivered.** A schema-valid record may have unusable activity wording, wrong source links, impossible grids, or missing Scripture verification. Never declare all 27 activities passed merely because the keys exist.
 
-If available in a checkout of the project, validate using:
+### Content and structure — check every item
+
+- [ ] The file parses as exactly one JSON object with no comments, trailing commas, duplicate keys, unsupported field names or surrounding Markdown.
+- [ ] `schemaVersion:1`, exact top-level section names, registered module IDs, camelCase `preparedActivities` keys, and arrays/objects are all correct.
+- [ ] The *actual supplied* source files, filenames, pages, paragraph locations and Story Note order are represented accurately. No invented citations or Bible/lesson facts.
+- [ ] Original `storyNotes[].originalText` and emphasized words, original source questions/answers, canonical Important Idea and source memory-verse text/translation remain unchanged.
+- [ ] Every `characters[].clues[]` item is an object with `text` and `origin`, never a bare string.
+- [ ] Small drawing: each `drawingPrompts[].prompt` and `preparedActivities.drawPicture.prompt` naturally completes **“Draw a picture of …”**, is ≤105 characters, and has no imperative prefix, final period, or full past-tense sentence. Large drawing: 4–6 full, capitalized, punctuated, nonduplicate narrative sentences in chronological order, ≤105 characters each.
+- [ ] Canonical facts: all prepared Sort/True-False/Maze selections have existing, **unique** `factId` values, *exact* canonical `statement` and `isTrue`, 115/80/65 character budgets and both truth values in Sort. No silent shortening of an original fact.
+- [ ] Multiple Choice: each question ≤105 characters, exactly three distinct answer choices ≤42 characters, one true flag, correctAnswer copied exactly and original source questions preserved.
+- [ ] Odd Words: 1–5 related, 1–5 unrelated, **6–10 total**, each entry ≤12 characters, no duplicates. Checkboxes: 1–5 per side, one/two words ≤14 characters, no duplicates or unnecessary overlap with selected Odd Words decoys.
+- [ ] Unscramble the Words: **exactly two** distinct actually scrambleable answers, each 3–10 **total** letters across one/two words.
+- [ ] Who Am I: a descriptive clue ≤120 printable characters and a 1–14-letter answer, without a pointless repeated trailing question.
+- [ ] Match Words: 3–6 clear pairs, no commas within cells, unique right and left labels ≤22 characters. Word searches: correctly sized A–Z-only words/phrases, no duplicates.
+- [ ] Pixel Picture: 30–85 printable characters, permitted English characters/punctuation, words ≤18 characters, a repeated letter, and **no claimed manually selected shape**.
+- [ ] Circle the Mistakes: 1–8 deliberate errors, `mistakeCount` matching `mistakes.length`, each incorrect substring visibly present in the paragraph, and a verified truthful correction.
+- [ ] Finish the Story: coherent paragraph ≤1,100 characters with 6–12 single-word `[blanks]` ≤16 characters each. Source Story Note emphasized words remain preserved in source metadata but **are not required as blanks**.
+- [ ] Story Order: 5–8 source-grounded events ≤115 characters, stored in real chronological order; student shuffle happens only in the renderer.
+- [ ] Solve the Code: ≤62 characters with 3–18 distinct A–Z letters; **do not rewrite** the canonical Big Idea to make it fit. Connect the Big Idea: 4–20 words, ≤125 characters, **≤12 letters per word** (this cap does **not** apply to Connect the Verse).
+- [ ] Prepared verse text/reference matches the teacher-selected canonical memory verse **exactly**; bracket removal reconstructs the verse with identical punctuation, case and spacing. Finish Verse: 2–8 blanks, passage ≤300 chars. Unscramble Verse: 4–8 blanks, passage ≤240. Each bracketed answer ≤9 letters; reference ≤38.
+- [ ] First Letters: 3–75 verse words, reference ≤32. Upside Down: ≤160 letters/240 chars, reference ≤42. Verse Cryptogram: ≤145 chars, reference ≤42. Spiral: ≤260 chars, reference ≤45.
+- [ ] Connect the Verse: 4–35 words, ≤260 characters, unaccented A–Z, and **measured print fit**. There is **no automatic 12-letter word rejection**. Never alter Scripture to improve the fit.
+- [ ] Crossword: 6–10 unique A–Z 3–12-letter answers, clues ≤85 characters, and **actual crossword generation/interlock** verified where executable.
+- [ ] All 27 `moduleReadiness[]` records have true statuses and exact keys; all suggested/ambiguous theological or editorial content has applicable teacher-review flags.
+- [ ] Canonical BSB text has not been guessed and no rights clearance, review approval or successful test claim has been fabricated. `publication` remains pending/unapproved.
+
+### Validation matrix — what the commands really prove
+
+| Stage | Procedure | Can confirm | Cannot confirm |
+|---|---|---|---|
+| A. JSON syntax | Parse the exact file with a JSON parser | JSON is readable | Schema, truth, puzzles |
+| B. Candidate schema and semantic checks | `node --experimental-strip-types scripts/validate-curriculum.mjs /absolute/path/to/candidate.json` in a current repo checkout | Actual supplied file passes schema/source/readiness checks | All puzzle solvers, measured print fit, teacher approval |
+| C. Existing repo files | `npm run validate:curriculum` and `npm run validate:library` | Review/approved files already scanned in that checkout | An *external candidate file* not included in that scan |
+| D. Repository tests | `npm test`, `npm run verify:bsb`, `npm run build` | Existing tests, checked-in data, build and local BSB integrity | That a new external JSON or its verse was verified |
+| E. Candidate activity and print checks | Upload the candidate to Review Studio, **Run preflight checks**; inspect all three numbered worksheet presets and the actual puzzle engines | 27/27 and all three presets are technically ready **if issues list is empty** | Narrative accuracy, rights and teacher approval |
+| F. Teacher approval | Teacher reviews claims, BSB excerpt/terms and final signoff inside Review Studio | Authorized teacher-approved export | Permission for a converter to infer approval |
+
+When preflight says **0/27 because of schema errors**, **no activities were attempted**. Correct the structural schema errors first and rerun to see the remaining content/print issues. Even **27/27 converted** does not mean success if there are other preflight issues. If you cannot run a stage, report **NOT RUN**; do not infer a pass from a different stage.
+
+**Commands for a local checkout** (the first line is the only listed command aimed explicitly at an external candidate):
 
 ```bash
-node --experimental-strip-types scripts/validate-curriculum.mjs path/to/unapproved-lesson.json
+node --experimental-strip-types scripts/validate-curriculum.mjs /absolute/path/to/candidate.json
 npm run validate:curriculum
 npm run validate:library
 npm test
@@ -1032,7 +1062,20 @@ npm run verify:bsb
 npm run build
 ```
 
-The first command checks a specific schema/semantic input file; the other commands check repository tests and approved library readiness. **Do not put a draft conversion under `curriculum/approved/` as a "test".**
+Do not copy an unapproved draft to `curriculum/approved/` just to run tests. Neither the starter nor the historical OT31 lesson is evidence that **your** newly created file passed.
+
+### Required final handoff report (outside the JSON)
+
+Supply the unapproved JSON as its **own file**, plus a concise report with these six headings:
+
+1. **Actual sources inspected:** list input filenames, pages/slides read and unreadable/missing material.
+2. **Preserved and adapted text:** exact original notes, question answers, Big Idea and memory-verse attribution preserved; list all edits separately.
+3. **Activity coverage:** a 27-row table with exact module ID and prepared key, prepared/missing status, generator tested/not tested and remaining blockers.
+4. **Verification evidence:** JSON parse, exact candidate schema command and result, source-ID checks, 27/27 preflight, real puzzle/layout engines and all three presets, BSB verification. Mark every unrun item **NOT RUN**.
+5. **Teacher decisions:** suggested facts/decoys, wording and theology, missing source links, overlong passages, BSB verification and rights review.
+6. **Publication status:** `pending-teacher-approval`, `approved:false`, no copied signatures, no implied source/rights clearance.
+
+If any required gate fails, correct the data or report a precise blocker; never substitute a reassuring summary for a test result.
 
 ## 9. Teacher workflow: direct upload to main is supported
 
@@ -1061,7 +1104,7 @@ You can keep the familiar, simple workflow:
 
 ## 11. Copy-ready opening instruction for a new conversion chat
 
-> I am preparing an **unapproved** Bible curriculum JSON file for Worksheet Studio. Before doing anything, read the **latest** [Curriculum Conversion Guide](https://github.com/andydoane/worksheet-generator/blob/main/docs/CURRICULUM-CONVERSION-GUIDE.md), the [JSON Schema](https://github.com/andydoane/worksheet-generator/blob/main/curriculum/schema/lesson-v1.schema.json), the [unapproved starter](https://github.com/andydoane/worksheet-generator/blob/main/curriculum/examples/lesson-v1-unapproved.example.json), and the [full OT31 reference](https://github.com/andydoane/worksheet-generator/blob/main/curriculum/approved/ot-031-god-parts-the-red-sea.lesson.json). I will provide the source lesson and any slides. Preserve exact original Story Notes/questions, source filenames/pages, Scripture attribution, and review flags. Prepare all **27** activities where supported, clearly label suggestions, and use only correct schema field names. **Never** copy approval/rights/signoff from the sample or claim tests passed unless you ran them. Make each `characters[].clues[]` an object with `text` and `origin`, and ensure True/False and Maze have distinct `factId`s, exact matching canonical statements/truth, and 80/65-character print fit. Deliver the unapproved JSON for my Review Studio; tell me what remains to be verified by a teacher.
+> I am preparing an **unapproved** Bible curriculum JSON file for Worksheet Studio. Treat the guide as a comprehensive conversion manual: follow the ten-step workflow, all 27 detailed activity recipes, the JSON formatting rules, and the §8 verification checklist. **Do not** confuse schema validity with printable preflight. Before doing anything, read the **latest** [Curriculum Conversion Guide](https://github.com/andydoane/worksheet-generator/blob/main/docs/CURRICULUM-CONVERSION-GUIDE.md), the [JSON Schema](https://github.com/andydoane/worksheet-generator/blob/main/curriculum/schema/lesson-v1.schema.json), the [unapproved starter](https://github.com/andydoane/worksheet-generator/blob/main/curriculum/examples/lesson-v1-unapproved.example.json), and the [full OT31 reference](https://github.com/andydoane/worksheet-generator/blob/main/curriculum/approved/ot-031-god-parts-the-red-sea.lesson.json). I will provide the source lesson and any slides. Preserve exact original Story Notes/questions, source filenames/pages, Scripture attribution, and review flags. Prepare all **27** activities where supported, clearly label suggestions, and use only correct schema field names. **Never** copy approval/rights/signoff from the sample or claim tests passed unless you ran them. Make each `characters[].clues[]` an object with `text` and `origin`, and ensure True/False and Maze have distinct `factId`s, exact matching canonical statements/truth, and 80/65-character print fit. Deliver the unapproved JSON for my Review Studio; tell me what remains to be verified by a teacher.
 
 ---
 
