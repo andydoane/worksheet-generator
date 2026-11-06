@@ -98,11 +98,11 @@ export default function StoryOrderReviewEditor({lesson,onChange,onError}:{
    </button>
   </div>
   <section className="review-activity-preview">
-   <h3>Story Order worksheet preview</h3>
-   {canPreview?<StoryVersePreview module={{
+   <h3>Story Order — Chronological Review Preview</h3>
+   {canPreview?<StoryVersePreview storyOrderChronological module={{
     type:'story-order',events:events.map(e=>e.text).join('\n'),seed:1,
    }}/>:
-   <p className="review-warning">Finish the source-linked chronological events to preview the shuffled worksheet.</p>}
+   <p className="review-warning">Finish the source-linked chronological events to review the chronological preview.</p>}
   </section>
  </div>;
 }
