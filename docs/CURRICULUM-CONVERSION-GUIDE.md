@@ -15,9 +15,9 @@ A **lesson JSON** contains source-preserving material and **prepared choices for
 
 There are three distinct gates:
 
-1. **JSON Schema:** correct object structure, field names, types, required fields, allowed enum values, and source-citation shape; now checked in **both** Review Studio and GitHub CI.
+1. **JSON syntax and schema:** a parseable file with correct object structure, field names, data types, required fields, allowed enums, and source-citation shape. Review Studio and CI share schema checking, but schema validity does **not** prove truthful canonical-fact linkage or 27/27 printable activities.
 2. **Review Studio preflight:** the real converter, all 27 module validators, sources/readiness, and all three numbered worksheet recipes. A schema-valid draft may still fail preflight.
-3. **Teacher approval and GitHub library validation:** real source and Scripture verification, explicit teacher review/signoff, separate BSB-rights confirmation, live puzzle solvers and printable layouts. **Only a teacher may authorize publication.**
+3. **Teacher approval and GitHub library validation:** real source and Scripture verification, explicit teacher review/signoff, separate BSB-rights confirmation, live puzzle solvers and printable layouts. **Only a teacher may authorize publication.** Repository-wide tests don't automatically validate a new file outside the checkout.
 
 Avoid saying "validated" without identifying which gate you actually ran.
 
@@ -45,6 +45,28 @@ A primary source location is an object such as:
 These are **illustrative numbers**, not permission to invent a citation. For actual source objects, `filename`, `section`, and a positive integer `page` are mandatory. The filename must match an entry in `sourceFiles[]`. Optional `sourceParagraphIndex` must be extracted from the actual source structure if provided.
 
 For secondary online verse verification, see the current schema’s `verificationSource` definition and [the OT24 regression test](../tests/pr89-ot24-verification-schema.test.mjs): webpages must not be assigned fabricated page numbers. The primary document citation still requires a real page.
+
+### Ten-step workflow for a new conversion chat
+
+1. **Inventory actual inputs.** Record filenames, formats, real page/slide ranges, unreadable sections and intended lesson number. Ask for missing source material rather than inventing it.
+2. **Extract originals first.** Keep every original Story Note (exact `originalText`, emphasis, order, primary citation), question **and answer**, Big Idea, source Bible reference/text/translation, names and teaching cautions separate from edited versions.
+3. **Build reliable IDs and citations.** Assign unique `sn-…`, `q-…` and `tf-…` IDs. All `sourceIds` and `sourceQuestionIds` must refer to real records. Primary `source` filenames must appear in `sourceFiles`; pages must be verified, not guessed.
+4. **Build source-backed editorial pools.** Create the canonical `facts[]`, `characters[]` with clue **objects**, `vocabulary`, matching pairs, drawing scenes, and optional `keyPhrases[]`. Distinguish verbatim `source`, faithful `adapted`, and authored `suggested` content; flag teacher-dependent choices.
+5. **Allocate distinct facts before writing puzzles.** Reserve 4–8 unique facts with both truth values for Sort the Story, a separate ≤80-character fact for Small True/False, and a separate ≤65-character fact for Maze. Prepared statements/Booleans must match the corresponding canonical fact exactly. Create a *new* linked adaptation rather than rewriting an original.
+6. **Keep Scripture canonical.** Preserve the source's original translation. Never guess BSB text or claim it verified. The teacher later chooses the official BSB excerpt in Review Studio; all linked prepared verse fields must match that exact text and reference.
+7. **Author all 27 activity records.** Follow each individual `4 recipe, not merely the summary table. Read Small drawing phrases after “Draw a picture of …”; use full sentences for Large drawing captions. Write unambiguous, age-appropriate content supported by the lesson.
+8. **Check cross-activity consistency.** Avoid duplicate word-bank choices, overlapping canonical fact IDs, ambiguous matching/crossword clues, false statements accidentally portrayed as true, and mismatched Story Order/drawing source notes.
+9. **Report readiness honestly.** When complete, include all 27 exact IDs in `moduleReadiness[]`. Never say `READY`, `generatorTested:true`, or `validation.passed:true` without the corresponding evidence. List unresolved issues in `reviewFlags[]`.
+10. **Validate the exact file, then deliver.** Parse JSON, run candidate-specific schema/semantic validation, verify activity limits and print generators where possible, and use Review Studio preflight for all 27 and three numbered presets. Label anything that couldn't be run **NOT RUN**. Never approve or publish a draft.
+
+### Exact JSON formatting and provenance rules
+
+- Output one UTF-8 `.json` file containing one top-level object. No Markdown wrappers **inside** the file, JavaScript comments, trailing commas, unquoted property names, `undefined`, literal line breaks inside strings, or duplicate keys. Escape line breaks as `\n` when necessary.
+- Use the right *types*: `preparedActivities` is an object; `multipleChoice`, `matchWords`, `storyOrder`, `sortStory`, `drawStory` and `crossword` are arrays **of objects**; `characters[].clues[]` and `validation.checks[]` are objects, not strings. `oddWords.related`, `checkboxes.incorrect`, `unscrambleWords.answers` and both word-search `words` arrays are strings.
+- Distinguish module IDs (`draw-picture`, `true-false-maze`) from their separate camelCase prepared keys (`drawPicture`, `trueFalseMaze`). `reviewFlags[].affectedModules` takes module IDs; `moduleReadiness[].preparedActivityKey` takes a prepared key.
+- A primary document `source` requires its real `filename`, `section` and positive `page`. Web verification uses the separate secondary `verificationSource` format—never a fabricated document page. `sourceIds` name actual lesson records, not filenames.
+- `origin:"source"` means verbatim, truly sourced wording; `"adapted"` a faithful editorial rewrite; `"suggested"` new content awaiting teacher judgment. Never claim an authored distractor was in the source. Keep original `storyNotes[].originalText` and `questions[]` unchanged.
+- Publication remains `{"status":"pending-teacher-approval","approved":false}`. Do not copy teacher names, approval dates, rights evidence, unresolved review-flag resolution, source citations or BSB claims from another lesson.
 
 ## 3. Exact schema-v1 sections and naming
 
@@ -138,12 +160,12 @@ This belongs **inside** `preparedActivities`. Never omit its `factId`.
 
 | Registered module ID | `preparedActivities` key | Principal constraints / purpose |
 |---|---|---|
-| `draw-picture` | `drawPicture` | Small scene `prompt` up to 105 chars; avoid a repetitive "Draw…" command |
+| `draw-picture` | `drawPicture` | A scene phrase completing “Draw a picture of …”, ≤105 characters; no past-tense sentence, instruction prefix, or final punctuation |
 | `multiple-choice` | `multipleChoice` | Question up to 105 chars; **three distinct choices**, exactly one correct, choices up to 42 chars; source answer stays true |
 | `true-false` | `trueFalse` | Statement up to 80 chars, correct `isTrue`, unique canonical `factId`, exact matching wording |
 | `first-letters` | `firstLetters` | Memory Verse text 3–75 words; reference up to 32 chars |
 | `odd-words` | `oddWords` | **1–5 `related`** and **1–5 `unrelated`**; 6–10 total; each entry ≤12 chars |
-| `unscramble-words` | `unscrambleWords` | **Exactly 2** distinct usable `answers`; 3–10 letters each, one/two words, genuinely scrambleable |
+| `unscramble-words` | `unscrambleWords` | **Exactly 2** distinct answers; each 3–10 **total** letters across one/two words, ignoring the single space; each word needs two different letters |
 | `checkboxes` | `checkboxes` | **1–5 `correct`** and **1–5 `incorrect`**; one/two words, ≤14 chars |
 | `who-am-i` | `whoAmI` | Clue up to 120 chars, answer up to 14 letters; don't repeat a trailing "Who am I?" prompt unnecessarily |
 | `match-words` | `matchWords` | 3–6 source-grounded pairs; each side ≤22 chars, unique matches |
@@ -155,8 +177,8 @@ This belongs **inside** `preparedActivities`. Never omit its `factId`.
 | `big-idea-cryptogram` | `bigIdeaCryptogram` | Code phrase ≤62 chars and ≤18 distinct letters; can use approved story phrase instead of canonical Big Idea |
 | `upside-down-verse` | `upsideDownVerse` | Memory Verse ≤240 total chars and ≤160 letters; reference ≤42 |
 | `connect-big-idea` | `connectBigIdea` | 4–20 words, ≤125 chars, each word ≤12; may use a separate approved story phrase |
-| `pixel-picture` | `pixelPicture` | Teacher-reviewed story-related phrase; detailed pixel/word-wrap limits in validator and preview |
-| `finish-story` | `finishStory` | Story paragraph with **6–12** `[WORD]` blanks; genuine coherent story and printable fit |
+| `pixel-picture` | `pixelPicture` | 30–85-character phrase, words ≤18 characters, English letters/digits/simple punctuation, and a repeated letter; generator selects the picture |
+| `finish-story` | `finishStory` | Coherent paragraph ≤1,100 characters; **6–12** single-word `[blanks]` ≤16 characters each; emphasized Story Note words are not mandatory blanks |
 | `story-order` | `storyOrder` | **5–8** chronological events, each ≤115 chars; preserve true event order |
 | `sort-story` | `sortStory` | 4–8 separate canonical `factId`s, matching wording/truth, each ≤115 chars, at least one TRUE and FALSE; reserve suitable facts for True/False and Maze |
 | `draw-story` | `drawStory` | 4–6 narrative drawing captions, each ≤105 chars; complete sentences, not "Draw…" instructions |
@@ -164,7 +186,7 @@ This belongs **inside** `preparedActivities`. Never omit its `factId`.
 | `verse-cryptogram` | `verseCryptogram` | Exact verse ≤145 chars, reference ≤42; puzzle letter and print-fit checks |
 | `crossword` | `crossword` | 6–10 distinct answer/clue pairs; answer 3–12 A–Z letters, clue 1–85 chars, all words must interlock |
 | `spiral-verse` | `spiralVerse` | Verse ≤260 chars, reference ≤45 |
-| `connect-verse` | `connectVerse` | 4–35 words, ≤260 chars; **currently each word ≤12 chars** (see [issue #95](https://github.com/andydoane/worksheet-generator/issues/95)) |
+| `connect-verse` | `connectVerse` | 4–35 words, ≤260 characters; **no blanket 12-letter word cap** since [PR #102](https://github.com/andydoane/worksheet-generator/pull/102); measured SVG/PDF word-box fit applies |
 
 **Do not trust this table over the latest code.** Some activities also enforce uniqueness, letter alphabets, spacing, source conflicts, measured PDF placement, grid solvability, and special verse/reference limits. The final converter and preflight remain authoritative.
 
