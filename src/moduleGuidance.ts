@@ -6,8 +6,8 @@ import {blankModule,type ActivityModule,type ModuleId} from './modules.ts';
  */
 type Guidance={instruction:string;sample?:Partial<ActivityModule>};
 export const MODULE_GUIDANCE:Record<ModuleId,Guidance>={
- 'draw-picture':{instruction:'Describe one scene from the Bible story for children to draw.',
-  sample:{type:'draw-picture',prompt:'Moses leading the Israelites through the Red Sea.'}},
+ 'draw-picture':{instruction:'Enter a scene phrase that naturally completes “Draw a picture of …”, with no ending period.',
+  sample:{type:'draw-picture',prompt:'Moses leading the Israelites through the Red Sea'}},
  'match-words':{instruction:'Enter 3–6 related word pairs, separated by a comma, one pair per line.',
   sample:{type:'match-words',pairs:'Moses, Leader\nPharaoh, King\nRed Sea, Water\nEgypt, Land',seed:1}},
  'finish-story':{instruction:'Write a short story with 6–12 missing words marked in [square brackets].',

@@ -41,6 +41,6 @@ If you prefer to test **before** touching production, choose **Create a new bran
 - A lesson requires `publication.status:'approved'`, `approved:true`, explicit `teacherSignoff`, all teacher-approval flags resolved, and a distinct `publication.scriptureRights` object with `status:'cleared'`, a substantive `basis`, `reviewedBy` and ISO `reviewedOn`.
 - Its memory-verse content must use verified BSB text, with the official source/terms URLs. These restrictions are checked independently by schema/semantic validation, CI readiness auditing and the runtime public-catalog guard.
 - Review-stage files and historical fixtures remain excluded from public Vite imports.
-- The expected workflow stays the same for the 2nd or 123rd lesson: **review → one approved JSON → new GitHub PR → CI → merge**.
+- The expected workflow stays the same for the 2nd or 123rd lesson: **review → one approved JSON → upload directly to main → CI/deploy**, or optionally **open a PR → CI → merge** when a pre-merge check is preferred. Both choices are explained above.
 
 **Useful checks for developers:** `npm run validate:curriculum`, `npm run validate:library`, `npm test`, `npm run build`. The library report is written to `artifacts/curriculum-readiness-report.{json,md}`.
