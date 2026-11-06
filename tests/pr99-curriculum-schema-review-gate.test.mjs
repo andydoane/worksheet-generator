@@ -131,7 +131,8 @@ test('UI requires teacher confirmation, clears affected review and invalidates p
  assert.match(app,/setRightsConfirmed\(false\)/u);
  assert.match(app,/schemaRepairLabel\(issue\.schemaRepair\)/u);
  const model=await read('src/review/model.ts');
- assert.match(model,/const schemaProblems=reviewSchemaErrors\(next\)/u);
+ assert.match(model,/const final=finalizeApprovedMetadata\(next,evidence\)/u);
+ assert.match(model,/const schemaProblems=reviewSchemaErrors\(final\)/u);
 });
 
 test('Guide documents all registered modules, an example and direct-to-main publishing',async()=>{

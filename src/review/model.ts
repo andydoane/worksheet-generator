@@ -2,6 +2,7 @@ import {clipToWords,markSelectedWords,type Passage} from './bsb.ts';
 import {convertLessonActivities,type LessonActivityData} from '../lessonActivityConverter.ts';
 import {validateModule} from '../modules.ts';
 import {reviewSchemaErrors} from './schemaPreflight.ts';
+import {finalizeApprovedMetadata,type ApprovedExportEvidence} from './approvedExportMetadata.ts';
 
 export type Lesson=Record<string,any>;
 export type ReviewTask={id:string;group:string;label:string;detail:string;optional?:boolean};
@@ -63,8 +64,8 @@ export function listReviewTasks(lesson:Lesson):ReviewTask[]{
   detail:'Review 4–12 source-backed words and their nonrepeating preset selection.'});
  tasks.push({id:'medium-word-search',group:'Vocabulary',label:'Word Search (Medium)',
   detail:'Review 1–6 short words in the smaller nine-by-nine grid.'});
- if(lesson.reviewFlags?.some((x:any)=>x.type==='sensitivity'))tasks.push({id:'sensitivity',
-  group:'Editorial decisions',label:'Age suitability',detail:'Review language about the fate of the Egyptian army for your students.'});
+ if(lesson.reviewFlags?.some((x:any)=>['sensitivity','content-sensitivity'].includes(x.type)))tasks.push({id:'sensitivity',
+  group:'Editorial decisions',label:'Age suitability',detail:'Review the actual lesson’s flagged age-appropriateness and theological concerns before approving.'});
  if(lesson.reviewFlags?.some((x:any)=>x.type==='source-wording'))tasks.push({id:'important-idea',
   group:'Editorial decisions',label:'Important Idea wording',detail:'Confirm the original displayed Important Idea.'});
  tasks.push({id:'bsb-verse',group:'Scripture',label:'Approved BSB memory verse',
@@ -370,6 +371,7 @@ export function checkReviewContent(lesson:Lesson):string[]{
  */
 export function createApprovedLesson(
  lesson:Lesson,reviewer:string,date:string,scriptureRightsConfirmed:boolean,
+ evidence:ApprovedExportEvidence={},
 ):Lesson{
  if(!trim(reviewer))throw Error('Enter the name of the curriculum reviewer.');
  if(!/^\d{4}-\d{2}-\d{2}$/u.test(date)||!Number.isFinite(Date.parse(date))||
@@ -394,12 +396,13 @@ export function createApprovedLesson(
    'teacher-approval','sensitivity','source-wording',
   ].includes(f.type)).map((f:any)=>f.id),
  };
- // Review preflight checks the working draft, but teacher signoff and
- // Scripture-rights metadata are inserted only at this final step. Validate
- // the EXACT downloadable object again, before creating any download.
- const schemaProblems=reviewSchemaErrors(next);
+ // Reconcile current approval state WITHOUT overwriting the original
+ // ESV, source pool, draft checks or failed/NOT RUN conversion evidence.
+ // Validate the exact resulting download after all metadata is finalized.
+ const final=finalizeApprovedMetadata(next,evidence);
+ const schemaProblems=reviewSchemaErrors(final);
  if(schemaProblems.length)throw Error('Approved download blocked by curriculum schema:\n'+
   schemaProblems.slice(0,12).join('\n')+
   (schemaProblems.length>12?'\n…and '+(schemaProblems.length-12)+' more issues.':''));
- return next;
+ return final;
 }
