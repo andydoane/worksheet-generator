@@ -175,7 +175,7 @@ test('Verse cipher key keeps one two-band matrix for every count of 3–26 lette
  assert.match(planner,/keyTop=38,keyHeight=29/u);
 });
 
-test('All three teacher-selected presets produce printable two-sheet PDFs',async()=>{
+test('All four teacher-selected presets produce printable two-sheet PDFs',async()=>{
  const fonts={
   mouseMemoirs:await readFile(new URL('../fonts/MouseMemoirs-Regular.ttf',import.meta.url)),
   nunitoSans:await readFile(new URL('../fonts/Nunito-Medium.ttf',import.meta.url)),

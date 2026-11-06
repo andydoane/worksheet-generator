@@ -243,7 +243,7 @@ test('Source and activity editors are mounted, and expensive historical PDF gene
  assert.match(workflow,/Deploy to GitHub Pages/u);
 });
 
-test('The real generator still builds all three numbered presets for the approved curriculum',()=>{
+test('The real generator builds all four numbered presets for the approved curriculum',()=>{
  for(const lesson of [ot31,ot32]){
   const converted=convertLessonActivities(lesson);
   assert.equal(new Set(converted.candidates.map(x=>x.moduleId)).size,27);

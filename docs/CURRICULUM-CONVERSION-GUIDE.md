@@ -11,12 +11,12 @@
 
 ## 1. What you're preparing
 
-A **lesson JSON** contains source-preserving material and **prepared choices for 27 printable activity types**. It is *not* a saved worksheet. The Review Studio converts this file into selectable activities, lets the teacher correct and approve the material, applies the teacher-verified Berean Standard Bible (BSB) excerpt, and checks all three numbered worksheet presets. Finally, the teacher downloads an individually approved `<lesson-id>.lesson.json` for `curriculum/approved/`.
+A **lesson JSON** contains source-preserving material and **prepared choices for 27 printable activity types**. It is *not* a saved worksheet. The Review Studio converts this file into selectable activities, lets the teacher correct and approve the material, applies the teacher-verified Berean Standard Bible (BSB) excerpt, and checks all four numbered worksheet presets. Finally, the teacher downloads an individually approved `<lesson-id>.lesson.json` for `curriculum/approved/`.
 
 There are three distinct gates:
 
 1. **JSON syntax and schema:** a parseable file with correct object structure, field names, data types, required fields, allowed enums, and source-citation shape. Review Studio and CI share schema checking, but schema validity does **not** prove truthful canonical-fact linkage or 27/27 printable activities.
-2. **Review Studio preflight:** the real converter, all 27 module validators, sources/readiness, and all three numbered worksheet recipes. A schema-valid draft may still fail preflight.
+2. **Review Studio preflight:** the real converter, all 27 module validators, sources/readiness, and all four numbered worksheet recipes. A schema-valid draft may still fail preflight.
 3. **Teacher approval and GitHub library validation:** real source and Scripture verification, explicit teacher review/signoff, separate BSB-rights confirmation, live puzzle solvers and printable layouts. **Only a teacher may authorize publication.** Repository-wide tests don't automatically validate a new file outside the checkout.
 
 Avoid saying "validated" without identifying which gate you actually ran.
@@ -57,7 +57,7 @@ For secondary online verse verification, see the current schema’s `verificatio
 7. **Author all 27 activity records.** Follow each individual §4 recipe, not merely the summary table. Aim for six worthwhile prepared Multiple Choice questions, while preserving **every original** source question and answer in `questions[]`. Read Small drawing phrases after “Draw a picture of …”; use full sentences for Large drawing captions. Write unambiguous, age-appropriate content supported by the lesson.
 8. **Check cross-activity consistency.** Avoid duplicate word-bank choices, overlapping canonical fact IDs, ambiguous matching/crossword clues, false statements accidentally portrayed as true, and mismatched Story Order/drawing source notes.
 9. **Report readiness honestly.** When complete, include all 27 exact IDs in `moduleReadiness[]`. Never say `READY`, `generatorTested:true`, or `validation.passed:true` without the corresponding evidence. List unresolved issues in `reviewFlags[]`.
-10. **Validate the exact file, then deliver.** Parse JSON, run candidate-specific schema/semantic validation, verify activity limits and print generators where possible, and use Review Studio preflight for all 27 and three numbered presets. Label anything that couldn't be run **NOT RUN**. Never approve or publish a draft.
+10. **Validate the exact file, then deliver.** Parse JSON, run candidate-specific schema/semantic validation, verify activity limits and print generators where possible, and use Review Studio preflight for all 27 and four numbered presets. Label anything that couldn't be run **NOT RUN**. Never approve or publish a draft.
 
 ### Exact JSON formatting and provenance rules
 
@@ -995,6 +995,19 @@ Canonical verse **4–35 words** and **≤260 characters**, with unaccented Engl
 
 
 
+### Preset 4 — complete prescribed booklet layout
+
+The **fourth numbered preset** is built from the same 27 reviewed activity types and existing Small/Medium/Large region geometries; it is **not** a 28th activity type. It uses these exact page assignments (from top to bottom and left to right within each Small pair):
+
+| Page | Region layout | Activities in placement order |
+| --- | --- | --- |
+| 1 | Existing large cover activity below title | **Crossword** |
+| 2 | L, M (`large-medium`) | Large **Word Search**; Medium **Upside Down Verse** |
+| 3 | SS, M, M (`small-small-medium-medium`) | Small **Multiple Choice** (left); Small **Draw a Picture** (right); Medium **Pixel Picture**; Medium **Solve the Code** |
+| 4 | M, SS, M (`medium-small-small-medium`) | Medium **Match the Words**; Small **True or False** (left); Small **What Doesn't Belong?** (right); Medium **Unscramble the Verse** |
+
+**Source preparation:** Preset 4 needs all eleven modules, including a reviewed crossword with 6–10 interlocking answers and a separate Large Word Search plus Odd Words bank **without repeated printed vocabulary**. There is one Multiple Choice question in Preset 4; the standard six prepared candidates still supply cross-preset alternatives. Review Studio preflight verifies **all four** numbered presets and blocks approval if any one cannot be filled. Do not confuse a passing `27/27` module count with successful construction of every numbered preset.
+
 ## 5. BSB and Scripture rules
 
 The project has a versioned local BSB corpus at `public/bible/bsb.txt`, verified by `npm run verify:bsb`. Sources are explained in [`docs/BSB-CORPUS.md`](BSB-CORPUS.md). The teacher **chooses and verifies** the final BSB passage in Review Studio.
@@ -1066,7 +1079,7 @@ For a full **27-activity completed and teacher-approved** structural reference, 
 | B. Candidate schema and semantic checks | `node --experimental-strip-types scripts/validate-curriculum.mjs /absolute/path/to/candidate.json` in a current repo checkout | Actual supplied file passes schema/source/readiness checks | All puzzle solvers, measured print fit, teacher approval |
 | C. Existing repo files | `npm run validate:curriculum` and `npm run validate:library` | Review/approved files already scanned in that checkout | An *external candidate file* not included in that scan |
 | D. Repository tests | `npm test`, `npm run verify:bsb`, `npm run build` | Existing tests, checked-in data, build and local BSB integrity | That a new external JSON or its verse was verified |
-| E. Candidate activity and print checks | Upload the candidate to Review Studio, **Run preflight checks**; inspect all three numbered worksheet presets and the actual puzzle engines | 27/27 and all three presets are technically ready **if issues list is empty** | Narrative accuracy, rights and teacher approval |
+| E. Candidate activity and print checks | Upload the candidate to Review Studio, **Run preflight checks**; inspect all four numbered worksheet presets and the actual puzzle engines | 27/27 and all four presets are technically ready **if issues list is empty** | Narrative accuracy, rights and teacher approval |
 | F. Teacher approval | Teacher reviews claims, BSB excerpt/terms and final signoff inside Review Studio | Authorized teacher-approved export | Permission for a converter to infer approval |
 
 When preflight says **0/27 because of schema errors**, **no activities were attempted**. Correct the structural schema errors first and rerun to see the remaining content/print issues. Even **27/27 converted** does not mean success if there are other preflight issues. If you cannot run a stage, report **NOT RUN**; do not infer a pass from a different stage.
@@ -1091,7 +1104,7 @@ Supply the unapproved JSON as its **own file**, plus a concise report with these
 1. **Actual sources inspected:** list input filenames, pages/slides read and unreadable/missing material.
 2. **Preserved and adapted text:** exact original notes, question answers, Big Idea and memory-verse attribution preserved; list all edits separately.
 3. **Activity coverage and counts:** a 27-row table with exact module ID and prepared key, prepared/missing status, generator tested/not tested and remaining blockers. State counts of **TRUE canonical facts, FALSE canonical facts, prepared Multiple Choice questions, and preserved original source questions**, and briefly explain deviations from normal targets.
-4. **Verification evidence:** JSON parse, exact candidate schema command and result, source-ID checks, 27/27 preflight, real puzzle/layout engines and all three presets, BSB verification. Mark every unrun item **NOT RUN**.
+4. **Verification evidence:** JSON parse, exact candidate schema command and result, source-ID checks, 27/27 preflight, real puzzle/layout engines and all four presets, BSB verification. Mark every unrun item **NOT RUN**.
 5. **Teacher decisions:** suggested facts/decoys, wording and theology, missing source links, overlong passages, BSB verification and rights review.
 6. **Publication status:** `pending-teacher-approval`, `approved:false`, no copied signatures, no implied source/rights clearance.
 
@@ -1101,7 +1114,7 @@ If any required gate fails, correct the data or report a precise blocker; never 
 
 The approved file intentionally contains **two different evidence layers**. Do not treat old conversion-stage `validation.checks[]` or `validation.actualGeneratorTested:false` as a claim that the final teacher review failed. They describe the converter's earlier checks, and their original `passed:false` / `NOT RUN` values must **not** be rewritten to successes. In new exports, `validation.checksScope:"original-conversion-before-teacher-review"` labels that history and `validation.originalBasis` preserves the prior basis.
 
-The **current approval evidence** is recorded in `publication.reviewStudioVerification` *only after Review Studio itself finishes a measured, issue-free **27/27** preflight*; the record includes an actual `checkedAt` UTC timestamp, the zero-issue result, and three numbered preset content checks. It does **not** claim standalone Node validation commands or independently rendered PDF exports passed. The signoff and BSB public-domain confirmation remain separate mandatory decisions. `schemaStatus` and `publication.notes` describe the current approved state; original draft labels/notes are archived in `publication.originalSchemaStatus` and `publication.originalConversionNotes`. The draft-era `moduleReadiness[]` entries are archived in `validation.originalModuleReadiness` before their current content/readiness labels are updated. `generatorTested` retains its independent-testing meaning; it is not automatically marked true.
+The **current approval evidence** is recorded in `publication.reviewStudioVerification` *only after Review Studio itself finishes a measured, issue-free **27/27** preflight*; the record includes an actual `checkedAt` UTC timestamp, the zero-issue result, and four numbered preset content checks. It does **not** claim standalone Node validation commands or independently rendered PDF exports passed. The signoff and BSB public-domain confirmation remain separate mandatory decisions. `schemaStatus` and `publication.notes` describe the current approved state; original draft labels/notes are archived in `publication.originalSchemaStatus` and `publication.originalConversionNotes`. The draft-era `moduleReadiness[]` entries are archived in `validation.originalModuleReadiness` before their current content/readiness labels are updated. `generatorTested` retains its independent-testing meaning; it is not automatically marked true.
 
 The original source may have been **ESV**, even though the printed lesson is now an approved **BSB** excerpt. Preserve that fact. When a `sourceFiles[].note` contains the narrow stale phrase “BSB selection remains pending,” approval preserves the note verbatim as `sourceFiles[].originalConversionNote` before clarifying the current `note`. All original Story Notes, source questions, facts, real citations, and vocabulary remain untouched.
 

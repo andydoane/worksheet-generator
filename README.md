@@ -1,6 +1,8 @@
 > **New ChatGPT conversation or contributor?** Start with the [living Worksheet Studio project handoff](docs/PROJECT-HANDOFF.md). It explains the current development workflow, architecture, safeguards, and roadmap. For preparing lesson JSON, see the separate [curriculum conversion guide](docs/CURRICULUM-CONVERSION-GUIDE.md).
 >
 > The PR notes below are historical. Confirm current repository code, issues, and Actions before following any older release instructions.
+>
+> **Current presets:** Worksheet Studio offers **Preset 1, Preset 2, Preset 3, Preset 4, and Build My Own**. Preset 4 has a Crossword on Page 1; Large Word Search + Medium Upside Down Verse on Page 2; a Small pair (Multiple Choice, Draw a Picture) + Medium Pixel Picture + Medium Solve the Code on Page 3; and Medium Match the Words + a Small pair (True or False, What Doesn't Belong?) + Medium Unscramble the Verse on Page 4. Review Studio validates all four presets before publication.
 
 ## PR 17o — approve and publish new curricula with one JSON file (v0.16.29)
 
