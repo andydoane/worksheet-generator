@@ -1077,6 +1077,18 @@ Supply the unapproved JSON as its **own file**, plus a concise report with these
 
 If any required gate fails, correct the data or report a precise blocker; never substitute a reassuring summary for a test result.
 
+### Reading metadata in an approved Review Studio export
+
+The approved file intentionally contains **two different evidence layers**. Do not treat old conversion-stage `validation.checks[]` or `validation.actualGeneratorTested:false` as a claim that the final teacher review failed. They describe the converter's earlier checks, and their original `passed:false` / `NOT RUN` values must **not** be rewritten to successes. In new exports, `validation.checksScope:"original-conversion-before-teacher-review"` labels that history and `validation.originalBasis` preserves the prior basis.
+
+The **current approval evidence** is recorded in `publication.reviewStudioVerification` *only after Review Studio itself finishes a measured, issue-free **27/27** preflight*; the record includes an actual `checkedAt` UTC timestamp, the zero-issue result, and three numbered preset content checks. It does **not** claim standalone Node validation commands or independently rendered PDF exports passed. The signoff and BSB public-domain confirmation remain separate mandatory decisions. `schemaStatus` and `publication.notes` describe the current approved state; original draft labels/notes are archived in `publication.originalSchemaStatus` and `publication.originalConversionNotes`. The draft-era `moduleReadiness[]` entries are archived in `validation.originalModuleReadiness` before their current content/readiness labels are updated. `generatorTested` retains its independent-testing meaning; it is not automatically marked true.
+
+The original source may have been **ESV**, even though the printed lesson is now an approved **BSB** excerpt. Preserve that fact. When a `sourceFiles[].note` contains the narrow stale phrase “BSB selection remains pending,” approval preserves the note verbatim as `sourceFiles[].originalConversionNote` before clarifying the current `note`. All original Story Notes, source questions, facts, real citations, and vocabulary remain untouched.
+
+**Matching pairs have two different jobs:** the separately linked `matchingPairs[]` list is a source/candidate pool that can retain older alternatives, while `preparedActivities.matchWords[]` holds the exact teacher-reviewed pairs printed on the worksheet. Review Studio intentionally edits only the latter. Never auto-replace the candidate pool just to mirror printed choices.
+
+`publication.reviewFlagDisposition[]` clarifies whether each original review flag was resolved, is historical information, was only partially verified, or still requires explicit review. A `content-sensitivity` flag creates a teacher Age Suitability task; its resolution is recorded **only when that task was reviewed**. Original `reviewFlags[]` wording remains historical, including warnings made when BSB or generators were not yet reviewed. Existing approvals made before this enhancement do not retroactively acquire a new preflight certificate; re-review/re-export through the updated studio is needed to create that evidence.
+
 ## 9. Teacher workflow: direct upload to main is supported
 
 You can keep the familiar, simple workflow:

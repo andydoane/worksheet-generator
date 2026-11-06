@@ -168,7 +168,7 @@ test('Review UI records only live measured results and keeps source matching poo
  assert.match(ui,/checkedAt:new Date\(\)\.toISOString\(\)/u);
  assert.match(ui,/!!preflight\.checkedAt/u);
  assert.match(ui,/reviewedTaskIds:reviewed/u);
- assert.match(ui,/source.*Review Studio preflight/iu);
+ assert.match(ui,/runMeasuredPreflight/u);
  assert.match(model,/finalizeApprovedMetadata\(next,evidence\)/u);
  assert.match(model,/content-sensitivity/u);
  assert.match(ui,/active\.id==='sensitivity'/u);

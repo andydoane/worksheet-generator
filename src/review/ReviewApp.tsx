@@ -466,7 +466,7 @@ export default function ReviewApp(){
     preflight:{...preflight!,checkedAt:preflight!.checkedAt!},reviewedTaskIds:reviewed,
    });
    downloadJson(lesson.id+'.lesson.json',approved);
-   setError('Approved lesson downloaded with its own teacher signoff and Scripture-rights record. Add this ONE JSON file under curriculum/approved/ in a GitHub PR. Publication remains blocked until CI passes.');
+   setError('Approved lesson downloaded with its own teacher signoff and Scripture-rights record. Upload this ONE JSON file to curriculum/approved/ (directly to main or through a PR), then check GitHub Actions. Publication is not confirmed until CI and deployment pass.');
   }catch(e){setError(String((e as Error).message??e));}
  }
  const mcIndex=active?.id.startsWith('mc:')?lesson?.preparedActivities?.multipleChoice?.findIndex((x:any)=>'mc:'+x.id===active.id):-1;
