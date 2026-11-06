@@ -163,9 +163,9 @@ export default function ReviewApp(){
    const {puzzlePdf,boldPdf,finishBody}=await mediumWidths();
    // An edit or new lesson while fonts load must never restore stale success.
    if(request!==preflightRunId.current||latestLesson.current!==checkedLesson)return;
-   setPreflight(buildReviewPreflight(checkedLesson,{
+   setPreflight({...buildReviewPreflight(checkedLesson,{
     puzzle:puzzlePdf,verse:boldPdf,subtitle:finishBody,
-   }));
+   }),checkedAt:new Date().toISOString()});
    setError('');
   }catch(e){
    if(request!==preflightRunId.current||latestLesson.current!==checkedLesson)return;
@@ -440,7 +440,7 @@ export default function ReviewApp(){
  const verseWords=wordSpans(verseText);
  const versePreview=lesson?.lessonDetails?.memoryVerse;
  const canPublish=lesson&&remaining===0&&preflight!==null&&preflight.issues.length===0&&
-  preflight.convertedCount===preflight.totalCount&&
+  preflight.convertedCount===preflight.totalCount&&!!preflight.checkedAt&&
   reviewer.trim()&&signDate&&rightsConfirmed;
  function repairSchemaIssue(issue:ReviewIssue){
   if(!lesson||!issue.schemaRepair)return;
@@ -462,7 +462,9 @@ export default function ReviewApp(){
  function downloadApproved(){
   if(!canPublish||!lesson)return;
   try{
-   const approved=createApprovedLesson(lesson,reviewer,signDate,rightsConfirmed);
+   const approved=createApprovedLesson(lesson,reviewer,signDate,rightsConfirmed,{
+    preflight:{...preflight!,checkedAt:preflight!.checkedAt!},reviewedTaskIds:reviewed,
+   });
    downloadJson(lesson.id+'.lesson.json',approved);
    setError('Approved lesson downloaded with its own teacher signoff and Scripture-rights record. Add this ONE JSON file under curriculum/approved/ in a GitHub PR. Publication remains blocked until CI passes.');
   }catch(e){setError(String((e as Error).message??e));}
@@ -786,7 +788,8 @@ export default function ReviewApp(){
       </div>}
       {active.id==='sensitivity'&&<div className="review-note">
        <h3>Age suitability</h3>
-       <p>The curriculum discusses the destruction of the Egyptian army. Please decide whether the prepared story, sorting and drawing prompts use age-appropriate wording for your classes. You can adjust the relevant content in the working JSON before marking this reviewed.</p>
+       <p>{(lesson.reviewFlags??[]).filter((flag:any)=>['sensitivity','content-sensitivity'].includes(flag.type))
+        .map((flag:any)=>flag.text).join(' ')} Decide whether the lesson’s prepared materials are age-appropriate for your classes. Mark reviewed only after considering these concerns.</p>
       </div>}
       {active.id==='solve-code'&&<div className="review-fields">
        <div className="review-note">

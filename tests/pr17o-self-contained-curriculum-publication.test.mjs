@@ -65,7 +65,7 @@ test('Public catalog is folder-based; Review Studio no longer requires separate 
  assert.match(catalog,/curriculum\/approved\/\*\.lesson\.json/u);
  assert.doesNotMatch(catalog,/rights-manifest\.json/u);
  assert.doesNotMatch(studio,/loadManifest|downloadRights|confirmEmptyManifest|rights-manifest\.json/u);
- assert.match(studio,/createApprovedLesson\(lesson,reviewer,signDate,rightsConfirmed\)/u);
+ assert.match(studio,/createApprovedLesson\(lesson,reviewer,signDate,rightsConfirmed,\{/u);
  assert.match(studio,/Download approved lesson JSON/u);
  assert.match(studio,/official BSB public-domain terms/u);
  assert.doesNotMatch(lib,/rights-manifest\.json|orphan-rights/u);

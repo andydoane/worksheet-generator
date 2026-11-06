@@ -59,6 +59,8 @@ export type ReviewPreflight={
  convertedCount:number;
  totalCount:27;
  issues:ReviewIssue[];
+ /** Timestamp added only by the live browser after the measured run finishes. */
+ checkedAt?:string;
 };
 const moduleIds=new Set<string>(MODULES.map(item=>item.id));
 const labelFor=(id:string)=>MODULES.find(item=>item.id===id)?.name??id;
