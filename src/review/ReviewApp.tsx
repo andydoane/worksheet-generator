@@ -244,7 +244,9 @@ export default function ReviewApp(){
   if(!lesson)return;
   const field=key==='oddWords'?'unrelated':'incorrect';
   // Never silently replace teacher-reviewed words or unfinished edits.
-  if(wordBankDrafts[key][field].trim()&&!window.confirm(
+  const existing=key==='oddWords'?wordBankDrafts.oddWords.unrelated:
+   wordBankDrafts.checkboxes.incorrect;
+  if(existing.trim()&&!window.confirm(
    'Replace your current unrelated words with five random suggestions? '+
    'The old words will be replaced; you can edit the new choices before approval.'
   ))return;
