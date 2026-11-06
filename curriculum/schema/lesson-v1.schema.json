@@ -190,6 +190,10 @@
           },
           "note": {
             "type": "string"
+          },
+          "originalConversionNote": {
+            "type": "string",
+            "description": "Verbatim initial source-inventory note archived before a stale pending-BSB phrase was clarified at approval."
           }
         },
         "additionalProperties": true
@@ -1929,6 +1933,100 @@
             }
           },
           "additionalProperties": false
+        },
+        "originalConversionNotes": {
+          "type": "string",
+          "description": "Original unapproved draft notes, retained without alteration."
+        },
+        "originalSchemaStatus": {
+          "type": "string",
+          "description": "Original schemaStatus before Review Studio approval."
+        },
+        "reviewStudioVerification": {
+          "type": "object",
+          "description": "Current, candidate-specific preflight result recorded only after Review Studio completes measured preflight with no issues. Separate from historical conversion validation.checks.",
+          "required": [
+            "source",
+            "checkedAt",
+            "convertedCount",
+            "totalCount",
+            "issueCount",
+            "numberedPresetsChecked",
+            "scope",
+            "matchingWorksheetSource",
+            "matchingCandidatePool"
+          ],
+          "properties": {
+            "source": {
+              "type": "string",
+              "const": "Review Studio measured preflight"
+            },
+            "checkedAt": {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$"
+            },
+            "convertedCount": {
+              "type": "integer",
+              "const": 27
+            },
+            "totalCount": {
+              "type": "integer",
+              "const": 27
+            },
+            "issueCount": {
+              "type": "integer",
+              "const": 0
+            },
+            "numberedPresetsChecked": {
+              "type": "integer",
+              "const": 3
+            },
+            "scope": {
+              "type": "string",
+              "minLength": 1
+            },
+            "matchingWorksheetSource": {
+              "type": "string",
+              "const": "preparedActivities.matchWords"
+            },
+            "matchingCandidatePool": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "additionalProperties": false
+        },
+        "reviewFlagDisposition": {
+          "type": "array",
+          "description": "Resolution meaning for every original review flag; retains original reviewFlags text without implying every outstanding external check passed.",
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "status",
+              "detail"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "resolved",
+                  "historical",
+                  "partially-verified",
+                  "requires-review"
+                ]
+              },
+              "detail": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "additionalProperties": false
+          }
         }
       },
       "additionalProperties": false
@@ -1969,6 +2067,21 @@
         },
         "jsonParseTested": {
           "type": "boolean"
+        },
+        "originalBasis": {
+          "type": "string",
+          "description": "Original converter validation basis before teacher approval."
+        },
+        "checksScope": {
+          "type": "string",
+          "const": "original-conversion-before-teacher-review"
+        },
+        "originalModuleReadiness": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          },
+          "description": "Exact conversion-stage readiness records archived when passing Review Studio preflight updates the current 27 records."
         }
       },
       "additionalProperties": true
