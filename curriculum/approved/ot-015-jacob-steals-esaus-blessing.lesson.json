@@ -1,0 +1,3165 @@
+{
+  "schemaVersion": 1,
+  "schemaStatus": "unapproved-source-preserving-draft",
+  "id": "ot-015-jacob-steals-esaus-blessing",
+  "curriculum": {
+    "series": "Old Testament",
+    "lessonNumber": 15
+  },
+  "lessonDetails": {
+    "title": "Jacob Steals Esau’s Blessing",
+    "scripturePassages": [
+      "Genesis 27"
+    ],
+    "scriptureDisplay": "Genesis 27",
+    "bigIdeas": [
+      {
+        "text": "Sin makes a MESS.",
+        "origin": "source",
+        "source": {
+          "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+          "section": "Important Idea",
+          "page": 5,
+          "sourceParagraphIndex": 81,
+          "details": "Exact words and capitalization verified from blue Important Idea graphic; split across two display paragraphs. Joined duplicate text has missing spacing."
+        }
+      },
+      {
+        "text": "God can TURN our mess into a masterpiece.",
+        "origin": "source",
+        "source": {
+          "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+          "section": "Important Idea",
+          "page": 6,
+          "sourceParagraphIndex": 95,
+          "details": "Exact words and capitalization verified from green Important Idea graphic; split across two display paragraphs. Joined duplicate text has missing spacing."
+        }
+      }
+    ],
+    "memoryVerse": {
+      "reference": "Romans 8:28",
+      "translation": "BSB",
+      "text": "And we know that God works all things together for the good of those who love Him,",
+      "isExcerpt": true,
+      "hasEllipses": false,
+      "requiresTextReview": false,
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 112
+      },
+      "alsoVerifiedAt": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Verse and Motions",
+        "page": 7,
+        "sourceParagraphIndex": 118
+      },
+      "originalTranslation": "ESV",
+      "bsbSource": {
+        "reference": "Romans 8:28",
+        "sourceUrl": "https://bereanbible.com/bsb.txt",
+        "publicDomainTerms": "https://berean.bible/terms.htm",
+        "startWord": 0,
+        "endWord": 16
+      }
+    }
+  },
+  "sourceFiles": [
+    {
+      "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+      "format": "odt",
+      "role": "primary teaching source",
+      "note": "15 printed pages; no separate slideshow or activity resource sheets supplied. Original memory verse: Romans 8:28a ESV with ellipsis, pending teacher-selected BSB excerpt."
+    }
+  ],
+  "storyNotes": [
+    {
+      "id": "sn-01",
+      "order": 1,
+      "originalText": "Isaac sent Esau to hunt for food. After he returned, Isaac would give him his BLESSING.",
+      "cleanText": "Isaac sent Esau to hunt for food. After he returned, Isaac would give him his blessing.",
+      "emphasizedWords": [
+        "BLESSING"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "STORY NOTE",
+        "page": 1,
+        "sourceParagraphIndex": 20
+      }
+    },
+    {
+      "id": "sn-02",
+      "order": 2,
+      "originalText": "Rebekah came up with a plan to TRICK Isaac into blessing Jacob instead.",
+      "cleanText": "Rebekah came up with a plan to trick Isaac into blessing Jacob instead.",
+      "emphasizedWords": [
+        "TRICK"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "STORY NOTE",
+        "page": 2,
+        "sourceParagraphIndex": 28
+      }
+    },
+    {
+      "id": "sn-03",
+      "order": 3,
+      "originalText": "They dressed Jacob in Esau's clothes and covered his skin with GOAT hair.",
+      "cleanText": "They dressed Jacob in Esau's clothes and covered his skin with goat hair.",
+      "emphasizedWords": [
+        "GOAT"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "STORY NOTE",
+        "page": 3,
+        "sourceParagraphIndex": 37
+      }
+    },
+    {
+      "id": "sn-04",
+      "order": 4,
+      "originalText": "After touching the fur and SMELLING his clothes, Isaac gave Jacob his blessing.",
+      "cleanText": "After touching the fur and smelling his clothes, Isaac gave Jacob his blessing.",
+      "emphasizedWords": [
+        "SMELLING"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "STORY NOTE",
+        "page": 3,
+        "sourceParagraphIndex": 47
+      }
+    },
+    {
+      "id": "sn-05",
+      "order": 5,
+      "originalText": "Shortly after Jacob left, Esau RETURNED and brought food to Isaac.",
+      "cleanText": "Shortly after Jacob left, Esau returned and brought food to Isaac.",
+      "emphasizedWords": [
+        "RETURNED"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "STORY NOTE",
+        "page": 4,
+        "sourceParagraphIndex": 56
+      }
+    },
+    {
+      "id": "sn-06",
+      "order": 6,
+      "originalText": "Isaac and Esau quickly learned that JACOB had stolen the blessing.",
+      "cleanText": "Isaac and Esau quickly learned that jacob had stolen the blessing.",
+      "emphasizedWords": [
+        "JACOB"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "STORY NOTE",
+        "page": 4,
+        "sourceParagraphIndex": 64
+      }
+    },
+    {
+      "id": "sn-07",
+      "order": 7,
+      "originalText": "Esau was so angry, he planned to KILL Jacob.",
+      "cleanText": "Esau was so angry, he planned to kill Jacob.",
+      "emphasizedWords": [
+        "KILL"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "STORY NOTE",
+        "page": 5,
+        "sourceParagraphIndex": 70
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q-01",
+      "question": "Do you remember what book of the Bible we’ve been studying?",
+      "answer": "Genesis.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "introduction",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 3
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-02",
+      "question": "Do you remember what family we’ve been following?",
+      "answer": "Abraham’s family.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "introduction",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 4
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-03",
+      "question": "What promises did God make to Abraham’s family?",
+      "answer": "To grow them into a great nation, give them a great land, and use them to bless the whole world.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "introduction",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 7
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-04",
+      "question": "Who can tell us the names of this family of four?",
+      "answer": "Isaac, Rebekah, Jacob, and Esau.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "introduction",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 14
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-05",
+      "question": "Which of Isaac’s twin boys would get the blessing?",
+      "answer": "",
+      "kind": "discussion",
+      "origin": "source",
+      "scope": "introduction",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 17
+      },
+      "standaloneReady": false,
+      "notes": "Open or rhetorical question, no original parenthetical answer provided."
+    },
+    {
+      "id": "q-06",
+      "question": "What happened to Isaac as he grew old?",
+      "answer": "He couldn’t see.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 21
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-07",
+      "question": "Why was this a big deal?",
+      "answer": "",
+      "kind": "discussion",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 22
+      },
+      "standaloneReady": false,
+      "notes": "Open or rhetorical question, no original parenthetical answer provided."
+    },
+    {
+      "id": "q-08",
+      "question": "Which of the twins was Isaac going to give this blessing to?",
+      "answer": "Esau.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 25
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-09",
+      "question": "who was listening like a secret spy?",
+      "answer": "His wife, Rebekah.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 29
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-10",
+      "question": "Who was that?",
+      "answer": "Jacob.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 30
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-11",
+      "question": "What animals did Rebekah send Jacob to go get?",
+      "answer": "Goats.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 32
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-12",
+      "question": "What was different about their bodies?",
+      "answer": "Jacob had smooth skin; Esau was hairy.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Story",
+        "page": 3,
+        "sourceParagraphIndex": 38
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-13",
+      "question": "How did she make Jacob feel like his fuzzy big brother?",
+      "answer": "Dressed him in Esau’s clothes, wrapped goat skins around his hands and on his neck.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Story",
+        "page": 3,
+        "sourceParagraphIndex": 40
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-14",
+      "question": "He didn’t believe it was Esau until he did what?",
+      "answer": "Smelled Esau’s clothes.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Story",
+        "page": 3,
+        "sourceParagraphIndex": 49
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-15",
+      "question": "Who did he think he was praying for?",
+      "answer": "Esau.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Story",
+        "page": 3,
+        "sourceParagraphIndex": 50
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-16",
+      "question": "What were those precious promises from God?",
+      "answer": "God would grow his family into a great nation, give them a great blessing, give them a great land to live in, and use them to bless the entire world.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 53
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-17",
+      "question": "What was it?",
+      "answer": "Hunt for food, prepare a tasty meal for his dad.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 57
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-18",
+      "question": "What did Isaac say he would do after eating Esau’s food?",
+      "answer": "Give him his blessing.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 58
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-19",
+      "question": "What thoughts do you think went through Isaac’s mind when Esau said, “Hi, dad! Let’s eat. Then you can give me your blessing”?",
+      "answer": "Various responses.",
+      "kind": "discussion",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 61
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-20",
+      "question": "When Esau found out that someone else had been given his blessing, what did Esau say?",
+      "answer": "Bless me, too!",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 66
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-21",
+      "question": "How do you think Esau felt about this?",
+      "answer": "Various responses.",
+      "kind": "discussion",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Story",
+        "page": 5,
+        "sourceParagraphIndex": 68
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-22",
+      "question": "Why would his face be red?",
+      "answer": "He was so angry.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Story",
+        "page": 5,
+        "sourceParagraphIndex": 71
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-23",
+      "question": "Who remembers what happened with Esau’s birthright?",
+      "answer": "Jacob got hungry Esau to trade his firstborn rights for a bowl of stew.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Story",
+        "page": 5,
+        "sourceParagraphIndex": 75
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-24",
+      "question": "What was it?",
+      "answer": "After his father died, he would kill Jacob.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Story",
+        "page": 5,
+        "sourceParagraphIndex": 76
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-25",
+      "question": "how does the story of Jacob stealing Esau’s blessing teach us, strengthen us, encourage us, or give us hope?",
+      "answer": "",
+      "kind": "discussion",
+      "origin": "source",
+      "scope": "story application",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Story Application",
+        "page": 5,
+        "sourceParagraphIndex": 79
+      },
+      "standaloneReady": false,
+      "notes": "Open or rhetorical question, no original parenthetical answer provided."
+    },
+    {
+      "id": "q-26",
+      "question": "What did Esau want to do when he found out?",
+      "answer": "Kill Jacob.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story application",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Story Application",
+        "page": 5,
+        "sourceParagraphIndex": 85
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-27",
+      "question": "How did God use Jacob’s family to bless the entire world?",
+      "answer": "Their many-times-great grandson Jesus died to pay for our sins, then rose from the dead.",
+      "kind": "theological",
+      "origin": "source",
+      "scope": "story application",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Story Application",
+        "page": 6,
+        "sourceParagraphIndex": 103
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-28",
+      "question": "What does God promise to do for anyone who believes that Jesus died for our sins and rose from the dead?",
+      "answer": "Give them forever life in his good kingdom.",
+      "kind": "theological",
+      "origin": "source",
+      "scope": "story application",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Story Application",
+        "page": 6,
+        "sourceParagraphIndex": 105
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-29",
+      "question": "Who hunted wild animals in today’s story?",
+      "answer": "Esau.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "memory verse activity",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 116
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-30",
+      "question": "What does that remind you of?",
+      "answer": "Isaac was blind and Jacob brought him a meal to eat.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "extra activity ideas",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Extra Activity Ideas",
+        "page": 11,
+        "sourceParagraphIndex": 178
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-31",
+      "question": "What did Isaac send Esau to go do?",
+      "answer": "Hunt for some food for his father to eat",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Review Questions",
+        "page": 9,
+        "sourceParagraphIndex": 155
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-32",
+      "question": "What was Isaac going to give to Esau after the meal?",
+      "answer": "The special blessing of God",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Review Questions",
+        "page": 9,
+        "sourceParagraphIndex": 156
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-33",
+      "question": "Why was getting this blessing a big deal?",
+      "answer": "It came with all the promises God had made to Abraham and Isaac",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Review Questions",
+        "page": 9,
+        "sourceParagraphIndex": 157
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-34",
+      "question": "What tricky plan did Rebekah come up with?",
+      "answer": "To have Jacob pretend to be Esau and take the blessing",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Review Questions",
+        "page": 9,
+        "sourceParagraphIndex": 158
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-35",
+      "question": "What did Jacob do to fool Isaac?",
+      "answer": "Wore Esau’s clothes, wore goat fur, lied",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Review Questions",
+        "page": 9,
+        "sourceParagraphIndex": 159
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-36",
+      "question": "What did Isaac say when Jacob spoke?",
+      "answer": "The voice is Jacob’s, but the hands are Esau’s",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 160
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-37",
+      "question": "When did Isaac finally believe Jacob was Esau?",
+      "answer": "After smelling him",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 161
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-38",
+      "question": "After eating Jacob’s food, what did Isaac do?",
+      "answer": "Give Jacob the blessing of God",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 162
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-39",
+      "question": "When Esau came in with his food, what did Isaac say and do?",
+      "answer": "“Who are you?”, he started shaking",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 163
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-40",
+      "question": "How did Esau feel about what Jacob did? What did Esau plan to do?",
+      "answer": "Angry, he planned to kill Jacob",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 164
+      },
+      "standaloneReady": true
+    }
+  ],
+  "facts": [
+    {
+      "id": "tf-01",
+      "statement": "Isaac planned to bless Esau after eating his food.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-02",
+      "statement": "Isaac sent Esau to gather grapes for a feast.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-03",
+      "statement": "Rebekah wanted Jacob to receive Esau’s blessing.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-04",
+      "statement": "Rebekah warned Jacob not to deceive his father.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-02"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-05",
+      "statement": "Jacob wore Esau’s clothes and goat skins.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-06",
+      "statement": "Jacob disguised himself with sheep’s wool.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-03"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-07",
+      "statement": "Isaac noticed Jacob’s voice sounded different.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Story",
+        "page": 3,
+        "sourceParagraphIndex": 44
+      }
+    },
+    {
+      "id": "tf-08",
+      "statement": "Isaac blessed Jacob after smelling Esau’s clothes.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-09",
+      "statement": "Isaac refused to give anyone a blessing.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-04"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-10",
+      "statement": "Esau returned with food after Jacob had left.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-11",
+      "statement": "Esau returned before Jacob left his father.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-12",
+      "statement": "Isaac and Esau learned Jacob had taken the blessing.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-13",
+      "statement": "Isaac celebrated when Esau revealed the trick.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-06"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-14",
+      "statement": "Esau grew angry enough to plan to kill Jacob.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-15",
+      "statement": "Esau was delighted that Jacob had taken his blessing.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-16",
+      "statement": "Isaac was able to see Jacob’s clothes clearly.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-03"
+      ],
+      "teacherReviewRequired": true,
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Story",
+        "page": 1,
+        "sourceParagraphIndex": 19
+      }
+    },
+    {
+      "id": "tf-17",
+      "statement": "Rebekah told Jacob to bring two young goats.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02",
+        "sn-03"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 27
+      }
+    },
+    {
+      "id": "tf-18",
+      "statement": "Jacob said he was Esau when speaking to Isaac.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03",
+        "sn-04"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Story",
+        "page": 3,
+        "sourceParagraphIndex": 42
+      }
+    },
+    {
+      "id": "tf-19",
+      "statement": "Esau asked Isaac to bless him too.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 63
+      }
+    },
+    {
+      "id": "tf-20",
+      "statement": "Jacob had previously traded stew for Esau’s birthright.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Story",
+        "page": 5,
+        "sourceParagraphIndex": 75
+      }
+    },
+    {
+      "id": "tf-21",
+      "statement": "Esau planned to give Jacob a gift as an apology.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-22",
+      "statement": "God’s promise to bless the world through Jacob’s family was part of the lesson.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Story Application",
+        "page": 6,
+        "sourceParagraphIndex": 99
+      }
+    }
+  ],
+  "vocabulary": {
+    "related": [
+      "ISAAC",
+      "REBEKAH",
+      "JACOB",
+      "ESAU",
+      "ABRAHAM",
+      "TWINS",
+      "HUNTER",
+      "GOATS",
+      "GOAT HAIR",
+      "CLOTHES",
+      "BLESSING",
+      "PROMISES",
+      "TRICK",
+      "DISGUISE",
+      "SMELLING",
+      "MEAL",
+      "VOICE",
+      "FUR",
+      "BLIND",
+      "RETURNED",
+      "BIRTHRIGHT",
+      "BROTHER",
+      "ANGRY",
+      "STEW",
+      "KILL",
+      "LAND",
+      "NATION",
+      "MESS",
+      "MASTERPIECE",
+      "JESUS"
+    ],
+    "unrelated": [
+      "GOLIATH",
+      "JERICHO",
+      "MANNA",
+      "MIRIAM",
+      "PHARAOH",
+      "RAVEN",
+      "PSALMS",
+      "LOCUSTS",
+      "GIDEON",
+      "JONAH"
+    ],
+    "entries": [
+      {
+        "id": "v-01",
+        "term": "ISAAC",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "id": "v-02",
+        "term": "REBEKAH",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "id": "v-03",
+        "term": "JACOB",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "id": "v-04",
+        "term": "ESAU",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "id": "v-05",
+        "term": "ABRAHAM",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "id": "v-06",
+        "term": "TWINS",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "id": "v-07",
+        "term": "HUNTER",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "source": {
+          "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+          "section": "Story",
+          "page": 1,
+          "sourceParagraphIndex": 19
+        }
+      },
+      {
+        "id": "v-08",
+        "term": "GOATS",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "id": "v-09",
+        "term": "GOAT HAIR",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "id": "v-10",
+        "term": "CLOTHES",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "id": "v-11",
+        "term": "BLESSING",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "id": "v-12",
+        "term": "PROMISES",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "source": {
+          "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+          "section": "Introduction",
+          "page": 1,
+          "sourceParagraphIndex": 7
+        }
+      },
+      {
+        "id": "v-13",
+        "term": "TRICK",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "id": "v-14",
+        "term": "DISGUISE",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "source": {
+          "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+          "section": "Story",
+          "page": 2,
+          "sourceParagraphIndex": 36
+        }
+      },
+      {
+        "id": "v-15",
+        "term": "SMELLING",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "id": "v-16",
+        "term": "MEAL",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "id": "v-17",
+        "term": "VOICE",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ],
+        "source": {
+          "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+          "section": "Story",
+          "page": 3,
+          "sourceParagraphIndex": 44
+        }
+      },
+      {
+        "id": "v-18",
+        "term": "FUR",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "id": "v-19",
+        "term": "BLIND",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "source": {
+          "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+          "section": "Story",
+          "page": 1,
+          "sourceParagraphIndex": 19
+        }
+      },
+      {
+        "id": "v-20",
+        "term": "RETURNED",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "id": "v-21",
+        "term": "BIRTHRIGHT",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ],
+        "source": {
+          "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+          "section": "Story",
+          "page": 5,
+          "sourceParagraphIndex": 75
+        }
+      },
+      {
+        "id": "v-22",
+        "term": "BROTHER",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "id": "v-23",
+        "term": "ANGRY",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "id": "v-24",
+        "term": "STEW",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ],
+        "source": {
+          "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+          "section": "Story",
+          "page": 5,
+          "sourceParagraphIndex": 75
+        }
+      },
+      {
+        "id": "v-25",
+        "term": "KILL",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      },
+      {
+        "id": "v-26",
+        "term": "LAND",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "id": "v-27",
+        "term": "NATION",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "id": "v-28",
+        "term": "MESS",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ],
+        "source": {
+          "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+          "section": "Important Idea",
+          "page": 5,
+          "sourceParagraphIndex": 81
+        }
+      },
+      {
+        "id": "v-29",
+        "term": "MASTERPIECE",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ],
+        "source": {
+          "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+          "section": "Important Idea",
+          "page": 6,
+          "sourceParagraphIndex": 95
+        }
+      },
+      {
+        "id": "v-30",
+        "term": "JESUS",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ],
+        "source": {
+          "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+          "section": "Story Application",
+          "page": 6,
+          "sourceParagraphIndex": 103
+        }
+      }
+    ]
+  },
+  "characters": [
+    {
+      "id": "ch-01",
+      "name": "Isaac",
+      "origin": "source",
+      "sourceIds": [
+        "sn-01",
+        "sn-04",
+        "sn-06"
+      ],
+      "clues": [
+        {
+          "text": "My eyes had grown weak, and I gave a blessing after eating a meal.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-01",
+            "sn-04"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch-02",
+      "name": "Rebekah",
+      "origin": "source",
+      "sourceIds": [
+        "sn-02"
+      ],
+      "clues": [
+        {
+          "text": "I devised a plan for Jacob to receive his brother’s blessing.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-02"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch-03",
+      "name": "Jacob",
+      "origin": "source",
+      "sourceIds": [
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "clues": [
+        {
+          "text": "I wore goat skins and my brother’s clothes to fool my father.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-03",
+            "sn-04"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch-04",
+      "name": "Esau",
+      "origin": "source",
+      "sourceIds": [
+        "sn-01",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "clues": [
+        {
+          "text": "I returned from hunting and discovered my blessing had been given away.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-05",
+            "sn-06"
+          ]
+        }
+      ]
+    }
+  ],
+  "matchingPairs": [
+    {
+      "id": "mp-01",
+      "left": "Isaac",
+      "right": "Father",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    {
+      "id": "mp-02",
+      "left": "Rebekah",
+      "right": "Made the plan",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ]
+    },
+    {
+      "id": "mp-03",
+      "left": "Jacob",
+      "right": "Disguised son",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ]
+    },
+    {
+      "id": "mp-04",
+      "left": "Esau",
+      "right": "Hunter",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ]
+    },
+    {
+      "id": "mp-05",
+      "left": "Goat skins",
+      "right": "Hairy hands",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ]
+    },
+    {
+      "id": "mp-06",
+      "left": "Blessing",
+      "right": "Given to Jacob",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ]
+    }
+  ],
+  "drawingPrompts": [
+    {
+      "id": "dp-01",
+      "prompt": "Isaac asking Esau to hunt and bring him food",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    {
+      "id": "dp-02",
+      "prompt": "Rebekah telling Jacob her plan to get Esau’s blessing",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ]
+    },
+    {
+      "id": "dp-03",
+      "prompt": "Jacob wearing Esau’s clothes and goat fur on his hands",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ]
+    },
+    {
+      "id": "dp-04",
+      "prompt": "Isaac touching Jacob’s furry hands as he tests who he is",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ]
+    },
+    {
+      "id": "dp-05",
+      "prompt": "Esau bringing food to Isaac after Jacob has left",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ]
+    },
+    {
+      "id": "dp-06",
+      "prompt": "Isaac and Esau realizing Jacob took the blessing",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ]
+    },
+    {
+      "id": "dp-07",
+      "prompt": "angry Esau making a plan against Jacob",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ]
+    }
+  ],
+  "keyPhrases": [
+    {
+      "id": "kp-01",
+      "text": "Sin makes a MESS.",
+      "origin": "source",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Important Idea",
+        "page": 5,
+        "sourceParagraphIndex": 81,
+        "details": "Exact words and capitalization verified from blue Important Idea graphic; split across two display paragraphs. Joined duplicate text has missing spacing."
+      }
+    },
+    {
+      "id": "kp-02",
+      "text": "God can TURN our mess into a masterpiece.",
+      "origin": "source",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Important Idea",
+        "page": 6,
+        "sourceParagraphIndex": 95,
+        "details": "Exact words and capitalization verified from green Important Idea graphic; split across two display paragraphs. Joined duplicate text has missing spacing."
+      }
+    },
+    {
+      "id": "kp-03",
+      "text": "Jacob disguised himself to take the blessing intended for Esau.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Story",
+        "page": 3,
+        "sourceParagraphIndex": 36
+      }
+    },
+    {
+      "id": "kp-04",
+      "text": "Esau became angry when he learned Jacob had taken the blessing.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Story",
+        "page": 5,
+        "sourceParagraphIndex": 71
+      }
+    }
+  ],
+  "theologicalApplications": [
+    {
+      "id": "app-01",
+      "text": "Sin makes a MESS.",
+      "origin": "source",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Important Idea",
+        "page": 5,
+        "sourceParagraphIndex": 81,
+        "details": "Exact words and capitalization verified from blue Important Idea graphic; split across two display paragraphs. Joined duplicate text has missing spacing."
+      }
+    },
+    {
+      "id": "app-02",
+      "text": "God can TURN our mess into a masterpiece.",
+      "origin": "source",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Important Idea",
+        "page": 6,
+        "sourceParagraphIndex": 95,
+        "details": "Exact words and capitalization verified from green Important Idea graphic; split across two display paragraphs. Joined duplicate text has missing spacing."
+      }
+    },
+    {
+      "id": "app-03",
+      "text": "The lesson teaches that Jacob and Rebekah’s deception harmed their family.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Story Application",
+        "page": 5,
+        "sourceParagraphIndex": 83
+      },
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "app-04",
+      "text": "The lesson relates God’s continuing promises to the coming of Jesus and his death and resurrection.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Story Application",
+        "page": 6,
+        "sourceParagraphIndex": 103
+      },
+      "teacherReviewRequired": true
+    }
+  ],
+  "preparedActivities": {
+    "drawPicture": {
+      "prompt": "Jacob wearing Esau’s clothes and goat fur on his hands",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ]
+    },
+    "multipleChoice": [
+      {
+        "id": "mc-01",
+        "question": "What did Isaac ask Esau to do before receiving the blessing?",
+        "correctAnswer": "Hunt and prepare food",
+        "choices": [
+          {
+            "text": "Hunt and prepare food",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Bring the family’s sheep inside",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Take a gift to Abraham",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceQuestionIds": [
+          "q-31"
+        ],
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-02",
+        "question": "What did Isaac plan to give Esau after eating?",
+        "correctAnswer": "A special blessing",
+        "choices": [
+          {
+            "text": "A special blessing",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "His favorite coat",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "A beautiful robe",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceQuestionIds": [
+          "q-32"
+        ],
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-03",
+        "question": "How did Rebekah plan to get Jacob the blessing?",
+        "correctAnswer": "Pretend to be Esau",
+        "choices": [
+          {
+            "text": "Pretend to be Esau",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Go hunting with Esau",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Beg Isaac to bless him instead",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceQuestionIds": [
+          "q-34"
+        ],
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-04",
+        "question": "What animals did Rebekah ask Jacob to bring?",
+        "correctAnswer": "Young goats",
+        "choices": [
+          {
+            "text": "Young goats",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Wild deer",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Chickens",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceQuestionIds": [
+          "q-11"
+        ],
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-05",
+        "question": "How did Jacob make his hands feel like Esau’s?",
+        "correctAnswer": "He wore goat skins",
+        "choices": [
+          {
+            "text": "He wore goat skins",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "He wore thick gloves",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "He rubbed them with olive oil",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceQuestionIds": [
+          "q-35"
+        ],
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-06",
+        "question": "What made Isaac suspicious that he wasn't talking to Esau?",
+        "correctAnswer": "The voice sounded like Jacob’s",
+        "choices": [
+          {
+            "text": "The voice sounded like Jacob’s",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "The meat tasted too salty",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "He could see Jacob’s clothes",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceQuestionIds": [
+          "q-36"
+        ],
+        "sourceIds": [
+          "sn-04"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-07",
+        "question": "What convinced Isaac to give the blessing?",
+        "correctAnswer": "He smelled Esau’s clothes",
+        "choices": [
+          {
+            "text": "He smelled Esau’s clothes",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "He saw Esau’s face",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "He felt Jacob's beard",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceQuestionIds": [
+          "q-37"
+        ],
+        "sourceIds": [
+          "sn-04"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-08",
+        "question": "What did Isaac give Jacob after the meal?",
+        "correctAnswer": "The blessing",
+        "choices": [
+          {
+            "text": "The blessing",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Esau’s bow",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "A bag of silver",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceQuestionIds": [
+          "q-38"
+        ],
+        "sourceIds": [
+          "sn-04"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-09",
+        "question": "Why did Isaac shake when Esau returned?",
+        "correctAnswer": "He realized someone had fooled him",
+        "choices": [
+          {
+            "text": "He realized someone had fooled him",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "He was angry at Esau’s cooking",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "He was frightened by the weather",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceQuestionIds": [
+          "q-39"
+        ],
+        "sourceIds": [
+          "sn-05",
+          "sn-06"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-10",
+        "question": "How did Esau respond when he learned about the blessing?",
+        "correctAnswer": "He grew angry and threatened Jacob",
+        "choices": [
+          {
+            "text": "He grew angry and threatened Jacob",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "He thanked Jacob for the gift",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "He laughed at Jacob's trick",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceQuestionIds": [
+          "q-40"
+        ],
+        "sourceIds": [
+          "sn-06",
+          "sn-07"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-11",
+        "question": "Why was the blessing especially important?",
+        "correctAnswer": "It carried God’s promises",
+        "choices": [
+          {
+            "text": "It carried God’s promises",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "It made Esau the fastest hunter",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "It meant Esau would get new clothes",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "sourceQuestionIds": [
+          "q-33"
+        ],
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": true
+      }
+    ],
+    "trueFalse": {
+      "factId": "tf-08",
+      "statement": "Isaac blessed Jacob after smelling Esau’s clothes.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ],
+      "teacherReviewRequired": false
+    },
+    "firstLetters": {
+      "reference": "Romans 8:28",
+      "verse": "And we know that God works all things together for the good of those who love Him,",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "oddWords": {
+      "related": [
+        "ISAAC",
+        "ESAU",
+        "GOAT",
+        "BLESSING",
+        "REBEKAH"
+      ],
+      "unrelated": [
+        "island",
+        "incense",
+        "fleece",
+        "stump",
+        "angel"
+      ],
+      "unrelatedOrigin": "suggested",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "unscrambleWords": {
+      "answers": [
+        "BLESSING",
+        "GOAT FUR"
+      ],
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-03"
+      ]
+    },
+    "checkboxes": {
+      "correct": [
+        "JACOB",
+        "FUR",
+        "HUNTER",
+        "CLOTHES",
+        "REBEKAH"
+      ],
+      "incorrect": [
+        "command",
+        "honey",
+        "Abram",
+        "pigs",
+        "desert"
+      ],
+      "incorrectOrigin": "suggested",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "whoAmI": {
+      "clue": "I went hunting, but when I returned my brother had stolen the blessing meant for me.",
+      "answer": "Esau",
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-05",
+        "sn-06"
+      ],
+      "teacherReviewRequired": true
+    },
+    "matchWords": [
+      {
+        "left": "Isaac",
+        "right": "Blind",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "left": "Rebekah",
+        "right": "Mother",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "left": "Jacob",
+        "right": "Trickster",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "left": "Esau",
+        "right": "Hunter",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "left": "Disguise",
+        "right": "Goat fur",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "left": "Blessing",
+        "right": "Stolen",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-04"
+        ],
+        "teacherReviewRequired": true
+      }
+    ],
+    "finishVerse": {
+      "reference": "Romans 8:28",
+      "sourceVerse": "And we know that God works all things together for the good of those who love Him,",
+      "markedVerse": "And we [know] that [God] works [all] things [together] for the [good] of those who love [Him],",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "unscrambleVerse": {
+      "reference": "Romans 8:28",
+      "sourceVerse": "And we know that God works all things together for the good of those who love Him,",
+      "markedVerse": "And we [know] that [God] works [all] things [together] for the [good] of those who love [Him],",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "circleMistakes": {
+      "paragraph": "Isaac asked Esau to bring him a feast of fruit. Rachel planned to trick Isaac. Jacob wore a robe made of feathers as his disguise. Isaac could see Jacob clearly. After touching him and smelling his clothes, Isaac figured out Jacob was tricking him. When Esau returned, he cheered for Jacob.",
+      "mistakeCount": 6,
+      "mistakes": [
+        {
+          "incorrect": "a feast of fruit",
+          "correction": "wild meat",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "Rachel",
+          "correction": "Rebekah",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "a robe made of feathers",
+          "correction": "Esau’s clothes and goat skins",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "could see Jacob clearly",
+          "correction": "could not see",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "figured out Jacob was tricking him",
+          "correction": "gave Jacob the blessing",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "cheered for Jacob",
+          "correction": "was very angry",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "mediumWordSearch": {
+      "words": [
+        "ISAAC",
+        "ESAU",
+        "JACOB",
+        "GOAT",
+        "FUR",
+        "TRICK"
+      ],
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04"
+      ]
+    },
+    "trueFalseMaze": {
+      "factId": "tf-11",
+      "statement": "Esau returned before Jacob left his father.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": true
+    },
+    "bigIdeaCryptogram": {
+      "phrase": "God can TURN our mess into a masterpiece.",
+      "origin": "source",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Important Idea",
+        "page": 6,
+        "sourceParagraphIndex": 95,
+        "details": "Exact words and capitalization verified from green Important Idea graphic; split across two display paragraphs. Joined duplicate text has missing spacing."
+      },
+      "sourceIds": [],
+      "teacherReviewRequired": false
+    },
+    "upsideDownVerse": {
+      "reference": "Romans 8:28",
+      "verse": "And we know that God works all things together for the good of those who love Him,",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "connectBigIdea": {
+      "phrase": "God can TURN our mess into a masterpiece.",
+      "origin": "source",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Important Idea",
+        "page": 6,
+        "sourceParagraphIndex": 95,
+        "details": "Exact words and capitalization verified from green Important Idea graphic; split across two display paragraphs. Joined duplicate text has missing spacing."
+      }
+    },
+    "pixelPicture": {
+      "phrase": "God can turn a family mess into a masterpiece.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 15 Lesson (Jacob Steals Esau's Blessing).odt",
+        "section": "Story Application",
+        "page": 6,
+        "sourceParagraphIndex": 97
+      },
+      "teacherReviewRequired": true
+    },
+    "finishStory": {
+      "markedParagraph": "When [Isaac] grew old, he asked Esau to hunt and bring him food before receiving his [BLESSING]. While Esau was away, [Rebekah] made a plan to [TRICK] Isaac. Jacob put on his brother’s clothes and covered his hands with [GOAT] hair. Isaac could not see clearly, but he recognized Jacob’s voice. After touching the fur and [SMELLING] the clothes, Isaac gave the blessing to [JACOB]. Soon Esau [RETURNED] with food and discovered that his blessing had been taken. He became so [angry] that he planned to [KILL] Jacob. The family’s [deception] caused pain, but the this story teaches us that God can turn a [mess] into a masterpiece.",
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "storyOrder": [
+      {
+        "order": 1,
+        "text": "Isaac told Esau to hunt for food before receiving his blessing.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "order": 2,
+        "text": "Rebekah planned to have Jacob receive the blessing intended for Esau.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "order": 3,
+        "text": "Jacob put on Esau’s clothes and covered his skin with goat fur.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "order": 4,
+        "text": "Isaac touched Jacob’s furry hands, smelled his clothes, and gave him the blessing.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "order": 5,
+        "text": "After Jacob left, Esau came back from hunting with food for Isaac.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "order": 6,
+        "text": "Isaac and Esau discovered that Jacob had taken Esau’s blessing.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "order": 7,
+        "text": "Esau became so angry that he planned to kill Jacob.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      }
+    ],
+    "sortStory": [
+      {
+        "factId": "tf-01",
+        "statement": "Isaac planned to bless Esau after eating his food.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "factId": "tf-02",
+        "statement": "Isaac sent Esau to gather grapes for a feast.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-03",
+        "statement": "Rebekah wanted Jacob to receive Esau’s blessing.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "factId": "tf-04",
+        "statement": "Rebekah warned Jacob not to deceive his father.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-05",
+        "statement": "Jacob wore Esau’s clothes and goat skins.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "factId": "tf-06",
+        "statement": "Jacob disguised himself with sheep’s wool.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-10",
+        "statement": "Esau returned with food after Jacob had left.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "factId": "tf-15",
+        "statement": "Esau was delighted that Jacob had taken his blessing.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-07"
+        ],
+        "teacherReviewRequired": true
+      }
+    ],
+    "drawStory": [
+      {
+        "prompt": "Isaac told Esau to hunt for food before receiving his blessing.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "prompt": "Rebekah planned to have Jacob receive the blessing intended for Esau.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "prompt": "Jacob put on Esau’s clothes and covered his skin with goat fur.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "prompt": "Isaac touched Jacob’s furry hands, smelled his clothes, and gave him the blessing.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "prompt": "After Jacob left, Esau came back from hunting with food for Isaac.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "prompt": "Esau became so angry that he planned to kill Jacob.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      }
+    ],
+    "wordSearch": {
+      "words": [
+        "ISAAC",
+        "REBEKAH",
+        "JACOB",
+        "ESAU",
+        "GOATS",
+        "FUR",
+        "CLOTHES",
+        "BLESSING",
+        "HUNTER",
+        "VOICE",
+        "TRICK",
+        "BIRTHRIGHT"
+      ],
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ]
+    },
+    "verseCryptogram": {
+      "reference": "Romans 8:28",
+      "verse": "And we know that God works all things together for the good of those who love Him,",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "crossword": [
+      {
+        "answer": "ISAAC",
+        "clue": "Which father was unable to see clearly?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "answer": "ESAU",
+        "clue": "Which son was sent to hunt for food?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "answer": "JACOB",
+        "clue": "Who pretended to be his older brother?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "answer": "REBEKAH",
+        "clue": "She helped Jacob trick isaac.",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "GOATS",
+        "clue": "Which animals provided skins for the disguise?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "answer": "FUR",
+        "clue": "What covered Jacob’s hands to make them feel hairy?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "answer": "CLOTHES",
+        "clue": "What did Jacob borrow from Esau to disguise himself?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "answer": "VOICE",
+        "clue": "What made Isaac suspect the visitor was Jacob?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "answer": "BLESSING",
+        "clue": "What did Jacob receive from Isaac?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "answer": "HUNTER",
+        "clue": "Esau went out to be this before receiving his blessing.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      }
+    ],
+    "spiralVerse": {
+      "reference": "Romans 8:28",
+      "verse": "And we know that God works all things together for the good of those who love Him,",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "connectVerse": {
+      "reference": "Romans 8:28",
+      "verse": "And we know that God works all things together for the good of those who love Him,",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    }
+  },
+  "moduleReadiness": [
+    {
+      "moduleName": "Draw a Picture",
+      "moduleId": "draw-picture",
+      "size": "Small",
+      "preparedActivityKey": "drawPicture",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks only; official Review Studio preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Prepared content; real generator and preset layouts NOT RUN."
+    },
+    {
+      "moduleName": "Multiple Choice Question",
+      "moduleId": "multiple-choice",
+      "size": "Small",
+      "preparedActivityKey": "multipleChoice",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks only; official Review Studio preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Prepared content; real generator and preset layouts NOT RUN."
+    },
+    {
+      "moduleName": "True/False",
+      "moduleId": "true-false",
+      "size": "Small",
+      "preparedActivityKey": "trueFalse",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks only; official Review Studio preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Prepared content; real generator and preset layouts NOT RUN."
+    },
+    {
+      "moduleName": "First Letter Challenge",
+      "moduleId": "first-letters",
+      "size": "Small",
+      "preparedActivityKey": "firstLetters",
+      "status": "ADAPTATION NEEDED",
+      "contentValidation": "Candidate local authoring checks only; official Review Studio preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Original ESV excerpt retained; teacher must select verified BSB excerpt in Review Studio. Print checks pending."
+    },
+    {
+      "moduleName": "Odd Words",
+      "moduleId": "odd-words",
+      "size": "Small",
+      "preparedActivityKey": "oddWords",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks only; official Review Studio preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Prepared content; real generator and preset layouts NOT RUN."
+    },
+    {
+      "moduleName": "Unscramble the Words",
+      "moduleId": "unscramble-words",
+      "size": "Small",
+      "preparedActivityKey": "unscrambleWords",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks only; official Review Studio preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Prepared content; real generator and preset layouts NOT RUN."
+    },
+    {
+      "moduleName": "Checkboxes",
+      "moduleId": "checkboxes",
+      "size": "Small",
+      "preparedActivityKey": "checkboxes",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks only; official Review Studio preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Prepared content; real generator and preset layouts NOT RUN."
+    },
+    {
+      "moduleName": "Who Am I?",
+      "moduleId": "who-am-i",
+      "size": "Small",
+      "preparedActivityKey": "whoAmI",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks only; official Review Studio preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Prepared content; real generator and preset layouts NOT RUN."
+    },
+    {
+      "moduleName": "Match Words",
+      "moduleId": "match-words",
+      "size": "Small",
+      "preparedActivityKey": "matchWords",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks only; official Review Studio preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Prepared content; real generator and preset layouts NOT RUN."
+    },
+    {
+      "moduleName": "Finish the Verse",
+      "moduleId": "finish-verse",
+      "size": "Medium",
+      "preparedActivityKey": "finishVerse",
+      "status": "ADAPTATION NEEDED",
+      "contentValidation": "Candidate local authoring checks only; official Review Studio preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Original ESV excerpt retained; teacher must select verified BSB excerpt in Review Studio. Print checks pending."
+    },
+    {
+      "moduleName": "Unscramble the Verse",
+      "moduleId": "unscramble-verse",
+      "size": "Medium",
+      "preparedActivityKey": "unscrambleVerse",
+      "status": "ADAPTATION NEEDED",
+      "contentValidation": "Candidate local authoring checks only; official Review Studio preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Original ESV excerpt retained; teacher must select verified BSB excerpt in Review Studio. Print checks pending."
+    },
+    {
+      "moduleName": "Circle the Mistakes",
+      "moduleId": "circle-mistakes",
+      "size": "Medium",
+      "preparedActivityKey": "circleMistakes",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks only; official Review Studio preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Prepared content; real generator and preset layouts NOT RUN."
+    },
+    {
+      "moduleName": "Word Search",
+      "moduleId": "medium-word-search",
+      "size": "Medium",
+      "preparedActivityKey": "mediumWordSearch",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks only; official Review Studio preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Prepared content; real generator and preset layouts NOT RUN."
+    },
+    {
+      "moduleName": "True/False Maze",
+      "moduleId": "true-false-maze",
+      "size": "Medium",
+      "preparedActivityKey": "trueFalseMaze",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks only; official Review Studio preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Prepared content; real generator and preset layouts NOT RUN."
+    },
+    {
+      "moduleName": "Solve the Code",
+      "moduleId": "big-idea-cryptogram",
+      "size": "Medium",
+      "preparedActivityKey": "bigIdeaCryptogram",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks only; official Review Studio preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Prepared content; real generator and preset layouts NOT RUN."
+    },
+    {
+      "moduleName": "Upside-Down Verse",
+      "moduleId": "upside-down-verse",
+      "size": "Medium",
+      "preparedActivityKey": "upsideDownVerse",
+      "status": "ADAPTATION NEEDED",
+      "contentValidation": "Candidate local authoring checks only; official Review Studio preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Original ESV excerpt retained; teacher must select verified BSB excerpt in Review Studio. Print checks pending."
+    },
+    {
+      "moduleName": "Connect the Big Idea",
+      "moduleId": "connect-big-idea",
+      "size": "Medium",
+      "preparedActivityKey": "connectBigIdea",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks only; official Review Studio preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Prepared content; real generator and preset layouts NOT RUN."
+    },
+    {
+      "moduleName": "Pixel Picture",
+      "moduleId": "pixel-picture",
+      "size": "Medium",
+      "preparedActivityKey": "pixelPicture",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks only; official Review Studio preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Prepared content; real generator and preset layouts NOT RUN."
+    },
+    {
+      "moduleName": "Finish the Story",
+      "moduleId": "finish-story",
+      "size": "Large",
+      "preparedActivityKey": "finishStory",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks only; official Review Studio preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Prepared content; real generator and preset layouts NOT RUN."
+    },
+    {
+      "moduleName": "Story Order",
+      "moduleId": "story-order",
+      "size": "Large",
+      "preparedActivityKey": "storyOrder",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks only; official Review Studio preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Prepared content; real generator and preset layouts NOT RUN."
+    },
+    {
+      "moduleName": "Sort the Story",
+      "moduleId": "sort-story",
+      "size": "Large",
+      "preparedActivityKey": "sortStory",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks only; official Review Studio preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Prepared content; real generator and preset layouts NOT RUN."
+    },
+    {
+      "moduleName": "Draw the Story",
+      "moduleId": "draw-story",
+      "size": "Large",
+      "preparedActivityKey": "drawStory",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks only; official Review Studio preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Prepared content; real generator and preset layouts NOT RUN."
+    },
+    {
+      "moduleName": "Word Search",
+      "moduleId": "word-search",
+      "size": "Large",
+      "preparedActivityKey": "wordSearch",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks only; official Review Studio preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Prepared content; real generator and preset layouts NOT RUN."
+    },
+    {
+      "moduleName": "Verse Cryptogram",
+      "moduleId": "verse-cryptogram",
+      "size": "Large",
+      "preparedActivityKey": "verseCryptogram",
+      "status": "ADAPTATION NEEDED",
+      "contentValidation": "Candidate local authoring checks only; official Review Studio preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Original ESV excerpt retained; teacher must select verified BSB excerpt in Review Studio. Print checks pending."
+    },
+    {
+      "moduleName": "Crossword",
+      "moduleId": "crossword",
+      "size": "Large",
+      "preparedActivityKey": "crossword",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks only; official Review Studio preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Prepared content; real generator and preset layouts NOT RUN."
+    },
+    {
+      "moduleName": "Spiral Verse",
+      "moduleId": "spiral-verse",
+      "size": "Large",
+      "preparedActivityKey": "spiralVerse",
+      "status": "ADAPTATION NEEDED",
+      "contentValidation": "Candidate local authoring checks only; official Review Studio preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Original ESV excerpt retained; teacher must select verified BSB excerpt in Review Studio. Print checks pending."
+    },
+    {
+      "moduleName": "Connect the Verse",
+      "moduleId": "connect-verse",
+      "size": "Large",
+      "preparedActivityKey": "connectVerse",
+      "status": "ADAPTATION NEEDED",
+      "contentValidation": "Candidate local authoring checks only; official Review Studio preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Original ESV excerpt retained; teacher must select verified BSB excerpt in Review Studio. Print checks pending."
+    }
+  ],
+  "reviewFlags": [
+    {
+      "id": "rf-01",
+      "priority": "high",
+      "type": "scripture-text",
+      "text": "Original memory verse is Romans 8:28a ESV with an ellipsis. All seven verse activities retain the source excerpt pending teacher choice and verification of exact BSB excerpt and reference, followed by synchronized re-selection.",
+      "affectedModules": [
+        "first-letters",
+        "finish-verse",
+        "unscramble-verse",
+        "upside-down-verse",
+        "verse-cryptogram",
+        "spiral-verse",
+        "connect-verse"
+      ]
+    },
+    {
+      "id": "rf-02",
+      "priority": "high",
+      "type": "teacher-approval",
+      "text": "Review 11 Multiple Choice questions and 22 newly authored distractors. Choose wrong answers that are plausible without becoming arguably correct. Original lesson questions are separately retained.",
+      "affectedModules": [
+        "multiple-choice"
+      ]
+    },
+    {
+      "id": "rf-03",
+      "priority": "medium",
+      "type": "teacher-approval",
+      "text": "Check true/false truth, six selected deliberate false facts, and canonical fact-link consistency; facts used by Small True/False, Maze and Sort Story are not reused.",
+      "affectedModules": [
+        "true-false",
+        "true-false-maze",
+        "sort-story"
+      ]
+    },
+    {
+      "id": "rf-04",
+      "priority": "medium",
+      "type": "teacher-approval",
+      "text": "Odd Words and Checkboxes use plausible but unrelated Bible-story distractors rather than modern nonsense words. Confirm none accidentally belongs to OT15.",
+      "affectedModules": [
+        "odd-words",
+        "checkboxes"
+      ]
+    },
+    {
+      "id": "rf-05",
+      "priority": "medium",
+      "type": "teacher-approval",
+      "text": "Review the six deliberately incorrect Circle the Mistakes statements, the ten-blank Finish Story, and chronological/drawing captions for age appropriateness and source accuracy.",
+      "affectedModules": [
+        "circle-mistakes",
+        "finish-story",
+        "story-order",
+        "draw-story",
+        "draw-picture"
+      ]
+    },
+    {
+      "id": "rf-06",
+      "priority": "high",
+      "type": "theological-content",
+      "text": "The two Important Ideas on pages 5 and 6 are preserved verbatim. Teacher should review theological application, including the relationship between human deceit, sin, God’s promises and redemption, before publishing.",
+      "affectedModules": [
+        "big-idea-cryptogram",
+        "connect-big-idea",
+        "pixel-picture",
+        "finish-story"
+      ]
+    },
+    {
+      "id": "rf-07",
+      "priority": "high",
+      "type": "generator-validation",
+      "text": "No live crossword/word-search grid placement, letter-puzzle engines, measured SVG/PDF layout, Review Studio 27-module preflight, or numbered worksheet preset tests have been run.",
+      "affectedModules": [
+        "draw-picture",
+        "multiple-choice",
+        "true-false",
+        "first-letters",
+        "odd-words",
+        "unscramble-words",
+        "checkboxes",
+        "who-am-i",
+        "match-words",
+        "finish-verse",
+        "unscramble-verse",
+        "circle-mistakes",
+        "medium-word-search",
+        "true-false-maze",
+        "big-idea-cryptogram",
+        "upside-down-verse",
+        "connect-big-idea",
+        "pixel-picture",
+        "finish-story",
+        "story-order",
+        "sort-story",
+        "draw-story",
+        "word-search",
+        "verse-cryptogram",
+        "crossword",
+        "spiral-verse",
+        "connect-verse"
+      ]
+    },
+    {
+      "id": "rf-08",
+      "priority": "medium",
+      "type": "source-material",
+      "text": "Only the 15-page ODT was provided. Referenced slides and printable resources were not separately supplied; generated prompts are based on the ODT narrative and displayed pictures only.",
+      "affectedModules": [
+        "draw-picture",
+        "draw-story",
+        "story-order",
+        "match-words"
+      ]
+    },
+    {
+      "id": "rf-09",
+      "priority": "medium",
+      "type": "teacher-approval",
+      "text": "Review simplified matching pairs and crossword clues for uniqueness and classroom suitability; test that all crossword answers actually interlock.",
+      "affectedModules": [
+        "match-words",
+        "crossword"
+      ]
+    }
+  ],
+  "publication": {
+    "status": "approved",
+    "approved": true,
+    "notes": "Unapproved OT15 draft: teacher must choose verified BSB text, review authored content and theological interpretation, run all 27 module and three numbered preset preflights, and separately sign off and confirm Scripture rights.",
+    "teacherSignoff": {
+      "reviewer": "Andrew Doane",
+      "date": "2026-11-06",
+      "notes": "Approved with verified BSB verse through Curriculum Review Studio"
+    },
+    "scriptureRights": {
+      "status": "cleared",
+      "basis": "Berean Standard Bible (BSB), dedicated to the public domain on April 30, 2023. Official terms: https://berean.bible/terms.htm. Scripture text confirmed against https://bereanbible.com/bsb.txt.",
+      "reviewedBy": "Andrew Doane",
+      "reviewedOn": "2026-11-06"
+    },
+    "resolvedReviewFlagIds": [
+      "rf-02",
+      "rf-03",
+      "rf-04",
+      "rf-05",
+      "rf-09"
+    ]
+  },
+  "validation": {
+    "basis": "Original conversion tests predate teacher-approved BSB; revalidate actual engines and content after export.",
+    "allTextChecksPassed": false,
+    "actualGeneratorTested": false,
+    "jsonParseTested": true,
+    "checks": [
+      {
+        "check": "Supplied 15-page ODT readable with traceable nonempty source paragraphs",
+        "passed": true,
+        "detail": 222
+      },
+      {
+        "check": "Seven verbatim Story Notes and emphasized words preserved",
+        "passed": true,
+        "detail": "BLESSING, TRICK, GOAT, SMELLING, RETURNED, JACOB, KILL"
+      },
+      {
+        "check": "Original teaching and review questions/answers preserved",
+        "passed": true,
+        "detail": "40 records including all 10 formal review questions"
+      },
+      {
+        "check": "Both Important Idea graphics preserved",
+        "passed": true,
+        "detail": "Original page-5 and page-6 wording and capitalization"
+      },
+      {
+        "check": "Original ESV memory verse retained without BSB claim",
+        "passed": true,
+        "detail": "Romans 8:28a: 76 characters"
+      },
+      {
+        "check": "27 exact prepared activity keys and readiness records",
+        "passed": true,
+        "detail": "27 activity types + 27 readiness entries"
+      },
+      {
+        "check": "Candidate source ID, fact IDs, options, drawing and puzzle text limits",
+        "passed": true,
+        "detail": "10 unique fact selections; 11 Finish Story blanks"
+      },
+      {
+        "check": "Marked verse brackets reconstruct original source verse exactly",
+        "passed": true,
+        "detail": "Source punctuation and ellipsis unchanged"
+      },
+      {
+        "check": "Exact-candidate repository schema and semantic validation",
+        "passed": false,
+        "detail": "NOT RUN: current repo validator not executed"
+      },
+      {
+        "check": "Live Review Studio 27-module conversion and three numbered presets",
+        "passed": false,
+        "detail": "NOT RUN"
+      },
+      {
+        "check": "Live crossword/word search engines and measured print fit",
+        "passed": false,
+        "detail": "NOT RUN"
+      },
+      {
+        "check": "Teacher verified BSB and scripture rights approval",
+        "passed": false,
+        "detail": "PENDING teacher decision"
+      }
+    ]
+  }
+}
