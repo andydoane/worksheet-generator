@@ -2,8 +2,8 @@
 
 > **Snapshot, not source of truth.** This document is a starting point for future ChatGPT conversations and contributors, **not** a replacement for the current GitHub repository, tests, CI results, or the owner's newest instructions. The project changes frequently. Verify `main`, open issues/PRs, and recent Actions runs before making recommendations, editing code, or declaring work complete. Do not assume a roadmap item is still open because it appears below.
 
-**Last checked against `main`:** 2026-11-07 (`main` version `0.16.64` after merged PR #113; PR #114 proposes `0.16.65`)  
-**Package version represented by this change:** `0.16.65`  
+**Last checked against `main`:** 2026-11-07 (`main` version `0.16.65` after merged PR #114; PR #115 proposes `0.16.66`)  
+**Package version represented by this change:** `0.16.66`  
 **Repository:** https://github.com/andydoane/worksheet-generator  
 **Worksheet Studio:** https://andydoane.github.io/worksheet-generator/  
 **Curriculum Review Studio:** https://andydoane.github.io/worksheet-generator/review.html  
@@ -103,7 +103,7 @@ Do not infer current merge status from this table; verify in GitHub. If a future
 
 ## 7. Current work and upcoming plans
 
-**Status last checked:** 2026-11-07, against `main` after **merged PR #113** (version `0.16.64`). The owner confirmed that the TRUE/FALSE fact warning fix works. PR #114 proposes Story Order content-only review with no Story Note citation requirement or source controls; confirm current GitHub and CI before acting.
+**Status last checked:** 2026-11-07, against `main` after **merged PR #114** (version `0.16.65`) and later approved-curriculum uploads. The owner confirmed Story Order's content-only review works. PR #115 proposes add/remove correction rows for Circle the Mistakes without changing approved lesson data or print engines. Refresh GitHub and Actions before acting.
 
 | Status at last check | Item | Next action or caveat |
 | --- | --- | --- |
@@ -123,7 +123,8 @@ Do not infer current merge status from this table; verify in GitHub. If a future
 | **Merged** | [#111 — Content-First Review Studio](https://github.com/andydoane/worksheet-generator/pull/111) | Original source IDs, page citations, Story Notes, original questions and old converter readiness logs are no longer approval blockers. Compact approved exports keep printable pools, answer keys, selected BSB, teacher signoff and four-preset evidence; legacy approved data stays readable. |
 | **Merged; documentation only** | [#112 — content-first conversion guide cleanup](https://github.com/andydoane/worksheet-generator/pull/112) | Reconciled conversion manual with PR #111, prioritized the compact starter and refreshed the copy-ready prompt. No code, schema or approved curriculum changes. |
 | **Merged; owner confirmed working** | [#113 — Review Studio TRUE/FALSE fact labels](https://github.com/andydoane/worksheet-generator/pull/113) | Peach false warning now appears only for false facts; true facts and sidebar descriptions use accurate labels. No lesson data or answer keys changed. |
-| **Open draft PR** | [#114 — Story Order content-only review](https://github.com/andydoane/worksheet-generator/pull/114) | Show existing 5–8 chronological events as editable text boxes with a live chronological preview. Remove original Story Note citation requirement and unnecessary source/add/remove/reorder controls. Keep actual printable validation, separate teacher review buttons, draft preservation and student shuffling. Await CI and owner test with eight-event lesson. |
+| **Merged; owner confirmed working** | [#114 — Story Order content-only review](https://github.com/andydoane/worksheet-generator/pull/114) | Existing 5–8 chronological events are editable and previewed without original Story Note citation requirements or source management controls. Student shuffling and printable checks remain intact. |
+| **Open draft PR** | [#115 — Circle the Mistakes add/remove rows](https://github.com/andydoane/worksheet-generator/pull/115) | Add another incorrect phrase/correction pair directly in Review Studio (up to eight), keep mistake count automatically synchronized, allow confirmed removal, reset review/preflight and preserve earlier corrections. Await CI and teacher test. |
 
 **To maintain this table in every future feature/bug-fix PR:** replace stale statuses rather than simply adding rows; add the PR/issue link, brief outcome or current blocker, and accurate next step. Update **Status last checked**, package version above, and milestone context based on actual GitHub information. Never invent a date, merge, approval, or test result. Avoid documenting every small curriculum upload. Documentation-only changes may update the handoff without requiring a release; new direct-to-main approved JSON uploads are exempt.
 

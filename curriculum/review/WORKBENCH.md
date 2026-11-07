@@ -26,22 +26,28 @@ the URL. Only repository collaborators have permission to commit changes.
    controls are not part of this review step. Edit and mark other tasks normally;
    canonical fact edits synchronize with linked Sort/True-False selections,
    and the Important Idea stays consistent across its linked activities.
-5. In **BSB memory verse**, look up a single verse or a short verse range in the
+5. In **Circle the Mistakes**, edit the deliberately incorrect paragraph and existing
+   correction pairs. Use **+ Add mistake** for another incorrect phrase and truthful
+   correction (up to eight), or **Remove mistake** to undo an extra row. The mistake
+   count updates automatically. Each incorrect phrase must appear exactly in the
+   paragraph; complete the new pair before preflight and mark the activity reviewed
+   again after changing it.
+6. In **BSB memory verse**, look up a single verse or a short verse range in the
    official Berean Standard Bible. Choose **first word** and **last word** of
    the exact excerpt, including a second verse if desired. Select the words
    that should be blanks in the two verse-completion puzzles. Click **Apply**
    and then **Mark reviewed**.
-6. **Run preflight checks**. Individual issues are clickable: choose one to jump directly to the relevant editor field. The conversion count is shown once as a summary. Finish the Story may have 6–12 blanks, retaining the original emphasis words in order while allowing extra words. For Solve the Code, choose a short reviewed key phrase separately from the original Important Idea; its key supports at most 18 unique letters. It checks all 27 module candidates and module
+7. **Run preflight checks**. Individual issues are clickable: choose one to jump directly to the relevant editor field. The conversion count is shown once as a summary. Finish the Story may have 6–12 blanks, retaining the original emphasis words in order while allowing extra words. For Solve the Code, choose a short reviewed key phrase separately from the original Important Idea; its key supports at most 18 unique letters. It checks all 27 module candidates and module
    validators. It does not replace the official schema, real puzzle-engine,
    and recipe validation in GitHub CI.
-7. Download a **review session** to carry edits AND checked-off items across
+8. Download a **review session** to carry edits AND checked-off items across
    browsers and devices. Ordinary workbench progress is autosaved in the
    current browser only.
-8. After all decisions and preflight pass, enter your actual reviewer name/date
+9. After all decisions and preflight pass, enter your actual reviewer name/date
    and check the official BSB text/source/terms confirmation. Review Studio
    records this **individual lesson's Scripture-rights clearance** separately
    from the curriculum teacher signoff in the downloaded approved file.
-9. Download **one approved lesson JSON** (`<id>.lesson.json`). In one GitHub
+10. Download **one approved lesson JSON** (`<id>.lesson.json`). In one GitHub
    PR, upload it to `curriculum/approved/<id>.lesson.json` and remove any
    existing review-stage JSON with the same ID under `curriculum/review/`.
    No manual rights-manifest import or export is necessary. Wait for CI to pass,
