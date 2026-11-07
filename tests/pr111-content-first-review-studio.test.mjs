@@ -168,7 +168,8 @@ test('Review Studio UI, schema, CLI and public catalog all use the content-first
  assert.match(script,/const printable=contentFirstLesson\(lesson\)/u);
  assert.match(guide,/Current authoring contract — content first/u);
  assert.match(readme,/Current content-first contract for new lessons/u);
- assert.equal(pkg.version,'0.16.63');
+ assert.ok(pkg.version.localeCompare('0.16.63',undefined,{numeric:true})>=0,
+  'Keep PR #111 or newer application version');
  assert.deepEqual(schema.required.sort(),['schemaVersion','id','curriculum',
   'lessonDetails','facts','preparedActivities','publication'].sort());
 });
