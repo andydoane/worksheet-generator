@@ -64,7 +64,7 @@ test('Missing or invalid prepared modules are clearly reported instead of implic
  assert.ok(mistakes.diagnostics.length>0);
  assert.equal(audit.eligibleForPublication,false);
  const corrupt=structuredClone(lesson);
- corrupt.storyNotes[0].id=corrupt.storyNotes[1].id;
+ corrupt.preparedActivities.multipleChoice[0].question=17;
  const failed=assessCurriculumLesson(corrupt,schema);
  assert.ok(failed.schemaErrors.length>0);
  assert.ok(failed.moduleReadiness.every(x=>x.technicalStatus==='not-checked'));

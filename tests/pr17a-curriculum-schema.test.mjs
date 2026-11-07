@@ -65,15 +65,13 @@ test('Schema rejects incorrect version, missing provenance, unknown modules and 
  assert.ok(validateLessonSchema(modified(x=>{x.preparedActivities.someUnknownModule={};}),schema)
   .some(e=>e.includes('unsupported field')));
 });
-test('Semantic validator enforces chronological notes and source IDs without silent correction',()=>{
- assert.ok(validateLesson(modified(x=>{x.storyNotes[1].order=4;}),schema)
-  .some(e=>e.includes('sequential')));
- assert.ok(validateLesson(modified(x=>{x.storyNotes[1].id=x.storyNotes[0].id;}),schema)
-  .some(e=>e.includes('duplicate source ID')));
- assert.ok(validateLesson(modified(x=>{x.facts[0].sourceIds.push('sn-unknown');}),schema)
-  .some(e=>e.includes('unknown source ID')));
- assert.ok(validateLesson(modified(x=>{x.storyNotes[0].source.filename='missing.odt';}),schema)
-  .some(e=>e.includes('not listed in sourceFiles')));
+test('Semantic validator ignores source bookkeeping but enforces printable fact truth and teacher flags',()=>{
+ for(const change of [
+  x=>{x.storyNotes[1].order=4;},
+  x=>{x.storyNotes[1].id=x.storyNotes[0].id;},
+  x=>{x.facts[0].sourceIds.push('sn-unknown');},
+  x=>{x.storyNotes[0].source.filename='missing.odt';},
+ ])assert.deepEqual(validateLesson(modified(change),schema),[]);
  assert.ok(validateLesson(modified(x=>{const f=x.facts.find(f=>f.origin==='suggested');f.teacherReviewRequired=false;}),schema)
   .some(e=>e.includes('needs teacherReviewRequired')));
  assert.ok(validateLesson(modified(x=>{x.preparedActivities.trueFalse.isTrue=!x.preparedActivities.trueFalse.isTrue;}),schema)
@@ -88,7 +86,9 @@ test('Teacher approval gate prevents publishing by flipping a single flag',async
   x.publication.approved=true;x.publication.status='approved';
   x.publication.teacherSignoff={reviewer:'Curriculum author',date:'2026-11-02'};
  });
- assert.ok(validateLesson(unresolved,schema).some(e=>e.includes('unresolved teacher review flags')));
+ assert.ok(validateLesson(unresolved,schema).some(e=>e.includes('explicit Scripture rights clearance')));
+ // Legacy unresolved teacher flags are still protected at the PUBLIC catalog gate,
+ // but source-only records are no longer required by the content validator.
  const resolved=modified(x=>{
   x.publication.approved=true;x.publication.status='approved';
   x.publication.teacherSignoff={reviewer:'Curriculum author',date:'2026-11-02'};

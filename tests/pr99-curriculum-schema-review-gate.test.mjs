@@ -32,7 +32,7 @@ test('Browser Review Studio and Node CI use exactly the same structural validato
  assert.match(source,/curriculum\/schema\/lesson-v1\.schema\.json/u);
 });
 
-test('Both OT18 and OT20/OT21 failures are actionable in Review Studio preflight',()=>{
+test('Old metadata schema repairs remain available but are not part of printable preflight',()=>{
  const broken=failures();
  const errors=reviewSchemaErrors(broken);
  assert.ok(errors.some(x=>x.includes('reviewFlags[0].affectedModules[0]: invalid enum value')));
@@ -45,11 +45,12 @@ test('Both OT18 and OT20/OT21 failures are actionable in Review Studio preflight
  assert.equal(c.taskId,'review-general');
  assert.match(schemaRepairLabel(m.repair),/circle-mistakes/u);
  assert.match(schemaRepairLabel(c.repair),/“check”/u);
+ const before=buildReviewPreflight(approved);
  const report=buildReviewPreflight(broken);
- assert.equal(report.convertedCount,0);
+ assert.equal(report.convertedCount,before.convertedCount);
  assert.equal(report.totalCount,27);
- assert.equal(report.issues.length,2);
- assert.ok(report.issues.every(x=>x.schemaRepair));
+ assert.deepEqual(report.issues,before.issues,
+  'Source-only metadata errors are historical, not teacher approval blockers');
 });
 
 test('Metadata-only repairs never overwrite the original curriculum',()=>{
@@ -120,7 +121,7 @@ test('Unapproved starter is structurally valid, not publishable or 27/27-ready',
 
 test('UI requires teacher confirmation, clears affected review and invalidates prior preflight',async()=>{
  const preflight=await read('src/review/preflight.ts');
- assert.match(preflight,/const schemaIssues=reviewSchemaIssues\(lesson\)/u);
+ assert.match(preflight,/const schemaIssues=reviewSchemaIssues\(printable\)/u);
  assert.match(preflight,/if\(schemaIssues.length\)return \{convertedCount:0,totalCount:27/u);
  const app=await read('src/review/ReviewApp.tsx');
  assert.match(app,/function repairSchemaIssue\(issue:ReviewIssue\)/u);

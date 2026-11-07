@@ -425,10 +425,18 @@ export function convertLessonActivities(
   }
   return true;
  }
- // A teacher may approve a printable phrase directly; source-pool identity
- // is not a condition of a valid cryptogram or a valid Important Idea puzzle.
- function consistentIdea(_id:VerseSpecialtyLessonModuleId,_entry:LessonPhrase){
-  return true;
+ // This is a printable alternative-choice bank, not original-document
+ // provenance. Teacher-typed phrasing must be registered in the reviewable
+ // keyPhrases[] pool before it is eligible for a worksheet or a preset.
+ function consistentIdea(id:VerseSpecialtyLessonModuleId,entry:LessonPhrase){
+  if(!importantIdea||entry.phrase===importantIdea.text)return true;
+  const eligible=[
+   ...(lesson.keyPhrases??[]).map(item=>item.text),
+   ...(prepared.storyOrder??[]).map(item=>item.text),
+  ];
+  if(eligible.includes(entry.phrase))return true;
+  issue(id,id,'Add the new printable phrase to the teacher-review candidate pool before using it.');
+  return false;
  }
  function addPrepared(id:VerseSpecialtyLessonModuleId,module:ActivityModule,
   entry:Located,fallback:LessonSourceLocation|undefined){

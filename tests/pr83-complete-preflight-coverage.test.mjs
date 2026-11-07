@@ -65,8 +65,6 @@ test('Known global errors have dedicated repair destinations, not generic lesson
   ['Not enough valid multiple-choice questions for Preset 2 (need 1, have 0).','multiple-choice-bank'],
   ['Preset 2: needs word-search at 3:bottom-large','word-search'],
   ['Recipe preset-1 has an empty region','recipe-review'],
-  ['Missing source reference in sourceIds','lesson-sources'],
-  ['moduleReadiness has a missing activity','lesson-readiness'],
   ['Scripture rights clearance is missing','lesson-publication'],
   ['Select and approve a Berean Standard Bible memory verse.','bsb-verse'],
  ];
@@ -75,9 +73,12 @@ test('Known global errors have dedicated repair destinations, not generic lesson
   assert.ok(listReviewTasks(ot32).some(x=>x.id===taskId),
    taskId+' must remain visible after an edit');
  }
+ assert.ok(listReviewTasks(ot32).every(task=>
+  !['lesson-sources','lesson-readiness'].includes(task.id)),
+  'Original-document and converter-readiness repairs no longer appear as teacher tasks');
 });
 
-test('An invalid source ID opens the source screen and can be corrected by a verified selector',()=>{
+test('Legacy source repairs remain available but invalid citation IDs no longer block printable preflight',()=>{
  const broken=structuredClone(ot32);
  broken.preparedActivities.whoAmI.sourceIds=['sn-does-not-exist'];
  const issues=lessonIntegrityIssues(broken),offending=issues.find(x=>
@@ -86,8 +87,8 @@ test('An invalid source ID opens the source screen and can be corrected by a ver
  assert.equal(offending.area,'lesson-sources');
  assert.equal(offending.choiceType,'sourceId');
  const preflight=buildReviewPreflight(broken);
- assert.ok(preflight.issues.some(x=>x.taskId==='lesson-sources'&&
-  x.fieldId==='review-field-lesson-sources'&&x.path===offending.path));
+ assert.ok(!preflight.issues.some(x=>x.taskId==='lesson-sources'),
+  'Invalid provenance does not block teacher approval');
  const repaired=repairSourceReference(broken,offending,'sn-06');
  assert.deepEqual(repaired.preparedActivities.whoAmI.sourceIds,['sn-06']);
  assert.equal(repaired.preparedActivities.whoAmI.teacherReviewRequired,true);
