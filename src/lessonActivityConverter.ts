@@ -196,7 +196,6 @@ export function convertLessonActivities(
  }
  const prepared=lesson.preparedActivities??{};
  const factsById=new Map((lesson.facts??[]).map(fact=>[fact.id,fact]));
- const originalIds=new Set((lesson.storyNotes??[]).map(note=>note.id));
  function issue(moduleId:LessonModuleId,contentId:string,message:string){
   diagnostics.push({moduleId,contentId,message});
  }
@@ -233,9 +232,8 @@ export function convertLessonActivities(
  if(prepared.storyOrder?.length){
   const ordered=[...prepared.storyOrder].sort((a,b)=>a.order-b.order);
   const sequential=ordered.every((entry,i)=>entry.order===i+1);
-  const validRefs=ordered.every(entry=>entry.sourceIds?.every(id=>originalIds.has(id))??false);
-  if(!sequential||!validRefs){
-   issue('story-order','story-order','Story events need sequential order and valid source Story Note IDs.');
+  if(!sequential){
+   issue('story-order','story-order','Story events need sequential order numbers beginning at 1.');
   }else{
    add('story-order','story-order',{
     type:'story-order',events:ordered.map(x=>x.text).join('\n'),seed,
@@ -427,17 +425,10 @@ export function convertLessonActivities(
   }
   return true;
  }
- function consistentIdea(id:VerseSpecialtyLessonModuleId,entry:LessonPhrase){
-  if(!importantIdea||entry.phrase===importantIdea.text)return true;
-  // The authored Important Idea remains canonical. A medium puzzle may use
-  // another reviewed key phrase or a source-linked chronological event.
-  const alternatives=[
-   ...(lesson.keyPhrases??[]).map(item=>item.text),
-   ...(prepared.storyOrder??[]).map(item=>item.text),
-  ];
-  if(alternatives.includes(entry.phrase))return true;
-  issue(id,id,'Prepared phrase must match the original Important Idea, a reviewed key phrase, or an approved Story Order event.');
-  return false;
+ // A teacher may approve a printable phrase directly; source-pool identity
+ // is not a condition of a valid cryptogram or a valid Important Idea puzzle.
+ function consistentIdea(_id:VerseSpecialtyLessonModuleId,_entry:LessonPhrase){
+  return true;
  }
  function addPrepared(id:VerseSpecialtyLessonModuleId,module:ActivityModule,
   entry:Located,fallback:LessonSourceLocation|undefined){

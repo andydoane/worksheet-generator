@@ -2,6 +2,7 @@ import {readFile,readdir} from 'node:fs/promises';
 import {resolve,join,dirname} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {validateLessonSchema} from '../src/lessonSchemaValidation.ts';
+import {contentFirstLesson} from '../src/review/contentFirstLesson.ts';
 export {validateLessonSchema};
 
 const here=dirname(fileURLToPath(import.meta.url));
@@ -18,10 +19,14 @@ const knownModules=new Set([
 ]);
 
 export function validateLesson(lesson,schema){
- const errors=validateLessonSchema(lesson,schema);
+ // Validate only the teacher-approved printable library, never draft-era
+ // document citations and unrun converter check logs.
+ const printable=contentFirstLesson(lesson);
+ const errors=validateLessonSchema(printable,schema);
  // Report structural failures without attempting semantic operations on malformed fields.
  if(errors.length)return errors;
  if(!lesson||typeof lesson!=='object'||Array.isArray(lesson))return errors;
+ lesson=printable;
  const notes=Array.isArray(lesson.storyNotes)?lesson.storyNotes:[];
  const questions=Array.isArray(lesson.questions)?lesson.questions:[];
  const facts=Array.isArray(lesson.facts)?lesson.facts:[];
@@ -134,7 +139,6 @@ export function validateLesson(lesson,schema){
    if(unresolved.length)errors.push('publication approval has unresolved teacher review flags: '+unresolved.map(x=>x.id).join(', '));
   }
  }
- if(!Array.isArray(lesson.reviewFlags))errors.push('reviewFlags are required for approval workflow');
  return errors;
 }
 
@@ -163,8 +167,8 @@ if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url)){
    result.errors.forEach(error=>console.error('  '+error));
   }else{
    const data=result.lesson;
-   console.log('PASS '+data.id+': '+data.storyNotes.length+' notes, '+
-    data.questions.length+' questions, '+Object.keys(data.preparedActivities).length+
+   console.log('PASS '+data.id+': '+(data.storyNotes?.length??0)+' optional source notes, '+
+    (data.questions?.length??0)+' optional original questions, '+Object.keys(data.preparedActivities).length+
     ' prepared module categories; publication '+data.publication.status);
    console.log('  Content statuses are author-reported; npm run validate:library checks real engines and recipes.');
   }

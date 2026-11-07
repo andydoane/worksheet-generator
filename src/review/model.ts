@@ -51,7 +51,7 @@ export function listReviewTasks(lesson:Lesson):ReviewTask[]{
  tasks.push({id:'crossword',group:'Large puzzles',label:'Crossword',
   detail:'Edit 6–10 answer/clue pairs, check that every word connects, and review the printable puzzle.'});
  tasks.push({id:'story-order',group:'Story narrative',label:'Story Order',
-  detail:'Edit and arrange 5–8 source-linked events in correct chronological order.'});
+  detail:'Edit and arrange 5–8 printable events in correct chronological order.'});
  tasks.push({id:'sort-story',group:'Canonical facts',label:'Sort the Story',
   detail:'Choose 4–8 exact canonical facts, with true and false answers and distinct IDs.'});
  tasks.push({id:'true-false',group:'Canonical facts',label:'True/False',
@@ -61,7 +61,7 @@ export function listReviewTasks(lesson:Lesson):ReviewTask[]{
  tasks.push({id:'connect-phrase',group:'Medium puzzle',label:'Connect the Phrase',
   detail:'Choose source-linked phrasing, confirm word fit, and preview the scattered phrase.'});
  tasks.push({id:'word-search',group:'Vocabulary',label:'Word Search (Large)',
-  detail:'Review 4–12 source-backed words and their nonrepeating preset selection.'});
+  detail:'Review 4–12 suitable words and their nonrepeating preset selection.'});
  tasks.push({id:'medium-word-search',group:'Vocabulary',label:'Word Search (Medium)',
   detail:'Review 1–6 short words in the smaller nine-by-nine grid.'});
  if(lesson.reviewFlags?.some((x:any)=>['sensitivity','content-sensitivity'].includes(x.type)))tasks.push({id:'sensitivity',
@@ -74,13 +74,9 @@ export function listReviewTasks(lesson:Lesson):ReviewTask[]{
  // through incremental edits. They are not extra teacher approval hurdles.
  tasks.push(
   {id:'multiple-choice-bank',group:'Lesson integrity',label:'Multiple Choice bank',
-   detail:'Repair or add source-linked Multiple Choice questions and distractors.',optional:true},
+   detail:'Repair or add Multiple Choice questions and plausible distractors.',optional:true},
   {id:'lesson-details',group:'Lesson integrity',label:'Lesson title & references',
    detail:'Repair the title, Scripture display and passage list.',optional:true},
-  {id:'lesson-sources',group:'Lesson integrity',label:'Source records & citations',
-   detail:'Check original Story Notes, source links, questions and filenames.',optional:true},
-  {id:'lesson-readiness',group:'Lesson integrity',label:'27-activity readiness',
-   detail:'Repair missing or inconsistent activity readiness metadata.',optional:true},
   {id:'lesson-publication',group:'Lesson integrity',label:'Publication & BSB rights',
    detail:'Review teacher signoff and per-lesson Scripture rights requirements.',optional:true},
   {id:'recipe-review',group:'Lesson integrity',label:'Preset conflict guide',

@@ -25,6 +25,7 @@ import {sharedVerseBlankIssues} from './verseBlankSharing.ts';
 import {MODULE_REPAIR_REGISTRY} from './repairRegistry.ts';
 import {markRequiredTasksReviewed} from './reviewProgress.ts';
 import {cleanReviewExport} from './exportCleanup.ts';
+import {contentFirstLesson} from './contentFirstLesson.ts';
 import {cryptogramLetters} from '../cryptograms.ts';
 import {buildReviewPreflight,PREPARED_ACTIVITY_KEYS,reviewIssueTarget,type ReviewPreflight,type ReviewIssue} from './preflight.ts';
 import {applyReviewSchemaRepair,schemaRepairLabel} from './schemaPreflight.ts';
@@ -178,7 +179,7 @@ export default function ReviewApp(){
  }
  function acceptLesson(value:any){
   const data=value?.lesson?.schemaVersion===1?value.lesson:value;
-  if(data?.schemaVersion!==1||typeof data.id!=='string'||!data.preparedActivities||!data.lessonDetails?.memoryVerse||!Array.isArray(data.reviewFlags))
+  if(data?.schemaVersion!==1||typeof data.id!=='string'||!data.preparedActivities||!data.lessonDetails?.memoryVerse)
    throw Error('This is not a supported curriculum schema-v1 lesson or review session.');
   if(lesson&&!window.confirm('Load another lesson? Current edits will be replaced. Export your review session first if you need to keep it.'))return;
   const prepared=prepareUnscrambleReview(data);
@@ -462,7 +463,7 @@ export default function ReviewApp(){
  function downloadApproved(){
   if(!canPublish||!lesson)return;
   try{
-   const approved=createApprovedLesson(lesson,reviewer,signDate,rightsConfirmed,{
+   const approved=createApprovedLesson(contentFirstLesson(lesson),reviewer,signDate,rightsConfirmed,{
     preflight:{...preflight!,checkedAt:preflight!.checkedAt!},reviewedTaskIds:reviewed,
    });
    downloadJson(lesson.id+'.lesson.json',approved);
@@ -918,7 +919,7 @@ export default function ReviewApp(){
          value={moduleEditorText} onChange={e=>setModuleEditorText(e.target.value)}/></label>
        <button type="button" onClick={applyModuleJson}>Apply this activity's changes</button>
       </div>}
-      {(['lesson-details','lesson-sources','lesson-readiness','lesson-publication'] as const)
+      {(['lesson-details','lesson-publication'] as const)
        .filter(area=>area===active.id)
        .map(area=><LessonIntegrityReviewEditor key={area}
         lesson={lesson} mode={area} onChange={applyIntegrityReview} onError={setError}/>)}
@@ -932,7 +933,7 @@ export default function ReviewApp(){
           route.editor==='scripture').length} shared Scripture routes.</p>
         <p>Each numbered booklet requires content that does not repeat in another region.
          Choose the named activity below, select a different approved fact or
-         vocabulary bank, then rerun preflight. The three preset layouts are fixed.</p>
+         vocabulary bank, then rerun preflight. The four preset layouts are fixed.</p>
        </div>
        {(preflight?.issues??[]).filter(i=>i.recipeId||i.slot).map((issue,i)=>
         <div key={i} className="review-story-fact-row">

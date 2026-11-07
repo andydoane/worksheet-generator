@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/andydoane/worksheet-generator/blob/main/curriculum/schema/lesson-v1.schema.json",
   "title": "Bible Worksheet Studio · Lesson preset v1",
-  "description": "Source-preserving curriculum interchange data, NOT a saved worksheet or published preset. Publication requires separate editorial approval.",
+  "description": "Source-preserving curriculum interchange data, NOT a saved worksheet or published preset. Publication requires separate editorial approval.\nContent-first lessons may omit original document/source collections and converter readiness; retained optional fields remain valid for historical lessons.",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -10,14 +10,8 @@
     "id",
     "curriculum",
     "lessonDetails",
-    "sourceFiles",
-    "storyNotes",
-    "questions",
     "facts",
-    "vocabulary",
     "preparedActivities",
-    "moduleReadiness",
-    "reviewFlags",
     "publication"
   ],
   "properties": {
