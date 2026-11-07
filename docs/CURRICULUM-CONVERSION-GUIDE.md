@@ -754,6 +754,8 @@ A coherent age-appropriate paragraph **≤1,100 characters**, containing **6–1
 
 **5–8 meaningful lesson-grounded events**, each **≤115 characters**. Store `order:1,2,3,...` in **chronological sequence**. Review Studio shows the chronological preview for checking; the **printed student worksheet shuffles** the events. Use clear, distinguishable events; `sourceIds` and original Story Notes are not needed.
 
+**Review Studio interaction:** all existing prepared sentences appear in editable text boxes, with a single chronological preview underneath. Approve them using the normal **Mark reviewed & continue** or **Needs more work** buttons. The review screen does not require or offer original Story Note citations, source selectors, or event add/remove/reordering tools. Prepare the intended 5–8 events in the JSON; the student worksheet alone shuffles them.
+
 **Wrong:** manually shuffling the JSON before delivery, vague scenes whose order cannot be determined, or copying invented chronology and calling it source-backed.
 
 **Schematic prepared-activity JSON** (replace all illustrative words, IDs and citations with verified lesson-specific data):
