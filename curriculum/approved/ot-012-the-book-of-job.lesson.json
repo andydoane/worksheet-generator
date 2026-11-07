@@ -1,0 +1,3377 @@
+{
+  "schemaVersion": 1,
+  "schemaStatus": "approved; Review Studio 27/27 preflight passed",
+  "id": "ot-012-the-book-of-job",
+  "curriculum": {
+    "series": "Old Testament",
+    "lessonNumber": 12
+  },
+  "lessonDetails": {
+    "title": "The Book of Job",
+    "scripturePassages": [
+      "Job 1",
+      "Job 2",
+      "Job 38",
+      "Job 42"
+    ],
+    "scriptureDisplay": "Job 1–2, 38, 42",
+    "bigIdeas": [
+      {
+        "text": "Only God knows the WHOLE story.",
+        "origin": "source",
+        "source": {
+          "filename": "OT 12 Lesson (Job).odt",
+          "section": "Important Idea",
+          "page": 5,
+          "sourceParagraphIndex": 155,
+          "details": "Text in two adjacent paragraphs on page 5, verified against the source’s rendered Important Idea graphic."
+        }
+      }
+    ],
+    "memoryVerse": {
+      "reference": "Romans 8:18",
+      "translation": "BSB",
+      "text": "I consider that our present sufferings are not comparable to the glory that will be revealed in us.",
+      "isExcerpt": false,
+      "hasEllipses": false,
+      "requiresTextReview": false,
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "Memory Verse Activity",
+        "page": 7,
+        "sourceParagraphIndex": 199
+      },
+      "alsoVerifiedAt": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "Verse and Motions",
+        "page": 7,
+        "sourceParagraphIndex": 205
+      },
+      "originalTranslation": "ESV",
+      "bsbSource": {
+        "reference": "Romans 8:18",
+        "sourceUrl": "https://bereanbible.com/bsb.txt",
+        "publicDomainTerms": "https://berean.bible/terms.htm",
+        "startWord": 0,
+        "endWord": 17
+      }
+    }
+  },
+  "sourceFiles": [
+    {
+      "filename": "OT 12 Lesson (Job).odt",
+      "format": "odt",
+      "role": "primary teaching source",
+      "note": "14-page original ODT. Separate slides and resource sheets not provided. Original Romans 8:18 ESV verse preserved pending teacher BSB selection; source page-5 Big Idea checked."
+    }
+  ],
+  "storyNotes": [
+    {
+      "id": "sn-01",
+      "order": 1,
+      "originalText": "Job was a GODLY man who did what was right. God blessed him with many things.",
+      "cleanText": "Job was a godly man who did what was right. God blessed him with many things.",
+      "emphasizedWords": [
+        "GODLY"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "STORY NOTE",
+        "page": 1,
+        "sourceParagraphIndex": 21
+      }
+    },
+    {
+      "id": "sn-02",
+      "order": 2,
+      "originalText": "Satan told God, \"If you take away Job's blessings, he'll CURSE you!\"",
+      "cleanText": "Satan told God, \"If you take away Job's blessings, he'll curse you!\"",
+      "emphasizedWords": [
+        "CURSE"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "STORY NOTE",
+        "page": 2,
+        "sourceParagraphIndex": 36
+      }
+    },
+    {
+      "id": "sn-03",
+      "order": 3,
+      "originalText": "Satan took away all his animals, servants, and CHILDREN. But Job did not curse God.",
+      "cleanText": "Satan took away all his animals, servants, and children. But Job did not curse God.",
+      "emphasizedWords": [
+        "CHILDREN"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "STORY NOTE",
+        "page": 3,
+        "sourceParagraphIndex": 63
+      }
+    },
+    {
+      "id": "sn-04",
+      "order": 4,
+      "originalText": "Satan covered Job with SORES. But Job still would not curse God.",
+      "cleanText": "Satan covered Job with sores. But Job still would not curse God.",
+      "emphasizedWords": [
+        "SORES"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "STORY NOTE",
+        "page": 3,
+        "sourceParagraphIndex": 80
+      }
+    },
+    {
+      "id": "sn-05",
+      "order": 5,
+      "originalText": "Three of Job’s FRIENDS came to comfort him. They said, “You are suffering because of sin.”",
+      "cleanText": "Three of Job’s friends came to comfort him. They said, “You are suffering because of sin.”",
+      "emphasizedWords": [
+        "FRIENDS"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "STORY NOTE",
+        "page": 4,
+        "sourceParagraphIndex": 98
+      }
+    },
+    {
+      "id": "sn-06",
+      "order": 6,
+      "originalText": "God asked Job and his friends many QUESTIONS to show that he was God and they were not.",
+      "cleanText": "God asked Job and his friends many questions to show that he was God and they were not.",
+      "emphasizedWords": [
+        "QUESTIONS"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "STORY NOTE",
+        "page": 4,
+        "sourceParagraphIndex": 113
+      }
+    },
+    {
+      "id": "sn-07",
+      "order": 7,
+      "originalText": "God blessed Job TWICE as much in the second part of his life.",
+      "cleanText": "God blessed Job twice as much in the second part of his life.",
+      "emphasizedWords": [
+        "TWICE"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "STORY NOTE",
+        "page": 5,
+        "sourceParagraphIndex": 138
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q-01",
+      "question": "So why are we reading a book from the middle of the Bible?",
+      "answer": "Because Job most likely lived around the time of Abraham, though they probably never even met.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "introduction",
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 13
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-02",
+      "question": "What does the book of Job say about him?",
+      "answer": "He had respect for God and avoided evil.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "Story",
+        "page": 1,
+        "sourceParagraphIndex": 23
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-03",
+      "question": "What kinds of animals did the Bible mention?",
+      "answer": "Sheep, camels, donkeys, and oxen.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "Story",
+        "page": 1,
+        "sourceParagraphIndex": 27
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-04",
+      "question": "How many kids did Job have?",
+      "answer": "Seven sons and three daughters.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "Story",
+        "page": 1,
+        "sourceParagraphIndex": 29
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-05",
+      "question": "Did you catch his name?",
+      "answer": "Satan.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 40
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-06",
+      "question": "What did God say to Satan’s challenge?",
+      "answer": "Go ahead, but you can't touch Job himself.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 48
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-07",
+      "question": "Did Job do what Satan said he would? Did he curse God and speak evil things right to God's face?",
+      "answer": "No.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "Story",
+        "page": 3,
+        "sourceParagraphIndex": 67
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-08",
+      "question": "What was the second challenge he made to God?",
+      "answer": "Strike Job’s body, he’ll curse you.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "Story",
+        "page": 3,
+        "sourceParagraphIndex": 82
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-09",
+      "question": "But Satan was not allowed to… what?",
+      "answer": "Take Job's life.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "Story",
+        "page": 3,
+        "sourceParagraphIndex": 84
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-10",
+      "question": "How?",
+      "answer": "Covered his body with sores.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "Story",
+        "page": 3,
+        "sourceParagraphIndex": 86
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-11",
+      "question": "What?",
+      "answer": "Curse God and die!",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "Story",
+        "page": 3,
+        "sourceParagraphIndex": 90
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-12",
+      "question": "So did Satan succeed? Did Job curse God to his face?",
+      "answer": "No.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "Story",
+        "page": 3,
+        "sourceParagraphIndex": 91
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-13",
+      "question": "What was the real cause of Job's misery?",
+      "answer": "Satan's deal with God.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 108
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-14",
+      "question": "What was the point of God's windstorm of words?",
+      "answer": "To remind Job and his friends who was in control of the world.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 123
+      },
+      "standaloneReady": false,
+      "notes": "The source answers the question in the following paragraph; answer is extracted faithfully from paragraph 127."
+    },
+    {
+      "id": "q-15",
+      "question": "What was it?",
+      "answer": "He was angry; they spoke foolishly.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "Story",
+        "page": 5,
+        "sourceParagraphIndex": 140
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-16",
+      "question": "Who really caused Job’s suffering?",
+      "answer": "Satan.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "Story",
+        "page": 5,
+        "sourceParagraphIndex": 142
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-17",
+      "question": "How many?",
+      "answer": "Seven sons and three daughters.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "Story",
+        "page": 5,
+        "sourceParagraphIndex": 146
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-18",
+      "question": "So how does the story of Job teach us, strengthen us, encourage us, or give us hope?",
+      "answer": "",
+      "kind": "discussion",
+      "origin": "source",
+      "scope": "story application",
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "Story Application",
+        "page": 5,
+        "sourceParagraphIndex": 153
+      },
+      "standaloneReady": false,
+      "notes": "Open discussion prompt; lesson continues into the Important Idea."
+    },
+    {
+      "id": "q-19",
+      "question": "What do we learn about Job at the beginning of the story?",
+      "answer": "He was a godly man; God greatly blessed him.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "Story Snack Review",
+        "page": 9,
+        "sourceParagraphIndex": 243
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-20",
+      "question": "Describe the first conversation Satan had with God.",
+      "answer": "Satan said Job would curse God if he lost all his blessings; God agreed to let Satan do this, but not to harm Job.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "Story Snack Review",
+        "page": 9,
+        "sourceParagraphIndex": 244
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-21",
+      "question": "How many messengers came to Job? What did they tell him?",
+      "answer": "Four; one after the other, they told him how his servants, animals, and children had died; they were all the only ones to escape.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "Story Snack Review",
+        "page": 9,
+        "sourceParagraphIndex": 245
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-22",
+      "question": "Talk about Job’s animals at the beginning, middle, and end of the story.",
+      "answer": "He had thousands. Because of Satan, they were all stolen or killed, in the end, God gave him double.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "Story Snack Review",
+        "page": 9,
+        "sourceParagraphIndex": 246
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-23",
+      "question": "Talk about what happened with Job’s servants at the beginning, middle, and end of the story.",
+      "answer": "He had many, they were killed, God gave him more.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "Story Snack Review",
+        "page": 9,
+        "sourceParagraphIndex": 247
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-24",
+      "question": "Talk about Job’s children at the beginning, middle, and end of the story.",
+      "answer": "He had ten children, they died when their house collapsed, God gave Job ten more children.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "Story Snack Review",
+        "page": 9,
+        "sourceParagraphIndex": 248
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-25",
+      "question": "Describe the second conversation Satan had with God.",
+      "answer": "Satan said Job would curse God if his body was harmed; God agreed to let Satan do this, but not to kill Job.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "Story Snack Review",
+        "page": 9,
+        "sourceParagraphIndex": 249
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-26",
+      "question": "What did Satan do to Job’s body?",
+      "answer": "Covered him head to toe with sores.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "Story Snack Review",
+        "page": 10,
+        "sourceParagraphIndex": 250
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-27",
+      "question": "What did Job’s wife say to him? Why did she say it?",
+      "answer": "Curse God and die; she saw how miserable he was.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "Story Snack Review",
+        "page": 10,
+        "sourceParagraphIndex": 251
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-28",
+      "question": "According to Job’s three friends, why was Job suffering?",
+      "answer": "He suffered because of his sin.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "Story Snack Review",
+        "page": 10,
+        "sourceParagraphIndex": 252
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-29",
+      "question": "What did God do when he talked to Job and his friends? Why?",
+      "answer": "He asked many questions to show that he was God and they were not.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "Story Snack Review",
+        "page": 10,
+        "sourceParagraphIndex": 253
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-30",
+      "question": "Who is the only one who knows the whole story of history? How does God’s great story end?",
+      "answer": "God; those who believe in Jesus will live forever in God’s kingdom.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "Story Snack Review",
+        "page": 10,
+        "sourceParagraphIndex": 254
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-31",
+      "question": "What was Job like?",
+      "answer": "A godly man who did what God said was right",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "Formal Review Questions",
+        "page": 11,
+        "sourceParagraphIndex": 258
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-32",
+      "question": "What is the first thing Satan said to God?",
+      "answer": "“If you take away your blessing from Job, he’ll curse you!”",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "Formal Review Questions",
+        "page": 11,
+        "sourceParagraphIndex": 259
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-33",
+      "question": "What happened to Job’s children, animals, and servants?",
+      "answer": "All of them were stolen or killed",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "Formal Review Questions",
+        "page": 11,
+        "sourceParagraphIndex": 260
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-34",
+      "question": "After losing his children, animals, and servants, did Job curse God?",
+      "answer": "No",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "Formal Review Questions",
+        "page": 11,
+        "sourceParagraphIndex": 261
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-35",
+      "question": "What is the second thing Satan said to God?",
+      "answer": "“Take away Job’s health and he’ll curse you.”",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "Formal Review Questions",
+        "page": 11,
+        "sourceParagraphIndex": 262
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-36",
+      "question": "What did Satan do to Job’s body? Did Job curse God?",
+      "answer": "Covered him with sores; he did not curse God",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "Formal Review Questions",
+        "page": 11,
+        "sourceParagraphIndex": 263
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-37",
+      "question": "What did Job’s wife tell him to do?",
+      "answer": "Curse God and die",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "Formal Review Questions",
+        "page": 11,
+        "sourceParagraphIndex": 264
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-38",
+      "question": "What did Job’s friends say to him?",
+      "answer": "You are suffering because of sin",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "Formal Review Questions",
+        "page": 11,
+        "sourceParagraphIndex": 265
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-39",
+      "question": "Why did God come and ask Job and his friends so many questions?",
+      "answer": "To show them he was God and they were not",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "Formal Review Questions",
+        "page": 11,
+        "sourceParagraphIndex": 266
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-40",
+      "question": "What happened at the end of Job’s life?",
+      "answer": "God blessed him with servants, twice as many animals, and ten more children",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "Formal Review Questions",
+        "page": 11,
+        "sourceParagraphIndex": 267
+      },
+      "standaloneReady": true
+    }
+  ],
+  "facts": [
+    {
+      "id": "tf-01",
+      "statement": "Job respected God and avoided evil.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-02",
+      "statement": "Job suffered because he sinned.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-03",
+      "statement": "Satan said Job would curse God if his blessings disappeared.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-04",
+      "statement": "The first messenger said Job's camels had escaped.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-03"
+      ],
+      "teacherReviewRequired": true,
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 52
+      }
+    },
+    {
+      "id": "tf-05",
+      "statement": "After receiving terrible news, Job worshiped God.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-06",
+      "statement": "Job cursed God as soon as his animals were lost.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-03"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-07",
+      "statement": "Satan covered Job with painful sores.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-08",
+      "statement": "God told Satan he could take Job’s life.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-04"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-09",
+      "statement": "Job’s three friends sat silently with him for seven days.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "Story",
+        "page": 3,
+        "sourceParagraphIndex": 95
+      }
+    },
+    {
+      "id": "tf-10",
+      "statement": "Job's friends claimed he suffered because he sinned.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-11",
+      "statement": "Job's friends correctly explained why he suffered.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-05",
+        "sn-06"
+      ],
+      "teacherReviewRequired": true,
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 108
+      }
+    },
+    {
+      "id": "tf-12",
+      "statement": "God asked Job many questions about the world.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-13",
+      "statement": "Job was never given any more animals after his troubles.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-14",
+      "statement": "God gave Job twice as many animals at the end.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": false
+    }
+  ],
+  "vocabulary": {
+    "related": [
+      "JOB",
+      "GOD",
+      "SATAN",
+      "SHEEP",
+      "CAMELS",
+      "OXEN",
+      "DONKEYS",
+      "SERVANTS",
+      "CHILDREN",
+      "MESSENGERS",
+      "SABEAN",
+      "CHALDEANS",
+      "BLESSED",
+      "CURSE",
+      "PRAISE",
+      "WORSHIP",
+      "SORES",
+      "POTTERY",
+      "FRIENDS",
+      "ELIPHAZ",
+      "BILDAD",
+      "ZOPHAR",
+      "STORM",
+      "QUESTIONS",
+      "TWICE",
+      "SUFFERING",
+      "WHOLE STORY",
+      "GLORY",
+      "ANGELS",
+      "GODLY"
+    ],
+    "unrelated": [
+      "GOLIATH",
+      "JERICHO",
+      "DANIEL",
+      "MANNA",
+      "ESTHER",
+      "JONAH",
+      "PHARAOH",
+      "BETHLEHEM",
+      "MOSES",
+      "RED SEA"
+    ],
+    "entries": [
+      {
+        "id": "v-01",
+        "term": "JOB",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-02",
+        "term": "GOD",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-03",
+        "term": "SATAN",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-04",
+        "term": "SHEEP",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-05",
+        "term": "CAMELS",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-06",
+        "term": "OXEN",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-07",
+        "term": "DONKEYS",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-08",
+        "term": "SERVANTS",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-09",
+        "term": "CHILDREN",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-10",
+        "term": "MESSENGERS",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-11",
+        "term": "SABEAN",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-12",
+        "term": "CHALDEANS",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-13",
+        "term": "BLESSED",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-14",
+        "term": "CURSE",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-15",
+        "term": "PRAISE",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-16",
+        "term": "WORSHIP",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-17",
+        "term": "SORES",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-18",
+        "term": "POTTERY",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-19",
+        "term": "FRIENDS",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-20",
+        "term": "ELIPHAZ",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-21",
+        "term": "BILDAD",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-22",
+        "term": "ZOPHAR",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-23",
+        "term": "STORM",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-24",
+        "term": "QUESTIONS",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-25",
+        "term": "TWICE",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-26",
+        "term": "SUFFERING",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-27",
+        "term": "WHOLE STORY",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-28",
+        "term": "GLORY",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-29",
+        "term": "ANGELS",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-30",
+        "term": "GODLY",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": false
+      }
+    ]
+  },
+  "characters": [
+    {
+      "id": "ch-01",
+      "name": "Job",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-03",
+        "sn-04",
+        "sn-07"
+      ],
+      "teacherReviewRequired": false,
+      "clues": [
+        {
+          "text": "I feared God, lost my possessions, and continued to worship.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-01",
+            "sn-03",
+            "sn-04",
+            "sn-07"
+          ],
+          "teacherReviewRequired": false
+        }
+      ]
+    },
+    {
+      "id": "ch-02",
+      "name": "Satan",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02",
+        "sn-04"
+      ],
+      "teacherReviewRequired": false,
+      "clues": [
+        {
+          "text": "I challenged whether Job would remain faithful after great losses.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-02",
+            "sn-04"
+          ],
+          "teacherReviewRequired": false
+        }
+      ]
+    },
+    {
+      "id": "ch-03",
+      "name": "Job’s wife",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ],
+      "teacherReviewRequired": false,
+      "clues": [
+        {
+          "text": "I told Job to curse God when he was suffering.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-04"
+          ],
+          "teacherReviewRequired": false
+        }
+      ]
+    },
+    {
+      "id": "ch-04",
+      "name": "Eliphaz",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": false,
+      "clues": [
+        {
+          "text": "I was one of the three friends who sat with Job.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-05"
+          ],
+          "teacherReviewRequired": false
+        }
+      ]
+    },
+    {
+      "id": "ch-05",
+      "name": "Bildad",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": false,
+      "clues": [
+        {
+          "text": "I was among the three friends who gave Job mistaken advice.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-05"
+          ],
+          "teacherReviewRequired": false
+        }
+      ]
+    },
+    {
+      "id": "ch-06",
+      "name": "Zophar",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": false,
+      "clues": [
+        {
+          "text": "I came with two other friends to comfort Job.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-05"
+          ],
+          "teacherReviewRequired": false
+        }
+      ]
+    }
+  ],
+  "matchingPairs": [
+    {
+      "id": "mp-01",
+      "left": "Job",
+      "right": "Worshiped God",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "mp-02",
+      "left": "Satan",
+      "right": "Challenged Job",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "mp-03",
+      "left": "Messengers",
+      "right": "Brought bad news",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "mp-04",
+      "left": "Job’s wife",
+      "right": "Told him to curse",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "mp-05",
+      "left": "Three friends",
+      "right": "Wrong explanation",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "mp-06",
+      "left": "God",
+      "right": "Knows whole story",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ],
+      "teacherReviewRequired": false
+    }
+  ],
+  "drawingPrompts": [
+    {
+      "id": "dp-01",
+      "prompt": "Job with his sheep and camels",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "dp-02",
+      "prompt": "Satan speaking with God about Job",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "dp-03",
+      "prompt": "four messengers bringing Job sad news",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "dp-04",
+      "prompt": "Job sitting with sores on his arms",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "dp-05",
+      "prompt": "three friends sitting silently beside Job",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "dp-06",
+      "prompt": "God speaking to Job from a storm",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "dp-07",
+      "prompt": "Job surrounded by his new animals",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": false
+    }
+  ],
+  "keyPhrases": [
+    {
+      "id": "kp-01",
+      "text": "Only God knows the WHOLE story.",
+      "origin": "source",
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "Important Idea",
+        "page": 5,
+        "sourceParagraphIndex": 155,
+        "details": "The rendered page-5 Important Idea is split across two visible ODT paragraphs 155–156."
+      }
+    },
+    {
+      "id": "kp-02",
+      "text": "Job praised God during his suffering.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "kp-03",
+      "text": "God knows what we cannot see about our lives.",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "kp-review-1",
+      "text": "Despite Satan's attacks, Job did not curse God.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "theologicalApplications": [
+    {
+      "id": "app-01",
+      "text": "Only God knows the WHOLE story.",
+      "origin": "source",
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "Important Idea",
+        "page": 5,
+        "sourceParagraphIndex": 155
+      }
+    },
+    {
+      "id": "app-02",
+      "text": "The lesson teaches that people see only a small part of God’s larger story.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "Story Application",
+        "page": 6,
+        "sourceParagraphIndex": 171
+      },
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "app-03",
+      "text": "The lesson connects faith in Jesus with the hope of everlasting life in God’s kingdom.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "Story Application",
+        "page": 6,
+        "sourceParagraphIndex": 191
+      },
+      "teacherReviewRequired": true
+    }
+  ],
+  "preparedActivities": {
+    "drawPicture": {
+      "prompt": "Satan speaking with God about Job",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": false
+    },
+    "multipleChoice": [
+      {
+        "id": "mc-01",
+        "question": "What did Satan say Job would do if he lost his blessings?",
+        "correctAnswer": "Curse God",
+        "choices": [
+          {
+            "text": "Curse God",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Curse Satan",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "Praise God",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          }
+        ],
+        "sourceQuestionIds": [
+          "q-06",
+          "q-20"
+        ],
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-02",
+        "question": "What happened to Job's animals?",
+        "correctAnswer": "They died",
+        "choices": [
+          {
+            "text": "They died",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "They were stolen",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "They escaped",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          }
+        ],
+        "sourceQuestionIds": [
+          "q-21"
+        ],
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-03",
+        "question": "What did Job do after hearing the terrible news?",
+        "correctAnswer": "Worshiped God",
+        "choices": [
+          {
+            "text": "Worshiped God",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Cursed God",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "Blamed his friends",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          }
+        ],
+        "sourceQuestionIds": [
+          "q-07",
+          "q-24"
+        ],
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-04",
+        "question": "How did Satan make Job suffer physically?",
+        "correctAnswer": "Covered him with sores",
+        "choices": [
+          {
+            "text": "Covered him with sores",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Made him blind",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "Took away his voice",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          }
+        ],
+        "sourceQuestionIds": [
+          "q-10",
+          "q-26"
+        ],
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-05",
+        "question": "What did Job’s friends claim caused his suffering?",
+        "correctAnswer": "His own sin",
+        "choices": [
+          {
+            "text": "His own sin",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "His wife's sin",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "The devil",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          }
+        ],
+        "sourceQuestionIds": [
+          "q-13",
+          "q-28"
+        ],
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-06",
+        "question": "What happened to Job’s animals at the end of the story?",
+        "correctAnswer": "He received twice as many",
+        "choices": [
+          {
+            "text": "He received twice as many",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "He received the same number",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "He received no animals",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          }
+        ],
+        "sourceQuestionIds": [
+          "q-16",
+          "q-40"
+        ],
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ],
+        "teacherReviewRequired": true
+      }
+    ],
+    "trueFalse": {
+      "statement": "Job’s three friends sat silently with him for seven days.",
+      "isTrue": true,
+      "factId": "tf-09",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": false
+    },
+    "firstLetters": {
+      "reference": "Romans 8:18",
+      "verse": "I consider that our present sufferings are not comparable to the glory that will be revealed in us.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "oddWords": {
+      "related": [
+        "JOB",
+        "SORES",
+        "CAMELS",
+        "STORM"
+      ],
+      "unrelated": [
+        "Israel",
+        "Martha",
+        "statue",
+        "snow",
+        "wall"
+      ],
+      "unrelatedOrigin": "suggested",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-04",
+        "sn-06"
+      ],
+      "teacherReviewRequired": true
+    },
+    "unscrambleWords": {
+      "answers": [
+        "SATAN",
+        "SUFFERING"
+      ],
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-02",
+        "sn-01"
+      ],
+      "teacherReviewRequired": true
+    },
+    "checkboxes": {
+      "correct": [
+        "SHEEP",
+        "SERVANTS",
+        "FRIENDS",
+        "PRAISE"
+      ],
+      "incorrect": [
+        "RED SEA",
+        "MANGER",
+        "PHARAOH",
+        "GIDEON"
+      ],
+      "incorrectOrigin": "suggested",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-03",
+        "sn-05"
+      ],
+      "teacherReviewRequired": true
+    },
+    "whoAmI": {
+      "clue": "I believed that Job would curse God if I took away all of God's good blessings, but I was wrong.",
+      "answer": "Satan",
+      "origin": "suggested",
+      "sourceIds": [],
+      "teacherReviewRequired": true
+    },
+    "matchWords": [
+      {
+        "id": "mp-01",
+        "left": "Job",
+        "right": "Godly",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-02",
+        "left": "Satan",
+        "right": "Challenged Job",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "mp-03",
+        "left": "Messengers",
+        "right": "Bad News",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-04",
+        "left": "Job’s wife",
+        "right": "\"Curse God!\"",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-04"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-05",
+        "left": "Friends",
+        "right": "Wrong",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-05"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-06",
+        "left": "Many Questions",
+        "right": "God",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-06"
+        ],
+        "teacherReviewRequired": true
+      }
+    ],
+    "finishVerse": {
+      "reference": "Romans 8:18",
+      "sourceVerse": "I consider that our present sufferings are not comparable to the glory that will be revealed in us.",
+      "markedVerse": "I [consider] that our [present] sufferings are [not] comparable to the [glory] that will be [revealed] in [us].",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "unscrambleVerse": {
+      "reference": "Romans 8:18",
+      "sourceVerse": "I consider that our present sufferings are not comparable to the glory that will be revealed in us.",
+      "markedVerse": "I [consider] that our [present] sufferings are [not] comparable to the [glory] that will be [revealed] in [us].",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "circleMistakes": {
+      "paragraph": "Job was an evil man. At the beginning, he owned only two goats. Satan claimed Job would bless God if all his possessions disappeared. After the terrible news, Job cursed God. His friends told him he suffered because he made the devil mad. God spoke to Job and asked him a bunch of riddles. At the end, Job received fewer animals than before.",
+      "mistakeCount": 7,
+      "mistakes": [
+        {
+          "incorrect": "evil",
+          "correction": "godly"
+        },
+        {
+          "incorrect": "only two goats",
+          "correction": "thousands of animals"
+        },
+        {
+          "incorrect": "bless God",
+          "correction": "curse God"
+        },
+        {
+          "incorrect": "cursed God",
+          "correction": "worshiped God"
+        },
+        {
+          "incorrect": "made the devil mad",
+          "correction": "sinned"
+        },
+        {
+          "incorrect": "riddles",
+          "correction": "questions"
+        },
+        {
+          "incorrect": "fewer animals",
+          "correction": "twice as many animals"
+        }
+      ],
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "mediumWordSearch": {
+      "words": [
+        "JOB",
+        "FRIENDS",
+        "CAMELS",
+        "SORES",
+        "SATAN",
+        "STORM"
+      ],
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-04",
+        "sn-05",
+        "sn-06"
+      ],
+      "teacherReviewRequired": true
+    },
+    "trueFalseMaze": {
+      "statement": "Job's friends correctly explained why he suffered.",
+      "isTrue": false,
+      "factId": "tf-11",
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-05",
+        "sn-06"
+      ],
+      "teacherReviewRequired": true
+    },
+    "bigIdeaCryptogram": {
+      "phrase": "Despite Satan's attacks, Job did not curse God.",
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "sourceIds": []
+    },
+    "upsideDownVerse": {
+      "reference": "Romans 8:18",
+      "verse": "I consider that our present sufferings are not comparable to the glory that will be revealed in us.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "connectBigIdea": {
+      "phrase": "Only God knows the WHOLE story.",
+      "origin": "source",
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "Important Idea",
+        "page": 5,
+        "sourceParagraphIndex": 155
+      }
+    },
+    "pixelPicture": {
+      "phrase": "We see only a small part, but God knows the whole story.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 12 Lesson (Job).odt",
+        "section": "Story Application",
+        "page": 6,
+        "sourceParagraphIndex": 171
+      },
+      "teacherReviewRequired": true
+    },
+    "finishStory": {
+      "markedParagraph": "[Job] was a [GODLY] man who avoided evil. [Satan] challenged Job’s faithfulness, saying Job would [CURSE] God if he lost his blessings. Four messengers brought terrible news about Job's animals, servants, and [CHILDREN]. Job was very sad but still praised God. Next, Satan caused Job to be covered with painful [SORES]. Three [FRIENDS] came and gave him a wrong explanation for his [suffering]. God asked Job many [QUESTIONS] about the world to help Job see that his [plans]  are much bigger than Job could understand. In the end, God blessed Job [TWICE] as much with animals and gave him [ten] more children.",
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "storyOrder": [
+      {
+        "order": 1,
+        "text": "Job respected God and owned many animals.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "order": 2,
+        "text": "Satan challenged whether Job would continue to honor God.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "order": 3,
+        "text": "Messengers reported the loss of Job’s animals, servants, and children.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "order": 4,
+        "text": "Satan afflicted Job with painful sores.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "order": 5,
+        "text": "Three friends came and blamed Job’s suffering on his sin.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "order": 6,
+        "text": "God questioned Job and reminded him who was in control.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "order": 7,
+        "text": "God blessed the later part of Job’s life even more than before.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      }
+    ],
+    "sortStory": [
+      {
+        "factId": "tf-01",
+        "statement": "Job respected God and avoided evil.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "factId": "tf-02",
+        "statement": "Job suffered because he sinned.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-03",
+        "statement": "Satan said Job would curse God if his blessings disappeared.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "factId": "tf-04",
+        "statement": "The first messenger said Job's camels had escaped.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-05",
+        "statement": "After receiving terrible news, Job worshiped God.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "factId": "tf-06",
+        "statement": "Job cursed God as soon as his animals were lost.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-07",
+        "statement": "Satan covered Job with painful sores.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "factId": "tf-08",
+        "statement": "God told Satan he could take Job’s life.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-04"
+        ],
+        "teacherReviewRequired": true
+      }
+    ],
+    "drawStory": [
+      {
+        "prompt": "God blessed Job with a large family and many animals.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "prompt": "Satan challenged Job’s faithfulness before God.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "prompt": "Messengers brought Job terrible news about his family and possessions.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "prompt": "Job suffered from painful sores but did not curse God.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "prompt": "God spoke to Job and asked many questions about creation.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "prompt": "God gave Job twice as many animals and ten more children.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ],
+        "teacherReviewRequired": false
+      }
+    ],
+    "wordSearch": {
+      "words": [
+        "JOB",
+        "SATAN",
+        "SHEEP",
+        "CAMELS",
+        "DONKEYS",
+        "OXEN",
+        "SERVANTS",
+        "CHILDREN",
+        "SORES",
+        "FRIENDS",
+        "STORM",
+        "WIFE"
+      ],
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "verseCryptogram": {
+      "reference": "Romans 8:18",
+      "verse": "I consider that our present sufferings are not comparable to the glory that will be revealed in us.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "crossword": [
+      {
+        "answer": "JOB",
+        "clue": "A godly man who suffered Satan's attacks",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "SATAN",
+        "clue": "Believed that Job would curse God",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "CAMELS",
+        "clue": "Job owned many of these animals.",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "CURSE GOD",
+        "clue": "What Satan thought that Job would do",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "SORES",
+        "clue": "Painful spots that covered Job’s skin.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "answer": "FRIENDS",
+        "clue": "Three visitors who blamed Job’s suffering on sin.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "answer": "WIFE",
+        "clue": "She told Job to curse God and die.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "answer": "STORM",
+        "clue": "What God spoke from in Job chapter 38.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "answer": "Messengers",
+        "clue": "Four of these ran to tell Job bad news.",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "QUESTIONS",
+        "clue": "God asked Job many of these.",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": true
+      }
+    ],
+    "spiralVerse": {
+      "reference": "Romans 8:18",
+      "verse": "I consider that our present sufferings are not comparable to the glory that will be revealed in us.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "connectVerse": {
+      "reference": "Romans 8:18",
+      "verse": "I consider that our present sufferings are not comparable to the glory that will be revealed in us.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    }
+  },
+  "moduleReadiness": [
+    {
+      "moduleName": "Draw a Picture",
+      "moduleId": "draw-picture",
+      "size": "Small",
+      "preparedActivityKey": "drawPicture",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and four preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Multiple Choice Question",
+      "moduleId": "multiple-choice",
+      "size": "Small",
+      "preparedActivityKey": "multipleChoice",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and four preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "True/False",
+      "moduleId": "true-false",
+      "size": "Small",
+      "preparedActivityKey": "trueFalse",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and four preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "First Letter Challenge",
+      "moduleId": "first-letters",
+      "size": "Small",
+      "preparedActivityKey": "firstLetters",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and four preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "What Doesn't Belong?",
+      "moduleId": "odd-words",
+      "size": "Small",
+      "preparedActivityKey": "oddWords",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and four preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Unscramble the Words",
+      "moduleId": "unscramble-words",
+      "size": "Small",
+      "preparedActivityKey": "unscrambleWords",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and four preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Checkboxes",
+      "moduleId": "checkboxes",
+      "size": "Small",
+      "preparedActivityKey": "checkboxes",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and four preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Who Am I?",
+      "moduleId": "who-am-i",
+      "size": "Small",
+      "preparedActivityKey": "whoAmI",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and four preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Match Words",
+      "moduleId": "match-words",
+      "size": "Small",
+      "preparedActivityKey": "matchWords",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and four preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Finish the Verse",
+      "moduleId": "finish-verse",
+      "size": "Medium",
+      "preparedActivityKey": "finishVerse",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and four preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Unscramble the Verse",
+      "moduleId": "unscramble-verse",
+      "size": "Medium",
+      "preparedActivityKey": "unscrambleVerse",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and four preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Circle the Mistakes",
+      "moduleId": "circle-mistakes",
+      "size": "Medium",
+      "preparedActivityKey": "circleMistakes",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and four preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Medium Word Search",
+      "moduleId": "medium-word-search",
+      "size": "Medium",
+      "preparedActivityKey": "mediumWordSearch",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and four preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "True/False Maze",
+      "moduleId": "true-false-maze",
+      "size": "Medium",
+      "preparedActivityKey": "trueFalseMaze",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and four preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Big Idea Cryptogram",
+      "moduleId": "big-idea-cryptogram",
+      "size": "Medium",
+      "preparedActivityKey": "bigIdeaCryptogram",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and four preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Upside-Down Verse",
+      "moduleId": "upside-down-verse",
+      "size": "Medium",
+      "preparedActivityKey": "upsideDownVerse",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and four preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Connect the Big Idea",
+      "moduleId": "connect-big-idea",
+      "size": "Medium",
+      "preparedActivityKey": "connectBigIdea",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and four preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Pixel Picture",
+      "moduleId": "pixel-picture",
+      "size": "Medium",
+      "preparedActivityKey": "pixelPicture",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and four preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Finish the Story",
+      "moduleId": "finish-story",
+      "size": "Large",
+      "preparedActivityKey": "finishStory",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and four preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Story Order",
+      "moduleId": "story-order",
+      "size": "Large",
+      "preparedActivityKey": "storyOrder",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and four preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Sort the Story",
+      "moduleId": "sort-story",
+      "size": "Large",
+      "preparedActivityKey": "sortStory",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and four preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Draw the Story",
+      "moduleId": "draw-story",
+      "size": "Large",
+      "preparedActivityKey": "drawStory",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and four preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Word Search",
+      "moduleId": "word-search",
+      "size": "Large",
+      "preparedActivityKey": "wordSearch",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and four preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Verse Cryptogram",
+      "moduleId": "verse-cryptogram",
+      "size": "Large",
+      "preparedActivityKey": "verseCryptogram",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and four preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Crossword",
+      "moduleId": "crossword",
+      "size": "Large",
+      "preparedActivityKey": "crossword",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and four preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Spiral Verse",
+      "moduleId": "spiral-verse",
+      "size": "Large",
+      "preparedActivityKey": "spiralVerse",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and four preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    },
+    {
+      "moduleName": "Connect the Verse",
+      "moduleId": "connect-verse",
+      "size": "Large",
+      "preparedActivityKey": "connectVerse",
+      "status": "READY",
+      "contentValidation": "Review Studio preflight: 27/27 content and four preset content checks passed.",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Current approved worksheet passed Review Studio preflight. generatorTested retains its original standalone-test meaning; see publication.reviewStudioVerification."
+    }
+  ],
+  "reviewFlags": [
+    {
+      "id": "rf-01",
+      "priority": "high",
+      "type": "scripture-text",
+      "text": "Original Romans 8:18 ESV is retained in seven verse activities. Teacher must select and verify BSB text, then synchronize verse activity content and rights review.",
+      "affectedModules": [
+        "unscramble-verse",
+        "upside-down-verse",
+        "first-letters",
+        "finish-verse",
+        "spiral-verse",
+        "verse-cryptogram",
+        "connect-verse"
+      ]
+    },
+    {
+      "id": "rf-02",
+      "priority": "high",
+      "type": "content-sensitivity",
+      "text": "Review age suitability and theological interpretation of death of Job’s children, Satan’s actions, bodily sores, his wife’s speech, and the claim about reunion with twenty children.",
+      "affectedModules": [
+        "multiple-choice",
+        "true-false",
+        "sort-story",
+        "circle-mistakes",
+        "finish-story",
+        "draw-story"
+      ]
+    },
+    {
+      "id": "rf-03",
+      "priority": "medium",
+      "type": "editorial-review",
+      "text": "Review six Multiple Choice items (twelve suggested distractors) and 14 facts, including six intentionally false claims.",
+      "affectedModules": [
+        "multiple-choice",
+        "true-false",
+        "true-false-maze",
+        "sort-story"
+      ]
+    },
+    {
+      "id": "rf-04",
+      "priority": "medium",
+      "type": "missing-resources",
+      "text": "The lesson mentions supplementary slides and printable Story Snack/Puzzle resources, but only the source ODT was uploaded.",
+      "affectedModules": [
+        "draw-picture",
+        "draw-story",
+        "story-order"
+      ]
+    },
+    {
+      "id": "rf-05",
+      "priority": "high",
+      "type": "generator-preflight",
+      "text": "Run actual Review Studio module, puzzle, printable geometry and all four numbered preset checks; local syntax/length checks are not generator passes.",
+      "affectedModules": [
+        "draw-picture",
+        "multiple-choice",
+        "true-false",
+        "first-letters",
+        "odd-words",
+        "unscramble-words",
+        "checkboxes",
+        "who-am-i",
+        "match-words",
+        "finish-verse",
+        "unscramble-verse",
+        "circle-mistakes",
+        "medium-word-search",
+        "true-false-maze",
+        "big-idea-cryptogram",
+        "upside-down-verse",
+        "connect-big-idea",
+        "pixel-picture",
+        "finish-story",
+        "story-order",
+        "sort-story",
+        "draw-story",
+        "word-search",
+        "verse-cryptogram",
+        "crossword",
+        "spiral-verse",
+        "connect-verse"
+      ]
+    },
+    {
+      "id": "rf-06",
+      "priority": "medium",
+      "type": "crossword-placement",
+      "text": "Ten crossword candidate entries were authored but their placement/interlocking was NOT RUN in the live generator.",
+      "affectedModules": [
+        "crossword"
+      ]
+    },
+    {
+      "id": "rf-07",
+      "priority": "medium",
+      "type": "story-application",
+      "text": "The source says only God knows the whole story. Please review related authored wording and alternate puzzle prompts for precise theological intent.",
+      "affectedModules": [
+        "big-idea-cryptogram",
+        "connect-big-idea",
+        "pixel-picture",
+        "finish-story"
+      ]
+    }
+  ],
+  "publication": {
+    "status": "approved",
+    "approved": true,
+    "notes": "Approved through Review Studio after teacher review and a successful 27/27 content/preflight check of four numbered presets. Original conversion notes and checks remain as historical records.",
+    "teacherSignoff": {
+      "reviewer": "Andrew Doane",
+      "date": "2026-11-07",
+      "notes": "Approved with verified BSB verse through Curriculum Review Studio"
+    },
+    "scriptureRights": {
+      "status": "cleared",
+      "basis": "Berean Standard Bible (BSB), dedicated to the public domain on April 30, 2023. Official terms: https://berean.bible/terms.htm. Scripture text confirmed against https://bereanbible.com/bsb.txt.",
+      "reviewedBy": "Andrew Doane",
+      "reviewedOn": "2026-11-07"
+    },
+    "resolvedReviewFlagIds": [
+      "rf-01",
+      "rf-02"
+    ],
+    "originalSchemaStatus": "unapproved-source-preserving-draft",
+    "originalConversionNotes": "Reconstructed from uploaded OT12 source because original download artifact was unavailable; new unapproved draft. Teacher to review source/adapted content, select BSB, run four-preset Review Studio preflight and explicitly sign off.",
+    "reviewStudioVerification": {
+      "source": "Review Studio measured preflight",
+      "checkedAt": "2026-11-07T14:39:25.883Z",
+      "convertedCount": 27,
+      "totalCount": 27,
+      "issueCount": 0,
+      "numberedPresetsChecked": 4,
+      "scope": "Candidate-specific content conversion, four numbered preset content checks, and measured Connect the Verse fit. Standalone repository commands and independently rendered PDFs are not claimed.",
+      "matchingWorksheetSource": "preparedActivities.matchWords",
+      "matchingCandidatePool": "matchingPairs is retained separately as historical/source candidate material"
+    },
+    "reviewFlagDisposition": [
+      {
+        "id": "rf-01",
+        "status": "resolved",
+        "detail": "Resolved by explicit teacher review, BSB choice, or signed approval, as applicable."
+      },
+      {
+        "id": "rf-02",
+        "status": "resolved",
+        "detail": "Resolved by explicit teacher review, BSB choice, or signed approval, as applicable."
+      },
+      {
+        "id": "rf-03",
+        "status": "requires-review",
+        "detail": "Original flag retained; no implicit resolution was recorded."
+      },
+      {
+        "id": "rf-04",
+        "status": "requires-review",
+        "detail": "Original flag retained; no implicit resolution was recorded."
+      },
+      {
+        "id": "rf-05",
+        "status": "requires-review",
+        "detail": "Original flag retained; no implicit resolution was recorded."
+      },
+      {
+        "id": "rf-06",
+        "status": "requires-review",
+        "detail": "Original flag retained; no implicit resolution was recorded."
+      },
+      {
+        "id": "rf-07",
+        "status": "requires-review",
+        "detail": "Original flag retained; no implicit resolution was recorded."
+      }
+    ]
+  },
+  "validation": {
+    "basis": "Historical conversion-stage checks, not final Review Studio results. The passing review evidence is at publication.reviewStudioVerification.",
+    "allTextChecksPassed": false,
+    "actualGeneratorTested": false,
+    "jsonParseTested": true,
+    "checks": [
+      {
+        "check": "Seven exact source Story Notes with verified ODT paragraph indices",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Source question count 40 with every original source paragraph citation",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "14 balanced canonical facts (8 true, 6 false)",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Six prepared Multiple Choice records each exactly three distinct options with one correct",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Multiple choice question/choice fit",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "27 exact registered activities and readiness records",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Canonical T/F selections unique and exactly match valid fact records",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "T/F size limits and Sort 4–8 with both truth values",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Story Notes uppercase emphasis preserved",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Official source verse text matches source ODT",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Verse blanks reconstruct unmodified ESV text",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "All seven source verse fields consistent",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Odd Words choices 6–10 distinct, each <=12",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Checkbox choices valid, no Odd Words decoy overlap",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Unscramble exactly two answers 3–10 letters",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Who Am I clue/answer fits",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Match Words 3–6 unique concise pairs",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Finish Story paragraph and 6–12 single-word blanks",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Story Order 5–8 and ordered with source links",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Large drawing captions 4–6, punctuated and within 105 chars",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Small drawing noun phrases fit",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Word searches word and count limits",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Crossword answers/clues text budgets and distinctness",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Circle Mistakes count and exact incorrect substrings",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Big Idea cryptogram/Connect phrase budgets",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Pixel Picture text and repeated characters",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "All source IDs and source filenames resolve",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Publication remains unapproved and generator untested",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Expected source display names main narrative chapters",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "All MC source question IDs refer to originals",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Exact current GitHub schema/semantic validator against candidate",
+        "passed": false,
+        "detail": "NOT RUN: working repository CLI not available in this runtime"
+      },
+      {
+        "check": "Review Studio 27/27 module and 4-preset preflight",
+        "passed": false,
+        "detail": "NOT RUN: requires live Review Studio"
+      },
+      {
+        "check": "Crossword interlocking/grid and measured verse print fit",
+        "passed": false,
+        "detail": "NOT RUN: requires generator/rendering engines"
+      },
+      {
+        "check": "BSB selected and rights verified",
+        "passed": false,
+        "detail": "NOT RUN: teacher selection and review pending"
+      }
+    ],
+    "originalBasis": "Original conversion tests predate teacher-approved BSB; revalidate actual engines and content after export.",
+    "checksScope": "original-conversion-before-teacher-review",
+    "originalModuleReadiness": [
+      {
+        "moduleName": "Draw a Picture",
+        "moduleId": "draw-picture",
+        "size": "Small",
+        "preparedActivityKey": "drawPicture",
+        "status": "READY",
+        "contentValidation": "Local JSON/text checks only; official candidate validator and live Review Studio preflight NOT RUN",
+        "generatorTested": false,
+        "teacherReviewRequired": false,
+        "notes": "Prepared content checked locally; no claim of successful live generator or layout tests."
+      },
+      {
+        "moduleName": "Multiple Choice Question",
+        "moduleId": "multiple-choice",
+        "size": "Small",
+        "preparedActivityKey": "multipleChoice",
+        "status": "READY",
+        "contentValidation": "Local JSON/text checks only; official candidate validator and live Review Studio preflight NOT RUN",
+        "generatorTested": false,
+        "teacherReviewRequired": true,
+        "notes": "Prepared content checked locally; no claim of successful live generator or layout tests."
+      },
+      {
+        "moduleName": "True/False",
+        "moduleId": "true-false",
+        "size": "Small",
+        "preparedActivityKey": "trueFalse",
+        "status": "READY",
+        "contentValidation": "Local JSON/text checks only; official candidate validator and live Review Studio preflight NOT RUN",
+        "generatorTested": false,
+        "teacherReviewRequired": false,
+        "notes": "Prepared content checked locally; no claim of successful live generator or layout tests."
+      },
+      {
+        "moduleName": "First Letter Challenge",
+        "moduleId": "first-letters",
+        "size": "Small",
+        "preparedActivityKey": "firstLetters",
+        "status": "ADAPTATION NEEDED",
+        "contentValidation": "Local JSON/text checks only; official candidate validator and live Review Studio preflight NOT RUN",
+        "generatorTested": false,
+        "teacherReviewRequired": true,
+        "notes": "Original ESV source pending teacher-selected BSB; live rendering NOT RUN."
+      },
+      {
+        "moduleName": "What Doesn't Belong?",
+        "moduleId": "odd-words",
+        "size": "Small",
+        "preparedActivityKey": "oddWords",
+        "status": "READY",
+        "contentValidation": "Local JSON/text checks only; official candidate validator and live Review Studio preflight NOT RUN",
+        "generatorTested": false,
+        "teacherReviewRequired": true,
+        "notes": "Prepared content checked locally; no claim of successful live generator or layout tests."
+      },
+      {
+        "moduleName": "Unscramble the Words",
+        "moduleId": "unscramble-words",
+        "size": "Small",
+        "preparedActivityKey": "unscrambleWords",
+        "status": "READY",
+        "contentValidation": "Local JSON/text checks only; official candidate validator and live Review Studio preflight NOT RUN",
+        "generatorTested": false,
+        "teacherReviewRequired": false,
+        "notes": "Prepared content checked locally; no claim of successful live generator or layout tests."
+      },
+      {
+        "moduleName": "Checkboxes",
+        "moduleId": "checkboxes",
+        "size": "Small",
+        "preparedActivityKey": "checkboxes",
+        "status": "READY",
+        "contentValidation": "Local JSON/text checks only; official candidate validator and live Review Studio preflight NOT RUN",
+        "generatorTested": false,
+        "teacherReviewRequired": true,
+        "notes": "Prepared content checked locally; no claim of successful live generator or layout tests."
+      },
+      {
+        "moduleName": "Who Am I?",
+        "moduleId": "who-am-i",
+        "size": "Small",
+        "preparedActivityKey": "whoAmI",
+        "status": "READY",
+        "contentValidation": "Local JSON/text checks only; official candidate validator and live Review Studio preflight NOT RUN",
+        "generatorTested": false,
+        "teacherReviewRequired": false,
+        "notes": "Prepared content checked locally; no claim of successful live generator or layout tests."
+      },
+      {
+        "moduleName": "Match Words",
+        "moduleId": "match-words",
+        "size": "Small",
+        "preparedActivityKey": "matchWords",
+        "status": "READY",
+        "contentValidation": "Local JSON/text checks only; official candidate validator and live Review Studio preflight NOT RUN",
+        "generatorTested": false,
+        "teacherReviewRequired": false,
+        "notes": "Prepared content checked locally; no claim of successful live generator or layout tests."
+      },
+      {
+        "moduleName": "Finish the Verse",
+        "moduleId": "finish-verse",
+        "size": "Medium",
+        "preparedActivityKey": "finishVerse",
+        "status": "ADAPTATION NEEDED",
+        "contentValidation": "Local JSON/text checks only; official candidate validator and live Review Studio preflight NOT RUN",
+        "generatorTested": false,
+        "teacherReviewRequired": true,
+        "notes": "Original ESV source pending teacher-selected BSB; live rendering NOT RUN."
+      },
+      {
+        "moduleName": "Unscramble the Verse",
+        "moduleId": "unscramble-verse",
+        "size": "Medium",
+        "preparedActivityKey": "unscrambleVerse",
+        "status": "ADAPTATION NEEDED",
+        "contentValidation": "Local JSON/text checks only; official candidate validator and live Review Studio preflight NOT RUN",
+        "generatorTested": false,
+        "teacherReviewRequired": true,
+        "notes": "Original ESV source pending teacher-selected BSB; live rendering NOT RUN."
+      },
+      {
+        "moduleName": "Circle the Mistakes",
+        "moduleId": "circle-mistakes",
+        "size": "Medium",
+        "preparedActivityKey": "circleMistakes",
+        "status": "READY",
+        "contentValidation": "Local JSON/text checks only; official candidate validator and live Review Studio preflight NOT RUN",
+        "generatorTested": false,
+        "teacherReviewRequired": true,
+        "notes": "Prepared content checked locally; no claim of successful live generator or layout tests."
+      },
+      {
+        "moduleName": "Medium Word Search",
+        "moduleId": "medium-word-search",
+        "size": "Medium",
+        "preparedActivityKey": "mediumWordSearch",
+        "status": "READY",
+        "contentValidation": "Local JSON/text checks only; official candidate validator and live Review Studio preflight NOT RUN",
+        "generatorTested": false,
+        "teacherReviewRequired": false,
+        "notes": "Prepared content checked locally; no claim of successful live generator or layout tests."
+      },
+      {
+        "moduleName": "True/False Maze",
+        "moduleId": "true-false-maze",
+        "size": "Medium",
+        "preparedActivityKey": "trueFalseMaze",
+        "status": "READY",
+        "contentValidation": "Local JSON/text checks only; official candidate validator and live Review Studio preflight NOT RUN",
+        "generatorTested": false,
+        "teacherReviewRequired": true,
+        "notes": "Prepared content checked locally; no claim of successful live generator or layout tests."
+      },
+      {
+        "moduleName": "Big Idea Cryptogram",
+        "moduleId": "big-idea-cryptogram",
+        "size": "Medium",
+        "preparedActivityKey": "bigIdeaCryptogram",
+        "status": "READY",
+        "contentValidation": "Local JSON/text checks only; official candidate validator and live Review Studio preflight NOT RUN",
+        "generatorTested": false,
+        "teacherReviewRequired": false,
+        "notes": "Prepared content checked locally; no claim of successful live generator or layout tests."
+      },
+      {
+        "moduleName": "Upside-Down Verse",
+        "moduleId": "upside-down-verse",
+        "size": "Medium",
+        "preparedActivityKey": "upsideDownVerse",
+        "status": "ADAPTATION NEEDED",
+        "contentValidation": "Local JSON/text checks only; official candidate validator and live Review Studio preflight NOT RUN",
+        "generatorTested": false,
+        "teacherReviewRequired": true,
+        "notes": "Original ESV source pending teacher-selected BSB; live rendering NOT RUN."
+      },
+      {
+        "moduleName": "Connect the Big Idea",
+        "moduleId": "connect-big-idea",
+        "size": "Medium",
+        "preparedActivityKey": "connectBigIdea",
+        "status": "READY",
+        "contentValidation": "Local JSON/text checks only; official candidate validator and live Review Studio preflight NOT RUN",
+        "generatorTested": false,
+        "teacherReviewRequired": false,
+        "notes": "Prepared content checked locally; no claim of successful live generator or layout tests."
+      },
+      {
+        "moduleName": "Pixel Picture",
+        "moduleId": "pixel-picture",
+        "size": "Medium",
+        "preparedActivityKey": "pixelPicture",
+        "status": "READY",
+        "contentValidation": "Local JSON/text checks only; official candidate validator and live Review Studio preflight NOT RUN",
+        "generatorTested": false,
+        "teacherReviewRequired": true,
+        "notes": "Prepared content checked locally; no claim of successful live generator or layout tests."
+      },
+      {
+        "moduleName": "Finish the Story",
+        "moduleId": "finish-story",
+        "size": "Large",
+        "preparedActivityKey": "finishStory",
+        "status": "READY",
+        "contentValidation": "Local JSON/text checks only; official candidate validator and live Review Studio preflight NOT RUN",
+        "generatorTested": false,
+        "teacherReviewRequired": true,
+        "notes": "Prepared content checked locally; no claim of successful live generator or layout tests."
+      },
+      {
+        "moduleName": "Story Order",
+        "moduleId": "story-order",
+        "size": "Large",
+        "preparedActivityKey": "storyOrder",
+        "status": "READY",
+        "contentValidation": "Local JSON/text checks only; official candidate validator and live Review Studio preflight NOT RUN",
+        "generatorTested": false,
+        "teacherReviewRequired": false,
+        "notes": "Prepared content checked locally; no claim of successful live generator or layout tests."
+      },
+      {
+        "moduleName": "Sort the Story",
+        "moduleId": "sort-story",
+        "size": "Large",
+        "preparedActivityKey": "sortStory",
+        "status": "READY",
+        "contentValidation": "Local JSON/text checks only; official candidate validator and live Review Studio preflight NOT RUN",
+        "generatorTested": false,
+        "teacherReviewRequired": true,
+        "notes": "Prepared content checked locally; no claim of successful live generator or layout tests."
+      },
+      {
+        "moduleName": "Draw the Story",
+        "moduleId": "draw-story",
+        "size": "Large",
+        "preparedActivityKey": "drawStory",
+        "status": "READY",
+        "contentValidation": "Local JSON/text checks only; official candidate validator and live Review Studio preflight NOT RUN",
+        "generatorTested": false,
+        "teacherReviewRequired": false,
+        "notes": "Prepared content checked locally; no claim of successful live generator or layout tests."
+      },
+      {
+        "moduleName": "Word Search",
+        "moduleId": "word-search",
+        "size": "Large",
+        "preparedActivityKey": "wordSearch",
+        "status": "READY",
+        "contentValidation": "Local JSON/text checks only; official candidate validator and live Review Studio preflight NOT RUN",
+        "generatorTested": false,
+        "teacherReviewRequired": false,
+        "notes": "Prepared content checked locally; no claim of successful live generator or layout tests."
+      },
+      {
+        "moduleName": "Verse Cryptogram",
+        "moduleId": "verse-cryptogram",
+        "size": "Large",
+        "preparedActivityKey": "verseCryptogram",
+        "status": "ADAPTATION NEEDED",
+        "contentValidation": "Local JSON/text checks only; official candidate validator and live Review Studio preflight NOT RUN",
+        "generatorTested": false,
+        "teacherReviewRequired": true,
+        "notes": "Original ESV source pending teacher-selected BSB; live rendering NOT RUN."
+      },
+      {
+        "moduleName": "Crossword",
+        "moduleId": "crossword",
+        "size": "Large",
+        "preparedActivityKey": "crossword",
+        "status": "READY",
+        "contentValidation": "Local JSON/text checks only; official candidate validator and live Review Studio preflight NOT RUN",
+        "generatorTested": false,
+        "teacherReviewRequired": true,
+        "notes": "Prepared content checked locally; no claim of successful live generator or layout tests."
+      },
+      {
+        "moduleName": "Spiral Verse",
+        "moduleId": "spiral-verse",
+        "size": "Large",
+        "preparedActivityKey": "spiralVerse",
+        "status": "ADAPTATION NEEDED",
+        "contentValidation": "Local JSON/text checks only; official candidate validator and live Review Studio preflight NOT RUN",
+        "generatorTested": false,
+        "teacherReviewRequired": true,
+        "notes": "Original ESV source pending teacher-selected BSB; live rendering NOT RUN."
+      },
+      {
+        "moduleName": "Connect the Verse",
+        "moduleId": "connect-verse",
+        "size": "Large",
+        "preparedActivityKey": "connectVerse",
+        "status": "ADAPTATION NEEDED",
+        "contentValidation": "Local JSON/text checks only; official candidate validator and live Review Studio preflight NOT RUN",
+        "generatorTested": false,
+        "teacherReviewRequired": true,
+        "notes": "Original ESV source pending teacher-selected BSB; live rendering NOT RUN."
+      }
+    ]
+  }
+}
