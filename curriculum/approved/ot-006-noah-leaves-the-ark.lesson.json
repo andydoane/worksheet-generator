@@ -1,0 +1,1036 @@
+{
+  "schemaVersion": 1,
+  "id": "ot-006-noah-leaves-the-ark",
+  "curriculum": {
+    "series": "OT",
+    "lessonNumber": 6
+  },
+  "lessonDetails": {
+    "title": "Noah Leaves the Ark",
+    "scripturePassages": [
+      "Genesis 8",
+      "Genesis 9"
+    ],
+    "scriptureDisplay": "Genesis 8–9",
+    "bigIdeas": [
+      {
+        "text": "God always keeps his promises.",
+        "origin": "source"
+      }
+    ],
+    "memoryVerse": {
+      "reference": "Psalm 105:8",
+      "translation": "BSB",
+      "text": "He remembers His covenant forever, the word He ordained for a thousand generations—",
+      "isExcerpt": false,
+      "requiresTextReview": false,
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "originalTranslation": "ESV",
+      "hasEllipses": false,
+      "bsbSource": {
+        "reference": "Psalm 105:8",
+        "sourceUrl": "https://bereanbible.com/bsb.txt",
+        "publicDomainTerms": "https://berean.bible/terms.htm",
+        "startWord": 0,
+        "endWord": 12
+      }
+    }
+  },
+  "preparedActivities": {
+    "drawPicture": {
+      "prompt": "Noah looking at a rainbow in the sky above the ark",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "multipleChoice": [
+      {
+        "id": "mc-01",
+        "question": "What happened when God sent a wind after the flood?",
+        "correctAnswer": "The waters began to go down.",
+        "choices": [
+          {
+            "text": "The waters began to go down.",
+            "isCorrect": true,
+            "origin": "suggested"
+          },
+          {
+            "text": "The ark began to sink.",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "The animals left the ark.",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-02",
+        "question": "Where did the ark finally come to rest?",
+        "correctAnswer": "On a mountain",
+        "choices": [
+          {
+            "text": "On a mountain",
+            "isCorrect": true,
+            "origin": "suggested"
+          },
+          {
+            "text": "On a beach",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Beside the Jordan River",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-03",
+        "question": "Why did the first dove return to Noah?",
+        "correctAnswer": "It could not find a place to rest.",
+        "choices": [
+          {
+            "text": "It could not find a place to rest.",
+            "isCorrect": true,
+            "origin": "suggested"
+          },
+          {
+            "text": "It found a new boat to live in.",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "It fell in the water.",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-04",
+        "question": "What did the dove bring back after Noah waited?",
+        "correctAnswer": "A freshly picked olive leaf",
+        "choices": [
+          {
+            "text": "A freshly picked olive leaf",
+            "isCorrect": true,
+            "origin": "suggested"
+          },
+          {
+            "text": "A piece of gold",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "A bird's feather",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-05",
+        "question": "How did Noah know it was time to leave the ark?",
+        "correctAnswer": "God told Noah to come out.",
+        "choices": [
+          {
+            "text": "God told Noah to come out.",
+            "isCorrect": true,
+            "origin": "suggested"
+          },
+          {
+            "text": "The raven opened the door.",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "The animals began to swim away.",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-06",
+        "question": "What did the rainbow remind Noah about?",
+        "correctAnswer": "God's promise to not send another flood",
+        "choices": [
+          {
+            "text": "God's promise to not send another flood",
+            "isCorrect": true,
+            "origin": "suggested"
+          },
+          {
+            "text": "God's promise to grow his family",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "How colorful the animals on the ark were",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "trueFalse": {
+      "factId": "tf-07",
+      "statement": "Noah built an altar and offered sacrifices to God.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "firstLetters": {
+      "reference": "Psalm 105:8",
+      "verse": "He remembers His covenant forever, the word He ordained for a thousand generations—",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "oddWords": {
+      "related": [
+        "NOAH",
+        "ARK",
+        "DOVE",
+        "ALTAR",
+        "RAINBOW"
+      ],
+      "unrelated": [
+        "hands",
+        "sheep",
+        "mercy",
+        "Ananias",
+        "music"
+      ],
+      "unrelatedOrigin": "suggested",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "unscrambleWords": {
+      "answers": [
+        "RAINBOW",
+        "RAVEN"
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "checkboxes": {
+      "correct": [
+        "ARARAT",
+        "OLIVE LEAF",
+        "RAVEN",
+        "WIND",
+        "SACRIFICE"
+      ],
+      "incorrect": [
+        "gate",
+        "stew",
+        "Goliath",
+        "Paul",
+        "Lot"
+      ],
+      "incorrectOrigin": "suggested",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "whoAmI": {
+      "clue": "I built an ark, sent birds to look for dry land, and offered a sacrifice after the flood.",
+      "answer": "Noah",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "matchWords": [
+      {
+        "id": "pair-01",
+        "left": "Noah",
+        "right": "Built altar",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "pair-02",
+        "left": "Dove",
+        "right": "Olive leaf",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "pair-03",
+        "left": "Ark rested",
+        "right": "Mountains",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "pair-04",
+        "left": "God's Sign",
+        "right": "Rainbow",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "pair-05",
+        "left": "Wind",
+        "right": "Waters down",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "finishVerse": {
+      "reference": "Psalm 105:8",
+      "sourceVerse": "He remembers His covenant forever, the word He ordained for a thousand generations—",
+      "markedVerse": "He [remembers] His [covenant] [forever], the [word] He [ordained] for a [thousand] generations—",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "unscrambleVerse": {
+      "reference": "Psalm 105:8",
+      "sourceVerse": "He remembers His covenant forever, the word He ordained for a thousand generations—",
+      "markedVerse": "He [remembers] His [covenant] [forever], the [word] He [ordained] for a [thousand] generations—",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "circleMistakes": {
+      "paragraph": "God sent a snowstorm to make the floodwaters go down. The ark rested in a deep canyon. Noah sent out a dove, which brought back a feather. When God told Noah to leave the ark, Noah built a statue of himself. God promised to never flood the entire earth again. He gave a shooting star as a sign of this promise.",
+      "mistakeCount": 5,
+      "mistakes": [
+        {
+          "incorrect": "snowstorm",
+          "correction": "wind",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "in a deep canyon",
+          "correction": "on a mountain",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "feather",
+          "correction": "fresh olive leaf",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "statue of himself",
+          "correction": "altar",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "shooting star",
+          "correction": "rainbow",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "mediumWordSearch": {
+      "words": [
+        "NOAH",
+        "DOVE",
+        "ARK",
+        "WIND",
+        "OLIVE",
+        "ALTAR"
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "trueFalseMaze": {
+      "factId": "tf-12",
+      "statement": "Noah left the ark before God told him to leave.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "bigIdeaCryptogram": {
+      "phrase": "God always keeps his promises.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "upsideDownVerse": {
+      "reference": "Psalm 105:8",
+      "verse": "He remembers His covenant forever, the word He ordained for a thousand generations—",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "connectBigIdea": {
+      "phrase": "God always keeps his promises.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "pixelPicture": {
+      "phrase": "The rainbow reminded Noah of God's promise to all living things.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "finishStory": {
+      "markedParagraph": "After the [flood], God sent a [wind] to make the waters go down. The [ark] rested on the mountains of Ararat. Noah sent out a [raven] and then a [dove] to look for dry land. The first dove came back because it could not find dry land. After [seven] days, he sent a dove out again. It returned with an [olive] leaf. The third time, the dove did not return. When [God] told Noah to leave, Noah and his family came out of the ark. Noah built an [altar] and offered a sacrifice. God told Noah’s family to fill the [earth]. He made a [covenant] never to flood the whole earth again. The [rainbow] was a sign of that promise.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "storyOrder": [
+      {
+        "order": 1,
+        "text": "God sent a wind, and the waters began to go down.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 2,
+        "text": "The ark came to rest on the mountains of Ararat.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 3,
+        "text": "Noah sent out a raven and then a dove to look for dry land.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 4,
+        "text": "The first dove returned because it had nowhere to rest.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 5,
+        "text": "After seven days, the dove came back with a fresh olive leaf.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 6,
+        "text": "A week later, the dove flew away and did not come back.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 7,
+        "text": "God told Noah to leave the ark, and Noah built an altar.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 8,
+        "text": "God promised never to flood the whole earth again and gave the rainbow as a sign.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "sortStory": [
+      {
+        "factId": "tf-01",
+        "statement": "God sent a wind, and the floodwaters began to go down.",
+        "isTrue": true,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-03",
+        "statement": "The first dove returned because it could not find dry land.",
+        "isTrue": true,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-04",
+        "statement": "A dove later came back carrying a fresh olive leaf.",
+        "isTrue": true,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-08",
+        "statement": "God made the rainbow a sign of his covenant.",
+        "isTrue": true,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-09",
+        "statement": "The ark came to rest at the bottom of a canyon.",
+        "isTrue": false,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-10",
+        "statement": "The raven returned carrying a fresh olive leaf.",
+        "isTrue": false,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-11",
+        "statement": "The first dove found dry ground and never came back.",
+        "isTrue": false,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-14",
+        "statement": "God promised to flood the whole earth every year.",
+        "isTrue": false,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "drawStory": [
+      {
+        "prompt": "The ark came to rest on the mountains of Ararat.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "Noah sent out a raven and then a dove to look for dry land.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "After seven days, the dove came back with a fresh olive leaf.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "A week later, the dove flew away and did not come back.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "God told Noah to leave the ark, and Noah built an altar.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "God promised never to flood the whole earth again and gave the rainbow as a sign.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "wordSearch": {
+      "words": [
+        "NOAH",
+        "ARK",
+        "ARARAT",
+        "RAVEN",
+        "DOVE",
+        "OLIVE LEAF",
+        "RAINBOW",
+        "ALTAR",
+        "COVENANT",
+        "WIND",
+        "SACRIFICE",
+        "PROMISE"
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "verseCryptogram": {
+      "reference": "Psalm 105:8",
+      "verse": "He remembers His covenant forever, the word He ordained for a thousand generations—",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "crossword": [
+      {
+        "answer": "NOAH",
+        "clue": "Man God told to build an ark.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "MOUNTAIN",
+        "clue": "Where the ark came to rest.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "RAVEN",
+        "clue": "Black bird Noah first sent to look for land.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "DOVE",
+        "clue": "Bird that returned with a fresh leaf.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "OLIVE",
+        "clue": "Type of leaf carried back to Noah.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "ALTAR",
+        "clue": "What Noah built to offer a sacrifice.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "RAINBOW",
+        "clue": "Colorful sign of God’s promise after the flood.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "ARK",
+        "clue": "Boat that kept Noah and the animals safe.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "WIND",
+        "clue": "What God sent to make the waters go down.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "spiralVerse": {
+      "reference": "Psalm 105:8",
+      "verse": "He remembers His covenant forever, the word He ordained for a thousand generations—",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "connectVerse": {
+      "reference": "Psalm 105:8",
+      "verse": "He remembers His covenant forever, the word He ordained for a thousand generations—",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    }
+  },
+  "vocabulary": {
+    "related": [
+      "NOAH",
+      "ARK",
+      "DOVE",
+      "RAVEN",
+      "ARARAT",
+      "OLIVE",
+      "ALTAR",
+      "RAINBOW",
+      "COVENANT",
+      "WIND",
+      "FLOOD",
+      "SACRIFICE",
+      "PROMISE",
+      "MOUNTAIN",
+      "WATERS",
+      "ANIMALS",
+      "EARTH"
+    ],
+    "unrelated": [
+      "JERICHO",
+      "GOLIATH",
+      "PHARAOH",
+      "MANNA",
+      "KING SAUL",
+      "JORDAN",
+      "FURNACE",
+      "SLING",
+      "PALACE",
+      "MANGER"
+    ],
+    "entries": [
+      {
+        "id": "voc-01",
+        "term": "NOAH",
+        "category": "related",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-02",
+        "term": "ARK",
+        "category": "related",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-03",
+        "term": "DOVE",
+        "category": "related",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-04",
+        "term": "RAVEN",
+        "category": "related",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-05",
+        "term": "ARARAT",
+        "category": "related",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-06",
+        "term": "OLIVE",
+        "category": "related",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-07",
+        "term": "ALTAR",
+        "category": "related",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-08",
+        "term": "RAINBOW",
+        "category": "related",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-09",
+        "term": "COVENANT",
+        "category": "related",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-10",
+        "term": "WIND",
+        "category": "related",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-11",
+        "term": "FLOOD",
+        "category": "related",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-12",
+        "term": "SACRIFICE",
+        "category": "related",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-13",
+        "term": "PROMISE",
+        "category": "related",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-14",
+        "term": "MOUNTAIN",
+        "category": "related",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-15",
+        "term": "WATERS",
+        "category": "related",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-16",
+        "term": "ANIMALS",
+        "category": "related",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-17",
+        "term": "EARTH",
+        "category": "related",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ]
+  },
+  "facts": [
+    {
+      "id": "tf-01",
+      "statement": "God sent a wind, and the floodwaters began to go down.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-02",
+      "statement": "The ark came to rest on the mountains of Ararat.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-03",
+      "statement": "The first dove returned because it could not find dry land.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-04",
+      "statement": "A dove later came back carrying a fresh olive leaf.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-05",
+      "statement": "The dove did not return after its third trip.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-06",
+      "statement": "God told Noah when to come out of the ark.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-07",
+      "statement": "Noah built an altar and offered sacrifices to God.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-08",
+      "statement": "God made the rainbow a sign of his covenant.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-09",
+      "statement": "The ark came to rest at the bottom of a canyon.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-10",
+      "statement": "The raven returned carrying a fresh olive leaf.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-11",
+      "statement": "The first dove found dry ground and never came back.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-12",
+      "statement": "Noah left the ark before God told him to leave.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-13",
+      "statement": "Noah built an a second ark after the flood.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-14",
+      "statement": "God promised to flood the whole earth every year.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "characters": [
+    {
+      "id": "ch-01",
+      "name": "Noah",
+      "clues": [
+        {
+          "text": "I trusted God, sent birds from the ark, and built an altar.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "drawingPrompts": [
+    {
+      "id": "scene-01",
+      "prompt": "Noah watching a dove return to the ark with an olive leaf",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "scene-02",
+      "prompt": "the ark resting on a mountain as the waters recede",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "scene-03",
+      "prompt": "Noah standing beside an altar after leaving the ark",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "scene-04",
+      "prompt": "a rainbow shining above Noah and his family",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "scene-05",
+      "prompt": "Noah opening a window to release a raven",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "matchingPairs": [
+    {
+      "id": "pair-01",
+      "left": "Noah",
+      "right": "Built an altar",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "pair-02",
+      "left": "Dove",
+      "right": "Brought an olive leaf",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "pair-03",
+      "left": "Ararat",
+      "right": "Mountains",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "pair-04",
+      "left": "Rainbow",
+      "right": "Covenant sign",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "pair-05",
+      "left": "Wind",
+      "right": "Waters went down",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "pair-06",
+      "left": "Ark",
+      "right": "Kept family safe",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "keyPhrases": [
+    {
+      "id": "kp-01",
+      "text": "God always keeps his promises.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "kp-02",
+      "text": "God gave Noah a rainbow as a sign of his covenant.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "kp-03",
+      "text": "Noah waited until God told him to leave the ark.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "publication": {
+    "status": "approved",
+    "approved": true,
+    "teacherSignoff": {
+      "reviewer": "Andrew Doane",
+      "date": "2026-11-07",
+      "notes": "Approved with verified BSB verse through Curriculum Review Studio"
+    },
+    "scriptureRights": {
+      "status": "cleared",
+      "basis": "Berean Standard Bible (BSB), dedicated to the public domain on April 30, 2023. Official terms: https://berean.bible/terms.htm. Scripture text confirmed against https://bereanbible.com/bsb.txt.",
+      "reviewedBy": "Andrew Doane",
+      "reviewedOn": "2026-11-07"
+    },
+    "resolvedReviewFlagIds": [],
+    "notes": "Approved through Review Studio after teacher review and a successful 27/27 content/preflight check of four numbered presets. Original conversion notes and checks remain as historical records.",
+    "reviewStudioVerification": {
+      "source": "Review Studio measured preflight",
+      "checkedAt": "2026-11-07T21:29:11.241Z",
+      "convertedCount": 27,
+      "totalCount": 27,
+      "issueCount": 0,
+      "numberedPresetsChecked": 4,
+      "scope": "Candidate-specific content conversion, four numbered preset content checks, and measured Connect the Verse fit. Standalone repository commands and independently rendered PDFs are not claimed.",
+      "matchingWorksheetSource": "preparedActivities.matchWords",
+      "matchingCandidatePool": "matchingPairs is retained separately as historical/source candidate material"
+    },
+    "reviewFlagDisposition": []
+  },
+  "schemaStatus": "approved; Review Studio 27/27 preflight passed"
+}
