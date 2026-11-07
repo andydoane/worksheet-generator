@@ -1,0 +1,1055 @@
+{
+  "schemaVersion": 1,
+  "id": "ot-005-the-great-flood",
+  "curriculum": {
+    "series": "OT",
+    "lessonNumber": 5
+  },
+  "lessonDetails": {
+    "title": "The Great Flood",
+    "scripturePassages": [
+      "Genesis 6",
+      "Genesis 7",
+      "Hebrews 11:7",
+      "Romans 6:23"
+    ],
+    "scriptureDisplay": "Genesis 6–7",
+    "bigIdeas": [
+      {
+        "text": "Sin leads to death and disaster.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "text": "Like Noah, if we have faith, we’ll be saved from deadly disaster!",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "memoryVerse": {
+      "reference": "Romans 6:23",
+      "translation": "BSB",
+      "text": "For the wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord.",
+      "isExcerpt": false,
+      "origin": "adapted",
+      "requiresTextReview": false,
+      "teacherReviewRequired": true,
+      "originalTranslation": "ESV",
+      "hasEllipses": false,
+      "bsbSource": {
+        "reference": "Romans 6:23",
+        "sourceUrl": "https://bereanbible.com/bsb.txt",
+        "publicDomainTerms": "https://berean.bible/terms.htm",
+        "startWord": 0,
+        "endWord": 19
+      }
+    }
+  },
+  "preparedActivities": {
+    "drawPicture": {
+      "prompt": "Noah and his sons building a huge wooden ark",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "multipleChoice": [
+      {
+        "id": "mc-01",
+        "question": "Why did God plan to send a great flood?",
+        "correctAnswer": "People were filled with sin.",
+        "choices": [
+          {
+            "text": "People were filled with sin.",
+            "isCorrect": true,
+            "origin": "suggested"
+          },
+          {
+            "text": "The earth was too dry.",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "There were too many people.",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-02",
+        "question": "What did God tell Noah to build?",
+        "correctAnswer": "An enormous ark",
+        "choices": [
+          {
+            "text": "An enormous ark",
+            "isCorrect": true,
+            "origin": "suggested"
+          },
+          {
+            "text": "A high tower",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "A great big balloon",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-03",
+        "question": "Why did Noah and his family enter the ark?",
+        "correctAnswer": "God promised to keep them safe.",
+        "choices": [
+          {
+            "text": "God promised to keep them safe.",
+            "isCorrect": true,
+            "origin": "suggested"
+          },
+          {
+            "text": "They wanted to go on a trip.",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "They were looking for treasure.",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-04",
+        "question": "Who shut the door of the ark?",
+        "correctAnswer": "God",
+        "choices": [
+          {
+            "text": "God",
+            "isCorrect": true,
+            "origin": "suggested"
+          },
+          {
+            "text": "Noah’s oldest son",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "The people outside",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-05",
+        "question": "How long did the rain fall?",
+        "correctAnswer": "40 days and nights",
+        "choices": [
+          {
+            "text": "40 days and nights",
+            "isCorrect": true,
+            "origin": "suggested"
+          },
+          {
+            "text": "7 days and nights",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "150 days and nights",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-06",
+        "question": "What happened to the people outside the ark?",
+        "correctAnswer": "They died in the flood.",
+        "choices": [
+          {
+            "text": "They died in the flood.",
+            "isCorrect": true,
+            "origin": "suggested"
+          },
+          {
+            "text": "They held onto Noah’s ark.",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "They moved safely to the mountains.",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "trueFalse": {
+      "factId": "tf-09",
+      "statement": "God told Noah to build a tall tower.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "firstLetters": {
+      "reference": "Romans 6:23",
+      "verse": "For the wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "oddWords": {
+      "related": [
+        "NOAH",
+        "ARK",
+        "RAIN",
+        "ANIMALS",
+        "FLOOD"
+      ],
+      "unrelated": [
+        "Passover",
+        "Gomorrah",
+        "Naomi",
+        "Metal",
+        "child"
+      ],
+      "unrelatedOrigin": "suggested",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "unscrambleWords": {
+      "answers": [
+        "NOAH",
+        "FLOOD"
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "checkboxes": {
+      "correct": [
+        "Noah",
+        "Ark",
+        "Flood",
+        "Covenant",
+        "Animals"
+      ],
+      "incorrect": [
+        "exile",
+        "barley",
+        "crown",
+        "blindness",
+        "paper"
+      ],
+      "incorrectOrigin": "suggested",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "whoAmI": {
+      "clue": "I sent a great flood to punish the sinful people of earth. I promised to protect Noah in the ark. I shut the door.",
+      "answer": "God",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "matchWords": [
+      {
+        "id": "mp-01",
+        "left": "Noah",
+        "right": "Built the ark",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-02",
+        "left": "Two of each",
+        "right": "Animals",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-03",
+        "left": "Ark",
+        "right": "boat",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-04",
+        "left": "Rain",
+        "right": "Forty days",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-05",
+        "left": "Covenant",
+        "right": "Promise",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-06",
+        "left": "Flood",
+        "right": "Punishment",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "finishVerse": {
+      "reference": "Romans 6:23",
+      "sourceVerse": "For the wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord.",
+      "markedVerse": "For the [wages] of [sin] is [death], but the [gift] of [God] is [eternal] life in Christ [Jesus] our Lord.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "unscrambleVerse": {
+      "reference": "Romans 6:23",
+      "sourceVerse": "For the wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord.",
+      "markedVerse": "For the [wages] of [sin] is [death], but the [gift] of [God] is [eternal] life in Christ [Jesus] our Lord.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "circleMistakes": {
+      "paragraph": "God told Noah to build a tall tower because the world was full of evil. Noah invited five of every kind of animal into the ark. His oldest son closed the door. Then snow fell for seven days and the water stayed below the mountains. Everyone outside the ark survived the flood.",
+      "mistakeCount": 7,
+      "mistakes": [
+        {
+          "incorrect": "tall tower",
+          "correction": "wooden ark",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "five",
+          "correction": "two",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "His oldest son",
+          "correction": "God",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "snow",
+          "correction": "rain",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "seven days",
+          "correction": "forty days and nights",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "stayed below the mountains",
+          "correction": "covered the mountains",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "Everyone outside the ark survived",
+          "correction": "All people and land animals outside the ark died",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "mediumWordSearch": {
+      "words": [
+        "NOAH",
+        "ARK",
+        "RAIN",
+        "FLOOD",
+        "FAITH",
+        "COVENANT"
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "trueFalseMaze": {
+      "factId": "tf-10",
+      "statement": "Noah built a very small boat.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "bigIdeaCryptogram": {
+      "phrase": "Sin leads to death and disaster.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "upsideDownVerse": {
+      "reference": "Romans 6:23",
+      "verse": "For the wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "connectBigIdea": {
+      "phrase": "Sin leads to death and disaster.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "pixelPicture": {
+      "phrase": "God kept his promise to save Noah and his family in the ark.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "finishStory": {
+      "markedParagraph": "In the days of Noah, people were so [SINFUL] that God planned to [DESTROY] all living things. But Noah was a [GODLY] man who believed God. God told Noah to build an enormous [ARK]. God [PROMISED] to keep Noah, his family, and the animals alive in it. God brought [TWO] of every kind of animal to the ark. When Noah’s family entered, God shut the [DOOR]. Then [RAIN] fell for forty days and nights, and springs burst from the [DEEP]. The water covered even the [MOUNTAINS]. All people and land animals outside the ark [DIED], but God kept Noah and his family [SAFE].",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "storyOrder": [
+      {
+        "order": 1,
+        "text": "God saw the great evil of people. He planned to destroy all life on earth.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 2,
+        "text": "Noah walked faithfully with God while others ignored God’s commands.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 3,
+        "text": "God told Noah to build an ark and promised to keep his family safe.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 4,
+        "text": "Noah built the ark as God commanded him.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 5,
+        "text": "God brought animals to Noah, and Noah’s family entered the ark.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 6,
+        "text": "The Lord shut them inside the ark.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 7,
+        "text": "Rain fell for forty days while water rose from below.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 8,
+        "text": "The flood covered the mountains, but those inside the ark survived.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "sortStory": [
+      {
+        "factId": "tf-01",
+        "statement": "God was saddened by the evil of the people in Noah’s days.",
+        "isTrue": true,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-02",
+        "statement": "Noah was a godly man who walked faithfully with God.",
+        "isTrue": true,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-03",
+        "statement": "God told Noah to build an ark from wood.",
+        "isTrue": true,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-05",
+        "statement": "Noah obeyed God and entered the ark with his family.",
+        "isTrue": true,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-11",
+        "statement": "Noah brought all the animals to the ark by himself.",
+        "isTrue": false,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-12",
+        "statement": "When it started to rain, Noah got inside the ark.",
+        "isTrue": false,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-13",
+        "statement": "Only ten days of rain fell during the great flood.",
+        "isTrue": false,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-14",
+        "statement": "The people outside the ark all survived the flood.",
+        "isTrue": false,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "drawStory": [
+      {
+        "prompt": "God told Noah to build an ark and promised to keep his family safe.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "Noah built the ark as God commanded him.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "God brought animals to Noah, and Noah’s family entered the ark.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "The Lord shut them inside the ark.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "Rain fell for forty days while water rose from below.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "The flood covered the mountains, but those inside the ark survived.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "wordSearch": {
+      "words": [
+        "NOAH",
+        "ARK",
+        "GODLY",
+        "FLOOD",
+        "ANIMALS",
+        "COVENANT",
+        "FAITH",
+        "RAIN",
+        "MOUNTAINS",
+        "PROMISE",
+        "SPRINGS",
+        "FORTY"
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "verseCryptogram": {
+      "reference": "Romans 6:23",
+      "verse": "For the wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "crossword": [
+      {
+        "answer": "NOAH",
+        "clue": "Who obeyed God by building a huge boat?",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "ARK",
+        "clue": "The enormous boat Noah built.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "FLOOD",
+        "clue": "The great disaster God warned Noah about.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "FAITH",
+        "clue": "Trusting and believing God’s words.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "RAIN",
+        "clue": "What fell for forty days and nights?",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "COVENANT",
+        "clue": "A very special promise from God.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "ANIMALS",
+        "clue": "They came to Noah in pairs.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "DOOR",
+        "clue": "God shut this when everyone was inside the ark.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "MOUNTAINS",
+        "clue": "High places covered by the floodwaters.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "SPRINGS",
+        "clue": "Water burst up from the ground in these.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "spiralVerse": {
+      "reference": "Romans 6:23",
+      "verse": "For the wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "connectVerse": {
+      "reference": "Romans 6:23",
+      "verse": "For the wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    }
+  },
+  "vocabulary": {
+    "related": [
+      "Noah",
+      "Ark",
+      "Flood",
+      "Rain",
+      "Animals",
+      "Faith",
+      "God",
+      "Sin",
+      "Promise",
+      "Covenant",
+      "Family",
+      "Door",
+      "Forty",
+      "Mountains",
+      "Springs",
+      "Sons",
+      "Wood",
+      "Jesus",
+      "Death",
+      "Life"
+    ],
+    "unrelated": [
+      "Pharaoh",
+      "Goliath",
+      "Jericho",
+      "Jonah",
+      "Manna",
+      "Egypt",
+      "Giants"
+    ],
+    "entries": [
+      {
+        "id": "voc-01",
+        "term": "Noah",
+        "scope": "current-lesson",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-02",
+        "term": "Ark",
+        "scope": "current-lesson",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-03",
+        "term": "Flood",
+        "scope": "current-lesson",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-04",
+        "term": "Rain",
+        "scope": "current-lesson",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-05",
+        "term": "Animals",
+        "scope": "current-lesson",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-06",
+        "term": "Faith",
+        "scope": "current-lesson",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-07",
+        "term": "Covenant",
+        "scope": "current-lesson",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-08",
+        "term": "Family",
+        "scope": "current-lesson",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-09",
+        "term": "Mountains",
+        "scope": "current-lesson",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-10",
+        "term": "Springs",
+        "scope": "current-lesson",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-11",
+        "term": "Promise",
+        "scope": "current-lesson",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-12",
+        "term": "Jesus",
+        "scope": "application",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-13",
+        "term": "Life",
+        "scope": "application",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ]
+  },
+  "facts": [
+    {
+      "id": "tf-01",
+      "statement": "God was saddened by the evil of the people in Noah’s days.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-02",
+      "statement": "Noah was a godly man who walked faithfully with God.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-03",
+      "statement": "God told Noah to build an ark from wood.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-04",
+      "statement": "God promised to keep Noah’s family safe inside the ark.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-05",
+      "statement": "Noah obeyed God and entered the ark with his family.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-06",
+      "statement": "God shut the door of the ark after they entered.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-07",
+      "statement": "Rain fell for forty days and forty nights.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-08",
+      "statement": "The floodwaters covered the mountains.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-09",
+      "statement": "God told Noah to build a tall tower.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-10",
+      "statement": "Noah built a very small boat.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-11",
+      "statement": "Noah brought all the animals to the ark by himself.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-12",
+      "statement": "When it started to rain, Noah got inside the ark.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-13",
+      "statement": "Only ten days of rain fell during the great flood.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-14",
+      "statement": "The people outside the ark all survived the flood.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "characters": [
+    {
+      "id": "ch-01",
+      "name": "Noah",
+      "clues": [
+        {
+          "text": "I believed God, built a huge ark, and entered it with my family.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "ch-02",
+      "name": "God",
+      "clues": [
+        {
+          "text": "I promised to protect Noah and shut the ark’s door.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "drawingPrompts": [
+    {
+      "id": "draw-01",
+      "prompt": "Noah building a huge wooden ark with his sons",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "draw-02",
+      "prompt": "pairs of animals walking toward Noah’s ark",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "draw-03",
+      "prompt": "Noah and his family entering the ark",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "draw-04",
+      "prompt": "the Lord shutting the ark’s door",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "draw-05",
+      "prompt": "rain falling as the ark floats above the rising floodwaters",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "draw-06",
+      "prompt": "the ark floating over the mountains during the flood",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "matchingPairs": [
+    {
+      "id": "pool-mp-01",
+      "left": "Noah",
+      "right": "Built the ark",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "pool-mp-02",
+      "left": "God",
+      "right": "Shut the door",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "pool-mp-03",
+      "left": "Ark",
+      "right": "Place of safety",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "pool-mp-04",
+      "left": "Rain",
+      "right": "Forty days",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "pool-mp-05",
+      "left": "Covenant",
+      "right": "Special promise",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "pool-mp-06",
+      "left": "Faith",
+      "right": "Trust in God",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "keyPhrases": [
+    {
+      "id": "kp-01",
+      "text": "Sin leads to death and disaster.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "kp-02",
+      "text": "Like Noah, if we have faith, we’ll be saved from deadly disaster!",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "kp-03",
+      "text": "God kept Noah and his family safe in the ark.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "kp-04",
+      "text": "Noah believed God and built the ark.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "kp-05",
+      "text": "God promised to protect those inside the ark.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "publication": {
+    "status": "approved",
+    "approved": true,
+    "teacherSignoff": {
+      "reviewer": "Andrew Doane",
+      "date": "2026-11-07",
+      "notes": "Approved with verified BSB verse through Curriculum Review Studio"
+    },
+    "scriptureRights": {
+      "status": "cleared",
+      "basis": "Berean Standard Bible (BSB), dedicated to the public domain on April 30, 2023. Official terms: https://berean.bible/terms.htm. Scripture text confirmed against https://bereanbible.com/bsb.txt.",
+      "reviewedBy": "Andrew Doane",
+      "reviewedOn": "2026-11-07"
+    },
+    "resolvedReviewFlagIds": [],
+    "notes": "Approved through Review Studio after teacher review and a successful 27/27 content/preflight check of four numbered presets. Original conversion notes and checks remain as historical records.",
+    "reviewStudioVerification": {
+      "source": "Review Studio measured preflight",
+      "checkedAt": "2026-11-07T21:45:16.328Z",
+      "convertedCount": 27,
+      "totalCount": 27,
+      "issueCount": 0,
+      "numberedPresetsChecked": 4,
+      "scope": "Candidate-specific content conversion, four numbered preset content checks, and measured Connect the Verse fit. Standalone repository commands and independently rendered PDFs are not claimed.",
+      "matchingWorksheetSource": "preparedActivities.matchWords",
+      "matchingCandidatePool": "matchingPairs is retained separately as historical/source candidate material"
+    },
+    "reviewFlagDisposition": []
+  },
+  "schemaStatus": "approved; Review Studio 27/27 preflight passed"
+}
