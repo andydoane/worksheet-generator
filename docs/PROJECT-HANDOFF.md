@@ -2,8 +2,8 @@
 
 > **Snapshot, not source of truth.** This document is a starting point for future ChatGPT conversations and contributors, **not** a replacement for the current GitHub repository, tests, CI results, or the owner's newest instructions. The project changes frequently. Verify `main`, open issues/PRs, and recent Actions runs before making recommendations, editing code, or declaring work complete. Do not assume a roadmap item is still open because it appears below.
 
-**Last checked against `main`:** 2026-11-07 (`main` version `0.16.63` after merged PR #112; bug-fix PR #113 proposes `0.16.64`)  
-**Package version represented by this change:** `0.16.64`  
+**Last checked against `main`:** 2026-11-07 (`main` version `0.16.64` after merged PR #113; PR #114 proposes `0.16.65`)  
+**Package version represented by this change:** `0.16.65`  
 **Repository:** https://github.com/andydoane/worksheet-generator  
 **Worksheet Studio:** https://andydoane.github.io/worksheet-generator/  
 **Curriculum Review Studio:** https://andydoane.github.io/worksheet-generator/review.html  
@@ -103,7 +103,7 @@ Do not infer current merge status from this table; verify in GitHub. If a future
 
 ## 7. Current work and upcoming plans
 
-**Status last checked:** 2026-11-07, against `main` after **merged PR #112** (version `0.16.63`). The content-first guide is now consistent with merged PR #111. PR #113 proposes a Review Studio presentation-only TRUE/FALSE warning fix in `0.16.64`. Refresh GitHub and Actions before acting.
+**Status last checked:** 2026-11-07, against `main` after **merged PR #113** (version `0.16.64`). The owner confirmed that the TRUE/FALSE fact warning fix works. PR #114 proposes Story Order content-only review with no Story Note citation requirement or source controls; confirm current GitHub and CI before acting.
 
 | Status at last check | Item | Next action or caveat |
 | --- | --- | --- |
@@ -122,7 +122,8 @@ Do not infer current merge status from this table; verify in GitHub. If a future
 
 | **Merged** | [#111 — Content-First Review Studio](https://github.com/andydoane/worksheet-generator/pull/111) | Original source IDs, page citations, Story Notes, original questions and old converter readiness logs are no longer approval blockers. Compact approved exports keep printable pools, answer keys, selected BSB, teacher signoff and four-preset evidence; legacy approved data stays readable. |
 | **Merged; documentation only** | [#112 — content-first conversion guide cleanup](https://github.com/andydoane/worksheet-generator/pull/112) | Reconciled conversion manual with PR #111, prioritized the compact starter and refreshed the copy-ready prompt. No code, schema or approved curriculum changes. |
-| **Open draft PR** | [#113 — Review Studio TRUE/FALSE fact labels](https://github.com/andydoane/worksheet-generator/pull/113) | Show peach “Intentionally FALSE” only for false facts, clearly label true facts and use truth-aware task descriptions; neutral sync information stays visible to both. No change to answer keys, lesson data, saved review progress or PDF. Await CI and owner smoke test. |
+| **Merged; owner confirmed working** | [#113 — Review Studio TRUE/FALSE fact labels](https://github.com/andydoane/worksheet-generator/pull/113) | Peach false warning now appears only for false facts; true facts and sidebar descriptions use accurate labels. No lesson data or answer keys changed. |
+| **Open draft PR** | [#114 — Story Order content-only review](https://github.com/andydoane/worksheet-generator/pull/114) | Show existing 5–8 chronological events as editable text boxes with a live chronological preview. Remove original Story Note citation requirement and unnecessary source/add/remove/reorder controls. Keep actual printable validation, separate teacher review buttons, draft preservation and student shuffling. Await CI and owner test with eight-event lesson. |
 
 **To maintain this table in every future feature/bug-fix PR:** replace stale statuses rather than simply adding rows; add the PR/issue link, brief outcome or current blocker, and accurate next step. Update **Status last checked**, package version above, and milestone context based on actual GitHub information. Never invent a date, merge, approval, or test result. Avoid documenting every small curriculum upload. Documentation-only changes may update the handoff without requiring a release; new direct-to-main approved JSON uploads are exempt.
 
