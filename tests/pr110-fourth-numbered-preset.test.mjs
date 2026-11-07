@@ -136,5 +136,6 @@ test('Preset 4 is covered by actual Review Studio and publication validation, no
  assert.match(manual,/Preset 4 — complete prescribed booklet layout/u);
  assert.match(manual,/Word Search.*Upside Down Verse/u);
  const pkg=await read('package.json');
- assert.equal(pkg.version,'0.16.63');
+ assert.ok(pkg.version.localeCompare('0.16.63',undefined,{numeric:true})>=0,
+   'Feature must remain available in current or newer release');
 });
