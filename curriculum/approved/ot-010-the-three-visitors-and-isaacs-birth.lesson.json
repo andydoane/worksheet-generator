@@ -1,0 +1,1044 @@
+{
+  "schemaVersion": 1,
+  "id": "ot-010-the-three-visitors-and-isaacs-birth",
+  "curriculum": {
+    "series": "Old Testament",
+    "lessonNumber": 10
+  },
+  "lessonDetails": {
+    "title": "The Three Visitors and Isaac's Birth",
+    "scripturePassages": [
+      "Genesis 18:1–15",
+      "Genesis 21:1–7",
+      "Genesis 17:17",
+      "Jeremiah 32:27"
+    ],
+    "scriptureDisplay": "Genesis 18, 21",
+    "bigIdeas": [
+      {
+        "text": "Nothing is TOO hard for God.",
+        "origin": "source",
+        "teacherReviewRequired": false
+      }
+    ],
+    "memoryVerse": {
+      "reference": "Jeremiah 32:27",
+      "translation": "BSB",
+      "text": "“Behold, I am the LORD, the God of all flesh. Is anything too difficult for Me?",
+      "isExcerpt": false,
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "requiresTextReview": false,
+      "originalTranslation": "ESV",
+      "hasEllipses": false,
+      "bsbSource": {
+        "reference": "Jeremiah 32:27",
+        "sourceUrl": "https://bereanbible.com/bsb.txt",
+        "publicDomainTerms": "https://berean.bible/terms.htm",
+        "startWord": 0,
+        "endWord": 15
+      }
+    }
+  },
+  "preparedActivities": {
+    "drawPicture": {
+      "prompt": "Sarah laughing after hearing the promise of a baby",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "multipleChoice": [
+      {
+        "id": "mc-01",
+        "question": "What did Abraham see near his tent at Mamre?",
+        "correctAnswer": "Three men",
+        "choices": [
+          {
+            "text": "Three men",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Two women",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "A man on a camel",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-02",
+        "question": "What did Abraham offer the three visitors?",
+        "correctAnswer": "A meal and water",
+        "choices": [
+          {
+            "text": "A meal and water",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Gold and silver",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "A flock of sheep to keep",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-03",
+        "question": "What did God say would happen in one year?",
+        "correctAnswer": "Sarah would have a son.",
+        "choices": [
+          {
+            "text": "Sarah would have a son.",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Abraham would go blind.",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "A great earthquake would happen.",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-04",
+        "question": "Why did Sarah laugh at the promised birth?",
+        "correctAnswer": "She and Abraham were very old.",
+        "choices": [
+          {
+            "text": "She and Abraham were very old.",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "She thought God was joking.",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "She didn't want a baby.",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-05",
+        "question": "What did Sarah say when God asked why she laughed?",
+        "correctAnswer": "She said she did not laugh.",
+        "choices": [
+          {
+            "text": "She said she did not laugh.",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "She said she laughed with joy.",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "She asked to hear the promise again.",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-06",
+        "question": "What did Abraham name the promised baby?",
+        "correctAnswer": "Isaac",
+        "choices": [
+          {
+            "text": "Isaac",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Ishmael",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "Jacob",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "trueFalse": {
+      "factId": "tf-07",
+      "statement": "Sarah was 90 years old when Isaac was born.",
+      "isTrue": true,
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "firstLetters": {
+      "reference": "Jeremiah 32:27",
+      "verse": "“Behold, I am the LORD, the God of all flesh. Is anything too difficult for Me?",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "oddWords": {
+      "related": [
+        "ABRAHAM",
+        "SARAH",
+        "TENT",
+        "ISAAC"
+      ],
+      "unrelated": [
+        "synagogue",
+        "Job",
+        "parents",
+        "deception",
+        "king"
+      ],
+      "unrelatedOrigin": "suggested",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "unscrambleWords": {
+      "answers": [
+        "ISAAC",
+        "LAUGHTER"
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "checkboxes": {
+      "correct": [
+        "VISITORS",
+        "BREAD",
+        "MIRACLE",
+        "CALF"
+      ],
+      "incorrect": [
+        "sea",
+        "Samuel",
+        "wind",
+        "rock",
+        "sacrifice"
+      ],
+      "incorrectOrigin": "suggested",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "whoAmI": {
+      "clue": "I laughed when I heard I would have a baby. Later, I gave birth to Isaac when I was 90 years old.",
+      "answer": "Sarah",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "matchWords": [
+      {
+        "id": "match-01",
+        "left": "Abraham",
+        "right": "Old Man",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "match-02",
+        "left": "Sarah",
+        "right": "lied",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "match-03",
+        "left": "Three",
+        "right": "Visitors",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "match-04",
+        "left": "Baby",
+        "right": "One Year",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "match-05",
+        "left": "Laughter",
+        "right": "Isaac",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "match-06",
+        "left": "God",
+        "right": "Kept promise",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "finishVerse": {
+      "reference": "Jeremiah 32:27",
+      "markedVerse": "“[Behold], I am the [LORD], the [God] of all [flesh]. Is [anything] too [difficult] for Me?",
+      "sourceVerse": "“Behold, I am the LORD, the God of all flesh. Is anything too difficult for Me?",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "unscrambleVerse": {
+      "reference": "Jeremiah 32:27",
+      "markedVerse": "“[Behold], I am the [LORD], the [God] of all [flesh]. Is [anything] too [difficult] for Me?",
+      "sourceVerse": "“Behold, I am the LORD, the God of all flesh. Is anything too difficult for Me?",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "circleMistakes": {
+      "paragraph": "Abraham was resting by his tent when five men arrived. He told them to go away and asked Sarah to prepare a pizza. The Lord told Abraham that Sarah would have a daughter in one year. Sarah cried because she and Abraham were very old. When their baby was born, they named him Jacob.",
+      "mistakeCount": 6,
+      "mistakes": [
+        {
+          "incorrect": "five men",
+          "correction": "three men"
+        },
+        {
+          "incorrect": "told them to go away",
+          "correction": "invited them to a meal"
+        },
+        {
+          "incorrect": "a pizza",
+          "correction": "bread and a calf"
+        },
+        {
+          "incorrect": "a daughter",
+          "correction": "a son"
+        },
+        {
+          "incorrect": "cried",
+          "correction": "laughed"
+        },
+        {
+          "incorrect": "Jacob",
+          "correction": "Isaac"
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "mediumWordSearch": {
+      "words": [
+        "SARAH",
+        "ISAAC",
+        "BREAD",
+        "TENT",
+        "GUESTS",
+        "YEAR"
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "trueFalseMaze": {
+      "factId": "tf-14",
+      "statement": "Abraham named the promised baby Ishmael.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "bigIdeaCryptogram": {
+      "phrase": "Nothing in the world is TOO hard for God.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "upsideDownVerse": {
+      "reference": "Jeremiah 32:27",
+      "verse": "“Behold, I am the LORD, the God of all flesh. Is anything too difficult for Me?",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "connectBigIdea": {
+      "phrase": "Nothing is TOO hard for God.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "pixelPicture": {
+      "phrase": "Nothing is too hard for God. He kept his promise to Sarah!",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "finishStory": {
+      "markedParagraph": "Near the trees of [Mamre], [Abraham] saw [three] visitors standing near his tent. He invited them to share a [meal]. [Sarah] prepared [bread] while a servant prepared a calf. One of the visitors said that in one [year], Sarah would have a [son]. Sarah listened from the tent and [laughed] because she and Abraham were old. When God asked why she had laughed, Sarah was afraid and [lied] about laughing. But God kept his promise. Sarah gave birth to [Isaac] when she was 90 years old. His name means [laughter], and Sarah rejoiced.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "storyOrder": [
+      {
+        "order": 1,
+        "text": "Abraham saw three visitors standing near his tent at the trees of Mamre.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 2,
+        "text": "Abraham welcomed the three visitors and offered them food and water.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 3,
+        "text": "Sarah baked bread while Abraham had a calf prepared for the meal.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 4,
+        "text": "The Lord promised Abraham that Sarah would have a son in one year.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 5,
+        "text": "Sarah overheard the promise from her tent and laughed because they were old.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 6,
+        "text": "When the Lord asked about her laughter, Sarah was afraid and denied it.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 7,
+        "text": "Sarah gave birth to a son when she was 90, just as God had promised.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 8,
+        "text": "Abraham named the child Isaac, and Sarah rejoiced that God had given her laughter.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "sortStory": [
+      {
+        "factId": "tf-01",
+        "statement": "Abraham saw three men near the trees of Mamre.",
+        "isTrue": true,
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-04",
+        "statement": "God said Sarah would have a son in one year.",
+        "isTrue": true,
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-05",
+        "statement": "Sarah laughed when she heard the promise.",
+        "isTrue": true,
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-10",
+        "statement": "Abraham told the visitors to leave without eating.",
+        "isTrue": false,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-11",
+        "statement": "God promised Sarah a daughter in one year.",
+        "isTrue": false,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-13",
+        "statement": "When God asked why she laughed, Sarah told the truth.",
+        "isTrue": false,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "drawStory": [
+      {
+        "prompt": "Abraham saw three visitors standing near his tent at the trees of Mamre.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "Abraham welcomed the three visitors and offered them food and water.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "The Lord promised Abraham that Sarah would have a son in one year.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "Sarah overheard the promise from her tent and laughed because they were old.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "Sarah gave birth to a son when she was 90, just as God had promised.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "Abraham named the child Isaac, and Sarah rejoiced that God had given her laughter.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "wordSearch": {
+      "words": [
+        "ABRAHAM",
+        "SARAH",
+        "ISAAC",
+        "MAMRE",
+        "VISITORS",
+        "PROMISE",
+        "LAUGHTER",
+        "MIRACLE",
+        "BREAD",
+        "CALF",
+        "TENT",
+        "YEAR"
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "verseCryptogram": {
+      "reference": "Jeremiah 32:27",
+      "verse": "“Behold, I am the LORD, the God of all flesh. Is anything too difficult for Me?",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "crossword": [
+      {
+        "answer": "ABRAHAM",
+        "clue": "The man who welcomed three visitors near his tent.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "SARAH",
+        "clue": "The woman who had a baby at 90 years old.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "ISAAC",
+        "clue": "The son whose name means laughter.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "BREAD",
+        "clue": "What Sarah baked for the special meal.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "MAMRE",
+        "clue": "The place with large trees where the Lord appeared.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "PROMISE",
+        "clue": "What God kept by giving Abraham and Sarah a son.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "LAUGHTER",
+        "clue": "The meaning of Isaac’s name.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "TENT",
+        "clue": "Where Sarah listened while the visitors spoke.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "LIED",
+        "clue": "What Sarah did when God asked her why she laughed.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "spiralVerse": {
+      "reference": "Jeremiah 32:27",
+      "verse": "“Behold, I am the LORD, the God of all flesh. Is anything too difficult for Me?",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "connectVerse": {
+      "reference": "Jeremiah 32:27",
+      "verse": "“Behold, I am the LORD, the God of all flesh. Is anything too difficult for Me?",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    }
+  },
+  "vocabulary": {
+    "related": [
+      "ABRAHAM",
+      "SARAH",
+      "ISAAC",
+      "THREE MEN",
+      "TENT",
+      "MAMRE",
+      "MEAL",
+      "BREAD",
+      "CALF",
+      "MILK",
+      "SON",
+      "PROMISE",
+      "LAUGHTER",
+      "MIRACLE",
+      "VISITORS",
+      "YEAR",
+      "LORD",
+      "GOD",
+      "FLOUR"
+    ],
+    "unrelated": [
+      "JONAH",
+      "GOLIATH",
+      "PHARAOH",
+      "JERICHO",
+      "MANNA",
+      "MIRIAM",
+      "BURNING BUSH",
+      "RED SEA",
+      "NEHEMIAH",
+      "SAMSON"
+    ],
+    "entries": [
+      {
+        "id": "voc-01",
+        "term": "ABRAHAM",
+        "category": "person",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-02",
+        "term": "SARAH",
+        "category": "person",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-03",
+        "term": "ISAAC",
+        "category": "person",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-04",
+        "term": "MAMRE",
+        "category": "place",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-05",
+        "term": "VISITORS",
+        "category": "story",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-06",
+        "term": "BREAD",
+        "category": "meal",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-07",
+        "term": "CALF",
+        "category": "meal",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-08",
+        "term": "PROMISE",
+        "category": "theme",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-09",
+        "term": "LAUGHTER",
+        "category": "theme",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-10",
+        "term": "MIRACLE",
+        "category": "theme",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      }
+    ]
+  },
+  "facts": [
+    {
+      "id": "tf-01",
+      "statement": "Abraham saw three men near the trees of Mamre.",
+      "isTrue": true,
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-02",
+      "statement": "Abraham invited the visitors to share a meal.",
+      "isTrue": true,
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-03",
+      "statement": "Sarah baked bread for the visitors.",
+      "isTrue": true,
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-04",
+      "statement": "God said Sarah would have a son in one year.",
+      "isTrue": true,
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-05",
+      "statement": "Sarah laughed when she heard the promise.",
+      "isTrue": true,
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-06",
+      "statement": "Sarah denied laughing because she was afraid.",
+      "isTrue": true,
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-07",
+      "statement": "Sarah was 90 years old when Isaac was born.",
+      "isTrue": true,
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-08",
+      "statement": "Isaac's name means laughter.",
+      "isTrue": true,
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-09",
+      "statement": "Abraham saw ten visitors near the tree.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-10",
+      "statement": "Abraham told the visitors to leave without eating.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-11",
+      "statement": "God promised Sarah a daughter in one year.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-12",
+      "statement": "Sarah laughed because Abraham told her a funny joke.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-13",
+      "statement": "When God asked why she laughed, Sarah told the truth.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-14",
+      "statement": "Abraham named the promised baby Ishmael.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "characters": [
+    {
+      "id": "ch-01",
+      "name": "Abraham",
+      "clues": [
+        {
+          "text": "I welcomed three visitors and heard a promise about my wife Sarah.",
+          "origin": "adapted",
+          "teacherReviewRequired": true
+        },
+        {
+          "text": "I was 100 years old when Isaac was born.",
+          "origin": "adapted",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "ch-02",
+      "name": "Sarah",
+      "clues": [
+        {
+          "text": "I prepared bread for three visitors and laughed when I heard I would have a son.",
+          "origin": "adapted",
+          "teacherReviewRequired": true
+        },
+        {
+          "text": "I was 90 years old when my son Isaac was born.",
+          "origin": "adapted",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "ch-03",
+      "name": "Isaac",
+      "clues": [
+        {
+          "text": "I was the son God promised to Abraham and Sarah, and my name means laughter.",
+          "origin": "adapted",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    }
+  ],
+  "drawingPrompts": [
+    {
+      "id": "dp-01",
+      "prompt": "Abraham seeing three visitors by the trees of Mamre",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "dp-02",
+      "prompt": "Abraham inviting three visitors to eat with him",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "dp-03",
+      "prompt": "Sarah making bread for the three guests",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "dp-04",
+      "prompt": "Abraham serving bread and a meal beneath a tree",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "dp-05",
+      "prompt": "Sarah listening at the entrance of her tent",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "dp-06",
+      "prompt": "Sarah laughing when she hears the promise of a son",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "dp-07",
+      "prompt": "Abraham and Sarah holding their newborn son Isaac",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "dp-08",
+      "prompt": "Sarah smiling joyfully with baby Isaac in her arms",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    }
+  ],
+  "matchingPairs": [
+    {
+      "id": "mp-01",
+      "left": "Abraham",
+      "right": "Welcomed three men",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "mp-02",
+      "left": "Sarah",
+      "right": "Baked bread",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "mp-03",
+      "left": "Three guests",
+      "right": "Shared a meal",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "mp-04",
+      "left": "One year",
+      "right": "Time until the birth",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "mp-05",
+      "left": "Isaac",
+      "right": "Laughter",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "mp-06",
+      "left": "God",
+      "right": "Kept his promise",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "mp-07",
+      "left": "Mamre",
+      "right": "Place near the trees",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    }
+  ],
+  "keyPhrases": [
+    {
+      "id": "kp-01",
+      "text": "Nothing is TOO hard for God.",
+      "origin": "source"
+    },
+    {
+      "id": "kp-02",
+      "text": "God kept his promise to Abraham and Sarah.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "kp-03",
+      "text": "Isaac means laughter.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "kp-04",
+      "text": "Sarah had a son when she was 90 years old.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "kp-review-1",
+      "text": "Nothing in the world is TOO hard for God.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "publication": {
+    "status": "approved",
+    "approved": true,
+    "teacherSignoff": {
+      "reviewer": "Andrew Doane",
+      "date": "2026-11-07",
+      "notes": "Approved with verified BSB verse through Curriculum Review Studio"
+    },
+    "scriptureRights": {
+      "status": "cleared",
+      "basis": "Berean Standard Bible (BSB), dedicated to the public domain on April 30, 2023. Official terms: https://berean.bible/terms.htm. Scripture text confirmed against https://bereanbible.com/bsb.txt.",
+      "reviewedBy": "Andrew Doane",
+      "reviewedOn": "2026-11-07"
+    },
+    "resolvedReviewFlagIds": [],
+    "notes": "Approved through Review Studio after teacher review and a successful 27/27 content/preflight check of four numbered presets. Original conversion notes and checks remain as historical records.",
+    "reviewStudioVerification": {
+      "source": "Review Studio measured preflight",
+      "checkedAt": "2026-11-07T18:30:36.447Z",
+      "convertedCount": 27,
+      "totalCount": 27,
+      "issueCount": 0,
+      "numberedPresetsChecked": 4,
+      "scope": "Candidate-specific content conversion, four numbered preset content checks, and measured Connect the Verse fit. Standalone repository commands and independently rendered PDFs are not claimed.",
+      "matchingWorksheetSource": "preparedActivities.matchWords",
+      "matchingCandidatePool": "matchingPairs is retained separately as historical/source candidate material"
+    },
+    "reviewFlagDisposition": []
+  },
+  "schemaStatus": "approved; Review Studio 27/27 preflight passed"
+}
