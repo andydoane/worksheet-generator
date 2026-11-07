@@ -58,9 +58,10 @@ test('Conversion documentation distinguishes nonbinding targets from original so
  }
  assert.match(guide,/source-grounded question/u);
  assert.match(guide,/statement and truth value must match its referenced canonical record/u);
- assert.match(guide,/TRUE canonical facts, FALSE canonical facts, prepared Multiple Choice questions/u);
+ assert.match(guide,/TRUE canonical facts, FALSE canonical facts/u);
+ assert.match(guide,/content first/u);
  assert.match(readme,/editorial defaults, not schema minima or hard maxima/u);
  assert.match(readme,/Preserve \*\*all original source questions and their answers/u);
  const pkg=JSON.parse(await read('package.json'));
- assert.equal(pkg.version,'0.16.62');
+ assert.equal(pkg.version,'0.16.63');
 });

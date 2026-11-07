@@ -9,15 +9,64 @@
 
 > **For future conversion chats:** This guide is a human-readable companion, **not** a substitute for the current JSON Schema, validators, or a teacher's review. Re-read the files on GitHub at the start of each conversion; the source may have changed since this guide was written. Never invent quotations, source page/paragraph references, Bible citations, rights clearance, completed tests, or teacher approval.
 
+## Current authoring contract — content first
+
+**This section supersedes source-preservation requirements in the historical workflows and examples below.** Review Studio exists to approve the material that can appear on worksheets, not to build an archive of the original curriculum's document IDs, page numbers and old conversion logs.
+
+**Required new-lesson fields:** `schemaVersion:1`, `id`, `curriculum`, `lessonDetails` (title, references, Important Idea and teacher-verifiable memory verse), `facts[]` (canonical answer statements), `preparedActivities` (all 27 types), and `publication` (pending/unapproved). **Optional:** `sourceFiles`, `storyNotes`, original `questions`, `moduleReadiness`, `reviewFlags`, `validation`, filenames, page citations, `sourceIds` and `sourceQuestionIds`. The linked original material may be read to write good teaching content; it need **not** be copied into the output JSON. Source citations are never a teacher approval requirement.
+
+**Do preserve PRINTABLE alternative pools** when the generator can actually use them: `facts`, `vocabulary`, `characters`, `drawingPrompts`, `matchingPairs` and `keyPhrases`. Those are usable student content and should be reviewed for accuracy, not a historical record. Canonical `factId` links, `isTrue` answers, three Multiple Choice choices/one correct flag, verse text, and other answer keys remain essential; do not confuse *correct-answer relationships* with source provenance.
+
+**The new approved export is lean:** it keeps printable activity and alternative content, accurate lesson identification, verified BSB, teacher signoff and actual Review Studio preflight evidence. It drops original documents, Story Notes, original questions, source-reference pointers, stale conversion test logs and readiness estimates. An imported **review session remains unchanged**, so save it separately if you want an editable history. Older approved v1 files with provenance fields remain readable, and aren't automatically rewritten.
+
+### Preferred workflow for a new conversion chat
+
+1. Read the Bible lesson and supplied slides for teaching content; do not invent events or Scripture.
+2. Prepare the 27 activity types and optional alternate **printable** content pools. Default to about 14 thoughtful canonical True/False facts (7–8 TRUE and 6–7 FALSE) and six prepared Multiple Choice questions.
+3. Reserve **distinct canonical fact IDs** for Sort the Story (4–8 balanced facts), Small True/False (≤80 characters), and Maze (≤65 characters). Exact canonical statement/truth matching is still required.
+4. Use short scene phrases for Small Draw a Picture and complete narrative sentences for Large Draw the Story. Apply every activity-specific `4 contract, not just the schema.
+5. Never claim BSB verification, rights clearance, teacher review or successful generator runs you didn't perform. A teacher makes these decisions in Review Studio.
+6. Parse and validate the precise candidate JSON, run real puzzles/layouts when available, report unrun checks **NOT RUN**, and deliver an unapproved content file plus a concise 27-activity handoff (not a source-ID inventory).
+
+**Illustrative compact shape only (not 27/27 ready, and placeholder text is not Scripture):**
+
+```json
+{
+  "schemaVersion": 1,
+  "id": "ot-999-example",
+  "curriculum": {"series": "OT", "lessonNumber": 999},
+  "lessonDetails": {
+    "title": "Example lesson",
+    "scripturePassages": ["Genesis 1:1"],
+    "scriptureDisplay": "Genesis 1:1",
+    "bigIdeas": [{"text": "God made the world.", "origin": "suggested"}],
+    "memoryVerse": {
+      "reference": "Genesis 1:1",
+      "translation": "SOURCE TRANSLATION, TEACHER MUST VERIFY BSB",
+      "text": "PLACEHOLDER NOT A VERIFIED SCRIPTURE QUOTE",
+      "isExcerpt": true
+    }
+  },
+  "facts": [
+    {"id": "tf-01", "statement": "God made the world.", "isTrue": true,
+     "origin": "suggested", "teacherReviewRequired": true}
+  ],
+  "preparedActivities": {},
+  "publication": {"status": "pending-teacher-approval", "approved": false}
+}
+```
+
+The OT31 reference and detailed historical source examples remain valid for compatibility, **not** as required fields for new conversions.
+
 ## 1. What you're preparing
 
-A **lesson JSON** contains source-preserving material and **prepared choices for 27 printable activity types**. It is *not* a saved worksheet. The Review Studio converts this file into selectable activities, lets the teacher correct and approve the material, applies the teacher-verified Berean Standard Bible (BSB) excerpt, and checks all four numbered worksheet presets. Finally, the teacher downloads an individually approved `<lesson-id>.lesson.json` for `curriculum/approved/`.
+A **lesson JSON** contains reviewed printable content pools and **prepared choices for 27 printable activity types**. It is *not* a saved worksheet. The Review Studio converts this file into selectable activities, lets the teacher correct and approve the material, applies the teacher-verified Berean Standard Bible (BSB) excerpt, and checks all four numbered worksheet presets. Finally, the teacher downloads an individually approved `<lesson-id>.lesson.json` for `curriculum/approved/`.
 
 There are three distinct gates:
 
 1. **JSON syntax and schema:** a parseable file with correct object structure, field names, data types, required fields, allowed enums, and source-citation shape. Review Studio and CI share schema checking, but schema validity does **not** prove truthful canonical-fact linkage or 27/27 printable activities.
-2. **Review Studio preflight:** the real converter, all 27 module validators, sources/readiness, and all four numbered worksheet recipes. A schema-valid draft may still fail preflight.
-3. **Teacher approval and GitHub library validation:** real source and Scripture verification, explicit teacher review/signoff, separate BSB-rights confirmation, live puzzle solvers and printable layouts. **Only a teacher may authorize publication.** Repository-wide tests don't automatically validate a new file outside the checkout.
+2. **Review Studio preflight:** the real converter, all 27 module validators, printable content/answers, and all four numbered worksheet recipes. A schema-valid draft may still fail preflight.
+3. **Teacher approval and GitHub library validation:** faithful teaching content and Scripture verification, explicit teacher review/signoff, separate BSB-rights confirmation, live puzzle solvers and printable layouts. **Only a teacher may authorize publication.** Repository-wide tests don't automatically validate a new file outside the checkout.
 
 Avoid saying "validated" without identifying which gate you actually ran.
 
@@ -72,7 +121,7 @@ For secondary online verse verification, see the current schema’s `verificatio
 
 Use **`schemaVersion:1`** and a lowercase, hyphenated `id` such as `ot-021-joseph-works-for-potiphar`. The downloaded approved filename must be `<id>.lesson.json`.
 
-The schema requires these top-level properties:
+The schema requires these **printable-content** properties; historical fields are optional:
 
 | Field | Purpose |
 |---|---|
@@ -80,14 +129,14 @@ The schema requires these top-level properties:
 | `id` | Stable lowercase hyphenated lesson identifier |
 | `curriculum` | `series` and positive integer `lessonNumber` |
 | `lessonDetails` | `title`, `scripturePassages` (nonempty), `scriptureDisplay`, `bigIdeas`, `memoryVerse` |
-| `sourceFiles` | Actual input filenames and formats (`odt`, `odp`, `pdf`, `docx`, `pptx`) |
-| `storyNotes` | Ordered source-preserving notes, exact text, cleaned text, cues, provenance |
-| `questions` | Source-backed questions and answers, with stable IDs |
+| `sourceFiles` (optional) | Historical original document filenames, never an approval gate |
+| `storyNotes` (optional) | Original curriculum note archive, not required for printable Story Order |
+| `questions` (optional) | Original curriculum questions; the worksheet uses prepared Multiple Choice instead |
 | `facts` | True/false facts with truthful `isTrue`, IDs and origins |
-| `vocabulary` | `related` and `unrelated` arrays, plus optional detailed `entries` |
+| `vocabulary` (optional) | Printable vocabulary/alternate choice pools, when useful |
 | `preparedActivities` | Prepared content, in **camelCase keys**, for the printable activity types |
-| `moduleReadiness` | Records assessing preparation for the 27 registered module IDs |
-| `reviewFlags` | Teacher-review tasks with only **registered module IDs** in `affectedModules` |
+| `moduleReadiness` (optional) | Historical converter estimates; actual preflight is authoritative |
+| `reviewFlags` (optional) | Optional real teaching/age suitability reminders, not source bookkeeping |
 | `publication` | **Pending/unapproved** during conversion |
 
 Optional sections include `schemaStatus`, `characters`, `matchingPairs`, `drawingPrompts`, `keyPhrases`, `theologicalApplications`, and `validation`. Include them when the source/working data supports them. Do not invent values merely to fill optional sections.
@@ -1049,8 +1098,8 @@ For a full **27-activity completed and teacher-approved** structural reference, 
 
 - [ ] The file parses as exactly one JSON object with no comments, trailing commas, duplicate keys, unsupported field names or surrounding Markdown.
 - [ ] `schemaVersion:1`, exact top-level section names, registered module IDs, camelCase `preparedActivities` keys, and arrays/objects are all correct.
-- [ ] The *actual supplied* source files, filenames, pages, paragraph locations and Story Note order are represented accurately. No invented citations or Bible/lesson facts.
-- [ ] Original `storyNotes[].originalText` and emphasized words, **all original `questions[]` and answers**, canonical Important Idea and source memory-verse text/translation remain unchanged. Six prepared Multiple Choice questions **never** means retaining only six original source questions.
+- [ ] The written **printable** teaching content reflects the supplied Bible lesson. Source filenames/pages/Story Note IDs are **optional**; never invent claims.
+- [ ] Printed Important Idea and answer keys are accurate; the memory verse is ready for teacher BSB verification. Historical `storyNotes[]` and original `questions[]` need not be copied to a content-first file.
 - [ ] Every `characters[].clues[]` item is an object with `text` and `origin`, never a bare string.
 - [ ] Small drawing: each `drawingPrompts[].prompt` and `preparedActivities.drawPicture.prompt` naturally completes **“Draw a picture of …”**, is ≤105 characters, and has no imperative prefix, final period, or full past-tense sentence. Large drawing: 4–6 full, capitalized, punctuated, nonduplicate narrative sentences in chronological order, ≤105 characters each.
 - [ ] Canonical facts: default to **about 14 meaningful facts** (7–8 TRUE, 6–7 FALSE), with no padding or hard cap; all prepared Sort/True-False/Maze selections have existing, **unique** `factId` values, *exact* canonical `statement` and `isTrue`, 115/80/65 character budgets and both truth values in Sort. No silent shortening of an original fact.
@@ -1068,7 +1117,7 @@ For a full **27-activity completed and teacher-approved** structural reference, 
 - [ ] First Letters: 3–75 verse words, reference ≤32. Upside Down: ≤160 letters/240 chars, reference ≤42. Verse Cryptogram: ≤145 chars, reference ≤42. Spiral: ≤260 chars, reference ≤45.
 - [ ] Connect the Verse: 4–35 words, ≤260 characters, unaccented A–Z, and **measured print fit**. There is **no automatic 12-letter word rejection**. Never alter Scripture to improve the fit.
 - [ ] Crossword: 6–10 unique A–Z 3–12-letter answers, clues ≤85 characters, and **actual crossword generation/interlock** verified where executable.
-- [ ] All 27 `moduleReadiness[]` records have true statuses and exact keys; all suggested/ambiguous theological or editorial content has applicable teacher-review flags.
+- [ ] All 27 prepared module types contain valid printable content; teacher-review flags may identify real teaching or sensitivity concerns. Historical `moduleReadiness[]` isn't required.
 - [ ] Canonical BSB text has not been guessed and no rights clearance, review approval or successful test claim has been fabricated. `publication` remains pending/unapproved.
 
 ### Validation matrix — what the commands really prove
@@ -1076,7 +1125,7 @@ For a full **27-activity completed and teacher-approved** structural reference, 
 | Stage | Procedure | Can confirm | Cannot confirm |
 |---|---|---|---|
 | A. JSON syntax | Parse the exact file with a JSON parser | JSON is readable | Schema, truth, puzzles |
-| B. Candidate schema and semantic checks | `node --experimental-strip-types scripts/validate-curriculum.mjs /absolute/path/to/candidate.json` in a current repo checkout | Actual supplied file passes schema/source/readiness checks | All puzzle solvers, measured print fit, teacher approval |
+| B. Candidate schema and semantic checks | `node --experimental-strip-types scripts/validate-curriculum.mjs /absolute/path/to/candidate.json` in a current repo checkout | Actual printable fields pass schema and answer/content consistency checks | All puzzle solvers, measured print fit, teacher approval |
 | C. Existing repo files | `npm run validate:curriculum` and `npm run validate:library` | Review/approved files already scanned in that checkout | An *external candidate file* not included in that scan |
 | D. Repository tests | `npm test`, `npm run verify:bsb`, `npm run build` | Existing tests, checked-in data, build and local BSB integrity | That a new external JSON or its verse was verified |
 | E. Candidate activity and print checks | Upload the candidate to Review Studio, **Run preflight checks**; inspect all four numbered worksheet presets and the actual puzzle engines | 27/27 and all four presets are technically ready **if issues list is empty** | Narrative accuracy, rights and teacher approval |
@@ -1101,11 +1150,11 @@ Do not copy an unapproved draft to `curriculum/approved/` just to run tests. Nei
 
 Supply the unapproved JSON as its **own file**, plus a concise report with these six headings:
 
-1. **Actual sources inspected:** list input filenames, pages/slides read and unreadable/missing material.
-2. **Preserved and adapted text:** exact original notes, question answers, Big Idea and memory-verse attribution preserved; list all edits separately.
-3. **Activity coverage and counts:** a 27-row table with exact module ID and prepared key, prepared/missing status, generator tested/not tested and remaining blockers. State counts of **TRUE canonical facts, FALSE canonical facts, prepared Multiple Choice questions, and preserved original source questions**, and briefly explain deviations from normal targets.
-4. **Verification evidence:** JSON parse, exact candidate schema command and result, source-ID checks, 27/27 preflight, real puzzle/layout engines and all four presets, BSB verification. Mark every unrun item **NOT RUN**.
-5. **Teacher decisions:** suggested facts/decoys, wording and theology, missing source links, overlong passages, BSB verification and rights review.
+1. **Lesson material used:** briefly identify the Bible lesson and any factual uncertainty; **no source-ID inventory required**.
+2. **Print-content decisions:** summarize meaningful teaching adaptations, correct answers and factual questions still requiring teacher review.
+3. **Activity coverage and counts:** a 27-row table with module ID/prepared key, present/missing and generator tested/not tested. Report **TRUE canonical facts, FALSE canonical facts and prepared Multiple Choice question counts** and explain deviations from normal targets.
+4. **Verification evidence:** JSON parse, exact candidate schema command/result, 27/27 printable preflight, puzzles/layouts, all four presets and BSB verification. Mark unrun checks **NOT RUN**. Source-ID matching is not a check.
+5. **Teacher decisions:** suggested facts/decoys, wording, theology, overlong passages, BSB verification and rights review—not missing source links.
 6. **Publication status:** `pending-teacher-approval`, `approved:false`, no copied signatures, no implied source/rights clearance.
 
 If any required gate fails, correct the data or report a precise blocker; never substitute a reassuring summary for a test result.

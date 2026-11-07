@@ -1,0 +1,244 @@
+{
+  "schemaVersion": 1,
+  "id": "example-lesson-not-for-publication",
+  "curriculum": {
+    "series": "Example Curriculum (replace)",
+    "lessonNumber": 1
+  },
+  "lessonDetails": {
+    "title": "Example lesson — replace using actual curriculum",
+    "scripturePassages": [
+      "Exodus 14"
+    ],
+    "scriptureDisplay": "Exodus 14",
+    "bigIdeas": [
+      {
+        "text": "Replace with the source curriculum's actual Big Idea.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "memoryVerse": {
+      "reference": "REPLACE IN REVIEW STUDIO",
+      "translation": "UNVERIFIED",
+      "text": "PLACEHOLDER — choose the exact BSB passage during review.",
+      "isExcerpt": false,
+      "requiresTextReview": true
+    }
+  },
+  "preparedActivities": {
+    "oddWords": {
+      "related": [
+        "MOSES",
+        "SEA",
+        "WATER",
+        "STAFF",
+        "ISRAEL"
+      ],
+      "unrelated": [
+        "ROCKET",
+        "CROWN",
+        "WAGON",
+        "CANDLE"
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "checkboxes": {
+      "correct": [
+        "MOSES",
+        "SEA",
+        "WATER",
+        "STAFF",
+        "ISRAEL"
+      ],
+      "incorrect": [
+        "SPOON",
+        "BANANA",
+        "CARPET",
+        "LANTERN"
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "unscrambleWords": {
+      "answers": [
+        "MOSES",
+        "WATER"
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "trueFalse": {
+      "factId": "tf-01",
+      "statement": "REPLACE with a true fact grounded in your Story Notes.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "trueFalseMaze": {
+      "factId": "tf-02",
+      "statement": "EXAMPLE ONLY: Replace with a supported FALSE fact.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "drawPicture": {
+      "prompt": "Moses speaking to Pharaoh about the people of Israel",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "drawStory": [
+      {
+        "prompt": "Moses spoke to Pharaoh.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "The people prepared to leave Egypt.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "The people left Egypt.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "The people reached the sea.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "storyOrder": [
+      {
+        "order": 1,
+        "text": "Moses spoke to Pharaoh.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 2,
+        "text": "The people prepared to leave Egypt.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 3,
+        "text": "The people left Egypt.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 4,
+        "text": "The people reached the sea.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 5,
+        "text": "The people crossed on dry ground.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "circleMistakes": {
+      "paragraph": "Moses built a ship to leave Egypt. The people crossed the sea by train.",
+      "mistakeCount": 2,
+      "mistakes": [
+        {
+          "incorrect": "built a ship",
+          "correction": "led God's people",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "by train",
+          "correction": "on dry ground",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "pixelPicture": {
+      "phrase": "God helped the people walk on dry ground.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  },
+  "facts": [
+    {
+      "id": "tf-01",
+      "statement": "REPLACE with a true fact grounded in your Story Notes.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-02",
+      "statement": "EXAMPLE ONLY: Replace with a supported FALSE fact.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "vocabulary": {
+    "related": [
+      "MOSES",
+      "SEA",
+      "WATER",
+      "STAFF",
+      "ISRAEL"
+    ],
+    "unrelated": [
+      "ROCKET",
+      "CROWN",
+      "WAGON",
+      "CANDLE"
+    ],
+    "entries": [
+      {
+        "id": "voc-01",
+        "term": "WATER",
+        "origin": "adapted",
+        "scope": "story",
+        "teacherReviewRequired": true
+      }
+    ]
+  },
+  "characters": [
+    {
+      "id": "ch-01",
+      "name": "EXAMPLE CHARACTER — replace",
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "clues": [
+        {
+          "text": "EXAMPLE ONLY: replace with a faithful character clue.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ]
+    }
+  ],
+  "drawingPrompts": [
+    {
+      "id": "scene-demo-01",
+      "prompt": "Moses speaking to Pharaoh about the people of Israel",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "scene-demo-02",
+      "prompt": "the Israelites walking beside a wall of water",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "publication": {
+    "status": "pending-teacher-approval",
+    "approved": false
+  }
+}

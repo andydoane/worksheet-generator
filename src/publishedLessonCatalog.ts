@@ -53,9 +53,9 @@ export function approvedForPublic(entry:PublicLessonEntry):boolean{
  if(pub?.status!=='approved'||pub.approved!==true||
   !hasText(pub.teacherSignoff?.reviewer)||
   !hasText(pub.teacherSignoff?.date))return false;
- if(!Array.isArray(lesson.reviewFlags)||!Array.isArray(pub.resolvedReviewFlagIds))return false;
- const resolved=new Set(pub.resolvedReviewFlagIds);
- return lesson.reviewFlags.filter(flag=>flag.type==='teacher-approval')
+ const flags=Array.isArray(lesson.reviewFlags)?lesson.reviewFlags:[];
+ const resolved=new Set(pub.resolvedReviewFlagIds??[]);
+ return flags.filter(flag=>flag.type==='teacher-approval')
   .every(flag=>resolved.has(flag.id));
 }
 

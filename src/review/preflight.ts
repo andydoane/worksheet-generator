@@ -2,6 +2,7 @@ import {MODULES,type ModuleId} from '../modules.ts';
 import {checkReviewContent,type Lesson} from './model.ts';
 import {repairDestinationForModule} from './repairRegistry.ts';
 import {lessonIntegrityIssues,type IntegrityArea} from './lessonIntegrity.ts';
+import {contentFirstLesson} from './contentFirstLesson.ts';
 import {reviewSchemaIssues,type SchemaRepair} from './schemaPreflight.ts';
 import {validateModule} from '../modules.ts';
 import {planConnectVerse} from '../connectVerseLayout.ts';
@@ -138,9 +139,10 @@ export type ReviewConnectVerseMetrics={
 };
 export function buildReviewPreflight(lesson:Lesson,
  connectVerseMetrics?:ReviewConnectVerseMetrics):ReviewPreflight{
- // CI validates schema before invoking the converter. Do exactly the same
- // here so malformed metadata cannot reach "Download approved lesson JSON".
- const schemaIssues=reviewSchemaIssues(lesson);
+ // Validate the *printable content* contract rather than imported source
+ // document bookkeeping. The original working session remains untouched.
+ const printable=contentFirstLesson(lesson);
+ const schemaIssues=reviewSchemaIssues(printable);
  if(schemaIssues.length)return {convertedCount:0,totalCount:27,
   issues:schemaIssues.map(entry=>({
    id:'schema:'+entry.path,
@@ -152,11 +154,11 @@ export function buildReviewPreflight(lesson:Lesson,
    ...(entry.repair?{schemaRepair:entry.repair}:{}),
   })),
  };
- const messages=checkReviewContent(lesson);
+ const messages=checkReviewContent(printable);
  // Word count, characters and source matching are only the first gate.
  // Real print fit is determined by the same physical boxed-word plan used
  // by the SVG preview and pdf-lib renderer. Never rewrite Scripture to fit.
- const preparedVerse=lesson.preparedActivities?.connectVerse?.verse;
+ const preparedVerse=printable.preparedActivities?.connectVerse?.verse;
  let printFitFailed=false;
  if(connectVerseMetrics&&typeof preparedVerse==='string'){
   const module={type:'connect-verse' as const,verse:preparedVerse,seed:1};
@@ -165,7 +167,10 @@ export function buildReviewPreflight(lesson:Lesson,
    messages.push('connect-verse: The complete verse cannot fit the Large printable word boxes and verse bank at a readable size. Choose a passage that fits; do not change Scripture wording to bypass this check.');
   }
  }
- const structural=lessonIntegrityIssues(lesson);
+ // Lesson title and approved rights are real publication requirements.
+ // Source IDs, original document order and converter readiness records aren't.
+ const structural=lessonIntegrityIssues(printable).filter(entry=>
+  entry.area==='lesson-details'||entry.area==='lesson-publication');
  const recipeIssues:ReviewIssue[]=[];
  // All 27 activities may convert successfully while an assembled booklet
  // still fails (for example, two regions need distinct approved content).
@@ -173,7 +178,7 @@ export function buildReviewPreflight(lesson:Lesson,
  if(messages.length===0&&structural.length===0){
   for(const recipe of WORKSHEET_RECIPES){
    try{
-    const result=buildWorksheetRecipe(lesson as LessonWorksheetSource,recipe.id,
+    const result=buildWorksheetRecipe(printable as LessonWorksheetSource,recipe.id,
      {purpose:'editorial-review',seed:1});
     for(const region of result.openSlots){
      const step=recipe.steps.find(s=>s.page+':'+s.regionId===region.slot);

@@ -196,7 +196,6 @@ export function convertLessonActivities(
  }
  const prepared=lesson.preparedActivities??{};
  const factsById=new Map((lesson.facts??[]).map(fact=>[fact.id,fact]));
- const originalIds=new Set((lesson.storyNotes??[]).map(note=>note.id));
  function issue(moduleId:LessonModuleId,contentId:string,message:string){
   diagnostics.push({moduleId,contentId,message});
  }
@@ -233,9 +232,8 @@ export function convertLessonActivities(
  if(prepared.storyOrder?.length){
   const ordered=[...prepared.storyOrder].sort((a,b)=>a.order-b.order);
   const sequential=ordered.every((entry,i)=>entry.order===i+1);
-  const validRefs=ordered.every(entry=>entry.sourceIds?.every(id=>originalIds.has(id))??false);
-  if(!sequential||!validRefs){
-   issue('story-order','story-order','Story events need sequential order and valid source Story Note IDs.');
+  if(!sequential){
+   issue('story-order','story-order','Story events need sequential order numbers beginning at 1.');
   }else{
    add('story-order','story-order',{
     type:'story-order',events:ordered.map(x=>x.text).join('\n'),seed,
@@ -427,16 +425,17 @@ export function convertLessonActivities(
   }
   return true;
  }
+ // This is a printable alternative-choice bank, not original-document
+ // provenance. Teacher-typed phrasing must be registered in the reviewable
+ // keyPhrases[] pool before it is eligible for a worksheet or a preset.
  function consistentIdea(id:VerseSpecialtyLessonModuleId,entry:LessonPhrase){
   if(!importantIdea||entry.phrase===importantIdea.text)return true;
-  // The authored Important Idea remains canonical. A medium puzzle may use
-  // another reviewed key phrase or a source-linked chronological event.
-  const alternatives=[
+  const eligible=[
    ...(lesson.keyPhrases??[]).map(item=>item.text),
    ...(prepared.storyOrder??[]).map(item=>item.text),
   ];
-  if(alternatives.includes(entry.phrase))return true;
-  issue(id,id,'Prepared phrase must match the original Important Idea, a reviewed key phrase, or an approved Story Order event.');
+  if(eligible.includes(entry.phrase))return true;
+  issue(id,id,'Add the new printable phrase to the teacher-review candidate pool before using it.');
   return false;
  }
  function addPrepared(id:VerseSpecialtyLessonModuleId,module:ActivityModule,
