@@ -75,7 +75,7 @@ Avoid saying "validated" without identifying which gate you actually ran.
 
 Ask for the actual lesson ODT/DOCX/PDF and optional slides. Read those materials for accurate teaching content, including the lesson's Big Idea, Scripture references, people, events, original memory-verse reference/translation, teaching cautions and useful vocabulary. If something is missing, report uncertainty rather than inventing it.
 
-**Reading original material is essential; copying its document audit trail into the new JSON is not.** The current compact lesson can omit `sourceFiles`, `storyNotes`, the source `questions[]` archive, `sourceIds`, `sourceQuestionIds`, page references, `moduleReadiness`, historical `validation` and source-inventory `reviewFlags`. Preserve useful *printable* alternatives and accurate answers instead. If you deliberately include optional historical fields, keep them truthful and distinguish original quotation from adaptation and suggestion.
+**Reading original material is essential; copying its document audit trail into the new JSON is not.** Older instructions to “Preserve all original source” questions, Story Notes and page citations described an archival format, **not** a requirement for a new compact lesson. The current compact lesson can omit `sourceFiles`, `storyNotes`, the source `questions[]` archive, `sourceIds`, `sourceQuestionIds`, page references, `moduleReadiness`, historical `validation` and source-inventory `reviewFlags`. Preserve useful *printable* alternatives and accurate answers instead. If you deliberately include optional historical fields, keep them truthful and distinguish original quotation from adaptation and suggestion.
 
 ### Source citation format (optional historical metadata)
 
@@ -140,7 +140,7 @@ Optional sections include `schemaStatus`, `characters`, `matchingPairs`, `drawin
 - `lessonDetails.memoryVerse` needs `reference`, `translation`, `text` and `isExcerpt`. Accurately label any unverified source translation; the teacher applies the verified BSB excerpt later.
 - If `characters` exists, each `characters[].clues[]` element must be an object with `text` and `origin`, never a bare string.
 - Printable pools (`vocabulary`, `matchingPairs`, `drawingPrompts`, `keyPhrases`) remain useful for distinct activity choices even when all original `sourceIds` are omitted.
-- **Legacy fields only when deliberately supplied:** `storyNotes[]` and original `questions[]` retain their own older schema shape; `moduleReadiness[]`, `reviewFlags[]` and `validation.checks[]` are not required for a new content-first file and do not prove executable readiness. When an optional `validation.checks[]` entry is used, its key is `check` (not `name`).
+- **Legacy fields only when deliberately supplied:** `storyNotes[]` and original `questions[]` retain their own older schema shape; `moduleReadiness[]`, `reviewFlags[]` and `validation.checks[]` are not required for a new content-first file and do not prove executable readiness. If an old `reviewFlags[]` entry has `affectedModules`, those values must be real registered module IDs; this field is **not** a prerequisite for content-first approval. When an optional `validation.checks[]` entry is used, its key is `check` (not `name`).
 - Conversion-stage `publication` must remain `{"status":"pending-teacher-approval","approved":false}`. Do not copy `teacherSignoff`, `scriptureRights` or `resolvedReviewFlagIds` from an approved example.
 
 ### Character clues: objects, never bare strings
