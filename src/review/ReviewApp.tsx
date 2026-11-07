@@ -30,6 +30,7 @@ import {cryptogramLetters} from '../cryptograms.ts';
 import {buildReviewPreflight,PREPARED_ACTIVITY_KEYS,reviewIssueTarget,type ReviewPreflight,type ReviewIssue} from './preflight.ts';
 import {applyReviewSchemaRepair,schemaRepairLabel} from './schemaPreflight.ts';
 import {factSelectionIssues} from './storyFactEditor.ts';
+import {addCircleMistake,removeCircleMistake,MAX_CIRCLE_MISTAKES} from './circleMistakesEditor.ts';
 import {
  wordBankDrafts as draftWordBanks,changeWordBankList,wordBankIssues,wordBankCounts,
  type WordBankKind,type WordBankField,
@@ -233,6 +234,10 @@ export default function ReviewApp(){
    setLesson(editAt(lesson,path,value));setPreflight(null);
    setReviewed(prev=>prev.filter(x=>x!==active?.id));setError('');
   }catch(e){setError(String((e as Error).message??e));}
+ }
+ function editCircleMistakes(action:()=>Lesson){
+  try{applyVisualReview(action());}
+  catch(e){setError(e instanceof Error?e.message:String(e));}
  }
  function changeWordList(key:WordBankKind,field:WordBankField,value:string){
   if(!lesson)return;
@@ -727,14 +732,33 @@ export default function ReviewApp(){
        </details>
       </div>}
       {active.id==='circle-mistakes'&&<div className="review-fields">
-       <label>Deliberately incorrect paragraph<textarea id="review-field-circle-mistakes" rows={7} value={lesson.preparedActivities.circleMistakes.paragraph}
+       <div className="review-note">
+        <h3>Circle the Mistakes · {lesson.preparedActivities.circleMistakes.mistakes.length}/{MAX_CIRCLE_MISTAKES} mistakes</h3>
+        <p>Add a deliberately wrong phrase to the paragraph, then record the exact incorrect
+         wording and its truthful correction below. The printed mistake count is kept in sync.</p>
+       </div>
+       <label>Deliberately incorrect paragraph<textarea id="review-field-circle-mistakes" rows={7}
+        value={lesson.preparedActivities.circleMistakes.paragraph}
         onChange={e=>change(['preparedActivities','circleMistakes','paragraph'],e.target.value)}/></label>
        {lesson.preparedActivities.circleMistakes.mistakes.map((m:any,i:number)=>
         <div className="review-pair" key={i}>
-         <label>Incorrect phrase {i+1}<input value={m.incorrect} onChange={e=>change(['preparedActivities','circleMistakes','mistakes',i,'incorrect'],e.target.value)}/></label>
-         <label>Correction<input value={m.correction} onChange={e=>change(['preparedActivities','circleMistakes','mistakes',i,'correction'],e.target.value)}/></label>
+         <label>Incorrect phrase {i+1}<input value={m.incorrect}
+          onChange={e=>change(['preparedActivities','circleMistakes','mistakes',i,'incorrect'],e.target.value)}/></label>
+         <label>Correction {i+1}<input value={m.correction}
+          onChange={e=>change(['preparedActivities','circleMistakes','mistakes',i,'correction'],e.target.value)}/></label>
+         <button type="button" className="review-secondary" aria-label={'Remove mistake '+(i+1)}
+          disabled={lesson.preparedActivities.circleMistakes.mistakes.length<=1}
+          onClick={()=>{
+           if(window.confirm('Remove mistake '+(i+1)+' and its correction?'))
+            editCircleMistakes(()=>removeCircleMistake(lesson,i));
+          }}>Remove mistake {i+1}</button>
         </div>)}
-       <p className="review-source">Every incorrect phrase must actually appear in the paragraph.</p>
+       <button type="button" className="review-secondary"
+        disabled={lesson.preparedActivities.circleMistakes.mistakes.length>=MAX_CIRCLE_MISTAKES}
+        onClick={()=>editCircleMistakes(()=>addCircleMistake(lesson))}>+ Add mistake</button>
+       <p className="review-source">Each incorrect phrase must appear in the paragraph exactly,
+        including capitalization. Complete both fields for every new mistake before running preflight.
+        The worksheet supports 1–8 mistakes; any edit needs renewed teacher review.</p>
       </div>}
       {active.id==='odd-words'&&<div className="review-fields review-word-bank">
        <p className="review-source">Choose 1–5 words that belong in the story and 1–5 that do not.
