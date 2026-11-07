@@ -1,6 +1,12 @@
 # Curriculum lesson presets · v1
 
-This directory holds **source-preserving curriculum interchange data**, not saved worksheet drafts. Only the signed-off JSON in `curriculum/approved/*.lesson.json` is bundled into the public app after teacher and Scripture-rights review; review-stage files are excluded.
+This directory holds **teacher-approved printable curriculum content libraries**, not saved worksheet drafts. Existing legacy files may also contain original documents and source-link metadata; new approved exports don't require them. Only the signed-off JSON in `curriculum/approved/*.lesson.json` is bundled into the public app after teacher and Scripture-rights review; review-stage files are excluded.
+
+## Current content-first contract for new lessons
+
+The generator consumes approved **worksheet content and correct answers**, not original document citations. New schema-v1 JSON may omit `sourceFiles`, `storyNotes`, original `questions`, `moduleReadiness`, `reviewFlags`, and `validation` records, plus all source citation pointers. Keep **printable candidates** in `facts`, `preparedActivities` and useful `vocabulary`, `characters`, `drawingPrompts`, `matchingPairs` and `keyPhrases` alternatives. Canonical `factId` values remain essential **answer/selection IDs**.
+
+Review Studio validates all 27 module types and four presets, requires teacher review, correct BSB and rights, and downloads a compact approved content library. Previously approved source-rich v1 files remain readable and are not automatically modified. See [the content-first guide](../docs/CURRICULUM-CONVERSION-GUIDE.md#current-authoring-contract--content-first).
 
 ## PR 17o — one-file, self-contained publication for 123 lessons
 

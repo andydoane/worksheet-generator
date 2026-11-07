@@ -951,22 +951,21 @@ export default function ReviewApp(){
        <div className="review-note">
         <h3>Other validation issues</h3>
         <p>These messages have no safe automatic repair. Rather than modify
-         curriculum facts or rights records without evidence, choose the affected
-         lesson section below and verify the source. All current preflight messages
+         printable content or rights records without evidence, choose the affected
+         activity or lesson section below. All current preflight messages
          remain visible below until a fresh preflight run.</p>
        </div>
        {(preflight?.issues??[]).filter(issue=>issue.taskId==='review-general').map((issue,i)=>
         <p className="review-warning" key={i}>{issue.message}</p>)}
        <div className="review-match-actions">
-        {(['lesson-details','lesson-sources','lesson-readiness','lesson-publication','recipe-review'] as const)
+        {(['lesson-details','lesson-publication','recipe-review'] as const)
          .map(area=><button type="button" className="review-secondary" key={area}
           onClick={()=>{setSelectedId(area);setFocusIssueField('review-field-'+area);}}>
           {area.replaceAll('-',' ')}
          </button>)}
        </div>
-       <p className="review-source">For corrupt structural content, use the source
-        section's scoped advanced editor and export a working JSON backup before changes.
-        The generator and curriculum CI will independently validate all final content.</p>
+       <p className="review-source">Edit the affected printable activity and rerun preflight.
+        The generator and curriculum CI independently validate the final worksheet content.</p>
       </div>}
       <div className="review-actions">
        {!active.optional&&<button type="button" className="review-approve"
