@@ -55,7 +55,7 @@ export function listReviewTasks(lesson:Lesson):ReviewTask[]{
  tasks.push({id:'crossword',group:'Large puzzles',label:'Crossword',
   detail:'Edit 6–10 answer/clue pairs, check that every word connects, and review the printable puzzle.'});
  tasks.push({id:'story-order',group:'Story narrative',label:'Story Order',
-  detail:'Edit and arrange 5–8 printable events in correct chronological order.'});
+  detail:'Review and edit the existing 5–8 printable events in chronological order; no Story Note links are needed.'});
  tasks.push({id:'sort-story',group:'Canonical facts',label:'Sort the Story',
   detail:'Choose 4–8 exact canonical facts, with true and false answers and distinct IDs.'});
  tasks.push({id:'true-false',group:'Canonical facts',label:'True/False',
