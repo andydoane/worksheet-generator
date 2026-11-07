@@ -228,7 +228,7 @@ test('Preflight sends missing and invalid source-linked records to each visual e
  }
 });
 
-test('Print-matched story and fact previews, row controls, and advanced fallback are mounted',async()=>{
+test('Story Order simple sentence review and print-matched fact previews are mounted',async()=>{
  const [app,story,sort,fact]=await Promise.all([
   readFile(new URL('../src/review/ReviewApp.tsx',import.meta.url),'utf8'),
   readFile(new URL('../src/review/StoryOrderReviewEditor.tsx',import.meta.url),'utf8'),
@@ -239,8 +239,8 @@ test('Print-matched story and fact previews, row controls, and advanced fallback
   assert.match(app,new RegExp("active\\.id==='"+id+"'"));
  assert.match(app,/Advanced: edit this activity's JSON only/u);
  assert.match(story,/<StoryVersePreview storyOrderChronological module=/u);
- assert.match(story,/moveStoryEvent\(lesson,i,-1\)/u);
- assert.match(story,/replaceStoryEventFromNote/u);
+ assert.match(story,/editStoryEvent\(lesson,index,text\)/u);
+ assert.doesNotMatch(story,/replaceStoryEventFromNote|moveStoryEvent|addStoryEventFromNote/u);
  assert.match(sort,/<SortStoryPrintPreview module=/u);
  assert.match(sort,/selectFact\(lesson,'sortStory'/u);
  assert.match(sort,/Choose unused fact/u);
