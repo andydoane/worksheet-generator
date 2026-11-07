@@ -1,0 +1,1169 @@
+{
+  "schemaVersion": 1,
+  "id": "ot-004-cain-and-abel",
+  "curriculum": {
+    "series": "OT",
+    "lessonNumber": 4
+  },
+  "lessonDetails": {
+    "title": "Cain and Abel",
+    "scripturePassages": [
+      "Genesis 4",
+      "Hebrews 11:4",
+      "Hebrews 11:6",
+      "Romans 3:22",
+      "Ephesians 4:26"
+    ],
+    "scriptureDisplay": "Genesis 4",
+    "bigIdeas": [
+      {
+        "text": "Without faith, it is impossible to please God.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "text": "It’s okay to be angry, but not to let it run wild.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "memoryVerse": {
+      "reference": "Hebrews 11:6",
+      "translation": "BSB",
+      "text": "And without faith it is impossible to please God. For anyone who approaches Him must believe that He exists",
+      "isExcerpt": true,
+      "origin": "adapted",
+      "requiresTextReview": false,
+      "teacherReviewRequired": true,
+      "originalTranslation": "ESV",
+      "hasEllipses": false,
+      "bsbSource": {
+        "reference": "Hebrews 11:6",
+        "sourceUrl": "https://bereanbible.com/bsb.txt",
+        "publicDomainTerms": "https://berean.bible/terms.htm",
+        "startWord": 0,
+        "endWord": 18
+      }
+    }
+  },
+  "preparedActivities": {
+    "drawPicture": {
+      "prompt": "Cain and Abel bringing their different offerings before God",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "multipleChoice": [
+      {
+        "id": "mc-01",
+        "question": "What work did Cain do?",
+        "correctAnswer": "He grew crops.",
+        "choices": [
+          {
+            "text": "He grew crops.",
+            "isCorrect": true,
+            "origin": "suggested"
+          },
+          {
+            "text": "He cared for sheep.",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "He built an ark.",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-02",
+        "question": "What did Abel bring as an offering to God?",
+        "correctAnswer": "The best meat from firstborn sheep",
+        "choices": [
+          {
+            "text": "The best meat from firstborn sheep",
+            "isCorrect": true,
+            "origin": "suggested"
+          },
+          {
+            "text": "Some grain from his fields",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Fruit from the Garden of Eden",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-03",
+        "question": "How did God respond to the brothers’ offerings?",
+        "correctAnswer": "He was pleased with Abel’s only.",
+        "choices": [
+          {
+            "text": "He was pleased with Abel’s only.",
+            "isCorrect": true,
+            "origin": "suggested"
+          },
+          {
+            "text": "He was pleased with both.",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "He rejected both offerings.",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-04",
+        "question": "What did God warn Cain about when Cain became angry?",
+        "correctAnswer": "Sin wanted to control him.",
+        "choices": [
+          {
+            "text": "Sin wanted to control him.",
+            "isCorrect": true,
+            "origin": "suggested"
+          },
+          {
+            "text": "His heart would be faster",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "He might do something silly",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-05",
+        "question": "What happened when Cain took Abel into a field?",
+        "correctAnswer": "Cain attacked Abel, and Abel died.",
+        "choices": [
+          {
+            "text": "Cain attacked Abel, and Abel died.",
+            "isCorrect": true,
+            "origin": "suggested"
+          },
+          {
+            "text": "Cain hugged Abel.",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Cain to Abel to run away.",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-06",
+        "question": "According to Hebrews 11, why was Abel’s offering better?",
+        "correctAnswer": "Abel offered it by faith.",
+        "choices": [
+          {
+            "text": "Abel offered it by faith.",
+            "isCorrect": true,
+            "origin": "suggested"
+          },
+          {
+            "text": "God wanted meat instead of plants.",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Cain's fruit was rotten.",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "trueFalse": {
+      "factId": "tf-02",
+      "statement": "Cain was a farmer who grew crops.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "firstLetters": {
+      "reference": "Hebrews 11:6",
+      "verse": "And without faith it is impossible to please God. For anyone who approaches Him must believe that He exists",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "oddWords": {
+      "related": [
+        "CAIN",
+        "ABEL",
+        "CROPS",
+        "SHEEP",
+        "OFFERING"
+      ],
+      "unrelated": [
+        "Shadrach",
+        "ankles",
+        "inn",
+        "Gomorrah",
+        "cross"
+      ],
+      "unrelatedOrigin": "suggested",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "unscrambleWords": {
+      "answers": [
+        "CAIN",
+        "FAITH"
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "checkboxes": {
+      "correct": [
+        "Cain",
+        "Abel",
+        "Crops",
+        "Sheep",
+        "Field"
+      ],
+      "incorrect": [
+        "robe",
+        "waves",
+        "crowds",
+        "son",
+        "sisters"
+      ],
+      "incorrectOrigin": "suggested",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "whoAmI": {
+      "clue": "I took care of sheep and offered God the best parts of firstborn animals.",
+      "answer": "Abel",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "matchWords": [
+      {
+        "id": "mp-01",
+        "left": "Cain",
+        "right": "Farmer",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-02",
+        "left": "Abel",
+        "right": "Shepherd",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-03",
+        "left": "Crops",
+        "right": "Cain’s offering",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-04",
+        "left": "Sheep",
+        "right": "Abel’s offering",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-05",
+        "left": "Sin",
+        "right": "Waiting at the door",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-06",
+        "left": "Wandering",
+        "right": "Cain’s curse",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "finishVerse": {
+      "reference": "Hebrews 11:6",
+      "sourceVerse": "And without faith it is impossible to please God. For anyone who approaches Him must believe that He exists",
+      "markedVerse": "And without [faith] it is impossible to [please] [God]. For [anyone] who approaches Him must [believe] that He [exists]",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "unscrambleVerse": {
+      "reference": "Hebrews 11:6",
+      "sourceVerse": "And without faith it is impossible to please God. For anyone who approaches Him must believe that He exists",
+      "markedVerse": "And without [faith] it is impossible to [please] [God]. For [anyone] who approaches Him must [believe] that He [exists]",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "circleMistakes": {
+      "paragraph": "Cain raised sheep while Abel planted crops. God was pleased with both offerings. When Cain grew angry, God told him to let his anger run wild. Cain brought Abel to a mountain and gave him a hug. God didn't know what Cain had done. God cursed Cain with blindness.",
+      "mistakeCount": 8,
+      "mistakes": [
+        {
+          "incorrect": "Cain raised sheep",
+          "correction": "Cain farmed the land",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "Abel planted crops",
+          "correction": "Abel cared for sheep",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "both offerings",
+          "correction": "Abel’s offering but not Cain’s",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "to let his anger run wild",
+          "correction": "sin wanted to control him",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "a mountain",
+          "correction": "a field",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "gave him a hug",
+          "correction": "attacked him, and Abel died",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "didn't know",
+          "correction": "knew exactly",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "blindness",
+          "correction": "a curse that stopped his crops from growing",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "mediumWordSearch": {
+      "words": [
+        "CAIN",
+        "ABEL",
+        "CROPS",
+        "SHEEP",
+        "ANGER",
+        "FAITH"
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "trueFalseMaze": {
+      "factId": "tf-10",
+      "statement": "Cain offered sheep and Abel offered crops.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "bigIdeaCryptogram": {
+      "phrase": "Without faith, it is impossible to please God.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "upsideDownVerse": {
+      "reference": "Hebrews 11:6",
+      "verse": "And without faith it is impossible to please God. For anyone who approaches Him must believe that He exists",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "connectBigIdea": {
+      "phrase": "Without faith, it is impossible to please God.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "pixelPicture": {
+      "phrase": "God warned Cain to rule over sin, but Cain chose to hurt his brother.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "finishStory": {
+      "markedParagraph": "Eve had two [SONS], Cain and Abel. Cain was a [FARMER] who offered [CROPS] to God. Abel cared for [SHEEP] and offered the best parts of firstborn animals. God was [PLEASED] with Abel’s offering but not Cain’s. Cain became [ANGRY]. God warned him that [SIN] wanted to control him. Instead of listening, Cain took Abel into a [FIELD] and attacked him. Abel [DIED]. When God asked where Abel was, Cain would not tell the [TRUTH]. God [CURSED] Cain so crops would no longer grow for him, and he would [WANDER] the earth.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "storyOrder": [
+      {
+        "order": 1,
+        "text": "Eve gave birth to Cain and then his younger brother Abel.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 2,
+        "text": "Cain farmed the land while Abel took care of sheep.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 3,
+        "text": "Cain offered crops to God, and Abel offered the best parts of firstborn sheep.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 4,
+        "text": "God was pleased with Abel’s offering but not Cain’s.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 5,
+        "text": "Cain became angry, and God warned him that sin wanted to control him.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 6,
+        "text": "Cain took Abel into a field, attacked him, and Abel died.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 7,
+        "text": "Cain denied knowing where Abel was when God questioned him.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 8,
+        "text": "God cursed Cain to wander because of what he had done.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "sortStory": [
+      {
+        "factId": "tf-01",
+        "statement": "Eve gave birth to Cain before Abel.",
+        "isTrue": true,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-03",
+        "statement": "Abel cared for sheep and offered animals to God.",
+        "isTrue": true,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-04",
+        "statement": "God was pleased with Abel’s offering but not Cain’s.",
+        "isTrue": true,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-05",
+        "statement": "God warned Cain that sin wanted to control him.",
+        "isTrue": true,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-09",
+        "statement": "Eve gave birth to twin boys.",
+        "isTrue": false,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-11",
+        "statement": "God was pleased with both brothers’ offerings.",
+        "isTrue": false,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-12",
+        "statement": "God told Cain to obey his anger and attack his brother.",
+        "isTrue": false,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-13",
+        "statement": "Cain listened to God’s warning and left Abel unharmed.",
+        "isTrue": false,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "drawStory": [
+      {
+        "prompt": "Eve gave birth to Cain and then his younger brother Abel.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "Cain farmed the land while Abel took care of sheep.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "Cain offered crops to God, and Abel offered the best parts of firstborn sheep.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "Cain became angry, and God warned him that sin wanted to control him.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "Cain took Abel into a field, attacked him, and Abel died.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "God cursed Cain to wander because of what he had done.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "wordSearch": {
+      "words": [
+        "CAIN",
+        "ABEL",
+        "FARMER",
+        "SHEPHERD",
+        "OFFERING",
+        "CROPS",
+        "SHEEP",
+        "FAITH",
+        "ANGER",
+        "FIELD",
+        "CURSE",
+        "WANDER"
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "verseCryptogram": {
+      "reference": "Hebrews 11:6",
+      "verse": "And without faith it is impossible to please God. For anyone who approaches Him must believe that He exists",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "crossword": [
+      {
+        "answer": "CAIN",
+        "clue": "Which brother grew crops?",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "ABEL",
+        "clue": "Which brother cared for sheep?",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "EVE",
+        "clue": "Who was the mother of Cain and Abel?",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "CROPS",
+        "clue": "What did Cain bring as an offering?",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "SHEEP",
+        "clue": "Which animals did Abel care for?",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "FAITH",
+        "clue": "Why was Abel’s offering better according to Hebrews?",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "ANGER",
+        "clue": "What emotion did Cain let control him?",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "FIELD",
+        "clue": "Where did Cain attack his brother?",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "WANDER",
+        "clue": "What did Cain have to do after God cursed him?",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "BROTHER",
+        "clue": "Cain was Abel's ___?",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "spiralVerse": {
+      "reference": "Hebrews 11:6",
+      "verse": "And without faith it is impossible to please God. For anyone who approaches Him must believe that He exists",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "connectVerse": {
+      "reference": "Hebrews 11:6",
+      "verse": "And without faith it is impossible to please God. For anyone who approaches Him must believe that He exists",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    }
+  },
+  "vocabulary": {
+    "related": [
+      "Cain",
+      "Abel",
+      "Eve",
+      "Adam",
+      "Crops",
+      "Sheep",
+      "Farmer",
+      "Shepherd",
+      "Offerings",
+      "Faith",
+      "Anger",
+      "Sin",
+      "Field",
+      "Curse",
+      "Wander",
+      "Harvest",
+      "Brother",
+      "Firstborn",
+      "Meat",
+      "God",
+      "Jesus",
+      "Hebrews",
+      "Ephesians"
+    ],
+    "unrelated": [
+      "Pharaoh",
+      "Jericho",
+      "Manna",
+      "Goliath",
+      "Chariot",
+      "Joshua",
+      "Gideon",
+      "Red Sea",
+      "Exodus"
+    ],
+    "entries": [
+      {
+        "id": "voc-01",
+        "term": "Cain",
+        "scope": "current-lesson",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-02",
+        "term": "Abel",
+        "scope": "current-lesson",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-03",
+        "term": "Eve",
+        "scope": "current-lesson",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-04",
+        "term": "Adam",
+        "scope": "current-lesson",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-05",
+        "term": "Crops",
+        "scope": "current-lesson",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-06",
+        "term": "Sheep",
+        "scope": "current-lesson",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-07",
+        "term": "Farmer",
+        "scope": "current-lesson",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-08",
+        "term": "Shepherd",
+        "scope": "current-lesson",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-09",
+        "term": "Offerings",
+        "scope": "current-lesson",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-10",
+        "term": "Faith",
+        "scope": "current-lesson",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-11",
+        "term": "Anger",
+        "scope": "current-lesson",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-12",
+        "term": "Sin",
+        "scope": "current-lesson",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-13",
+        "term": "Field",
+        "scope": "current-lesson",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-14",
+        "term": "Curse",
+        "scope": "current-lesson",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-15",
+        "term": "Wander",
+        "scope": "current-lesson",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-16",
+        "term": "Harvest",
+        "scope": "current-lesson",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-17",
+        "term": "Brother",
+        "scope": "current-lesson",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-18",
+        "term": "Firstborn",
+        "scope": "current-lesson",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-19",
+        "term": "Meat",
+        "scope": "current-lesson",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-20",
+        "term": "God",
+        "scope": "current-lesson",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-21",
+        "term": "Jesus",
+        "scope": "application",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-22",
+        "term": "Hebrews",
+        "scope": "application",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-23",
+        "term": "Ephesians",
+        "scope": "application",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ]
+  },
+  "facts": [
+    {
+      "id": "tf-01",
+      "statement": "Eve gave birth to Cain before Abel.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-02",
+      "statement": "Cain was a farmer who grew crops.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-03",
+      "statement": "Abel cared for sheep and offered animals to God.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-04",
+      "statement": "God was pleased with Abel’s offering but not Cain’s.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-05",
+      "statement": "God warned Cain that sin wanted to control him.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-06",
+      "statement": "Cain attacked Abel in a field, and Abel died.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-07",
+      "statement": "Cain denied knowing where his brother was.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-08",
+      "statement": "God cursed Cain to wander and made farming fail for him.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-09",
+      "statement": "Eve gave birth to twin boys.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-10",
+      "statement": "Cain offered sheep and Abel offered crops.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-11",
+      "statement": "God was pleased with both brothers’ offerings.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-12",
+      "statement": "God told Cain to obey his anger and attack his brother.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-13",
+      "statement": "Cain listened to God’s warning and left Abel unharmed.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-14",
+      "statement": "God blessed Cain with bigger harvests after Abel died.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "characters": [
+    {
+      "id": "ch-01",
+      "name": "Cain",
+      "clues": [
+        {
+          "text": "I was the older brother. I grew crops and became angry when God rejected my offering.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "ch-02",
+      "name": "Abel",
+      "clues": [
+        {
+          "text": "I cared for sheep, brought an offering by faith, and died after my brother attacked me.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "ch-03",
+      "name": "Eve",
+      "clues": [
+        {
+          "text": "I gave birth to Cain and then Abel after leaving the Garden of Eden.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "ch-04",
+      "name": "God",
+      "clues": [
+        {
+          "text": "I warned Cain to rule over sin, and I saw what he did to his brother.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "drawingPrompts": [
+    {
+      "id": "draw-01",
+      "prompt": "Cain bringing crops as an offering to God",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "draw-02",
+      "prompt": "Abel bringing the best parts of firstborn sheep to God",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "draw-03",
+      "prompt": "the two brothers standing beside their different offerings",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "draw-04",
+      "prompt": "Cain listening as God warns him about sin",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "draw-05",
+      "prompt": "Cain and Abel walking into a field",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "draw-06",
+      "prompt": "Cain leaving his home to wander the earth",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "matchingPairs": [
+    {
+      "id": "pool-mp-01",
+      "left": "Cain",
+      "right": "Farmer",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "pool-mp-02",
+      "left": "Abel",
+      "right": "Shepherd",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "pool-mp-03",
+      "left": "Crops",
+      "right": "Cain’s offering",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "pool-mp-04",
+      "left": "Firstborn sheep",
+      "right": "Abel’s offering",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "pool-mp-05",
+      "left": "Sin",
+      "right": "Waiting at the door",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "pool-mp-06",
+      "left": "Wandering",
+      "right": "Cain’s curse",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "keyPhrases": [
+    {
+      "id": "kp-01",
+      "text": "Without faith, it is impossible to please God.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "kp-02",
+      "text": "It’s okay to be angry, but not to let it run wild.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "kp-03",
+      "text": "Abel offered to God by faith.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "kp-04",
+      "text": "Cain became angry and let sin control him.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "kp-05",
+      "text": "God warned Cain that sin wanted to control him.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "kp-06",
+      "text": "Be angry, and do not sin. (Ephesians 4:26, source ESV excerpt)",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "publication": {
+    "status": "approved",
+    "approved": true,
+    "teacherSignoff": {
+      "reviewer": "Andrew Doane",
+      "date": "2026-11-07",
+      "notes": "Approved with verified BSB verse through Curriculum Review Studio"
+    },
+    "scriptureRights": {
+      "status": "cleared",
+      "basis": "Berean Standard Bible (BSB), dedicated to the public domain on April 30, 2023. Official terms: https://berean.bible/terms.htm. Scripture text confirmed against https://bereanbible.com/bsb.txt.",
+      "reviewedBy": "Andrew Doane",
+      "reviewedOn": "2026-11-07"
+    },
+    "resolvedReviewFlagIds": [],
+    "notes": "Approved through Review Studio after teacher review and a successful 27/27 content/preflight check of four numbered presets. Original conversion notes and checks remain as historical records.",
+    "reviewStudioVerification": {
+      "source": "Review Studio measured preflight",
+      "checkedAt": "2026-11-07T22:13:37.859Z",
+      "convertedCount": 27,
+      "totalCount": 27,
+      "issueCount": 0,
+      "numberedPresetsChecked": 4,
+      "scope": "Candidate-specific content conversion, four numbered preset content checks, and measured Connect the Verse fit. Standalone repository commands and independently rendered PDFs are not claimed.",
+      "matchingWorksheetSource": "preparedActivities.matchWords",
+      "matchingCandidatePool": "matchingPairs is retained separately as historical/source candidate material"
+    },
+    "reviewFlagDisposition": []
+  },
+  "schemaStatus": "approved; Review Studio 27/27 preflight passed"
+}
