@@ -1,0 +1,1063 @@
+{
+  "schemaVersion": 1,
+  "id": "ot-007-the-tower-of-babel",
+  "curriculum": {
+    "series": "OT",
+    "lessonNumber": 7
+  },
+  "lessonDetails": {
+    "title": "The Tower of Babel",
+    "scripturePassages": [
+      "Genesis 9:1",
+      "Genesis 11:1–9",
+      "Revelation 7:9–10"
+    ],
+    "scriptureDisplay": "Genesis 11",
+    "bigIdeas": [
+      {
+        "text": "God is king. He’s in charge, not us.",
+        "origin": "source"
+      },
+      {
+        "text": "In God’s forever kingdom, there will be all kinds of people speaking all kinds of languages.",
+        "origin": "source"
+      }
+    ],
+    "memoryVerse": {
+      "reference": "Revelation 7:9",
+      "translation": "BSB",
+      "text": "I looked and saw a multitude too large to count, from every nation and tribe and people and tongue, standing before the throne",
+      "isExcerpt": true,
+      "hasEllipses": false,
+      "requiresTextReview": false,
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "originalTranslation": "ESV",
+      "bsbSource": {
+        "reference": "Revelation 7:9",
+        "sourceUrl": "https://bereanbible.com/bsb.txt",
+        "publicDomainTerms": "https://berean.bible/terms.htm",
+        "startWord": 2,
+        "endWord": 24
+      }
+    }
+  },
+  "preparedActivities": {
+    "drawPicture": {
+      "prompt": "people building a tall tower in the valley of Babylon",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "multipleChoice": [
+      {
+        "id": "mc-01",
+        "question": "What did God command Noah’s family to do after the flood?",
+        "correctAnswer": "Have children and fill the earth",
+        "choices": [
+          {
+            "text": "Have children and fill the earth",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Build a tower in Babylon",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Stay together in one city",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-02",
+        "question": "What did everyone speak before Babel?",
+        "correctAnswer": "One language",
+        "choices": [
+          {
+            "text": "One language",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Many unrelated languages",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Sign language",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-03",
+        "question": "Why did the people begin building a tall tower",
+        "correctAnswer": "To make a great name and avoid scattering",
+        "choices": [
+          {
+            "text": "To make a great name and avoid scattering",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "To be safe during a flood",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "To make God angry",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-04",
+        "question": "What did God do to interrupt the project?",
+        "correctAnswer": "He mixed up their languages",
+        "choices": [
+          {
+            "text": "He mixed up their languages",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "He sent an earthquake",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "He knocked over the tower",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-05",
+        "question": "What happened after the languages changed?",
+        "correctAnswer": "The people stopped and scattered",
+        "choices": [
+          {
+            "text": "The people stopped and scattered",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "The people kept working",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "The tower fell over",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-06",
+        "question": "Who does the book of Revelation say will praise God?",
+        "correctAnswer": "People from every nation and language",
+        "choices": [
+          {
+            "text": "People from every nation and language",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Only people from Israel",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "The people of Babel",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "trueFalse": {
+      "factId": "tf-01",
+      "statement": "After the flood, God told Noah and his sons to fill the earth.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "firstLetters": {
+      "reference": "Revelation 7:9",
+      "verse": "I looked and saw a multitude too large to count, from every nation and tribe and people and tongue, standing before the throne",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "oddWords": {
+      "related": [
+        "NOAH",
+        "BABEL",
+        "TOWER",
+        "BABYLON",
+        "LANGUAGE"
+      ],
+      "unrelated": [
+        "dew",
+        "window",
+        "grapes",
+        "Gideon",
+        "resurrection"
+      ],
+      "unrelatedOrigin": "suggested",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "unscrambleWords": {
+      "answers": [
+        "BABEL",
+        "TOWER"
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "checkboxes": {
+      "correct": [
+        "CITY",
+        "SCATTER",
+        "NOAH",
+        "TOWER",
+        "LANGUAGES"
+      ],
+      "incorrect": [
+        "prophet",
+        "sandals",
+        "famine",
+        "tombs",
+        "earthquake"
+      ],
+      "incorrectOrigin": "suggested",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "whoAmI": {
+      "clue": "God told my family to have children and fill the earth after we left the ark.",
+      "answer": "Noah",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "matchWords": [
+      {
+        "left": "Noah",
+        "right": "Ark",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "left": "Builders",
+        "right": "Tower",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "left": "Tower Spot",
+        "right": "Babel",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "left": "God's Command",
+        "right": "Scatter",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "left": "Mixed languages",
+        "right": "Tower Stopped",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "finishVerse": {
+      "reference": "Revelation 7:9",
+      "sourceVerse": "I looked and saw a multitude too large to count, from every nation and tribe and people and tongue, standing before the throne",
+      "markedVerse": "I looked and saw a [multitude] too large to [count], from every [nation] and [tribe] and [people] and [tongue], standing before the [throne]",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "unscrambleVerse": {
+      "reference": "Revelation 7:9",
+      "sourceVerse": "I looked and saw a multitude too large to count, from every nation and tribe and people and tongue, standing before the throne",
+      "markedVerse": "I looked and saw a [multitude] too large to [count], from every [nation] and [tribe] and [people] and [tongue], standing before the [throne]",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "circleMistakes": {
+      "paragraph": "After the flood, God told Noah’s family to stay in one town. Later everyone spoke many languages and built a deep pit. The workers wanted to spread out quickly. God taught them one language, so they finished the tower together.",
+      "mistakeCount": 6,
+      "mistakes": [
+        {
+          "incorrect": "stay in one town",
+          "correction": "fill the earth",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "many languages",
+          "correction": "one language",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "deep pit",
+          "correction": "tall tower",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "spread out quickly",
+          "correction": "avoid being scattered",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "taught them one language",
+          "correction": "mixed up their languages",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "finished the tower together",
+          "correction": "stopped building and scattered",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "mediumWordSearch": {
+      "words": [
+        "BABEL",
+        "NOAH",
+        "TOWER",
+        "CITY",
+        "EARTH",
+        "SPEAK"
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "trueFalseMaze": {
+      "factId": "tf-12",
+      "statement": "God told the workers to make their tower even taller.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "bigIdeaCryptogram": {
+      "phrase": "God saw the tower and mixed up the people’s languages.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "upsideDownVerse": {
+      "reference": "Revelation 7:9",
+      "verse": "I looked and saw a multitude too large to count, from every nation and tribe and people and tongue, standing before the throne",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "connectBigIdea": {
+      "phrase": "God is king. He is in charge, not us.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "pixelPicture": {
+      "phrase": "God scattered the people when he mixed up their languages.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "finishStory": {
+      "markedParagraph": "After the flood, God told Noah’s family to [FILL] the earth. At first, people [SPOKE] one language. They settled in a valley in [Babylon] and decided to build a city with a tall [TOWER]. They wanted to make a great [name] for themselves rather than [scatter]. Because they all spoke the [SAME] language, they could work together. God chose to [MIX] up their words so they could no longer [understand] one another. The builders [STOPPED] working, and the people spread across the [earth]. John later described a crowd from every nation and language that would [PRAISE] God in Jesus’ kingdom.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "storyOrder": [
+      {
+        "order": 1,
+        "text": "God commanded Noah’s family to fill the earth after the flood.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 2,
+        "text": "For many years, everyone on earth spoke the same language.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 3,
+        "text": "People settled in Babylon and planned a city and a tall tower.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 4,
+        "text": "The builders wanted a great name and did not want to scatter.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 5,
+        "text": "God saw the tower and mixed up the people’s languages.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 6,
+        "text": "The people stopped building the city and scattered across the earth.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 7,
+        "text": "In heaven, people of every language will praise God together.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "sortStory": [
+      {
+        "factId": "tf-02",
+        "statement": "At first, everyone in the world spoke the same language.",
+        "isTrue": true,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-03",
+        "statement": "After the flood, the people settled in a broad valley in Babylon.",
+        "isTrue": true,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-04",
+        "statement": "The builders wanted to make a name for themselves.",
+        "isTrue": true,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-06",
+        "statement": "God mixed up the builders’ languages.",
+        "isTrue": true,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-09",
+        "statement": "God commanded Noah’s family to stay in one city after the flood.",
+        "isTrue": false,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-10",
+        "statement": "Noah's family spoke many different languages.",
+        "isTrue": false,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-11",
+        "statement": "The tower builders wanted to scatter across the earth right away.",
+        "isTrue": false,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-13",
+        "statement": "After God mixed their languages, everyone could understand one another.",
+        "isTrue": false,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "drawStory": [
+      {
+        "prompt": "God commanded Noah’s family to fill the earth after the flood.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "People settled in Babylon and planned a city and a tall tower.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "The builders wanted a great name and did not want to scatter.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "God saw the tower and mixed up the people’s languages.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "The people stopped building the city and scattered across the earth.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "John described people of every language praising God in Jesus’ kingdom.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "wordSearch": {
+      "words": [
+        "NOAH",
+        "BABEL",
+        "TOWER",
+        "BABYLON",
+        "LANGUAGE",
+        "SCATTER",
+        "EARTH",
+        "PRAISE",
+        "NATIONS",
+        "SPEAK",
+        "KINGDOM",
+        "CITY"
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "verseCryptogram": {
+      "reference": "Revelation 7:9",
+      "verse": "I looked and saw a multitude too large to count, from every nation and tribe and people and tongue, standing before the throne",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "crossword": [
+      {
+        "answer": "NOAH",
+        "clue": "Man whose family God told to fill the earth",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "BABEL",
+        "clue": "The city where languages were confused",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "TOWER",
+        "clue": "Tall structure the builders began",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "BABYLON",
+        "clue": "The valley where people settled",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "LANGUAGE",
+        "clue": "Words and sounds used to communicate",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "SCATTER",
+        "clue": "God commanded Noah's family to do this",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "NAME",
+        "clue": "What the builders wanted to make for themselves",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "Heaven",
+        "clue": "How high the people wanted to build the tower",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "MIXED",
+        "clue": "What God did to their languages",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "One",
+        "clue": "How many langauges Noah's family spoke",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "spiralVerse": {
+      "reference": "Revelation 7:9",
+      "verse": "I looked and saw a multitude too large to count, from every nation and tribe and people and tongue, standing before the throne",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "connectVerse": {
+      "reference": "Revelation 7:9",
+      "verse": "I looked and saw a multitude too large to count, from every nation and tribe and people and tongue, standing before the throne",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    }
+  },
+  "vocabulary": {
+    "related": [
+      "NOAH",
+      "BABEL",
+      "TOWER",
+      "BABYLON",
+      "LANGUAGE",
+      "SCATTER",
+      "EARTH",
+      "PRAISE",
+      "NATIONS",
+      "SPEAK",
+      "KINGDOM",
+      "CITY",
+      "NAME",
+      "FLOOD",
+      "BUILDERS",
+      "CONFUSED",
+      "ONE LANGUAGE"
+    ],
+    "unrelated": [
+      "JERICHO",
+      "PHARAOH",
+      "GOLIATH",
+      "MANNA",
+      "RED SEA",
+      "WHALE",
+      "POTIPHAR",
+      "DREAM",
+      "PILLAR",
+      "FISH"
+    ],
+    "entries": [
+      {
+        "id": "voc-01",
+        "term": "NOAH",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-02",
+        "term": "BABEL",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-03",
+        "term": "TOWER",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-04",
+        "term": "BABYLON",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-05",
+        "term": "LANGUAGE",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-06",
+        "term": "SCATTER",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-07",
+        "term": "EARTH",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-08",
+        "term": "PRAISE",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-09",
+        "term": "NATIONS",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-10",
+        "term": "SPEAK",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-11",
+        "term": "KINGDOM",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-12",
+        "term": "CITY",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-13",
+        "term": "NAME",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-14",
+        "term": "FLOOD",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-15",
+        "term": "BUILDERS",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-16",
+        "term": "CONFUSED",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-17",
+        "term": "ONE LANGUAGE",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ]
+  },
+  "facts": [
+    {
+      "id": "tf-01",
+      "statement": "After the flood, God told Noah and his sons to fill the earth.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-02",
+      "statement": "At first, everyone in the world spoke the same language.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-03",
+      "statement": "After the flood, the people settled in a broad valley in Babylon.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-04",
+      "statement": "The builders wanted to make a name for themselves.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-05",
+      "statement": "The people built a tower so they would not be scattered.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-06",
+      "statement": "God mixed up the builders’ languages.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-07",
+      "statement": "The builders stopped work and scattered over the earth.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-08",
+      "statement": "Revelation describes people from every language praising God.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-09",
+      "statement": "God commanded Noah’s family to stay in one city after the flood.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-10",
+      "statement": "Noah's family spoke many different languages.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-11",
+      "statement": "The tower builders wanted to scatter across the earth right away.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-12",
+      "statement": "God told the workers to make their tower even taller.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-13",
+      "statement": "After God mixed their languages, everyone could understand one another.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-14",
+      "statement": "The workers finished their tower before leaving Babel.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "characters": [
+    {
+      "id": "char-01",
+      "name": "Noah",
+      "clues": [
+        {
+          "text": "God told me and my family to fill the earth after the flood.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "char-02",
+      "name": "God",
+      "clues": [
+        {
+          "text": "I mixed up the tower builders’ languages so they would scatter.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "char-03",
+      "name": "John",
+      "clues": [
+        {
+          "text": "I described a great crowd of people from every language praising God.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "drawingPrompts": [
+    {
+      "id": "scene-01",
+      "prompt": "Noah and his family leaving the ark after the flood",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "scene-02",
+      "prompt": "people planning a city in the valley of Babylon",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "scene-03",
+      "prompt": "workers building a tall tower together",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "scene-04",
+      "prompt": "two workers puzzled by each other’s different words",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "scene-05",
+      "prompt": "families walking in different directions away from Babel",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "scene-06",
+      "prompt": "people of many nations praising God before the throne",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "matchingPairs": [
+    {
+      "id": "pair-01",
+      "left": "Noah",
+      "right": "Fill the earth",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "pair-02",
+      "left": "Builders",
+      "right": "Made a tower",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "pair-03",
+      "left": "Babylon",
+      "right": "City of Babel",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "pair-04",
+      "left": "One language",
+      "right": "Before the tower",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "pair-05",
+      "left": "Mixed languages",
+      "right": "Could not understand",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "pair-06",
+      "left": "Many nations",
+      "right": "Praise God",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "keyPhrases": [
+    {
+      "id": "key-01",
+      "text": "God is king. He’s in charge, not us.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "key-02",
+      "text": "In God’s forever kingdom, there will be all kinds of people speaking all kinds of languages.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "key-03",
+      "text": "God is king. He is in charge, not us.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "key-04",
+      "text": "God scattered the people when he mixed up their languages.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "publication": {
+    "status": "approved",
+    "approved": true,
+    "teacherSignoff": {
+      "reviewer": "Andrew Doane",
+      "date": "2026-11-07",
+      "notes": "Approved with verified BSB verse through Curriculum Review Studio"
+    },
+    "scriptureRights": {
+      "status": "cleared",
+      "basis": "Berean Standard Bible (BSB), dedicated to the public domain on April 30, 2023. Official terms: https://berean.bible/terms.htm. Scripture text confirmed against https://bereanbible.com/bsb.txt.",
+      "reviewedBy": "Andrew Doane",
+      "reviewedOn": "2026-11-07"
+    },
+    "resolvedReviewFlagIds": [],
+    "notes": "Approved through Review Studio after teacher review and a successful 27/27 content/preflight check of four numbered presets. Original conversion notes and checks remain as historical records.",
+    "reviewStudioVerification": {
+      "source": "Review Studio measured preflight",
+      "checkedAt": "2026-11-07T20:56:01.940Z",
+      "convertedCount": 27,
+      "totalCount": 27,
+      "issueCount": 0,
+      "numberedPresetsChecked": 4,
+      "scope": "Candidate-specific content conversion, four numbered preset content checks, and measured Connect the Verse fit. Standalone repository commands and independently rendered PDFs are not claimed.",
+      "matchingWorksheetSource": "preparedActivities.matchWords",
+      "matchingCandidatePool": "matchingPairs is retained separately as historical/source candidate material"
+    },
+    "reviewFlagDisposition": []
+  },
+  "schemaStatus": "approved; Review Studio 27/27 preflight passed"
+}
