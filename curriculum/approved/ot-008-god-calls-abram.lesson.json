@@ -1,0 +1,1074 @@
+{
+  "schemaVersion": 1,
+  "id": "ot-008-god-calls-abram",
+  "curriculum": {
+    "series": "Old Testament",
+    "lessonNumber": 8
+  },
+  "lessonDetails": {
+    "title": "God Calls Abram",
+    "scripturePassages": [
+      "Genesis 11:27–30",
+      "Genesis 12:1–9"
+    ],
+    "scriptureDisplay": "Genesis 11–12",
+    "bigIdeas": [
+      {
+        "text": "God speaks and keeps great PROMISES to his people.",
+        "origin": "source"
+      },
+      {
+        "text": "JESUS was Abram’s many-times-great grandson, sent to bless all the nations.",
+        "origin": "source"
+      }
+    ],
+    "memoryVerse": {
+      "reference": "Joshua 21:45",
+      "translation": "BSB",
+      "text": "Not one of all the LORD’s good promises to the house of Israel had failed; everything was fulfilled.",
+      "isExcerpt": false,
+      "origin": "adapted",
+      "requiresTextReview": false,
+      "teacherReviewRequired": true,
+      "originalTranslation": "ESV",
+      "hasEllipses": false,
+      "bsbSource": {
+        "reference": "Joshua 21:45",
+        "sourceUrl": "https://bereanbible.com/bsb.txt",
+        "publicDomainTerms": "https://berean.bible/terms.htm",
+        "startWord": 0,
+        "endWord": 17
+      }
+    }
+  },
+  "preparedActivities": {
+    "drawPicture": {
+      "prompt": "Abram, Sarai, and Lot traveling to a new land",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "multipleChoice": [
+      {
+        "id": "mc-01",
+        "question": "What did God tell Abram to do?",
+        "correctAnswer": "Go to a land God would show him",
+        "choices": [
+          {
+            "text": "Go to a land God would show him",
+            "isCorrect": true,
+            "origin": "adapted",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "Build an ark",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "Fight a giant",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-02",
+        "question": "Why did Abram and Sarai have no children?",
+        "correctAnswer": "Sarai was unable to have children",
+        "choices": [
+          {
+            "text": "Sarai was unable to have children",
+            "isCorrect": true,
+            "origin": "adapted",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "They didn't want kids",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "God told them not to",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-03",
+        "question": "What did God promise to make Abram's family?",
+        "correctAnswer": "A great nation",
+        "choices": [
+          {
+            "text": "A great nation",
+            "isCorrect": true,
+            "origin": "adapted",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "A great army",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "A family of only two",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-04",
+        "question": "How old was Abram when he left Harran?",
+        "correctAnswer": "75 years old",
+        "choices": [
+          {
+            "text": "75 years old",
+            "isCorrect": true,
+            "origin": "adapted",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "40 years old",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "100 years old",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-05",
+        "question": "Who traveled with Abram and Sarai?",
+        "correctAnswer": "Their nephew Lot",
+        "choices": [
+          {
+            "text": "Their nephew Lot",
+            "isCorrect": true,
+            "origin": "adapted",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "Their son Isaac",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "Their brother Esau",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-06",
+        "question": "What did Abram build after God appeared in Canaan?",
+        "correctAnswer": "An altar to honor the Lord",
+        "choices": [
+          {
+            "text": "An altar to honor the Lord",
+            "isCorrect": true,
+            "origin": "adapted",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "A tower to reach heaven",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "An ark",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "trueFalse": {
+      "factId": "tf-07",
+      "statement": "Abram traveled with Sarai and his nephew Lot.",
+      "isTrue": true,
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "firstLetters": {
+      "reference": "Joshua 21:45",
+      "verse": "Not one of all the LORD’s good promises to the house of Israel had failed; everything was fulfilled.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "oddWords": {
+      "related": [
+        "ABRAM",
+        "SARAI",
+        "CANAAN",
+        "ALTAR"
+      ],
+      "unrelated": [
+        "ESTHER",
+        "DAVID",
+        "MOSES",
+        "JERICHO",
+        "GOLIATH"
+      ],
+      "unrelatedOrigin": "suggested",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "unscrambleWords": {
+      "answers": [
+        "CANAAN",
+        "NATION"
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "checkboxes": {
+      "correct": [
+        "GOD",
+        "ABRAM",
+        "LOT",
+        "LAND"
+      ],
+      "incorrect": [
+        "PHARAOH",
+        "JONAH",
+        "MANNA",
+        "GIDEON",
+        "DANIEL"
+      ],
+      "incorrectOrigin": "suggested",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "whoAmI": {
+      "clue": "God called me to leave my home. He made a bunch of promises to me. I traveled to Canaan with Sarai and Lot.",
+      "answer": "Abram",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "matchWords": [
+      {
+        "left": "Abram",
+        "right": "75 years old",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "left": "Sarai",
+        "right": "Wife",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "left": "Lot",
+        "right": "Nephew",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "left": "Canaan",
+        "right": "Promised land",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "left": "Great nation",
+        "right": "God's promise",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "left": "Harran",
+        "right": "Abram's home",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "finishVerse": {
+      "reference": "Joshua 21:45",
+      "sourceVerse": "Not one of all the LORD’s good promises to the house of Israel had failed; everything was fulfilled.",
+      "markedVerse": "Not [one] of all the LORD’s good [promises] to the [house] of [Israel] had [failed]; everything was [fulfilled].",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "unscrambleVerse": {
+      "reference": "Joshua 21:45",
+      "sourceVerse": "Not one of all the LORD’s good promises to the house of Israel had failed; everything was fulfilled.",
+      "markedVerse": "Not [one] of all the LORD’s good [promises] to the [house] of [Israel] had [failed]; everything was [fulfilled].",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "circleMistakes": {
+      "paragraph": "God told Abram to stay in his home country. He promised to make Abram a small village. Abram traveled with Sarai and Esau to Canaan. When they arrived, God promised to give that good land to Abram's enemies.",
+      "mistakeCount": 4,
+      "mistakes": [
+        {
+          "incorrect": "stay in his home country",
+          "correction": "go to a land God would show him"
+        },
+        {
+          "incorrect": "a small village",
+          "correction": "a great nation"
+        },
+        {
+          "incorrect": "Esau",
+          "correction": "Lot"
+        },
+        {
+          "incorrect": "Abram's enemies",
+          "correction": "Abram's family"
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "mediumWordSearch": {
+      "words": [
+        "ABRAM",
+        "SARAI",
+        "CANAAN",
+        "LOT",
+        "ALTAR",
+        "BLESS"
+      ],
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "trueFalseMaze": {
+      "factId": "tf-10",
+      "statement": "God showed Abram a map before he left his home.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "bigIdeaCryptogram": {
+      "phrase": "God speaks and keeps great PROMISES to his people.",
+      "origin": "source",
+      "teacherReviewRequired": false
+    },
+    "upsideDownVerse": {
+      "reference": "Joshua 21:45",
+      "verse": "Not one of all the LORD’s good promises to the house of Israel had failed; everything was fulfilled.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "connectBigIdea": {
+      "phrase": "God speaks and keeps promises to his people",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "pixelPicture": {
+      "phrase": "God promised to bless all nations through Abram.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "finishStory": {
+      "markedParagraph": "Abram and his wife [Sarai] were very old. Their family was small because Sarai unable to have [children]. One day, [God] told Abram to [go] to a land He would show him. God promised to make Abram’s family a great [nation], to [bless] him, and to bless all [nations] through his family. Abram [believed] God and left [Harran] when he was seventy-five. His nephew [Lot] traveled with them. God led them to the land of [Canaan]. God promised to give that good [land] to Abram's family.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "storyOrder": [
+      {
+        "order": 1,
+        "text": "Abram and Sarai were married, but Sarai could not have children.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 2,
+        "text": "God told Abram to leave his country and go to a land He would show him.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 3,
+        "text": "God promised to grow Abram’s family into a great nation.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 4,
+        "text": "God promised to bless Abram and bless all nations through his family.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 5,
+        "text": "Abram left Harran at age seventy-five with Sarai and his nephew Lot.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 6,
+        "text": "God led Abram and his family to Canaan.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 7,
+        "text": "When Abram arrived in Canaan, God promised to give the land to Abram's family.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "sortStory": [
+      {
+        "factId": "tf-01",
+        "statement": "Abram was married to Sarai.",
+        "isTrue": true,
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-03",
+        "statement": "God told Abram to go to a land He would show him.",
+        "isTrue": true,
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-09",
+        "statement": "God told Abram to stay in his home country forever.",
+        "isTrue": false,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-05",
+        "statement": "God promised to bless people who blessed Abram.",
+        "isTrue": true,
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-11",
+        "statement": "God promised Abram that his name would be forgotten.",
+        "isTrue": false,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-13",
+        "statement": "Abram refused to leave when God called him.",
+        "isTrue": false,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "drawStory": [
+      {
+        "prompt": "God told Abram to leave his country and go to a land He would show him.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "God promised to grow Abram’s family into a great nation.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "Abram left Harran at age seventy-five with Sarai and his nephew Lot.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "God led Abram and his family to Canaan.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "God promised the land to Abram’s family, and Abram built an altar to honor Him.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      }
+    ],
+    "wordSearch": {
+      "words": [
+        "ABRAM",
+        "SARAI",
+        "CANAAN",
+        "LOT",
+        "HARRAN",
+        "ALTAR",
+        "NATION",
+        "PROMISE",
+        "BLESS",
+        "JOURNEY",
+        "LAND",
+        "FAMILY"
+      ],
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "verseCryptogram": {
+      "reference": "Joshua 21:45",
+      "verse": "Not one of all the LORD’s good promises to the house of Israel had failed; everything was fulfilled.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "crossword": [
+      {
+        "answer": "ABRAM",
+        "clue": "Man called by God to leave home",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "SARAI",
+        "clue": "Abram’s wife who could not have children",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "CANAAN",
+        "clue": "The land God guided Abram to",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "LOT",
+        "clue": "Nephew who traveled with Abram",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "ALTAR",
+        "clue": "What Abram built to honor God",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "NATION",
+        "clue": "God promised to grow Abram's family into this.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "HARRAN",
+        "clue": "Abram's homeland that he left.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "BLESSING",
+        "clue": "What God promised to give to Abram.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "LAND",
+        "clue": "What God promised to Abram’s family",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      }
+    ],
+    "spiralVerse": {
+      "reference": "Joshua 21:45",
+      "verse": "Not one of all the LORD’s good promises to the house of Israel had failed; everything was fulfilled.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "connectVerse": {
+      "reference": "Joshua 21:45",
+      "verse": "Not one of all the LORD’s good promises to the house of Israel had failed; everything was fulfilled.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    }
+  },
+  "vocabulary": {
+    "related": [
+      "ABRAM",
+      "SARAI",
+      "CANAAN",
+      "LOT",
+      "ALTAR",
+      "BLESSING",
+      "ISRAEL",
+      "PROMISE",
+      "JOURNEY",
+      "FAITH",
+      "NATION",
+      "FAMILY",
+      "GREAT",
+      "HARRAN",
+      "HOME",
+      "LAND"
+    ],
+    "unrelated": [
+      "PHARAOH",
+      "JERICHO",
+      "JONAH",
+      "GOLIATH",
+      "MANNA",
+      "ESTHER",
+      "DAVID",
+      "MOSES",
+      "GIDEON",
+      "DANIEL"
+    ],
+    "entries": [
+      {
+        "id": "v-01",
+        "term": "ABRAM",
+        "category": "story",
+        "scope": "lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-02",
+        "term": "SARAI",
+        "category": "story",
+        "scope": "lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-03",
+        "term": "LOT",
+        "category": "story",
+        "scope": "lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-04",
+        "term": "CANAAN",
+        "category": "story",
+        "scope": "lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-05",
+        "term": "HARRAN",
+        "category": "story",
+        "scope": "lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-06",
+        "term": "NATION",
+        "category": "story",
+        "scope": "lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-07",
+        "term": "BLESS",
+        "category": "story",
+        "scope": "lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-08",
+        "term": "PROMISE",
+        "category": "story",
+        "scope": "lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-09",
+        "term": "ALTAR",
+        "category": "story",
+        "scope": "lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-10",
+        "term": "LAND",
+        "category": "story",
+        "scope": "lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-11",
+        "term": "JOURNEY",
+        "category": "story",
+        "scope": "lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-12",
+        "term": "FAMILY",
+        "category": "story",
+        "scope": "lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-13",
+        "term": "FAITH",
+        "category": "story",
+        "scope": "lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-14",
+        "term": "GOD",
+        "category": "story",
+        "scope": "lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-15",
+        "term": "PEOPLE",
+        "category": "story",
+        "scope": "lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-16",
+        "term": "NAME",
+        "category": "story",
+        "scope": "lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-17",
+        "term": "HOME",
+        "category": "story",
+        "scope": "lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-18",
+        "term": "GREAT",
+        "category": "story",
+        "scope": "lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      }
+    ]
+  },
+  "facts": [
+    {
+      "id": "tf-01",
+      "statement": "Abram was married to Sarai.",
+      "isTrue": true,
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-02",
+      "statement": "Sarai could not have children.",
+      "isTrue": true,
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-03",
+      "statement": "God told Abram to go to a land He would show him.",
+      "isTrue": true,
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-04",
+      "statement": "God promised to make Abram into a great nation.",
+      "isTrue": true,
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-05",
+      "statement": "God promised to bless people who blessed Abram.",
+      "isTrue": true,
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-06",
+      "statement": "Abram left his home at age seventy-five.",
+      "isTrue": true,
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-07",
+      "statement": "Abram traveled with Sarai and his nephew Lot.",
+      "isTrue": true,
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-08",
+      "statement": "God promised Abram the land of Canaan for his family.",
+      "isTrue": true,
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-09",
+      "statement": "God told Abram to stay in his home country forever.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-10",
+      "statement": "God showed Abram a map before he left his home.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-11",
+      "statement": "God promised Abram that his name would be forgotten.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-12",
+      "statement": "God said only Abram would receive His blessing.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-13",
+      "statement": "Abram refused to leave when God called him.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-14",
+      "statement": "Abram built an ark in Canaan to honor God.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "characters": [
+    {
+      "id": "char-abram",
+      "name": "Abram",
+      "clues": [
+        {
+          "text": "God called me to leave my homeland and promised to grow my family into a great nation.",
+          "origin": "adapted",
+          "teacherReviewRequired": true
+        },
+        {
+          "text": "I was seventy-five years old when I left Harran.",
+          "origin": "adapted",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "char-sarai",
+      "name": "Sarai",
+      "clues": [
+        {
+          "text": "I was Abram’s wife, and I could not have children.",
+          "origin": "adapted",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "char-lot",
+      "name": "Lot",
+      "clues": [
+        {
+          "text": "I was Abram’s nephew and traveled to Canaan with him.",
+          "origin": "adapted",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "drawingPrompts": [
+    {
+      "id": "dp-01",
+      "prompt": "Abram listening as God calls him to leave home",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "dp-02",
+      "prompt": "Abram and Sarai packing their belongings for the journey",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "dp-03",
+      "prompt": "Abram walking toward Canaan with Sarai and Lot",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "dp-04",
+      "prompt": "Abram and his family arriving in the land of Canaan",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "dp-05",
+      "prompt": "Abram building a stone altar to honor God",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "dp-06",
+      "prompt": "Abram looking at the land God promised to his family",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    }
+  ],
+  "matchingPairs": [
+    {
+      "id": "mp-01",
+      "left": "Abram",
+      "right": "Called to travel",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "mp-02",
+      "left": "Sarai",
+      "right": "Abram’s wife",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "mp-03",
+      "left": "Lot",
+      "right": "Abram’s nephew",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "mp-04",
+      "left": "Canaan",
+      "right": "Promised land",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "mp-05",
+      "left": "Altar",
+      "right": "Worshiped God",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "mp-06",
+      "left": "Harran",
+      "right": "Place Abram left",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    }
+  ],
+  "keyPhrases": [
+    {
+      "id": "kp-01",
+      "text": "God speaks and keeps great PROMISES to his people.",
+      "origin": "source",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "kp-02",
+      "text": "JESUS was Abram’s many-times-great grandson, sent to bless all the nations.",
+      "origin": "source",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "kp-03",
+      "text": "God keeps his promises.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "kp-04",
+      "text": "God speaks and keeps promises to his people",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "kp-05",
+      "text": "God promised to bless all nations through Abram.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    }
+  ],
+  "publication": {
+    "status": "approved",
+    "approved": true,
+    "teacherSignoff": {
+      "reviewer": "Andrew Doane",
+      "date": "2026-11-07",
+      "notes": "Approved with verified BSB verse through Curriculum Review Studio"
+    },
+    "scriptureRights": {
+      "status": "cleared",
+      "basis": "Berean Standard Bible (BSB), dedicated to the public domain on April 30, 2023. Official terms: https://berean.bible/terms.htm. Scripture text confirmed against https://bereanbible.com/bsb.txt.",
+      "reviewedBy": "Andrew Doane",
+      "reviewedOn": "2026-11-07"
+    },
+    "resolvedReviewFlagIds": [],
+    "notes": "Approved through Review Studio after teacher review and a successful 27/27 content/preflight check of four numbered presets. Original conversion notes and checks remain as historical records.",
+    "reviewStudioVerification": {
+      "source": "Review Studio measured preflight",
+      "checkedAt": "2026-11-07T20:13:11.606Z",
+      "convertedCount": 27,
+      "totalCount": 27,
+      "issueCount": 0,
+      "numberedPresetsChecked": 4,
+      "scope": "Candidate-specific content conversion, four numbered preset content checks, and measured Connect the Verse fit. Standalone repository commands and independently rendered PDFs are not claimed.",
+      "matchingWorksheetSource": "preparedActivities.matchWords",
+      "matchingCandidatePool": "matchingPairs is retained separately as historical/source candidate material"
+    },
+    "reviewFlagDisposition": []
+  },
+  "schemaStatus": "approved; Review Studio 27/27 preflight passed"
+}
