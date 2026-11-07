@@ -1,0 +1,1169 @@
+{
+  "schemaVersion": 1,
+  "id": "ot-011-sodom-and-gomorrah",
+  "curriculum": {
+    "series": "Old Testament",
+    "lessonNumber": 11
+  },
+  "lessonDetails": {
+    "title": "Sodom and Gomorrah",
+    "scripturePassages": [
+      "Genesis 18",
+      "Genesis 19",
+      "Romans 15:4",
+      "Romans 6:23"
+    ],
+    "scriptureDisplay": "Genesis 18–19",
+    "bigIdeas": [
+      {
+        "text": "God hates sin.",
+        "origin": "source"
+      },
+      {
+        "text": "god saves sinners.",
+        "origin": "source"
+      }
+    ],
+    "memoryVerse": {
+      "reference": "Romans 6:23",
+      "translation": "BSB",
+      "text": "For the wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord.",
+      "isExcerpt": false,
+      "hasEllipses": false,
+      "requiresTextReview": false,
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "alsoVerifiedAt": {
+        "filename": "OT 11 Lesson (Sodom and Gomorrah).odt",
+        "section": "VERSE AND MOTIONS",
+        "page": 8,
+        "sourceParagraphIndex": 231
+      },
+      "originalTranslation": "ESV",
+      "bsbSource": {
+        "reference": "Romans 6:23",
+        "sourceUrl": "https://bereanbible.com/bsb.txt",
+        "publicDomainTerms": "https://berean.bible/terms.htm",
+        "startWord": 0,
+        "endWord": 19
+      }
+    }
+  },
+  "preparedActivities": {
+    "drawPicture": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "prompt": "Fireballs raining down on the city of Sodom"
+    },
+    "multipleChoice": [
+      {
+        "origin": "adapted",
+        "teacherReviewRequired": true,
+        "id": "mc-01",
+        "question": "Why did Abraham ask God to save the city of Sodom?",
+        "correctAnswer": "His nephew Lot lived there.",
+        "choices": [
+          {
+            "text": "His nephew Lot lived there.",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "His mother lived there.",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "He lived there.",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          }
+        ]
+      },
+      {
+        "origin": "adapted",
+        "teacherReviewRequired": true,
+        "id": "mc-02",
+        "question": "In the end, God agreed to not destroy Sodom if he found...",
+        "correctAnswer": "Ten godly people",
+        "choices": [
+          {
+            "text": "Ten godly people",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "One godly person",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "One hundred godly people",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          }
+        ]
+      },
+      {
+        "origin": "adapted",
+        "teacherReviewRequired": true,
+        "id": "mc-03",
+        "question": "What did the angels do when men surrounded Lot's house?",
+        "correctAnswer": "Made the men blind",
+        "choices": [
+          {
+            "text": "Made the men blind",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Called fire from heaven",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "Let them inside",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          }
+        ]
+      },
+      {
+        "origin": "adapted",
+        "teacherReviewRequired": true,
+        "id": "mc-04",
+        "question": "How did Lot's sons-in-law respond to the angel's warning?",
+        "correctAnswer": "They thought he was joking.",
+        "choices": [
+          {
+            "text": "They thought he was joking.",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "They left the city at once.",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "They were angry.",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          }
+        ]
+      },
+      {
+        "origin": "adapted",
+        "teacherReviewRequired": true,
+        "id": "mc-05",
+        "question": "What did the angels do when Lot wouldn't leave?",
+        "correctAnswer": "Led his family out by hand.",
+        "choices": [
+          {
+            "text": "Led his family out by hand.",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Told him to hide indoors.",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "They left him behind.",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          }
+        ]
+      },
+      {
+        "origin": "adapted",
+        "teacherReviewRequired": true,
+        "id": "mc-06",
+        "question": "What happened when Lot's wife looked back?",
+        "correctAnswer": "She became a pillar of salt.",
+        "choices": [
+          {
+            "text": "She became a pillar of salt.",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "She was struck blind.",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "She turned into dust.",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          }
+        ]
+      }
+    ],
+    "trueFalse": {
+      "factId": "tf-06",
+      "statement": "The angels took Lot's family by the hand and led them out.",
+      "isTrue": true,
+      "origin": "adapted",
+      "teacherReviewRequired": false
+    },
+    "firstLetters": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Romans 6:23",
+      "verse": "For the wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord."
+    },
+    "oddWords": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "related": [
+        "ABRAHAM",
+        "SODOM",
+        "LOT",
+        "ANGELS",
+        "SULFUR"
+      ],
+      "unrelated": [
+        "star",
+        "heart",
+        "nails",
+        "jar",
+        "cup"
+      ],
+      "unrelatedOrigin": "suggested"
+    },
+    "unscrambleWords": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "answers": [
+        "SODOM",
+        "ANGELS"
+      ]
+    },
+    "checkboxes": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "correct": [
+        "ABRAHAM",
+        "SALT",
+        "BLIND",
+        "MERCY"
+      ],
+      "incorrect": [
+        "pool",
+        "olive",
+        "mat",
+        "son",
+        "staff"
+      ],
+      "incorrectOrigin": "suggested"
+    },
+    "whoAmI": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "clue": "I lived in the city of Sodom. Two angels grabbed my family by the hand and led us out before the city was destroyed.",
+      "answer": "Lot"
+    },
+    "matchWords": [
+      {
+        "origin": "adapted",
+        "teacherReviewRequired": true,
+        "id": "mp-01",
+        "left": "Abraham",
+        "right": "Lot's uncle"
+      },
+      {
+        "origin": "adapted",
+        "teacherReviewRequired": true,
+        "id": "mp-02",
+        "left": "Lot",
+        "right": "Lived in Sodom"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mp-03",
+        "left": "Angels",
+        "right": "Made men blind"
+      },
+      {
+        "origin": "adapted",
+        "teacherReviewRequired": true,
+        "id": "mp-04",
+        "left": "Men of Sodom",
+        "right": "Made blind"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mp-05",
+        "left": "Burning",
+        "right": "Sulfur"
+      },
+      {
+        "origin": "adapted",
+        "teacherReviewRequired": true,
+        "id": "mp-06",
+        "left": "Lot's wife",
+        "right": "Pillar of salt"
+      }
+    ],
+    "finishVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Romans 6:23",
+      "sourceVerse": "For the wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord.",
+      "markedVerse": "For the [wages] of [sin] is [death], but the [gift] of God is [eternal] life in Christ [Jesus] our Lord."
+    },
+    "unscrambleVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Romans 6:23",
+      "sourceVerse": "For the wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord.",
+      "markedVerse": "For the [wages] of [sin] is [death], but the [gift] of God is [eternal] life in Christ [Jesus] our Lord."
+    },
+    "circleMistakes": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "paragraph": "God told Abraham he would reward Sodom and Gomorrah. Abraham asked God to spare Sodom if he found 200 godly people. Lot welcomed two soldiers into his house. The men of Sodom tried to hurt the visitors, but they were made deaf. Because Lot didn't leave right away, the angels left him behind. God sent snow down on the two cities. Lot's wife looked back and became a pillar of salt.",
+      "mistakeCount": 6,
+      "mistakes": [
+        {
+          "incorrect": "reward",
+          "correction": "destroy"
+        },
+        {
+          "incorrect": "200",
+          "correction": "ten"
+        },
+        {
+          "incorrect": "soldiers",
+          "correction": "angels"
+        },
+        {
+          "incorrect": "deaf",
+          "correction": "blind"
+        },
+        {
+          "incorrect": "left him behind",
+          "correction": "led him away by the hand"
+        },
+        {
+          "incorrect": "snow",
+          "correction": "burning sulfur"
+        }
+      ]
+    },
+    "mediumWordSearch": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "words": [
+        "LOT",
+        "SODOM",
+        "ANGELS",
+        "SULFUR",
+        "SALT",
+        "ABRAHAM"
+      ]
+    },
+    "trueFalseMaze": {
+      "factId": "tf-13",
+      "statement": "The angels told Lot's family to stop in the valley.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "bigIdeaCryptogram": {
+      "phrase": "God hates sin, but he also saves sinners.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "upsideDownVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Romans 6:23",
+      "verse": "For the wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord."
+    },
+    "connectBigIdea": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "phrase": "God hates sin, but He saves sinners."
+    },
+    "pixelPicture": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "phrase": "God hates sin, but he also saves sinners."
+    },
+    "finishStory": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "markedParagraph": "God told [Abraham] that the sin of [Sodom] and Gomorrah was very great. Abraham asked God to spare Sodom if there were [fifty] godly people, then continued asking until God agreed to spare it for [ten] people. Abraham's nephew [Lot] lived there. Two [angels] stayed in Lot's house, but the men of Sodom tried to hurt them. The angels made the men [blind]. They warned Lot's family to [leave]. When Lot didn't leave right away, the angels [dragged] them to safety. God sent burning [sulfur] from the sky, destroying the cities. Lot's wife looked [back] and became a pillar of [salt]."
+    },
+    "storyOrder": [
+      {
+        "origin": "adapted",
+        "teacherReviewRequired": true,
+        "order": 1,
+        "text": "God told Abraham he planned to destroy Sodom and Gomorrah."
+      },
+      {
+        "origin": "adapted",
+        "teacherReviewRequired": true,
+        "order": 2,
+        "text": "God promised to spare Sodom if fifty godly people were there."
+      },
+      {
+        "origin": "adapted",
+        "teacherReviewRequired": true,
+        "order": 3,
+        "text": "Abraham asked God to lower the number to ten because Lot lived in Sodom."
+      },
+      {
+        "origin": "adapted",
+        "teacherReviewRequired": true,
+        "order": 4,
+        "text": "The men of Sodom surrounded Lot’s house, and the angels made them blind."
+      },
+      {
+        "origin": "adapted",
+        "teacherReviewRequired": true,
+        "order": 5,
+        "text": "The angels took Lot and his family by the hand and led them out of the city."
+      },
+      {
+        "origin": "adapted",
+        "teacherReviewRequired": true,
+        "order": 6,
+        "text": "God sent burning sulfur down on Sodom and Gomorrah."
+      },
+      {
+        "origin": "adapted",
+        "teacherReviewRequired": true,
+        "order": 7,
+        "text": "Lot’s wife looked back and became a pillar of salt."
+      }
+    ],
+    "sortStory": [
+      {
+        "factId": "tf-01",
+        "statement": "God told Abraham he would destroy Sodom and Gomorrah.",
+        "isTrue": true,
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "factId": "tf-03",
+        "statement": "Abraham's nephew Lot lived in Sodom.",
+        "isTrue": true,
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "factId": "tf-05",
+        "statement": "Lot's sons-in-law thought his warning was a joke.",
+        "isTrue": true,
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "factId": "tf-09",
+        "statement": "Abraham wanted the city destroyed before Lot could escape.",
+        "isTrue": false,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-11",
+        "statement": "The men of Sodom welcomed Lot's visitors peacefully.",
+        "isTrue": false,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-14",
+        "statement": "A flood of water destroyed Sodom and Gomorrah.",
+        "isTrue": false,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "drawStory": [
+      {
+        "origin": "adapted",
+        "teacherReviewRequired": true,
+        "prompt": "God told Abraham he planned to destroy Sodom and Gomorrah."
+      },
+      {
+        "origin": "adapted",
+        "teacherReviewRequired": true,
+        "prompt": "Abraham asked God to lower the number to ten because Lot lived in Sodom."
+      },
+      {
+        "origin": "adapted",
+        "teacherReviewRequired": true,
+        "prompt": "The men of Sodom surrounded Lot’s house, and the angels made them blind."
+      },
+      {
+        "origin": "adapted",
+        "teacherReviewRequired": true,
+        "prompt": "The angels took Lot and his family by the hand and led them out of the city."
+      },
+      {
+        "origin": "adapted",
+        "teacherReviewRequired": true,
+        "prompt": "God sent burning sulfur down on Sodom and Gomorrah."
+      },
+      {
+        "origin": "adapted",
+        "teacherReviewRequired": true,
+        "prompt": "Lot’s wife looked back and became a pillar of salt."
+      }
+    ],
+    "wordSearch": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "words": [
+        "SODOM",
+        "GOMORRAH",
+        "ABRAHAM",
+        "LOT",
+        "ANGELS",
+        "BLIND",
+        "DRAGGED",
+        "SULFUR",
+        "FIERY",
+        "SALT",
+        "SINNERS",
+        "MERCY"
+      ]
+    },
+    "verseCryptogram": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Romans 6:23",
+      "verse": "For the wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord."
+    },
+    "crossword": [
+      {
+        "origin": "adapted",
+        "teacherReviewRequired": true,
+        "answer": "SODOM",
+        "clue": "The city where Abraham’s nephew lived."
+      },
+      {
+        "origin": "adapted",
+        "teacherReviewRequired": true,
+        "answer": "GOMORRAH",
+        "clue": "The other city destroyed by burning sulfur."
+      },
+      {
+        "origin": "adapted",
+        "teacherReviewRequired": true,
+        "answer": "ABRAHAM",
+        "clue": "The man who asked God to spare the city."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "LOT",
+        "clue": "The nephew rescued from Sodom."
+      },
+      {
+        "origin": "adapted",
+        "teacherReviewRequired": true,
+        "answer": "ANGELS",
+        "clue": "God sent two of these to help Lot escape."
+      },
+      {
+        "origin": "adapted",
+        "teacherReviewRequired": true,
+        "answer": "SULFUR",
+        "clue": "The burning substance that fell on the cities."
+      },
+      {
+        "origin": "adapted",
+        "teacherReviewRequired": true,
+        "answer": "SALT",
+        "clue": "What Lot's wife became a pillar of."
+      },
+      {
+        "origin": "adapted",
+        "teacherReviewRequired": true,
+        "answer": "BLIND",
+        "clue": "What happened to the men outside Lot’s house."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "Escape",
+        "clue": "What the angels came to help Lot's family do"
+      }
+    ],
+    "spiralVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Romans 6:23",
+      "verse": "For the wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord."
+    },
+    "connectVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Romans 6:23",
+      "verse": "For the wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord."
+    }
+  },
+  "vocabulary": {
+    "related": [
+      "ABRAHAM",
+      "SODOM",
+      "GOMORRAH",
+      "LOT",
+      "ANGELS",
+      "BLIND",
+      "DRAGGED",
+      "FIERY",
+      "SULFUR",
+      "SALT",
+      "MERCY",
+      "SINNERS",
+      "DESTROY",
+      "PRAY",
+      "SIN",
+      "GODLY",
+      "NEPHEW",
+      "FAMILY",
+      "CITY",
+      "ESCAPE",
+      "FIRE",
+      "JUDGMENT",
+      "HOUSE",
+      "MOUNTAINS",
+      "WARNING",
+      "RESCUE",
+      "THIRTY",
+      "FIFTY",
+      "TEN",
+      "PILLAR"
+    ],
+    "unrelated": [
+      "JERICHO",
+      "GOLIATH",
+      "JONAH",
+      "MANNA",
+      "PHARAOH",
+      "SAMSON",
+      "DANIEL",
+      "BETHLEHEM"
+    ],
+    "entries": [
+      {
+        "id": "v-01",
+        "term": "ABRAHAM",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-02",
+        "term": "SODOM",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-03",
+        "term": "GOMORRAH",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-04",
+        "term": "LOT",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-05",
+        "term": "ANGELS",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-06",
+        "term": "BLIND",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-07",
+        "term": "DRAGGED",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-08",
+        "term": "FIERY",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-09",
+        "term": "SULFUR",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-10",
+        "term": "SALT",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-11",
+        "term": "MERCY",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-12",
+        "term": "SINNERS",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-13",
+        "term": "DESTROY",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-14",
+        "term": "PRAY",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-15",
+        "term": "SIN",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-16",
+        "term": "GODLY",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-17",
+        "term": "NEPHEW",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-18",
+        "term": "FAMILY",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-19",
+        "term": "CITY",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-20",
+        "term": "ESCAPE",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-21",
+        "term": "FIRE",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-22",
+        "term": "JUDGMENT",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-23",
+        "term": "HOUSE",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-24",
+        "term": "MOUNTAINS",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-25",
+        "term": "WARNING",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-26",
+        "term": "RESCUE",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-27",
+        "term": "THIRTY",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-28",
+        "term": "FIFTY",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-29",
+        "term": "TEN",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      },
+      {
+        "id": "v-30",
+        "term": "PILLAR",
+        "origin": "adapted",
+        "teacherReviewRequired": false
+      }
+    ]
+  },
+  "facts": [
+    {
+      "id": "tf-01",
+      "statement": "God told Abraham he would destroy Sodom and Gomorrah.",
+      "isTrue": true,
+      "origin": "adapted",
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-02",
+      "statement": "God agreed to spare Sodom if 50 godly people lived there.",
+      "isTrue": true,
+      "origin": "adapted",
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-03",
+      "statement": "Abraham's nephew Lot lived in Sodom.",
+      "isTrue": true,
+      "origin": "adapted",
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-04",
+      "statement": "The angels made the men around Lot's house blind.",
+      "isTrue": true,
+      "origin": "adapted",
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-05",
+      "statement": "Lot's sons-in-law thought his warning was a joke.",
+      "isTrue": true,
+      "origin": "adapted",
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-06",
+      "statement": "The angels took Lot's family by the hand and led them out.",
+      "isTrue": true,
+      "origin": "adapted",
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-07",
+      "statement": "God sent burning sulfur onto Sodom and Gomorrah.",
+      "isTrue": true,
+      "origin": "adapted",
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-08",
+      "statement": "Lot's wife looked back and became a pillar of salt.",
+      "isTrue": true,
+      "origin": "adapted",
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-09",
+      "statement": "Abraham wanted the city destroyed before Lot could escape.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-10",
+      "statement": "God promised to spare Sodom if he found only five godly people.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-11",
+      "statement": "The men of Sodom welcomed Lot's visitors peacefully.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-12",
+      "statement": "Lot's sons-in-law left Sodom immediately after the angel's warning.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-13",
+      "statement": "The angels told Lot's family to stop in the valley.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-14",
+      "statement": "A flood of water destroyed Sodom and Gomorrah.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "characters": [
+    {
+      "id": "ch-01",
+      "name": "Abraham",
+      "origin": "adapted",
+      "teacherReviewRequired": false,
+      "clues": [
+        {
+          "text": "I asked God to spare Sodom because my nephew Lot lived there.",
+          "origin": "adapted",
+          "teacherReviewRequired": false
+        }
+      ]
+    },
+    {
+      "id": "ch-02",
+      "name": "Lot",
+      "origin": "adapted",
+      "teacherReviewRequired": false,
+      "clues": [
+        {
+          "text": "Two angels grabbed my family by the hand and led us out of Sodom.",
+          "origin": "adapted",
+          "teacherReviewRequired": false
+        }
+      ]
+    },
+    {
+      "id": "ch-03",
+      "name": "Lot's wife",
+      "origin": "adapted",
+      "teacherReviewRequired": false,
+      "clues": [
+        {
+          "text": "I looked back after the angels told us not to do so.",
+          "origin": "adapted",
+          "teacherReviewRequired": false
+        }
+      ]
+    },
+    {
+      "id": "ch-04",
+      "name": "Two angels",
+      "origin": "adapted",
+      "teacherReviewRequired": false,
+      "clues": [
+        {
+          "text": "We made the men outside the house blind and led a family out of Sodom.",
+          "origin": "adapted",
+          "teacherReviewRequired": false
+        }
+      ]
+    },
+    {
+      "id": "ch-05",
+      "name": "God",
+      "origin": "adapted",
+      "teacherReviewRequired": false,
+      "clues": [
+        {
+          "text": "I told Abraham about the wicked cities and later sent burning sulfur.",
+          "origin": "adapted",
+          "teacherReviewRequired": false
+        }
+      ]
+    }
+  ],
+  "drawingPrompts": [
+    {
+      "id": "dp-01",
+      "prompt": "Abraham speaking with God about Sodom",
+      "origin": "adapted",
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "dp-02",
+      "prompt": "Abraham asking God to spare Sodom for ten godly people",
+      "origin": "adapted",
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "dp-03",
+      "prompt": "Lot welcoming two angels into his house",
+      "origin": "adapted",
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "dp-04",
+      "prompt": "Two angels making the angry men outside the house blind",
+      "origin": "adapted",
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "dp-05",
+      "prompt": "Two angels leading Lot and his family out of Sodom",
+      "origin": "adapted",
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "dp-06",
+      "prompt": "Burning sulfur falling on Sodom and Gomorrah",
+      "origin": "adapted",
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "dp-07",
+      "prompt": "Lot's wife becoming a pillar of salt",
+      "origin": "adapted",
+      "teacherReviewRequired": false
+    }
+  ],
+  "matchingPairs": [
+    {
+      "id": "mp-01",
+      "left": "Abraham",
+      "right": "Lot's uncle",
+      "origin": "adapted",
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "mp-02",
+      "left": "Lot",
+      "right": "Lived in Sodom",
+      "origin": "adapted",
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "mp-03",
+      "left": "Angels",
+      "right": "Led Lot out",
+      "origin": "adapted",
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "mp-04",
+      "left": "Men of Sodom",
+      "right": "Made blind",
+      "origin": "adapted",
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "mp-05",
+      "left": "God",
+      "right": "Sent sulfur",
+      "origin": "adapted",
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "mp-06",
+      "left": "Lot's wife",
+      "right": "Pillar of salt",
+      "origin": "adapted",
+      "teacherReviewRequired": false
+    }
+  ],
+  "keyPhrases": [
+    {
+      "id": "kp-01",
+      "text": "God hates sin.",
+      "origin": "source"
+    },
+    {
+      "id": "kp-02",
+      "text": "god saves sinners.",
+      "origin": "source"
+    },
+    {
+      "id": "kp-03",
+      "text": "God hates sin, but God saves sinners.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "kp-review-1",
+      "text": "God hates sin, but he also saves sinners.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "kp-review-2",
+      "text": "God hates sin, but He saves sinners.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "publication": {
+    "status": "approved",
+    "approved": true,
+    "teacherSignoff": {
+      "reviewer": "Andrew Doane",
+      "date": "2026-11-07",
+      "notes": "Approved with verified BSB verse through Curriculum Review Studio"
+    },
+    "scriptureRights": {
+      "status": "cleared",
+      "basis": "Berean Standard Bible (BSB), dedicated to the public domain on April 30, 2023. Official terms: https://berean.bible/terms.htm. Scripture text confirmed against https://bereanbible.com/bsb.txt.",
+      "reviewedBy": "Andrew Doane",
+      "reviewedOn": "2026-11-07"
+    },
+    "resolvedReviewFlagIds": [],
+    "notes": "Approved through Review Studio after teacher review and a successful 27/27 content/preflight check of four numbered presets. Original conversion notes and checks remain as historical records.",
+    "reviewStudioVerification": {
+      "source": "Review Studio measured preflight",
+      "checkedAt": "2026-11-07T16:41:48.817Z",
+      "convertedCount": 27,
+      "totalCount": 27,
+      "issueCount": 0,
+      "numberedPresetsChecked": 4,
+      "scope": "Candidate-specific content conversion, four numbered preset content checks, and measured Connect the Verse fit. Standalone repository commands and independently rendered PDFs are not claimed.",
+      "matchingWorksheetSource": "preparedActivities.matchWords",
+      "matchingCandidatePool": "matchingPairs is retained separately as historical/source candidate material"
+    },
+    "reviewFlagDisposition": []
+  },
+  "schemaStatus": "approved; Review Studio 27/27 preflight passed"
+}
