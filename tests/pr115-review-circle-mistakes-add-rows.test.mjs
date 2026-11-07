@@ -82,7 +82,8 @@ test('Circle the Mistakes page exposes Add and Remove while invalidating its rev
  assert.match(section,/mistakes\.length>=MAX_CIRCLE_MISTAKES/u);
  assert.match(section,/mistakes\.length<=1/u);
  assert.match(section,/window\.confirm\('Remove mistake '/u);
- assert.match(section,/incorrect.*correction/iu);
+ assert.match(section,/Incorrect phrase/u);
+ assert.match(section,/Correction/u);
  assert.match(app,/function editCircleMistakes\(action:\(\)=>Lesson\)\{\s*try\{applyVisualReview\(action\(\)\);\}/u);
  assert.match(app,/function applyVisualReview\(next:Lesson\)\{\s*setLesson\(next\);setPreflight\(null\);\s*setReviewed\(previous=>previous\.filter\(id=>id!==active\?\.id\)\)/u);
 });
