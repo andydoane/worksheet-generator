@@ -561,7 +561,9 @@ Choose **4–8** bracketed words, each **≤9 letters** (legal adjacent punctuat
 
 #### 12. `circle-mistakes` — Medium Circle the Mistakes (`preparedActivities.circleMistakes`)
 
-A short narrative paragraph **1–475 characters** with **1–8 deliberate errors**. Set `mistakeCount` equal to `mistakes.length`; every `mistakes[].incorrect` must appear in the paragraph (the editor checks case-insensitively). Provide a truthful `correction` for each. Make mistakes clear and separable to children.
+A short narrative paragraph **1–475 characters** with **1–8 deliberate errors**. Set `mistakeCount` equal to `mistakes.length`; every `mistakes[].incorrect` must appear **exactly** in the paragraph (including case, as checked by the actual converter), and incorrect phrases must be distinct even ignoring case. Provide a truthful `correction` for each. Make mistakes clear and separable to children.
+
+**Review Studio editing:** Click **+ Add mistake** to create a new blank incorrect-phrase/correction pair and automatically increase `mistakeCount`. Enter its deliberately incorrect wording in the paragraph, then fill both fields. A blank added pair intentionally fails preflight until completed. You can remove a mistake after confirming; the count updates automatically. Adding is disabled once there are eight mistakes, and changes require renewed teacher review. Existing mistakes and original-source notes are preserved.
 
 **Wrong:** listing corrections for phrases absent from the paragraph, marking a true Scripture statement as false, or adding accidental extra errors not in the correction list. Preserve the original Story Notes unmodified; the incorrect paragraph is an editorial activity.
 
