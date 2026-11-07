@@ -18,8 +18,12 @@ export function listReviewTasks(lesson:Lesson):ReviewTask[]{
  });
  for(const fact of lesson.facts??[]){
   if(fact.origin==='suggested'||fact.teacherReviewRequired||!trim(fact.statement))tasks.push({
-   id:'fact:'+fact.id,group:'False facts and sorting',label:fact.id,
-   detail:'Ensure the deliberately false statement is clear, not misleading.',
+   id:'fact:'+fact.id,group:'True/False statements',label:fact.id,
+   detail:fact.isTrue===true
+    ?'Confirm this true statement is accurate and clear.'
+    :fact.isTrue===false
+     ?'Ensure this intentionally false statement is unambiguously false.'
+     :'Confirm the statement and its truth value.',
   });
  }
  if((p.drawStory?.length??0)>0||(lesson.drawingPrompts?.length??0)>0)

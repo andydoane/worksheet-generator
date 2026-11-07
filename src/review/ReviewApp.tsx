@@ -571,8 +571,9 @@ export default function ReviewApp(){
       {factIndex>=0&&(()=>{
        const f=lesson.facts[factIndex];
        return <div className="review-fields">
-        <p className="review-warning">Intentionally FALSE. Edits are synchronized to Sort the Story and linked True/False activities.</p>
-        <label>{f.isTrue?'Statement':'False statement'}<textarea id={'review-fact-'+f.id} value={f.statement} onChange={e=>change(['facts',factIndex,'statement'],e.target.value)}/></label>
+        {f.isTrue===false&&<p className="review-warning">Intentionally FALSE.</p>}
+        <p className="review-source">Edits are synchronized to Sort the Story and linked True/False activities.</p>
+        <label>{f.isTrue===true?'True statement':f.isTrue===false?'False statement':'Statement (truth value missing)'}<textarea id={'review-fact-'+f.id} value={f.statement} onChange={e=>change(['facts',factIndex,'statement'],e.target.value)}/></label>
         <SourceContext lesson={lesson} ids={f.sourceIds??[]}/>
        </div>;
       })()}

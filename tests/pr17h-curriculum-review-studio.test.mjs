@@ -26,7 +26,7 @@ test('BSB parser keeps authoritative verse boundaries, punctuation, and partial/
 test('Review tasks focus on generated and adapted content instead of reapproving source notes',()=>{
  const tasks=listReviewTasks(original);
  assert.equal(tasks.filter(x=>x.group==='Multiple Choice').length,8);
- assert.equal(tasks.filter(x=>x.group==='False facts and sorting').length,11);
+ assert.equal(tasks.filter(x=>x.group==='True/False statements').length,11);
  for(const id of ['drawing-captions','finish-story','circle-mistakes','bsb-verse','sensitivity','important-idea','checkboxes','odd-words'])
   assert.ok(tasks.some(x=>x.id===id),id);
  assert.equal(tasks.some(x=>x.id==='sn-01'),false);

@@ -63,5 +63,6 @@ test('Conversion documentation distinguishes nonbinding targets from original so
  assert.match(readme,/editorial defaults, not schema minima or hard maxima/u);
  assert.match(readme,/Preserve \*\*all original source questions and their answers/u);
  const pkg=JSON.parse(await read('package.json'));
- assert.equal(pkg.version,'0.16.63');
+ assert.ok(pkg.version.localeCompare('0.16.63',undefined,{numeric:true})>=0,
+  'Keep PR #111 or newer application version');
 });
