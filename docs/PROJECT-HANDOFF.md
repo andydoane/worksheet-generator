@@ -2,7 +2,7 @@
 
 > **Snapshot, not source of truth.** This document is a starting point for future ChatGPT conversations and contributors, **not** a replacement for the current GitHub repository, tests, CI results, or the owner's newest instructions. The project changes frequently. Verify `main`, open issues/PRs, and recent Actions runs before making recommendations, editing code, or declaring work complete. Do not assume a roadmap item is still open because it appears below.
 
-**Last checked against `main`:** 2026-11-07 (`main` version `0.16.62` after merged PR #110; this PR proposes `0.16.63`)  
+**Last checked against `main`:** 2026-11-07 (`main` version `0.16.63` after merged PR #111; documentation-only PR #112 keeps `0.16.63`)  
 **Package version represented by this change:** `0.16.63`  
 **Repository:** https://github.com/andydoane/worksheet-generator  
 **Worksheet Studio:** https://andydoane.github.io/worksheet-generator/  
@@ -61,7 +61,7 @@ The full `npm test` script also validates curriculum and the approved library; r
 
 ## 4. Curriculum preparation, approval, and publishing
 
-1. Use the actual source lesson documents and the [authoritative curriculum conversion guide](CURRICULUM-CONVERSION-GUIDE.md). That guide, the **current** schema, and validators—not this handoff—define exact JSON fields, module IDs, and per-activity limits. Keep source wording, citation locations, adaptations, suggestions, and review flags distinct.
+1. Use the actual lesson documents and the [content-first curriculum conversion guide](CURRICULUM-CONVERSION-GUIDE.md), with the **current** schema and validators as the technical authorities. Prepare accurate printable content, usable alternative pools and answer keys; original Story Notes, questions, document citations, source IDs and historical readiness metadata are **optional** for new JSON. Do not fabricate sources, facts or teacher review.
 2. Import unapproved JSON (or a saved review session) into [Review Studio](https://andydoane.github.io/worksheet-generator/review.html). Inspect activities and original source content, use visual repair editors, select a verified BSB verse, review marked items, and run preflight. Preflight checks the **same structural lesson schema as CI**, activity conversion/validators, and the four numbered presets. A `27/27` count alone is not publication approval.
 3. Complete separate **teacher signoff** and **Scripture-rights acknowledgement** with real, independently verified evidence. The final approved JSON is revalidated *after* inserting signoff fields. Download the approved `<lesson-id>.lesson.json`; do not manually flip approval flags.
 4. **For ordinary teacher-approved curriculum files, the owner prefers the simple direct-to-`main` GitHub upload:** `curriculum/approved/` → **Add file → Upload files → Commit directly to main**, then check Actions. A data-only PR is an optional safer alternative, **not a prerequisite**. This preference is intentionally different from app code changes.
@@ -95,6 +95,7 @@ For a proposed change, explain it plainly, inspect the current implementation, i
 | [#102](https://github.com/andydoane/worksheet-generator/pull/102) | Measured Large Connect the Verse word boxes replace the 12-letter cap; OT19 “understanding” now passes when the printed layout fits, with preview/PDF regression coverage |
 | [#103](https://github.com/andydoane/worksheet-generator/pull/103) | Who Am I suppresses a redundant standalone final question only in the measured SVG/PDF display; original teacher and curriculum wording remain untouched |
 | [#104](https://github.com/andydoane/worksheet-generator/pull/104) | Accessible collapsible desktop sidebar with Home, remembered preference, and mobile-preserving navigation |
+| [#111](https://github.com/andydoane/worksheet-generator/pull/111) | Content-First Review Studio: printable activity pools, correct answers and four presets gate approval; original source archives/IDs and converter logs are optional; old approved lessons remain compatible |
 
 The living handoff was introduced in [PR #101](https://github.com/andydoane/worksheet-generator/pull/101); its README link, PR checklist and freshness tests make this guide easier to discover and maintain.
 
@@ -102,7 +103,7 @@ Do not infer current merge status from this table; verify in GitHub. If a future
 
 ## 7. Current work and upcoming plans
 
-**Status last checked:** 2026-11-07, against `main` after merged PR #110. Content-First Review Studio changes lesson approval to validate only printable content, answer correctness, four presets, BSB rights and teacher signoff. Legacy source-rich approved lessons remain readable. Refresh GitHub before acting.
+**Status last checked:** 2026-11-07, against `main` after **merged PR #111** (version `0.16.63`). Content-First Review Studio checks printable content, correct answers, all four numbered presets, BSB rights and teacher signoff without requiring original-source metadata. Legacy source-rich approved lessons remain readable. Refresh GitHub before acting.
 
 | Status at last check | Item | Next action or caveat |
 | --- | --- | --- |
@@ -119,7 +120,8 @@ Do not infer current merge status from this table; verify in GitHub. If a future
 | **Merged** | [#109 — evidence-based curriculum preparation quantities](https://github.com/andydoane/worksheet-generator/pull/109) | Baseline: 15 older approved lessons, typically 14 facts (7–8 TRUE, 6–7 FALSE) and six prepared Multiple Choice candidates. These are flexible quality targets; retain all original source questions and explain lesson-specific count deviations. No approved lesson data changed. |
 | **Merged** | [#110 — Preset 4 Crossword, word, drawing and verse booklet](https://github.com/andydoane/worksheet-generator/pull/110) | Add four-page recipe with every slot filled; preserve existing Presets 1–3; update saved draft types, preset switching, preflight and approved-export record to four checks; safeguard Word Search vs Odd Words candidate uniqueness; allow historical approved exports recording three presets; add integration/print tests. No approved lesson data rewritten. |
 
-| **Open, unmerged PR** | [#111 — Content-First Review Studio](https://github.com/andydoane/worksheet-generator/pull/111) | Source filenames, citations, Story Notes, original questions, old conversion validation and readiness cease to be approval blockers. Compact approved exports retain printable content pools, facts/answer keys, selected BSB, teacher signoff and real four-preset evidence. Legacy source-rich approved data remains readable and unmodified. |
+| **Merged** | [#111 — Content-First Review Studio](https://github.com/andydoane/worksheet-generator/pull/111) | Original source IDs, page citations, Story Notes, original questions and old converter readiness logs are no longer approval blockers. Compact approved exports keep printable pools, answer keys, selected BSB, teacher signoff and four-preset evidence; legacy approved data stays readable. |
+| **Open draft PR; documentation only** | [#112 — content-first conversion guide cleanup](https://github.com/andydoane/worksheet-generator/pull/112) | Remove contradictory source-preservation requirements from the conversion manual, prioritize the compact starter, refresh the copy-ready instruction; no code, schema, approved curriculum or package-version changes. Await final CI and owner review. |
 
 **To maintain this table in every future feature/bug-fix PR:** replace stale statuses rather than simply adding rows; add the PR/issue link, brief outcome or current blocker, and accurate next step. Update **Status last checked**, package version above, and milestone context based on actual GitHub information. Never invent a date, merge, approval, or test result. Avoid documenting every small curriculum upload. Documentation-only changes may update the handoff without requiring a release; new direct-to-main approved JSON uploads are exempt.
 
