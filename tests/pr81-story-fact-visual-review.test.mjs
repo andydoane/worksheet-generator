@@ -245,7 +245,7 @@ test('Story Order simple sentence review and print-matched fact previews are mou
  assert.match(sort,/selectFact\(lesson,'sortStory'/u);
  assert.match(sort,/Choose unused fact/u);
  assert.match(sort,/Restore canonical wording and answer/u);
- assert.match(story,/Fix chronological position numbers/u);
+ assert.doesNotMatch(story,/Fix chronological position numbers/u);
  assert.match(fact,/<PuzzlePreview module=/u);
  assert.match(fact,/<TrueFalsePrintPreview module=/u);
  assert.match(fact,/Restore exact canonical wording/u);
