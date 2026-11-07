@@ -35,8 +35,9 @@ const storyRecord=(lesson:Lesson):{next:Lesson;events:StoryEvent[]}=>{
 };
 const renumber=(events:StoryEvent[])=>events.forEach((item,i)=>{item.order=i+1;});
 
-/** Real Story Order rules plus canonical source references. The chronological
- * sequence remains authored; only the printed worksheet shuffles it.
+/** Validate printable Story Order content and chronology. Optional legacy
+ * Story Note references are not part of the content-first approval contract.
+ * Only the student worksheet shuffles the teacher-authored sequence.
  */
 export function storyOrderIssues(lesson:Lesson):FactIssue[]{
  const events=storyEvents(lesson),issues:FactIssue[]=[];
@@ -45,15 +46,11 @@ export function storyOrderIssues(lesson:Lesson):FactIssue[]{
   issues.push({message:'Stored Story Order is not an array. Use Advanced JSON for this structural issue.'});
  if(events.length<5||events.length>8)
   issues.push({message:'Story Order needs 5–8 chronological events (currently '+events.length+').'});
- const ids=new Set(storyNotes(lesson).map((note:any)=>note.id));
  for(const [index,event] of events.entries()){
   if(event.order!==index+1)
    issues.push({index,message:'Event '+(index+1)+' needs sequential order '+(index+1)+'.'});
   if(!String(event.text??'').trim()||String(event.text).trim().length>115)
    issues.push({index,message:'Event '+(index+1)+' needs a sentence of 1–115 characters.'});
-  if(!Array.isArray(event.sourceIds)||event.sourceIds.length===0||
-   event.sourceIds.some(id=>!ids.has(id)))
-   issues.push({index,message:'Event '+(index+1)+' must cite an existing Story Note.'});
  }
  if(!issues.length)
   issues.push(...validateModule({type:'story-order',events:events.map(e=>e.text).join('\n'),seed:1})
