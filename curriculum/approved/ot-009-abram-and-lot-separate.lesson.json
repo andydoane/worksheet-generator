@@ -1,0 +1,1132 @@
+{
+  "schemaVersion": 1,
+  "id": "ot-009-abram-and-lot-separate",
+  "curriculum": {
+    "series": "Old Testament",
+    "lessonNumber": 9
+  },
+  "lessonDetails": {
+    "title": "Abram and Lot Separate",
+    "scripturePassages": [
+      "Genesis 13:2–18",
+      "Genesis 15:5",
+      "Genesis 17:1–19",
+      "Deuteronomy 7:9",
+      "Psalm 117:2"
+    ],
+    "scriptureDisplay": "Genesis 13",
+    "bigIdeas": [
+      {
+        "text": "God always keeps his promises.",
+        "origin": "source"
+      },
+      {
+        "text": "Nothing is impossible for God.",
+        "origin": "source"
+      }
+    ],
+    "memoryVerse": {
+      "reference": "Psalm 117:2",
+      "translation": "BSB",
+      "text": "For great is His loving devotion toward us, and the faithfulness of the LORD endures forever.",
+      "isExcerpt": true,
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "requiresTextReview": false,
+      "originalTranslation": "ESV",
+      "hasEllipses": false,
+      "bsbSource": {
+        "reference": "Psalm 117:2",
+        "sourceUrl": "https://bereanbible.com/bsb.txt",
+        "publicDomainTerms": "https://berean.bible/terms.htm",
+        "startWord": 0,
+        "endWord": 15
+      }
+    }
+  },
+  "preparedActivities": {
+    "drawPicture": {
+      "prompt": "Abram and Lot's shepherds arguing with each other",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "multipleChoice": [
+      {
+        "id": "mc-01",
+        "question": "Why were Abram’s and Lot’s shepherds fighting?",
+        "correctAnswer": "There wasn't enough pasture.",
+        "choices": [
+          {
+            "text": "There wasn't enough pasture.",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "They were stealing each other's sheep.",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "They didn't like each other.",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-02",
+        "question": "How did Abram propose ending the fighting?",
+        "correctAnswer": "He and Lot would go separate ways.",
+        "choices": [
+          {
+            "text": "He and Lot would go separate ways.",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "They would give away their sheep.",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "They would find new shepherds.",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-03",
+        "question": "Which land did Lot choose for himself?",
+        "correctAnswer": "The Jordan River valley",
+        "choices": [
+          {
+            "text": "The Jordan River valley",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "The land of Canaan",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "The hills around Mount Sinai",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-04",
+        "question": "What did God compare Abram’s future family to?",
+        "correctAnswer": "Dust and stars",
+        "choices": [
+          {
+            "text": "Dust and stars",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Rivers and mountains",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "Sheep and goats",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-05",
+        "question": "What did God change Abram’s name to?",
+        "correctAnswer": "Abraham",
+        "choices": [
+          {
+            "text": "Abraham",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Isaac",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "Israel",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-06",
+        "question": "What did Abraham do when God promised Sarah a son?",
+        "correctAnswer": "He laughed.",
+        "choices": [
+          {
+            "text": "He laughed.",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "He cried.",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "He asked a lot of questions.",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "trueFalse": {
+      "factId": "tf-07",
+      "statement": "God changed Abram’s name to Abraham.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "firstLetters": {
+      "reference": "Psalm 117:2",
+      "verse": "For great is His loving devotion toward us, and the faithfulness of the LORD endures forever.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "oddWords": {
+      "related": [
+        "ABRAM",
+        "LOT",
+        "SHEEP",
+        "CANAAN"
+      ],
+      "unrelated": [
+        "armor",
+        "David",
+        "Rome",
+        "clothes",
+        "sisters"
+      ],
+      "unrelatedOrigin": "suggested",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "unscrambleWords": {
+      "answers": [
+        "SHEPHERDS",
+        "ABRAHAM"
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "checkboxes": {
+      "correct": [
+        "VALLEY",
+        "STARS",
+        "SARAH",
+        "PASTURE"
+      ],
+      "incorrect": [
+        "man",
+        "teacher",
+        "baskets",
+        "hair",
+        "pearl"
+      ],
+      "incorrectOrigin": "suggested",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "whoAmI": {
+      "clue": "I was Abram’s nephew. When I moved away, I chose to live in the Jordan River valley.",
+      "answer": "Lot",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "matchWords": [
+      {
+        "id": "match-01",
+        "left": "Abram",
+        "right": "Uncle",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "match-02",
+        "left": "Lot",
+        "right": "Jordan valley",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "match-03",
+        "left": "Canaan",
+        "right": "Abram’s land",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "match-04",
+        "left": "Abraham",
+        "right": "Father of many",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "match-05",
+        "left": "Sarah",
+        "right": "Princess",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "match-06",
+        "left": "Isaac",
+        "right": "Laughter",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "finishVerse": {
+      "reference": "Psalm 117:2",
+      "sourceVerse": "For great is His loving devotion toward us, and the faithfulness of the LORD endures forever.",
+      "markedVerse": "For [great] is His [loving] devotion toward [us], and the faithfulness of the [LORD] [endures] [forever].",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "unscrambleVerse": {
+      "reference": "Psalm 117:2",
+      "sourceVerse": "For great is His loving devotion toward us, and the faithfulness of the LORD endures forever.",
+      "markedVerse": "For [great] is His [loving] devotion toward [us], and the faithfulness of the [LORD] [endures] [forever].",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "circleMistakes": {
+      "paragraph": "Abram and Lot had too few sheep to fill the pasture. Their servants danced together because they ran out of space. Abram ordered Lot to stay where he was. Lot chose the desert near Egypt, and Abram settled in the mountains. God said Abram’s family would be as many as the fish in the sea. Later God renamed Abram Moses.",
+      "mistakeCount": 7,
+      "mistakes": [
+        {
+          "incorrect": "too few sheep",
+          "correction": "many animals and herds"
+        },
+        {
+          "incorrect": "danced together",
+          "correction": "argued"
+        },
+        {
+          "incorrect": "ordered Lot to stay where he was",
+          "correction": "suggested that they separate"
+        },
+        {
+          "incorrect": "the desert near Egypt",
+          "correction": "the well-watered Jordan River valley"
+        },
+        {
+          "incorrect": "Abram settled in the mountains",
+          "correction": "Abram lived in Canaan"
+        },
+        {
+          "incorrect": "as many as the fish in the sea",
+          "correction": "as uncountable as dust or stars"
+        },
+        {
+          "incorrect": "renamed Abram Moses",
+          "correction": "renamed Abram Abraham"
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "mediumWordSearch": {
+      "words": [
+        "ABRAM",
+        "LOT",
+        "SARAH",
+        "SHEEP",
+        "STARS",
+        "CANAAN"
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "trueFalseMaze": {
+      "factId": "tf-14",
+      "statement": "God told Abraham to name his future son Jacob.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "bigIdeaCryptogram": {
+      "phrase": "God always keeps his promises.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "upsideDownVerse": {
+      "reference": "Psalm 117:2",
+      "verse": "For great is His loving devotion toward us, and the faithfulness of the LORD endures forever.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "connectBigIdea": {
+      "phrase": "God always keeps his promises.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "pixelPicture": {
+      "phrase": "God is faithful. He keeps every promise he makes to his people.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "finishStory": {
+      "markedParagraph": "God had blessed [Abram] and his nephew [Lot] with so many [animals] that their shepherds began to argue over pasture. Abram suggested they [separate] so their workers would stop fighting. Lot chose the green Jordan River [valley], and Abram lived in [Canaan]. God promised Abram that his future family would be like the dust and [stars] — too many to count. When Abram was 99, God changed his name to [Abraham], meaning father of many. God changed Sarai’s name to [Sarah] and promised her a [son]. Abraham [laughed], and God told him to name the boy [Isaac].",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "storyOrder": [
+      {
+        "order": 1,
+        "text": "Abram and Lot  owned so many animals that their herdsmen argued over pasture.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 2,
+        "text": "Abram asked Lot to separate from him so their servants would stop fighting.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 3,
+        "text": "Lot chose the well-watered Jordan River valley, while Abram settled in Canaan.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 4,
+        "text": "God promised Abram the land he could see and descendants as countless as dust and stars.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 5,
+        "text": "When Abram was 99, God renamed him Abraham, meaning father of many.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 6,
+        "text": "God renamed Sarai Sarah and promised she would have a son.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 7,
+        "text": "Abraham laughed at the promise, and God told him to name the child Isaac.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "sortStory": [
+      {
+        "factId": "tf-01",
+        "statement": "Abram and Lot both owned many animals and possessions.",
+        "isTrue": true,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-02",
+        "statement": "Abram and Lot’s herdsmen argued over pasture space.",
+        "isTrue": true,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-03",
+        "statement": "Abram suggested separating so their workers would stop fighting.",
+        "isTrue": true,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-04",
+        "statement": "Lot chose to move to the Jordan River valley.",
+        "isTrue": true,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-09",
+        "statement": "When they split up, Abram chose where to go first.",
+        "isTrue": false,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-10",
+        "statement": "Lot chose to live in Canaan while Abram moved to the Jordan valley.",
+        "isTrue": false,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-11",
+        "statement": "God promised Abram that his family would stay small.",
+        "isTrue": false,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-12",
+        "statement": "God changed Abram’s name to Moses.",
+        "isTrue": false,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "drawStory": [
+      {
+        "prompt": "Abram and Lot became wealthy and owned so many animals that their herdsmen argued over pasture.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "Abram asked Lot to separate from him so their servants would stop fighting.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "Lot chose the well-watered Jordan River valley, while Abram settled in Canaan.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "God promised Abram the land he could see and descendants as countless as dust and stars.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "When Abram was 99, God renamed him Abraham, meaning father of many.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "Abraham laughed at the promise, and God told him to name the child Isaac.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "wordSearch": {
+      "words": [
+        "ABRAM",
+        "LOT",
+        "CANAAN",
+        "JORDAN",
+        "VALLEY",
+        "SHEEP",
+        "STARS",
+        "DUST",
+        "ABRAHAM",
+        "SARAH",
+        "ISAAC",
+        "PROMISE"
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "verseCryptogram": {
+      "reference": "Psalm 117:2",
+      "verse": "For great is His loving devotion toward us, and the faithfulness of the LORD endures forever.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "crossword": [
+      {
+        "answer": "ABRAM",
+        "clue": "The man who suggested splitting up from his nephew.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "LOT",
+        "clue": "Abram’s nephew who chose the Jordan River valley.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "CANAAN",
+        "clue": "The land where Abram lived after separating from Lot.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "JORDAN",
+        "clue": "The river whose valley Lot chose.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "STARS",
+        "clue": "God told Abram to count these in the night sky.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "SARAH",
+        "clue": "The new name God gave Sarai.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "ISAAC",
+        "clue": "The name God chose for Abraham’s future son.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "PASTURE",
+        "clue": "The shepherds argued because they ran out of this.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "DUST",
+        "clue": "God compared Abram’s countless descendants to this on the earth.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "spiralVerse": {
+      "reference": "Psalm 117:2",
+      "verse": "For great is His loving devotion toward us, and the faithfulness of the LORD endures forever.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "connectVerse": {
+      "reference": "Psalm 117:2",
+      "verse": "For great is His loving devotion toward us, and the faithfulness of the LORD endures forever.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    }
+  },
+  "vocabulary": {
+    "related": [
+      "ABRAM",
+      "LOT",
+      "SHEEP",
+      "HERDSMEN",
+      "JORDAN",
+      "VALLEY",
+      "CANAAN",
+      "STARS",
+      "PROMISE",
+      "ABRAHAM",
+      "SARAH",
+      "ISAAC",
+      "COVENANT",
+      "FAITHFUL",
+      "FLOCKS",
+      "GOLD",
+      "SILVER",
+      "PASTURE",
+      "LAUGHTER",
+      "DUST"
+    ],
+    "unrelated": [
+      "PHARAOH",
+      "GOLIATH",
+      "JONAH",
+      "MANNA",
+      "JERICHO",
+      "NAOMI",
+      "SAMSON",
+      "RUTH",
+      "NEHEMIAH",
+      "ESTHER"
+    ],
+    "entries": [
+      {
+        "id": "voc-01",
+        "term": "ABRAM",
+        "category": "person",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-02",
+        "term": "LOT",
+        "category": "person",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-03",
+        "term": "SHEEP",
+        "category": "lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-04",
+        "term": "HERDSMEN",
+        "category": "lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-05",
+        "term": "JORDAN",
+        "category": "lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-06",
+        "term": "VALLEY",
+        "category": "lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-07",
+        "term": "CANAAN",
+        "category": "lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-08",
+        "term": "STARS",
+        "category": "lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-09",
+        "term": "PROMISE",
+        "category": "lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-10",
+        "term": "ABRAHAM",
+        "category": "person",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-11",
+        "term": "SARAH",
+        "category": "person",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-12",
+        "term": "ISAAC",
+        "category": "person",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-13",
+        "term": "COVENANT",
+        "category": "lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-14",
+        "term": "FAITHFUL",
+        "category": "lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-15",
+        "term": "FLOCKS",
+        "category": "lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-16",
+        "term": "GOLD",
+        "category": "lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-17",
+        "term": "SILVER",
+        "category": "lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-18",
+        "term": "PASTURE",
+        "category": "lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-19",
+        "term": "LAUGHTER",
+        "category": "lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-20",
+        "term": "DUST",
+        "category": "lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      }
+    ]
+  },
+  "facts": [
+    {
+      "id": "tf-01",
+      "statement": "Abram and Lot both owned many animals and possessions.",
+      "isTrue": true,
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-02",
+      "statement": "Abram and Lot’s herdsmen argued over pasture space.",
+      "isTrue": true,
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-03",
+      "statement": "Abram suggested separating so their workers would stop fighting.",
+      "isTrue": true,
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-04",
+      "statement": "Lot chose to move to the Jordan River valley.",
+      "isTrue": true,
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-05",
+      "statement": "Abram lived in Canaan after he and Lot separated.",
+      "isTrue": true,
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-06",
+      "statement": "God compared Abram’s future family to dust and stars.",
+      "isTrue": true,
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-07",
+      "statement": "God changed Abram’s name to Abraham.",
+      "isTrue": true,
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-08",
+      "statement": "God promised Sarah she would have a son.",
+      "isTrue": true,
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-09",
+      "statement": "When they split up, Abram chose where to go first.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-10",
+      "statement": "Lot chose to live in Canaan while Abram moved to the Jordan valley.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-11",
+      "statement": "God promised Abram that his family would stay small.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-12",
+      "statement": "God changed Abram’s name to Moses.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-13",
+      "statement": "God changed Sarai’s name to Rebekah.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-14",
+      "statement": "God told Abraham to name his future son Jacob.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "characters": [
+    {
+      "id": "ch-01",
+      "name": "Abram",
+      "clues": [
+        {
+          "text": "My herdsmen argued with my nephew’s herdsmen, so I suggested we separate.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "text": "God gave me a new name that means father of many.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "ch-02",
+      "name": "Lot",
+      "clues": [
+        {
+          "text": "I chose the lush Jordan River valley when I separated from my uncle.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "ch-03",
+      "name": "Sarah",
+      "clues": [
+        {
+          "text": "God changed my name from Sarai and promised I would have a son.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "ch-04",
+      "name": "Isaac",
+      "clues": [
+        {
+          "text": "God told Abraham to give me a name that means laughter.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "drawingPrompts": [
+    {
+      "id": "dp-01",
+      "prompt": "Abram and Lot’s large flocks of sheep grazing close together",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "dp-02",
+      "prompt": "two shepherds arguing over grazing land",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "dp-03",
+      "prompt": "Abram inviting Lot to choose where to live",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "dp-04",
+      "prompt": "Lot looking across the green Jordan River valley",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "dp-05",
+      "prompt": "Abram watching the stars in the night sky",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "dp-06",
+      "prompt": "Abram hearing God announce his new name Abraham",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "dp-07",
+      "prompt": "Sarah hearing God promise that she will have a son",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "dp-08",
+      "prompt": "Abraham laughing at the idea of becoming a father in old age",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "matchingPairs": [
+    {
+      "id": "mp-01",
+      "left": "Abram",
+      "right": "Uncle of Lot",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "mp-02",
+      "left": "Lot",
+      "right": "Jordan valley",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "mp-03",
+      "left": "Canaan",
+      "right": "Abram’s land",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "mp-04",
+      "left": "Abraham",
+      "right": "Father of many",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "mp-05",
+      "left": "Sarah",
+      "right": "Princess",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "mp-06",
+      "left": "Isaac",
+      "right": "Laughter",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "mp-07",
+      "left": "Stars",
+      "right": "Countless family",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "keyPhrases": [
+    {
+      "id": "kp-01",
+      "text": "God always keeps his promises.",
+      "origin": "source"
+    },
+    {
+      "id": "kp-02",
+      "text": "Nothing is impossible for God.",
+      "origin": "source"
+    },
+    {
+      "id": "kp-03",
+      "text": "God is faithful and keeps his covenant.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "kp-04",
+      "text": "God promised Abram a family as numerous as the stars.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "publication": {
+    "status": "approved",
+    "approved": true,
+    "teacherSignoff": {
+      "reviewer": "Andrew Doane",
+      "date": "2026-11-07",
+      "notes": "Approved with verified BSB verse through Curriculum Review Studio"
+    },
+    "scriptureRights": {
+      "status": "cleared",
+      "basis": "Berean Standard Bible (BSB), dedicated to the public domain on April 30, 2023. Official terms: https://berean.bible/terms.htm. Scripture text confirmed against https://bereanbible.com/bsb.txt.",
+      "reviewedBy": "Andrew Doane",
+      "reviewedOn": "2026-11-07"
+    },
+    "resolvedReviewFlagIds": [],
+    "notes": "Approved through Review Studio after teacher review and a successful 27/27 content/preflight check of four numbered presets. Original conversion notes and checks remain as historical records.",
+    "reviewStudioVerification": {
+      "source": "Review Studio measured preflight",
+      "checkedAt": "2026-11-07T18:55:22.395Z",
+      "convertedCount": 27,
+      "totalCount": 27,
+      "issueCount": 0,
+      "numberedPresetsChecked": 4,
+      "scope": "Candidate-specific content conversion, four numbered preset content checks, and measured Connect the Verse fit. Standalone repository commands and independently rendered PDFs are not claimed.",
+      "matchingWorksheetSource": "preparedActivities.matchWords",
+      "matchingCandidatePool": "matchingPairs is retained separately as historical/source candidate material"
+    },
+    "reviewFlagDisposition": []
+  },
+  "schemaStatus": "approved; Review Studio 27/27 preflight passed"
+}
