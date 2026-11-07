@@ -1,0 +1,1208 @@
+{
+  "schemaVersion": 1,
+  "id": "ot-003-the-fall-of-man",
+  "curriculum": {
+    "series": "OT",
+    "lessonNumber": 3
+  },
+  "lessonDetails": {
+    "title": "The Fall of Man",
+    "scripturePassages": [
+      "Genesis 2:8–17",
+      "Genesis 3",
+      "1 Corinthians 15:22",
+      "Romans 15:4"
+    ],
+    "scriptureDisplay": "Genesis 2–3",
+    "bigIdeas": [
+      {
+        "text": "God’s very good world is suffering from the curse of sin.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "text": "Jesus was the promised snake crusher.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "memoryVerse": {
+      "reference": "1 Corinthians 15:22",
+      "translation": "BSB",
+      "text": "For as in Adam all die, so in Christ all will be made alive.",
+      "isExcerpt": false,
+      "origin": "adapted",
+      "requiresTextReview": false,
+      "teacherReviewRequired": true,
+      "originalTranslation": "ESV",
+      "hasEllipses": false,
+      "bsbSource": {
+        "reference": "1 Corinthians 15:22",
+        "sourceUrl": "https://bereanbible.com/bsb.txt",
+        "publicDomainTerms": "https://berean.bible/terms.htm",
+        "startWord": 0,
+        "endWord": 13
+      }
+    }
+  },
+  "preparedActivities": {
+    "drawPicture": {
+      "prompt": "Adam and Eve eating the forbidden fruit",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "multipleChoice": [
+      {
+        "id": "mc-01",
+        "question": "What did God forbid Adam to eat?",
+        "correctAnswer": "Fruit from one special tree",
+        "choices": [
+          {
+            "text": "Fruit from one special tree",
+            "isCorrect": true,
+            "origin": "suggested"
+          },
+          {
+            "text": "Fruit from any tree",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Fruit from the Tree of Life",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-02",
+        "question": "What did the serpent say would happen if Eve ate the forbidden fruit?",
+        "correctAnswer": "She would become like God",
+        "choices": [
+          {
+            "text": "She would become like God",
+            "isCorrect": true,
+            "origin": "suggested"
+          },
+          {
+            "text": "She would die immediately",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "She would live forever",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-03",
+        "question": "Who ate the forbidden fruit?",
+        "correctAnswer": "Both Eve and Adam",
+        "choices": [
+          {
+            "text": "Both Eve and Adam",
+            "isCorrect": true,
+            "origin": "suggested"
+          },
+          {
+            "text": "The serpent",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Only Eve",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-04",
+        "question": "What did Adam and Eve do when they heard God in the garden?",
+        "correctAnswer": "They hid among the trees",
+        "choices": [
+          {
+            "text": "They hid among the trees",
+            "isCorrect": true,
+            "origin": "suggested"
+          },
+          {
+            "text": "They became sick",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "They ate more forbidden fruit",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-05",
+        "question": "What did God say would happen to the serpent?",
+        "correctAnswer": "Eve’s son would crush its head",
+        "choices": [
+          {
+            "text": "Eve’s son would crush its head",
+            "isCorrect": true,
+            "origin": "suggested"
+          },
+          {
+            "text": "It would live forever",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "It would never speak again",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-06",
+        "question": "What did God do before driving Adam and Eve out of Eden?",
+        "correctAnswer": "He made them clothes of animal skins",
+        "choices": [
+          {
+            "text": "He made them clothes of animal skins",
+            "isCorrect": true,
+            "origin": "suggested"
+          },
+          {
+            "text": "He gave them forever life",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "He built them a house in the garden",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "trueFalse": {
+      "factId": "tf-04",
+      "statement": "Adam and Eve made clothing from fig leaves and hid from God.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "firstLetters": {
+      "reference": "1 Corinthians 15:22",
+      "verse": "For as in Adam all die, so in Christ all will be made alive.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "oddWords": {
+      "related": [
+        "ADAM",
+        "EVE",
+        "SERPENT",
+        "GARDEN",
+        "FRUIT"
+      ],
+      "unrelated": [
+        "Aaron",
+        "rainbow",
+        "parents",
+        "cedar",
+        "Damascus"
+      ],
+      "unrelatedOrigin": "suggested",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "unscrambleWords": {
+      "answers": [
+        "SERPENT",
+        "GARDEN"
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "checkboxes": {
+      "correct": [
+        "Adam",
+        "Eve",
+        "Serpent",
+        "Fruit",
+        "Fig Leaves"
+      ],
+      "incorrect": [
+        "flies",
+        "Gibeon",
+        "Pharisees",
+        "Assyria",
+        "vegetable"
+      ],
+      "incorrectOrigin": "suggested",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "whoAmI": {
+      "clue": "I listened to the serpent, ate the forbidden fruit, and gave some to Adam.",
+      "answer": "Eve",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "matchWords": [
+      {
+        "id": "mp-01",
+        "left": "Adam",
+        "right": "Ate second",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-02",
+        "left": "Eve",
+        "right": "Ate first",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-03",
+        "left": "Serpent",
+        "right": "Tricked Eve",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-04",
+        "left": "Leaves",
+        "right": "First clothes",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-05",
+        "left": "Serpent's head",
+        "right": "Crushed",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-06",
+        "left": "Flaming sword",
+        "right": "Guarded Eden",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "finishVerse": {
+      "reference": "1 Corinthians 15:22",
+      "sourceVerse": "For as in Adam all die, so in Christ all will be made alive.",
+      "markedVerse": "[For] as in [Adam] all [die], so in [Christ] all will be [made] [alive].",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "unscrambleVerse": {
+      "reference": "1 Corinthians 15:22",
+      "sourceVerse": "For as in Adam all die, so in Christ all will be made alive.",
+      "markedVerse": "[For] as in [Adam] all [die], so in [Christ] all will be [made] [alive].",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "circleMistakes": {
+      "paragraph": "God told Adam he could eat fruit from every tree, including the forbidden one. The serpent warned Eve to trust God’s words. Eve shared the fruit with the serpent. Adam and Eve made clothes from feathers and happily greeted God as he walked in the garden. God promised that the serpent would crush the head of Eve’s son. God then gave Adam and Eve a new home inside Eden.",
+      "mistakeCount": 7,
+      "mistakes": [
+        {
+          "incorrect": "including the forbidden one",
+          "correction": "except the Tree of the Knowledge of Good and Evil",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "warned Eve to trust God’s words",
+          "correction": "lied to Eve about the forbidden fruit",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "the serpent",
+          "correction": "Adam",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "feathers",
+          "correction": "fig leaves",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "happily greeted God",
+          "correction": "hid from God",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "the serpent would crush the head of Eve’s son",
+          "correction": "a son of Eve would crush the serpent’s head",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "a new home inside Eden",
+          "correction": "clothing from animal skins and sent them out of Eden",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "mediumWordSearch": {
+      "words": [
+        "ADAM",
+        "EVE",
+        "EDEN",
+        "FRUIT",
+        "SNAKE",
+        "ANGEL"
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "trueFalseMaze": {
+      "factId": "tf-10",
+      "statement": "The serpent warned Eve that the forbidden fruit would kill her.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "bigIdeaCryptogram": {
+      "phrase": "Jesus was the promised snake crusher.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "upsideDownVerse": {
+      "reference": "1 Corinthians 15:22",
+      "verse": "For as in Adam all die, so in Christ all will be made alive.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "connectBigIdea": {
+      "phrase": "God’s very good world is suffering from the curse of sin.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "pixelPicture": {
+      "phrase": "Adam and Eve disobeyed God, but he promised a rescuer would come.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "finishStory": {
+      "markedParagraph": "In the Garden of [EDEN], God told [ADAM] not to eat fruit from one special [TREE]. The [SERPENT] told Eve that the fruit would not bring death and that she would become like God. [EVE] ate the forbidden [FRUIT] and gave some to Adam. They realized they were naked and made clothes from [LEAVES]. When they heard God walking in the garden, they [HID] from him. God said a son of Eve would [CRUSH] the serpent’s head. Because of their sin, God gave the man and woman [CURSES]. God made clothing from animal skins and drove them [OUT] of the garden. Angels and a flaming [SWORD] guarded the way back.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "storyOrder": [
+      {
+        "order": 1,
+        "text": "God told Adam not to eat from the Tree of the Knowledge of Good and Evil.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 2,
+        "text": "The serpent told Eve that the forbidden fruit would not bring death.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 3,
+        "text": "Eve ate the fruit and gave some to Adam, who ate it too.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 4,
+        "text": "Adam and Eve made leaf clothing and hid when God came to the garden.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 5,
+        "text": "God questioned Adam and Eve, and they blamed others for their sin.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 6,
+        "text": "God announced curses and promised that Eve’s son would crush the serpent.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 7,
+        "text": "God clothed Adam and Eve in animal skins and drove them from Eden.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "sortStory": [
+      {
+        "factId": "tf-01",
+        "statement": "God warned Adam that eating from the forbidden tree would lead to death.",
+        "isTrue": true,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-02",
+        "statement": "The serpent told Eve that eating the forbidden fruit would not kill her.",
+        "isTrue": true,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-03",
+        "statement": "Eve ate the forbidden fruit and gave some to Adam.",
+        "isTrue": true,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-05",
+        "statement": "Adam blamed Eve, and Eve blamed the serpent.",
+        "isTrue": true,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-09",
+        "statement": "God told Adam he could eat fruit from every tree in the garden.",
+        "isTrue": false,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-11",
+        "statement": "Adam ate the fruit first and then offered it to Eve.",
+        "isTrue": false,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-12",
+        "statement": "When they heard God walking in the garden, Adam and Eve ran to him.",
+        "isTrue": false,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-14",
+        "statement": "God let Adam and Eve stay in Eden and keep eating from the Tree of Life.",
+        "isTrue": false,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "drawStory": [
+      {
+        "prompt": "God told Adam not to eat from the Tree of the Knowledge of Good and Evil.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "The serpent told Eve that the forbidden fruit would not bring death.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "Eve ate the fruit and gave some to Adam, who ate it too.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "Adam and Eve made leaf clothing and hid when God came to the garden.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "God announced curses and promised that Eve’s son would crush the serpent.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "God clothed Adam and Eve in animal skins and drove them from Eden.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "wordSearch": {
+      "words": [
+        "ADAM",
+        "EVE",
+        "EDEN",
+        "SERPENT",
+        "FRUIT",
+        "TREE",
+        "LEAVES",
+        "CURSE",
+        "SWORD",
+        "ANGEL",
+        "GARDEN",
+        "PROMISE"
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "verseCryptogram": {
+      "reference": "1 Corinthians 15:22",
+      "verse": "For as in Adam all die, so in Christ all will be made alive.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "crossword": [
+      {
+        "answer": "ADAM",
+        "clue": "God told his man to not eat from the forbidden tree",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "EVE",
+        "clue": "Who listened to the serpent and ate the fruit?",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "EDEN",
+        "clue": "What was the name of the garden?",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "FRUIT",
+        "clue": "What did Adam and Eve eat against God’s command?",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "SERPENT",
+        "clue": "Which creature deceived Eve?",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "LEAVES",
+        "clue": "What did Adam and Eve first use to make clothes?",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "CURSES",
+        "clue": "What did God announce because of sin?",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "SWORD",
+        "clue": "What flaming object guarded Eden?",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "ANGELS",
+        "clue": "Who guarded the way back into the garden?",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "CRUSH",
+        "clue": "God said Eve's son would do this to the serpent's head",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "spiralVerse": {
+      "reference": "1 Corinthians 15:22",
+      "verse": "For as in Adam all die, so in Christ all will be made alive.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "connectVerse": {
+      "reference": "1 Corinthians 15:22",
+      "verse": "For as in Adam all die, so in Christ all will be made alive.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    }
+  },
+  "vocabulary": {
+    "related": [
+      "Adam",
+      "Eve",
+      "Serpent",
+      "Eden",
+      "Garden",
+      "Tree of Life",
+      "Forbidden Fruit",
+      "Fig Leaves",
+      "Animal Skins",
+      "Angel",
+      "Flaming Sword",
+      "Curse",
+      "Sin",
+      "Death",
+      "Promise",
+      "Heel",
+      "Head",
+      "Knowledge",
+      "Deception",
+      "Blame",
+      "Hiding",
+      "Thorns",
+      "Dust",
+      "Jesus",
+      "Snake Crusher",
+      "Resurrection",
+      "Cross"
+    ],
+    "unrelated": [
+      "Pharaoh",
+      "Goliath",
+      "Jericho",
+      "Manna",
+      "Moses",
+      "Chariot",
+      "Naaman",
+      "Ruth",
+      "Jonah",
+      "Solomon"
+    ],
+    "entries": [
+      {
+        "id": "voc-01",
+        "term": "Adam",
+        "scope": "current-lesson",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-02",
+        "term": "Eve",
+        "scope": "current-lesson",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-03",
+        "term": "Serpent",
+        "scope": "current-lesson",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-04",
+        "term": "Eden",
+        "scope": "current-lesson",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-05",
+        "term": "Garden",
+        "scope": "current-lesson",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-06",
+        "term": "Tree of Life",
+        "scope": "current-lesson",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-07",
+        "term": "Forbidden Fruit",
+        "scope": "current-lesson",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-08",
+        "term": "Fig Leaves",
+        "scope": "current-lesson",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-09",
+        "term": "Animal Skins",
+        "scope": "current-lesson",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-10",
+        "term": "Angel",
+        "scope": "current-lesson",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-11",
+        "term": "Flaming Sword",
+        "scope": "current-lesson",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-12",
+        "term": "Curse",
+        "scope": "current-lesson",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-13",
+        "term": "Sin",
+        "scope": "current-lesson",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-14",
+        "term": "Death",
+        "scope": "current-lesson",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-15",
+        "term": "Promise",
+        "scope": "current-lesson",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-16",
+        "term": "Heel",
+        "scope": "current-lesson",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-17",
+        "term": "Head",
+        "scope": "current-lesson",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-18",
+        "term": "Knowledge",
+        "scope": "current-lesson",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-19",
+        "term": "Deception",
+        "scope": "current-lesson",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-20",
+        "term": "Blame",
+        "scope": "current-lesson",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-21",
+        "term": "Hiding",
+        "scope": "current-lesson",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-22",
+        "term": "Thorns",
+        "scope": "current-lesson",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-23",
+        "term": "Dust",
+        "scope": "current-lesson",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-24",
+        "term": "Jesus",
+        "scope": "application",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-25",
+        "term": "Snake Crusher",
+        "scope": "application",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-26",
+        "term": "Resurrection",
+        "scope": "application",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-27",
+        "term": "Cross",
+        "scope": "application",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ]
+  },
+  "facts": [
+    {
+      "id": "tf-01",
+      "statement": "God warned Adam that eating from the forbidden tree would lead to death.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-02",
+      "statement": "The serpent told Eve that eating the forbidden fruit would not kill her.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-03",
+      "statement": "Eve ate the forbidden fruit and gave some to Adam.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-04",
+      "statement": "Adam and Eve made clothing from fig leaves and hid from God.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-05",
+      "statement": "Adam blamed Eve, and Eve blamed the serpent.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-06",
+      "statement": "God said a son of Eve would crush the serpent’s head.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-07",
+      "statement": "God cursed the ground so Adam would struggle to grow food.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-08",
+      "statement": "God made clothes from animal skins and drove the humans from Eden.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-09",
+      "statement": "God told Adam he could eat fruit from every tree in the garden.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-10",
+      "statement": "The serpent warned Eve that the forbidden fruit would kill her.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-11",
+      "statement": "Adam ate the fruit first and then offered it to Eve.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-12",
+      "statement": "When they heard God walking in the garden, Adam and Eve ran to him.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-13",
+      "statement": "God promised that the serpent would crush the head of Eve’s son.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-14",
+      "statement": "God let Adam and Eve stay in Eden and keep eating from the Tree of Life.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "characters": [
+    {
+      "id": "ch-01",
+      "name": "Adam",
+      "clues": [
+        {
+          "text": "I ate the fruit Eve gave me, blamed her, and was sent out of Eden.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "ch-02",
+      "name": "Eve",
+      "clues": [
+        {
+          "text": "I listened to the serpent and gave forbidden fruit to my husband.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "ch-03",
+      "name": "Serpent",
+      "clues": [
+        {
+          "text": "I told Eve that she would not die if she ate the forbidden fruit.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "ch-04",
+      "name": "God",
+      "clues": [
+        {
+          "text": "I warned Adam about the tree, made clothing for the humans, and guarded the garden.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "ch-05",
+      "name": "Jesus",
+      "clues": [
+        {
+          "text": "The lesson calls me the promised snake crusher who defeated the curse of sin.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "drawingPrompts": [
+    {
+      "id": "draw-01",
+      "prompt": "Adam and Eve standing near the two special trees in Eden",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "draw-02",
+      "prompt": "the serpent speaking to Eve beside the forbidden tree",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "draw-03",
+      "prompt": "Eve handing forbidden fruit to Adam",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "draw-04",
+      "prompt": "Adam and Eve sewing clothes from leaves",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "draw-05",
+      "prompt": "Adam and Eve hiding among the garden trees",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "draw-06",
+      "prompt": "an angel with a flaming sword guarding the Garden of Eden",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "draw-07",
+      "prompt": "God giving Adam and Eve clothing made from animal skins",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "matchingPairs": [
+    {
+      "id": "pool-mp-01",
+      "left": "Adam",
+      "right": "First man",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "pool-mp-02",
+      "left": "Eve",
+      "right": "First woman",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "pool-mp-03",
+      "left": "Serpent",
+      "right": "Deceived Eve",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "pool-mp-04",
+      "left": "Fig leaves",
+      "right": "First clothes",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "pool-mp-05",
+      "left": "Animal skins",
+      "right": "Clothes God made",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "pool-mp-06",
+      "left": "Flaming sword",
+      "right": "Guarded Eden",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "keyPhrases": [
+    {
+      "id": "kp-01",
+      "text": "God’s very good world is suffering from the curse of sin.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "kp-02",
+      "text": "Jesus was the promised snake crusher.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "kp-03",
+      "text": "God warned Adam about the forbidden tree.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "kp-04",
+      "text": "The serpent lied, and Adam and Eve disobeyed God.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "kp-05",
+      "text": "God promised a son of Eve would crush the serpent.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "kp-06",
+      "text": "God clothed Adam and Eve before sending them out.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "publication": {
+    "status": "approved",
+    "approved": true,
+    "teacherSignoff": {
+      "reviewer": "Andrew Doane",
+      "date": "2026-11-07",
+      "notes": "Approved with verified BSB verse through Curriculum Review Studio"
+    },
+    "scriptureRights": {
+      "status": "cleared",
+      "basis": "Berean Standard Bible (BSB), dedicated to the public domain on April 30, 2023. Official terms: https://berean.bible/terms.htm. Scripture text confirmed against https://bereanbible.com/bsb.txt.",
+      "reviewedBy": "Andrew Doane",
+      "reviewedOn": "2026-11-07"
+    },
+    "resolvedReviewFlagIds": [],
+    "notes": "Approved through Review Studio after teacher review and a successful 27/27 content/preflight check of four numbered presets. Original conversion notes and checks remain as historical records.",
+    "reviewStudioVerification": {
+      "source": "Review Studio measured preflight",
+      "checkedAt": "2026-11-07T22:54:37.808Z",
+      "convertedCount": 27,
+      "totalCount": 27,
+      "issueCount": 0,
+      "numberedPresetsChecked": 4,
+      "scope": "Candidate-specific content conversion, four numbered preset content checks, and measured Connect the Verse fit. Standalone repository commands and independently rendered PDFs are not claimed.",
+      "matchingWorksheetSource": "preparedActivities.matchWords",
+      "matchingCandidatePool": "matchingPairs is retained separately as historical/source candidate material"
+    },
+    "reviewFlagDisposition": []
+  },
+  "schemaStatus": "approved; Review Studio 27/27 preflight passed"
+}
