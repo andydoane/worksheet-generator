@@ -19,9 +19,13 @@ the URL. Only repository collaborators have permission to commit changes.
    the Mistakes paragraph and corrections, suggested unrelated vocabulary,
    age-suitability wording, the Important Idea wording, and Scripture.
 3. In **Drawing activities**, check Small scene phrases (used after "Draw a picture of") separately from Large **Draw the Story** complete narrative captions. The buttons can normalize legacy Small "Draw ..." instructions or explicitly copy source-linked, approved Story Order sentences into Large captions. Each caption is editable; the source-note text appears alongside it. Re-run preflight after edits. The original Story Notes never change.
-4. Edit and mark each review task as reviewed. False-fact edits are propagated
-   to every matching Sort/True-False module reference. The Important Idea
-   is likewise kept consistent between its two puzzle activities.
+4. In **Story Order**, review the existing 5–8 event sentences in chronological
+   text boxes, edit any wording that needs attention, then scan the chronological
+   preview below. Use the normal **Mark reviewed & continue** or **Needs more work**
+   action. Original Story Note citations, source selectors, and add/remove/reorder
+   controls are not part of this review step. Edit and mark other tasks normally;
+   canonical fact edits synchronize with linked Sort/True-False selections,
+   and the Important Idea stays consistent across its linked activities.
 5. In **BSB memory verse**, look up a single verse or a short verse range in the
    official Berean Standard Bible. Choose **first word** and **last word** of
    the exact excerpt, including a second verse if desired. Select the words

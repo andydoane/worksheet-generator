@@ -174,6 +174,8 @@ a{color:#267d68}
 #review-field-story-order:focus,#review-field-sort-story:focus,
 #review-field-true-false:focus,#review-field-true-false-maze:focus{
  outline:2px solid #4b956e;outline-offset:5px}
+.review-story-order-overview{margin:10px 0 0;padding-left:24px;color:#294b40;font-size:13px;line-height:1.6}
+.review-story-order-overview li{padding:3px 0;overflow-wrap:anywhere}
 .review-activity-preview .sv-preview{max-width:100%}
 .review-activity-preview .sort-story-print-svg{display:block;width:100%;height:auto}
 .review-activity-preview .small-true-false-measured{width:100%;max-width:440px}
