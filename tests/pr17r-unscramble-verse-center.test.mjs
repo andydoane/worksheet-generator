@@ -76,7 +76,14 @@ test('Upside Down keeps its own inverted-glyph typography while centering its ti
   verse:'The Lord guides us in love through the challenges of life.'};
  const p=planUpsideDownVerse(upside,await metrics());
  assert.ok(p);
- assert.ok(p.titleY>25,'Short upside-down verses should no longer stay at the top');
+ const firstY=Math.min(...p.marks.map(mark=>mark.y));
+ const lastY=Math.max(...p.marks.map(mark=>mark.y));
+ assert.ok(firstY-p.titleY>=19-.001,
+  'Extra title separation must not crowd the first inverted answer row');
+ assert.ok(p.titleY-p.titleSize*.8>=4-.001,
+  'Title stays within the upper print-safe inset after centering');
+ assert.ok(lastY+p.glyphOffset+p.invertedFontSize+2<=172.8-4+.001,
+  'Inverted glyphs remain in the medium print-safe inset');
  assert.equal(p.glyphOffset,6.8);
  assert.ok(p.invertedFontSize>=9.2&&p.invertedFontSize<=11.5);
  assert.ok(p.lineStep>29,'Short verses should use more than the old row-spacing cap');

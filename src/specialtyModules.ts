@@ -252,9 +252,21 @@ export function connectPositions(module:ConnectVerseModule|ConnectBigIdeaModule)
 export function spiralTurns(verse:string):number{
   return Math.max(2.4,Math.min(5.5,2.4+verse.trim().length/260*3.1));
 }
-/** Rotate only the handwriting spiral 90° counterclockwise in page coordinates (y down). */
+/** Start the handwriting track at 9 o'clock on the OUTER turn (page
+ * coordinates have y increasing downward). A fixed 90° rotation drifted
+ * with verse length because each additional turn changes the outer phase.
+ * Rotate by the actual turn count instead: the number of turns, radius,
+ * clockwise progression and usable writing length remain unchanged.
+ * Both the browser preview and vector PDF consume these exact points.
+ */
 export function spiralWritingPoints(verse:string,count=800):{x:number;y:number}[]{
- return spiralPoints(count,spiralTurns(verse)).reverse().map(p=>({x:p.y,y:1-p.x}));
+ const turns=spiralTurns(verse);
+ const phase=3*Math.PI/2-2*Math.PI*turns;
+ const cos=Math.cos(phase),sin=Math.sin(phase);
+ return spiralPoints(count,turns).reverse().map(p=>{
+  const dx=p.x-.5,dy=p.y-.5;
+  return {x:.5+dx*cos-dy*sin,y:.5+dx*sin+dy*cos};
+ });
 }
 export function spiralPoints(count=400,turns=5.5):{x:number;y:number}[]{
   return Array.from({length:count},(_,i)=>{

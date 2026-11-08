@@ -2,8 +2,8 @@
 
 > **Snapshot, not source of truth.** This document is a starting point for future ChatGPT conversations and contributors, **not** a replacement for the current GitHub repository, tests, CI results, or the owner's newest instructions. The project changes frequently. Verify `main`, open issues/PRs, and recent Actions runs before making recommendations, editing code, or declaring work complete. Do not assume a roadmap item is still open because it appears below.
 
-**Last checked against `main`:** 2026-11-07 (`main` version `0.16.66` after merged PR #115; PR #116 proposes `0.16.67`)  
-**Package version represented by this change:** `0.16.67`  
+**Last checked against `main`:** 2026-11-07 (`main` version `0.16.67` after merged PR #116; PR #117 proposes `0.16.68`)  
+**Package version represented by this change:** `0.16.68`  
 **Repository:** https://github.com/andydoane/worksheet-generator  
 **Worksheet Studio:** https://andydoane.github.io/worksheet-generator/  
 **Curriculum Review Studio:** https://andydoane.github.io/worksheet-generator/review.html  
@@ -103,7 +103,7 @@ Do not infer current merge status from this table; verify in GitHub. If a future
 
 ## 7. Current work and upcoming plans
 
-**Status last checked:** 2026-11-07, against `main` after **merged PR #115** (version `0.16.66`) and later approved-curriculum uploads. The owner reported cramped, top-aligned, greedily wrapped Upside Down verse output. PR #116 fixes measured line balancing, breathing room and title/verse group centering without changing Unscramble, any approved data or booklet geometry. Verify current GitHub and CI before acting.
+**Status last checked:** 2026-11-07, against `main` after **merged PR #116** (version `0.16.67`). The owner confirmed the Upside Down balanced/centered fitting works and requested slightly more title separation on short passages, plus a fixed 9 o'clock outer starting point for Spiral Verse regardless of adaptive turn count. PR #117 proposes both in existing shared preview/PDF planners. Verify current GitHub and CI before acting.
 
 | Status at last check | Item | Next action or caveat |
 | --- | --- | --- |
@@ -125,7 +125,8 @@ Do not infer current merge status from this table; verify in GitHub. If a future
 | **Merged; owner confirmed working** | [#113 — Review Studio TRUE/FALSE fact labels](https://github.com/andydoane/worksheet-generator/pull/113) | Peach false warning now appears only for false facts; true facts and sidebar descriptions use accurate labels. No lesson data or answer keys changed. |
 | **Merged; owner confirmed working** | [#114 — Story Order content-only review](https://github.com/andydoane/worksheet-generator/pull/114) | Existing 5–8 chronological events are editable and previewed without original Story Note citation requirements or source management controls. Student shuffling and printable checks remain intact. |
 | **Merged** | [#115 — Circle the Mistakes add/remove rows](https://github.com/andydoane/worksheet-generator/pull/115) | Teachers can add and remove mistakes (1–8), synchronizing the count and invalidating review/preflight. Keep these controls and old correction/source preservation behavior. |
-| **Open draft PR** | [#116 — Upside Down verse fitting](https://github.com/andydoane/worksheet-generator/pull/116) | Balance word-boundary line breaks, use larger row pitch for short verses, and center the title + verse as a single print-safe composition in shared browser/PDF planner. Reproduce Romans 3:23 and Jeremiah 32:27; confirm Unscramble remains unchanged. Await CI and teacher visual test. |
+| **Merged; owner confirmed working** | [#116 — Upside Down verse fitting](https://github.com/andydoane/worksheet-generator/pull/116) | Upside Down uses balanced word wrapping, adaptive row pitch and a vertically centered title/verse unit in shared browser/PDF layout. Tested with Romans 3:23 and Jeremiah 32:27. |
+| **Open draft PR** | [#117 — Upside Down title separation and Spiral Verse starting point](https://github.com/andydoane/worksheet-generator/pull/117) | Use up to 120% of normal verse row pitch between the title and first Upside Down writing rule where content fits; otherwise use spare height safely. Fix Spiral Verse outer endpoint at 9 o'clock for short and long verses without changing turns or writing length; verify identical browser/PDF path. Await CI and teacher visual check. |
 
 **To maintain this table in every future feature/bug-fix PR:** replace stale statuses rather than simply adding rows; add the PR/issue link, brief outcome or current blocker, and accurate next step. Update **Status last checked**, package version above, and milestone context based on actual GitHub information. Never invent a date, merge, approval, or test result. Avoid documenting every small curriculum upload. Documentation-only changes may update the handoff without requiring a release; new direct-to-main approved JSON uploads are exempt.
 
