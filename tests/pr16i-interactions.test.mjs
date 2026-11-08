@@ -62,14 +62,16 @@ test('Symbols are unique, seeded and kept inside the shared printable row boxes'
  }
  assert.notDeepEqual(sortStorySymbolIds(story),sortStorySymbolIds({...story,seed:story.seed+1}));
 });
-test('Spiral points rotate exactly 90 degrees CCW without changing their radius',async()=>{
+test('Spiral rotates to start at 9 o\'clock without changing its radius',async()=>{
  for(const verse of ['Jesus wept.',spiral.verse]){
   const old=spiralPoints(800,spiralTurns(verse)).reverse();
   const now=spiralWritingPoints(verse);
   assert.equal(now.length,800);
+  close(now[0].x,.055);
+  close(now[0].y,.5);
   for(const i of [0,1,100,400,799]){
-   close(now[i].x,old[i].y);
-   close(now[i].y,1-old[i].x);
+   close(Math.hypot(now[i].x-.5,now[i].y-.5),
+    Math.hypot(old[i].x-.5,old[i].y-.5));
   }
  }
  const [preview,pdf]=await Promise.all([
