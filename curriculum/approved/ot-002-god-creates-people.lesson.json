@@ -1,0 +1,1110 @@
+{
+  "schemaVersion": 1,
+  "id": "ot-002-god-creates-people",
+  "curriculum": {
+    "series": "OT",
+    "lessonNumber": 2
+  },
+  "lessonDetails": {
+    "title": "God Creates People",
+    "scripturePassages": [
+      "Genesis 1:26–29",
+      "Genesis 2:7–23"
+    ],
+    "scriptureDisplay": "Genesis 1–2",
+    "bigIdeas": [
+      {
+        "text": "All human beings are made in God’s image.",
+        "origin": "source"
+      }
+    ],
+    "memoryVerse": {
+      "reference": "Genesis 1:27",
+      "translation": "BSB",
+      "text": "So God created man in His own image; in the image of God He created him; male and female He created them.",
+      "isExcerpt": false,
+      "requiresTextReview": false,
+      "origin": "adapted",
+      "originalTranslation": "ESV",
+      "hasEllipses": false,
+      "bsbSource": {
+        "reference": "Genesis 1:27",
+        "sourceUrl": "https://bereanbible.com/bsb.txt",
+        "publicDomainTerms": "https://berean.bible/terms.htm",
+        "startWord": 0,
+        "endWord": 21
+      }
+    }
+  },
+  "preparedActivities": {
+    "drawPicture": {
+      "prompt": "Adam and Eve standing in the Garden of Eden",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "multipleChoice": [
+      {
+        "id": "mc-01",
+        "question": "What did God use to form the first man?",
+        "correctAnswer": "Dust of the ground",
+        "choices": [
+          {
+            "text": "Dust of the ground",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Wood from a tree",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Grass from a field",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-02",
+        "question": "What did God do to give the man life?",
+        "correctAnswer": "Breathed into him",
+        "choices": [
+          {
+            "text": "Breathed into him",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Spoke magic words",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Zapped him with lightning",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-03",
+        "question": "What job did God give the man in Eden?",
+        "correctAnswer": "Care for the garden",
+        "choices": [
+          {
+            "text": "Care for the garden",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Build an ark",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Make a tower",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-04",
+        "question": "Why did God say the man needed a helper?",
+        "correctAnswer": "It was not good for him to be alone",
+        "choices": [
+          {
+            "text": "It was not good for him to be alone",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "The man was sick",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "The man was not very smart",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-05",
+        "question": "What happened when God brought animals to the man?",
+        "correctAnswer": "He named them",
+        "choices": [
+          {
+            "text": "He named them",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "He sent them away",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "He ate them",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-06",
+        "question": "How did God make the woman?",
+        "correctAnswer": "From the man’s rib",
+        "choices": [
+          {
+            "text": "From the man’s rib",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "From a bird’s feather",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "From the man's big toe",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "trueFalse": {
+      "statement": "God formed the first man from dust.",
+      "isTrue": true,
+      "factId": "tf-01",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "firstLetters": {
+      "reference": "Genesis 1:27",
+      "verse": "So God created man in His own image; in the image of God He created him; male and female He created them.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "oddWords": {
+      "related": [
+        "ADAM",
+        "EVE",
+        "GARDEN",
+        "RIB",
+        "DUST"
+      ],
+      "unrelated": [
+        "Jacob",
+        "bow",
+        "island",
+        "tombs",
+        "furnace"
+      ],
+      "unrelatedOrigin": "suggested",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "unscrambleWords": {
+      "answers": [
+        "GARDEN",
+        "HELPER"
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "checkboxes": {
+      "correct": [
+        "DUST",
+        "GARDEN",
+        "ANIMALS",
+        "RIB",
+        "WOMAN"
+      ],
+      "incorrect": [
+        "faith",
+        "Zacchaeus",
+        "grain",
+        "desert",
+        "Jerusalem"
+      ],
+      "incorrectOrigin": "suggested",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "whoAmI": {
+      "clue": "I was the very first person. God made me from the dust of the earth, then breathed life into me.",
+      "answer": "Adam",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "matchWords": [
+      {
+        "id": "mp-01",
+        "left": "Not good",
+        "right": "Being alone",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-02",
+        "left": "Breath",
+        "right": "Gave life",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-03",
+        "left": "Eden",
+        "right": "Garden",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-04",
+        "left": "Named by man",
+        "right": "Animals",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-05",
+        "left": "Eve",
+        "right": "Made from rib",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-06",
+        "left": "Adam",
+        "right": "Made from dust",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "finishVerse": {
+      "reference": "Genesis 1:27",
+      "markedVerse": "So [God] created [man] in His own [image]; in the image of God He [created] him; [male] and [female] He created [them].",
+      "sourceVerse": "So God created man in His own image; in the image of God He created him; male and female He created them.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "unscrambleVerse": {
+      "reference": "Genesis 1:27",
+      "markedVerse": "So [God] created [man] in His own [image]; in the image of God He [created] him; [male] and [female] He created [them].",
+      "sourceVerse": "So God created man in His own image; in the image of God He created him; male and female He created them.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "circleMistakes": {
+      "paragraph": "God formed the first man using sand from the beach and breathed life into him. He placed him in a mountain cave and told him to tend it. When God brought animals to the man, he told him to pet each one. God then made the woman from a rock. Only the man was made in God’s image.",
+      "mistakeCount": 5,
+      "mistakes": [
+        {
+          "incorrect": "sand from the beach",
+          "correction": "dust of the ground",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "a mountain cave",
+          "correction": "the Garden of Eden",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "pet each one",
+          "correction": "name them",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "a rock",
+          "correction": "one of the man’s ribs",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "Only the man",
+          "correction": "both the man and the woman",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "mediumWordSearch": {
+      "words": [
+        "ADAM",
+        "WOMAN",
+        "DUST",
+        "EDEN",
+        "RIB",
+        "IMAGE"
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "trueFalseMaze": {
+      "statement": "God created the first man from a tree branch.",
+      "isTrue": false,
+      "factId": "tf-09",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "bigIdeaCryptogram": {
+      "phrase": "Both men and women are made in God's image.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "upsideDownVerse": {
+      "reference": "Genesis 1:27",
+      "verse": "So God created man in His own image; in the image of God He created him; male and female He created them.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "connectBigIdea": {
+      "phrase": "All human beings are made in God’s image.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "pixelPicture": {
+      "phrase": "God formed the first man and woman in His image.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "finishStory": {
+      "markedParagraph": "God formed the first man from the [DUST] of the ground and breathed life into him. God put him in the [GARDEN] of Eden He gave the man the job of caring for it. But God said it was not good for the man to be [ALONE]. God brought the [ANIMALS] to the man, and he [NAMED] them. None was a suitable [HELPER] for him. So God made the man fall into a deep [SLEEP], took a [RIB] from his side, and formed a [WOMAN]. Both the man and woman were made in God’s [IMAGE]. God commanded them to fill the [EARTH] and [RULE] over it.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "storyOrder": [
+      {
+        "order": 1,
+        "text": "God formed the first man from dust and breathed life into him.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 2,
+        "text": "God placed the man in the Garden of Eden and gave him work.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 3,
+        "text": "God said it was not good for the man to be alone.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 4,
+        "text": "God brought animals to the man, who named them, but none was a suitable helper.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 5,
+        "text": "God made the man sleep and formed a woman from his rib.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 6,
+        "text": "God brought the woman to the man, and he called her woman.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 7,
+        "text": "God made man and woman in his image and told them to fill the earth and rule over it.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "sortStory": [
+      {
+        "statement": "God breathed life into the first man.",
+        "isTrue": true,
+        "factId": "tf-02",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "statement": "God put the man in the Garden of Eden.",
+        "isTrue": true,
+        "factId": "tf-03",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "statement": "God gave the man work caring for the garden.",
+        "isTrue": true,
+        "factId": "tf-04",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "statement": "God said it was not good for the man to be alone.",
+        "isTrue": true,
+        "factId": "tf-05",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "statement": "God put the man he made on top of a mountain.",
+        "isTrue": false,
+        "factId": "tf-10",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "statement": "The man found a suitable helper among the animals.",
+        "isTrue": false,
+        "factId": "tf-11",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "statement": "God formed the woman from a stone.",
+        "isTrue": false,
+        "factId": "tf-12",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "statement": "Only the man was created in God’s image.",
+        "isTrue": false,
+        "factId": "tf-13",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "drawStory": [
+      {
+        "prompt": "God formed the first man from dust and breathed life into him.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "God placed the man in the Garden of Eden and gave him work.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "God brought animals to the man, who named them, but none was a suitable helper.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "God made the man sleep and formed a woman from his rib.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "God brought the woman to the man, and he called her woman.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "God made man and woman in his image and told them to fill the earth and rule over it.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "wordSearch": {
+      "words": [
+        "ADAM",
+        "EVE",
+        "DUST",
+        "BREATH",
+        "GARDEN",
+        "EDEN",
+        "ANIMALS",
+        "RIB",
+        "WOMAN",
+        "IMAGE",
+        "CREATION",
+        "HELPER"
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "verseCryptogram": {
+      "reference": "Genesis 1:27",
+      "verse": "So God created man in His own image; in the image of God He created him; male and female He created them.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "crossword": [
+      {
+        "answer": "DUST",
+        "clue": "What God used to form the first man.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "BREATH",
+        "clue": "What God breathed into the man to give him life.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "EDEN",
+        "clue": "Name of the garden where God placed the man.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "GARDEN",
+        "clue": "Place the man was told to care for.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "ANIMALS",
+        "clue": "Living creatures the man named.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "HELPER",
+        "clue": "What God said the man needed.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "RIB",
+        "clue": "Bone God took from the sleeping man.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "WOMAN",
+        "clue": "The second person God formed.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "IMAGE",
+        "clue": "What man and woman were made in: God’s ___.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "Not good",
+        "clue": "It was this for the man to be alone.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "spiralVerse": {
+      "reference": "Genesis 1:27",
+      "verse": "So God created man in His own image; in the image of God He created him; male and female He created them.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "connectVerse": {
+      "reference": "Genesis 1:27",
+      "verse": "So God created man in His own image; in the image of God He created him; male and female He created them.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    }
+  },
+  "vocabulary": {
+    "related": [
+      "ADAM",
+      "EVE",
+      "GARDEN",
+      "DUST",
+      "BREATH",
+      "EDEN",
+      "ANIMALS",
+      "RIB",
+      "WOMAN",
+      "IMAGE",
+      "HELPER",
+      "EARTH",
+      "RULE",
+      "NAME",
+      "TREE",
+      "MAN",
+      "SLEEP",
+      "LIFE",
+      "CREATION",
+      "FRUIT"
+    ],
+    "unrelated": [
+      "PHARAOH",
+      "GOLIATH",
+      "JERICHO",
+      "MOSES",
+      "LAMB",
+      "MANGER",
+      "ALTAR",
+      "NOAH",
+      "BABEL",
+      "CHRISTMAS"
+    ],
+    "entries": [
+      {
+        "id": "voc-01",
+        "term": "ADAM",
+        "scope": "story",
+        "category": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-02",
+        "term": "EVE",
+        "scope": "story",
+        "category": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-03",
+        "term": "GARDEN",
+        "scope": "story",
+        "category": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-04",
+        "term": "DUST",
+        "scope": "story",
+        "category": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-05",
+        "term": "BREATH",
+        "scope": "story",
+        "category": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-06",
+        "term": "EDEN",
+        "scope": "story",
+        "category": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-07",
+        "term": "ANIMALS",
+        "scope": "story",
+        "category": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-08",
+        "term": "RIB",
+        "scope": "story",
+        "category": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-09",
+        "term": "WOMAN",
+        "scope": "story",
+        "category": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-10",
+        "term": "IMAGE",
+        "scope": "story",
+        "category": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-11",
+        "term": "HELPER",
+        "scope": "story",
+        "category": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-12",
+        "term": "EARTH",
+        "scope": "story",
+        "category": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-13",
+        "term": "RULE",
+        "scope": "story",
+        "category": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-14",
+        "term": "NAME",
+        "scope": "story",
+        "category": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-15",
+        "term": "TREE",
+        "scope": "story",
+        "category": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-16",
+        "term": "MAN",
+        "scope": "story",
+        "category": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-17",
+        "term": "SLEEP",
+        "scope": "story",
+        "category": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-18",
+        "term": "LIFE",
+        "scope": "story",
+        "category": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-19",
+        "term": "CREATION",
+        "scope": "story",
+        "category": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-20",
+        "term": "FRUIT",
+        "scope": "story",
+        "category": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ]
+  },
+  "facts": [
+    {
+      "id": "tf-01",
+      "statement": "God formed the first man from dust.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-02",
+      "statement": "God breathed life into the first man.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-03",
+      "statement": "God put the man in the Garden of Eden.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-04",
+      "statement": "God gave the man work caring for the garden.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-05",
+      "statement": "God said it was not good for the man to be alone.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-06",
+      "statement": "The man named the animals God brought to him.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-07",
+      "statement": "God formed the woman from one of the man’s ribs.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-08",
+      "statement": "Both the man and the woman were made in God’s image.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-09",
+      "statement": "God created the first man from a tree branch.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-10",
+      "statement": "God put the man he made on top of a mountain.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-11",
+      "statement": "The man found a suitable helper among the animals.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-12",
+      "statement": "God formed the woman from a stone.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-13",
+      "statement": "Only the man was created in God’s image.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-14",
+      "statement": "God told the first people to stay away from all animals.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "characters": [
+    {
+      "id": "ch-01",
+      "name": "Adam",
+      "clues": [
+        {
+          "text": "God formed me from dust, and I named the animals.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "scope": "story",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "ch-02",
+      "name": "Woman",
+      "clues": [
+        {
+          "text": "God formed me from a rib taken from the first man.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "scope": "story",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "ch-03",
+      "name": "God",
+      "clues": [
+        {
+          "text": "I breathed life into the first man and made a helper for him.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "scope": "story",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "drawingPrompts": [
+    {
+      "id": "scene-01",
+      "prompt": "God forming the first man from the dust of the ground",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "scene-02",
+      "prompt": "God breathing life into the man",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "scene-03",
+      "prompt": "the man tending trees in the Garden of Eden",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "scene-04",
+      "prompt": "the man naming the animals God brought to him",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "scene-05",
+      "prompt": "the man sleeping while God forms the woman from his rib",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "scene-06",
+      "prompt": "the man and woman together in the Garden of Eden",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "matchingPairs": [
+    {
+      "id": "mp-01",
+      "left": "Dust",
+      "right": "First man",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "mp-02",
+      "left": "Breath",
+      "right": "Gave life",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "mp-03",
+      "left": "Eden",
+      "right": "Garden",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "mp-04",
+      "left": "Animals",
+      "right": "Named by man",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "mp-05",
+      "left": "Rib",
+      "right": "Woman was formed",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "mp-06",
+      "left": "Image",
+      "right": "Both people",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "keyPhrases": [
+    {
+      "id": "phrase-01",
+      "text": "All human beings are made in God’s image.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "phrase-02",
+      "text": "God made the first man from dust.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "phrase-03",
+      "text": "Both the man and the woman were made in God’s image.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "kp-review-1",
+      "text": "Both men and women are made in God's image.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "publication": {
+    "status": "approved",
+    "approved": true,
+    "teacherSignoff": {
+      "reviewer": "Andrew Doane",
+      "date": "2026-11-07",
+      "notes": "Approved with verified BSB verse through Curriculum Review Studio"
+    },
+    "scriptureRights": {
+      "status": "cleared",
+      "basis": "Berean Standard Bible (BSB), dedicated to the public domain on April 30, 2023. Official terms: https://berean.bible/terms.htm. Scripture text confirmed against https://bereanbible.com/bsb.txt.",
+      "reviewedBy": "Andrew Doane",
+      "reviewedOn": "2026-11-07"
+    },
+    "resolvedReviewFlagIds": [],
+    "notes": "Approved through Review Studio after teacher review and a successful 27/27 content/preflight check of four numbered presets. Original conversion notes and checks remain as historical records.",
+    "reviewStudioVerification": {
+      "source": "Review Studio measured preflight",
+      "checkedAt": "2026-11-08T01:25:18.095Z",
+      "convertedCount": 27,
+      "totalCount": 27,
+      "issueCount": 0,
+      "numberedPresetsChecked": 4,
+      "scope": "Candidate-specific content conversion, four numbered preset content checks, and measured Connect the Verse fit. Standalone repository commands and independently rendered PDFs are not claimed.",
+      "matchingWorksheetSource": "preparedActivities.matchWords",
+      "matchingCandidatePool": "matchingPairs is retained separately as historical/source candidate material"
+    },
+    "reviewFlagDisposition": []
+  },
+  "schemaStatus": "approved; Review Studio 27/27 preflight passed"
+}
