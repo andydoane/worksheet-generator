@@ -71,12 +71,13 @@ test('Unscramble shared plan uses the scaled letters in both PDF and browser pre
  assert.match(pdf,/planUnscrambleVerse\(module,metrics,b\.width,b\.height\)/u);
 });
 
-test('Only Unscramble changes size/placement; Upside Down preserves independent layout',async()=>{
+test('Upside Down keeps its own inverted-glyph typography while centering its title',async()=>{
  const upside={type:'upside-down-verse',reference:'Isaiah 41:10',
   verse:'The Lord guides us in love through the challenges of life.'};
  const p=planUpsideDownVerse(upside,await metrics());
  assert.ok(p);
- assert.equal(p.titleY,25);
+ assert.ok(p.titleY>25,'Short upside-down verses should no longer stay at the top');
  assert.equal(p.glyphOffset,6.8);
  assert.ok(p.invertedFontSize>=9.2&&p.invertedFontSize<=11.5);
+ assert.ok(p.lineStep>29,'Short verses should use more than the old row-spacing cap');
 });
