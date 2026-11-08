@@ -1,0 +1,1218 @@
+{
+  "schemaVersion": 1,
+  "id": "ot-034-the-ten-commandments",
+  "curriculum": {
+    "series": "OT",
+    "lessonNumber": 34
+  },
+  "lessonDetails": {
+    "title": "The Ten Commandments",
+    "scripturePassages": [
+      "Exodus 20:1–17",
+      "Exodus 31:18",
+      "Deuteronomy 6:5",
+      "Leviticus 19:18",
+      "Romans 3:23"
+    ],
+    "scriptureDisplay": "Exodus 20",
+    "bigIdeas": [
+      {
+        "text": "The first four commands teach us to love God with all of our hearts.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "text": "The last six commands teach us to love our neighbors as we love ourselves.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      }
+    ],
+    "memoryVerse": {
+      "reference": "Romans 3:23",
+      "translation": "BSB",
+      "text": "for all have sinned and fall short of the glory of God,",
+      "isExcerpt": false,
+      "hasEllipses": false,
+      "requiresTextReview": false,
+      "teacherReviewRequired": true,
+      "origin": "adapted",
+      "originalTranslation": "ESV (original curriculum; BSB unverified)",
+      "bsbSource": {
+        "reference": "Romans 3:23",
+        "sourceUrl": "https://bereanbible.com/bsb.txt",
+        "publicDomainTerms": "https://berean.bible/terms.htm",
+        "startWord": 0,
+        "endWord": 11
+      }
+    }
+  },
+  "preparedActivities": {
+    "drawPicture": {
+      "prompt": "Moses holding two stone tablets with God’s ten commandments",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "multipleChoice": [
+      {
+        "id": "mc-01",
+        "question": "What did God remind Israel before giving his commands?",
+        "correctAnswer": "He rescued them from Egypt",
+        "choices": [
+          {
+            "text": "He rescued them from Egypt",
+            "isCorrect": true,
+            "origin": "adapted",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "He created the heavens",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "He knows everything",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-02",
+        "question": "What did God use to write on the stone tablets?",
+        "correctAnswer": "His finger",
+        "choices": [
+          {
+            "text": "His finger",
+            "isCorrect": true,
+            "origin": "adapted",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "A sword",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "A chisel",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-03",
+        "question": "What does the fourth commandment tell people to do?",
+        "correctAnswer": "Rest on the Sabbath",
+        "choices": [
+          {
+            "text": "Rest on the Sabbath",
+            "isCorrect": true,
+            "origin": "adapted",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "Worship an idol",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "Take a neighbor’s things",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-04",
+        "question": "Which commandment tells children to honor their parents?",
+        "correctAnswer": "The fifth",
+        "choices": [
+          {
+            "text": "The fifth",
+            "isCorrect": true,
+            "origin": "adapted",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "The second",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "The tenth",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-05",
+        "question": "What does it mean to covet?",
+        "correctAnswer": "To strongly want what others own",
+        "choices": [
+          {
+            "text": "To strongly want what others own",
+            "isCorrect": true,
+            "origin": "adapted",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "To share with a neighbor",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "To tell the truth in court",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-06",
+        "question": "What do the last six commandments teach us?",
+        "correctAnswer": "Love our neighbors",
+        "choices": [
+          {
+            "text": "Love our neighbors",
+            "isCorrect": true,
+            "origin": "adapted",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "Hate our neighbors",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "Don't care about our neighbors",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "trueFalse": {
+      "factId": "tf-07",
+      "statement": "The eighth commandment forbids stealing.",
+      "isTrue": true,
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "firstLetters": {
+      "reference": "Romans 3:23",
+      "verse": "for all have sinned and fall short of the glory of God,",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "oddWords": {
+      "related": [
+        "SINAI",
+        "TABLETS",
+        "SABBATH",
+        "PARENTS",
+        "COVET"
+      ],
+      "unrelated": [
+        "Pharaoh",
+        "hair",
+        "yeast",
+        "tombs",
+        "serpents"
+      ],
+      "unrelatedOrigin": "suggested",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "unscrambleWords": {
+      "answers": [
+        "SABBATH",
+        "TABLETS"
+      ],
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "checkboxes": {
+      "correct": [
+        "MOSES",
+        "MURDER",
+        "HONOR",
+        "STEAL",
+        "IDOLS"
+      ],
+      "incorrect": [
+        "Benjamin",
+        "Jonathan",
+        "healing",
+        "Pharisees",
+        "garden"
+      ],
+      "incorrectOrigin": "suggested",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "whoAmI": {
+      "clue": "I received two stone tablets from God after he spoke his commandments to Israel.",
+      "answer": "Moses",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "matchWords": [
+      {
+        "id": "mp-01",
+        "left": "#1",
+        "right": "No other gods",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-02",
+        "left": "#2",
+        "right": "No idols",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-03",
+        "left": "#4",
+        "right": "Rest on Sabbath",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-04",
+        "left": "#5",
+        "right": "Honor parents",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-05",
+        "left": "#9",
+        "right": "Do not lie",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-06",
+        "left": "#6",
+        "right": "No murder",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "finishVerse": {
+      "reference": "Romans 3:23",
+      "markedVerse": "for [all] have [sinned] and [fall] [short] of the [glory] of [God],",
+      "sourceVerse": "for all have sinned and fall short of the glory of God,",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "unscrambleVerse": {
+      "reference": "Romans 3:23",
+      "markedVerse": "for [all] have [sinned] and [fall] [short] of the [glory] of [God],",
+      "sourceVerse": "for all have sinned and fall short of the glory of God,",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "circleMistakes": {
+      "paragraph": "At Mount Sinai, God reminded Israel that he had rescued them from Israel. He spoke five commandments and later wrote them on wooden tablets. God told his people to bow to idols and work all seven days. He commanded children to ignore their parents, said stealing was fine, and encouraged people to tell lies in court.",
+      "mistakeCount": 8,
+      "mistakes": [
+        {
+          "incorrect": "Israel",
+          "correction": "Egypt",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "five",
+          "correction": "ten",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "wooden",
+          "correction": "stone",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "bow to idols",
+          "correction": "worship only God",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "work all seven days",
+          "correction": "rest on the Sabbath",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "ignore their parents",
+          "correction": "honor their parents",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "stealing was fine",
+          "correction": "do not steal",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "tell lies in court",
+          "correction": "tell the truth",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "mediumWordSearch": {
+      "words": [
+        "MOSES",
+        "SINAI",
+        "IDOLS",
+        "STEAL",
+        "COVET",
+        "SABBATH"
+      ],
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "trueFalseMaze": {
+      "factId": "tf-08",
+      "statement": "The ninth commandment forbids false testimony.",
+      "isTrue": true,
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "bigIdeaCryptogram": {
+      "phrase": "The Ten Commandments teach us to love God and love people",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "upsideDownVerse": {
+      "reference": "Romans 3:23",
+      "verse": "for all have sinned and fall short of the glory of God,",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "connectBigIdea": {
+      "phrase": "The Ten Commandments teach us to love God and love people",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "pixelPicture": {
+      "phrase": "The Ten Commandments teach us to love God and love other people.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "finishStory": {
+      "markedParagraph": "At Mount [SINAI], God reminded the Israelites that he had [RESCUED] them from slavery in Egypt. He gave them [ten] commandments and later wrote them on two stone [TABLETS] for Moses. The first command told them to worship no other [GODS]. The second said not to worship [IDOLS]. They were to honor God’s [NAME] and [REST] on the Sabbath. God told them to honor their [PARENTS], not murder, remain faithful in marriage, not steal, and not tell [LIES]. They must not [COVET] what belonged to their neighbors. The first four commands teach us to love [GOD] and the last six teach us to love other people.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "storyOrder": [
+      {
+        "order": 1,
+        "text": "God reminded the Israelites that he had rescued them from Egypt.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 2,
+        "text": "God forbade other gods and the worship of idols.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 3,
+        "text": "God told his people to honor his name and rest on the Sabbath.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 4,
+        "text": "God told them to honor parents and not to murder.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 5,
+        "text": "God commanded faithfulness in marriage and forbade stealing.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 6,
+        "text": "God commanded truthfulness and warned against coveting.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 7,
+        "text": "God later wrote the commandments on two stone tablets for Moses.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      }
+    ],
+    "sortStory": [
+      {
+        "factId": "tf-01",
+        "statement": "God reminded Israel that he had rescued them from slavery in Egypt.",
+        "isTrue": true,
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-02",
+        "statement": "God told the Israelites not to worship any other gods.",
+        "isTrue": true,
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-03",
+        "statement": "God told his people not to worship idols.",
+        "isTrue": true,
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-09",
+        "statement": "God commanded Israel to bow down to statues of other gods.",
+        "isTrue": false,
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-10",
+        "statement": "God ordered his people to work on every day of the week.",
+        "isTrue": false,
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-11",
+        "statement": "The sixth commandment says it is fine to murder another person.",
+        "isTrue": false,
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      }
+    ],
+    "drawStory": [
+      {
+        "prompt": "God reminded the Israelites that he had rescued them from Egypt.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "God told his people to worship only him and not bow to idols.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "The Israelites were commanded to rest on the Sabbath.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "Children were told to honor their fathers and mothers.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "God commanded his people not to steal or give false testimony.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "God wrote the commandments on two stone tablets for Moses.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      }
+    ],
+    "wordSearch": {
+      "words": [
+        "MOSES",
+        "SINAI",
+        "TABLETS",
+        "SABBATH",
+        "PARENTS",
+        "MURDER",
+        "STEAL",
+        "IDOLS",
+        "COVET",
+        "NEIGHBOR",
+        "WORSHIP",
+        "HONOR"
+      ],
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "verseCryptogram": {
+      "reference": "Romans 3:23",
+      "verse": "for all have sinned and fall short of the glory of God,",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "crossword": [
+      {
+        "answer": "MOSES",
+        "clue": "Who received the stone tablets from God?",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "SINAI",
+        "clue": "Mountain where God spoke to Israel.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "TABLETS",
+        "clue": "Two stone pieces carrying the commandments.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "SABBATH",
+        "clue": "The holy day of rest.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "PARENTS",
+        "clue": "Father and mother whom children should honor.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "IDOLS",
+        "clue": "Statues forbidden as objects of worship.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "MURDER",
+        "clue": "The sixth commandment forbids this crime.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "STEAL",
+        "clue": "To take what belongs to someone else.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "COVET",
+        "clue": "To want something that belongs to a neighbor.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "GODS NAME",
+        "clue": "The third command says to honor this.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "spiralVerse": {
+      "reference": "Romans 3:23",
+      "verse": "for all have sinned and fall short of the glory of God,",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "connectVerse": {
+      "reference": "Romans 3:23",
+      "verse": "for all have sinned and fall short of the glory of God,",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    }
+  },
+  "vocabulary": {
+    "related": [
+      "Moses",
+      "Mount Sinai",
+      "Stone Tablets",
+      "Ten Commands",
+      "Egypt",
+      "Israelites",
+      "Slavery",
+      "One God",
+      "Idols",
+      "Worship",
+      "God’s Name",
+      "Sabbath",
+      "Rest",
+      "Parents",
+      "Murder",
+      "Marriage",
+      "Adultery",
+      "Steal",
+      "False Witness",
+      "Truth",
+      "Covet",
+      "Neighbor",
+      "Love God",
+      "Love People",
+      "Stone",
+      "Finger",
+      "Honor",
+      "Law",
+      "Sin",
+      "Jesus",
+      "Obedience",
+      "Respect",
+      "Heart"
+    ],
+    "unrelated": [
+      "Goliath",
+      "Raven",
+      "Ladder",
+      "Whale",
+      "Vineyard",
+      "Jonah",
+      "Daniel",
+      "Shepherd",
+      "River",
+      "Shekel",
+      "Noah",
+      "Rainbow"
+    ],
+    "entries": [
+      {
+        "id": "v-01",
+        "term": "Moses",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-02",
+        "term": "Mount Sinai",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-03",
+        "term": "Stone Tablets",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-04",
+        "term": "Ten Commands",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-05",
+        "term": "Egypt",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-06",
+        "term": "Israelites",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-07",
+        "term": "Slavery",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-08",
+        "term": "One God",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-09",
+        "term": "Idols",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-10",
+        "term": "Worship",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-11",
+        "term": "God’s Name",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-12",
+        "term": "Sabbath",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-13",
+        "term": "Rest",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-14",
+        "term": "Parents",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-15",
+        "term": "Murder",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-16",
+        "term": "Marriage",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-17",
+        "term": "Adultery",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-18",
+        "term": "Steal",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-19",
+        "term": "False Witness",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-20",
+        "term": "Truth",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-21",
+        "term": "Covet",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-22",
+        "term": "Neighbor",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-23",
+        "term": "Love God",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-24",
+        "term": "Love People",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-25",
+        "term": "Stone",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-26",
+        "term": "Finger",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-27",
+        "term": "Honor",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-28",
+        "term": "Law",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      }
+    ]
+  },
+  "facts": [
+    {
+      "id": "tf-01",
+      "statement": "God reminded Israel that he had rescued them from slavery in Egypt.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-02",
+      "statement": "God told the Israelites not to worship any other gods.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-03",
+      "statement": "God told his people not to worship idols.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-04",
+      "statement": "The third commandment teaches people to honor God’s name.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-05",
+      "statement": "God commanded his people to rest on the Sabbath.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-06",
+      "statement": "The fifth commandment tells children to honor their parents.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-07",
+      "statement": "The eighth commandment forbids stealing.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-08",
+      "statement": "The ninth commandment forbids false testimony.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-09",
+      "statement": "God commanded Israel to bow down to statues of other gods.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-10",
+      "statement": "God ordered his people to work on every day of the week.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-11",
+      "statement": "The sixth commandment says it is fine to murder another person.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-12",
+      "statement": "The seventh commandment tells people to break their marriage promises.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-13",
+      "statement": "The tenth commandment encourages people to covet a neighbor’s things.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-14",
+      "statement": "The first four commandments are mainly about loving your neighbor.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "characters": [
+    {
+      "id": "ch-01",
+      "name": "Moses",
+      "clues": [
+        {
+          "text": "I received two tablets with the laws God wrote.",
+          "origin": "adapted",
+          "teacherReviewRequired": true
+        },
+        {
+          "text": "God spoke to me on Mount Sinai.",
+          "origin": "adapted",
+          "teacherReviewRequired": true
+        }
+      ],
+      "scope": "current-lesson",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "ch-02",
+      "name": "God",
+      "clues": [
+        {
+          "text": "I rescued Israel from slavery and gave them the commandments.",
+          "origin": "adapted",
+          "teacherReviewRequired": true
+        }
+      ],
+      "scope": "current-lesson",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    }
+  ],
+  "drawingPrompts": [
+    {
+      "id": "dp-01",
+      "prompt": "Moses holding two stone tablets covered in writing",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "dp-02",
+      "prompt": "an Israelite family resting together on the Sabbath",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "dp-03",
+      "prompt": "a child respectfully helping a father and mother",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "dp-04",
+      "prompt": "a person returning an object instead of stealing it",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "dp-05",
+      "prompt": "a neighbor telling the truth in front of a judge",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "dp-06",
+      "prompt": "people remembering the Ten Commandments near Mount Sinai",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    }
+  ],
+  "matchingPairs": [
+    {
+      "id": "mp-01",
+      "left": "One God",
+      "right": "Worship him alone",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "mp-02",
+      "left": "No idols",
+      "right": "Do not bow to statues",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "mp-03",
+      "left": "Sabbath",
+      "right": "Rest and honor God",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "mp-04",
+      "left": "Honor parents",
+      "right": "Respect your parents",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "mp-05",
+      "left": "False witness",
+      "right": "Do not lie",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "mp-06",
+      "left": "Covet",
+      "right": "Want what others own",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    }
+  ],
+  "keyPhrases": [
+    {
+      "id": "kp-01",
+      "text": "Love God with all your heart.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "kp-02",
+      "text": "Love your neighbor as yourself.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "kp-03",
+      "text": "The first four commands teach us to love God with all of our hearts.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "kp-04",
+      "text": "The last six commands teach us to love our neighbors as we love ourselves.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "kp-review-1",
+      "text": "The Ten Commandments teach us to love God and love people",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "publication": {
+    "status": "approved",
+    "approved": true,
+    "teacherSignoff": {
+      "reviewer": "Andrew Doane",
+      "date": "2026-11-08",
+      "notes": "Approved with verified BSB verse through Curriculum Review Studio"
+    },
+    "scriptureRights": {
+      "status": "cleared",
+      "basis": "Berean Standard Bible (BSB), dedicated to the public domain on April 30, 2023. Official terms: https://berean.bible/terms.htm. Scripture text confirmed against https://bereanbible.com/bsb.txt.",
+      "reviewedBy": "Andrew Doane",
+      "reviewedOn": "2026-11-08"
+    },
+    "resolvedReviewFlagIds": [],
+    "notes": "Approved through Review Studio after teacher review and a successful 27/27 content/preflight check of four numbered presets. Original conversion notes and checks remain as historical records.",
+    "reviewStudioVerification": {
+      "source": "Review Studio measured preflight",
+      "checkedAt": "2026-11-08T02:27:17.497Z",
+      "convertedCount": 27,
+      "totalCount": 27,
+      "issueCount": 0,
+      "numberedPresetsChecked": 4,
+      "scope": "Candidate-specific content conversion, four numbered preset content checks, and measured Connect the Verse fit. Standalone repository commands and independently rendered PDFs are not claimed.",
+      "matchingWorksheetSource": "preparedActivities.matchWords",
+      "matchingCandidatePool": "matchingPairs is retained separately as historical/source candidate material"
+    },
+    "reviewFlagDisposition": []
+  },
+  "schemaStatus": "approved; Review Studio 27/27 preflight passed"
+}
