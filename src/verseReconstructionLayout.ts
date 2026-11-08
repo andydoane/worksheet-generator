@@ -39,9 +39,9 @@ function segmentsForUnscramble(m:UnscrambleVerse):Segment[]{
 }
 const glyphWidth=(g:VerseGlyph,cell:number)=>g.kind==='letter'?cell:cell*.44;
 /** Minimize line-width imbalance across measured word-boundary chunks.
- * The old greedy wrapping could strand one or two words on the last line.
- * Preserve the minimum necessary row count and never split a marked blank,
- * its punctuation, or any other word. The Upside Down planner stays greedy.
+ * Both reconstruction modes keep the minimum necessary row count, then
+ * distribute intact words to avoid an orphaned last line when possible.
+ * Marked blanks and punctuation always stay attached to their words.
  */
 export function balanceUnscrambleRows<T extends {width:number}>(
  chunks:readonly T[],space:number,maxWidth:number,rowCount:number,
@@ -116,11 +116,12 @@ function planReconstruction(chunks:Chunk[],metrics:Metrics,mode:'unscramble'|'up
   }
   if(row.length)rows.push(row);
   if(!rows.length)continue;
-  if(mode==='unscramble'){
-   const balanced=balanceUnscrambleRows(measured,space,width-8,rows.length);
-   if(!balanced)continue;
-   rows.splice(0,rows.length,...balanced);
-  }
+  // Both Upside Down and Unscramble balance their measured word groups.
+  // Keep the fewest printable rows found by greedy packing, but optimize the
+  // line endings across those rows rather than leaving a lone final word.
+  const balanced=balanceUnscrambleRows(measured,space,width-8,rows.length);
+  if(!balanced)continue;
+  rows.splice(0,rows.length,...balanced);
   // Below-the-answer scrambled glyphs grow with the writing cells.
   // The same metrics drive the browser SVG and the exported vector PDF.
   const scrambleFontSize=mode==='unscramble'
@@ -135,25 +136,30 @@ function planReconstruction(chunks:Chunk[],metrics:Metrics,mode:'unscramble'|'up
     (mode==='unscramble'?scrambleFontSize:invertedFontSize)+2;
   const minimumStep=mode==='unscramble'?Math.max(29,fontSize+glyphOffset+3):
     Math.max(21.2,requiredBelow+2.8);
+  // Upside Down has an answer rule AND an inverted letter below it. Its old
+  // 29pt cap squeezed short two-line verses against the top of the region.
+  // Expand toward a comfortable 42pt pitch when the available height allows;
+  // the existing measured minimum and actual print-safe height still govern
+  // long passages.
   const preferredStep=mode==='unscramble'?
-    Math.min(43.5,Math.max(minimumStep,fontSize*2.1)):29;
+    Math.min(43.5,Math.max(minimumStep,fontSize*2.1)):42;
   const availableStep=rows.length===1?preferredStep:
     (bottom-top-requiredBelow)/(rows.length-1);
   const step=Math.min(preferredStep,availableStep);
   if(step<minimumStep-.001)continue;
   if(top+(rows.length-1)*step+requiredBelow>bottom+.001)continue;
-  // Treat the title and ALL verse lines as one block. Center their visible
-  // composition vertically instead of pinning it to the top of the module.
-  // Reserve full glyph height for clipping safety, but estimate visible ink
-  // beneath scrambled-letter baselines for a visually balanced center.
+  // Center the title and verse together in both modes. Upside-down glyphs
+  // extend BELOW their flipped baselines; scrambled glyphs sit above theirs.
+  // Use the correct ink envelope for each mode, then clamp the group against
+  // the 4pt safety inset so long passages cannot clip after centering.
   const visibleTop=titleY-titleSize*.8;
-  const visibleBottom=top+(rows.length-1)*step+glyphOffset+scrambleFontSize*.28+2;
+  const visibleBottom=top+(rows.length-1)*step+glyphOffset+
+    (mode==='upside'?invertedFontSize*.82:scrambleFontSize*.28)+2;
   const desiredShift=(height-visibleTop-visibleBottom)/2;
-  const verticalShift=mode==='unscramble'
-    ?Math.max(4-visibleTop,Math.min(desiredShift,
-      height-4-(top+(rows.length-1)*step+requiredBelow))):0;
-  if(mode==='unscramble'&&(visibleTop+verticalShift<4-.001||
-     top+(rows.length-1)*step+requiredBelow+verticalShift>height-4+.001))continue;
+  const verticalShift=Math.max(4-visibleTop,Math.min(desiredShift,
+    height-4-(top+(rows.length-1)*step+requiredBelow)));
+  if(visibleTop+verticalShift<4-.001||
+     top+(rows.length-1)*step+requiredBelow+verticalShift>height-4+.001)continue;
   const rowWidths=rows.map(row=>row.reduce((sum,chunk)=>sum+chunk.width,0)+
    Math.max(0,row.length-1)*space);
   const marks:ReconstructionMark[]=[];
