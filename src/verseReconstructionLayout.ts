@@ -148,25 +148,36 @@ function planReconstruction(chunks:Chunk[],metrics:Metrics,mode:'unscramble'|'up
   const step=Math.min(preferredStep,availableStep);
   if(step<minimumStep-.001)continue;
   if(top+(rows.length-1)*step+requiredBelow>bottom+.001)continue;
+  // The title is another baseline in the composition. When the verse is
+  // short, leave 120% of the verse's row pitch between the title baseline
+  // and the first writing rule. For long passages, use only the actual
+  // available extra height; never reduce the normal row pitch or clip glyphs.
+  // Unscramble Verse keeps its independent title-to-answer spacing.
+  const visibleTop=titleY-titleSize*.8;
+  const lastBound=top+(rows.length-1)*step+requiredBelow;
+  const desiredTitleGap=mode==='upside'
+    ?Math.max(0,step*1.2-(top-titleY)):0;
+  const availableTitleGap=Math.max(0,height-8-(lastBound-visibleTop));
+  const firstRowExtra=Math.min(desiredTitleGap,availableTitleGap);
+  const rowTop=top+firstRowExtra;
   // Center the title and verse together in both modes. Upside-down glyphs
   // extend BELOW their flipped baselines; scrambled glyphs sit above theirs.
   // Use the correct ink envelope for each mode, then clamp the group against
   // the 4pt safety inset so long passages cannot clip after centering.
-  const visibleTop=titleY-titleSize*.8;
-  const visibleBottom=top+(rows.length-1)*step+glyphOffset+
+  const visibleBottom=rowTop+(rows.length-1)*step+glyphOffset+
     (mode==='upside'?invertedFontSize*.82:scrambleFontSize*.28)+2;
   const desiredShift=(height-visibleTop-visibleBottom)/2;
   const verticalShift=Math.max(4-visibleTop,Math.min(desiredShift,
-    height-4-(top+(rows.length-1)*step+requiredBelow)));
+    height-4-(rowTop+(rows.length-1)*step+requiredBelow)));
   if(visibleTop+verticalShift<4-.001||
-     top+(rows.length-1)*step+requiredBelow+verticalShift>height-4+.001)continue;
+     rowTop+(rows.length-1)*step+requiredBelow+verticalShift>height-4+.001)continue;
   const rowWidths=rows.map(row=>row.reduce((sum,chunk)=>sum+chunk.width,0)+
    Math.max(0,row.length-1)*space);
   const marks:ReconstructionMark[]=[];
   for(let line=0;line<rows.length;line++){
    const widthUsed=rows[line].reduce((sum,c)=>sum+c.width,0)+(rows[line].length-1)*space;
    let x=(width-widthUsed)/2;
-   const y=top+line*step+verticalShift;
+   const y=rowTop+line*step+verticalShift;
    for(const chunk of rows[line]){
     for(const {segment} of chunk.items){
      if(segment.kind==='ordinary'){
