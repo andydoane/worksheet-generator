@@ -1,0 +1,1275 @@
+{
+  "schemaVersion": 1,
+  "id": "ot-035-the-golden-calf",
+  "curriculum": {
+    "series": "OT",
+    "lessonNumber": 35
+  },
+  "lessonDetails": {
+    "title": "The Golden Calf",
+    "scripturePassages": [
+      "Exodus 32:1–35",
+      "Exodus 20:3–5",
+      "1 Timothy 2:5"
+    ],
+    "scriptureDisplay": "Exodus 32",
+    "bigIdeas": [
+      {
+        "text": "Jesus is our man in the middle, who died in our place.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      }
+    ],
+    "memoryVerse": {
+      "reference": "1 Timothy 2:5",
+      "translation": "BSB",
+      "text": "For there is one God, and there is one mediator between God and men, the man Christ Jesus,",
+      "isExcerpt": false,
+      "hasEllipses": false,
+      "requiresTextReview": false,
+      "teacherReviewRequired": true,
+      "origin": "adapted",
+      "originalTranslation": "ESV (original curriculum; BSB unverified)",
+      "bsbSource": {
+        "reference": "1 Timothy 2:5",
+        "sourceUrl": "https://bereanbible.com/bsb.txt",
+        "publicDomainTerms": "https://berean.bible/terms.htm",
+        "startWord": 0,
+        "endWord": 17
+      }
+    }
+  },
+  "preparedActivities": {
+    "drawPicture": {
+      "prompt": "the people dancing around the golden calf",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "multipleChoice": [
+      {
+        "id": "mc-01",
+        "question": "Why did the Israelites ask Aaron to make a god?",
+        "correctAnswer": "Moses had been away a long time",
+        "choices": [
+          {
+            "text": "Moses had been away a long time",
+            "isCorrect": true,
+            "origin": "adapted",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "They forgot about the Lord",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "They had lost the stone tablets",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-02",
+        "question": "What did Aaron use to make the golden calf?",
+        "correctAnswer": "Gold earrings",
+        "choices": [
+          {
+            "text": "Gold earrings",
+            "isCorrect": true,
+            "origin": "adapted",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "Silver spoons",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "Metal swords",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-03",
+        "question": "What did the people claim the golden calf had done?",
+        "correctAnswer": "Brought them out of Egypt",
+        "choices": [
+          {
+            "text": "Brought them out of Egypt",
+            "isCorrect": true,
+            "origin": "adapted",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "Given Moses the law",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "Sent manna from heaven",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-04",
+        "question": "What did Moses remind God of when he prayed?",
+        "correctAnswer": "God's promises to his people",
+        "choices": [
+          {
+            "text": "God's promises to his people",
+            "isCorrect": true,
+            "origin": "adapted",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "The second commandment",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "The size of the golden calf",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-05",
+        "question": "What did Moses do when he saw the people worship the idol?",
+        "correctAnswer": "Threw down the stone tablets",
+        "choices": [
+          {
+            "text": "Threw down the stone tablets",
+            "isCorrect": true,
+            "origin": "adapted",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "Kicked the calf",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "Joined them",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-06",
+        "question": "How did Aaron explain the calf to Moses?",
+        "correctAnswer": "He claimed it came out of the fire",
+        "choices": [
+          {
+            "text": "He claimed it came out of the fire",
+            "isCorrect": true,
+            "origin": "adapted",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "He said Moses had made the calf",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "He said it fell down from heaven",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "trueFalse": {
+      "factId": "tf-07",
+      "statement": "Aaron lied to Moses about how the golden calf was made.",
+      "isTrue": true,
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "firstLetters": {
+      "reference": "1 Timothy 2:5",
+      "verse": "For there is one God, and there is one mediator between God and men, the man Christ Jesus,",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "oddWords": {
+      "related": [
+        "MOSES",
+        "AARON",
+        "CALF",
+        "SINAI",
+        "TABLETS"
+      ],
+      "unrelated": [
+        "JONAH",
+        "RAVEN",
+        "GOLIATH",
+        "WHALE",
+        "VINEYARD"
+      ],
+      "unrelatedOrigin": "suggested",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "unscrambleWords": {
+      "answers": [
+        "EARRINGS",
+        "FORTY DAYS"
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "checkboxes": {
+      "correct": [
+        "GOLD",
+        "MOSES",
+        "PLAGUE",
+        "AARON",
+        "CALF"
+      ],
+      "incorrect": [
+        "DAVID",
+        "SAMSON",
+        "LADDER",
+        "JERICHO",
+        "DANIEL"
+      ],
+      "incorrectOrigin": "suggested",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "whoAmI": {
+      "clue": "I collected gold earrings and shaped them into a statue of a golden calf. I lied to my brother about how it was made.",
+      "answer": "Aaron",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "matchWords": [
+      {
+        "id": "mp-01",
+        "left": "Aaron",
+        "right": "Made calf",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-02",
+        "left": "Idol",
+        "right": "Calf",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-03",
+        "left": "Moses",
+        "right": "Gone 40 days",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-04",
+        "left": "Promises",
+        "right": "Abraham Isaac Jacob",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-05",
+        "left": "Tablets",
+        "right": "Broken",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-06",
+        "left": "People",
+        "right": "Worshiped idol",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "finishVerse": {
+      "reference": "1 Timothy 2:5",
+      "markedVerse": "[For] there is [one] God, and there is one [mediator] between [God] and [men], the [man] Christ [Jesus],",
+      "sourceVerse": "For there is one God, and there is one mediator between God and men, the man Christ Jesus,",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "unscrambleVerse": {
+      "reference": "1 Timothy 2:5",
+      "markedVerse": "[For] there is [one] God, and there is one [mediator] between [God] and [men], the [man] Christ [Jesus],",
+      "sourceVerse": "For there is one God, and there is one mediator between God and men, the man Christ Jesus,",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "circleMistakes": {
+      "paragraph": "While Moses was away on Mount Sinai for forty years, the Israelites gave Aaron silver rings. Aaron shaped them into a bronze horse. The people worshiped the idol in a quiet celebration. On the mountain, God told Joshua what was happening. When Moses came down with the stone tablets, he threw them at Aaron. He praised Aaron for making the idol. Moses burned the idol and ground it into a powder. God sent a plague to punish the people",
+      "mistakeCount": 7,
+      "mistakes": [
+        {
+          "incorrect": "forty years",
+          "correction": "forty days",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "silver rings",
+          "correction": "gold earrings",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "bronze horse",
+          "correction": "golden calf",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "quiet celebration",
+          "correction": "wild celebration",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "Joshua",
+          "correction": "Moses",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "threw them at Aaron",
+          "correction": "broke them",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "praised Aaron",
+          "correction": "questioned Aaron",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "mediumWordSearch": {
+      "words": [
+        "MOSES",
+        "AARON",
+        "CALF",
+        "SINAI",
+        "GOLD",
+        "PLAGUE"
+      ],
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "trueFalseMaze": {
+      "factId": "tf-08",
+      "statement": "God struck the people with a plague after their sin.",
+      "isTrue": true,
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "bigIdeaCryptogram": {
+      "phrase": "The Lord remembers his promises.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "upsideDownVerse": {
+      "reference": "1 Timothy 2:5",
+      "verse": "For there is one God, and there is one mediator between God and men, the man Christ Jesus,",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "connectBigIdea": {
+      "phrase": "Moses offered to be punished in the place of his people.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "pixelPicture": {
+      "phrase": "Moses pointed to Jesus, our mediator who died in our place.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "finishStory": {
+      "markedParagraph": "While Moses was on Mount [SINAI], the people asked [AARON] to make them a god. He collected gold [EARRINGS] and made a golden [CALF]. The people worshiped it and celebrated [WILDLY]. God told Moses he would [DESTROY] the sinful people. Moses reminded God of his [PROMISES] to Abraham, Isaac, and Jacob, and God did not wipe them out. When [Moses] came down, he smashed the stone [TABLETS] and [BURNED] the idol. Aaron [LIED] about how he made it. Moses asked for forgiveness, but God sent a [PLAGUE].",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "storyOrder": [
+      {
+        "order": 1,
+        "text": "Aaron made a golden calf from the people’s gold earrings while Moses was away.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 2,
+        "text": "The Israelites claimed the calf had rescued them from Egypt and danced before it.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 3,
+        "text": "God told Moses that the people had sinned and threatened to destroy them.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 4,
+        "text": "Moses recalled God’s promises to the Israelites’ ancestors and asked for mercy.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 5,
+        "text": "Moses came down the mountain, broke the stone tablets, and destroyed the calf.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 6,
+        "text": "Aaron gave Moses a false explanation of how the calf had appeared.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 7,
+        "text": "Moses offered to bear the people’s punishment, but God struck them with a plague.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      }
+    ],
+    "sortStory": [
+      {
+        "factId": "tf-01",
+        "statement": "Aaron collected gold earrings and made a calf-shaped idol.",
+        "isTrue": true,
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-02",
+        "statement": "The Israelites celebrated and danced before the golden calf.",
+        "isTrue": true,
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-03",
+        "statement": "God told Moses that the people had become very sinful.",
+        "isTrue": true,
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-09",
+        "statement": "Moses asked Aaron to make the Israelites a new god.",
+        "isTrue": false,
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-10",
+        "statement": "The Israelites made a golden monkey idol.",
+        "isTrue": false,
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-11",
+        "statement": "God told Moses to build another golden calf on the mountain.",
+        "isTrue": false,
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      }
+    ],
+    "drawStory": [
+      {
+        "prompt": "Aaron collected gold earrings and made a calf-shaped idol.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "The Israelites danced and celebrated in front of the golden calf.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "Moses reminded God of his promises to Abraham, Isaac, and Jacob.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "Moses broke the stone tablets when he saw the people worshiping the idol.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "Moses burned the calf, ground it into powder, and put it in water.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "Moses prayed for forgiveness, but the Lord struck the people with a plague.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      }
+    ],
+    "wordSearch": {
+      "words": [
+        "MOSES",
+        "AARON",
+        "SINAI",
+        "EARRINGS",
+        "CALF",
+        "TABLETS",
+        "PROMISES",
+        "POWDER",
+        "PLAGUE",
+        "WORSHIP",
+        "MEDIATOR",
+        "JESUS"
+      ],
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "verseCryptogram": {
+      "reference": "1 Timothy 2:5",
+      "verse": "For there is one God, and there is one mediator between God and men, the man Christ Jesus,",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "crossword": [
+      {
+        "answer": "MOSES",
+        "clue": "Who returned from the mountain carrying stone tablets?",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "AARON",
+        "clue": "Who made the golden calf?",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "SINAI",
+        "clue": "Mountain where Moses spoke with God.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "EARRINGS",
+        "clue": "Gold jewelry used to make the idol.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "TABLETS",
+        "clue": "Stone pieces Moses broke in anger.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "CALF",
+        "clue": "Animal shaped into the golden idol.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "DANCING",
+        "clue": "What the people did as they worshiped",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "PLAGUE",
+        "clue": "Punishment God sent upon the Israelites.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "PROMISES",
+        "clue": "What Moses reminded God he had made to the ancestors.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      }
+    ],
+    "spiralVerse": {
+      "reference": "1 Timothy 2:5",
+      "verse": "For there is one God, and there is one mediator between God and men, the man Christ Jesus,",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "connectVerse": {
+      "reference": "1 Timothy 2:5",
+      "verse": "For there is one God, and there is one mediator between God and men, the man Christ Jesus,",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    }
+  },
+  "vocabulary": {
+    "related": [
+      "MOSES",
+      "AARON",
+      "SINAI",
+      "ISRAELITES",
+      "CALF",
+      "GOLD",
+      "EARRINGS",
+      "IDOL",
+      "FEAST",
+      "DANCING",
+      "TABLETS",
+      "PROMISES",
+      "ABRAHAM",
+      "ISAAC",
+      "JACOB",
+      "POWDER",
+      "WATER",
+      "PLAGUE",
+      "FORGIVE",
+      "JESUS",
+      "MEDIATOR",
+      "CROSS",
+      "PRAYER",
+      "BROTHER",
+      "FORTY DAYS",
+      "SIN",
+      "WORSHIP",
+      "BURNED",
+      "EGYPT",
+      "LAW",
+      "BOOK",
+      "SACRIFICE"
+    ],
+    "unrelated": [
+      "JONAH",
+      "RAVEN",
+      "GOLIATH",
+      "WHALE",
+      "VINEYARD",
+      "DAVID",
+      "SAMSON",
+      "LADDER",
+      "JERICHO",
+      "DANIEL",
+      "BOAT",
+      "LOCUSTS",
+      "POTIPHAR",
+      "FISHHOOK"
+    ],
+    "entries": [
+      {
+        "id": "v-01",
+        "term": "MOSES",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-02",
+        "term": "AARON",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-03",
+        "term": "SINAI",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-04",
+        "term": "ISRAELITES",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-05",
+        "term": "CALF",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-06",
+        "term": "GOLD",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-07",
+        "term": "EARRINGS",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-08",
+        "term": "IDOL",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-09",
+        "term": "FEAST",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-10",
+        "term": "DANCING",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-11",
+        "term": "TABLETS",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-12",
+        "term": "PROMISES",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-13",
+        "term": "ABRAHAM",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-14",
+        "term": "ISAAC",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-15",
+        "term": "JACOB",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-16",
+        "term": "POWDER",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-17",
+        "term": "WATER",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-18",
+        "term": "PLAGUE",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-19",
+        "term": "FORGIVE",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-20",
+        "term": "JESUS",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-21",
+        "term": "MEDIATOR",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-22",
+        "term": "CROSS",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-23",
+        "term": "PRAYER",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-24",
+        "term": "BROTHER",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-25",
+        "term": "FORTY DAYS",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-26",
+        "term": "SIN",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-27",
+        "term": "WORSHIP",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-28",
+        "term": "BURNED",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-29",
+        "term": "EGYPT",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-30",
+        "term": "LAW",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-31",
+        "term": "BOOK",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-32",
+        "term": "SACRIFICE",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      }
+    ]
+  },
+  "facts": [
+    {
+      "id": "tf-01",
+      "statement": "Aaron collected gold earrings and made a calf-shaped idol.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-02",
+      "statement": "The Israelites celebrated and danced before the golden calf.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-03",
+      "statement": "God told Moses that the people had become very sinful.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-04",
+      "statement": "Moses reminded God of promises made to Abraham, Isaac, and Jacob.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-05",
+      "statement": "Moses broke the two stone tablets when he saw the calf.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-06",
+      "statement": "Moses ground the calf into powder and put it into water.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-07",
+      "statement": "Aaron lied to Moses about how the golden calf was made.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-08",
+      "statement": "God struck the people with a plague after their sin.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-09",
+      "statement": "Moses asked Aaron to make the Israelites a new god.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-10",
+      "statement": "The Israelites made a golden monkey idol.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-11",
+      "statement": "God told Moses to build another golden calf on the mountain.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-12",
+      "statement": "Moses asked God to forget his promises to Abraham and Isaac.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-13",
+      "statement": "Moses worshiped the golden calf along with the people",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-14",
+      "statement": "God accepted Moses as the one who could pay for the sin of his people",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "characters": [
+    {
+      "id": "ch-01",
+      "name": "Moses",
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "clues": [
+        {
+          "text": "I came down Mount Sinai with stone tablets and destroyed a golden calf.",
+          "origin": "adapted",
+          "teacherReviewRequired": true
+        }
+      ]
+    },
+    {
+      "id": "ch-02",
+      "name": "Aaron",
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "clues": [
+        {
+          "text": "I collected gold earrings and shaped them into a calf idol.",
+          "origin": "adapted",
+          "teacherReviewRequired": true
+        }
+      ]
+    },
+    {
+      "id": "ch-03",
+      "name": "Israelites",
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "clues": [
+        {
+          "text": "We asked for a new god when our leader was away on the mountain.",
+          "origin": "adapted",
+          "teacherReviewRequired": true
+        }
+      ]
+    },
+    {
+      "id": "ch-04",
+      "name": "Jesus",
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "clues": [
+        {
+          "text": "I am the mediator who died in the place of sinners.",
+          "origin": "adapted",
+          "teacherReviewRequired": true
+        }
+      ]
+    }
+  ],
+  "drawingPrompts": [
+    {
+      "id": "dp-01",
+      "prompt": "Aaron shaping a golden calf from the people’s earrings",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "dp-02",
+      "prompt": "the Israelites dancing around their golden calf idol",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "dp-03",
+      "prompt": "Moses praying on Mount Sinai for the Israelites",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "dp-04",
+      "prompt": "Moses carrying two stone tablets down the mountain",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "dp-05",
+      "prompt": "Moses throwing the stone tablets onto the ground",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "dp-06",
+      "prompt": "Moses grinding the golden calf into powder",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "dp-07",
+      "prompt": "Aaron explaining the calf to his brother Moses",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "dp-08",
+      "prompt": "Moses asking God to forgive his people",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "matchingPairs": [
+    {
+      "id": "mp-01",
+      "left": "Aaron",
+      "right": "Made the golden calf",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "mp-02",
+      "left": "Earrings",
+      "right": "Gold for the idol",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "mp-03",
+      "left": "Moses",
+      "right": "Prayed for the people",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "mp-04",
+      "left": "Promises",
+      "right": "Abraham Isaac Jacob",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "mp-05",
+      "left": "Tablets",
+      "right": "Broken at Sinai",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "mp-06",
+      "left": "Plague",
+      "right": "Punishment for sin",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    }
+  ],
+  "keyPhrases": [
+    {
+      "id": "kp-01",
+      "text": "Jesus is our man in the middle, who died in our place.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "kp-02",
+      "text": "Moses asked God to forgive his sinful people.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "kp-03",
+      "text": "The golden calf could not rescue the Israelites.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "kp-04",
+      "text": "Only the true God rescued Israel from Egypt.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "kp-05",
+      "text": "The Lord remembers his promises.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "kp-06",
+      "text": "Jesus is our mediator between God and sinners.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "kp-review-1",
+      "text": "Moses offered to be punished in the place of his people.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "publication": {
+    "status": "approved",
+    "approved": true,
+    "teacherSignoff": {
+      "reviewer": "Andrew Doane",
+      "date": "2026-11-08",
+      "notes": "Approved with verified BSB verse through Curriculum Review Studio"
+    },
+    "scriptureRights": {
+      "status": "cleared",
+      "basis": "Berean Standard Bible (BSB), dedicated to the public domain on April 30, 2023. Official terms: https://berean.bible/terms.htm. Scripture text confirmed against https://bereanbible.com/bsb.txt.",
+      "reviewedBy": "Andrew Doane",
+      "reviewedOn": "2026-11-08"
+    },
+    "resolvedReviewFlagIds": [],
+    "notes": "Approved through Review Studio after teacher review and a successful 27/27 content/preflight check of four numbered presets. Original conversion notes and checks remain as historical records.",
+    "reviewStudioVerification": {
+      "source": "Review Studio measured preflight",
+      "checkedAt": "2026-11-08T03:01:03.473Z",
+      "convertedCount": 27,
+      "totalCount": 27,
+      "issueCount": 0,
+      "numberedPresetsChecked": 4,
+      "scope": "Candidate-specific content conversion, four numbered preset content checks, and measured Connect the Verse fit. Standalone repository commands and independently rendered PDFs are not claimed.",
+      "matchingWorksheetSource": "preparedActivities.matchWords",
+      "matchingCandidatePool": "matchingPairs is retained separately as historical/source candidate material"
+    },
+    "reviewFlagDisposition": []
+  },
+  "schemaStatus": "approved; Review Studio 27/27 preflight passed"
+}
