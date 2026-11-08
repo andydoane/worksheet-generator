@@ -1,0 +1,1365 @@
+{
+  "schemaVersion": 1,
+  "id": "ot-036-the-tabernacle",
+  "curriculum": {
+    "series": "OT",
+    "lessonNumber": 36
+  },
+  "lessonDetails": {
+    "title": "The Tabernacle",
+    "scripturePassages": [
+      "Exodus 25",
+      "Exodus 28",
+      "Exodus 30",
+      "Exodus 40",
+      "Hebrews 10:19"
+    ],
+    "scriptureDisplay": "Exodus 25–30, 40",
+    "bigIdeas": [
+      {
+        "text": "Because of JESUS, we don’t need a Tabernacle to meet with God.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      }
+    ],
+    "memoryVerse": {
+      "reference": "Hebrews 10:19",
+      "translation": "BSB",
+      "text": "we have confidence to enter the Most Holy Place by the blood of Jesus,",
+      "isExcerpt": true,
+      "hasEllipses": false,
+      "requiresTextReview": false,
+      "teacherReviewRequired": true,
+      "origin": "adapted",
+      "originalTranslation": "ESV (original curriculum; BSB unverified)",
+      "bsbSource": {
+        "reference": "Hebrews 10:19",
+        "sourceUrl": "https://bereanbible.com/bsb.txt",
+        "publicDomainTerms": "https://berean.bible/terms.htm",
+        "startWord": 3,
+        "endWord": 16
+      }
+    }
+  },
+  "preparedActivities": {
+    "drawPicture": {
+      "prompt": "a gold-covered ark with two cherubim spreading their wings",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "multipleChoice": [
+      {
+        "id": "mc-01",
+        "question": "What did God tell Moses to build on the mountain?",
+        "correctAnswer": "A special tent",
+        "choices": [
+          {
+            "text": "A special tent",
+            "isCorrect": true,
+            "origin": "adapted",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "A holy sword",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "A golden statue",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-02",
+        "question": "What was kept inside the Ark of the Covenant?",
+        "correctAnswer": "The stone tablets of the law",
+        "choices": [
+          {
+            "text": "The stone tablets of the law",
+            "isCorrect": true,
+            "origin": "adapted",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "Twelve loaves of bread",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "Gold and silver bars",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-03",
+        "question": "What rested on top of the Ark of the Covenant?",
+        "correctAnswer": "Two angels with spread wings",
+        "choices": [
+          {
+            "text": "Two angels with spread wings",
+            "isCorrect": true,
+            "origin": "adapted",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "A crown",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "A statue of the Lord",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-04",
+        "question": "Which objects belonged in the Holy Place?",
+        "correctAnswer": "Table, lampstand, incense altar",
+        "choices": [
+          {
+            "text": "Table, lampstand, incense altar",
+            "isCorrect": true,
+            "origin": "adapted",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "The Golden Calf",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "The Ark of the Covenant",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-05",
+        "question": "Who did God appoint to serve as priests?",
+        "correctAnswer": "Aaron and his sons",
+        "choices": [
+          {
+            "text": "Aaron and his sons",
+            "isCorrect": true,
+            "origin": "adapted",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "Joshua and his sons",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "Moses and his sons",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-06",
+        "question": "What happened once the Tabernacle was set up?",
+        "correctAnswer": "God’s glory filled the tent",
+        "choices": [
+          {
+            "text": "God’s glory filled the tent",
+            "isCorrect": true,
+            "origin": "adapted",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "The tent collapsed in the wind",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          },
+          {
+            "text": "It caught on fire",
+            "isCorrect": false,
+            "origin": "suggested",
+            "teacherReviewRequired": true
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "trueFalse": {
+      "factId": "tf-07",
+      "statement": "Aaron and his sons served as priests in the Tabernacle.",
+      "isTrue": true,
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "firstLetters": {
+      "reference": "Hebrews 10:19",
+      "verse": "we have confidence to enter the Most Holy Place by the blood of Jesus,",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "oddWords": {
+      "related": [
+        "ARK",
+        "INCENSE",
+        "CURTAIN",
+        "LAMPSTAND",
+        "PRIEST"
+      ],
+      "unrelated": [
+        "bush",
+        "horses",
+        "Horeb",
+        "axehead",
+        "Isaac"
+      ],
+      "unrelatedOrigin": "suggested",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "unscrambleWords": {
+      "answers": [
+        "PRIEST",
+        "TABERNACLE"
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "checkboxes": {
+      "correct": [
+        "CHERUBIM",
+        "GOLD",
+        "SHOWBREAD",
+        "OIL",
+        "EPHOD"
+      ],
+      "incorrect": [
+        "travelers",
+        "banquet",
+        "tongues",
+        "Elijah",
+        "plague"
+      ],
+      "incorrectOrigin": "suggested",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "whoAmI": {
+      "clue": "God chose me and my sons to serve as priests in the Tabernacle. I was given special clothing to wear.",
+      "answer": "Aaron",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "matchWords": [
+      {
+        "id": "mp-01",
+        "left": "Ark",
+        "right": "Two taablets",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-02",
+        "left": "Gold Table",
+        "right": "Bread",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-03",
+        "left": "Light",
+        "right": "Lampstand",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-04",
+        "left": "Incense",
+        "right": "Smoke",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-05",
+        "left": "Aaron",
+        "right": "Priest",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-06",
+        "left": "Angels",
+        "right": "Ark of Covenant",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "finishVerse": {
+      "reference": "Hebrews 10:19",
+      "markedVerse": "[we] have confidence to [enter] the [Most] Holy [Place] by the [blood] of [Jesus],",
+      "sourceVerse": "we have confidence to enter the Most Holy Place by the blood of Jesus,",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "unscrambleVerse": {
+      "reference": "Hebrews 10:19",
+      "markedVerse": "[we] have confidence to [enter] the [Most] Holy [Place] by the [blood] of [Jesus],",
+      "sourceVerse": "we have confidence to enter the Most Holy Place by the blood of Jesus,",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "circleMistakes": {
+      "paragraph": "God gave Moses a plan for a huge holy tower. The ark was a silver box holding twelve loaves of bread. The Holy Place held the golden chair, the lampstand, and the table of bread. Aaron and his sons were chosen as shepherds, and they burned sand on the incense altar. When the Tabernacle was finished, a rainbow filled the tent.",
+      "mistakeCount": 7,
+      "mistakes": [
+        {
+          "incorrect": "huge holy tower",
+          "correction": "special tent",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "silver box",
+          "correction": "gold-covered wooden chest",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "twelve loaves of bread",
+          "correction": "stone tablets of the law",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "golden chair",
+          "correction": "altar of incense, lampstand, and table of bread",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "shepherds",
+          "correction": "priests",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "sand",
+          "correction": "incense",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "rainbow",
+          "correction": "cloud of God’s glory",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "mediumWordSearch": {
+      "words": [
+        "ARK",
+        "BREAD",
+        "LAMP",
+        "ALTAR",
+        "CLOUD",
+        "MOSES"
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "trueFalseMaze": {
+      "factId": "tf-08",
+      "statement": "God’s glory filled the Tabernacle when it was set up.",
+      "isTrue": true,
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "bigIdeaCryptogram": {
+      "phrase": "Jesus opened the way for sinners to meet with God.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "upsideDownVerse": {
+      "reference": "Hebrews 10:19",
+      "verse": "we have confidence to enter the Most Holy Place by the blood of Jesus,",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "connectBigIdea": {
+      "phrase": "Because of Jesus we do not need a Tabernacle to meet with God.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "pixelPicture": {
+      "phrase": "Because of Jesus, we can meet with God without a Tabernacle tent.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "finishStory": {
+      "markedParagraph": "At Mount [SINAI], God told [MOSES] to build a special [TENT] called the Tabernacle. Inside the Most [Holy] Place stood the gold-covered [ARK] containing the stone tablets. Above its cover stood two [angels]. In the Holy Place, a table held twelve loaves of [BREAD]. A golden [LAMPSTAND] gave light, and an altar burned [INCENSE]. God chose [AARON] and his sons to work in the tabernacle as priests. A [CURTAIN] separated the two rooms. When the tent was ready, God’s [GLORY] filled it.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "storyOrder": [
+      {
+        "order": 1,
+        "text": "God instructed Moses to make a sacred tent where he would meet with Israel.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 2,
+        "text": "God described the gold-covered Ark of the Covenant with two cherubim on its cover.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 3,
+        "text": "God gave directions for the bread table, seven-lamp stand, and incense altar.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 4,
+        "text": "God appointed Aaron and his sons to serve as priests in special clothes.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 5,
+        "text": "Moses directed skilled workers to make the tent and its furnishings.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 6,
+        "text": "The completed tent was set up with the ark behind the dividing curtain.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 7,
+        "text": "A cloud covered the tent, and the glory of the Lord filled the Tabernacle.",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      }
+    ],
+    "sortStory": [
+      {
+        "factId": "tf-01",
+        "statement": "God gave Moses plans for a special tent called the Tabernacle.",
+        "isTrue": true,
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-02",
+        "statement": "The Ark of the Covenant was a wooden chest covered in gold.",
+        "isTrue": true,
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-03",
+        "statement": "The stone tablets of God’s law were placed inside the ark.",
+        "isTrue": true,
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-04",
+        "statement": "The table in the Holy Place held twelve loaves of bread.",
+        "isTrue": true,
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-09",
+        "statement": "God told Moses to build the Tabernacle from bricks.",
+        "isTrue": false,
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-10",
+        "statement": "The Ark of the Covenant was a boat that carried animals.",
+        "isTrue": false,
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-11",
+        "statement": "The priests kept the twelve loaves inside the golden lampstand.",
+        "isTrue": false,
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-12",
+        "statement": "The Most Holy Place contained the table and the lampstand.",
+        "isTrue": false,
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      }
+    ],
+    "drawStory": [
+      {
+        "prompt": "God told Moses to make a special tent where he would meet with Israel.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "Moses received plans for a gold-covered ark and its two cherubim.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "Workers made the table, lampstand, and incense altar for the tent.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "Aaron and his sons were chosen to serve as priests.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "The curtain divided the Holy Place from the Most Holy Place.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "God’s glory filled the completed Tabernacle as a cloud covered it.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "wordSearch": {
+      "words": [
+        "TABERNACLE",
+        "CHERUBIM",
+        "COVENANT",
+        "LAMPSTAND",
+        "SHOWBREAD",
+        "INCENSE",
+        "CURTAIN",
+        "PRIEST",
+        "MOSES",
+        "GLORY",
+        "SINAI",
+        "SACRIFICE"
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "verseCryptogram": {
+      "reference": "Hebrews 10:19",
+      "verse": "we have confidence to enter the Most Holy Place by the blood of Jesus,",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "crossword": [
+      {
+        "answer": "MOSES",
+        "clue": "God gave him instructions for the Tabernacle.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "AARON",
+        "clue": "Brother of Moses who served as high priest.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "ARK",
+        "clue": "Gold-covered chest that held the stone tablets.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "Angels",
+        "clue": "Two winged figures on the cover of the ark.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "BREAD",
+        "clue": "Twelve loaves placed on a special table.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "LAMPSTAND",
+        "clue": "Golden object with seven lamps.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "INCENSE",
+        "clue": "Sweet-smelling material burned on a small altar.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "CURTAIN",
+        "clue": "Divider between the two rooms of the tent.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "GLORY",
+        "clue": "What filled the completed tent with a cloud.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "MEETING",
+        "clue": "The Tabernacle was also called the Tent of this.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "spiralVerse": {
+      "reference": "Hebrews 10:19",
+      "verse": "we have confidence to enter the Most Holy Place by the blood of Jesus,",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "connectVerse": {
+      "reference": "Hebrews 10:19",
+      "verse": "we have confidence to enter the Most Holy Place by the blood of Jesus,",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    }
+  },
+  "vocabulary": {
+    "related": [
+      "TABERNACLE",
+      "MOSES",
+      "SINAI",
+      "TENT",
+      "ARK",
+      "COVENANT",
+      "GOLD",
+      "CHERUBIM",
+      "BREAD",
+      "SHOWBREAD",
+      "LAMPSTAND",
+      "SEVEN",
+      "OIL",
+      "INCENSE",
+      "ALTAR",
+      "AARON",
+      "PRIEST",
+      "EPHOD",
+      "JEWELS",
+      "TWELVE",
+      "CURTAIN",
+      "HOLY PLACE",
+      "MOST HOLY",
+      "CLOUD",
+      "GLORY",
+      "JESUS",
+      "BLOOD",
+      "SACRIFICE",
+      "PRAYERS",
+      "ISRAEL",
+      "WOOD",
+      "TABLE",
+      "TRIBES",
+      "LIGHT",
+      "ALMOND",
+      "WINGS",
+      "HOLY",
+      "HEBREWS",
+      "MEETING"
+    ],
+    "unrelated": [
+      "SLING",
+      "GOLIATH",
+      "JONAH",
+      "WHALE",
+      "LADDER",
+      "ZACCHAEUS",
+      "DANIEL",
+      "LIONS",
+      "PHARAOH",
+      "MANGER",
+      "FISHHOOK",
+      "RAVEN",
+      "GIANT",
+      "CROWN",
+      "PALACE",
+      "CAVE"
+    ],
+    "entries": [
+      {
+        "id": "v-01",
+        "term": "TABERNACLE",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-02",
+        "term": "MOSES",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-03",
+        "term": "SINAI",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-04",
+        "term": "TENT",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-05",
+        "term": "ARK",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-06",
+        "term": "COVENANT",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-07",
+        "term": "GOLD",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-08",
+        "term": "CHERUBIM",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-09",
+        "term": "BREAD",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-10",
+        "term": "SHOWBREAD",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-11",
+        "term": "LAMPSTAND",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-12",
+        "term": "SEVEN",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-13",
+        "term": "OIL",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-14",
+        "term": "INCENSE",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-15",
+        "term": "ALTAR",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-16",
+        "term": "AARON",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-17",
+        "term": "PRIEST",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-18",
+        "term": "EPHOD",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-19",
+        "term": "JEWELS",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-20",
+        "term": "TWELVE",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-21",
+        "term": "CURTAIN",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-22",
+        "term": "HOLY PLACE",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-23",
+        "term": "MOST HOLY",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-24",
+        "term": "CLOUD",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-25",
+        "term": "GLORY",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-26",
+        "term": "JESUS",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-27",
+        "term": "BLOOD",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-28",
+        "term": "SACRIFICE",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-29",
+        "term": "PRAYERS",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-30",
+        "term": "ISRAEL",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-31",
+        "term": "WOOD",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-32",
+        "term": "TABLE",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-33",
+        "term": "TRIBES",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-34",
+        "term": "LIGHT",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-35",
+        "term": "ALMOND",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-36",
+        "term": "WINGS",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-37",
+        "term": "HOLY",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-38",
+        "term": "HEBREWS",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "v-39",
+        "term": "MEETING",
+        "category": "vocabulary",
+        "scope": "current-lesson",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      }
+    ]
+  },
+  "facts": [
+    {
+      "id": "tf-01",
+      "statement": "God gave Moses plans for a special tent called the Tabernacle.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-02",
+      "statement": "The Ark of the Covenant was a wooden chest covered in gold.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-03",
+      "statement": "The stone tablets of God’s law were placed inside the ark.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-04",
+      "statement": "The table in the Holy Place held twelve loaves of bread.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-05",
+      "statement": "The golden lampstand had seven lamps for lighting the tent.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-06",
+      "statement": "The altar of incense was in the Holy Place.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-07",
+      "statement": "Aaron and his sons served as priests in the Tabernacle.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-08",
+      "statement": "God’s glory filled the Tabernacle when it was set up.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-09",
+      "statement": "God told Moses to build the Tabernacle from bricks.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-10",
+      "statement": "The Ark of the Covenant was a boat that carried animals.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-11",
+      "statement": "The priests kept the twelve loaves inside the golden lampstand.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-12",
+      "statement": "The Most Holy Place contained the table and the lampstand.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-13",
+      "statement": "Moses chose Pharaoh to be the Tabernacle’s first priest.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-14",
+      "statement": "Everyone was allowed to be a priest.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "characters": [
+    {
+      "id": "ch-01",
+      "name": "Moses",
+      "clues": [
+        {
+          "text": "God gave me plans for the special tent on Mount Sinai.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "text": "I directed workers to set up the Tabernacle.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "ch-02",
+      "name": "Aaron",
+      "clues": [
+        {
+          "text": "My sons and I were chosen to be priests.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "text": "I wore special clothing with twelve jewels on the breastplate.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "ch-03",
+      "name": "Jesus",
+      "clues": [
+        {
+          "text": "Because of my blood, people can meet with God without a Tabernacle.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    }
+  ],
+  "drawingPrompts": [
+    {
+      "id": "scene-01",
+      "prompt": "Moses receiving instructions for a special tent on Mount Sinai",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "scene-02",
+      "prompt": "a gold-covered ark with two cherubim spreading their wings",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "scene-03",
+      "prompt": "a wooden table covered with gold and holding twelve loaves",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "scene-04",
+      "prompt": "a seven-lamp golden lampstand shaped like an almond tree",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "scene-05",
+      "prompt": "a priest burning sweet-smelling incense at a small golden altar",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "scene-06",
+      "prompt": "Aaron wearing a breastplate with twelve colorful jewels",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "scene-07",
+      "prompt": "a curtain dividing the Holy Place from the Most Holy Place",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "scene-08",
+      "prompt": "a thick cloud of God’s glory covering the finished Tabernacle",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "matchingPairs": [
+    {
+      "id": "mp-01",
+      "left": "Ark",
+      "right": "Stone tablets",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "mp-02",
+      "left": "Table",
+      "right": "Twelve loaves",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "mp-03",
+      "left": "Lampstand",
+      "right": "Seven lamps",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "mp-04",
+      "left": "Incense altar",
+      "right": "Sweet smelling smoke",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "mp-05",
+      "left": "Holy Place",
+      "right": "Table and lamps",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "mp-06",
+      "left": "Most Holy Place",
+      "right": "Ark of Covenant",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    }
+  ],
+  "keyPhrases": [
+    {
+      "id": "kp-01",
+      "text": "Because of Jesus, we can meet with God.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "kp-02",
+      "text": "God gave Moses a plan for a special tent.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "kp-03",
+      "text": "God’s glory filled the Tabernacle.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "kp-04",
+      "text": "The ark belonged in the Most Holy Place.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "kp-05",
+      "text": "The priests cared for the Tabernacle.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "kp-06",
+      "text": "Jesus opened the way to meet with God.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "kp-review-1",
+      "text": "Jesus opened the way for sinners to meet with God.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "kp-review-2",
+      "text": "Because of Jesus we do not need a Tabernacle to meet with God.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "publication": {
+    "status": "approved",
+    "approved": true,
+    "teacherSignoff": {
+      "reviewer": "Andrew Doane",
+      "date": "2026-11-08",
+      "notes": "Approved with verified BSB verse through Curriculum Review Studio"
+    },
+    "scriptureRights": {
+      "status": "cleared",
+      "basis": "Berean Standard Bible (BSB), dedicated to the public domain on April 30, 2023. Official terms: https://berean.bible/terms.htm. Scripture text confirmed against https://bereanbible.com/bsb.txt.",
+      "reviewedBy": "Andrew Doane",
+      "reviewedOn": "2026-11-08"
+    },
+    "resolvedReviewFlagIds": [],
+    "notes": "Approved through Review Studio after teacher review and a successful 27/27 content/preflight check of four numbered presets. Original conversion notes and checks remain as historical records.",
+    "reviewStudioVerification": {
+      "source": "Review Studio measured preflight",
+      "checkedAt": "2026-11-08T03:28:28.439Z",
+      "convertedCount": 27,
+      "totalCount": 27,
+      "issueCount": 0,
+      "numberedPresetsChecked": 4,
+      "scope": "Candidate-specific content conversion, four numbered preset content checks, and measured Connect the Verse fit. Standalone repository commands and independently rendered PDFs are not claimed.",
+      "matchingWorksheetSource": "preparedActivities.matchWords",
+      "matchingCandidatePool": "matchingPairs is retained separately as historical/source candidate material"
+    },
+    "reviewFlagDisposition": []
+  },
+  "schemaStatus": "approved; Review Studio 27/27 preflight passed"
+}
