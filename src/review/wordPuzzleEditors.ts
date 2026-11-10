@@ -84,6 +84,71 @@ export function unscrambleChoices(lesson:Lesson):WordChoice[]{
  }
  return results;
 }
+/** Candidate replacements for a numbered-preset Unscramble conflict.
+ * `usedVocabulary` is computed by the exact preset builder from preceding
+ * printed activities. Terms without source IDs remain honest lesson vocabulary,
+ * never mislabeled as source-cited words.
+ */
+export type UnscrambleReplacement={
+ term:string;vocabularyId:string;origin?:string;sourceIds:string[];
+ notes:{id:string;page?:string;text?:string}[];
+};
+export type UnscrambleRepairSuggestions={
+ usedWords:string[];
+ candidates:UnscrambleReplacement[];
+ pairs:[string,string][];
+};
+const normalizedClaim=(word:string)=>'vocab:'+word.trim().replace(/\s+/gu,' ').toLocaleLowerCase('en-US');
+export function unscrambleRepairSuggestions(
+ lesson:Lesson,usedVocabulary:readonly string[],
+):UnscrambleRepairSuggestions{
+ const blocked=new Set(usedVocabulary.filter(claim=>claim.startsWith('vocab:')));
+ const entries=Array.isArray(lesson.vocabulary?.entries)?lesson.vocabulary.entries:[];
+ const notes=Array.isArray(lesson.storyNotes)?lesson.storyNotes:[];
+ const candidates=unscrambleChoices(lesson)
+  .filter(choice=>!blocked.has(normalizedClaim(choice.term)))
+  .map(choice=>{
+   const original=entries.find((entry:any)=>
+    String(entry.term??'').trim().toUpperCase().replace(/\s+/gu,' ')===choice.term);
+   return {
+    term:choice.term,
+    vocabularyId:String(original?.id??''),
+    origin:choice.origin,
+    sourceIds:[...choice.sourceIds],
+    notes:choice.sourceIds.flatMap(id=>{
+     const note=notes.find((item:any)=>item.id===id);
+     return note?[{
+      id,page:note.source?.page===undefined?undefined:String(note.source.page),
+      text:typeof note.originalText==='string'?note.originalText:undefined,
+     }]:[];
+    }),
+   };
+  });
+ // Display only a few simple alternative pairs. Every offered term is
+ // valid for Unscramble and absent from earlier printed vocabulary claims.
+ const pairs:[string,string][]=[];
+ for(let i=0;i<candidates.length&&pairs.length<3;i++)
+  for(let j=i+1;j<candidates.length&&pairs.length<3;j++)
+   pairs.push([candidates[i].term,candidates[j].term]);
+ return {
+  usedWords:[...blocked].map(claim=>claim.slice('vocab:'.length).toUpperCase()),
+  candidates,pairs,
+ };
+}
+
+/** Apply a suggested pair as one teacher-visible edit, preserving all source
+ * records and retaining actual Story Note provenance for linked terms.
+ */
+export function chooseUnscramblePair(lesson:Lesson,first:string,second:string):Lesson{
+ const options=unscrambleChoices(lesson);
+ const one=options.find(choice=>choice.term===first);
+ const two=options.find(choice=>choice.term===second);
+ if(!one||!two||one.term===two.term)
+  throw Error('Select two different, valid answers from lesson vocabulary.');
+ const updated=editAnswers(lesson,0,one.term,one);
+ return editAnswers(updated,1,two.term,two);
+}
+
 export function unscrambleWords(lesson:Lesson):string[]{
  const answers=lesson.preparedActivities?.unscrambleWords?.answers;
  return Array.isArray(answers)?answers:[];
