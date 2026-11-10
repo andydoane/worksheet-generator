@@ -1,0 +1,1017 @@
+{
+  "schemaVersion": 1,
+  "id": "ot-040-crossing-the-jordan-river",
+  "curriculum": {
+    "series": "OT",
+    "lessonNumber": 40
+  },
+  "lessonDetails": {
+    "title": "Crossing the Jordan River",
+    "scripturePassages": [
+      "Joshua 3",
+      "Joshua 4",
+      "Psalm 77:11",
+      "Romans 15:4"
+    ],
+    "scriptureDisplay": "Joshua 3–4",
+    "bigIdeas": [
+      {
+        "text": "Remember the amazing things God has done.",
+        "origin": "source",
+        "teacherReviewRequired": true
+      }
+    ],
+    "memoryVerse": {
+      "reference": "Psalm 77:11",
+      "translation": "BSB",
+      "text": "I will remember the works of the LORD; yes, I will remember Your wonders of old.",
+      "isExcerpt": false,
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "requiresTextReview": false,
+      "originalTranslation": "ESV",
+      "hasEllipses": false,
+      "bsbSource": {
+        "reference": "Psalm 77:11",
+        "sourceUrl": "https://bereanbible.com/bsb.txt",
+        "publicDomainTerms": "https://berean.bible/terms.htm",
+        "startWord": 0,
+        "endWord": 15
+      }
+    }
+  },
+  "preparedActivities": {
+    "drawPicture": {
+      "prompt": "the priests carrying the ark as the Jordan River stops flowing",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "multipleChoice": [
+      {
+        "id": "mc-01",
+        "question": "What were the priests carrying when they approached the Jordan River?",
+        "correctAnswer": "The Ark of the Covenant",
+        "choices": [
+          {
+            "text": "The Ark of the Covenant",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Twelve baskets of bread",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "The golden calf",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-02",
+        "question": "When did the Jordan River stop flowing?",
+        "correctAnswer": "When the priests stepped into it",
+        "choices": [
+          {
+            "text": "When the priests stepped into it",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "When Joshua waved his staff",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "When the people built a bridge",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-03",
+        "question": "How did the Israelites cross the Jordan?",
+        "correctAnswer": "On dry ground",
+        "choices": [
+          {
+            "text": "On dry ground",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "In boats",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "By swimming",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-04",
+        "question": "What did twelve men take from the middle of the river?",
+        "correctAnswer": "Twelve stones",
+        "choices": [
+          {
+            "text": "Twelve stones",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Twelve fish",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Twelve jars of water",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-05",
+        "question": "What happened when the priests came out of the river?",
+        "correctAnswer": "The water flowed again",
+        "choices": [
+          {
+            "text": "The water flowed again",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "The river dried up forever",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "The ground shook",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-06",
+        "question": "Why did Joshua pile up the stones at Gilgal?",
+        "correctAnswer": "To help children remember",
+        "choices": [
+          {
+            "text": "To help children remember",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "To build a wall around camp",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "To mark a place to fish",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "trueFalse": {
+      "factId": "tf-07",
+      "statement": "The Jordan began flowing again when the priests came out.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "firstLetters": {
+      "reference": "Psalm 77:11",
+      "verse": "I will remember the works of the LORD; yes, I will remember Your wonders of old.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "oddWords": {
+      "related": [
+        "JORDAN",
+        "ARK",
+        "PRIESTS",
+        "STONES",
+        "JOSHUA"
+      ],
+      "unrelated": [
+        "giants",
+        "wounds",
+        "Jairus",
+        "prison",
+        "demons"
+      ],
+      "unrelatedOrigin": "suggested",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "unscrambleWords": {
+      "answers": [
+        "CANAAN",
+        "TWELVE"
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "checkboxes": {
+      "correct": [
+        "CANAAN",
+        "GILGAL",
+        "DRY GROUND",
+        "TWELVE",
+        "RIVER"
+      ],
+      "incorrect": [
+        "donkey",
+        "Nicodemus",
+        "cave",
+        "cloaks",
+        "tree"
+      ],
+      "incorrectOrigin": "suggested",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "whoAmI": {
+      "clue": "I led Israel into Canaan and set up stones so children would remember how God stopped the river.",
+      "answer": "Joshua",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "matchWords": [
+      {
+        "id": "match-01",
+        "left": "Joshua",
+        "right": "Led Israel",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "match-02",
+        "left": "Priests",
+        "right": "Carried ark",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "match-03",
+        "left": "Jordan",
+        "right": "River",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "match-04",
+        "left": "Twelve",
+        "right": "Stones",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "match-06",
+        "left": "Pile",
+        "right": "Remember",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-01",
+        "left": "Gilgal",
+        "right": "Camp",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "finishVerse": {
+      "reference": "Psalm 77:11",
+      "markedVerse": "I will [remember] the [works] of the [LORD]; yes, I will [remember] Your [wonders] of [old].",
+      "sourceVerse": "I will remember the works of the LORD; yes, I will remember Your wonders of old.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "unscrambleVerse": {
+      "reference": "Psalm 77:11",
+      "markedVerse": "I will [remember] the [works] of the [LORD]; yes, I will [remember] Your [wonders] of [old].",
+      "sourceVerse": "I will remember the works of the LORD; yes, I will remember Your wonders of old.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "circleMistakes": {
+      "paragraph": "Joshua led the Israelites to the Nile River. The priests carried a golden calf into the water. The river began flowing faster when the priests stepped in. The people crossed in wooden boats. Joshua sent twelve men to collect shells from the river. After the priests left, the river remained dry. Joshua built a stone pile so the children would forget the crossing.",
+      "mistakeCount": 7,
+      "mistakes": [
+        {
+          "incorrect": "Nile River",
+          "correction": "Jordan River"
+        },
+        {
+          "incorrect": "golden calf",
+          "correction": "Ark of the Covenant"
+        },
+        {
+          "incorrect": "began flowing faster",
+          "correction": "stopped flowing"
+        },
+        {
+          "incorrect": "wooden boats",
+          "correction": "dry ground"
+        },
+        {
+          "incorrect": "shells",
+          "correction": "stones"
+        },
+        {
+          "incorrect": "remained dry",
+          "correction": "flowed again"
+        },
+        {
+          "incorrect": "forget",
+          "correction": "remember"
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "mediumWordSearch": {
+      "words": [
+        "JOSHUA",
+        "JORDAN",
+        "ARK",
+        "STONES",
+        "GILGAL",
+        "PRIESTS"
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "trueFalseMaze": {
+      "factId": "tf-10",
+      "statement": "The Israelites crossed the Jordan in wooden boats.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "bigIdeaCryptogram": {
+      "phrase": "The Lord made a path through the Jordan River.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "upsideDownVerse": {
+      "reference": "Psalm 77:11",
+      "verse": "I will remember the works of the LORD; yes, I will remember Your wonders of old.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "connectBigIdea": {
+      "phrase": "Remember the amazing things God has done.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "pixelPicture": {
+      "phrase": "God stopped the Jordan so Israel could cross on dry ground.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "finishStory": {
+      "markedParagraph": "The Israelites camped beside the [Jordan] River before entering [Canaan]. Joshua said the Lord would [stop] the water when the [priests] carrying the [ark] stepped into the river. And that's exactly what happened. When they[stepped] into the river, the water stopped, and Israel crossed on [dry] ground. Twelve men gathered [stones] from the river. When the priests came out, the water began to [flow] again. Joshua piled up stones at [Gilgal] so [children] would ask what happened and hear about the Lord’s [power].",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "storyOrder": [
+      {
+        "order": 1,
+        "text": "The Israelites camped beside the flooded Jordan River.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 2,
+        "text": "Joshua told the people the Lord would stop the river.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 3,
+        "text": "The priests carrying the ark stepped into the water, and the river stopped.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 4,
+        "text": "All the Israelites crossed the Jordan on dry ground.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 5,
+        "text": "Twelve men collected stones from the river while the priests stood there.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 6,
+        "text": "The priests came onto the riverbank, and the Jordan began flowing again.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 7,
+        "text": "Joshua piled up the stones at Gilgal and told parents to explain their meaning.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "sortStory": [
+      {
+        "factId": "tf-01",
+        "statement": "The Israelites camped beside the Jordan River before crossing.",
+        "isTrue": true,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-02",
+        "statement": "The priests carried the Ark of the Covenant toward the Jordan.",
+        "isTrue": true,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-03",
+        "statement": "The Jordan stopped flowing when the priests stepped into it.",
+        "isTrue": true,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-04",
+        "statement": "The people walked across the Jordan on dry ground.",
+        "isTrue": true,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-05",
+        "statement": "Twelve men carried twelve stones from the river to their camp.",
+        "isTrue": true,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-06",
+        "statement": "Joshua also made a pile of twelve stones in the river.",
+        "isTrue": true,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-09",
+        "statement": "Joshua told the priests to leave the ark behind in camp.",
+        "isTrue": false,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-12",
+        "statement": "Joshua told twelve men to gather twelve fish from the river.",
+        "isTrue": false,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "drawStory": [
+      {
+        "prompt": "The priests carried the Ark of the Covenant toward the flooded Jordan River.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "The water stopped flowing as the priests stepped into the river.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "The Israelites crossed the Jordan on dry ground.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "Twelve men carried stones away from the river.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "The priests came out of the river, and the water rushed back.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "Joshua built a stone memorial and told families to remember what God had done.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "wordSearch": {
+      "words": [
+        "JOSHUA",
+        "JORDAN",
+        "ARK",
+        "PRIESTS",
+        "STONES",
+        "GILGAL",
+        "CANAAN",
+        "RIVER",
+        "MEMORIAL",
+        "CROSSING",
+        "DRY GROUND",
+        "TWELVE"
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "verseCryptogram": {
+      "reference": "Psalm 77:11",
+      "verse": "I will remember the works of the LORD; yes, I will remember Your wonders of old.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "crossword": [
+      {
+        "answer": "JOSHUA",
+        "clue": "Leader who guided Israel across the Jordan",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "JORDAN",
+        "clue": "River God stopped for the crossing",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "ARK",
+        "clue": "Special chest carried by the priests",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "PRIESTS",
+        "clue": "Men who stood in the river with the ark",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "STONES",
+        "clue": "Objects collected to remember the miracle",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "GILGAL",
+        "clue": "Place where Joshua set up a stone memorial",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "CANAAN",
+        "clue": "Promised land across the river",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "TWELVE",
+        "clue": "Number of stones brought out of the river",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "DRY GROUND",
+        "clue": "Surface the Israelites walked on through the river",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "spiralVerse": {
+      "reference": "Psalm 77:11",
+      "verse": "I will remember the works of the LORD; yes, I will remember Your wonders of old.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "connectVerse": {
+      "reference": "Psalm 77:11",
+      "verse": "I will remember the works of the LORD; yes, I will remember Your wonders of old.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    }
+  },
+  "vocabulary": {
+    "related": [
+      "JOSHUA",
+      "JORDAN",
+      "ARK",
+      "PRIESTS",
+      "STONES",
+      "GILGAL",
+      "CANAAN",
+      "RIVER",
+      "TWELVE",
+      "MEMORIAL"
+    ],
+    "unrelated": [
+      "ROCKET",
+      "PENGUIN",
+      "VOLCANO",
+      "TELESCOPE",
+      "CAMEL",
+      "SANDWICH",
+      "HARP",
+      "CROWN"
+    ],
+    "entries": [
+      {
+        "id": "voc-01",
+        "term": "JOSHUA",
+        "scope": "story",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-02",
+        "term": "JORDAN",
+        "scope": "story",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-03",
+        "term": "ARK",
+        "scope": "story",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-04",
+        "term": "PRIESTS",
+        "scope": "story",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-05",
+        "term": "STONES",
+        "scope": "story",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-06",
+        "term": "GILGAL",
+        "scope": "story",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-07",
+        "term": "CANAAN",
+        "scope": "story",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-08",
+        "term": "RIVER",
+        "scope": "story",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-09",
+        "term": "TWELVE",
+        "scope": "story",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-10",
+        "term": "MEMORIAL",
+        "scope": "story",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      }
+    ]
+  },
+  "facts": [
+    {
+      "id": "tf-01",
+      "statement": "The Israelites camped beside the Jordan River before crossing.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-02",
+      "statement": "The priests carried the Ark of the Covenant toward the Jordan.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-03",
+      "statement": "The Jordan stopped flowing when the priests stepped into it.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-04",
+      "statement": "The people walked across the Jordan on dry ground.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-05",
+      "statement": "Twelve men carried twelve stones from the river to their camp.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-06",
+      "statement": "Joshua also made a pile of twelve stones in the river.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-07",
+      "statement": "The Jordan began flowing again when the priests came out.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-08",
+      "statement": "Joshua told parents to explain the memorial stones to their children.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-09",
+      "statement": "Joshua told the priests to leave the ark behind in camp.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-10",
+      "statement": "The Israelites crossed the Jordan in wooden boats.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-11",
+      "statement": "The river kept flowing while the priests stood in its middle.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-12",
+      "statement": "Joshua told twelve men to gather twelve fish from the river.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-13",
+      "statement": "The priests stayed in the river until the next morning.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-14",
+      "statement": "The stones were meant to help Israel forget the crossing.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "characters": [
+    {
+      "id": "ch-01",
+      "name": "Joshua",
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "clues": [
+        {
+          "text": "I led Israel across the Jordan River and set up stones at Gilgal.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "text": "The Lord said he would be with me as he had been with Moses.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ]
+    },
+    {
+      "id": "ch-02",
+      "name": "Priests",
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "clues": [
+        {
+          "text": "We carried the ark into the water and stood on dry ground.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "text": "When we came out of the Jordan, the river flowed again.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ]
+    },
+    {
+      "id": "ch-03",
+      "name": "Israelites",
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "clues": [
+        {
+          "text": "We crossed the Jordan River on dry ground to enter Canaan.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ]
+    }
+  ],
+  "drawingPrompts": [
+    {
+      "id": "scene-01",
+      "prompt": "Joshua speaking to the Israelites beside the flooded Jordan",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "scene-02",
+      "prompt": "priests carrying the Ark of the Covenant toward the river",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "scene-03",
+      "prompt": "the Jordan River stopping as the priests step into the water",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "scene-04",
+      "prompt": "Israelite families crossing the Jordan on dry ground",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "scene-05",
+      "prompt": "twelve men carrying stones from the river",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "scene-06",
+      "prompt": "Joshua showing children a pile of memorial stones at Gilgal",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "matchingPairs": [
+    {
+      "id": "pool-match-01",
+      "left": "Joshua",
+      "right": "Leader at Jordan",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "pool-match-02",
+      "left": "Ark",
+      "right": "Carried by priests",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "pool-match-03",
+      "left": "Jordan",
+      "right": "River stopped",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "pool-match-04",
+      "left": "Twelve men",
+      "right": "Collected stones",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "pool-match-05",
+      "left": "Gilgal",
+      "right": "Memorial site",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "pool-match-06",
+      "left": "Children",
+      "right": "Asked about stones",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "keyPhrases": [
+    {
+      "id": "phrase-01",
+      "text": "Remember the amazing things God has done.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "phrase-02",
+      "text": "The Lord made a path through the Jordan River.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "phrase-03",
+      "text": "The Israelites crossed on dry ground.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "phrase-04",
+      "text": "The stones reminded Israel of God’s power.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "phrase-05",
+      "text": "Tell your children what God has done.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "publication": {
+    "status": "approved",
+    "approved": true,
+    "teacherSignoff": {
+      "reviewer": "Andrew Doane",
+      "date": "2026-11-10",
+      "notes": "Approved with verified BSB verse through Curriculum Review Studio"
+    },
+    "scriptureRights": {
+      "status": "cleared",
+      "basis": "Berean Standard Bible (BSB), dedicated to the public domain on April 30, 2023. Official terms: https://berean.bible/terms.htm. Scripture text confirmed against https://bereanbible.com/bsb.txt.",
+      "reviewedBy": "Andrew Doane",
+      "reviewedOn": "2026-11-10"
+    },
+    "resolvedReviewFlagIds": [],
+    "notes": "Approved through Review Studio after teacher review and a successful 27/27 content/preflight check of four numbered presets. Original conversion notes and checks remain as historical records.",
+    "reviewStudioVerification": {
+      "source": "Review Studio measured preflight",
+      "checkedAt": "2026-11-10T01:53:54.125Z",
+      "convertedCount": 27,
+      "totalCount": 27,
+      "issueCount": 0,
+      "numberedPresetsChecked": 4,
+      "scope": "Candidate-specific content conversion, four numbered preset content checks, and measured Connect the Verse fit. Standalone repository commands and independently rendered PDFs are not claimed.",
+      "matchingWorksheetSource": "preparedActivities.matchWords",
+      "matchingCandidatePool": "matchingPairs is retained separately as historical/source candidate material"
+    },
+    "reviewFlagDisposition": []
+  },
+  "schemaStatus": "approved; Review Studio 27/27 preflight passed"
+}

@@ -1,0 +1,1004 @@
+{
+  "schemaVersion": 1,
+  "id": "ot-039-rahab-and-the-spies",
+  "curriculum": {
+    "series": "OT",
+    "lessonNumber": 39
+  },
+  "lessonDetails": {
+    "title": "Rahab and the Spies",
+    "scripturePassages": [
+      "Joshua 2",
+      "Joshua 6",
+      "Exodus 12",
+      "Acts 16:31"
+    ],
+    "scriptureDisplay": "Joshua 2",
+    "bigIdeas": [
+      {
+        "text": "The story of Rahab points us to Jesus.",
+        "origin": "source",
+        "teacherReviewRequired": true
+      }
+    ],
+    "memoryVerse": {
+      "reference": "Acts 16:31",
+      "translation": "BSB",
+      "text": "They replied, “Believe in the Lord Jesus and you will be saved, you and your household.”",
+      "isExcerpt": false,
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "requiresTextReview": false,
+      "originalTranslation": "ESV",
+      "hasEllipses": false,
+      "bsbSource": {
+        "reference": "Acts 16:31",
+        "sourceUrl": "https://bereanbible.com/bsb.txt",
+        "publicDomainTerms": "https://berean.bible/terms.htm",
+        "startWord": 0,
+        "endWord": 15
+      }
+    }
+  },
+  "preparedActivities": {
+    "drawPicture": {
+      "prompt": "Rahab lowering two spies from a window in Jericho’s wall",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "multipleChoice": [
+      {
+        "id": "mc-01",
+        "question": "Who sent two spies to secretly investigate Jericho?",
+        "correctAnswer": "Joshua",
+        "choices": [
+          {
+            "text": "Joshua",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Moses",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Aaron",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-02",
+        "question": "Where did Rahab hide the two spies?",
+        "correctAnswer": "Under grain on her roof",
+        "choices": [
+          {
+            "text": "Under grain on her roof",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "In a cave outside Jericho",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Under her bed",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-03",
+        "question": "What did the king of Jericho do when he heard about the spies?",
+        "correctAnswer": "Sent men to Rahab’s house",
+        "choices": [
+          {
+            "text": "Sent men to Rahab’s house",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Invited them to a feast",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Threw them in prison",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-04",
+        "question": "Why did Rahab believe Israel’s God was powerful?",
+        "correctAnswer": "She heard about the Red Sea",
+        "choices": [
+          {
+            "text": "She heard about the Red Sea",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "She saw manna fall on Jericho",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "He read the Bible",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-05",
+        "question": "How did Rahab help the spies escape the city?",
+        "correctAnswer": "Lowered them out of her window",
+        "choices": [
+          {
+            "text": "Lowered them out of her window",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Led them through the main gate",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Hid them on a donkey cart",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-06",
+        "question": "What sign was Rahab told to put in her window?",
+        "correctAnswer": "A bright red rope",
+        "choices": [
+          {
+            "text": "A bright red rope",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "A golden lamp",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "A blue flag",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "trueFalse": {
+      "factId": "tf-07",
+      "statement": "Rahab lowered the two spies through a window in the wall.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "firstLetters": {
+      "reference": "Acts 16:31",
+      "verse": "They replied, “Believe in the Lord Jesus and you will be saved, you and your household.”",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "oddWords": {
+      "related": [
+        "RAHAB",
+        "JERICHO",
+        "SPIES",
+        "ROPE",
+        "FLAX"
+      ],
+      "unrelated": [
+        "rock",
+        "Silas",
+        "light",
+        "riches",
+        "nations"
+      ],
+      "unrelatedOrigin": "suggested",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "unscrambleWords": {
+      "answers": [
+        "RAHAB",
+        "RED ROPE"
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "checkboxes": {
+      "correct": [
+        "JOSHUA",
+        "WINDOW",
+        "ROOF",
+        "RED ROPE",
+        "GUARDS"
+      ],
+      "incorrect": [
+        "jailer",
+        "Rehoboam",
+        "Adam",
+        "Babel",
+        "rebirth"
+      ],
+      "incorrectOrigin": "suggested",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "whoAmI": {
+      "clue": "I hid two Israelite spies on my roof and lowered them to safety through my window. Later, I hung up a red rope.",
+      "answer": "Rahab",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "matchWords": [
+      {
+        "id": "match-01",
+        "left": "Joshua",
+        "right": "Sent two spies",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "match-02",
+        "left": "Rahab",
+        "right": "Hid the spies",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "match-03",
+        "left": "King",
+        "right": "Sent his guards",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "match-04",
+        "left": "Flax",
+        "right": "Covered the spies",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "match-05",
+        "left": "Red rope",
+        "right": "Window",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "finishVerse": {
+      "reference": "Acts 16:31",
+      "markedVerse": "They [replied], “[Believe] in the Lord [Jesus] and [you] will be [saved], you and your [household].”",
+      "sourceVerse": "They replied, “Believe in the Lord Jesus and you will be saved, you and your household.”",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "unscrambleVerse": {
+      "reference": "Acts 16:31",
+      "markedVerse": "They [replied], “[Believe] in the Lord [Jesus] and [you] will be [saved], you and your [household].”",
+      "sourceVerse": "They replied, “Believe in the Lord Jesus and you will be saved, you and your household.”",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "circleMistakes": {
+      "paragraph": "Joshua sent twelve spies to the city of Bethlehem. They stayed at Rahab’s house. The king sent men to find them, but Rahab hid the spies under bundles of wool on her roof. She sent the guards away and lowered the spies out through a hole in the ground. Before the spies returned, Rahab hung a green banner in her window to mark her home.",
+      "mistakeCount": 5,
+      "mistakes": [
+        {
+          "incorrect": "twelve spies",
+          "correction": "two spies"
+        },
+        {
+          "incorrect": "city of Bethlehem",
+          "correction": "city of Jericho"
+        },
+        {
+          "incorrect": "under bundles of wool",
+          "correction": "under flax"
+        },
+        {
+          "incorrect": "a hole in the ground",
+          "correction": "a window in the city wall"
+        },
+        {
+          "incorrect": "a green banner",
+          "correction": "a bright red rope"
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "mediumWordSearch": {
+      "words": [
+        "RAHAB",
+        "SPIES",
+        "JERICHO",
+        "ROPE",
+        "FLAX",
+        "JOSHUA"
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "trueFalseMaze": {
+      "factId": "tf-12",
+      "statement": "Rahab asked the spies to make her the queen of Jericho.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "bigIdeaCryptogram": {
+      "phrase": "Rahab helped the two spies escape Jericho.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "upsideDownVerse": {
+      "reference": "Acts 16:31",
+      "verse": "They replied, “Believe in the Lord Jesus and you will be saved, you and your household.”",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "connectBigIdea": {
+      "phrase": "Rahab helped the two spies escape Jericho.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "pixelPicture": {
+      "phrase": "Rahab trusted the Lord and protected the spies.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "finishStory": {
+      "markedParagraph": "Joshua sent two [spies] to [Jericho]. They stayed in the home of [Rahab]. When the [king] learned about them, Rahab hid the men under [flax] on her roof. She also sent the guards searching the wrong way. Rahab had heard how the Lord parted the Red Sea, so she asked the spies to [promise] to protect her [family]. She lowered the men through a [window] in the city wall by a [rope]. The spies told Rahab to tie a [red] rope in that window and keep her family inside. After hiding in the [hills] for three days, the men returned to [Joshua] and reported that the Lord had given Israel the land.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "storyOrder": [
+      {
+        "order": 1,
+        "text": "Joshua sent two spies to investigate Jericho.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 2,
+        "text": "The spies stayed at Rahab’s house in the city wall.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 3,
+        "text": "The king sent his men to Rahab’s house to find the spies.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 4,
+        "text": "Rahab hid the spies on her roof and misdirected the king’s men.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 5,
+        "text": "Rahab asked the spies to promise safety for her family.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 6,
+        "text": "Rahab lowered the spies through a window and tied up a red rope.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 7,
+        "text": "The spies hid in the hills for three days, then returned to Joshua.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 8,
+        "text": "The spies told Joshua that the Lord had given Israel the land.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "sortStory": [
+      {
+        "factId": "tf-01",
+        "statement": "Joshua sent two spies to investigate Jericho.",
+        "isTrue": true,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-03",
+        "statement": "The king of Jericho sent men to Rahab’s house.",
+        "isTrue": true,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-05",
+        "statement": "Rahab sent the king’s men in the wrong direction.",
+        "isTrue": true,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-09",
+        "statement": "Joshua sent twelve spies into Jericho in this story.",
+        "isTrue": false,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-11",
+        "statement": "The spies hid in Rahab’s cellar beneath a pile of stones.",
+        "isTrue": false,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-13",
+        "statement": "The spies told Rahab to put a blue flag above her door.",
+        "isTrue": false,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "drawStory": [
+      {
+        "prompt": "Joshua sent two spies to investigate Jericho.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "Rahab hid the two spies beneath flax on her roof.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "The king’s men left Rahab’s house to search elsewhere.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "Rahab lowered the spies from her window using a rope.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "Rahab tied a bright red rope in her window.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "The spies returned to Joshua and shared their report.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "wordSearch": {
+      "words": [
+        "RAHAB",
+        "JERICHO",
+        "JOSHUA",
+        "SPIES",
+        "FLAX",
+        "ROPE",
+        "WINDOW",
+        "FAMILY",
+        "GUARDS",
+        "PROMISE",
+        "RED SEA"
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "verseCryptogram": {
+      "reference": "Acts 16:31",
+      "verse": "They replied, “Believe in the Lord Jesus and you will be saved, you and your household.”",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "crossword": [
+      {
+        "answer": "RAHAB",
+        "clue": "Woman who hid the Israelite spies",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "JERICHO",
+        "clue": "Walled city the spies investigated",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "JOSHUA",
+        "clue": "Leader who sent the two spies",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "FLAX",
+        "clue": "Plant stalks that covered the spies on the roof",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "WINDOW",
+        "clue": "Opening in the wall used for the spies’ escape",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "ROPE",
+        "clue": "What Rahab used to lower the spies",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "RED",
+        "clue": "Color of the rope in Rahab’s window",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "FAMILY",
+        "clue": "Relatives Rahab asked the spies to protect",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "HILLS",
+        "clue": "Where the spies hid for three days",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "SPIES",
+        "clue": "Joshua sent two of these to check out Jericho",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "spiralVerse": {
+      "reference": "Acts 16:31",
+      "verse": "They replied, “Believe in the Lord Jesus and you will be saved, you and your household.”",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "connectVerse": {
+      "reference": "Acts 16:31",
+      "verse": "They replied, “Believe in the Lord Jesus and you will be saved, you and your household.”",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    }
+  },
+  "vocabulary": {
+    "related": [
+      "RAHAB",
+      "JERICHO",
+      "SPIES",
+      "ROPE",
+      "FLAX",
+      "JOSHUA",
+      "WINDOW",
+      "FAMILY",
+      "PROMISE",
+      "KING"
+    ],
+    "unrelated": [
+      "VOLCANO",
+      "ROCKET",
+      "PENGUIN",
+      "SUBMARINE",
+      "CROWN",
+      "HARP",
+      "CAMEL",
+      "TABLET"
+    ],
+    "entries": [
+      {
+        "id": "voc-01",
+        "term": "RAHAB",
+        "scope": "story",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-02",
+        "term": "JERICHO",
+        "scope": "story",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-03",
+        "term": "SPIES",
+        "scope": "story",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-04",
+        "term": "FLAX",
+        "scope": "story",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-05",
+        "term": "WINDOW",
+        "scope": "story",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-06",
+        "term": "RED ROPE",
+        "scope": "story",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-07",
+        "term": "JOSHUA",
+        "scope": "story",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-08",
+        "term": "FAMILY",
+        "scope": "story",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-09",
+        "term": "PROMISE",
+        "scope": "story",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-10",
+        "term": "GUARDS",
+        "scope": "story",
+        "origin": "adapted",
+        "teacherReviewRequired": true
+      }
+    ]
+  },
+  "facts": [
+    {
+      "id": "tf-01",
+      "statement": "Joshua sent two spies to investigate Jericho.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-02",
+      "statement": "The two spies stayed at Rahab’s house.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-03",
+      "statement": "The king of Jericho sent men to Rahab’s house.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-04",
+      "statement": "Rahab hid the spies beneath flax on her roof.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-05",
+      "statement": "Rahab sent the king’s men in the wrong direction.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-06",
+      "statement": "Rahab asked the spies to protect her family.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-07",
+      "statement": "Rahab lowered the two spies through a window in the wall.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-08",
+      "statement": "The spies told Joshua that the Lord had given them the land.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-09",
+      "statement": "Joshua sent twelve spies into Jericho in this story.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-10",
+      "statement": "Rahab handed the spies over to the king’s guards.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-11",
+      "statement": "The spies hid in Rahab’s cellar beneath a pile of stones.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-12",
+      "statement": "Rahab asked the spies to make her the queen of Jericho.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-13",
+      "statement": "The spies told Rahab to put a blue flag above her door.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-14",
+      "statement": "The spies returned to Moses after their mission in Jericho.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "characters": [
+    {
+      "id": "ch-01",
+      "name": "Rahab",
+      "clues": [
+        {
+          "text": "I hid the spies on my roof and asked them to save my family.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "scope": "story",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "ch-02",
+      "name": "Joshua",
+      "clues": [
+        {
+          "text": "I sent two men to investigate Jericho after Moses died.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "scope": "story",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "ch-03",
+      "name": "King of Jericho",
+      "clues": [
+        {
+          "text": "When I heard about the Israelite spies, I sent guards to Rahab’s house.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "scope": "story",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    }
+  ],
+  "drawingPrompts": [
+    {
+      "id": "scene-01",
+      "prompt": "Joshua sending two spies toward Jericho",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "scene-02",
+      "prompt": "Rahab hiding two men beneath flax on her rooftop",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "scene-03",
+      "prompt": "guards searching outside the walls of Jericho",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "scene-04",
+      "prompt": "Rahab lowering the spies by a rope through the window",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "scene-05",
+      "prompt": "a bright red rope hanging in Rahab’s window",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "scene-06",
+      "prompt": "the two spies returning to Joshua with good news",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "matchingPairs": [
+    {
+      "id": "pool-match-01",
+      "left": "Joshua",
+      "right": "Sent two spies",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "pool-match-02",
+      "left": "Rahab",
+      "right": "Hid the spies",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "pool-match-03",
+      "left": "The king",
+      "right": "Sent his guards",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "pool-match-04",
+      "left": "Flax",
+      "right": "Covered the spies",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "pool-match-05",
+      "left": "Red rope",
+      "right": "Marked the window",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "pool-match-06",
+      "left": "Three days",
+      "right": "Hiding in the hills",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "keyPhrases": [
+    {
+      "id": "phrase-01",
+      "text": "The story of Rahab points us to Jesus.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "phrase-02",
+      "text": "The Lord has given us this land.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "phrase-03",
+      "text": "Rahab protected the spies.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "phrase-04",
+      "text": "The red rope marked the home to spare.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "phrase-05",
+      "text": "The spies returned safely to Joshua.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "kp-review-1",
+      "text": "Rahab help the two spies escape Jericho.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "kp-review-2",
+      "text": "Rahab helped the two spies escape Jericho.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "publication": {
+    "status": "approved",
+    "approved": true,
+    "teacherSignoff": {
+      "reviewer": "Andrew Doane",
+      "date": "2026-11-10",
+      "notes": "Approved with verified BSB verse through Curriculum Review Studio"
+    },
+    "scriptureRights": {
+      "status": "cleared",
+      "basis": "Berean Standard Bible (BSB), dedicated to the public domain on April 30, 2023. Official terms: https://berean.bible/terms.htm. Scripture text confirmed against https://bereanbible.com/bsb.txt.",
+      "reviewedBy": "Andrew Doane",
+      "reviewedOn": "2026-11-10"
+    },
+    "resolvedReviewFlagIds": [],
+    "notes": "Approved through Review Studio after teacher review and a successful 27/27 content/preflight check of four numbered presets. Original conversion notes and checks remain as historical records.",
+    "reviewStudioVerification": {
+      "source": "Review Studio measured preflight",
+      "checkedAt": "2026-11-10T01:37:41.636Z",
+      "convertedCount": 27,
+      "totalCount": 27,
+      "issueCount": 0,
+      "numberedPresetsChecked": 4,
+      "scope": "Candidate-specific content conversion, four numbered preset content checks, and measured Connect the Verse fit. Standalone repository commands and independently rendered PDFs are not claimed.",
+      "matchingWorksheetSource": "preparedActivities.matchWords",
+      "matchingCandidatePool": "matchingPairs is retained separately as historical/source candidate material"
+    },
+    "reviewFlagDisposition": []
+  },
+  "schemaStatus": "approved; Review Studio 27/27 preflight passed"
+}
