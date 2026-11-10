@@ -1026,7 +1026,7 @@ export default function ReviewApp(){
          ' Schema validation stopped before any of the 27 activities was attempted. Fix the structural errors below and rerun preflight.':
          preflight.issues.length?' Select an issue below to edit the relevant activity.':
          preflight.convertedCount!==preflight.totalCount?' Conversion coverage is incomplete; inspect the prepared activity data.':
-         ' Preflight passed: curriculum schema, 27 activities, and all three numbered presets are valid. GitHub CI independently checks the final approved file.'}</p>
+         ' Preflight passed: curriculum schema, 27 activities, and all four numbered presets are valid. GitHub CI independently checks the final approved file.'}</p>
        {preflight.issues.length>0&&<ul className="review-issue-list">
         {preflight.issues.map((issue,i)=><li key={issue.id+'-'+i}>
          <button type="button" className="review-issue-link"
