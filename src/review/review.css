@@ -204,6 +204,16 @@ a{color:#267d68}
 #review-field-who-am-i label small,#review-field-unscramble-words label small,
 #review-field-pixel-picture label small,#review-field-finish-story label small{
  display:block;margin-top:4px;font-size:11px;font-weight:400}
+/* Preset collision help: keep source notes and suggested repair pairs legible. */
+.review-unscramble-repair{display:grid;gap:10px;padding:14px;border:1px solid #bad8c3;
+ border-radius:9px;background:#f8fbf8;min-width:0}
+.review-unscramble-repair h4{margin:0;font-size:14px;color:#285840}
+.review-unscramble-repair p{margin:0;font-size:12px;line-height:1.55;color:#355749}
+.review-unscramble-word-sources{display:grid;gap:7px;margin:0;padding-left:20px}
+.review-unscramble-word-sources li{font-size:12px;line-height:1.45;overflow-wrap:anywhere}
+.review-unscramble-word-sources small{display:block;color:#61776a;font-size:11px}
+.review-unscramble-pairs{display:flex;gap:7px;flex-wrap:wrap}
+.review-unscramble-pairs button{white-space:normal;text-align:center}
 .review-activity-preview .module-preview{max-width:100%;width:100%}
 .review-activity-preview .medium-print-svg{max-width:100%;height:auto}
 @media(max-width:580px){

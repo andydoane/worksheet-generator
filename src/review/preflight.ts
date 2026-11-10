@@ -9,7 +9,7 @@ import {planConnectVerse} from '../connectVerseLayout.ts';
 import type {MeasureText} from '../mediumParityLayout.ts';
 import {
  buildWorksheetRecipe,WORKSHEET_RECIPES,RecipeContentConflictError,
- type LessonWorksheetSource,
+ type LessonWorksheetSource,type RecipeConflictSource,
 } from '../worksheetRecipes.ts';
 
 export const PREPARED_ACTIVITY_KEYS:Record<ModuleId,string>={
@@ -52,6 +52,9 @@ export type ReviewIssue={
  recipeId?:string;
  slot?:string;
  conflicts?:string[];
+ /** Context from the actual preset assignment, not guessed from the JSON. */
+ conflictSources?:RecipeConflictSource[];
+ usedVocabulary?:string[];
  area?:IntegrityArea;
  path?:string;
  schemaRepair?:SchemaRepair;
@@ -200,6 +203,8 @@ export function buildReviewPreflight(lesson:Lesson,
       id:error.recipeId+':'+error.slot+':'+mapped.taskId,
       message:error.message,recipeId:error.recipeId,slot:error.slot,
       conflicts:[...error.conflicts],
+      conflictSources:error.sources.map(source=>({...source})),
+      usedVocabulary:[...error.usedVocabulary],
      });
     }else messages.push(recipe.name+': '+(error instanceof Error?error.message:String(error)));
    }

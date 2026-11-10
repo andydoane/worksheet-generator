@@ -3,7 +3,7 @@ import {EMPTY_DRAFT,type StoredDraft,type OriginalLessonContent} from './draftMi
 import {inferActivityContentLinks} from './lessonContentSync.ts';
 import {
  lessonContentPool,chooseUnusedLessonContent,chooseDistinctPresetWordBanks,
- type LessonContentChoice,
+ contentClaimsForModule,type LessonContentChoice,
 } from './lessonContentPool.ts';
 import {slotKey,moduleForSize,validateModule,type ModuleAssignments} from './modules.ts';
 import {
@@ -179,14 +179,39 @@ export type RecipeOptions={purpose:'editorial-review'|'published';seed?:number};
 /** Preserve the affected activity and page region as structured data so the
  * review workbench never has to guess from a human-readable preset message.
  */
+export type RecipeConflictSource={
+ claim:string;moduleId:LessonModuleId;slot:string;
+};
 export class RecipeContentConflictError extends Error{
  readonly recipeId:RecipeId;
  readonly moduleId:LessonModuleId;
  readonly slot:string;
  readonly conflicts:string[];
+ /** Which previously placed activity used the repeated printable item. */
+ readonly sources:RecipeConflictSource[];
+ /** All vocabulary words used earlier in the same preset, not just the
+  * single word from the fallback candidate shown in the error. */
+ readonly usedVocabulary:string[];
  constructor(recipeId:RecipeId,recipeName:string,moduleId:LessonModuleId,
-  slot:string,conflicts:string[]){
-  super(recipeName+' needs a distinct '+moduleId+
+  slot:string,conflicts:string[],sources:RecipeConflictSource[]=[],
+  usedVocabulary:string[]=[]){
+  const names=conflicts.map(claim=>{
+   if(!claim.startsWith('vocab:'))return claim;
+   const source=sources.find(item=>item.claim===claim);
+   const printed=source?.moduleId==='medium-word-search'?'Medium Word Search':
+    source?.moduleId==='word-search'?'Word Search':
+    source?.moduleId==='odd-words'?"What Doesn't Belong":
+    source?.moduleId==='checkboxes'?'Checkboxes':source?.moduleId;
+   return claim.slice('vocab:'.length).toUpperCase()+
+    (printed?' (already in '+printed+' on page '+source!.slot.split(':')[0]+')':'');
+  });
+  super(moduleId==='unscramble-words'?
+   recipeName+' cannot place Unscramble the Words on page '+slot.split(':')[0]+
+   ' without repeating words already printed earlier in that booklet. '+
+   'For example: '+names.join(', ')+'. The preset also tries alternative '+
+   'word pairs, so the named word may not be one of your two saved answers. '+
+   'Choose two unused lesson vocabulary words in the repair editor, then rerun preflight.':
+   recipeName+' needs a distinct '+moduleId+
    ' activity at '+slot+', but all approved alternatives repeat: '+
    conflicts.join(', ')+'. Review the curriculum data for more choices.');
   this.name='RecipeContentConflictError';
@@ -194,6 +219,8 @@ export class RecipeContentConflictError extends Error{
   this.moduleId=moduleId;
   this.slot=slot;
   this.conflicts=[...conflicts];
+  this.sources=sources.map(source=>({...source}));
+  this.usedVocabulary=[...usedVocabulary];
  }
 }
 
@@ -293,8 +320,16 @@ export function buildWorksheetRecipe(
     candidate:preselected,reused:preselected.claims.filter(claim=>usedClaims.has(claim)),
    }:chooseUnusedLessonContent(choices,usedClaims,{preferFullBank:true});
    if(!picked)throw Error('No approved '+step.moduleId+' content available for '+recipe.name+' at '+key+'.');
-   if(picked.reused.length)
-    throw new RecipeContentConflictError(id,recipe.name,step.moduleId,key,picked.reused);
+   if(picked.reused.length){
+    // Explain exactly which previously printed activity claims each word;
+    // teachers must not be asked to repair an opaque "vocab:jordan" token.
+    const sources=selections.flatMap(selection=>
+     contentClaimsForModule(modules[selection.slot],lesson)
+      .filter(claim=>picked.reused.includes(claim))
+      .map(claim=>({claim,moduleId:selection.moduleId,slot:selection.slot})));
+    throw new RecipeContentConflictError(id,recipe.name,step.moduleId,key,
+     picked.reused,sources,[...usedClaims].filter(claim=>claim.startsWith('vocab:')));
+   }
    choice=picked.candidate;
    picked.candidate.claims.forEach(claim=>usedClaims.add(claim));
   }else if(step.moduleId==='multiple-choice'){

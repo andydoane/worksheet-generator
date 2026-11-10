@@ -1,16 +1,21 @@
 import {useState} from 'react';
 import SmallModulePreview from '../SmallModulePreview.tsx';
 import type {Lesson} from './model.ts';
+import type {ReviewIssue} from './preflight.ts';
 import {
- chooseUnscramble,chooseUnscrambleAlternative,editUnscramble,repairUnscrambleAnswers,
- resetMalformedUnscramble,unscrambleAlternatives,unscrambleChoices,unscrambleProblems,unscrambleWords,
+ chooseUnscramble,chooseUnscrambleAlternative,chooseUnscramblePair,editUnscramble,
+ repairUnscrambleAnswers,resetMalformedUnscramble,unscrambleAlternatives,
+ unscrambleChoices,unscrambleProblems,unscrambleRepairSuggestions,unscrambleWords,
 } from './wordPuzzleEditors.ts';
 
-export default function UnscrambleReviewEditor({lesson,onChange,onError}:{
+export default function UnscrambleReviewEditor({lesson,onChange,onError,presetConflict}:{
  lesson:Lesson;onChange:(next:Lesson)=>void;onError:(message:string)=>void;
+ presetConflict?:ReviewIssue|null;
 }){
  const answers=unscrambleWords(lesson),problems=unscrambleProblems(lesson);
  const choices=unscrambleChoices(lesson),alternatives=unscrambleAlternatives(lesson);
+ const repair=presetConflict?.usedVocabulary?.length?
+  unscrambleRepairSuggestions(lesson,presetConflict.usedVocabulary):null;
  const item=lesson.preparedActivities?.unscrambleWords??{};
  const [keepFirst,setKeepFirst]=useState(0);
  const [keepSecond,setKeepSecond]=useState(1);
@@ -34,6 +39,53 @@ export default function UnscrambleReviewEditor({lesson,onChange,onError}:{
     contains extra candidates. You can replace either answer at any time. Extra
     saved words remain available as alternatives rather than being discarded.</p>
   </div>
+  {repair&&<section className="review-unscramble-repair" aria-label="Preset vocabulary conflict and suggested replacements">
+   <h4>Why the preset cannot use these words</h4>
+   <p><strong>{presetConflict?.recipeId?.replace('preset-','Preset ')}:</strong> All activities
+    converted individually, but a numbered worksheet cannot print the same
+    vocabulary term in multiple puzzles. The preset also tests generated
+    Unscramble alternatives, so a reported word might not be one of your
+    two saved answers.</p>
+   {(presetConflict?.conflictSources??[]).length>0&&<p>
+    <strong>Example overlap:</strong> {(presetConflict?.conflictSources??[]).map(source=>
+     source.claim.startsWith('vocab:')?source.claim.slice(6).toUpperCase()+' in '+
+      (source.moduleId==='medium-word-search'?'Medium Word Search':
+       source.moduleId==='word-search'?'Word Search':source.moduleId)+
+      ' (page '+source.slot.split(':')[0]+')':source.claim).join('; ')}.
+   </p>}
+   <p><strong>Vocabulary already used earlier in this preset:</strong> {repair.usedWords.join(', ')}.</p>
+   <h4>Try unused words from this lesson</h4>
+   {repair.candidates.length>=2?<>
+    <p>These are existing, valid, scrambleable lesson vocabulary entries not printed
+     in an earlier activity in this preset. Choose a pair below, check it,
+     then rerun preflight. This changes only the two prepared answers,
+     not the source vocabulary or original Story Notes.</p>
+    <ul className="review-unscramble-word-sources">
+     {repair.candidates.map(option=><li key={option.term}>
+      <strong>{option.term}</strong>
+      <small>Lesson vocabulary {option.vocabularyId||'(entry has no ID)'}
+       {option.sourceIds.length?' · linked Story Notes: '+option.sourceIds.join(', '):
+        ' · no Story Note link supplied in this file'}</small>
+      {option.notes.map(note=><small key={note.id}>
+       {note.id}{note.page?' · page '+note.page:''}
+       {note.text?' · '+note.text:''}
+      </small>)}
+     </li>)}
+    </ul>
+    <div className="review-actions review-unscramble-pairs">
+     {repair.pairs.map(([first,second])=>
+      <button type="button" className="review-secondary" key={first+'+'+second}
+       onClick={()=>apply(()=>chooseUnscramblePair(lesson,first,second))}>
+       Use {first} + {second}
+      </button>)}
+    </div>
+    <p className="review-source">Suggestions reflect the last preset check.
+     After choosing a pair, review the preview and run preflight again to
+     confirm all four presets.</p>
+   </>:<p>No pair of unused, valid vocabulary words is available.
+    You can revise the earlier Word Search, or add accurate lesson vocabulary
+    before choosing two different Unscramble answers.</p>}
+  </section>}
   {malformed&&<div className="review-warning" role="status">
    <strong>Invalid stored answer format</strong>
    <p>The answers field is not a list. Download a review-session backup before
