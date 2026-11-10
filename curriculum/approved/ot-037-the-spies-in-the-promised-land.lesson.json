@@ -1,0 +1,1038 @@
+{
+  "schemaVersion": 1,
+  "id": "ot-037-the-spies-in-the-promised-land",
+  "curriculum": {
+    "series": "OT",
+    "lessonNumber": 37
+  },
+  "lessonDetails": {
+    "title": "The Spies in the Promised Land",
+    "scripturePassages": [
+      "Numbers 13–14",
+      "Proverbs 3:5"
+    ],
+    "scriptureDisplay": "Numbers 13–14",
+    "bigIdeas": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "text": "Trust in the Lord, not yourself."
+      }
+    ],
+    "memoryVerse": {
+      "reference": "Proverbs 3:5",
+      "translation": "BSB",
+      "text": "Trust in the LORD with all your heart, and lean not on your own understanding;",
+      "isExcerpt": false,
+      "requiresTextReview": false,
+      "teacherReviewRequired": true,
+      "origin": "adapted",
+      "originalTranslation": "ESV (source excerpt; BSB selection pending)",
+      "hasEllipses": false,
+      "bsbSource": {
+        "reference": "Proverbs 3:5",
+        "sourceUrl": "https://bereanbible.com/bsb.txt",
+        "publicDomainTerms": "https://berean.bible/terms.htm",
+        "startWord": 0,
+        "endWord": 14
+      }
+    }
+  },
+  "preparedActivities": {
+    "drawPicture": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "prompt": "two spies carrying a heavy bunch of grapes on a pole"
+    },
+    "multipleChoice": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-01",
+        "question": "Why did Moses send twelve men into Canaan?",
+        "correctAnswer": "To explore the land",
+        "choices": [
+          {
+            "text": "To explore the land",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "To build the Tabernacle",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "To gather manna",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ]
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-02",
+        "question": "What did two spies carry on a pole?",
+        "correctAnswer": "A bunch of grapes",
+        "choices": [
+          {
+            "text": "A bunch of grapes",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "A golden calf",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "A bunch of bananas",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ]
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-03",
+        "question": "What did the ten fearful spies say about Canaan?",
+        "correctAnswer": "Its people were too strong",
+        "choices": [
+          {
+            "text": "Its people were too strong",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Its people were wimps",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "The food was bad",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ]
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-04",
+        "question": "How did the Israelites respond to the bad report?",
+        "correctAnswer": "They wanted to return to Egypt",
+        "choices": [
+          {
+            "text": "They wanted to return to Egypt",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "They didn't believe it",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "They prayed to God",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ]
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-05",
+        "question": "What happened when the people threatened Joshua and Caleb?",
+        "correctAnswer": "God’s glory appeared",
+        "choices": [
+          {
+            "text": "God’s glory appeared",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Caleb started to cry",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Joshua ran away",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ]
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-06",
+        "question": "Why were the Israelites told to wander for forty years?",
+        "correctAnswer": "They refused to trust God",
+        "choices": [
+          {
+            "text": "They refused to trust God",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "They lost their map",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "They were bad at directions",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ]
+      }
+    ],
+    "trueFalse": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "factId": "tf-08",
+      "statement": "Moses asked God to forgive the Israelites.",
+      "isTrue": true
+    },
+    "firstLetters": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Proverbs 3:5",
+      "verse": "Trust in the LORD with all your heart, and lean not on your own understanding;"
+    },
+    "oddWords": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "related": [
+        "CANAAN",
+        "GRAPES",
+        "CALEB",
+        "MOSES",
+        "SPIES"
+      ],
+      "unrelated": [
+        "INCENSE",
+        "LAMPSTAND",
+        "GOLD CALF",
+        "MANNA"
+      ],
+      "unrelatedOrigin": "suggested"
+    },
+    "unscrambleWords": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "answers": [
+        "CANAAN",
+        "GRAPES"
+      ]
+    },
+    "checkboxes": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "correct": [
+        "CANAAN",
+        "JOSHUA",
+        "FORTY DAYS",
+        "FIGS",
+        "GRAPES"
+      ],
+      "incorrect": [
+        "inn",
+        "trumpet",
+        "stones",
+        "loaves",
+        "Gibeon"
+      ],
+      "incorrectOrigin": "suggested"
+    },
+    "whoAmI": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "clue": "I urged my people to trust God and enter the promised land, even though the cities were strong and its people were big.",
+      "answer": "Caleb"
+    },
+    "matchWords": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "match-01",
+        "left": "Twelve",
+        "right": "Spies"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "match-02",
+        "left": "40 days",
+        "right": "Exploring"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "match-03",
+        "left": "Grapes",
+        "right": "Pole"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "match-04",
+        "left": "Caleb",
+        "right": "Trusted God"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "match-05",
+        "left": "Ten spies",
+        "right": "Bad report"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "match-06",
+        "left": "Wander",
+        "right": "40 years"
+      }
+    ],
+    "finishVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Proverbs 3:5",
+      "markedVerse": "[Trust] in the [LORD] with [all] your [heart], and [lean] not on your [own] understanding;",
+      "sourceVerse": "Trust in the LORD with all your heart, and lean not on your own understanding;"
+    },
+    "unscrambleVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Proverbs 3:5",
+      "markedVerse": "[Trust] in the [LORD] with [all] your [heart], and [lean] not on your [own] understanding;",
+      "sourceVerse": "Trust in the LORD with all your heart, and lean not on your own understanding;"
+    },
+    "circleMistakes": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "paragraph": "Moses sent six spies to explore Canaan. They returned after ten days carrying a bunch of olives. Caleb urged the people to flee back to Egypt. The Israelites thanked Joshua and Caleb for their courage. God told the people to wander in the wilderness for forty days.",
+      "mistakeCount": 6,
+      "mistakes": [
+        {
+          "incorrect": "six spies",
+          "correction": "twelve spies"
+        },
+        {
+          "incorrect": "ten days",
+          "correction": "forty days"
+        },
+        {
+          "incorrect": "a bunch of olives",
+          "correction": "grapes and other fruit"
+        },
+        {
+          "incorrect": "flee back to Egypt",
+          "correction": "enter the promised land with God’s help"
+        },
+        {
+          "incorrect": "thanked Joshua and Caleb",
+          "correction": "threatened to stone Joshua and Caleb"
+        },
+        {
+          "incorrect": "forty days",
+          "correction": "forty years"
+        }
+      ]
+    },
+    "mediumWordSearch": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "words": [
+        "SPIES",
+        "CALEB",
+        "GRAPES",
+        "CANAAN",
+        "WANDER",
+        "JOSHUA"
+      ]
+    },
+    "trueFalseMaze": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "factId": "tf-13",
+      "statement": "God punished the Israelites to wander for four years.",
+      "isTrue": false
+    },
+    "bigIdeaCryptogram": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "phrase": "Trust in the Lord, not in yourself."
+    },
+    "upsideDownVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Proverbs 3:5",
+      "verse": "Trust in the LORD with all your heart, and lean not on your own understanding;"
+    },
+    "connectBigIdea": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "phrase": "Trust in the Lord, not in yourself."
+    },
+    "pixelPicture": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "phrase": "Caleb and Joshua trusted God when others were afraid."
+    },
+    "finishStory": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "markedParagraph": "God told [Moses] to send [twelve] men into [Canaan]. The spies explored the land for [forty] days. They brought back a large bunch of [grapes] and reported that the land was good. But [ten] spies spread a fearful report about the strong people and walled cities. The Israelites wanted to return to [Egypt]. [Caleb] and [Joshua] urged the people to trust God. The frightened crowd threatened them, and God’s [glory] appeared at the Tabernacle. Moses asked God to [forgive] the people. Because they refused to trust God, the Israelites would [wander] in the wilderness for forty years."
+    },
+    "storyOrder": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 1,
+        "text": "God told Moses to send twelve men to explore the promised land of Canaan."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 2,
+        "text": "The spies examined the land, its fruit, its people, and its fortified cities for forty days."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 3,
+        "text": "They returned with fruit and told Israel about the good land and its strong inhabitants."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 4,
+        "text": "Ten spies spread a frightening report, and the people wanted to go back to Egypt."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 5,
+        "text": "Joshua and Caleb urged Israel to trust God, but the people threatened to stone them."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 6,
+        "text": "God’s glory appeared at the Tabernacle, and Moses asked him to forgive the people."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 7,
+        "text": "God sentenced the unbelieving Israelites to wander in the wilderness for forty years."
+      }
+    ],
+    "sortStory": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-01",
+        "statement": "God told Moses to send twelve men to explore Canaan.",
+        "isTrue": true
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-03",
+        "statement": "The spies brought back grapes and other fruit.",
+        "isTrue": true
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-05",
+        "statement": "Caleb encouraged Israel to enter the promised land.",
+        "isTrue": true
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-09",
+        "statement": "The spies returned from Canaan after seven days.",
+        "isTrue": false
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-11",
+        "statement": "All twelve spies agreed that Israel could not conquer the promised land.",
+        "isTrue": false
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-12",
+        "statement": "The people thanked Joshua and Caleb for their courage.",
+        "isTrue": false
+      }
+    ],
+    "drawStory": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "Moses sent twelve spies to explore Canaan."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "The spies brought back a large bunch of grapes."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "Ten spies spread a frightening report about the land."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "Joshua and Caleb urged the people to trust God."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "God’s glory appeared when the crowd threatened the two men."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "Moses prayed for his people, who would wander for forty years."
+      }
+    ],
+    "wordSearch": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "words": [
+        "CANAAN",
+        "MOSES",
+        "CALEB",
+        "JOSHUA",
+        "GRAPES",
+        "DESERT",
+        "PROMISE",
+        "SPIES",
+        "FORTY",
+        "TABERNACLE",
+        "Wilderness",
+        "Wander"
+      ]
+    },
+    "verseCryptogram": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Proverbs 3:5",
+      "verse": "Trust in the LORD with all your heart, and lean not on your own understanding;"
+    },
+    "crossword": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "CANAAN",
+        "clue": "The land God promised to the Israelites"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "MOSES",
+        "clue": "The leader who sent twelve men to explore"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "CALEB",
+        "clue": "The trusting spy who spoke up first"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "JOSHUA",
+        "clue": "The spy who trusted God along with Caleb."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "GRAPES",
+        "clue": "Fruit two men carried on a pole"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "Wander",
+        "clue": "What the Israelites would do in the wilderness"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "WALLS",
+        "clue": "The cities of Canaan were surrounded by these."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "SPIES",
+        "clue": "The twelve men sent to explore Canaan"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "FORTY",
+        "clue": "The number of years Israel would wander"
+      }
+    ],
+    "spiralVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Proverbs 3:5",
+      "verse": "Trust in the LORD with all your heart, and lean not on your own understanding;"
+    },
+    "connectVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Proverbs 3:5",
+      "verse": "Trust in the LORD with all your heart, and lean not on your own understanding;"
+    }
+  },
+  "vocabulary": {
+    "related": [
+      "CANAAN",
+      "SPIES",
+      "MOSES",
+      "CALEB",
+      "JOSHUA",
+      "GRAPES",
+      "FRUIT",
+      "WALLS",
+      "EGYPT",
+      "PROMISE",
+      "DESERT",
+      "WANDER",
+      "TRUST",
+      "FORTY",
+      "TABERNACLE"
+    ],
+    "unrelated": [
+      "INCENSE",
+      "LAMPSTAND",
+      "MANNA",
+      "GOLDEN CALF",
+      "STONE TABLETS",
+      "ALTAR",
+      "PHARAOH",
+      "ARK"
+    ],
+    "entries": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-01",
+        "term": "CANAAN",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-02",
+        "term": "SPIES",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-03",
+        "term": "MOSES",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-04",
+        "term": "CALEB",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-05",
+        "term": "JOSHUA",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-06",
+        "term": "GRAPES",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-07",
+        "term": "FRUIT",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-08",
+        "term": "WALLS",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-09",
+        "term": "EGYPT",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-10",
+        "term": "PROMISE",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-11",
+        "term": "DESERT",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-12",
+        "term": "WANDER",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-13",
+        "term": "TRUST",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-14",
+        "term": "FORTY",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-15",
+        "term": "TABERNACLE",
+        "scope": "story"
+      }
+    ]
+  },
+  "facts": [
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-01",
+      "statement": "God told Moses to send twelve men to explore Canaan.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-02",
+      "statement": "The spies explored Canaan for forty days.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-03",
+      "statement": "The spies brought back grapes and other fruit.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-04",
+      "statement": "Ten spies spread a frightening report about Canaan.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-05",
+      "statement": "Caleb encouraged Israel to enter the promised land.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-06",
+      "statement": "The Israelites wanted to return to Egypt.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-07",
+      "statement": "God’s glory appeared when the people threatened Joshua and Caleb.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-08",
+      "statement": "Moses asked God to forgive the Israelites.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-09",
+      "statement": "The spies returned from Canaan after seven days.",
+      "isTrue": false
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-10",
+      "statement": "Caleb urged the Israelites to return to Egypt.",
+      "isTrue": false
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-11",
+      "statement": "All twelve spies agreed that Israel could not conquer the promised land.",
+      "isTrue": false
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-12",
+      "statement": "The people thanked Joshua and Caleb for their courage.",
+      "isTrue": false
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-13",
+      "statement": "God punished the Israelites to wander for four years.",
+      "isTrue": false
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-14",
+      "statement": "Moses asked God to forget his promise to Israel.",
+      "isTrue": false
+    }
+  ],
+  "characters": [
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "ch-01",
+      "name": "Caleb",
+      "scope": "story",
+      "clues": [
+        {
+          "text": "I trusted that God would lead us into Canaan even though the cities were strong.",
+          "origin": "suggested"
+        }
+      ]
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "ch-02",
+      "name": "Joshua",
+      "scope": "story",
+      "clues": [
+        {
+          "text": "I stood with Caleb and told Israel not to fear the people of the land.",
+          "origin": "suggested"
+        }
+      ]
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "ch-03",
+      "name": "Moses",
+      "scope": "story",
+      "clues": [
+        {
+          "text": "I sent the spies into Canaan and asked God to forgive the people.",
+          "origin": "suggested"
+        }
+      ]
+    }
+  ],
+  "drawingPrompts": [
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-01",
+      "prompt": "Moses sending twelve spies to explore the land of Canaan"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-02",
+      "prompt": "two spies carrying a heavy bunch of grapes on a pole"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-03",
+      "prompt": "the spies showing Moses the fruit they brought from Canaan"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-04",
+      "prompt": "Caleb urging the Israelites to trust God and enter the land"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-05",
+      "prompt": "the people threatening Joshua and Caleb with stones"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-06",
+      "prompt": "God’s glory appearing above the Tabernacle"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-07",
+      "prompt": "Moses praying for God to forgive the Israelites"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-08",
+      "prompt": "the Israelites wandering through the wilderness"
+    }
+  ],
+  "matchingPairs": [
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "pair-01",
+      "left": "Twelve spies",
+      "right": "Explore Canaan"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "pair-02",
+      "left": "Forty days",
+      "right": "Time spent exploring"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "pair-03",
+      "left": "Grapes",
+      "right": "Fruit brought back"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "pair-04",
+      "left": "Caleb",
+      "right": "Urged the people on"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "pair-05",
+      "left": "Ten spies",
+      "right": "Spread a bad report"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "pair-06",
+      "left": "Moses",
+      "right": "Asked God to forgive"
+    }
+  ],
+  "keyPhrases": [
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-01",
+      "text": "Trust in the Lord, not yourself."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-02",
+      "text": "The Lord is with us. Do not be afraid."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-03",
+      "text": "God keeps his promises."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-04",
+      "text": "Caleb and Joshua trusted the Lord."
+    },
+    {
+      "id": "kp-review-1",
+      "text": "Trust in the Lord, not in yourself.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "publication": {
+    "status": "approved",
+    "approved": true,
+    "teacherSignoff": {
+      "reviewer": "Andrew Doane",
+      "date": "2026-11-10",
+      "notes": "Approved with verified BSB verse through Curriculum Review Studio"
+    },
+    "scriptureRights": {
+      "status": "cleared",
+      "basis": "Berean Standard Bible (BSB), dedicated to the public domain on April 30, 2023. Official terms: https://berean.bible/terms.htm. Scripture text confirmed against https://bereanbible.com/bsb.txt.",
+      "reviewedBy": "Andrew Doane",
+      "reviewedOn": "2026-11-10"
+    },
+    "resolvedReviewFlagIds": [],
+    "notes": "Approved through Review Studio after teacher review and a successful 27/27 content/preflight check of four numbered presets. Original conversion notes and checks remain as historical records.",
+    "reviewStudioVerification": {
+      "source": "Review Studio measured preflight",
+      "checkedAt": "2026-11-10T00:47:57.828Z",
+      "convertedCount": 27,
+      "totalCount": 27,
+      "issueCount": 0,
+      "numberedPresetsChecked": 4,
+      "scope": "Candidate-specific content conversion, four numbered preset content checks, and measured Connect the Verse fit. Standalone repository commands and independently rendered PDFs are not claimed.",
+      "matchingWorksheetSource": "preparedActivities.matchWords",
+      "matchingCandidatePool": "matchingPairs is retained separately as historical/source candidate material"
+    },
+    "reviewFlagDisposition": []
+  },
+  "schemaStatus": "approved; Review Studio 27/27 preflight passed"
+}

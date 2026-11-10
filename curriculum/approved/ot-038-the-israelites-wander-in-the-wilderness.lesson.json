@@ -1,0 +1,1072 @@
+{
+  "schemaVersion": 1,
+  "id": "ot-038-the-israelites-wander-in-the-wilderness",
+  "curriculum": {
+    "series": "OT",
+    "lessonNumber": 38
+  },
+  "lessonDetails": {
+    "title": "The Israelites Wander in the Wilderness",
+    "scripturePassages": [
+      "Numbers 11",
+      "Numbers 20–21",
+      "John 3:14–15"
+    ],
+    "scriptureDisplay": "Numbers 11, 20–21",
+    "bigIdeas": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "text": "The bronze snake on a pole points us to Jesus."
+      }
+    ],
+    "memoryVerse": {
+      "reference": "John 3:14-15",
+      "translation": "BSB",
+      "text": "Just as Moses lifted up the snake in the wilderness, so the Son of Man must be lifted up,",
+      "isExcerpt": true,
+      "requiresTextReview": false,
+      "teacherReviewRequired": true,
+      "origin": "adapted",
+      "originalTranslation": "ESV (source excerpt; BSB selection pending)",
+      "hasEllipses": false,
+      "bsbSource": {
+        "reference": "John 3:14-15",
+        "sourceUrl": "https://bereanbible.com/bsb.txt",
+        "publicDomainTerms": "https://berean.bible/terms.htm",
+        "startWord": 0,
+        "endWord": 18
+      }
+    }
+  },
+  "preparedActivities": {
+    "drawPicture": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "prompt": "Moses lifting the bronze snake on a pole while the people look toward it"
+    },
+    "multipleChoice": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-01",
+        "question": "What food were the Israelites tired of eating?",
+        "correctAnswer": "Manna",
+        "choices": [
+          {
+            "text": "Manna",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Quail",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Broccoli",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ]
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-02",
+        "question": "What kind of meat did God send into the camp?",
+        "correctAnswer": "Quail",
+        "choices": [
+          {
+            "text": "Quail",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Sheep",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Fish",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ]
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-03",
+        "question": "What did God tell Moses to do to get water?",
+        "correctAnswer": "Speak to the rock",
+        "choices": [
+          {
+            "text": "Speak to the rock",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Strike the rock twice",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Dig a well",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ]
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-04",
+        "question": "What did Moses actually do to the rock?",
+        "correctAnswer": "Struck it twice",
+        "choices": [
+          {
+            "text": "Struck it twice",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Spoke to it quietly",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Rolled it away",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ]
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-05",
+        "question": "Why could Moses and Aaron not enter Canaan?",
+        "correctAnswer": "They did not honor God",
+        "choices": [
+          {
+            "text": "They did not honor God",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "They refused to leave Egypt",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "They worshiped the bronze snake",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ]
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-06",
+        "question": "How were people saved from poisonous snakebites?",
+        "correctAnswer": "They looked at the bronze snake",
+        "choices": [
+          {
+            "text": "They looked at the bronze snake",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "They hid in the Tabernacle",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "They drank water from the rock",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ]
+      }
+    ],
+    "trueFalse": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "factId": "tf-08",
+      "statement": "People bitten by snakes lived when they looked at the bronze snake.",
+      "isTrue": true
+    },
+    "firstLetters": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "John 3:14-15",
+      "verse": "Just as Moses lifted up the snake in the wilderness, so the Son of Man must be lifted up,"
+    },
+    "oddWords": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "related": [
+        "QUAIL",
+        "MANNA",
+        "MOSES",
+        "ROCK",
+        "SNAKE"
+      ],
+      "unrelated": [
+        "covenant",
+        "flocks",
+        "animals",
+        "pitchers",
+        "rooster"
+      ],
+      "unrelatedOrigin": "suggested"
+    },
+    "unscrambleWords": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "answers": [
+        "QUAIL",
+        "COMPLAIN"
+      ]
+    },
+    "checkboxes": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "correct": [
+        "MANNA",
+        "QUAIL",
+        "ROCK",
+        "MOSES",
+        "BRONZE"
+      ],
+      "incorrect": [
+        "Sarah",
+        "rainbow",
+        "axehead",
+        "arrows",
+        "teacher"
+      ],
+      "incorrectOrigin": "suggested"
+    },
+    "whoAmI": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "clue": "God told me to speak to a rock, but I struck it twice instead. I also raised a bronze snake on a pole.",
+      "answer": "Moses"
+    },
+    "matchWords": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "match-01",
+        "left": "Manna",
+        "right": "Bread"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "match-02",
+        "left": "Quail",
+        "right": "Meat"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "match-03",
+        "left": "Moses",
+        "right": "Struck rock"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "match-05",
+        "left": "Venomous",
+        "right": "Snake"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "match-06",
+        "left": "Pole",
+        "right": "Bronze Snake"
+      },
+      {
+        "id": "mp-01",
+        "left": "Water",
+        "right": "Rock",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "finishVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "John 3:14-15",
+      "markedVerse": "Just as [Moses] lifted [up] the [snake] in the wilderness, so the [Son] of [Man] must be [lifted] up,",
+      "sourceVerse": "Just as Moses lifted up the snake in the wilderness, so the Son of Man must be lifted up,"
+    },
+    "unscrambleVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "John 3:14-15",
+      "markedVerse": "Just as [Moses] lifted [up] the [snake] in the wilderness, so the [Son] of [Man] must be [lifted] up,",
+      "sourceVerse": "Just as Moses lifted up the snake in the wilderness, so the Son of Man must be lifted up,"
+    },
+    "finishStory": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "markedParagraph": "The Israelites were tired of eating [manna]. They complained because they wanted to eat [meat] instead. God sent [quail] into their camp, but he also sent a deadly [plague]. Later the people complained about having no [water]. God told [Moses] to speak to a [rock], but he [struck] it instead. Because Moses and Aaron did not honor God, they could not enter the promised [land]. When the people complained again, the Lord sent poisonous [snakes] among them. God told Moses to lift a [bronze] snake on a pole. Those who looked at it [lived]."
+    },
+    "circleMistakes": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "paragraph": "The Israelites asked for more manna, so God sent ducks for them to eat. Later God told Moses to speak to the rock, but Moses disobeyed by kicking it. Milk flowed out from the rock. Then God sent poisonous spiders among the people. Moses lifted up a bronze dove so the bitten people could live.",
+      "mistakeCount": 6,
+      "mistakes": [
+        {
+          "incorrect": "more manna",
+          "correction": "meat instead of manna"
+        },
+        {
+          "incorrect": "ducks",
+          "correction": "quail"
+        },
+        {
+          "incorrect": "kicking it",
+          "correction": "striking it"
+        },
+        {
+          "incorrect": "Milk",
+          "correction": "water"
+        },
+        {
+          "incorrect": "spiders",
+          "correction": "snakes"
+        },
+        {
+          "incorrect": "bronze dove",
+          "correction": "bronze snake"
+        }
+      ]
+    },
+    "mediumWordSearch": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "words": [
+        "MANNA",
+        "QUAIL",
+        "MOSES",
+        "ROCK",
+        "SNAKE",
+        "BRONZE"
+      ]
+    },
+    "trueFalseMaze": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "factId": "tf-11",
+      "statement": "Moses obeyed by quietly speaking to the rock.",
+      "isTrue": false
+    },
+    "bigIdeaCryptogram": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "phrase": "The bronze snake on a pole points us to Jesus."
+    },
+    "upsideDownVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "John 3:14-15",
+      "verse": "Just as Moses lifted up the snake in the wilderness, so the Son of Man must be lifted up,"
+    },
+    "connectBigIdea": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "phrase": "The bronze snake on a pole points us to Jesus."
+    },
+    "pixelPicture": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "phrase": "Moses raised the bronze snake so the bitten people could live."
+    },
+    "storyOrder": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 1,
+        "text": "The Israelites complained about eating manna and demanded meat."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 2,
+        "text": "God sent quail into the camp, but a plague struck as they ate."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 3,
+        "text": "The people complained again because they had no water."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 4,
+        "text": "God told Moses to speak to a rock, but Moses struck it twice and water flowed."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 5,
+        "text": "God said Moses and Aaron would not enter the promised land."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 6,
+        "text": "The people complained again, and poisonous snakes bit many Israelites."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 7,
+        "text": "Moses prayed for the people and raised a bronze snake as God commanded."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 8,
+        "text": "People who looked at the bronze snake after being bitten lived."
+      }
+    ],
+    "sortStory": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-01",
+        "statement": "The Israelites complained that they were tired of eating manna.",
+        "isTrue": true
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-02",
+        "statement": "God sent quail when the Israelites demanded meat.",
+        "isTrue": true
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-04",
+        "statement": "The Israelites complained when they had no water.",
+        "isTrue": true
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-05",
+        "statement": "God told Moses to speak to the rock to bring out water.",
+        "isTrue": true
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-09",
+        "statement": "The Israelites thanked God for manna and never complained.",
+        "isTrue": false
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-10",
+        "statement": "When the Israelites complained, God sent them fish from heaven.",
+        "isTrue": false
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-12",
+        "statement": "God praised Moses for striking the rock.",
+        "isTrue": false
+      }
+    ],
+    "drawStory": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "The Israelites complained about their daily manna."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "Quail covered the ground around the Israelites’ camp."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "Moses struck the rock twice, and water poured out."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "Poisonous snakes entered the camp and bit the people."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "Moses lifted a bronze snake on a pole for the bitten people to see."
+      }
+    ],
+    "wordSearch": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "words": [
+        "MANNA",
+        "QUAIL",
+        "MOSES",
+        "AARON",
+        "WATER",
+        "ROCK",
+        "PLAGUE",
+        "SNAKES",
+        "BRONZE",
+        "DESERT",
+        "POLE",
+        "JESUS"
+      ]
+    },
+    "verseCryptogram": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "John 3:14-15",
+      "verse": "Just as Moses lifted up the snake in the wilderness, so the Son of Man must be lifted up,"
+    },
+    "crossword": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "MOSES",
+        "clue": "Leader who struck the rock twice"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "QUAIL",
+        "clue": "Birds God sent as meat"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "MANNA",
+        "clue": "Food from heaven that the people disliked"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "WATER",
+        "clue": "What flowed from the rock"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "BRONZE",
+        "clue": "Metal of the raised snake"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "SNAKE",
+        "clue": "Creature raised on a pole"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "Twice",
+        "clue": "How many times Moses struck the rock"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "PLAGUE",
+        "clue": "Punishment that struck people as they ate"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "JESUS",
+        "clue": "The Son of Man who was lifted up"
+      },
+      {
+        "answer": "COMPLAIN",
+        "clue": "What the Israelites repeatedly did",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "spiralVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "John 3:14-15",
+      "verse": "Just as Moses lifted up the snake in the wilderness, so the Son of Man must be lifted up,"
+    },
+    "connectVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "John 3:14-15",
+      "verse": "Just as Moses lifted up the snake in the wilderness, so the Son of Man must be lifted up,"
+    }
+  },
+  "vocabulary": {
+    "related": [
+      "MOSES",
+      "AARON",
+      "MANNA",
+      "QUAIL",
+      "PLAGUE",
+      "WATER",
+      "ROCK",
+      "STAFF",
+      "SNAKES",
+      "BRONZE",
+      "POLE",
+      "DESERT",
+      "WANDER",
+      "COMPLAIN",
+      "JESUS",
+      "CROSS",
+      "BELIEVE",
+      "ISRAEL"
+    ],
+    "unrelated": [
+      "GOLIATH",
+      "HARP",
+      "SLING",
+      "PALACE",
+      "LION DEN",
+      "FISH NET",
+      "SHEPHERD",
+      "DOVE"
+    ],
+    "entries": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-01",
+        "term": "MOSES",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-02",
+        "term": "AARON",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-03",
+        "term": "MANNA",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-04",
+        "term": "QUAIL",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-05",
+        "term": "PLAGUE",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-06",
+        "term": "WATER",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-07",
+        "term": "ROCK",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-08",
+        "term": "STAFF",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-09",
+        "term": "SNAKES",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-10",
+        "term": "BRONZE",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-11",
+        "term": "POLE",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-12",
+        "term": "DESERT",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-13",
+        "term": "WANDER",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-14",
+        "term": "COMPLAIN",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-15",
+        "term": "JESUS",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-16",
+        "term": "CROSS",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-17",
+        "term": "BELIEVE",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-18",
+        "term": "ISRAEL",
+        "scope": "story"
+      }
+    ]
+  },
+  "facts": [
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-01",
+      "statement": "The Israelites complained that they were tired of eating manna.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-02",
+      "statement": "God sent quail when the Israelites demanded meat.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-03",
+      "statement": "God struck some of the people with a plague as they ate quail.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-04",
+      "statement": "The Israelites complained when they had no water.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-05",
+      "statement": "God told Moses to speak to the rock to bring out water.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-06",
+      "statement": "Moses struck the rock twice, and water came out.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-07",
+      "statement": "God told Moses and Aaron they would not enter the promised land.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-08",
+      "statement": "People bitten by snakes lived when they looked at the bronze snake.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-09",
+      "statement": "The Israelites thanked God for manna and never complained.",
+      "isTrue": false
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-10",
+      "statement": "When the Israelites complained, God sent them fish from heaven.",
+      "isTrue": false
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-11",
+      "statement": "Moses obeyed by quietly speaking to the rock.",
+      "isTrue": false
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-12",
+      "statement": "God praised Moses for striking the rock.",
+      "isTrue": false
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-13",
+      "statement": "God sent poisonous frogs to punish the people in Numbers 21.",
+      "isTrue": false
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-14",
+      "statement": "The bronze worm healed people when they turned looked at it.",
+      "isTrue": false
+    }
+  ],
+  "characters": [
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "ch-01",
+      "name": "Moses",
+      "scope": "story",
+      "clues": [
+        {
+          "text": "God told me to speak to a rock, but I struck it twice with my staff.",
+          "origin": "suggested"
+        }
+      ]
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "ch-02",
+      "name": "Aaron",
+      "scope": "story",
+      "clues": [
+        {
+          "text": "I stood beside my brother Moses at the rock and was not allowed to enter Canaan.",
+          "origin": "suggested"
+        }
+      ]
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "ch-03",
+      "name": "Jesus",
+      "scope": "application",
+      "clues": [
+        {
+          "text": "I said the Son of Man must be lifted up, as Moses lifted the serpent.",
+          "origin": "suggested"
+        }
+      ]
+    }
+  ],
+  "drawingPrompts": [
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-01",
+      "prompt": "the Israelites complaining about their daily manna"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-02",
+      "prompt": "quail covering the wilderness camp"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-03",
+      "prompt": "Moses and Aaron standing before a large rock"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-04",
+      "prompt": "Moses striking the rock with his walking stick"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-05",
+      "prompt": "water flowing from the rock for the people"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-06",
+      "prompt": "poisonous snakes moving through the Israelite camp"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-07",
+      "prompt": "Moses lifting a bronze snake high on a pole"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-08",
+      "prompt": "an Israelite looking toward the raised bronze snake"
+    }
+  ],
+  "matchingPairs": [
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "pair-01",
+      "left": "Manna",
+      "right": "Bread from heaven"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "pair-02",
+      "left": "Quail",
+      "right": "Meat sent by God"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "pair-03",
+      "left": "Moses",
+      "right": "Struck the rock"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "pair-04",
+      "left": "Aaron",
+      "right": "Brother of Moses"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "pair-05",
+      "left": "Bronze snake",
+      "right": "Raised on a pole"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "pair-06",
+      "left": "Jesus",
+      "right": "Lifted up on a cross"
+    }
+  ],
+  "keyPhrases": [
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-01",
+      "text": "The bronze snake on a pole points us to Jesus."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-02",
+      "text": "God told Moses to speak to the rock."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-03",
+      "text": "Look at the bronze snake and live."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-04",
+      "text": "Jesus was lifted up on the cross to save sinners."
+    }
+  ],
+  "publication": {
+    "status": "approved",
+    "approved": true,
+    "teacherSignoff": {
+      "reviewer": "Andrew Doane",
+      "date": "2026-11-10",
+      "notes": "Approved with verified BSB verse through Curriculum Review Studio"
+    },
+    "scriptureRights": {
+      "status": "cleared",
+      "basis": "Berean Standard Bible (BSB), dedicated to the public domain on April 30, 2023. Official terms: https://berean.bible/terms.htm. Scripture text confirmed against https://bereanbible.com/bsb.txt.",
+      "reviewedBy": "Andrew Doane",
+      "reviewedOn": "2026-11-10"
+    },
+    "resolvedReviewFlagIds": [],
+    "notes": "Approved through Review Studio after teacher review and a successful 27/27 content/preflight check of four numbered presets. Original conversion notes and checks remain as historical records.",
+    "reviewStudioVerification": {
+      "source": "Review Studio measured preflight",
+      "checkedAt": "2026-11-10T01:00:15.655Z",
+      "convertedCount": 27,
+      "totalCount": 27,
+      "issueCount": 0,
+      "numberedPresetsChecked": 4,
+      "scope": "Candidate-specific content conversion, four numbered preset content checks, and measured Connect the Verse fit. Standalone repository commands and independently rendered PDFs are not claimed.",
+      "matchingWorksheetSource": "preparedActivities.matchWords",
+      "matchingCandidatePool": "matchingPairs is retained separately as historical/source candidate material"
+    },
+    "reviewFlagDisposition": []
+  },
+  "schemaStatus": "approved; Review Studio 27/27 preflight passed"
+}
