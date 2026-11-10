@@ -94,6 +94,9 @@ export default function ReviewApp(){
  const [focusIssueField,setFocusIssueField]=useState<string|null>(null);
  // Preserve the last conflict explanation while editing invalidates preflight.
  const [repairConflictWords,setRepairConflictWords]=useState<string[]>([]);
+ // Retain the exact previously printed vocabulary context while an edit
+ // clears the old preflight result, until the teacher reruns the check.
+ const [lastUnscrambleConflict,setLastUnscrambleConflict]=useState<ReviewIssue|null>(null);
  const [moduleEditorText,setModuleEditorText]=useState('');
  const [reviewer,setReviewer]=useState('');
  const [signDate,setSignDate]=useState(displayDate);
@@ -165,9 +168,12 @@ export default function ReviewApp(){
    const {puzzlePdf,boldPdf,finishBody}=await mediumWidths();
    // An edit or new lesson while fonts load must never restore stale success.
    if(request!==preflightRunId.current||latestLesson.current!==checkedLesson)return;
-   setPreflight({...buildReviewPreflight(checkedLesson,{
+   const result=buildReviewPreflight(checkedLesson,{
     puzzle:puzzlePdf,verse:boldPdf,subtitle:finishBody,
-   }),checkedAt:new Date().toISOString()});
+   });
+   setPreflight({...result,checkedAt:new Date().toISOString()});
+   setLastUnscrambleConflict(result.issues.find(issue=>
+    issue.moduleId==='unscramble-words'&&issue.recipeId!==undefined)??null);
    setError('');
   }catch(e){
    if(request!==preflightRunId.current||latestLesson.current!==checkedLesson)return;
@@ -186,6 +192,7 @@ export default function ReviewApp(){
   const prepared=prepareUnscrambleReview(data);
   setLesson(prepared.lesson);
   setWordBankDrafts(draftWordBanks(prepared.lesson));
+  setLastUnscrambleConflict(null);
   const importedReview=value?.lesson?.schemaVersion===1&&Array.isArray(value.reviewed)?value.reviewed:[];
   setReviewed(prepared.changed?
    importedReview.filter((id:string)=>id!=='unscramble-words'):importedReview);
@@ -633,7 +640,10 @@ export default function ReviewApp(){
       {active.id==='who-am-i'&&<WhoAmIReviewEditor
        lesson={lesson} onChange={applyStoryFactReview} onError={setError}/>}
       {active.id==='unscramble-words'&&<UnscrambleReviewEditor
-       lesson={lesson} onChange={applyStoryFactReview} onError={setError}/>}
+       lesson={lesson} onChange={applyStoryFactReview} onError={setError}
+       presetConflict={preflight?.issues.find(issue=>
+        issue.moduleId==='unscramble-words'&&issue.recipeId!==undefined)??
+        lastUnscrambleConflict}/>}
       {active.id==='pixel-picture'&&<PixelPictureReviewEditor
        lesson={lesson} onChange={applyStoryFactReview} onError={setError}/>}
       {active.id==='multiple-choice-bank'&&<MultipleChoiceBankReviewEditor
@@ -967,6 +977,7 @@ export default function ReviewApp(){
          <button type="button" className="review-secondary" onClick={()=>{
           setSelectedId(issue.taskId);setFocusIssueField(issue.fieldId);
           setRepairConflictWords(issue.conflicts??[]);
+          setLastUnscrambleConflict(issue.moduleId==='unscramble-words'?issue:null);
          }}>Open {issue.label} repair</button>
         </div>)}
        <p className="review-source">If no specific issue is listed, run preflight again
@@ -1023,6 +1034,7 @@ export default function ReviewApp(){
            setSelectedId(issue.taskId);setFocusIssueField(issue.fieldId);
            setRepairConflictWords(issue.conflicts??[...issue.message.matchAll(/vocab:([a-z-]+)/giu)]
             .map(match=>'vocab:'+match[1]));
+           setLastUnscrambleConflict(issue.moduleId==='unscramble-words'?issue:null);
            setError('');
           }}>
           <strong>{issue.label}</strong>
