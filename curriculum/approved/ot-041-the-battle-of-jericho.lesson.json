@@ -1,0 +1,1082 @@
+{
+  "schemaVersion": 1,
+  "id": "ot-041-the-battle-of-jericho",
+  "curriculum": {
+    "series": "OT",
+    "lessonNumber": 41
+  },
+  "lessonDetails": {
+    "title": "The Battle of Jericho",
+    "scripturePassages": [
+      "Joshua 6",
+      "Hebrews 11:30–31",
+      "Romans 15:4"
+    ],
+    "scriptureDisplay": "Joshua 6",
+    "bigIdeas": [
+      {
+        "text": "Put your faith in the Lord God.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "memoryVerse": {
+      "reference": "Hebrews 11:30",
+      "translation": "BSB",
+      "text": "By faith the walls of Jericho fell, after the people had marched around them for seven days.",
+      "isExcerpt": false,
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "requiresTextReview": false,
+      "originalTranslation": "ESV",
+      "hasEllipses": false,
+      "bsbSource": {
+        "reference": "Hebrews 11:30",
+        "sourceUrl": "https://bereanbible.com/bsb.txt",
+        "publicDomainTerms": "https://berean.bible/terms.htm",
+        "startWord": 0,
+        "endWord": 16
+      }
+    }
+  },
+  "preparedActivities": {
+    "drawPicture": {
+      "prompt": "the priests blowing trumpets as Israel marches around Jericho",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "multipleChoice": [
+      {
+        "id": "mc-01",
+        "question": "What did God tell Joshua to do before the walls of Jericho fell?",
+        "correctAnswer": "March around the city",
+        "choices": [
+          {
+            "text": "March around the city",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Dig a tunnel under the walls",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Build a tall wooden ladder",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-02",
+        "question": "What did seven priests carry as they marched around",
+        "correctAnswer": "Rams’ horn trumpets",
+        "choices": [
+          {
+            "text": "Rams’ horn trumpets",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Golden shields",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Bowls of incense",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-03",
+        "question": "How many times did the army circle Jericho on the seventh day?",
+        "correctAnswer": "Seven times",
+        "choices": [
+          {
+            "text": "Seven times",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "One time",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Twelve times",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-04",
+        "question": "What signal came just before the army’s loud shout?",
+        "correctAnswer": "A trumpet blast",
+        "choices": [
+          {
+            "text": "A trumpet blast",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "A blast of thunder",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "An earthquake",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-05",
+        "question": "What happened when the army shouted?",
+        "correctAnswer": "The wall fell down",
+        "choices": [
+          {
+            "text": "The wall fell down",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "The river flooded Jericho",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "The sun went dark",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-06",
+        "question": "Who did Joshua send the two spies to rescue?",
+        "correctAnswer": "Rahab and her family",
+        "choices": [
+          {
+            "text": "Rahab and her family",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "The king of Jericho",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "The treasure of Jericho",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "trueFalse": {
+      "factId": "tf-07",
+      "statement": "Joshua told soldiers to give Jericho’s silver and gold to the Lord.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "trueFalseMaze": {
+      "factId": "tf-13",
+      "statement": "Joshua told his soldiers to keep Jericho’s gold for themselves.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "sortStory": [
+      {
+        "factId": "tf-01",
+        "statement": "God told Joshua that Jericho would be given to Israel.",
+        "isTrue": true,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-02",
+        "statement": "The Israelites marched around Jericho once each day for six days.",
+        "isTrue": true,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-04",
+        "statement": "The Ark of the Covenant was carried around Jericho.",
+        "isTrue": true,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-05",
+        "statement": "On the seventh day the army marched around Jericho seven times.",
+        "isTrue": true,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-06",
+        "statement": "The walls fell after the trumpets sounded and the army shouted.",
+        "isTrue": true,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-08",
+        "statement": "Joshua sent the two spies to bring Rahab and her family to safety.",
+        "isTrue": true,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-09",
+        "statement": "God told Joshua to build a ladder to climb Jericho’s wall.",
+        "isTrue": false,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-12",
+        "statement": "Nothing happened when the Israelites shouted.",
+        "isTrue": false,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "firstLetters": {
+      "reference": "Hebrews 11:30",
+      "verse": "By faith the walls of Jericho fell, after the people had marched around them for seven days.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "upsideDownVerse": {
+      "reference": "Hebrews 11:30",
+      "verse": "By faith the walls of Jericho fell, after the people had marched around them for seven days.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "verseCryptogram": {
+      "reference": "Hebrews 11:30",
+      "verse": "By faith the walls of Jericho fell, after the people had marched around them for seven days.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "spiralVerse": {
+      "reference": "Hebrews 11:30",
+      "verse": "By faith the walls of Jericho fell, after the people had marched around them for seven days.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "connectVerse": {
+      "reference": "Hebrews 11:30",
+      "verse": "By faith the walls of Jericho fell, after the people had marched around them for seven days.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "finishVerse": {
+      "reference": "Hebrews 11:30",
+      "markedVerse": "By [faith] the [walls] of [Jericho] fell, after the [people] had [marched] around them for [seven] days.",
+      "sourceVerse": "By faith the walls of Jericho fell, after the people had marched around them for seven days.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "unscrambleVerse": {
+      "reference": "Hebrews 11:30",
+      "markedVerse": "By [faith] the [walls] of [Jericho] fell, after the [people] had [marched] around them for [seven] days.",
+      "sourceVerse": "By faith the walls of Jericho fell, after the people had marched around them for seven days.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "oddWords": {
+      "related": [
+        "JERICHO",
+        "ARK",
+        "PRIESTS",
+        "RAHAB",
+        "SHOUT"
+      ],
+      "unrelated": [
+        "Dagon",
+        "ladder",
+        "leaves",
+        "Samson",
+        "Paul"
+      ],
+      "unrelatedOrigin": "suggested",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "unscrambleWords": {
+      "answers": [
+        "JERICHO",
+        "TRUMPET"
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "checkboxes": {
+      "correct": [
+        "JOSHUA",
+        "SEVEN",
+        "WALLS",
+        "FAITH",
+        "RED ROPE"
+      ],
+      "incorrect": [
+        "altar",
+        "worship",
+        "Potiphar",
+        "manger",
+        "Silas"
+      ],
+      "incorrectOrigin": "suggested",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "whoAmI": {
+      "clue": "I lived in the city of Jericho. I put a red rope in my window. Two spies came to rescue us after the walls fell down.",
+      "answer": "Rahab",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "matchWords": [
+      {
+        "id": "match-01",
+        "left": "Joshua",
+        "right": "Leader",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "match-02",
+        "left": "Instrument",
+        "right": "Trumpets",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "match-03",
+        "left": "People",
+        "right": "Marched",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "match-04",
+        "left": "Fell down",
+        "right": "Walls",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "match-05",
+        "left": "Jericho",
+        "right": "Destroyed",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "match-06",
+        "left": "Rahab",
+        "right": "Rescued",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "circleMistakes": {
+      "paragraph": "Joshua led the people around the city of Bethlehem. The priests carried a golden calf around Jericho. For six days the army marched around Jericho seven times each day. The priests played flutes made of silver. On the seventh day the army circled the city twelve times. The walls grew taller when the soldiers shouted. Joshua ordered the soldiers to keep all the silver and gold. Rahab and her family were rescued.",
+      "mistakeCount": 7,
+      "mistakes": [
+        {
+          "incorrect": "Bethlehem",
+          "correction": "Jericho",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "a golden calf",
+          "correction": "the Ark of the Covenant",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "seven times each day",
+          "correction": "once each day",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "flutes made of silver",
+          "correction": "trumpets made of rams’ horns",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "twelve times",
+          "correction": "seven times",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "grew taller",
+          "correction": "fell down",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "keep all the silver and gold",
+          "correction": "give the silver and gold to the Lord",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "mediumWordSearch": {
+      "words": [
+        "JOSHUA",
+        "JERICHO",
+        "RAHAB",
+        "ARK",
+        "HORNS",
+        "FAITH"
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "bigIdeaCryptogram": {
+      "phrase": "By faith, the people obeyed and the walls fell down.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "connectBigIdea": {
+      "phrase": "Put your faith in the Lord God.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "pixelPicture": {
+      "phrase": "The Lord brought down Jericho’s walls when Israel shouted.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "finishStory": {
+      "markedParagraph": "God told [Joshua] that he would give Israel the city of [Jericho]. For six days the army marched around the city [once] each day. Seven [priests] blew trumpets made from rams’ [horns], and other priests carried the [ark]. On the seventh day, the army marched around the city [seven] times. The priests blew a long blast on their [trumpets], and the people gave a loud [shout]. The walls fell [down], and the soldiers entered the city. Joshua sent two [spies] to rescue [Rahab] and her family, just as they had promised.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "storyOrder": [
+      {
+        "order": 1,
+        "text": "God promised Joshua that Israel would capture Jericho and explained his battle plan.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 2,
+        "text": "The priests carried the ark and blew trumpets while Israel marched around the city once daily for six days.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 3,
+        "text": "On the seventh day the army marched around Jericho seven times.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 4,
+        "text": "The priests blew a long trumpet blast, and Joshua told the army to shout.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 5,
+        "text": "The walls fell down, and Israel’s soldiers entered the city.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 6,
+        "text": "The soldiers burned Jericho and set aside its gold and silver for the Lord.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 7,
+        "text": "Joshua sent the two former spies to rescue Rahab and her family.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "drawStory": [
+      {
+        "prompt": "Joshua told the people God’s plan for marching around Jericho.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "Seven priests blew trumpets as the soldiers marched around the city.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "On the seventh day the people marched around the city seven times.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "The Israelites shouted, and God brought down the city walls.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "The two spies rescued Rahab and her family from Jericho.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "wordSearch": {
+      "words": [
+        "JOSHUA",
+        "JERICHO",
+        "RAHAB",
+        "PRIESTS",
+        "TRUMPETS",
+        "ARK",
+        "HORNS",
+        "WALLS",
+        "FAITH",
+        "SHOUT",
+        "SEVEN"
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "crossword": [
+      {
+        "answer": "JERICHO",
+        "clue": "Walled city captured by Israel",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "JOSHUA",
+        "clue": "Leader of Israel during the battle",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "RAHAB",
+        "clue": "Woman whose family was rescued",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "TRUMPETS",
+        "clue": "Instruments played by the priests",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "ARK",
+        "clue": "Special chest carried by the priests",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "PRIESTS",
+        "clue": "Men who blew rams’ horn trumpets",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "SEVEN",
+        "clue": "Number of circles on the last day",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "WALLS",
+        "clue": "These fell after the shout",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "FAITH",
+        "clue": "Trusting God and his promises",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ]
+  },
+  "vocabulary": {
+    "related": [
+      "JOSHUA",
+      "JERICHO",
+      "RAHAB",
+      "ARK",
+      "PRIESTS",
+      "HORNS",
+      "TRUMPETS",
+      "WALLS",
+      "FAITH",
+      "SHOUT",
+      "SEVEN",
+      "SOLDIERS"
+    ],
+    "unrelated": [
+      "ROCKET",
+      "PENGUIN",
+      "VOLCANO",
+      "TELESCOPE",
+      "SANDWICH",
+      "ASTRONAUT",
+      "BICYCLE",
+      "CAMERA"
+    ],
+    "entries": [
+      {
+        "id": "voc-01",
+        "term": "JOSHUA",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-02",
+        "term": "JERICHO",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-03",
+        "term": "RAHAB",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-04",
+        "term": "ARK",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-05",
+        "term": "PRIESTS",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-06",
+        "term": "HORNS",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-07",
+        "term": "TRUMPETS",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-08",
+        "term": "WALLS",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-09",
+        "term": "FAITH",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-10",
+        "term": "SHOUT",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-11",
+        "term": "SEVEN",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-12",
+        "term": "SOLDIERS",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ]
+  },
+  "facts": [
+    {
+      "id": "tf-01",
+      "statement": "God told Joshua that Jericho would be given to Israel.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-02",
+      "statement": "The Israelites marched around Jericho once each day for six days.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-03",
+      "statement": "Seven priests blew trumpets made from rams’ horns.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-04",
+      "statement": "The Ark of the Covenant was carried around Jericho.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-05",
+      "statement": "On the seventh day the army marched around Jericho seven times.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-06",
+      "statement": "The walls fell after the trumpets sounded and the army shouted.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-07",
+      "statement": "Joshua told soldiers to give Jericho’s silver and gold to the Lord.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-08",
+      "statement": "Joshua sent the two spies to bring Rahab and her family to safety.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-09",
+      "statement": "God told Joshua to build a ladder to climb Jericho’s wall.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-10",
+      "statement": "The army marched around Jericho seven times each day.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-11",
+      "statement": "The priests played drums as they marched around Jericho.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-12",
+      "statement": "Nothing happened when the Israelites shouted.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-13",
+      "statement": "Joshua told his soldiers to keep Jericho’s gold for themselves.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-14",
+      "statement": "Rahab and her family were destroyed in the battle.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "characters": [
+    {
+      "id": "ch-01",
+      "name": "Joshua",
+      "clues": [
+        {
+          "text": "I led Israel around Jericho and commanded the army to shout.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "text": "God told me that the city of Jericho would be given to Israel.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "ch-02",
+      "name": "Rahab",
+      "clues": [
+        {
+          "text": "I hung a red rope from my window so my family would be kept safe.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "text": "I hid two Israelite spies before the battle for Jericho.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "ch-03",
+      "name": "Priests",
+      "clues": [
+        {
+          "text": "We blew rams’ horn trumpets as we marched around Jericho.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "text": "Some of us carried the Ark of the Covenant in the procession.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "ch-04",
+      "name": "Spies",
+      "clues": [
+        {
+          "text": "Rahab saved us when we came to Jericho.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "text": "Joshua sent us into the city again to rescue Rahab and her family.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "drawingPrompts": [
+    {
+      "id": "scene-01",
+      "prompt": "Joshua telling the Israelites to march around Jericho",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "scene-02",
+      "prompt": "seven priests blowing rams’ horn trumpets beside the Ark of the Covenant",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "scene-03",
+      "prompt": "soldiers marching around Jericho’s tall walls",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "scene-04",
+      "prompt": "the people circling Jericho seven times on the seventh day",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "scene-05",
+      "prompt": "the priests blowing a long trumpet blast and the army shouting",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "scene-06",
+      "prompt": "Jericho’s walls falling as the Israelite army approaches",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "scene-07",
+      "prompt": "two spies leading Rahab and her family out of Jericho",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "matchingPairs": [
+    {
+      "id": "pool-match-01",
+      "left": "Joshua",
+      "right": "Army leader",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "pool-match-02",
+      "left": "Seven priests",
+      "right": "Blew trumpets",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "pool-match-03",
+      "left": "Ark",
+      "right": "Sacred chest",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "pool-match-04",
+      "left": "Rams horns",
+      "right": "Trumpets",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "pool-match-05",
+      "left": "Jericho",
+      "right": "Walled city",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "pool-match-06",
+      "left": "Rahab",
+      "right": "Rescued with family",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "pool-match-07",
+      "left": "Red rope",
+      "right": "Marked her window",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "keyPhrases": [
+    {
+      "id": "phrase-01",
+      "text": "Put your faith in the Lord God.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "phrase-02",
+      "text": "God promised Joshua the city of Jericho.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "phrase-03",
+      "text": "By faith the Israelites followed God’s unusual plan.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "phrase-04",
+      "text": "The Lord brought down Jericho’s mighty walls.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "phrase-05",
+      "text": "Rahab and her family were saved during the battle.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "kp-review-1",
+      "text": "By faith, the people obeyed and the walls fell down.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "publication": {
+    "status": "approved",
+    "approved": true,
+    "teacherSignoff": {
+      "reviewer": "Andrew Doane",
+      "date": "2026-11-18",
+      "notes": "Approved with verified BSB verse through Curriculum Review Studio"
+    },
+    "scriptureRights": {
+      "status": "cleared",
+      "basis": "Berean Standard Bible (BSB), dedicated to the public domain on April 30, 2023. Official terms: https://berean.bible/terms.htm. Scripture text confirmed against https://bereanbible.com/bsb.txt.",
+      "reviewedBy": "Andrew Doane",
+      "reviewedOn": "2026-11-18"
+    },
+    "resolvedReviewFlagIds": [],
+    "notes": "Approved through Review Studio after teacher review and a successful 27/27 content/preflight check of four numbered presets. Original conversion notes and checks remain as historical records.",
+    "reviewStudioVerification": {
+      "source": "Review Studio measured preflight",
+      "checkedAt": "2026-11-18T14:12:21.958Z",
+      "convertedCount": 27,
+      "totalCount": 27,
+      "issueCount": 0,
+      "numberedPresetsChecked": 4,
+      "scope": "Candidate-specific content conversion, four numbered preset content checks, and measured Connect the Verse fit. Standalone repository commands and independently rendered PDFs are not claimed.",
+      "matchingWorksheetSource": "preparedActivities.matchWords",
+      "matchingCandidatePool": "matchingPairs is retained separately as historical/source candidate material"
+    },
+    "reviewFlagDisposition": []
+  },
+  "schemaStatus": "approved; Review Studio 27/27 preflight passed"
+}
