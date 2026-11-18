@@ -1,0 +1,3142 @@
+{
+  "schemaVersion": 1,
+  "schemaStatus": "draft-source-preserving; pending teacher and generator review",
+  "id": "ot-016-jacobs-dream",
+  "curriculum": {
+    "series": "Old Testament",
+    "lessonNumber": 16
+  },
+  "lessonDetails": {
+    "title": "Jacob’s Dream",
+    "scripturePassages": [
+      "Genesis 27",
+      "Genesis 28"
+    ],
+    "scriptureDisplay": "Genesis 27–28",
+    "bigIdeas": [
+      {
+        "text": "God kept his PROMISE to Abraham, Isaac, and Jacob.",
+        "origin": "source",
+        "source": {
+          "filename": "OT 16 Lesson (Jacob's Dream).odt",
+          "section": "Important Idea",
+          "page": 5,
+          "sourceParagraphIndex": 79,
+          "details": "The page-5 blue Important Idea graphic displays the phrase across three separate ODT paragraphs; its raw layout fragment at paragraph 158 joins words."
+        }
+      },
+      {
+        "text": "We worship the GOD of Abraham, Isaac, and Jacob.",
+        "origin": "source",
+        "source": {
+          "filename": "OT 16 Lesson (Jacob's Dream).odt",
+          "section": "Important Idea",
+          "page": 7,
+          "sourceParagraphIndex": 109,
+          "details": "The page-7 green Important Idea graphic displays this phrase across two ODT paragraphs; its raw layout fragment at paragraph 215 joins words."
+        }
+      }
+    ],
+    "memoryVerse": {
+      "reference": "Matthew 22:31-32",
+      "translation": "BSB",
+      "text": "have you not read what God said to you: ‘I am the God of Abraham, the God of Isaac, and the God of Jacob’?",
+      "isExcerpt": true,
+      "hasEllipses": false,
+      "requiresTextReview": false,
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Memory Verse Activity",
+        "page": 8,
+        "sourceParagraphIndex": 121
+      },
+      "alsoVerifiedAt": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Verse and Motions",
+        "page": 8,
+        "sourceParagraphIndex": 126
+      },
+      "originalTranslation": "ESV",
+      "bsbSource": {
+        "reference": "Matthew 22:31-32",
+        "sourceUrl": "https://bereanbible.com/bsb.txt",
+        "publicDomainTerms": "https://berean.bible/terms.htm",
+        "startWord": 7,
+        "endWord": 30
+      }
+    }
+  },
+  "sourceFiles": [
+    {
+      "filename": "OT 16 Lesson (Jacob's Dream).odt",
+      "format": "odt",
+      "role": "primary teaching source",
+      "note": "17 printed pages. The original memory verse is Matthew 22:31-32 ESV with ellipsis, not a teacher-verified BSB excerpt. No accompanying slideshow or activity resource sheets were supplied."
+    }
+  ],
+  "storyNotes": [
+    {
+      "id": "sn-01",
+      "order": 1,
+      "originalText": "Jacob's parents sent Jacob to live with his UNCLE Laban until Esau calmed down.",
+      "cleanText": "Jacob's parents sent Jacob to live with his uncle Laban until Esau calmed down.",
+      "emphasizedWords": [
+        "UNCLE"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "STORY NOTE",
+        "page": 1,
+        "sourceParagraphIndex": 19,
+        "details": "The boxed note begins on page 1 and continues onto page 2."
+      }
+    },
+    {
+      "id": "sn-02",
+      "order": 2,
+      "originalText": "On the way to his uncle, Jacob stopped for the night, using a stone for his PILLOW.",
+      "cleanText": "On the way to his uncle, Jacob stopped for the night, using a stone for his pillow.",
+      "emphasizedWords": [
+        "PILLOW"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "STORY NOTE",
+        "page": 2,
+        "sourceParagraphIndex": 27
+      }
+    },
+    {
+      "id": "sn-03",
+      "order": 3,
+      "originalText": "That night, Jacob dreamed of a STAIRWAY to heaven, with angels going up and down.",
+      "cleanText": "That night, Jacob dreamed of a stairway to heaven, with angels going up and down.",
+      "emphasizedWords": [
+        "STAIRWAY"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "STORY NOTE",
+        "page": 2,
+        "sourceParagraphIndex": 33
+      }
+    },
+    {
+      "id": "sn-04",
+      "order": 4,
+      "originalText": "God stood at the top of the stairway. He gave Jacob the same PROMISES he made to Abraham.",
+      "cleanText": "God stood at the top of the stairway. He gave Jacob the same promises he made to Abraham.",
+      "emphasizedWords": [
+        "PROMISES"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "STORY NOTE",
+        "page": 3,
+        "sourceParagraphIndex": 42
+      }
+    },
+    {
+      "id": "sn-05",
+      "order": 5,
+      "originalText": "When Jacob woke up, he thought, \"God is in this PLACE and I didn't know it!\"",
+      "cleanText": "When Jacob woke up, he thought, \"God is in this place and I didn't know it!\"",
+      "emphasizedWords": [
+        "PLACE"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "STORY NOTE",
+        "page": 3,
+        "sourceParagraphIndex": 51
+      }
+    },
+    {
+      "id": "sn-06",
+      "order": 6,
+      "originalText": "Jacob stood up the STONE he used for a pillow. He called that place \"The House of God.\"",
+      "cleanText": "Jacob stood up the stone he used for a pillow. He called that place \"The House of God.\"",
+      "emphasizedWords": [
+        "STONE"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "STORY NOTE",
+        "page": 4,
+        "sourceParagraphIndex": 60
+      }
+    },
+    {
+      "id": "sn-07",
+      "order": 7,
+      "originalText": "Jacob made a promise: \"If God will be with me, then he will be MY God.\"",
+      "cleanText": "Jacob made a promise: \"If God will be with me, then he will be my God.\"",
+      "emphasizedWords": [
+        "MY"
+      ],
+      "origin": "source",
+      "cleanTextOrigin": "adapted",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "STORY NOTE",
+        "page": 4,
+        "sourceParagraphIndex": 69
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q-01",
+      "question": "What was the name of that book?",
+      "answer": "Genesis.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "introduction",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 3
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-02",
+      "question": "What promises did God give Abraham?",
+      "answer": "To grow his family into a great nation, give them a great land, and use them to bless the whole world.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "introduction",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 7
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-03",
+      "question": "Who can remind us how that happened?",
+      "answer": "Jacob disguised himself as his brother, Esau, and fooled his father into giving a prayer of blessing to him instead of his big brother, Esau.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "introduction",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Introduction",
+        "page": 1,
+        "sourceParagraphIndex": 14
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-04",
+      "question": "What crazy thing was angry Esau ready to do?",
+      "answer": "Kill his brother.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 20
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-05",
+      "question": "Why was Esau so angry?",
+      "answer": "Jacob had stolen his blessing.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 21
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-06",
+      "question": "What did Rebekah tell Jacob to do?",
+      "answer": "Go and live with her brother, Laban.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 23
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-07",
+      "question": "How long did Rebekah tell Jacob to stay at her brother Laban's house?",
+      "answer": "Until she sent a message to say that Esau had calmed down.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 25
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-08",
+      "question": "Why?",
+      "answer": "Cars and planes hadn't been invented yet!",
+      "kind": "discussion",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 28
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-09",
+      "question": "What did he use instead?",
+      "answer": "A stone.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 30
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-10",
+      "question": "What happened to Jacob as he slept under the stars that night?",
+      "answer": "He had a dream.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 34
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-11",
+      "question": "How high did it reach?",
+      "answer": "All the way to heaven.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Story",
+        "page": 3,
+        "sourceParagraphIndex": 37
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-12",
+      "question": "Who was on it?",
+      "answer": "Angels.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Story",
+        "page": 3,
+        "sourceParagraphIndex": 38
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-13",
+      "question": "What were the angels doing on Jacob's sky-high dream stairs?",
+      "answer": "Going up and down.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Story",
+        "page": 3,
+        "sourceParagraphIndex": 39
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-14",
+      "question": "Who was standing at the top of the angel-covered ladder in Jacob's dream?",
+      "answer": "The Lord God.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Story",
+        "page": 3,
+        "sourceParagraphIndex": 43
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-15",
+      "question": "What did God look like to Jacob?",
+      "answer": "The Bible doesn't say.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Story",
+        "page": 3,
+        "sourceParagraphIndex": 44
+      },
+      "standaloneReady": true,
+      "notes": "Answer is provided in the source narrative immediately following the question; not printed in parentheses."
+    },
+    {
+      "id": "q-16",
+      "question": "Where have you heard those words before?",
+      "answer": "God made those same promises to Abraham and Isaac.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Story",
+        "page": 3,
+        "sourceParagraphIndex": 46
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-17",
+      "question": "What did Jacob say after he woke up?",
+      "answer": "God was in this place and I didn't even know it!",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Story",
+        "page": 3,
+        "sourceParagraphIndex": 52
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-18",
+      "question": "Who would be scared of an angel-covered ladder to heaven?",
+      "answer": "",
+      "kind": "discussion",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Story",
+        "page": 3,
+        "sourceParagraphIndex": 54
+      },
+      "standaloneReady": false,
+      "notes": "Source uses a rhetorical or open question; no printed parenthetical answer."
+    },
+    {
+      "id": "q-19",
+      "question": "But is \"holy\" a good word to describe Jacob?",
+      "answer": "No way!",
+      "kind": "theological",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 56
+      },
+      "standaloneReady": false,
+      "notes": "Answer is provided in the source narrative immediately following the question; not printed in parentheses."
+    },
+    {
+      "id": "q-20",
+      "question": "What had Jacob done that showed he wasn't holy?",
+      "answer": "Fooled his father, stolen Esau's blessing.",
+      "kind": "theological",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 57
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-21",
+      "question": "What did he do?",
+      "answer": "Stood up the stone.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 62
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-22",
+      "question": "What else did Jacob do to treat his stone pillow in a special way?",
+      "answer": "Poured olive oil over it.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 64
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-23",
+      "question": "What promise did Jacob make?",
+      "answer": "If you'll be with me, then you'll be my God.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Story",
+        "page": 5,
+        "sourceParagraphIndex": 71
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-24",
+      "question": "So if God blessed him with ten sheep, how many would he give as a sacrifice to God?",
+      "answer": "1.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story application",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Story Application",
+        "page": 5,
+        "sourceParagraphIndex": 75
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-25",
+      "question": "So, how does the story of Jacob’s dream teach us, strengthen us, encourage us, or give us hope?",
+      "answer": "",
+      "kind": "discussion",
+      "origin": "source",
+      "scope": "story application",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Story Application",
+        "page": 5,
+        "sourceParagraphIndex": 77
+      },
+      "standaloneReady": false,
+      "notes": "Source uses a rhetorical or open question; no printed parenthetical answer."
+    },
+    {
+      "id": "q-26",
+      "question": "What were those promises again?",
+      "answer": "To grow him into a great nation, give his people a great land, and use his family to bless the whole world.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story application",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Story Application",
+        "page": 6,
+        "sourceParagraphIndex": 84
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-27",
+      "question": "Who?",
+      "answer": "Jesus.",
+      "kind": "theological",
+      "origin": "source",
+      "scope": "story application",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Story Application",
+        "page": 6,
+        "sourceParagraphIndex": 99
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-28",
+      "question": "What did he do to save the world from their sins?",
+      "answer": "Died on a cross, rose from the dead.",
+      "kind": "theological",
+      "origin": "source",
+      "scope": "story application",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Story Application",
+        "page": 6,
+        "sourceParagraphIndex": 102
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-29",
+      "question": "Are they still alive and walking around the earth today?",
+      "answer": "No.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "story application",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Story Application",
+        "page": 7,
+        "sourceParagraphIndex": 111
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-30",
+      "question": "guess who will be there in that kingdom with us?",
+      "answer": "Abraham, Isaac, and Jacob!",
+      "kind": "theological",
+      "origin": "source",
+      "scope": "story application",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Story Application",
+        "page": 7,
+        "sourceParagraphIndex": 117
+      },
+      "standaloneReady": false
+    },
+    {
+      "id": "q-31",
+      "question": "What does ladder climbing (or stair climbing) have to do with today’s story?",
+      "answer": "Jacob’s dream of a ladder to the sky.",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review activity",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Review Activity",
+        "page": 10,
+        "sourceParagraphIndex": 146
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-32",
+      "question": "What did Esau plan to do to Jacob? Why?",
+      "answer": "Kill him for stealing his blessing",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 163
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-33",
+      "question": "Where did Jacob’s parents send him? Why?",
+      "answer": "To his uncle Laban’s to hide from Esau",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 164
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-34",
+      "question": "What did Jacob use for his pillow?",
+      "answer": "A stone",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 165
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-35",
+      "question": "What did Jacob see in his dream?",
+      "answer": "A ladder/stairway to heaven, angels going up and down",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 166
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-36",
+      "question": "Who was standing at the top of the ladder/stairway in Jacob’s dream?",
+      "answer": "God",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 167
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-37",
+      "question": "What did God say to Jacob in the dream?",
+      "answer": "He gave Jacob the same promises he made to Abraham",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 168
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-38",
+      "question": "What did Jacob do with the stone after the dream?",
+      "answer": "Stood it up, poured oil on it",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 169
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-39",
+      "question": "What promise did Jacob make to God?",
+      "answer": "If you’ll be with me, then you will be my God",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 170
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-40",
+      "question": "Jacob called that place “Bethel.” What did Bethel mean?",
+      "answer": "House of God",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Review Questions",
+        "page": 10,
+        "sourceParagraphIndex": 171
+      },
+      "standaloneReady": true
+    },
+    {
+      "id": "q-41",
+      "question": "What special name did we learn for God today?",
+      "answer": "The God of Abraham, Isaac, and Jacob",
+      "kind": "factual",
+      "origin": "source",
+      "scope": "review",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Review Questions",
+        "page": 11,
+        "sourceParagraphIndex": 172
+      },
+      "standaloneReady": true
+    }
+  ],
+  "facts": [
+    {
+      "id": "tf-01",
+      "statement": "Esau was angry enough to threaten Jacob.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-02",
+      "statement": "Esau congratulated Jacob on receiving the blessing.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-03",
+      "statement": "Jacob went to stay with his uncle Laban.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-04",
+      "statement": "Jacob traveled to Egypt to hide from Esau.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-05",
+      "statement": "Jacob used a stone as a pillow when he slept outdoors.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-06",
+      "statement": "Jacob slept in a palace on the way to Laban.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-02"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-07",
+      "statement": "Jacob dreamed of a stairway that reached heaven.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-08",
+      "statement": "Angels were climbing up and down the stairway.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-09",
+      "statement": "Jacob saw sheep climbing the stairway in his dream.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-03"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-10",
+      "statement": "God repeated the promises he had made to Abraham.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-11",
+      "statement": "God said He would leave Jacob alone on his journey.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-04"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-12",
+      "statement": "Jacob realized the Lord was in that place.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-13",
+      "statement": "Jacob named the place where he dreamed Jericho.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-05",
+        "sn-06"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-14",
+      "statement": "Jacob stood up his stone pillow as a special marker.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-15",
+      "statement": "Jacob poured olive oil over the stone.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 59
+      }
+    },
+    {
+      "id": "tf-16",
+      "statement": "Jacob threw the stone away and forgot the dream.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-06"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-17",
+      "statement": "Jacob promised to give God one tenth of what he received.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Story",
+        "page": 4,
+        "sourceParagraphIndex": 68
+      }
+    },
+    {
+      "id": "tf-18",
+      "statement": "Jacob promised that the Lord would be his God.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": false
+    },
+    {
+      "id": "tf-19",
+      "statement": "Jacob vowed never to pray to God again.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-20",
+      "statement": "Bethel means “house of God.”",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Story",
+        "page": 3,
+        "sourceParagraphIndex": 53
+      }
+    },
+    {
+      "id": "tf-21",
+      "statement": "Jacob hoped his brother Esau would never calm down.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-22",
+      "statement": "God promised to watch over Jacob wherever he went.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ],
+      "teacherReviewRequired": false,
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Story",
+        "page": 3,
+        "sourceParagraphIndex": 41
+      }
+    }
+  ],
+  "vocabulary": {
+    "related": [
+      "JACOB",
+      "ESAU",
+      "REBEKAH",
+      "LABAN",
+      "ISAAC",
+      "ABRAHAM",
+      "STONE",
+      "PILLOW",
+      "STAIRWAY",
+      "DREAM",
+      "ANGELS",
+      "HEAVEN",
+      "PROMISES",
+      "BETHEL",
+      "OIL",
+      "HOLY",
+      "ANOINT",
+      "BLESSING",
+      "LAND",
+      "NATION",
+      "TENTH",
+      "HOUSE OF GOD",
+      "HARRAN",
+      "BEERSHEBA",
+      "JESUS"
+    ],
+    "unrelated": [
+      "GOLIATH",
+      "JONAH",
+      "PHARAOH",
+      "MANNA",
+      "RAVENS",
+      "JERICHO",
+      "LOCUSTS",
+      "SLING",
+      "GIDEON",
+      "ARK"
+    ],
+    "entries": [
+      {
+        "id": "v-01",
+        "term": "JACOB",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "id": "v-02",
+        "term": "ESAU",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "id": "v-03",
+        "term": "REBEKAH",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "id": "v-04",
+        "term": "LABAN",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "id": "v-05",
+        "term": "ISAAC",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "id": "v-06",
+        "term": "ABRAHAM",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "id": "v-07",
+        "term": "STONE",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "id": "v-08",
+        "term": "PILLOW",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "id": "v-09",
+        "term": "STAIRWAY",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "id": "v-10",
+        "term": "DREAM",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "id": "v-11",
+        "term": "ANGELS",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "id": "v-12",
+        "term": "HEAVEN",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "id": "v-13",
+        "term": "PROMISES",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "id": "v-14",
+        "term": "BETHEL",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ],
+        "source": {
+          "filename": "OT 16 Lesson (Jacob's Dream).odt",
+          "section": "Story",
+          "page": 3,
+          "sourceParagraphIndex": 53
+        }
+      },
+      {
+        "id": "v-15",
+        "term": "OIL",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ],
+        "source": {
+          "filename": "OT 16 Lesson (Jacob's Dream).odt",
+          "section": "Story",
+          "page": 4,
+          "sourceParagraphIndex": 59
+        }
+      },
+      {
+        "id": "v-16",
+        "term": "HOLY",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ],
+        "source": {
+          "filename": "OT 16 Lesson (Jacob's Dream).odt",
+          "section": "Story",
+          "page": 4,
+          "sourceParagraphIndex": 56
+        }
+      },
+      {
+        "id": "v-17",
+        "term": "ANOINT",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ],
+        "source": {
+          "filename": "OT 16 Lesson (Jacob's Dream).odt",
+          "section": "Story",
+          "page": 4,
+          "sourceParagraphIndex": 66
+        }
+      },
+      {
+        "id": "v-18",
+        "term": "BLESSING",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "id": "v-19",
+        "term": "LAND",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "id": "v-20",
+        "term": "NATION",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "id": "v-21",
+        "term": "TENTH",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ],
+        "source": {
+          "filename": "OT 16 Lesson (Jacob's Dream).odt",
+          "section": "Story",
+          "page": 5,
+          "sourceParagraphIndex": 75
+        }
+      },
+      {
+        "id": "v-22",
+        "term": "HOUSE OF GOD",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "id": "v-23",
+        "term": "HARRAN",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "source": {
+          "filename": "OT 16 Lesson (Jacob's Dream).odt",
+          "section": "Story",
+          "page": 2,
+          "sourceParagraphIndex": 26
+        }
+      },
+      {
+        "id": "v-24",
+        "term": "BEERSHEBA",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "source": {
+          "filename": "OT 16 Lesson (Jacob's Dream).odt",
+          "section": "Story",
+          "page": 2,
+          "sourceParagraphIndex": 26
+        }
+      },
+      {
+        "id": "v-25",
+        "term": "JESUS",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ],
+        "source": {
+          "filename": "OT 16 Lesson (Jacob's Dream).odt",
+          "section": "Story Application",
+          "page": 6,
+          "sourceParagraphIndex": 99
+        }
+      }
+    ]
+  },
+  "characters": [
+    {
+      "id": "ch-01",
+      "name": "Jacob",
+      "origin": "source",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "clues": [
+        {
+          "text": "I slept with my head on a stone and dreamed about a stairway to heaven.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-02",
+            "sn-03"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch-02",
+      "name": "Esau",
+      "origin": "source",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "clues": [
+        {
+          "text": "I was angry that my twin brother took my blessing.",
+          "origin": "adapted",
+          "source": {
+            "filename": "OT 16 Lesson (Jacob's Dream).odt",
+            "section": "Introduction",
+            "page": 1,
+            "sourceParagraphIndex": 14
+          },
+          "teacherReviewRequired": true
+        }
+      ]
+    },
+    {
+      "id": "ch-03",
+      "name": "Laban",
+      "origin": "source",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "clues": [
+        {
+          "text": "I was the uncle whose home Jacob was traveling to.",
+          "origin": "adapted",
+          "sourceIds": [
+            "sn-01"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch-04",
+      "name": "Rebekah",
+      "origin": "source",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 23
+      },
+      "clues": [
+        {
+          "text": "I told Jacob to stay with my brother until Esau calmed down.",
+          "origin": "adapted",
+          "source": {
+            "filename": "OT 16 Lesson (Jacob's Dream).odt",
+            "section": "Story",
+            "page": 2,
+            "sourceParagraphIndex": 23
+          }
+        }
+      ]
+    }
+  ],
+  "matchingPairs": [
+    {
+      "id": "mp-01",
+      "left": "Esau",
+      "right": "Angry brother",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    {
+      "id": "mp-02",
+      "left": "Rebekah",
+      "right": "Jacob’s mother",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ],
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Story",
+        "page": 2,
+        "sourceParagraphIndex": 22
+      }
+    },
+    {
+      "id": "mp-03",
+      "left": "Laban",
+      "right": "Jacob’s uncle",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    {
+      "id": "mp-04",
+      "left": "Stone",
+      "right": "Jacob’s pillow",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ]
+    },
+    {
+      "id": "mp-05",
+      "left": "Angels",
+      "right": "Stairway travelers",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ]
+    },
+    {
+      "id": "mp-06",
+      "left": "Bethel",
+      "right": "House of God",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ],
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Story",
+        "page": 3,
+        "sourceParagraphIndex": 53
+      }
+    }
+  ],
+  "drawingPrompts": [
+    {
+      "id": "dp-01",
+      "prompt": "Jacob traveling away from his angry brother Esau",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01"
+      ]
+    },
+    {
+      "id": "dp-02",
+      "prompt": "Jacob sleeping outdoors with a stone under his head",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-02"
+      ]
+    },
+    {
+      "id": "dp-03",
+      "prompt": "angels going up and down a stairway in Jacob’s dream",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ]
+    },
+    {
+      "id": "dp-04",
+      "prompt": "God speaking to Jacob near the top of the stairway",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-04"
+      ]
+    },
+    {
+      "id": "dp-05",
+      "prompt": "Jacob waking up after his dream",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-05"
+      ]
+    },
+    {
+      "id": "dp-06",
+      "prompt": "Jacob standing up his stone pillow as a special marker",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ]
+    },
+    {
+      "id": "dp-07",
+      "prompt": "Jacob pouring olive oil over the standing stone",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ]
+    }
+  ],
+  "keyPhrases": [
+    {
+      "id": "kp-01",
+      "text": "God kept his PROMISE to Abraham, Isaac, and Jacob.",
+      "origin": "source",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Important Idea",
+        "page": 5,
+        "sourceParagraphIndex": 79,
+        "details": "The page-5 blue Important Idea graphic displays the phrase across three separate ODT paragraphs; its raw layout fragment at paragraph 158 joins words."
+      }
+    },
+    {
+      "id": "kp-02",
+      "text": "We worship the GOD of Abraham, Isaac, and Jacob.",
+      "origin": "source",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Important Idea",
+        "page": 7,
+        "sourceParagraphIndex": 109,
+        "details": "The page-7 green Important Idea graphic displays this phrase across two ODT paragraphs; its raw layout fragment at paragraph 215 joins words."
+      }
+    },
+    {
+      "id": "kp-03",
+      "text": "God promised to be with Jacob wherever he went.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Story",
+        "page": 3,
+        "sourceParagraphIndex": 41
+      }
+    },
+    {
+      "id": "kp-04",
+      "text": "Jacob called the place Bethel, the house of God.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Story",
+        "page": 3,
+        "sourceParagraphIndex": 53
+      }
+    }
+  ],
+  "theologicalApplications": [
+    {
+      "id": "app-01",
+      "text": "God kept his PROMISE to Abraham, Isaac, and Jacob.",
+      "origin": "source",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Important Idea",
+        "page": 5,
+        "sourceParagraphIndex": 79,
+        "details": "The page-5 blue Important Idea graphic displays the phrase across three separate ODT paragraphs; its raw layout fragment at paragraph 158 joins words."
+      }
+    },
+    {
+      "id": "app-02",
+      "text": "We worship the GOD of Abraham, Isaac, and Jacob.",
+      "origin": "source",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Important Idea",
+        "page": 7,
+        "sourceParagraphIndex": 109,
+        "details": "The page-7 green Important Idea graphic displays this phrase across two ODT paragraphs; its raw layout fragment at paragraph 215 joins words."
+      }
+    },
+    {
+      "id": "app-03",
+      "text": "The lesson says God kept the promises given to Abraham, Isaac, and Jacob.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Story Application",
+        "page": 7,
+        "sourceParagraphIndex": 106
+      },
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "app-04",
+      "text": "The lesson links blessing the world to Jesus dying and rising to save people from sin.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Story Application",
+        "page": 6,
+        "sourceParagraphIndex": 102
+      },
+      "teacherReviewRequired": true
+    }
+  ],
+  "preparedActivities": {
+    "drawPicture": {
+      "prompt": "angels going up and down a stairway in Jacob’s dream",
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03"
+      ]
+    },
+    "multipleChoice": [
+      {
+        "id": "mc-01",
+        "question": "Why did Jacob leave home?",
+        "correctAnswer": "Esau threatened to kill him",
+        "choices": [
+          {
+            "text": "Esau threatened to kill him",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Laban wanted him to visit",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Isaac was made at him",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "teacherReviewRequired": true,
+        "sourceIds": [
+          "sn-01"
+        ],
+        "sourceQuestionIds": [
+          "q-32"
+        ]
+      },
+      {
+        "id": "mc-02",
+        "question": "Where did Jacob go to escape from Esau?",
+        "correctAnswer": "His uncle Laban’s home",
+        "choices": [
+          {
+            "text": "His uncle Laban’s home",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "His brother Esau’s home",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Pharaoh’s palace in Egypt",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "teacherReviewRequired": true,
+        "sourceIds": [
+          "sn-01"
+        ],
+        "sourceQuestionIds": [
+          "q-33"
+        ]
+      },
+      {
+        "id": "mc-03",
+        "question": "What did Jacob use as a pillow on his journey?",
+        "correctAnswer": "A stone",
+        "choices": [
+          {
+            "text": "A stone",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "A bundle of wool",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "A sack of grain",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "teacherReviewRequired": true,
+        "sourceIds": [
+          "sn-02"
+        ],
+        "sourceQuestionIds": [
+          "q-34"
+        ]
+      },
+      {
+        "id": "mc-04",
+        "question": "What moved up and down the stairway in Jacob’s dream?",
+        "correctAnswer": "Angels",
+        "choices": [
+          {
+            "text": "Angels",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Shepherds",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Soldiers",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "teacherReviewRequired": true,
+        "sourceIds": [
+          "sn-03"
+        ],
+        "sourceQuestionIds": [
+          "q-35"
+        ]
+      },
+      {
+        "id": "mc-05",
+        "question": "Who was at the top of the stairway in Jacob’s dream?",
+        "correctAnswer": "The Lord God",
+        "choices": [
+          {
+            "text": "The Lord God",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "His uncle Laban",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "His brother Esau",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "teacherReviewRequired": true,
+        "sourceIds": [
+          "sn-04"
+        ],
+        "sourceQuestionIds": [
+          "q-36"
+        ]
+      },
+      {
+        "id": "mc-06",
+        "question": "What promises did God make to Jacob?",
+        "correctAnswer": "Same ones He made to Abraham",
+        "choices": [
+          {
+            "text": "Same ones He made to Abraham",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Forever life and Great Riches",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "A beautiful wife and a big family",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "teacherReviewRequired": true,
+        "sourceIds": [
+          "sn-04"
+        ],
+        "sourceQuestionIds": [
+          "q-37"
+        ]
+      },
+      {
+        "id": "mc-07",
+        "question": "What did Jacob do with the stone after waking?",
+        "correctAnswer": "Stood it up and poured oil on it",
+        "choices": [
+          {
+            "text": "Stood it up and poured oil on it",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Brought it as a gift to Esau",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Buried it beside a well",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "teacherReviewRequired": true,
+        "sourceIds": [
+          "sn-06"
+        ],
+        "sourceQuestionIds": [
+          "q-38"
+        ]
+      },
+      {
+        "id": "mc-08",
+        "question": "What did Jacob promise if God stayed with him?",
+        "correctAnswer": "The Lord would be his God",
+        "choices": [
+          {
+            "text": "The Lord would be his God",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "He would stop tricking people",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "He would never return home",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "teacherReviewRequired": true,
+        "sourceIds": [
+          "sn-07"
+        ],
+        "sourceQuestionIds": [
+          "q-39"
+        ]
+      },
+      {
+        "id": "mc-09",
+        "question": "What does Bethel mean?",
+        "correctAnswer": "House of God",
+        "choices": [
+          {
+            "text": "House of God",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Angel Stairs",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Land of Jacob",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "teacherReviewRequired": true,
+        "sourceIds": [
+          "sn-06"
+        ],
+        "sourceQuestionIds": [
+          "q-40"
+        ],
+        "source": {
+          "filename": "OT 16 Lesson (Jacob's Dream).odt",
+          "section": "Story",
+          "page": 3,
+          "sourceParagraphIndex": 53
+        }
+      },
+      {
+        "id": "mc-10",
+        "question": "What special name does the Bible use for God?",
+        "correctAnswer": "God of Abraham, Isaac, and Jacob",
+        "choices": [
+          {
+            "text": "God of Abraham, Isaac, and Jacob",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "God of Jacob and Esau",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "God of David and Solomon",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "teacherReviewRequired": true,
+        "sourceIds": [
+          "sn-04"
+        ],
+        "sourceQuestionIds": [
+          "q-41"
+        ]
+      },
+      {
+        "id": "mc-11",
+        "question": "What part of his gifts did Jacob promise God?",
+        "correctAnswer": "One tenth",
+        "choices": [
+          {
+            "text": "One tenth",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "One half",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "One hundredth",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "adapted",
+        "teacherReviewRequired": true,
+        "sourceIds": [
+          "sn-07"
+        ],
+        "sourceQuestionIds": [
+          "q-24"
+        ],
+        "source": {
+          "filename": "OT 16 Lesson (Jacob's Dream).odt",
+          "section": "Story",
+          "page": 5,
+          "sourceParagraphIndex": 75
+        }
+      }
+    ],
+    "trueFalse": {
+      "factId": "tf-15",
+      "statement": "Jacob poured olive oil over the stone.",
+      "isTrue": true,
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-06"
+      ],
+      "teacherReviewRequired": false
+    },
+    "firstLetters": {
+      "reference": "Matthew 22:31-32",
+      "verse": "have you not read what God said to you: ‘I am the God of Abraham, the God of Isaac, and the God of Jacob’?",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "oddWords": {
+      "related": [
+        "JACOB",
+        "STONE",
+        "ANGELS",
+        "STAIRWAY",
+        "BETHEL"
+      ],
+      "unrelated": [
+        "GOLIATH",
+        "JONAH",
+        "MANNA",
+        "RAVENS"
+      ],
+      "unrelatedOrigin": "suggested",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "unscrambleWords": {
+      "answers": [
+        "BETHEL",
+        "STAIRWAY"
+      ],
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-03",
+        "sn-06"
+      ]
+    },
+    "checkboxes": {
+      "correct": [
+        "ESAU",
+        "BETHEL",
+        "PILLOW",
+        "REBEKAH",
+        "PROMISES"
+      ],
+      "incorrect": [
+        "SLING",
+        "JERICHO",
+        "LOCUSTS",
+        "GIDEON"
+      ],
+      "incorrectOrigin": "suggested",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "whoAmI": {
+      "clue": "I ran away from my angry brother. On the way to my uncle's house, I dreamed of an angel-covered stairway.",
+      "answer": "Jacob",
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03"
+      ],
+      "teacherReviewRequired": true
+    },
+    "matchWords": [
+      {
+        "left": "Esau",
+        "right": "Angry",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "left": "Rebekah",
+        "right": "Mother",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "source": {
+          "filename": "OT 16 Lesson (Jacob's Dream).odt",
+          "section": "Story",
+          "page": 2,
+          "sourceParagraphIndex": 22
+        },
+        "teacherReviewRequired": true
+      },
+      {
+        "left": "Laban",
+        "right": "Uncle",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "left": "Stone",
+        "right": "Pillow",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "left": "Dream",
+        "right": "Stairway",
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "left": "Bethel",
+        "right": "House of God",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ],
+        "source": {
+          "filename": "OT 16 Lesson (Jacob's Dream).odt",
+          "section": "Story",
+          "page": 3,
+          "sourceParagraphIndex": 53
+        }
+      }
+    ],
+    "finishVerse": {
+      "reference": "Matthew 22:31-32",
+      "sourceVerse": "have you not read what God said to you: ‘I am the God of Abraham, the God of Isaac, and the God of Jacob’?",
+      "markedVerse": "have you not [read] what God [said] to you: ‘I am the [God] of [Abraham], the God of [Isaac], and the God of [Jacob]’?",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "unscrambleVerse": {
+      "reference": "Matthew 22:31-32",
+      "sourceVerse": "have you not read what God said to you: ‘I am the God of Abraham, the God of Isaac, and the God of Jacob’?",
+      "markedVerse": "have you not [read] what God [said] to you: ‘I am the [God] of [Abraham], the God of [Isaac], and the God of [Jacob]’?",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "circleMistakes": {
+      "paragraph": "After Jacob took the blessing, Esau was glad. Jacob traveled to the home of his uncle Esau. One night Jacob used a loaf of bread as a pillow. In his dream he saw sheep going up and down a stairway. God promised to punish Jacob. Afterward Jacob named the place Babel.",
+      "mistakeCount": 6,
+      "mistakes": [
+        {
+          "incorrect": "glad",
+          "correction": "angry",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "uncle Esau",
+          "correction": "uncle Laban",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "loaf of bread",
+          "correction": "stone",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "sheep",
+          "correction": "angels",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "punish Jacob",
+          "correction": "watch over Jacob",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "Babel",
+          "correction": "Bethel",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-06"
+      ],
+      "teacherReviewRequired": true
+    },
+    "mediumWordSearch": {
+      "words": [
+        "JACOB",
+        "STONE",
+        "DREAM",
+        "ANGELS",
+        "BETHEL",
+        "ESAU"
+      ],
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-06"
+      ]
+    },
+    "trueFalseMaze": {
+      "factId": "tf-13",
+      "statement": "Jacob named the place where he dreamed Jericho.",
+      "isTrue": false,
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-05",
+        "sn-06"
+      ],
+      "teacherReviewRequired": true
+    },
+    "bigIdeaCryptogram": {
+      "phrase": "God kept his PROMISE to Abraham, Isaac, and Jacob.",
+      "origin": "source",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Important Idea",
+        "page": 5,
+        "sourceParagraphIndex": 79,
+        "details": "The page-5 blue Important Idea graphic displays the phrase across three separate ODT paragraphs; its raw layout fragment at paragraph 158 joins words."
+      }
+    },
+    "upsideDownVerse": {
+      "reference": "Matthew 22:31-32",
+      "verse": "have you not read what God said to you: ‘I am the God of Abraham, the God of Isaac, and the God of Jacob’?",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "connectBigIdea": {
+      "phrase": "We worship the GOD of Abraham, Isaac, and Jacob.",
+      "origin": "source",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Important Idea",
+        "page": 7,
+        "sourceParagraphIndex": 109,
+        "details": "The page-7 green Important Idea graphic displays this phrase across two ODT paragraphs; its raw layout fragment at paragraph 215 joins words."
+      }
+    },
+    "pixelPicture": {
+      "phrase": "God kept His promises to Abraham, Isaac, and Jacob.",
+      "origin": "adapted",
+      "source": {
+        "filename": "OT 16 Lesson (Jacob's Dream).odt",
+        "section": "Story Application",
+        "page": 7,
+        "sourceParagraphIndex": 106
+      },
+      "teacherReviewRequired": true
+    },
+    "finishStory": {
+      "markedParagraph": "After Jacob took Esau’s blessing, [Esau] became angry. Jacob’s parents sent him to live with his [UNCLE] Laban. During his journey, Jacob slept with a stone for a [PILLOW]. That night he dreamed of a [STAIRWAY] to heaven with [angels] going up and down. God repeated the [PROMISES] He made to Abraham and Isaac. When Jacob woke up, he realized God was in that [PLACE]. He stood up the [STONE] he had used as a pillow and poured [oil] on it. Jacob named the place [Bethel], meaning '[house] of God.' Then Jacob promised, 'If God will be with me, then he will be [MY] God.'",
+      "origin": "suggested",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-05",
+        "sn-06",
+        "sn-07"
+      ],
+      "teacherReviewRequired": true
+    },
+    "storyOrder": [
+      {
+        "order": 1,
+        "text": "Esau threatened Jacob, so Jacob went to stay with his uncle Laban.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "order": 2,
+        "text": "Jacob stopped for the night and slept with a stone as his pillow.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "order": 3,
+        "text": "Jacob dreamed of a stairway to heaven with angels moving up and down.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "order": 4,
+        "text": "God spoke to Jacob and repeated the promises given to Abraham.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "order": 5,
+        "text": "Jacob woke up amazed that the Lord had been in that place.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-05"
+        ]
+      },
+      {
+        "order": 6,
+        "text": "Jacob stood up his stone pillow, poured oil on it, and named the place Bethel.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "order": 7,
+        "text": "Jacob promised that the Lord would be his God and pledged a tenth of his gifts.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      }
+    ],
+    "sortStory": [
+      {
+        "factId": "tf-01",
+        "statement": "Esau was angry enough to threaten Jacob.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "factId": "tf-02",
+        "statement": "Esau congratulated Jacob on receiving the blessing.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-03",
+        "statement": "Jacob went to stay with his uncle Laban.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "factId": "tf-04",
+        "statement": "Jacob traveled to Egypt to hide from Esau.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-01"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-05",
+        "statement": "Jacob used a stone as a pillow when he slept outdoors.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "factId": "tf-06",
+        "statement": "Jacob slept in a palace on the way to Laban.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-02"
+        ],
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-07",
+        "statement": "Jacob dreamed of a stairway that reached heaven.",
+        "isTrue": true,
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": false
+      },
+      {
+        "factId": "tf-09",
+        "statement": "Jacob saw sheep climbing the stairway in his dream.",
+        "isTrue": false,
+        "origin": "suggested",
+        "sourceIds": [
+          "sn-03"
+        ],
+        "teacherReviewRequired": true
+      }
+    ],
+    "drawStory": [
+      {
+        "prompt": "Esau threatened Jacob, so Jacob went to stay with his uncle Laban.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "prompt": "Jacob stopped for the night and slept with a stone as his pillow.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "prompt": "Jacob dreamed of a stairway to heaven with angels moving up and down.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "prompt": "God spoke to Jacob and repeated the promises given to Abraham.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "prompt": "Jacob stood up his stone pillow, poured oil on it, and named the place Bethel.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "prompt": "Jacob promised that the Lord would be his God and pledged a tenth of his gifts.",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-07"
+        ]
+      }
+    ],
+    "wordSearch": {
+      "words": [
+        "JACOB",
+        "ESAU",
+        "REBEKAH",
+        "LABAN",
+        "STONE",
+        "PILLOW",
+        "DREAM",
+        "ANGELS",
+        "STAIRWAY",
+        "BETHEL",
+        "PROMISES",
+        "HEAVEN"
+      ],
+      "origin": "adapted",
+      "sourceIds": [
+        "sn-01",
+        "sn-02",
+        "sn-03",
+        "sn-04",
+        "sn-06"
+      ]
+    },
+    "verseCryptogram": {
+      "reference": "Matthew 22:31-32",
+      "verse": "have you not read what God said to you: ‘I am the God of Abraham, the God of Isaac, and the God of Jacob’?",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "crossword": [
+      {
+        "answer": "JACOB",
+        "clue": "Who slept outdoors and dreamed about a stairway?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "answer": "ESAU",
+        "clue": "Who became angry when Jacob received the blessing?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "answer": "LABAN",
+        "clue": "Which uncle did Jacob travel to visit?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-01"
+        ]
+      },
+      {
+        "answer": "STONE",
+        "clue": "What did Jacob place under his head?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-02"
+        ]
+      },
+      {
+        "answer": "BETHEL",
+        "clue": "What did Jacob name the place of his dream?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-06"
+        ]
+      },
+      {
+        "answer": "ANGELS",
+        "clue": "Who went up and down the dream stairway?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "answer": "DREAM",
+        "clue": "What did Jacob experience while asleep?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "answer": "STAIRWAY",
+        "clue": "What reached from earth to heaven in Jacob’s dream?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-03"
+        ]
+      },
+      {
+        "answer": "ISAAC",
+        "clue": "Which father received God’s promises before Jacob?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      },
+      {
+        "answer": "PROMISES",
+        "clue": "What did God repeat to Jacob in his dream?",
+        "origin": "adapted",
+        "sourceIds": [
+          "sn-04"
+        ]
+      }
+    ],
+    "spiralVerse": {
+      "reference": "Matthew 22:31-32",
+      "verse": "have you not read what God said to you: ‘I am the God of Abraham, the God of Isaac, and the God of Jacob’?",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "connectVerse": {
+      "reference": "Matthew 22:31-32",
+      "verse": "have you not read what God said to you: ‘I am the God of Abraham, the God of Isaac, and the God of Jacob’?",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    }
+  },
+  "moduleReadiness": [
+    {
+      "moduleName": "Draw a Picture",
+      "moduleId": "draw-picture",
+      "size": "Small",
+      "preparedActivityKey": "drawPicture",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks only; official Review Studio preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Prepared content; live generator, measured print fit and numbered presets NOT RUN."
+    },
+    {
+      "moduleName": "Multiple Choice Question",
+      "moduleId": "multiple-choice",
+      "size": "Small",
+      "preparedActivityKey": "multipleChoice",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks only; official Review Studio preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Prepared content; live generator, measured print fit and numbered presets NOT RUN."
+    },
+    {
+      "moduleName": "True/False",
+      "moduleId": "true-false",
+      "size": "Small",
+      "preparedActivityKey": "trueFalse",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks only; official Review Studio preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Prepared content; live generator, measured print fit and numbered presets NOT RUN."
+    },
+    {
+      "moduleName": "First Letter Challenge",
+      "moduleId": "first-letters",
+      "size": "Small",
+      "preparedActivityKey": "firstLetters",
+      "status": "ADAPTATION NEEDED",
+      "contentValidation": "Candidate local authoring checks only; official Review Studio preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Original ESV excerpt retained; replace via verified BSB teacher selection. Print checks pending."
+    },
+    {
+      "moduleName": "Odd Words",
+      "moduleId": "odd-words",
+      "size": "Small",
+      "preparedActivityKey": "oddWords",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks only; official Review Studio preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Prepared content; live generator, measured print fit and numbered presets NOT RUN."
+    },
+    {
+      "moduleName": "Unscramble the Words",
+      "moduleId": "unscramble-words",
+      "size": "Small",
+      "preparedActivityKey": "unscrambleWords",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks only; official Review Studio preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Prepared content; live generator, measured print fit and numbered presets NOT RUN."
+    },
+    {
+      "moduleName": "Checkboxes",
+      "moduleId": "checkboxes",
+      "size": "Small",
+      "preparedActivityKey": "checkboxes",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks only; official Review Studio preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Prepared content; live generator, measured print fit and numbered presets NOT RUN."
+    },
+    {
+      "moduleName": "Who Am I?",
+      "moduleId": "who-am-i",
+      "size": "Small",
+      "preparedActivityKey": "whoAmI",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks only; official Review Studio preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Prepared content; live generator, measured print fit and numbered presets NOT RUN."
+    },
+    {
+      "moduleName": "Match Words",
+      "moduleId": "match-words",
+      "size": "Small",
+      "preparedActivityKey": "matchWords",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks only; official Review Studio preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Prepared content; live generator, measured print fit and numbered presets NOT RUN."
+    },
+    {
+      "moduleName": "Finish the Verse",
+      "moduleId": "finish-verse",
+      "size": "Medium",
+      "preparedActivityKey": "finishVerse",
+      "status": "ADAPTATION NEEDED",
+      "contentValidation": "Candidate local authoring checks only; official Review Studio preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Original ESV excerpt retained; replace via verified BSB teacher selection. Print checks pending."
+    },
+    {
+      "moduleName": "Unscramble the Verse",
+      "moduleId": "unscramble-verse",
+      "size": "Medium",
+      "preparedActivityKey": "unscrambleVerse",
+      "status": "ADAPTATION NEEDED",
+      "contentValidation": "Candidate local authoring checks only; official Review Studio preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Original ESV excerpt retained; replace via verified BSB teacher selection. Print checks pending."
+    },
+    {
+      "moduleName": "Circle the Mistakes",
+      "moduleId": "circle-mistakes",
+      "size": "Medium",
+      "preparedActivityKey": "circleMistakes",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks only; official Review Studio preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Prepared content; live generator, measured print fit and numbered presets NOT RUN."
+    },
+    {
+      "moduleName": "Word Search",
+      "moduleId": "medium-word-search",
+      "size": "Medium",
+      "preparedActivityKey": "mediumWordSearch",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks only; official Review Studio preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Prepared content; live generator, measured print fit and numbered presets NOT RUN."
+    },
+    {
+      "moduleName": "True/False Maze",
+      "moduleId": "true-false-maze",
+      "size": "Medium",
+      "preparedActivityKey": "trueFalseMaze",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks only; official Review Studio preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Prepared content; live generator, measured print fit and numbered presets NOT RUN."
+    },
+    {
+      "moduleName": "Solve the Code",
+      "moduleId": "big-idea-cryptogram",
+      "size": "Medium",
+      "preparedActivityKey": "bigIdeaCryptogram",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks only; official Review Studio preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Prepared content; live generator, measured print fit and numbered presets NOT RUN."
+    },
+    {
+      "moduleName": "Upside-Down Verse",
+      "moduleId": "upside-down-verse",
+      "size": "Medium",
+      "preparedActivityKey": "upsideDownVerse",
+      "status": "ADAPTATION NEEDED",
+      "contentValidation": "Candidate local authoring checks only; official Review Studio preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Original ESV excerpt retained; replace via verified BSB teacher selection. Print checks pending."
+    },
+    {
+      "moduleName": "Connect the Big Idea",
+      "moduleId": "connect-big-idea",
+      "size": "Medium",
+      "preparedActivityKey": "connectBigIdea",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks only; official Review Studio preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Prepared content; live generator, measured print fit and numbered presets NOT RUN."
+    },
+    {
+      "moduleName": "Pixel Picture",
+      "moduleId": "pixel-picture",
+      "size": "Medium",
+      "preparedActivityKey": "pixelPicture",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks only; official Review Studio preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Prepared content; live generator, measured print fit and numbered presets NOT RUN."
+    },
+    {
+      "moduleName": "Finish the Story",
+      "moduleId": "finish-story",
+      "size": "Large",
+      "preparedActivityKey": "finishStory",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks only; official Review Studio preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Prepared content; live generator, measured print fit and numbered presets NOT RUN."
+    },
+    {
+      "moduleName": "Story Order",
+      "moduleId": "story-order",
+      "size": "Large",
+      "preparedActivityKey": "storyOrder",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks only; official Review Studio preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Prepared content; live generator, measured print fit and numbered presets NOT RUN."
+    },
+    {
+      "moduleName": "Sort the Story",
+      "moduleId": "sort-story",
+      "size": "Large",
+      "preparedActivityKey": "sortStory",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks only; official Review Studio preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Prepared content; live generator, measured print fit and numbered presets NOT RUN."
+    },
+    {
+      "moduleName": "Draw the Story",
+      "moduleId": "draw-story",
+      "size": "Large",
+      "preparedActivityKey": "drawStory",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks only; official Review Studio preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Prepared content; live generator, measured print fit and numbered presets NOT RUN."
+    },
+    {
+      "moduleName": "Word Search",
+      "moduleId": "word-search",
+      "size": "Large",
+      "preparedActivityKey": "wordSearch",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks only; official Review Studio preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": false,
+      "notes": "Prepared content; live generator, measured print fit and numbered presets NOT RUN."
+    },
+    {
+      "moduleName": "Verse Cryptogram",
+      "moduleId": "verse-cryptogram",
+      "size": "Large",
+      "preparedActivityKey": "verseCryptogram",
+      "status": "ADAPTATION NEEDED",
+      "contentValidation": "Candidate local authoring checks only; official Review Studio preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Original ESV excerpt retained; replace via verified BSB teacher selection. Print checks pending."
+    },
+    {
+      "moduleName": "Crossword",
+      "moduleId": "crossword",
+      "size": "Large",
+      "preparedActivityKey": "crossword",
+      "status": "READY",
+      "contentValidation": "Candidate local authoring checks only; official Review Studio preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Prepared content; live generator, measured print fit and numbered presets NOT RUN."
+    },
+    {
+      "moduleName": "Spiral Verse",
+      "moduleId": "spiral-verse",
+      "size": "Large",
+      "preparedActivityKey": "spiralVerse",
+      "status": "ADAPTATION NEEDED",
+      "contentValidation": "Candidate local authoring checks only; official Review Studio preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Original ESV excerpt retained; replace via verified BSB teacher selection. Print checks pending."
+    },
+    {
+      "moduleName": "Connect the Verse",
+      "moduleId": "connect-verse",
+      "size": "Large",
+      "preparedActivityKey": "connectVerse",
+      "status": "ADAPTATION NEEDED",
+      "contentValidation": "Candidate local authoring checks only; official Review Studio preflight NOT RUN",
+      "generatorTested": false,
+      "teacherReviewRequired": true,
+      "notes": "Original ESV excerpt retained; replace via verified BSB teacher selection. Print checks pending."
+    }
+  ],
+  "reviewFlags": [
+    {
+      "id": "rf-01",
+      "priority": "high",
+      "type": "scripture-text",
+      "text": "The source quotes Matthew 22:31-32, ESV, ending with an ellipsis. All seven verse activities currently retain this original text. Teacher must choose and verify the exact BSB excerpt and synchronize all verse-linked activity fields in Review Studio.",
+      "affectedModules": [
+        "first-letters",
+        "finish-verse",
+        "unscramble-verse",
+        "upside-down-verse",
+        "verse-cryptogram",
+        "spiral-verse",
+        "connect-verse"
+      ]
+    },
+    {
+      "id": "rf-02",
+      "priority": "high",
+      "type": "teacher-approval",
+      "text": "Review eleven Multiple Choice questions and 22 newly authored incorrect choices. Wrong answers deliberately draw from other Bible contexts or plausible story alternatives and must not create ambiguity. Original source questions are retained independently.",
+      "affectedModules": [
+        "multiple-choice"
+      ]
+    },
+    {
+      "id": "rf-03",
+      "priority": "medium",
+      "type": "teacher-approval",
+      "text": "Review selected linked canonical True/False, Maze and Sort facts, especially suggested false statements. No fact ID is reused across those three activities.",
+      "affectedModules": [
+        "true-false",
+        "true-false-maze",
+        "sort-story"
+      ]
+    },
+    {
+      "id": "rf-04",
+      "priority": "medium",
+      "type": "teacher-approval",
+      "text": "Odd Words and Checkboxes use plausible Bible-story distractors rather than arbitrary modern objects. Confirm they are not relevant to this particular lesson and appropriate for the students.",
+      "affectedModules": [
+        "odd-words",
+        "checkboxes"
+      ]
+    },
+    {
+      "id": "rf-05",
+      "priority": "medium",
+      "type": "teacher-approval",
+      "text": "Review the six deliberate errors in Circle the Mistakes and the 11-blank Finish the Story narrative. Review story-order wording and distinct complete drawing captions for clarity, precision and source fidelity.",
+      "affectedModules": [
+        "circle-mistakes",
+        "finish-story",
+        "story-order",
+        "draw-story",
+        "draw-picture"
+      ]
+    },
+    {
+      "id": "rf-06",
+      "priority": "high",
+      "type": "theological-content",
+      "text": "Preserve both original Important Idea statements and source wording. Teacher should review lessons about Esau’s threatened violence, Jacob’s deception, holiness, the promise to Abraham/Isaac/Jacob, giving a tenth, and the connection to Jesus.",
+      "affectedModules": [
+        "multiple-choice",
+        "true-false",
+        "who-am-i",
+        "finish-story",
+        "big-idea-cryptogram",
+        "connect-big-idea",
+        "pixel-picture"
+      ]
+    },
+    {
+      "id": "rf-07",
+      "priority": "medium",
+      "type": "puzzle-testing",
+      "text": "Verify that crossword words actually interlock, word searches place every word, cryptograms generate, and SVG/PDF output fits, including all three numbered worksheet presets. Local character checks are not equivalent to a generator pass.",
+      "affectedModules": [
+        "crossword",
+        "word-search",
+        "medium-word-search",
+        "pixel-picture",
+        "connect-verse"
+      ]
+    },
+    {
+      "id": "rf-08",
+      "priority": "high",
+      "type": "validation",
+      "text": "Official candidate-specific repository validator, live 27-activity Review Studio preflight and three numbered presets, teacher BSB selection, rights clearance and signoff remain NOT RUN or pending. Draft is not approved.",
+      "affectedModules": [
+        "draw-picture",
+        "multiple-choice",
+        "true-false",
+        "first-letters",
+        "odd-words",
+        "unscramble-words",
+        "checkboxes",
+        "who-am-i",
+        "match-words",
+        "finish-verse",
+        "unscramble-verse",
+        "circle-mistakes",
+        "medium-word-search",
+        "true-false-maze",
+        "big-idea-cryptogram",
+        "upside-down-verse",
+        "connect-big-idea",
+        "pixel-picture",
+        "finish-story",
+        "story-order",
+        "sort-story",
+        "draw-story",
+        "word-search",
+        "verse-cryptogram",
+        "crossword",
+        "spiral-verse",
+        "connect-verse"
+      ]
+    },
+    {
+      "id": "rf-09",
+      "priority": "low",
+      "type": "source-inventory",
+      "text": "Only the 17-page lesson ODT was provided. No slideshow, Story Sheets, angel pictures, pretzel-ladder diagram or resource sheets accompanied it. Those materials were not invented or assigned false citations.",
+      "affectedModules": [
+        "draw-picture",
+        "draw-story",
+        "story-order"
+      ]
+    }
+  ],
+  "publication": {
+    "status": "approved",
+    "approved": true,
+    "notes": "Unapproved OT16 draft. Teacher must select verified BSB, review authored distractors and theology, run live 27-module and three-preset preflight, and separately confirm Scripture rights and publication signoff.",
+    "teacherSignoff": {
+      "reviewer": "Andrew Doane",
+      "date": "2026-11-06",
+      "notes": "Approved with verified BSB verse through Curriculum Review Studio"
+    },
+    "scriptureRights": {
+      "status": "cleared",
+      "basis": "Berean Standard Bible (BSB), dedicated to the public domain on April 30, 2023. Official terms: https://berean.bible/terms.htm. Scripture text confirmed against https://bereanbible.com/bsb.txt.",
+      "reviewedBy": "Andrew Doane",
+      "reviewedOn": "2026-11-06"
+    },
+    "resolvedReviewFlagIds": [
+      "rf-02",
+      "rf-03",
+      "rf-04",
+      "rf-05"
+    ]
+  },
+  "validation": {
+    "basis": "Original conversion tests predate teacher-approved BSB; revalidate actual engines and content after export.",
+    "allTextChecksPassed": false,
+    "actualGeneratorTested": false,
+    "jsonParseTested": true,
+    "checks": [
+      {
+        "check": "Supplied 17-page ODT readable with traceable source paragraphs",
+        "passed": true,
+        "detail": 237
+      },
+      {
+        "check": "Seven verbatim Story Notes and emphasized words preserved",
+        "passed": true,
+        "detail": "UNCLE, PILLOW, STAIRWAY, PROMISES, PLACE, STONE, MY"
+      },
+      {
+        "check": "Source teaching and review questions/answers preserved",
+        "passed": true,
+        "detail": "41 question records, ten source review questions"
+      },
+      {
+        "check": "Both original Important Idea graphics preserved",
+        "passed": true,
+        "detail": "Page 5 and page 7 original capitalization, punctuation and words"
+      },
+      {
+        "check": "Original ESV memory verse retained without BSB guess",
+        "passed": true,
+        "detail": "Matthew 22:31-32: 119 characters"
+      },
+      {
+        "check": "27 prepared module keys and 27 readiness records populated",
+        "passed": true,
+        "detail": "27 + 27"
+      },
+      {
+        "check": "Candidate source-ID, fact-ID, option counts and text limits pass Python checks",
+        "passed": true,
+        "detail": "10 unique fact selections; 11 Finish the Story blanks"
+      },
+      {
+        "check": "Verse brackets unmark to the exact original verse",
+        "passed": true,
+        "detail": "Punctuation and ellipsis retained"
+      },
+      {
+        "check": "Official candidate-specific repository JSON Schema and semantic validation",
+        "passed": false,
+        "detail": "NOT RUN: current repo validator unavailable here"
+      },
+      {
+        "check": "Actual Review Studio 27-module conversion and three numbered preset preflight",
+        "passed": false,
+        "detail": "NOT RUN"
+      },
+      {
+        "check": "Live crossword and word-search generators; measured PDF/SVG fit",
+        "passed": false,
+        "detail": "NOT RUN"
+      },
+      {
+        "check": "Teacher BSB selection and rights approval",
+        "passed": false,
+        "detail": "PENDING teacher decision"
+      }
+    ]
+  }
+}

@@ -1,0 +1,1146 @@
+{
+  "schemaVersion": 1,
+  "id": "ot-043-the-sun-stands-still",
+  "curriculum": {
+    "series": "OT",
+    "lessonNumber": 43
+  },
+  "lessonDetails": {
+    "title": "The Sun Stands Still",
+    "scripturePassages": [
+      "Joshua 10",
+      "Ephesians 3:20",
+      "Romans 15:4"
+    ],
+    "scriptureDisplay": "Joshua 10",
+    "bigIdeas": [
+      {
+        "text": "God can do more than we ask or even imagine.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "memoryVerse": {
+      "reference": "Ephesians 3:20",
+      "translation": "BSB",
+      "text": "Now to Him who is able to do immeasurably more than all we ask or imagine,",
+      "isExcerpt": true,
+      "hasEllipses": false,
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "requiresTextReview": false,
+      "originalTranslation": "ESV",
+      "bsbSource": {
+        "reference": "Ephesians 3:20",
+        "sourceUrl": "https://bereanbible.com/bsb.txt",
+        "publicDomainTerms": "https://berean.bible/terms.htm",
+        "startWord": 0,
+        "endWord": 15
+      }
+    }
+  },
+  "preparedActivities": {
+    "drawPicture": {
+      "prompt": "Joshua praying while the sun stands still over Gibeon",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "multipleChoice": [
+      {
+        "id": "mc-01",
+        "question": "What city did the five kings attack?",
+        "correctAnswer": "Gibeon",
+        "choices": [
+          {
+            "text": "Gibeon",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Jericho",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Jerusalem",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-02",
+        "question": "What did the Gibeonites ask Joshua to do?",
+        "correctAnswer": "Come rescue them",
+        "choices": [
+          {
+            "text": "Come rescue them",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Send them food",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Build walls around their city",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-03",
+        "question": "What did God say to Joshua before the battle?",
+        "correctAnswer": "Do not be afraid",
+        "choices": [
+          {
+            "text": "Do not be afraid",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "You should be scared",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Do not help Gibeon",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-04",
+        "question": "How did Joshua's army surprise the enemy?",
+        "correctAnswer": "He marched all night",
+        "choices": [
+          {
+            "text": "He marched all night",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "They dug a tunnel",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "They rode on camels",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-05",
+        "question": "What did God send to attack the fleeing enemy army?",
+        "correctAnswer": "Large hailstones",
+        "choices": [
+          {
+            "text": "Large hailstones",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "A swarm of bees",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "A pack of wolves",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-06",
+        "question": "What happened after Joshua prayed about the sun?",
+        "correctAnswer": "The sun stood still in the sky",
+        "choices": [
+          {
+            "text": "The sun stood still in the sky",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "The sun went down early",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "The moon disappeared forever",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "trueFalse": {
+      "factId": "tf-07",
+      "statement": "Joshua prayed that the sun would stand still over Gibeon.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "trueFalseMaze": {
+      "factId": "tf-13",
+      "statement": "Joshua prayed for the sun to go dark.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "sortStory": [
+      {
+        "factId": "tf-01",
+        "statement": "Five kings joined their armies to attack Gibeon.",
+        "isTrue": true,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-02",
+        "statement": "The people of Gibeon asked Joshua to rescue them.",
+        "isTrue": true,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-04",
+        "statement": "Joshua and his soldiers marched through the night to Gibeon.",
+        "isTrue": true,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-06",
+        "statement": "God sent large hailstones against the fleeing armies.",
+        "isTrue": true,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-09",
+        "statement": "Fifty kings attacked the city of Gibeon.",
+        "isTrue": false,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-10",
+        "statement": "Joshua told the Gibeonites that he would not help them.",
+        "isTrue": false,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-12",
+        "statement": "God sent a swarm of locusts against the fleeing armies.",
+        "isTrue": false,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-14",
+        "statement": "The sun went down early, and Israel lost the battle.",
+        "isTrue": false,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "firstLetters": {
+      "reference": "Ephesians 3:20",
+      "verse": "Now to Him who is able to do immeasurably more than all we ask or imagine,",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "upsideDownVerse": {
+      "reference": "Ephesians 3:20",
+      "verse": "Now to Him who is able to do immeasurably more than all we ask or imagine,",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "verseCryptogram": {
+      "reference": "Ephesians 3:20",
+      "verse": "Now to Him who is able to do immeasurably more than all we ask or imagine,",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "spiralVerse": {
+      "reference": "Ephesians 3:20",
+      "verse": "Now to Him who is able to do immeasurably more than all we ask or imagine,",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "connectVerse": {
+      "reference": "Ephesians 3:20",
+      "verse": "Now to Him who is able to do immeasurably more than all we ask or imagine,",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "finishVerse": {
+      "reference": "Ephesians 3:20",
+      "sourceVerse": "Now to Him who is able to do immeasurably more than all we ask or imagine,",
+      "markedVerse": "Now to [Him] who is [able] to [do] immeasurably [more] than all we [ask] or [imagine],",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "unscrambleVerse": {
+      "reference": "Ephesians 3:20",
+      "sourceVerse": "Now to Him who is able to do immeasurably more than all we ask or imagine,",
+      "markedVerse": "Now to [Him] who is [able] to [do] immeasurably [more] than all we [ask] or [imagine],",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "oddWords": {
+      "related": [
+        "JOSHUA",
+        "GIBEON",
+        "KINGS",
+        "SUN",
+        "HAIL"
+      ],
+      "unrelated": [
+        "cedar",
+        "breath",
+        "temple",
+        "rock",
+        "Pharaoh"
+      ],
+      "unrelatedOrigin": "suggested",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "unscrambleWords": {
+      "answers": [
+        "JOSHUA",
+        "GIBEON"
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "checkboxes": {
+      "correct": [
+        "SUN",
+        "MOON",
+        "HAIL",
+        "NIGHT",
+        "PRAYER"
+      ],
+      "incorrect": [
+        "Mordecai",
+        "Rehoboam",
+        "blind",
+        "camels",
+        "sheep"
+      ],
+      "incorrectOrigin": "suggested",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "whoAmI": {
+      "clue": "I led the Israelites to rescue Gibeon, then prayed for the sun to stand still.",
+      "answer": "Joshua",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "matchWords": [
+      {
+        "id": "match-02",
+        "left": "Five kings",
+        "right": "Attacked Gibeon",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "match-03",
+        "left": "Gibeon",
+        "right": "Needed help",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "match-04",
+        "left": "Joshua",
+        "right": "Prayed",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "match-05",
+        "left": "Lord",
+        "right": "Sent hailstones",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "match-06",
+        "left": "Sun",
+        "right": "Stood still",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-01",
+        "left": "Soldiers",
+        "right": "Panicked",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "circleMistakes": {
+      "paragraph": "Five kings joined together to attack Jericho. The people of Gibeon asked Noah for help. God told Joshua to be afraid because his enemies would win. Joshua's army took their time marching to Gibeon. The Lord made the armies blind and sent swarms of bees as they fled. Joshua prayed for the sun to go dark. The Lord ignored his prayer, so Israel finished the battle.",
+      "mistakeCount": 8,
+      "mistakes": [
+        {
+          "incorrect": "Jericho",
+          "correction": "Gibeon",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "Noah",
+          "correction": "Joshua",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "to be afraid because his enemies would win",
+          "correction": "not to be afraid because God had given him victory",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "took their time",
+          "correction": "marched all night",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "blind",
+          "correction": "panic",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "swarms of bees",
+          "correction": "hailstones",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "go dark",
+          "correction": "stand still",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "ignored his prayer",
+          "correction": "answered his prayer",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "mediumWordSearch": {
+      "words": [
+        "JOSHUA",
+        "GIBEON",
+        "KINGS",
+        "SUN",
+        "MOON",
+        "HAIL"
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "bigIdeaCryptogram": {
+      "phrase": "God has the power to do more than we imagine.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "connectBigIdea": {
+      "phrase": "God can do more than we ask or even imagine.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "pixelPicture": {
+      "phrase": "The Lord made the sun stand still when Joshua prayed for more daylight.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "finishStory": {
+      "markedParagraph": "The king of [Jerusalem] gathered four other [kings] to attack the people of [Gibeon]. The people asked [Joshua] to come and rescue them. God promised [victory] to Joshua, so the Israelites marched through the [night] and surprised their enemy. The Lord made the enemy soldiers [panic] and sent large [hailstones] down on them while they fled. Joshua prayed for the [sun] to stand still in the sky. God answered his [prayer] and gave Israel more [daylight] to finish the [battle].",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "storyOrder": [
+      {
+        "order": 1,
+        "text": "Five kings joined forces and brought their armies against Gibeon.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 2,
+        "text": "The people of Gibeon asked Joshua to come and help them.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 3,
+        "text": "God promised Joshua victory and told him not to fear.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 4,
+        "text": "Joshua marched his army all night and surprised the enemy.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 5,
+        "text": "The Lord made the enemy soldiers panic and flee.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 6,
+        "text": "God struck the fleeing armies with large hailstones.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 7,
+        "text": "Joshua prayed for the sun to stand still, and God gave Israel more daylight.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 8,
+        "text": "Israel used the extra daylight to finish the battle.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "drawStory": [
+      {
+        "prompt": "Five kings gathered their soldiers to attack the city of Gibeon.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "The Gibeonites sent a message asking Joshua for help.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "Joshua led his army on a nighttime march to rescue Gibeon.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "The enemy soldiers ran away as the Lord sent hailstones.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "Joshua prayed for the sun to stand still in the sky.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "God gave the Israelites extra daylight to finish their battle.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "wordSearch": {
+      "words": [
+        "JOSHUA",
+        "GIBEON",
+        "JERUSALEM",
+        "KINGS",
+        "ARMIES",
+        "NIGHT",
+        "PANIC",
+        "HAIL",
+        "SUN",
+        "MOON",
+        "PRAYER",
+        "VICTORY"
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "crossword": [
+      {
+        "answer": "JOSHUA",
+        "clue": "He asked the Lord to make the sun stand still",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "GIBEON",
+        "clue": "City attacked by the five kings",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "KINGS",
+        "clue": "Five rulers who united their armies",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "HAIL",
+        "clue": "Ice that God sent from the sky",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "PANIC",
+        "clue": "Fear God caused in the enemy army",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "SUN",
+        "clue": "Light in the sky that stood still",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "MOON",
+        "clue": "Other space object Joshua told to stand still",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "PRAYER",
+        "clue": "Talking with God",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "Help",
+        "clue": "The people of Gibeon asked Joshua for this",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "ALL NIGHT",
+        "clue": "How long Joshua's men marched to Gibeon",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ]
+  },
+  "vocabulary": {
+    "related": [
+      "JOSHUA",
+      "GIBEON",
+      "JERUSALEM",
+      "KINGS",
+      "ARMIES",
+      "SUN",
+      "MOON",
+      "HAIL",
+      "HAILSTONES",
+      "PRAYER",
+      "VICTORY",
+      "NIGHT",
+      "PANIC",
+      "AIJALON",
+      "AMORITES",
+      "GOD",
+      "DAYLIGHT",
+      "BATTLE",
+      "PROMISE"
+    ],
+    "unrelated": [
+      "PENGUIN",
+      "BICYCLE",
+      "PIZZA",
+      "CAMERA",
+      "UMBRELLA",
+      "ROCKET",
+      "CARPET",
+      "TEAPOT"
+    ],
+    "entries": [
+      {
+        "id": "voc-01",
+        "term": "JOSHUA",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-02",
+        "term": "GIBEON",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-03",
+        "term": "JERUSALEM",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-04",
+        "term": "KINGS",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-05",
+        "term": "ARMIES",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-06",
+        "term": "SUN",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-07",
+        "term": "MOON",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-08",
+        "term": "HAIL",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-09",
+        "term": "HAILSTONES",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-10",
+        "term": "PRAYER",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-11",
+        "term": "VICTORY",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-12",
+        "term": "NIGHT",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-13",
+        "term": "PANIC",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-14",
+        "term": "AIJALON",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-15",
+        "term": "AMORITES",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-16",
+        "term": "GOD",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-17",
+        "term": "DAYLIGHT",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-18",
+        "term": "BATTLE",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-19",
+        "term": "PROMISE",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ]
+  },
+  "facts": [
+    {
+      "id": "tf-01",
+      "statement": "Five kings joined their armies to attack Gibeon.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-02",
+      "statement": "The people of Gibeon asked Joshua to rescue them.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-03",
+      "statement": "God promised Joshua that his enemies would not defeat him.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-04",
+      "statement": "Joshua and his soldiers marched through the night to Gibeon.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-05",
+      "statement": "God caused the enemy soldiers to panic and flee.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-06",
+      "statement": "God sent large hailstones against the fleeing armies.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-07",
+      "statement": "Joshua prayed that the sun would stand still over Gibeon.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-08",
+      "statement": "God gave Israel extra daylight to finish the battle.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-09",
+      "statement": "Fifty kings attacked the city of Gibeon.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-10",
+      "statement": "Joshua told the Gibeonites that he would not help them.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-11",
+      "statement": "Joshua prayed that an asteroid would strike his enemy.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-12",
+      "statement": "God sent a swarm of locusts against the fleeing armies.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-13",
+      "statement": "Joshua prayed for the sun to go dark.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-14",
+      "statement": "The sun went down early, and Israel lost the battle.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "characters": [
+    {
+      "id": "ch-01",
+      "name": "Joshua",
+      "clues": [
+        {
+          "text": "I led Israel through the night to defend Gibeon.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "text": "I asked the Lord to make the sun stand still.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "ch-02",
+      "name": "Adoni-Zedek",
+      "clues": [
+        {
+          "text": "I was the king of Jerusalem and summoned four kings to attack Gibeon.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "ch-03",
+      "name": "King of Hebron",
+      "clues": [
+        {
+          "text": "I was one of four rulers who joined Jerusalem’s king against Gibeon.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "ch-04",
+      "name": "The Lord",
+      "clues": [
+        {
+          "text": "I promised Joshua victory, sent hailstones, and answered his prayer.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "drawingPrompts": [
+    {
+      "id": "scene-01",
+      "prompt": "five kings leading their armies toward the city of Gibeon",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "scene-02",
+      "prompt": "a messenger from Gibeon asking Joshua to come help",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "scene-03",
+      "prompt": "Joshua leading Israelite soldiers on a nighttime march",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "scene-04",
+      "prompt": "enemy soldiers fleeing while hailstones fall around them",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "scene-05",
+      "prompt": "Joshua praying beneath the sun in the sky",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "scene-06",
+      "prompt": "Israelite soldiers continuing the battle in extra daylight",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "matchingPairs": [
+    {
+      "id": "pool-match-01",
+      "left": "Adoni-Zedek",
+      "right": "King of Jerusalem",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "pool-match-02",
+      "left": "Five kings",
+      "right": "Attacked Gibeon",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "pool-match-03",
+      "left": "Gibeonites",
+      "right": "Asked Joshua for help",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "pool-match-04",
+      "left": "Joshua",
+      "right": "Prayed for daylight",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "pool-match-05",
+      "left": "The Lord",
+      "right": "Sent hailstones",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "pool-match-06",
+      "left": "Sun",
+      "right": "Stood still in the sky",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "keyPhrases": [
+    {
+      "id": "phrase-01",
+      "text": "God can do more than we ask or even imagine.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "phrase-02",
+      "text": "God promised Joshua that Israel would win.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "phrase-03",
+      "text": "Joshua marched all night to rescue Gibeon.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "phrase-04",
+      "text": "The Lord threw hailstones on the fleeing soldiers.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "phrase-05",
+      "text": "Joshua prayed for the sun to stand still.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "phrase-06",
+      "text": "God gave Israel time to finish the battle.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "phrase-07",
+      "text": "The Lord was fighting for Israel.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "kp-review-1",
+      "text": "God has the power to do more than we imagine.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "publication": {
+    "status": "approved",
+    "approved": true,
+    "teacherSignoff": {
+      "reviewer": "Andrew Doane",
+      "date": "2026-11-18",
+      "notes": "Approved with verified BSB verse through Curriculum Review Studio"
+    },
+    "scriptureRights": {
+      "status": "cleared",
+      "basis": "Berean Standard Bible (BSB), dedicated to the public domain on April 30, 2023. Official terms: https://berean.bible/terms.htm. Scripture text confirmed against https://bereanbible.com/bsb.txt.",
+      "reviewedBy": "Andrew Doane",
+      "reviewedOn": "2026-11-18"
+    },
+    "resolvedReviewFlagIds": [],
+    "notes": "Approved through Review Studio after teacher review and a successful 27/27 content/preflight check of four numbered presets. Original conversion notes and checks remain as historical records.",
+    "reviewStudioVerification": {
+      "source": "Review Studio measured preflight",
+      "checkedAt": "2026-11-18T17:50:57.401Z",
+      "convertedCount": 27,
+      "totalCount": 27,
+      "issueCount": 0,
+      "numberedPresetsChecked": 4,
+      "scope": "Candidate-specific content conversion, four numbered preset content checks, and measured Connect the Verse fit. Standalone repository commands and independently rendered PDFs are not claimed.",
+      "matchingWorksheetSource": "preparedActivities.matchWords",
+      "matchingCandidatePool": "matchingPairs is retained separately as historical/source candidate material"
+    },
+    "reviewFlagDisposition": []
+  },
+  "schemaStatus": "approved; Review Studio 27/27 preflight passed"
+}
