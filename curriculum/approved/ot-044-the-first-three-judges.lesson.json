@@ -1,0 +1,1027 @@
+{
+  "schemaVersion": 1,
+  "id": "ot-044-the-first-three-judges",
+  "curriculum": {
+    "series": "OT",
+    "lessonNumber": 44
+  },
+  "lessonDetails": {
+    "title": "The First Three Judges",
+    "scripturePassages": [
+      "Judges 2:11–19",
+      "Judges 3:7–31",
+      "Psalm 136:1",
+      "Romans 15:4"
+    ],
+    "scriptureDisplay": "Judges 3",
+    "bigIdeas": [
+      {
+        "text": "God loves his people with a steadfast, never-stopping love.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "memoryVerse": {
+      "reference": "Psalm 136:1",
+      "translation": "BSB",
+      "text": "Give thanks to the LORD, for He is good. His loving devotion endures forever.",
+      "isExcerpt": false,
+      "requiresTextReview": false,
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "originalTranslation": "ESV",
+      "hasEllipses": false,
+      "bsbSource": {
+        "reference": "Psalm 136:1",
+        "sourceUrl": "https://bereanbible.com/bsb.txt",
+        "publicDomainTerms": "https://berean.bible/terms.htm",
+        "startWord": 0,
+        "endWord": 13
+      }
+    }
+  },
+  "preparedActivities": {
+    "drawPicture": {
+      "prompt": "Ehud standing before King Eglon with a sword",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "multipleChoice": [
+      {
+        "id": "mc-01",
+        "question": "What happened when Israel turned from God to worship idols?",
+        "correctAnswer": "Enemies conquered them",
+        "choices": [
+          {
+            "text": "Enemies conquered them",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "They became rich",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "They defeated their enemies",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-02",
+        "question": "Which judge defeated 600 enemies with an oxgoad?",
+        "correctAnswer": "Shamgar",
+        "choices": [
+          {
+            "text": "Shamgar",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "Ehud",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Othniel",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-03",
+        "question": "What evil king was defeated by Ehud?",
+        "correctAnswer": "King Eglon",
+        "choices": [
+          {
+            "text": "King Eglon",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "King David",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "King Adoni-Zedek",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-04",
+        "question": "What was unusual about the way Ehud held his sword?",
+        "correctAnswer": "He was left-handed",
+        "choices": [
+          {
+            "text": "He was left-handed",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "He carried two swords",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "He held it upside down",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-05",
+        "question": "Why did Eglon’s servants wait to check on their king?",
+        "correctAnswer": "They thought he was using the bathroom",
+        "choices": [
+          {
+            "text": "They thought he was using the bathroom",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "They forgot to check on him",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "They were eating lunch",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mc-06",
+        "question": "What weapon did Shamgar use to defeat 600 Philistines?",
+        "correctAnswer": "An oxgoad",
+        "choices": [
+          {
+            "text": "An oxgoad",
+            "isCorrect": true,
+            "origin": "adapted"
+          },
+          {
+            "text": "A golden sword",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "A slingshot",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ],
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "trueFalse": {
+      "factId": "tf-08",
+      "statement": "God showed steadfast love by sending judges to rescue Israel.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "firstLetters": {
+      "reference": "Psalm 136:1",
+      "verse": "Give thanks to the LORD, for He is good. His loving devotion endures forever.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "oddWords": {
+      "related": [
+        "OTHNIEL",
+        "EHUD",
+        "SHAMGAR",
+        "EGLON",
+        "OXGOAD"
+      ],
+      "unrelated": [
+        "Babel",
+        "trumpets",
+        "Philistines",
+        "Naaman",
+        "command"
+      ],
+      "unrelatedOrigin": "suggested",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "unscrambleWords": {
+      "answers": [
+        "JUDGES",
+        "IDOLS"
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "checkboxes": {
+      "correct": [
+        "JUDGES",
+        "MOAB",
+        "SWORD",
+        "PEACE",
+        "IDOLS"
+      ],
+      "incorrect": [
+        "tree",
+        "Cain",
+        "ark",
+        "boils",
+        "storm"
+      ],
+      "incorrectOrigin": "suggested",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "whoAmI": {
+      "clue": "I was a left-handed Israelite judge who carried a hidden sword and defeated evil King Eglon.",
+      "answer": "Ehud",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "matchWords": [
+      {
+        "left": "Othniel",
+        "right": "First judge",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "left": "Ehud",
+        "right": "Left-handed",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "left": "Shamgar",
+        "right": "Oxgoad",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "left": "Eglon",
+        "right": "Large king",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "left": "Israel",
+        "right": "God’s people",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-01",
+        "left": "Judges",
+        "right": "Rescuers",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "finishVerse": {
+      "reference": "Psalm 136:1",
+      "markedVerse": "Give [thanks] to the [LORD], for [He] is [good]. His [loving] devotion endures [forever].",
+      "sourceVerse": "Give thanks to the LORD, for He is good. His loving devotion endures forever.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "unscrambleVerse": {
+      "reference": "Psalm 136:1",
+      "markedVerse": "Give [thanks] to the [LORD], for [He] is [good]. His [loving] devotion endures [forever].",
+      "sourceVerse": "Give thanks to the LORD, for He is good. His loving devotion endures forever.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "circleMistakes": {
+      "paragraph": "When Israel served false gods, the Lord was pleased with them. He allowed the King of Egypt to conquer them. When they cried out for help, God didn't listen. He sent Othniel, the first judge, to rescue them from their enemies. When Israel worshiped idols again, God allowed them to be conquered by thin King Eglon. But God sent Ehud, a one-handed man, to defeat their enemies and rescue them. Later, Shamgar defeated 600 of Israel's enemies with a slingshot.",
+      "mistakeCount": 6,
+      "mistakes": [
+        {
+          "incorrect": "pleased with them",
+          "correction": "not pleased with them",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "King of Egypt",
+          "correction": "King of Aram",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "God didn't listen",
+          "correction": "God heard them.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "thin",
+          "correction": "fat",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "one-handed",
+          "correction": "left-handed",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        },
+        {
+          "incorrect": "slingshot",
+          "correction": "oxgoad",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "mediumWordSearch": {
+      "words": [
+        "EHUD",
+        "EGLON",
+        "MOAB",
+        "JUDGE",
+        "SWORD",
+        "OXGOAD"
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "trueFalseMaze": {
+      "factId": "tf-12",
+      "statement": "The servants entered Eglon’s room immediately after Ehud left.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "bigIdeaCryptogram": {
+      "phrase": "God loves his people with a steadfast, never-stopping love.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "upsideDownVerse": {
+      "reference": "Psalm 136:1",
+      "verse": "Give thanks to the LORD, for He is good. His loving devotion endures forever.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "connectBigIdea": {
+      "phrase": "God loves his people with a never stopping love.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "pixelPicture": {
+      "phrase": "Shamgar defeated 600 Philistines with an oxgoad.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "finishStory": {
+      "markedParagraph": "After Joshua died, Israel repeatedly worshiped [idols] instead of the Lord. God allowed enemies to conquer Israel, and the people cried out for [help]. God sent the first [judge], a man named [Othniel]. He defeated their enemies, and the land enjoyed forty years of [peace]. After Othniel died, Israel again turned away, and evil King [Eglon] ruled over them. The Lord sent [Ehud], a left-handed rescuer who hid a [sword] on his right leg. Ehud defeated Eglon and [escaped] while the king's servants waited. Later, [Shamgar] rescued Israel by striking down 600 Philistines with an [oxgoad]. Through these rescues, God showed his [steadfast] love to his people.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "storyOrder": [
+      {
+        "order": 1,
+        "text": "Israel turned from the Lord and came under the rule of the king of Aram.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 2,
+        "text": "The Israelites cried out, and God sent Othniel to rescue them.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 3,
+        "text": "After forty years of peace, Othniel died and Israel again served other gods.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 4,
+        "text": "King Eglon of Moab ruled over Israel for eighteen years.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 5,
+        "text": "God sent Ehud, who hid his sword and delivered tribute to Eglon.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 6,
+        "text": "Ehud killed Eglon, escaped, and led Israel to victory over Moab.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "order": 7,
+        "text": "After Ehud, Shamgar saved Israel by defeating 600 Philistines with an oxgoad.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "sortStory": [
+      {
+        "factId": "tf-01",
+        "statement": "After Joshua died, Israel repeatedly turned away from the Lord.",
+        "isTrue": true,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-02",
+        "statement": "God sent Othniel to rescue Israel after eight years of oppression.",
+        "isTrue": true,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-04",
+        "statement": "Ehud was left-handed and hid a short sword on his right leg.",
+        "isTrue": true,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-07",
+        "statement": "Shamgar defeated 600 Philistines with an oxgoad.",
+        "isTrue": true,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-09",
+        "statement": "Othniel was the first judge who rescued Israel.",
+        "isTrue": false,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-10",
+        "statement": "King Eglon was the king of Israel.",
+        "isTrue": false,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-11",
+        "statement": "Ehud hid his slingshot on his left leg.",
+        "isTrue": false,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "factId": "tf-13",
+        "statement": "Shamgar defeated 600 Philistines with a trumpet.",
+        "isTrue": false,
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "drawStory": [
+      {
+        "prompt": "The Israelites cried out to God after their enemies conquered them.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "Othniel led Israel to victory over the king of Aram.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "Ehud carried a tribute to King Eglon with a hidden sword.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "Ehud escaped while Eglon’s servants waited by a locked door.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "prompt": "Shamgar fought the Philistines with an oxgoad.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "wordSearch": {
+      "words": [
+        "OTHNIEL",
+        "EHUD",
+        "SHAMGAR",
+        "EGLON",
+        "ISRAEL",
+        "MOAB",
+        "JUDGES",
+        "SWORD",
+        "OXGOAD",
+        "TRIBUTE",
+        "IDOLS",
+        "Peace"
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    "verseCryptogram": {
+      "reference": "Psalm 136:1",
+      "verse": "Give thanks to the LORD, for He is good. His loving devotion endures forever.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "crossword": [
+      {
+        "answer": "OTHNIEL",
+        "clue": "God sent this first judge to rescue Israel.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "EHUD",
+        "clue": "This left-handed judge defeated King Eglon.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "SHAMGAR",
+        "clue": "This judge defeated 600 Philistines with an oxgoad.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "EGLON",
+        "clue": "He was an evil king and a large man.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "PEACE",
+        "clue": "Israel enjoyed this after their judges rescued them.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "SWORD",
+        "clue": "Ehud hid this on his right leg.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "OXGOAD",
+        "clue": "Shamgar used this pointed stick.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "ISRAEL",
+        "clue": "The people rescued by the three judges.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "answer": "IDOLS",
+        "clue": "False gods Israel repeatedly worshiped.",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "spiralVerse": {
+      "reference": "Psalm 136:1",
+      "verse": "Give thanks to the LORD, for He is good. His loving devotion endures forever.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    },
+    "connectVerse": {
+      "reference": "Psalm 136:1",
+      "verse": "Give thanks to the LORD, for He is good. His loving devotion endures forever.",
+      "origin": "adapted",
+      "teacherReviewRequired": true
+    }
+  },
+  "vocabulary": {
+    "related": [
+      "OTHNIEL",
+      "EHUD",
+      "SHAMGAR",
+      "EGLON",
+      "JUDGES",
+      "OXGOAD",
+      "MOAB",
+      "TRIBUTE",
+      "IDOLS",
+      "PEACE"
+    ],
+    "unrelated": [
+      "ROCKET",
+      "LAPTOP",
+      "SUBWAY",
+      "PENGUIN",
+      "BANANA"
+    ],
+    "entries": [
+      {
+        "id": "voc-01",
+        "term": "OTHNIEL",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-02",
+        "term": "EHUD",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-03",
+        "term": "SHAMGAR",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-04",
+        "term": "EGLON",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-05",
+        "term": "JUDGES",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-06",
+        "term": "OXGOAD",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-07",
+        "term": "MOAB",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-08",
+        "term": "TRIBUTE",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-09",
+        "term": "IDOLS",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "voc-10",
+        "term": "PEACE",
+        "scope": "story",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ]
+  },
+  "facts": [
+    {
+      "id": "tf-01",
+      "statement": "After Joshua died, Israel repeatedly turned away from the Lord.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-02",
+      "statement": "God sent Othniel to rescue Israel after eight years of oppression.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-03",
+      "statement": "The land had peace for forty years after Othniel won.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-04",
+      "statement": "Ehud was left-handed and hid a short sword on his right leg.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-05",
+      "statement": "King Eglon ruled over Israel for eighteen years.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-06",
+      "statement": "Ehud escaped while Eglon’s servants waited outside.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-07",
+      "statement": "Shamgar defeated 600 Philistines with an oxgoad.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-08",
+      "statement": "God showed steadfast love by sending judges to rescue Israel.",
+      "isTrue": true,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-09",
+      "statement": "Othniel was the first judge who rescued Israel.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-10",
+      "statement": "King Eglon was the king of Israel.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-11",
+      "statement": "Ehud hid his slingshot on his left leg.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-12",
+      "statement": "The servants entered Eglon’s room immediately after Ehud left.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-13",
+      "statement": "Shamgar defeated 600 Philistines with a trumpet.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "tf-14",
+      "statement": "After the first judge died, Israel lived happily ever after.",
+      "isTrue": false,
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "characters": [
+    {
+      "id": "ch-01",
+      "name": "Othniel",
+      "clues": [
+        {
+          "text": "The first judge who rescued Israel and brought forty years of peace.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "ch-02",
+      "name": "Ehud",
+      "clues": [
+        {
+          "text": "The left-handed judge who hid a sword and defeated King Eglon.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "ch-03",
+      "name": "Shamgar",
+      "clues": [
+        {
+          "text": "The judge who defeated 600 Philistines with an oxgoad.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "ch-04",
+      "name": "Eglon",
+      "clues": [
+        {
+          "text": "The king of Moab who ruled over Israel for eighteen years.",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ],
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "drawingPrompts": [
+    {
+      "id": "scene-01",
+      "prompt": "Othniel standing before the people he rescued",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "scene-02",
+      "prompt": "the Israelites crying out to God for help",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "scene-03",
+      "prompt": "Ehud hiding his short sword on his right leg",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "scene-04",
+      "prompt": "Ehud bringing tribute to the king of Moab",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "scene-05",
+      "prompt": "Ehud escaping from King Eglon’s room",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "scene-06",
+      "prompt": "Shamgar holding his oxgoad while protecting Israel",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "matchingPairs": [
+    {
+      "id": "pair-01",
+      "left": "Judges",
+      "right": "Rescuers",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "pair-02",
+      "left": "Israel",
+      "right": "God’s people",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "pair-03",
+      "left": "King Eglon",
+      "right": "Moab",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "pair-04",
+      "left": "Othniel",
+      "right": "Forty years peace",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "pair-05",
+      "left": "Ehud",
+      "right": "Hidden sword",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "pair-06",
+      "left": "Shamgar",
+      "right": "Pointed stick",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "keyPhrases": [
+    {
+      "id": "phrase-01",
+      "text": "God loves his people with a steadfast, never-stopping love.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "phrase-02",
+      "text": "God sent judges to rescue Israel.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "phrase-03",
+      "text": "Israel cried out to the Lord for help.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "phrase-04",
+      "text": "The Lord gave Israel rest from their enemies.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "phrase-05",
+      "text": "Ehud was left-handed.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "phrase-06",
+      "text": "Shamgar defeated 600 Philistines with an oxgoad.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    },
+    {
+      "id": "kp-review-1",
+      "text": "God loves his people with a never stopping love.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "publication": {
+    "status": "approved",
+    "approved": true,
+    "teacherSignoff": {
+      "reviewer": "Andrew Doane",
+      "date": "2026-11-18",
+      "notes": "Approved with verified BSB verse through Curriculum Review Studio"
+    },
+    "scriptureRights": {
+      "status": "cleared",
+      "basis": "Berean Standard Bible (BSB), dedicated to the public domain on April 30, 2023. Official terms: https://berean.bible/terms.htm. Scripture text confirmed against https://bereanbible.com/bsb.txt.",
+      "reviewedBy": "Andrew Doane",
+      "reviewedOn": "2026-11-18"
+    },
+    "resolvedReviewFlagIds": [],
+    "notes": "Approved through Review Studio after teacher review and a successful 27/27 content/preflight check of four numbered presets. Original conversion notes and checks remain as historical records.",
+    "reviewStudioVerification": {
+      "source": "Review Studio measured preflight",
+      "checkedAt": "2026-11-19T14:00:08.553Z",
+      "convertedCount": 27,
+      "totalCount": 27,
+      "issueCount": 0,
+      "numberedPresetsChecked": 4,
+      "scope": "Candidate-specific content conversion, four numbered preset content checks, and measured Connect the Verse fit. Standalone repository commands and independently rendered PDFs are not claimed.",
+      "matchingWorksheetSource": "preparedActivities.matchWords",
+      "matchingCandidatePool": "matchingPairs is retained separately as historical/source candidate material"
+    },
+    "reviewFlagDisposition": []
+  },
+  "schemaStatus": "approved; Review Studio 27/27 preflight passed"
+}
