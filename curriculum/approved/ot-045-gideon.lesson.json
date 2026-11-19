@@ -1,0 +1,1079 @@
+{
+  "schemaVersion": 1,
+  "id": "ot-045-gideon",
+  "curriculum": {
+    "series": "OT",
+    "lessonNumber": 45
+  },
+  "lessonDetails": {
+    "title": "Gideon",
+    "scripturePassages": [
+      "Judges 6",
+      "Judges 7",
+      "Psalm 24:8",
+      "Romans 15:4"
+    ],
+    "scriptureDisplay": "Judges 6–7",
+    "bigIdeas": [
+      {
+        "text": "We may be weak, but our God is strong!",
+        "origin": "source"
+      }
+    ],
+    "memoryVerse": {
+      "reference": "Psalm 24:8",
+      "translation": "BSB",
+      "text": "Who is this King of Glory? The LORD strong and mighty, the LORD mighty in battle.",
+      "isExcerpt": false,
+      "origin": "adapted",
+      "requiresTextReview": false,
+      "teacherReviewRequired": true,
+      "originalTranslation": "ESV",
+      "hasEllipses": false,
+      "bsbSource": {
+        "reference": "Psalm 24:8",
+        "sourceUrl": "https://bereanbible.com/bsb.txt",
+        "publicDomainTerms": "https://berean.bible/terms.htm",
+        "startWord": 0,
+        "endWord": 15
+      }
+    }
+  },
+  "preparedActivities": {
+    "drawPicture": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "prompt": "Gideon’s small army holding trumpets, broken jars, and bright torches"
+    },
+    "multipleChoice": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-01",
+        "question": "Who did God choose to rescue Israel from Midian?",
+        "correctAnswer": "Gideon",
+        "choices": [
+          {
+            "text": "Gideon",
+            "isCorrect": true,
+            "origin": "suggested"
+          },
+          {
+            "text": "Joshua",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Ehud",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ]
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-02",
+        "question": "Why did Gideon doubt he could rescue Israel?",
+        "correctAnswer": "He felt too unimportant",
+        "choices": [
+          {
+            "text": "He felt too unimportant",
+            "isCorrect": true,
+            "origin": "suggested"
+          },
+          {
+            "text": "He had lost his sword",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "He was too short",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ]
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-03",
+        "question": "What did Gideon tear down at night?",
+        "correctAnswer": "An altar to Baal",
+        "choices": [
+          {
+            "text": "An altar to Baal",
+            "isCorrect": true,
+            "origin": "suggested"
+          },
+          {
+            "text": "The Tabernacle tent",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "The walls of Jericho",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ]
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-04",
+        "question": "What did Gideon use when asking God for two signs?",
+        "correctAnswer": "A piece of wool",
+        "choices": [
+          {
+            "text": "A piece of wool",
+            "isCorrect": true,
+            "origin": "suggested"
+          },
+          {
+            "text": "Donkey fur",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "A bear pelt",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ]
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-05",
+        "question": "Why did God make Gideon’s army smaller?",
+        "correctAnswer": "To show that God saved Israel",
+        "choices": [
+          {
+            "text": "To show that God saved Israel",
+            "isCorrect": true,
+            "origin": "suggested"
+          },
+          {
+            "text": "To make Gideon scared",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Because Israel didn't have enough weapons",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ]
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-06",
+        "question": "What happened when Gideon’s men blew trumpets and broke jars?",
+        "correctAnswer": "Midian’s soldiers panicked",
+        "choices": [
+          {
+            "text": "Midian’s soldiers panicked",
+            "isCorrect": true,
+            "origin": "suggested"
+          },
+          {
+            "text": "Midian's soldiers laughed",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "The sun stood still",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ]
+      }
+    ],
+    "trueFalse": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-07",
+      "statement": "God reduced Gideon’s army to show that victory came from him.",
+      "isTrue": true,
+      "factId": "tf-07"
+    },
+    "firstLetters": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Psalm 24:8",
+      "verse": "Who is this King of Glory? The LORD strong and mighty, the LORD mighty in battle."
+    },
+    "oddWords": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "related": [
+        "GIDEON",
+        "MIDIAN",
+        "WOOL",
+        "TORCH",
+        "TRUMPET"
+      ],
+      "unrelated": [
+        "waves",
+        "Dagon",
+        "letter",
+        "wall",
+        "cloaks"
+      ],
+      "unrelatedOrigin": "suggested"
+    },
+    "unscrambleWords": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "answers": [
+        "JARS",
+        "Dew"
+      ]
+    },
+    "checkboxes": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "correct": [
+        "GIDEON",
+        "WOOL",
+        "JARS",
+        "TORCH",
+        "MIDIAN"
+      ],
+      "incorrect": [
+        "honesty",
+        "chains",
+        "Pentecost",
+        "Eli",
+        "nails"
+      ],
+      "incorrectOrigin": "suggested"
+    },
+    "whoAmI": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "clue": "God told me to rescue Israel. I asked for signs with wool and dew. I led a small army to victory over Midian.",
+      "answer": "GIDEON"
+    },
+    "matchWords": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "left": "Gideon",
+        "right": "Judge",
+        "id": "pair-01"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "left": "Midian",
+        "right": "Enemies",
+        "id": "pair-02"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "left": "Wool",
+        "right": "Sheep",
+        "id": "pair-03"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "left": "Altar",
+        "right": "Baal",
+        "id": "pair-04"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "left": "Soldiers",
+        "right": "Panic",
+        "id": "pair-05"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "left": "Gideon's army",
+        "right": "300 men",
+        "id": "pair-06"
+      }
+    ],
+    "finishVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Psalm 24:8",
+      "markedVerse": "[Who] is this [King] of [Glory]? The LORD [strong] and [mighty], the LORD mighty in [battle].",
+      "sourceVerse": "Who is this King of Glory? The LORD strong and mighty, the LORD mighty in battle."
+    },
+    "unscrambleVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Psalm 24:8",
+      "markedVerse": "[Who] is this [King] of [Glory]? The LORD [strong] and [mighty], the LORD mighty in [battle].",
+      "sourceVerse": "Who is this King of Glory? The LORD strong and mighty, the LORD mighty in battle."
+    },
+    "circleMistakes": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "paragraph": "God chose David to rescue Israel from the Philistines. He doubted that he could do it, so God gave him signs. Joshua put out donkey's fur to test the morning dew. God told Gideon to make his army larger. On the night of the battle, the soldiers blew flutes and broke jars. God made the people men of Midian stay calm, and God gave Israel the victory.",
+      "mistakeCount": 6,
+      "mistakes": [
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "incorrect": "David",
+          "correction": "Gideon"
+        },
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "incorrect": "Philistines",
+          "correction": "Midianites"
+        },
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "incorrect": "donkey's fur",
+          "correction": "piece of wool"
+        },
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "incorrect": "larger",
+          "correction": "smaller"
+        },
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "incorrect": "flutes",
+          "correction": "trumpets"
+        },
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "incorrect": "stay calm",
+          "correction": "panic"
+        }
+      ]
+    },
+    "mediumWordSearch": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "words": [
+        "GIDEON",
+        "MIDIAN",
+        "WOOL",
+        "TORCH",
+        "BAAL",
+        "TRUMPET"
+      ]
+    },
+    "trueFalseMaze": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-12",
+      "statement": "God told Gideon to gather the biggest army possible.",
+      "isTrue": false,
+      "factId": "tf-12"
+    },
+    "bigIdeaCryptogram": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "phrase": "We may be weak, but our God is strong!"
+    },
+    "upsideDownVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Psalm 24:8",
+      "verse": "Who is this King of Glory? The LORD strong and mighty, the LORD mighty in battle."
+    },
+    "connectBigIdea": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "phrase": "We may be weak, but our God is strong!"
+    },
+    "pixelPicture": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "phrase": "God gave Gideon courage and helped his little army win the battle."
+    },
+    "finishStory": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "markedParagraph": "Because [Israel] turned to worship idols, God allowed them to be conquered by [Midian]. The people of Israel were afraid because the Midianites stole their food. God sent an [angel] to call [Gideon] to rescue his people. Gideon felt [weak], but God said he would be with him. During the night, Gideon tore down an altar to [Baal]. God used a piece of [wool] and the morning [dew] to give Gideon signs. Then God made Gideon’s [army] much smaller. The soldiers carried [trumpets], jars, and torches. When they surprised the enemy, the Midianites began to [panic]. God gave Israel the [victory] over Midian."
+    },
+    "storyOrder": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 1,
+        "text": "The Midianites stole Israel’s food, and the Israelites cried out to God."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 2,
+        "text": "An angel told Gideon that God had chosen him to rescue Israel."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 3,
+        "text": "The angel made fire burn an offering as a sign for Gideon."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 4,
+        "text": "Gideon tore down the altar of Baal and the Asherah pole at night."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 5,
+        "text": "God answered Gideon’s two requests for signs using wool and dew."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 6,
+        "text": "God sent most of Gideon’s soldiers home and left a small army."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 7,
+        "text": "Gideon’s men surrounded the camp, blew trumpets, and broke jars."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 8,
+        "text": "God threw the Midianites into confusion, and Israel won the battle."
+      }
+    ],
+    "sortStory": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "tf-01",
+        "statement": "Israel cried out to God because the Midianites were troubling them.",
+        "isTrue": true,
+        "factId": "tf-01"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "tf-02",
+        "statement": "The angel of the Lord told Gideon that God would be with him.",
+        "isTrue": true,
+        "factId": "tf-02"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "tf-04",
+        "statement": "Gideon tore down an altar to Baal during the night.",
+        "isTrue": true,
+        "factId": "tf-04"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "tf-09",
+        "statement": "God told Gideon to keep worshiping Baal.",
+        "isTrue": false,
+        "factId": "tf-09"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "tf-10",
+        "statement": "The Midianites were kind to the people of Israel.",
+        "isTrue": false,
+        "factId": "tf-10"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "tf-11",
+        "statement": "Gideon tore down Baal's altar at noon.",
+        "isTrue": false,
+        "factId": "tf-11"
+      }
+    ],
+    "drawStory": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "The Midianites stole the Israelites’ food, and Israel cried out to God."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "The angel of the Lord called Gideon to rescue Israel."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "Gideon tore down the altar to Baal during the night."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "God used wool and dew to reassure Gideon of his promise."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "Gideon’s small army sounded trumpets and smashed jars."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "God confused the Midianites, and Gideon’s army won the battle."
+      }
+    ],
+    "wordSearch": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "words": [
+        "GIDEON",
+        "MIDIAN",
+        "WOOL",
+        "TORCH",
+        "TRUMPET",
+        "ANGEL",
+        "ALTAR",
+        "VICTORY",
+        "Baal",
+        "Jars",
+        "Army",
+        "Dew"
+      ]
+    },
+    "verseCryptogram": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Psalm 24:8",
+      "verse": "Who is this King of Glory? The LORD strong and mighty, the LORD mighty in battle."
+    },
+    "crossword": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "GIDEON",
+        "clue": "Judge chosen by God to rescue Israel from Midian"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "MIDIAN",
+        "clue": "Nation that stole Israel’s food"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "ANGEL",
+        "clue": "Messenger who called Gideon a mighty warrior"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "ALTAR",
+        "clue": "Gideon tore down one built for Baal"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "WOOL",
+        "clue": "Gideon used this to ask God for a sign"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "DEW",
+        "clue": "Morning moisture used in Gideon’s signs"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "TORCH",
+        "clue": "Light carried by Gideon’s men"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "JARS",
+        "clue": "These were smashed during the surprise attack"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "TRUMPET",
+        "clue": "Instrument blown by Gideon’s soldiers"
+      },
+      {
+        "answer": "Panic",
+        "clue": "God caused the men of Midian to do this",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "spiralVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Psalm 24:8",
+      "verse": "Who is this King of Glory? The LORD strong and mighty, the LORD mighty in battle."
+    },
+    "connectVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Psalm 24:8",
+      "verse": "Who is this King of Glory? The LORD strong and mighty, the LORD mighty in battle."
+    }
+  },
+  "vocabulary": {
+    "related": [
+      "GIDEON",
+      "MIDIAN",
+      "WOOL",
+      "TRUMPET",
+      "TORCH",
+      "JARS",
+      "ANGEL",
+      "ALTAR",
+      "DEW",
+      "VICTORY"
+    ],
+    "unrelated": [
+      "SPACESHIP",
+      "BICYCLE",
+      "BANANA",
+      "ROCKET",
+      "PENGUIN",
+      "PILLOW"
+    ],
+    "entries": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-01",
+        "term": "GIDEON",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-02",
+        "term": "MIDIAN",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-03",
+        "term": "WOOL",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-04",
+        "term": "TRUMPET",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-05",
+        "term": "TORCH",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-06",
+        "term": "JARS",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-07",
+        "term": "ANGEL",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-08",
+        "term": "ALTAR",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-09",
+        "term": "DEW",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-10",
+        "term": "VICTORY",
+        "scope": "story"
+      }
+    ]
+  },
+  "facts": [
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-01",
+      "statement": "Israel cried out to God because the Midianites were troubling them.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-02",
+      "statement": "The angel of the Lord told Gideon that God would be with him.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-03",
+      "statement": "Gideon thought he was too unimportant to rescue Israel.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-04",
+      "statement": "Gideon tore down an altar to Baal during the night.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-05",
+      "statement": "God made Gideon’s wool wet while the ground stayed dry.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-06",
+      "statement": "God made the wool dry while the ground became wet.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-07",
+      "statement": "God reduced Gideon’s army to show that victory came from him.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-08",
+      "statement": "Gideon’s men blew trumpets and broke jars before the Midianites fled.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-09",
+      "statement": "God told Gideon to keep worshiping Baal.",
+      "isTrue": false
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-10",
+      "statement": "The Midianites were kind to the people of Israel.",
+      "isTrue": false
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-11",
+      "statement": "Gideon tore down Baal's altar at noon.",
+      "isTrue": false
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-12",
+      "statement": "God told Gideon to gather the biggest army possible.",
+      "isTrue": false
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-13",
+      "statement": "Gideon’s men carried trumpets and jars filled with gold.",
+      "isTrue": false
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-14",
+      "statement": "The Midianite army calmly surrendered when Gideon attacked.",
+      "isTrue": false
+    }
+  ],
+  "characters": [
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "ch-01",
+      "name": "Gideon",
+      "scope": "story",
+      "clues": [
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "text": "I doubted I could lead Israel, but God helped me defeat Midian."
+        }
+      ]
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "ch-02",
+      "name": "The angel of the Lord",
+      "scope": "story",
+      "clues": [
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "text": "I greeted Gideon and burned his food offering with a walking stick."
+        }
+      ]
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "ch-03",
+      "name": "The Midianites",
+      "scope": "story",
+      "clues": [
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "text": "We stole the Israelites’ food and fled in confusion during the night battle."
+        }
+      ]
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "ch-04",
+      "name": "The Israelites",
+      "scope": "story",
+      "clues": [
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "text": "We cried to God for help when Midian troubled us."
+        }
+      ]
+    }
+  ],
+  "drawingPrompts": [
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-01",
+      "prompt": "the angel of the Lord speaking to Gideon under a tree"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-02",
+      "prompt": "Gideon watching fire burn the offering on a rock"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-03",
+      "prompt": "Gideon tearing down the altar of Baal at night"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-04",
+      "prompt": "a piece of wet wool on dry ground"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-05",
+      "prompt": "Gideon watching his men drink from a stream"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-06",
+      "prompt": "Gideon’s men with trumpets, jars, and torches"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-07",
+      "prompt": "Midianite soldiers fleeing in confusion"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-08",
+      "prompt": "Gideon and the Israelites celebrating God’s rescue"
+    }
+  ],
+  "matchingPairs": [
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-01",
+      "left": "Gideon",
+      "right": "Judge who led Israel"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-02",
+      "left": "Angel",
+      "right": "Gave Gideon a sign"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-03",
+      "left": "Baal",
+      "right": "False god"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-04",
+      "left": "Wool",
+      "right": "Tested with dew"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-05",
+      "left": "Midian",
+      "right": "Enemy army"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-06",
+      "left": "Torches",
+      "right": "Lights in jars"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-07",
+      "left": "Trumpets",
+      "right": "Blown before victory"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-08",
+      "left": "Jars",
+      "right": "Broken in the night"
+    }
+  ],
+  "keyPhrases": [
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-01",
+      "text": "We may be weak, but our God is strong!"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-02",
+      "text": "The Lord is with you."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-03",
+      "text": "God sent Gideon to rescue Israel."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-04",
+      "text": "God answered Gideon’s requests for signs."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-05",
+      "text": "God made Gideon’s army smaller."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-06",
+      "text": "The battle belonged to the Lord."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-07",
+      "text": "God has the power to save his people."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-08",
+      "text": "Jesus rescues his people from sin."
+    }
+  ],
+  "publication": {
+    "status": "approved",
+    "approved": true,
+    "teacherSignoff": {
+      "reviewer": "Andrew Doane",
+      "date": "2026-11-19",
+      "notes": "Approved with verified BSB verse through Curriculum Review Studio"
+    },
+    "scriptureRights": {
+      "status": "cleared",
+      "basis": "Berean Standard Bible (BSB), dedicated to the public domain on April 30, 2023. Official terms: https://berean.bible/terms.htm. Scripture text confirmed against https://bereanbible.com/bsb.txt.",
+      "reviewedBy": "Andrew Doane",
+      "reviewedOn": "2026-11-19"
+    },
+    "resolvedReviewFlagIds": [],
+    "notes": "Approved through Review Studio after teacher review and a successful 27/27 content/preflight check of four numbered presets. Original conversion notes and checks remain as historical records.",
+    "reviewStudioVerification": {
+      "source": "Review Studio measured preflight",
+      "checkedAt": "2026-11-19T14:47:28.458Z",
+      "convertedCount": 27,
+      "totalCount": 27,
+      "issueCount": 0,
+      "numberedPresetsChecked": 4,
+      "scope": "Candidate-specific content conversion, four numbered preset content checks, and measured Connect the Verse fit. Standalone repository commands and independently rendered PDFs are not claimed.",
+      "matchingWorksheetSource": "preparedActivities.matchWords",
+      "matchingCandidatePool": "matchingPairs is retained separately as historical/source candidate material"
+    },
+    "reviewFlagDisposition": []
+  },
+  "schemaStatus": "approved; Review Studio 27/27 preflight passed"
+}
