@@ -12,14 +12,21 @@ const lower=s=>s.toLocaleLowerCase('en');
 const unique=items=>new Set(items.map(lower)).size===items.length;
 function generator(){let n=37;return()=>((n=(n*48271)%2147483647)/2147483647);}
 
-test('Teacher-supplied decoy pool is broad, and duplicates are removed ignoring capitalization',()=>{
- assert.ok(REVIEW_DECOY_POOL.length>400,'Do not truncate the user-provided vocabulary');
- assert.ok(unique(REVIEW_DECOY_POOL));
- for(const term of ['light','Adam','Eve','Sarah','Nebuchadnezzar',
-                    'Zacchaeus','taxcollector','frankincense','Pentecost','heaven'])
+test('Elementary decoy pool is large, easy to read, one word each, and printable',()=>{
+ assert.ok(REVIEW_DECOY_POOL.length>=1000,
+  'Keep a substantially larger selection than the previous 459-word pool');
+ assert.ok(unique(REVIEW_DECOY_POOL),'Case-insensitive duplicates should be removed');
+ for(const word of REVIEW_DECOY_POOL){
+  assert.match(word,/^[A-Za-z]+$/u,word+' must be one alphabetic word');
+  assert.ok(word.length<=12,word+' must fit Odd Words and Checkboxes');
+ }
+ for(const term of ['Adam','Eve','Noah','Abraham','Mary','David','Samson',
+                     'Jerusalem','Bethlehem','Egypt','Nazareth','Jericho',
+                     'donkey','basket','sword','trumpet','sheep','boat','manger'])
   assert.ok(REVIEW_DECOY_POOL.some(w=>lower(w)===lower(term)),term);
- for(const term of ['Sarah','father','angels','Pharaoh'])
-  assert.equal(REVIEW_DECOY_POOL.filter(w=>lower(w)===lower(term)).length,1);
+ for(const obscure of ['Nebuchadnezzar','interpretation','oxgoad',
+                       'frankincense','taxcollector','swaddling','goatskin'])
+  assert.ok(!REVIEW_DECOY_POOL.some(w=>lower(w)===lower(obscure)),obscure);
 });
 
 test('Five random suggestions are unique, valid and avoid related and other decoy choices',()=>{
