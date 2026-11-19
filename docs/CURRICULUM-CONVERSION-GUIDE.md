@@ -20,6 +20,17 @@
 
 **The new approved export is lean:** it keeps printable activity and alternative content, accurate lesson identification, verified BSB, teacher signoff and actual Review Studio preflight evidence. It drops original documents, Story Notes, original questions, source-reference pointers, stale conversion test logs and readiness estimates. An imported **review session remains unchanged**, so save it separately if you want an editable history. Older approved v1 files with provenance fields remain readable, and aren't automatically rewritten.
 
+### Editorial quality standard for elementary worksheets
+
+These lessons are intended for elementary-aged children. **Choose the main characters, actions, cause-and-effect relationships, and Important Idea before choosing question formats.** The goal is useful teaching and review, not maximizing the amount of content or testing incidental trivia.
+
+- Prepare approximately **8 genuinely TRUE and 6 genuinely FALSE** canonical facts, plus **six varied Multiple Choice** questions when the lesson supports them. These are flexible targets: do not pad with repetitive, confusing, or trivial material.
+- Emphasize what people did, why events happened, how God acted, what changed, and what the story teaches. Avoid questions testing small incidental numbers (for example, whether a king ruled 12 or 18 years), minor names, obscure measurements, or precise durations **unless that detail is central to the story** (for example, Gideon's unusually small army of 300 or Jericho's seven-day march).
+- Favor clearly worded, answerable questions. Multiple Choice distractors should be plausible for children without being misleading; choices must be distinct and exactly one must be right.
+- **Independently fact-check the meaning of every canonical TRUE/FALSE statement against the supplied lesson.** Never assume an `isTrue` flag is accurate merely because linked activities and data validators agree. FALSE statements must actually be false, not true statements mistakenly labeled FALSE. Keep the linked `factId`, exact statement, and truth value synchronized afterward.
+- Preserve the source lesson's main teaching and significant difficult events; do not invent or quietly change its meaning. The teacher makes final editorial and Scripture decisions in Review Studio.
+- For `scriptureDisplay`, give the **chapter(s) containing the title story**, not just the book name and not an indiscriminate list of supporting references. Keep supporting passages in `scripturePassages`.
+
 ### Preferred workflow for a new conversion chat
 
 1. Read the Bible lesson and supplied slides for teaching content; do not invent events or Scripture.
