@@ -1,0 +1,1196 @@
+{
+  "schemaVersion": 1,
+  "id": "ot-047-ruth",
+  "curriculum": {
+    "series": "OT",
+    "lessonNumber": 47
+  },
+  "lessonDetails": {
+    "title": "Ruth",
+    "scripturePassages": [
+      "Ruth 1–4",
+      "Proverbs 17:17",
+      "John 15:13",
+      "Romans 15:4"
+    ],
+    "scriptureDisplay": "Ruth 1–4",
+    "bigIdeas": [
+      {
+        "origin": "source",
+        "text": "A true friend loves at all times."
+      }
+    ],
+    "memoryVerse": {
+      "reference": "Proverbs 17:17",
+      "translation": "BSB",
+      "text": "A friend loves at all times, and a brother is born for adversity.",
+      "isExcerpt": false,
+      "origin": "adapted",
+      "requiresTextReview": false,
+      "teacherReviewRequired": true,
+      "originalTranslation": "ESV",
+      "hasEllipses": false,
+      "bsbSource": {
+        "reference": "Proverbs 17:17",
+        "sourceUrl": "https://bereanbible.com/bsb.txt",
+        "publicDomainTerms": "https://berean.bible/terms.htm",
+        "startWord": 0,
+        "endWord": 12
+      }
+    }
+  },
+  "preparedActivities": {
+    "drawPicture": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "prompt": "Ruth collecting leftover grain in Boaz’s field"
+    },
+    "multipleChoice": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-01",
+        "question": "Who stayed with Naomi when she returned to Israel?",
+        "correctAnswer": "Ruth",
+        "choices": [
+          {
+            "origin": "suggested",
+            "text": "Ruth",
+            "isCorrect": true
+          },
+          {
+            "origin": "suggested",
+            "text": "Delilah",
+            "isCorrect": false
+          },
+          {
+            "origin": "suggested",
+            "text": "Sarah",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-02",
+        "question": "What did Ruth do to find food for herself and Naomi?",
+        "correctAnswer": "Gathered leftover grain",
+        "choices": [
+          {
+            "origin": "suggested",
+            "text": "Gathered leftover grain",
+            "isCorrect": true
+          },
+          {
+            "origin": "suggested",
+            "text": "Caught fish in a river",
+            "isCorrect": false
+          },
+          {
+            "origin": "suggested",
+            "text": "Hunted in the forest",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-03",
+        "question": "Whose field did Ruth work in?",
+        "correctAnswer": "Boaz",
+        "choices": [
+          {
+            "origin": "suggested",
+            "text": "Boaz",
+            "isCorrect": true
+          },
+          {
+            "origin": "suggested",
+            "text": "Samuel",
+            "isCorrect": false
+          },
+          {
+            "origin": "suggested",
+            "text": "Samson",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-04",
+        "question": "What sad thing happened to Naomi and Ruth?",
+        "correctAnswer": "Their husbands died",
+        "choices": [
+          {
+            "origin": "suggested",
+            "text": "Their husbands died",
+            "isCorrect": true
+          },
+          {
+            "origin": "suggested",
+            "text": "They became blind",
+            "isCorrect": false
+          },
+          {
+            "origin": "suggested",
+            "text": "They were sent to prison",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-05",
+        "question": "What did Ruth ask Boaz to do when he awoke at night?",
+        "correctAnswer": "Marry her and care for her",
+        "choices": [
+          {
+            "origin": "suggested",
+            "text": "Marry her and care for her",
+            "isCorrect": true
+          },
+          {
+            "origin": "suggested",
+            "text": "Give her grain",
+            "isCorrect": false
+          },
+          {
+            "origin": "suggested",
+            "text": "Marry Naomi",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-06",
+        "question": "What famous person was born into Ruth's family?",
+        "correctAnswer": "David",
+        "choices": [
+          {
+            "origin": "suggested",
+            "text": "David",
+            "isCorrect": true
+          },
+          {
+            "origin": "suggested",
+            "text": "Moses",
+            "isCorrect": false
+          },
+          {
+            "origin": "suggested",
+            "text": "Paul",
+            "isCorrect": false
+          }
+        ]
+      }
+    ],
+    "trueFalse": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "factId": "tf-07",
+      "statement": "Boaz spoke with a closer relative before he married Ruth.",
+      "isTrue": true
+    },
+    "firstLetters": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Proverbs 17:17",
+      "verse": "A friend loves at all times, and a brother is born for adversity."
+    },
+    "oddWords": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "related": [
+        "WIDOW",
+        "BREAD",
+        "KIND",
+        "GLEAN",
+        "MEAL"
+      ],
+      "unrelated": [
+        "rat",
+        "hill",
+        "shark",
+        "reed",
+        "bark"
+      ],
+      "unrelatedOrigin": "suggested"
+    },
+    "unscrambleWords": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "answers": [
+        "RUTH",
+        "NAOMI"
+      ]
+    },
+    "checkboxes": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "correct": [
+        "RUTH",
+        "BOAZ",
+        "GRAIN",
+        "NAOMI",
+        "OBED"
+      ],
+      "incorrect": [
+        "ant",
+        "eggs",
+        "herons",
+        "chicken",
+        "boots"
+      ],
+      "incorrectOrigin": "suggested"
+    },
+    "whoAmI": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "clue": "I stayed with Naomi, gathered grain in Boaz’s field, and later married Boaz.",
+      "answer": "RUTH"
+    },
+    "matchWords": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "pair-01",
+        "left": "Ruth",
+        "right": "Daughter"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "pair-02",
+        "left": "Naomi",
+        "right": "Mother in Law"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "pair-03",
+        "left": "Boaz",
+        "right": "Kind man"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "pair-04",
+        "left": "Food",
+        "right": "Grain"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "pair-05",
+        "left": "Obed",
+        "right": "Son"
+      }
+    ],
+    "finishVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Proverbs 17:17",
+      "sourceVerse": "A friend loves at all times, and a brother is born for adversity.",
+      "markedVerse": "A [friend] loves at all [times], and a [brother] is [born] for [adversity]."
+    },
+    "unscrambleVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Proverbs 17:17",
+      "sourceVerse": "A friend loves at all times, and a brother is born for adversity.",
+      "markedVerse": "A [friend] loves at all [times], and a [brother] is [born] for [adversity]."
+    },
+    "circleMistakes": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "paragraph": "After the famine, Naomi left Ruth behind in Moab. Back in Israel, Ruth went to the river to catch fish for food. The field belonged to a man named Saul, who ordered his workers to chase her away. Naomi told Ruth that Boaz was an enemy of their family. Ruth asked Boaz to marry Naomi. Ruth had a baby named Moses.",
+      "mistakeCount": 7,
+      "mistakes": [
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "incorrect": "left Ruth behind in Moab",
+          "correction": "and Ruth went to Israel"
+        },
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "incorrect": "went to the river to catch fish",
+          "correction": "gleaned leftover grain in a field"
+        },
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "incorrect": "Saul",
+          "correction": "Boaz"
+        },
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "incorrect": "ordered his workers to chase her away",
+          "correction": "gave Ruth a meal and left extra grain"
+        },
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "incorrect": "Boaz was an enemy",
+          "correction": "Boaz was a family protector"
+        },
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "incorrect": "marry Naomi",
+          "correction": "marry her"
+        },
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "incorrect": "Moses",
+          "correction": "Obed"
+        }
+      ]
+    },
+    "mediumWordSearch": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "words": [
+        "RUTH",
+        "NAOMI",
+        "BOAZ",
+        "FIELD",
+        "GRAIN",
+        "MOAB"
+      ]
+    },
+    "trueFalseMaze": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "factId": "tf-14",
+      "statement": "Ruth and Boaz named their baby Joshua.",
+      "isTrue": false
+    },
+    "bigIdeaCryptogram": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "phrase": "A true friend loves at all times."
+    },
+    "upsideDownVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Proverbs 17:17",
+      "verse": "A friend loves at all times, and a brother is born for adversity."
+    },
+    "connectBigIdea": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "phrase": "A true friend loves at all times."
+    },
+    "pixelPicture": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "phrase": "Ruth and Boaz showed kindness and love during difficult times."
+    },
+    "finishStory": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "markedParagraph": "The husbands of Naomi and Ruth died. When [Naomi] returned to [Israel], her daughter-in-law [Ruth] went with her. To find food, Ruth gathered leftover [grain] in a field belonging to [Boaz]. Boaz was [kind] to Ruth and told his workers to leave [extra] grain for her. Naomi said that Boaz was a [family] protector. She told Ruth to lie near his [feet] at night. Ruth asked Boaz to [marry] her. After he spoke to another relative, they married and had a son named [Obed]. Their family later included King [David]."
+    },
+    "storyOrder": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 1,
+        "text": "Naomi returned from Moab to Israel, and Ruth chose to go with her."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 2,
+        "text": "Ruth gathered leftover grain in a field that belonged to Boaz."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 3,
+        "text": "Boaz kindly offered Ruth a meal and extra grain to gather."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 4,
+        "text": "Naomi learned that Boaz was one of their family protectors."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 5,
+        "text": "Naomi told Ruth to visit Boaz quietly at night and lie by his feet."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 6,
+        "text": "Ruth asked Boaz to marry her; he first spoke with a closer relative."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 7,
+        "text": "Boaz married Ruth, and they had a son named Obed."
+      }
+    ],
+    "sortStory": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-01",
+        "statement": "Ruth stayed with Naomi when Naomi returned to Israel.",
+        "isTrue": true,
+        "id": "tf-01"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-02",
+        "statement": "Ruth gathered leftover grain in a field belonging to Boaz.",
+        "isTrue": true,
+        "id": "tf-02"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-04",
+        "statement": "Boaz let Ruth gather extra grain and gave her a meal.",
+        "isTrue": true,
+        "id": "tf-04"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-09",
+        "statement": "Naomi left Ruth behind in Moab when she returned to Israel.",
+        "isTrue": false,
+        "id": "tf-09"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-11",
+        "statement": "Boaz told his workers to chase Ruth out of his fields.",
+        "isTrue": false,
+        "id": "tf-11"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-13",
+        "statement": "Ruth asked Boaz to marry Naomi.",
+        "isTrue": false,
+        "id": "tf-13"
+      }
+    ],
+    "drawStory": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "Ruth traveled with Naomi from Moab back to Israel."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "Ruth gathered leftover grain from the field of Boaz."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "Boaz welcomed Ruth and gave her food and protection."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "Naomi told Ruth that Boaz was a family protector."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "Ruth asked Boaz to marry her, and he agreed to help."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "Boaz married Ruth, and they welcomed their baby son, Obed."
+      }
+    ],
+    "wordSearch": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "words": [
+        "RUTH",
+        "NAOMI",
+        "BOAZ",
+        "BARLEY",
+        "FAMILY",
+        "REDEEMER",
+        "HARVEST",
+        "OBED",
+        "DAVID",
+        "FRIEND",
+        "MARRIAGE",
+        "ISRAEL"
+      ]
+    },
+    "verseCryptogram": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Proverbs 17:17",
+      "verse": "A friend loves at all times, and a brother is born for adversity."
+    },
+    "crossword": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "RUTH",
+        "clue": "Woman who stayed with Naomi and cared for her"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "NAOMI",
+        "clue": "Ruth’s mother-in-law"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "BOAZ",
+        "clue": "Man who gave Ruth food and protection"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "GRAIN",
+        "clue": "Food Ruth gathered in the field"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "HUSBAND",
+        "clue": "Boaz became this to Ruth"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "MOAB",
+        "clue": "Country Ruth came from"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "OBED",
+        "clue": "Name of Ruth and Boaz’s son"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "FRIEND",
+        "clue": "Someone who shows love even in hard times"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "DAVID",
+        "clue": "King who came from Ruth’s family"
+      }
+    ],
+    "spiralVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Proverbs 17:17",
+      "verse": "A friend loves at all times, and a brother is born for adversity."
+    },
+    "connectVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Proverbs 17:17",
+      "verse": "A friend loves at all times, and a brother is born for adversity."
+    }
+  },
+  "vocabulary": {
+    "related": [
+      "RUTH",
+      "NAOMI",
+      "BOAZ",
+      "GRAIN",
+      "FIELD",
+      "MOAB",
+      "BARLEY",
+      "GLEAN",
+      "WIDOW",
+      "FAMILY",
+      "FRIEND",
+      "OBED",
+      "DAVID",
+      "REDEEMER",
+      "ISRAEL",
+      "KIND",
+      "MEAL",
+      "HUSBAND",
+      "MARRY",
+      "BREAD",
+      "HARVEST",
+      "LOVE"
+    ],
+    "unrelated": [
+      "LION",
+      "SWORD",
+      "SHIELD",
+      "TRUMPET",
+      "PHARAOH",
+      "JERICHO",
+      "SPEAR",
+      "TOWER",
+      "SHIP",
+      "CROWN"
+    ],
+    "entries": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-01",
+        "term": "RUTH",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-02",
+        "term": "NAOMI",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-03",
+        "term": "BOAZ",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-04",
+        "term": "GRAIN",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-05",
+        "term": "FIELD",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-06",
+        "term": "MOAB",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-07",
+        "term": "BARLEY",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-08",
+        "term": "GLEAN",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-09",
+        "term": "WIDOW",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-10",
+        "term": "FAMILY",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-11",
+        "term": "FRIEND",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-12",
+        "term": "OBED",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-13",
+        "term": "DAVID",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-14",
+        "term": "REDEEMER",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-15",
+        "term": "ISRAEL",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-16",
+        "term": "KIND",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-17",
+        "term": "MEAL",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-18",
+        "term": "HUSBAND",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-19",
+        "term": "MARRY",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-20",
+        "term": "BREAD",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-21",
+        "term": "HARVEST",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-22",
+        "term": "LOVE",
+        "scope": "story"
+      }
+    ]
+  },
+  "facts": [
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-01",
+      "statement": "Ruth stayed with Naomi when Naomi returned to Israel.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-02",
+      "statement": "Ruth gathered leftover grain in a field belonging to Boaz.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-03",
+      "statement": "Boaz was a relative of Naomi’s late husband.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-04",
+      "statement": "Boaz let Ruth gather extra grain and gave her a meal.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-05",
+      "statement": "Naomi explained that Boaz was a family protector.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-06",
+      "statement": "Naomi told Ruth to lie down near Boaz’s feet.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-07",
+      "statement": "Boaz spoke with a closer relative before he married Ruth.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-08",
+      "statement": "Ruth and Boaz married and had a son named Obed.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-09",
+      "statement": "Naomi left Ruth behind in Moab when she returned to Israel.",
+      "isTrue": false
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-10",
+      "statement": "Ruth earned food by catching fish in the Sea of Galilee.",
+      "isTrue": false
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-11",
+      "statement": "Boaz told his workers to chase Ruth out of his fields.",
+      "isTrue": false
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-12",
+      "statement": "Naomi warned Ruth that Boaz was their family's enemy.",
+      "isTrue": false
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-13",
+      "statement": "Ruth asked Boaz to marry Naomi.",
+      "isTrue": false
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-14",
+      "statement": "Ruth and Boaz named their baby Joshua.",
+      "isTrue": false
+    }
+  ],
+  "characters": [
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "ch-01",
+      "name": "Ruth",
+      "scope": "story",
+      "clues": [
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "text": "I stayed with my mother-in-law Naomi and gathered grain to help us eat."
+        }
+      ]
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "ch-02",
+      "name": "Naomi",
+      "scope": "story",
+      "clues": [
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "text": "Ruth stayed with me after our husbands died. I knew Boaz could protect her."
+        }
+      ]
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "ch-03",
+      "name": "Boaz",
+      "scope": "story",
+      "clues": [
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "text": "I owned the field where Ruth gleaned grain, and later I married her."
+        }
+      ]
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "ch-04",
+      "name": "Obed",
+      "scope": "story",
+      "clues": [
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "text": "I am the son of Ruth and Boaz and an ancestor of King David."
+        }
+      ]
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "ch-05",
+      "name": "David",
+      "scope": "story",
+      "clues": [
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "text": "I became king of Israel years after my ancestor Ruth lived."
+        }
+      ]
+    }
+  ],
+  "drawingPrompts": [
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-01",
+      "prompt": "Ruth staying beside Naomi on the road from Moab to Israel"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-02",
+      "prompt": "Ruth collecting grain left behind by workers in Boaz’s field"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-03",
+      "prompt": "Boaz welcoming Ruth and offering her a meal"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-04",
+      "prompt": "Boaz telling his workers to leave extra grain for Ruth"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-05",
+      "prompt": "Ruth returning home with grain for Naomi"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-06",
+      "prompt": "Naomi telling Ruth that Boaz is a family protector"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-07",
+      "prompt": "Ruth lying near Boaz’s feet on the threshing floor"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-08",
+      "prompt": "Boaz meeting with a family relative before the wedding"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-09",
+      "prompt": "Ruth and Boaz celebrating their wedding"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-10",
+      "prompt": "Naomi holding Ruth and Boaz’s baby Obed"
+    }
+  ],
+  "matchingPairs": [
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-01",
+      "left": "Ruth",
+      "right": "Loyal friend of Naomi"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-02",
+      "left": "Naomi",
+      "right": "Ruth’s mother-in-law"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-03",
+      "left": "Boaz",
+      "right": "Kind family protector"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-04",
+      "left": "Gleaning",
+      "right": "Picking up grain"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-05",
+      "left": "Obed",
+      "right": "Son of Ruth and Boaz"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-06",
+      "left": "David",
+      "right": "Later king of Israel"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-07",
+      "left": "Moab",
+      "right": "Land Ruth came from"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-08",
+      "left": "Field",
+      "right": "Place Ruth found grain"
+    }
+  ],
+  "keyPhrases": [
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-01",
+      "text": "Ruth stayed with Naomi in difficult times."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-02",
+      "text": "Ruth gathered leftover grain to feed her family."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-03",
+      "text": "Boaz welcomed Ruth and helped protect her."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-04",
+      "text": "Boaz gave Ruth food and extra grain."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-05",
+      "text": "Naomi knew Boaz was a family protector."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-06",
+      "text": "Ruth asked Boaz to marry her."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-07",
+      "text": "Boaz and Ruth had a baby named Obed."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-08",
+      "text": "A true friend loves at all times."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-09",
+      "text": "Jesus showed the greatest love by giving his life for his friends."
+    }
+  ],
+  "publication": {
+    "status": "approved",
+    "approved": true,
+    "teacherSignoff": {
+      "reviewer": "Andrew Doane",
+      "date": "2026-11-19",
+      "notes": "Approved with verified BSB verse through Curriculum Review Studio"
+    },
+    "scriptureRights": {
+      "status": "cleared",
+      "basis": "Berean Standard Bible (BSB), dedicated to the public domain on April 30, 2023. Official terms: https://berean.bible/terms.htm. Scripture text confirmed against https://bereanbible.com/bsb.txt.",
+      "reviewedBy": "Andrew Doane",
+      "reviewedOn": "2026-11-19"
+    },
+    "resolvedReviewFlagIds": [],
+    "notes": "Approved through Review Studio after teacher review and a successful 27/27 content/preflight check of four numbered presets. Original conversion notes and checks remain as historical records.",
+    "reviewStudioVerification": {
+      "source": "Review Studio measured preflight",
+      "checkedAt": "2026-11-19T15:39:57.110Z",
+      "convertedCount": 27,
+      "totalCount": 27,
+      "issueCount": 0,
+      "numberedPresetsChecked": 4,
+      "scope": "Candidate-specific content conversion, four numbered preset content checks, and measured Connect the Verse fit. Standalone repository commands and independently rendered PDFs are not claimed.",
+      "matchingWorksheetSource": "preparedActivities.matchWords",
+      "matchingCandidatePool": "matchingPairs is retained separately as historical/source candidate material"
+    },
+    "reviewFlagDisposition": []
+  },
+  "schemaStatus": "approved; Review Studio 27/27 preflight passed"
+}
