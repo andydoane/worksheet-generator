@@ -1,59 +1,44 @@
 /**
- * Teacher-provided Bible vocabulary decoy pool for Review Studio.
+ * Elementary-friendly Bible-era decoys for Review Studio.
  *
- * The source list intentionally repeats some terms across stories. Deduplicate
- * case-insensitively, keeping the first supplied spelling. It is a suggestion
- * list, NOT a claim that any entry is unrelated to a particular Bible lesson.
+ * Every entry is ONE familiar word (a person, place, animal, object, or other
+ * concrete Bible-era term), at most 12 letters so it works for both Odd Words
+ * and Checkboxes. The categories make this list easier to edit intentionally.
+ *
+ * Suggestions are NOT automatically false or unrelated to the current lesson:
+ * teachers must review the five random selections before accepting them.
+ * Existing selection logic excludes exact current-lesson correct/vocabulary
+ * words and choices already used in the other worksheet.
  */
-const TEACHER_DECOY_WORDS=`light darkness sky earth stars Adam Eve garden dust breath serpent fruit tree shame leaves
-Cain Abel altar offering field Noah ark rain flood animals dove olive rainbow mountain covenant
-tower Babel bricks language city Abram Sarah tent journey Canaan Lot herdsmen pasture flocks
-valley visitors Abraham Sarah Isaac laughter Sodom Gomorrah angels fire salt Job boils ashes
-friends suffering Isaac Rebekah well camels bracelet Jacob Esau stew lentils birthright disguise
-goatskin blessing father deception ladder dream angels heaven stone Leah Rachel Laban weddings
-shepherd sons daughters tribes Benjamin Dinah wrestling angel hip blessing Israel Joseph brothers
-coat jealousy pit Potiphar servant household wife prison baker cupbearer dreams dungeon
-interpretation Pharaoh cows grain famine abundance silver sacks Benjamin cup testing forgiveness
-reunion family Egypt tears Moses basket river princess reeds bush fire sandals voice Horeb Aaron
-staff Pharaoh palace command frogs gnats flies locusts darkness lamb blood doorposts meal firstborn
-sea walls wind chariots shore manna quail water rock wilderness Sinai thunder lightning tablets
-covenant commandments Sabbath parents idols honesty calf gold Aaron idol worship tent curtains
-altar lampstand priests spies grapes giants Canaan report desert sandals serpents journey camp
-Rahab rope window cord rooftop Jordan priests river stones crossing Jericho trumpets walls
-marching shout Achan treasure silver cloak punishment Joshua sun moon Gibeon battle Othniel Ehud
-Shamgar dagger oxgoad Gideon fleece torches pitchers trumpets Samson lion hair pillars Delilah
-Ruth Naomi Boaz barley gleaning Hannah Samuel Eli temple prayer Samuel voice night lamp Eli
-Philistines ark Dagon statue plague Saul Samuel oil crown donkey Amalek sheep cattle sacrifice
-disobedience David Jesse horn shepherd oil harp music Saul palace spirit Goliath sling stone
-giant armor Saul spear jealousy harp David Jonathan arrows field bow covenant cave robe sword
-mercy king David throne dynasty covenant promise Bathsheba roof letter Uriah prophet Solomon
-baby mothers sword wisdom temple cedar stones gold altar Rehoboam Jeroboam taxes tribes division
-Elijah widow flour oil jar Baal prophets altar fire water chariot whirlwind Elijah Elisha mantle
-Elisha widow oil axehead bread Naaman leprosy Jordan servant healing Elisha horses chariots army
-mountain Jonah ship storm fish Nineveh Josiah scroll temple priest law Assyria Babylon siege exile
-Jerusalem Daniel Nebuchadnezzar statue gold dream Shadrach Meshach Abednego furnace flames
-Nebuchadnezzar tree stump dew madness Daniel lions den king stone temple foundation altar builders
-rubble Esther Mordecai Haman scepter banquet Nehemiah wall gates stones builders Zechariah
-Elizabeth Gabriel John incense Mary Joseph Gabriel angel Nazareth Jesus manger Bethlehem shepherds
-swaddling magi star gold frankincense myrrh boy temple teachers parents Passover John wilderness
-locusts honey baptism Jordan dove wilderness Satan stones Peter Andrew James John Matthew Nicodemus
-night teacher Spirit rebirth jars water wine boat storm mat paralytic roof friends healing demons
-man tombs pigs chains Jairus daughter crowds garment child loaves fish baskets crowd hillside
-waves boat Peter wind water Pharisees law tradition robes synagogue mud eyes beggar pool sight
-Mary Martha kitchen meal worry Lazarus tomb stone sisters graveclothes riches camel Zacchaeus tree
-taxcollector love God neighbor heart commandments Samaritan traveler donkey inn servant coin sheep
-shepherd son father prayer Father bread forgiveness kingdom seeds soil mustard yeast pearl children
-disciples blessing hands infants donkey palms cloaks temple tables bread cup wine disciples supper
-Judas silver kiss garden soldiers Peter rooster courtyard fire servant cross nails crown soldiers
-tomb stone angels women resurrection garden Thomas wounds hands side faith Emmaus road travelers
-bread scriptures mountain disciples nations clouds heaven Pentecost wind fire tongues apostles
-Peter John beggar gate ankles Stephen stones Philip chariot Ethiopian Saul Damascus light blindness
-Ananias Peter chains angel prison guards Barnabas Paul Cyprus ship synagogue Paul Silas jail
-earthquake jailer Rome ship storm island snake Jesus trumpet clouds angels heaven`;
+const ELEMENTARY_DECOY_GROUPS={
+ people:`Adam Eve Cain Abel Seth Noah Abraham Sarah Isaac Rebekah Jacob Esau Leah Rachel Joseph Benjamin Judah Moses Aaron Miriam Joshua Caleb Rahab Ruth Naomi Boaz Hannah Samuel Saul David Jonathan Abigail Solomon Elijah Elisha Jonah Job Daniel Esther Mordecai Gideon Samson Delilah Deborah Jeremiah Isaiah Mary Jesus Elizabeth Zechariah Gabriel John Peter Andrew James Matthew Mark Luke Paul Timothy Thomas Judas Martha Lazarus Zacchaeus Stephen Philip Barnabas Silas Lydia Herod Pilate Caesar Pharaoh`,
+ family:`mother father mommy daddy parent parents son daughter sister brother brothers sisters baby babies child children boy boys girl girls man men woman women husband wife bride groom grandpa grandma grandfather grandmother aunt uncle cousin nephew niece family families twins friend friends neighbor neighbors guest guests host visitor visitors stranger strangers companion helper helpers widow widows orphan orphans`,
+ roles:`king queen prince princess ruler leader governor captain chief judge judges priest priests prophet prophets shepherd shepherds teacher teachers rabbi preacher disciple disciples apostle apostles angel angels soldier soldiers guard guards warrior warriors servant servants slave slaves master masters owner owners worker workers messenger messengers attendant farmer farmers fisherman fishermen carpenter builder builders potter baker cook weaver tailor seller buyer merchant sailor sailors boatman traveler travelers hunter hunters musician musicians singer singers dancer dancers`,
+ biblePlaces:`Eden Egypt Israel Judah Canaan Jerusalem Bethlehem Nazareth Jericho Jordan Galilee Judea Samaria Babylon Nineveh Rome Sinai Moab Bethany Damascus Antioch Persia Syria Lebanon Gaza Hebron Sodom Gomorrah Cana Philippi`,
+ outdoorPlaces:`city cities town towns village villages country countries kingdom kingdoms land lands farm farms garden gardens vineyard vineyards orchard orchards pasture pastures meadow meadows field fields desert deserts wilderness forest forests woods valley valleys hill hills mountain mountains cave caves canyon canyons island islands coast coasts shore shores beach beaches river rivers stream streams brook brooks creek creeks lake lakes pond ponds pool pools well wells spring springs oasis road roads path paths trail trails street streets market markets square squares gate gates courtyard courtyards`,
+ buildings:`house houses home homes room rooms kitchen bedroom cellar roof rooftop roofs floor floors doorway door doors window windows wall walls stairs steps tower towers palace palaces temple temples tabernacle sanctuary synagogue church churches prison prisons dungeon dungeons inn inns stable stables barn barns shed sheds hut huts tent tents camp camps cabin cabins fortress fort watchtower shelter shelters porch porches balcony balconies workshop bakery mill mills furnace furnaces altar altars throne thrones`,
+ landAnimals:`lion lions lamb lambs sheep ram rams ewe ewes goat goats kid kids cow cows calf calves ox oxen bull bulls donkey donkeys camel camels horse horses mule mules dog dogs puppy puppies cat cats kitten kittens wolf wolves fox foxes bear bears deer rabbit rabbits hare hares mouse mice rat rats squirrel squirrels antelope gazelle leopard leopards panther tiger zebra giraffe elephant elephants monkey monkeys ape apes buffalo bison boar pig pigs hedgehog badger lizard lizards gecko snake snakes serpent serpents turtle tortoise crocodile`,
+ birds:`dove doves pigeon pigeons raven ravens crow crows eagle eagles sparrow sparrows swallow swallows robin robins finch finches owl owls hawk hawks falcon falcons stork storks crane cranes heron herons pelican pelicans ostrich ostriches peacock peacocks quail rooster roosters hen hens chicken chickens chick chicks duck ducks goose geese turkey turkeys swan swans partridge vulture vultures bird birds feathers feather wing wings beak beaks nest nests egg eggs`,
+ waterAnimals:`fish fishes whale whales dolphin dolphins shark sharks seal seals crab crabs lobster lobsters shrimp clam clams oyster oysters eel eels trout salmon tuna carp minnow minnows frog frogs toad toads tadpole tadpoles`,
+ insects:`bee bees honeybee wasp wasps ant ants beetle beetles bug bugs fly flies gnat gnats mosquito moth moths butterfly grasshopper locust locusts cricket crickets worm worms caterpillar spider spiders scorpion scorpions snail snails flea fleas lice tick ticks`,
+ treesPlants:`tree trees branch branches trunk trunks bark leaf leaves root roots twig twigs bush bushes shrub shrubs grass weed weeds flower flowers rose roses lily lilies vine vines grapevine olive olives fig figs palm palms cedar cedars oak oaks pine pines willow willows acacia apple apples pear pears peach peaches plum plums apricot apricots cherry cherries date dates almond almonds walnut walnuts nut nuts berry berries thistle thorns thorn wheat barley grain grains corn seeds seed sprout sprouts stalk stalks stem stems bud buds blossom blossoms reed reeds bamboo moss fern ferns lavender`,
+ foods:`bread loaf loaves roll rolls flour dough yeast honey milk butter cheese cream oil olive fig grapes grape raisins raisin dates date barley wheat lentils lentil beans bean peas pea stew soup broth meat lamb beef fish chicken egg eggs onion onions garlic leek leeks cucumber cucumbers melon melons pumpkin pumpkins squash lettuce cabbage carrot carrots turnip turnips radish radishes pepper peppers salt sugar vinegar water wine juice mustard mint dill cinnamon herb herbs spice spices seed seeds fruit fruits apple apples pear pears peach peaches plum plums pomegranate cake cakes pie pies dinner supper breakfast lunch meal meals banquet feast feasts snack snacks`,
+ clothes:`robe robes coat coats cloak cloaks tunic tunics shirt shirts skirt skirts dress dresses gown gowns belt belts sash sashes scarf scarves shawl shawls veil veils sandals sandal shoe shoes boot boots sock socks cloth clothes clothing linen wool cotton silk leather fur fleece fabric thread yarn needle needles stitch stitches seam seams pocket pockets sleeve sleeves collar collars hem hems hat hats hood hoods blanket blankets sheet sheets towel towels apron aprons glove gloves mitten mittens`,
+ jewelry:`ring rings crown crowns necklace necklaces bracelet bracelets earring earrings jewel jewels gem gems diamond diamonds ruby rubies pearl pearls beads bead gold silver bronze copper iron chain chains buckle brooch medal medals coin coins money treasure treasures purse purses pouch pouches bag bags`,
+ kitchenThings:`cup cups bowl bowls plate plates dish dishes pot pots pan pans kettle kettles jar jars jug jugs pitcher pitchers bucket buckets ladle ladles spoon spoons fork forks knife knives oven ovens hearth firewood tray trays table tables chair chairs stool stools bench benches shelf shelves cupboard cupboards chest chests box boxes basket baskets bottle bottles lid lids cork corks napkin napkins cloth broom brooms mop mops sponge sponges soap mirror mirrors comb combs brush brushes bed beds mat mats pillow pillows cushion cushions`,
+ tools:`hammer hammers nail nails saw saws axe axes chisel chisels shovel shovels spade spades hoe hoes rake rakes plow plows sickle sickles pick picks pickaxe mallet mallets tongs tong rope ropes string strings cord cords wire wires hook hooks net nets needle needles spindle loom wheel wheels cart carts wagon wagons harness ladder ladders fence fences key keys lock locks hinge hinges bolt bolts peg pegs pole poles stake stakes staff staffs rod rods stick sticks torch torches lantern lanterns candle candles lamp lamps wick wicks flask flasks`,
+ weapons:`sword swords spear spears shield shields bow bows arrow arrows sling slings stone stones pebble pebbles dagger daggers club clubs armor helmet helmets chainmail battle battles army armies trumpet trumpets horn horns camp tents`,
+ travel:`boat boats ship ships canoe canoes raft rafts ferry ferries chariot chariots cart carts wagon wagons saddle saddles harness reins bridle bridles oar oars sail sails mast masts anchor anchors rudder rudders rope ropes net nets wheel wheels axle axles carriage carriages donkey mule horse camel traveler travelers journey journeys trip trips path paths road roads bridge bridges crossing crossings gate gates caravan caravans`,
+ worship:`Bible scripture scriptures book books scroll scrolls page pages letter letters ink pen pens parchment tablet tablets command commands law laws rule rules promise promises covenant prayer prayers blessing blessings praise hymn hymns psalm psalms song songs worship altar altars offering offerings sacrifice incense temple temples sanctuary priest priests prophet prophets robe robes oil lamp lamps candle candles fire flames flame ark chest trumpet trumpets harp harps lyre lyres flute flutes drum drums cymbal cymbals bell bells baptism river water bread cup wine shepherd lamb dove cross crosses crown crowns thorn thorns`,
+ skyWeather:`sun sunshine moon moonlight stars star sky skies cloud clouds rain raindrop raindrops snow snowflake snowflakes hail hailstone ice frost dew mist fog wind breeze breezes storm storms thunder lightning rainbow rainbows flood floods wave waves tide tides ocean oceans sea seas shore shores sand dirt dust mud clay soil earth ground gravel rocks rock hill mountain valley canyon cliffs cliff cave caves meadow grass tree flower petals wood forest leaf leaves fire flames smoke ash ashes coal coals ember embers darkness light shadow shadows morning evening daytime nighttime day days night nights dawn dusk sunset sunrise season seasons spring summer autumn winter harvest`,
+ stories:`pit prison ladder basket ark flood bricks tower coat crown dream well bush sandals manna quail tablets idol idols calf golden statue statues jar jars torch torches fleece wool sheep lion jawbone sling giant walls altar ram lamb manger star fish loaves bread cup donkey rooster thorns nails cross tomb stone scroll oil robe cloak veil doorpost doorposts reed reeds palace temple`,
+} as const;
 
 const unique=new Map<string,string>();
-for(const word of TEACHER_DECOY_WORDS.split(/\s+/u)){
- const key=word.toLocaleLowerCase('en');
- if(!unique.has(key))unique.set(key,word);
+for(const group of Object.values(ELEMENTARY_DECOY_GROUPS)){
+ for(const word of group.split(/\s+/u)){
+  const key=word.toLocaleLowerCase('en');
+  if(!unique.has(key))unique.set(key,word);
+ }
 }
 export const REVIEW_DECOY_POOL:readonly string[]=Object.freeze([...unique.values()]);
