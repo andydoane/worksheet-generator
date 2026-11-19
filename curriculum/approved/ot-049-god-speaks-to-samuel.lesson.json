@@ -1,0 +1,1211 @@
+{
+  "schemaVersion": 1,
+  "id": "ot-049-god-speaks-to-samuel",
+  "curriculum": {
+    "series": "OT",
+    "lessonNumber": 49
+  },
+  "lessonDetails": {
+    "title": "God Speaks to Samuel",
+    "scripturePassages": [
+      "1 Samuel 2–3",
+      "Romans 6:23",
+      "Romans 15:4"
+    ],
+    "scriptureDisplay": "1 Samuel 2–3",
+    "bigIdeas": [
+      {
+        "text": "don’t ignore God’s warning: sin leads to death!",
+        "origin": "source"
+      }
+    ],
+    "memoryVerse": {
+      "reference": "Romans 6:23",
+      "translation": "BSB",
+      "text": "For the wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord.",
+      "isExcerpt": false,
+      "origin": "adapted",
+      "requiresTextReview": false,
+      "teacherReviewRequired": true,
+      "originalTranslation": "ESV",
+      "hasEllipses": false,
+      "bsbSource": {
+        "reference": "Romans 6:23",
+        "sourceUrl": "https://bereanbible.com/bsb.txt",
+        "publicDomainTerms": "https://berean.bible/terms.htm",
+        "startWord": 0,
+        "endWord": 19
+      }
+    }
+  },
+  "preparedActivities": {
+    "drawPicture": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "prompt": "young Samuel waking up in the Tabernacle after hearing his name called"
+    },
+    "multipleChoice": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-01",
+        "question": "Who ignored Eli’s warning to stop sinning?",
+        "correctAnswer": "His two sons",
+        "choices": [
+          {
+            "origin": "suggested",
+            "teacherReviewRequired": true,
+            "text": "His two sons",
+            "isCorrect": true
+          },
+          {
+            "origin": "suggested",
+            "teacherReviewRequired": true,
+            "text": "His four daughters",
+            "isCorrect": false
+          },
+          {
+            "origin": "suggested",
+            "teacherReviewRequired": true,
+            "text": "His wife",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-02",
+        "question": "Where was Samuel when the Lord called his name?",
+        "correctAnswer": "In the Tabernacle",
+        "choices": [
+          {
+            "origin": "suggested",
+            "teacherReviewRequired": true,
+            "text": "In the Tabernacle",
+            "isCorrect": true
+          },
+          {
+            "origin": "suggested",
+            "teacherReviewRequired": true,
+            "text": "On a mountain",
+            "isCorrect": false
+          },
+          {
+            "origin": "suggested",
+            "teacherReviewRequired": true,
+            "text": "On a boat",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-03",
+        "question": "Who did Samuel think was calling him in the night?",
+        "correctAnswer": "Eli",
+        "choices": [
+          {
+            "origin": "suggested",
+            "teacherReviewRequired": true,
+            "text": "Eli",
+            "isCorrect": true
+          },
+          {
+            "origin": "suggested",
+            "teacherReviewRequired": true,
+            "text": "Hannah",
+            "isCorrect": false
+          },
+          {
+            "origin": "suggested",
+            "teacherReviewRequired": true,
+            "text": "Moses",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-04",
+        "question": "What did Eli tell Samuel to say when God called?",
+        "correctAnswer": "Speak, Lord. I’m listening.",
+        "choices": [
+          {
+            "origin": "suggested",
+            "teacherReviewRequired": true,
+            "text": "Speak, Lord. I’m listening.",
+            "isCorrect": true
+          },
+          {
+            "origin": "suggested",
+            "teacherReviewRequired": true,
+            "text": "Speak louder.",
+            "isCorrect": false
+          },
+          {
+            "origin": "suggested",
+            "teacherReviewRequired": true,
+            "text": "Please let me sleep.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-05",
+        "question": "Why did God say Eli’s family would be punished?",
+        "correctAnswer": "Eli did not stop his sinful sons.",
+        "choices": [
+          {
+            "origin": "suggested",
+            "teacherReviewRequired": true,
+            "text": "Eli did not stop his sinful sons.",
+            "isCorrect": true
+          },
+          {
+            "origin": "suggested",
+            "teacherReviewRequired": true,
+            "text": "Eli was lazy.",
+            "isCorrect": false
+          },
+          {
+            "origin": "suggested",
+            "teacherReviewRequired": true,
+            "text": "Eli stole from the Tabernacle.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-06",
+        "question": "Why was Samuel afraid to speak with Eli the next morning?",
+        "correctAnswer": "God’s message was sad news for Eli.",
+        "choices": [
+          {
+            "origin": "suggested",
+            "teacherReviewRequired": true,
+            "text": "God’s message was sad news for Eli.",
+            "isCorrect": true
+          },
+          {
+            "origin": "suggested",
+            "teacherReviewRequired": true,
+            "text": "Eli had a bad temper.",
+            "isCorrect": false
+          },
+          {
+            "origin": "suggested",
+            "teacherReviewRequired": true,
+            "text": "He forgot what God told him.",
+            "isCorrect": false
+          }
+        ]
+      }
+    ],
+    "trueFalse": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "factId": "tf-08",
+      "statement": "Though he was afraid, Samuel told Eli what God had said.",
+      "isTrue": true
+    },
+    "firstLetters": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Romans 6:23",
+      "verse": "For the wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord."
+    },
+    "oddWords": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "related": [
+        "ELI",
+        "SONS",
+        "SIN",
+        "MEAT",
+        "WARN"
+      ],
+      "unrelated": [
+        "house",
+        "bee",
+        "musicians",
+        "songs",
+        "carriages"
+      ],
+      "unrelatedOrigin": "suggested"
+    },
+    "unscrambleWords": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "answers": [
+        "SAMUEL",
+        "ELI"
+      ]
+    },
+    "checkboxes": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "correct": [
+        "SAMUEL",
+        "NIGHT",
+        "LAMP",
+        "MESSAGE",
+        "LORD"
+      ],
+      "incorrect": [
+        "fishermen",
+        "poles",
+        "apricots",
+        "soup",
+        "Cana"
+      ],
+      "incorrectOrigin": "suggested"
+    },
+    "whoAmI": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "clue": "I was asleep in the Tabernacle when the Lord God called out my name. I thought it was Eli speaking to me.",
+      "answer": "Samuel"
+    },
+    "matchWords": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mp-01",
+        "left": "Eli",
+        "right": "Old priest"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mp-02",
+        "left": "Samuel",
+        "right": "Boy"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mp-03",
+        "left": "Eli’s sons",
+        "right": "Sinful"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mp-04",
+        "left": "God",
+        "right": "Night voice"
+      }
+    ],
+    "finishVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Romans 6:23",
+      "markedVerse": "For the [wages] of [sin] is [death], but the [gift] of God is [eternal] life in Christ [Jesus] our [Lord].",
+      "sourceVerse": "For the wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord."
+    },
+    "unscrambleVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Romans 6:23",
+      "markedVerse": "For the [wages] of [sin] is [death], but the [gift] of God is [eternal] life in Christ [Jesus] our [Lord].",
+      "sourceVerse": "For the wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord."
+    },
+    "circleMistakes": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "paragraph": "One night, Samuel was sleeping in a palace. When God called his name, Samuel ran to Moses. After Samuel woke him up for the fifth time, Eli told Samuel to say, Go away and let me sleep. God said Eli’s family would be rewarded for their sins. Samuel was excited to share God's message with Eli.",
+      "mistakeCount": 6,
+      "mistakes": [
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "incorrect": "palace",
+          "correction": "Tabernacle"
+        },
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "incorrect": "Moses",
+          "correction": "Eli"
+        },
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "incorrect": "Go away and let me sleep",
+          "correction": "Speak, Lord. I’m listening."
+        },
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "incorrect": "rewarded",
+          "correction": "punished"
+        },
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "incorrect": "excited",
+          "correction": "afraid"
+        },
+        {
+          "incorrect": "fifth",
+          "correction": "third",
+          "origin": "suggested",
+          "teacherReviewRequired": true
+        }
+      ]
+    },
+    "mediumWordSearch": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "words": [
+        "SAMUEL",
+        "ELI",
+        "LAMP",
+        "NIGHT",
+        "VOICE",
+        "HEAR"
+      ]
+    },
+    "trueFalseMaze": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "factId": "tf-11",
+      "statement": "Samuel recognized the Lord’s voice the very first time.",
+      "isTrue": false
+    },
+    "bigIdeaCryptogram": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "phrase": "The Bible warns us that sin leads to death."
+    },
+    "upsideDownVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Romans 6:23",
+      "verse": "For the wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord."
+    },
+    "connectBigIdea": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "phrase": "don’t ignore God’s warning: sin leads to death!"
+    },
+    "pixelPicture": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "phrase": "Eli knew his sons did evil, but did not stop them."
+    },
+    "finishStory": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "markedParagraph": "Eli warned his [sons] because they were doing [evil] things. Sadly, they refused to [listen]. At night, young [Samuel] slept in the Tabernacle. The Lord called his [name], but Samuel ran to [Eli] because he thought the priest was speaking. After a third time, Eli finally told Samuel to say, “[Speak], Lord. I’m [listening].” When God spoke to Samuel, he told him that Eli’s [family] would be punished for their [sins]. Samuel was [afraid] to share this news, but he told Eli the [truth]."
+    },
+    "storyOrder": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 1,
+        "text": "Eli warned his sons to stop sinning, but they would not listen."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 2,
+        "text": "Young Samuel served the Lord at the Tabernacle under Eli."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 3,
+        "text": "One night the Lord called Samuel by name as he was lying down."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 4,
+        "text": "Samuel thought Eli had called him, so he ran to the priest."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 5,
+        "text": "After the Lord called again, Samuel went back to Eli."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 6,
+        "text": "Eli realized the Lord was calling and told Samuel how to answer."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 7,
+        "text": "Samuel listened as the Lord warned that Eli’s family would be punished."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 8,
+        "text": "The next morning Samuel told Eli the difficult message from God."
+      }
+    ],
+    "sortStory": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-01",
+        "statement": "Eli’s sons stole meat meant for offerings at the Tabernacle.",
+        "isTrue": true
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-03",
+        "statement": "Young Samuel served the Lord at the Tabernacle with Eli.",
+        "isTrue": true
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-04",
+        "statement": "The Lord called Samuel by name during the night.",
+        "isTrue": true
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-07",
+        "statement": "God warned Samuel that Eli’s family would be punished.",
+        "isTrue": true
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-09",
+        "statement": "Eli’s sons listened to their father and stopped doing evil.",
+        "isTrue": false
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-10",
+        "statement": "Samuel was sleeping in a boat when God called him.",
+        "isTrue": false
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-12",
+        "statement": "Eli told Samuel to tell the mysterious voice to be quiet.",
+        "isTrue": false
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-13",
+        "statement": "God promised Samuel that Eli’s sons would escape punishment.",
+        "isTrue": false
+      }
+    ],
+    "drawStory": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "Eli warned his sons, but they did not stop sinning."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "The Lord called young Samuel while he slept near the Tabernacle."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "Samuel ran to Eli because he thought the priest had called him."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "Eli told Samuel how to answer the Lord’s voice."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "Samuel listened as God spoke about Eli’s family."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "Although Samuel was afraid, he told Eli what the Lord had said."
+      }
+    ],
+    "wordSearch": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "words": [
+        "TABERNACLE",
+        "WARNING",
+        "MESSAGE",
+        "PRIEST",
+        "PROPHET",
+        "PUNISH",
+        "HONOR",
+        "LISTEN",
+        "FAMILY",
+        "ELI",
+        "SAMUEL",
+        "ISRAEL"
+      ]
+    },
+    "verseCryptogram": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Romans 6:23",
+      "verse": "For the wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord."
+    },
+    "crossword": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "SAMUEL",
+        "clue": "Young boy to whom God spoke in the night"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "ELI",
+        "clue": "Priest who helped Samuel understand the voice"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "PRIEST",
+        "clue": "Eli’s job at the Tabernacle"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "NIGHT",
+        "clue": "Time when the Lord called Samuel"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "VOICE",
+        "clue": "What Samuel heard calling his name"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "PUNISH",
+        "clue": "What God promised to do to Eli's family"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "ISRAEL",
+        "clue": "Country that Samuel and Eli were from"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "TABERNACLE",
+        "clue": "Where Eli and Samuel were sleeping"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "MESSAGE",
+        "clue": "What Samuel told Eli the next morning"
+      }
+    ],
+    "spiralVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Romans 6:23",
+      "verse": "For the wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord."
+    },
+    "connectVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Romans 6:23",
+      "verse": "For the wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord."
+    }
+  },
+  "vocabulary": {
+    "related": [
+      "SAMUEL",
+      "ELI",
+      "TABERNACLE",
+      "PRIEST",
+      "SONS",
+      "SIN",
+      "WARNING",
+      "LISTEN",
+      "VOICE",
+      "NIGHT",
+      "LAMP",
+      "MESSAGE",
+      "PROPHET",
+      "FAMILY",
+      "PUNISH",
+      "HONOR",
+      "SPEAK",
+      "ANSWER",
+      "ISRAEL",
+      "LORD",
+      "VISION",
+      "HOPHNI",
+      "PHINEHAS",
+      "JUDGMENT",
+      "TRUTH",
+      "SLEEP",
+      "SACRIFICE"
+    ],
+    "unrelated": [
+      "CAMEL",
+      "DOVE",
+      "FLEECE",
+      "BOAT",
+      "RAINBOW",
+      "SHEEP",
+      "FISH",
+      "WELL",
+      "PALACE"
+    ],
+    "entries": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-01",
+        "term": "SAMUEL",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-02",
+        "term": "ELI",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-03",
+        "term": "TABERNACLE",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-04",
+        "term": "PRIEST",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-05",
+        "term": "SONS",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-06",
+        "term": "SIN",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-07",
+        "term": "WARNING",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-08",
+        "term": "LISTEN",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-09",
+        "term": "VOICE",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-10",
+        "term": "NIGHT",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-11",
+        "term": "LAMP",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-12",
+        "term": "MESSAGE",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-13",
+        "term": "PROPHET",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-14",
+        "term": "FAMILY",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-15",
+        "term": "PUNISH",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-16",
+        "term": "HONOR",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-17",
+        "term": "SPEAK",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-18",
+        "term": "ANSWER",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-19",
+        "term": "ISRAEL",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-20",
+        "term": "LORD",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-21",
+        "term": "VISION",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-22",
+        "term": "HOPHNI",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-23",
+        "term": "PHINEHAS",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-24",
+        "term": "JUDGMENT",
+        "scope": "application"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-25",
+        "term": "TRUTH",
+        "scope": "application"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-26",
+        "term": "SLEEP",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-27",
+        "term": "SACRIFICE",
+        "scope": "story"
+      }
+    ]
+  },
+  "facts": [
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-01",
+      "statement": "Eli’s sons stole meat meant for offerings at the Tabernacle.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-02",
+      "statement": "Eli warned his sons that they were sinning against the Lord.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-03",
+      "statement": "Young Samuel served the Lord at the Tabernacle with Eli.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-04",
+      "statement": "The Lord called Samuel by name during the night.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-05",
+      "statement": "Samuel ran to Eli because he thought Eli was calling him.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-06",
+      "statement": "Eli told Samuel to say, “Speak, Lord. I’m listening.”",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-07",
+      "statement": "God warned Samuel that Eli’s family would be punished.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-08",
+      "statement": "Though he was afraid, Samuel told Eli what God had said.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-09",
+      "statement": "Eli’s sons listened to their father and stopped doing evil.",
+      "isTrue": false
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-10",
+      "statement": "Samuel was sleeping in a boat when God called him.",
+      "isTrue": false
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-11",
+      "statement": "Samuel recognized the Lord’s voice the very first time.",
+      "isTrue": false
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-12",
+      "statement": "Eli told Samuel to tell the mysterious voice to be quiet.",
+      "isTrue": false
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-13",
+      "statement": "God promised Samuel that Eli’s sons would escape punishment.",
+      "isTrue": false
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-14",
+      "statement": "After hearing God's message, Eli was mad at Samuel.",
+      "isTrue": false
+    }
+  ],
+  "characters": [
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "ch-01",
+      "name": "Samuel",
+      "scope": "story",
+      "clues": [
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "text": "I was a young helper to Eli when God called me during the night."
+        },
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "text": "I told Eli the message I heard, even though I was afraid."
+        }
+      ]
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "ch-02",
+      "name": "Eli",
+      "scope": "story",
+      "clues": [
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "text": "I was the priest who taught Samuel to answer the Lord’s call."
+        },
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "text": "I warned my sons to stop sinning, but they did not listen."
+        }
+      ]
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "ch-03",
+      "name": "Hophni",
+      "scope": "story",
+      "clues": [
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "text": "I was one of Eli’s sons who dishonored God at the Tabernacle."
+        }
+      ]
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "ch-04",
+      "name": "Phinehas",
+      "scope": "story",
+      "clues": [
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "text": "I was one of Eli’s sons who ignored our father’s warning."
+        }
+      ]
+    }
+  ],
+  "drawingPrompts": [
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-01",
+      "prompt": "Eli warning his sons about their sinful behavior"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-02",
+      "prompt": "young Samuel sleeping near the Tabernacle lamp"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-03",
+      "prompt": "Samuel running to Eli in the middle of the night"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-04",
+      "prompt": "Eli speaking quietly to Samuel beside his bed"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-05",
+      "prompt": "young Samuel listening when the Lord calls his name"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-06",
+      "prompt": "Samuel telling Eli the difficult message from God"
+    }
+  ],
+  "matchingPairs": [
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-01",
+      "left": "Eli",
+      "right": "Told Samuel to listen"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-02",
+      "left": "Samuel",
+      "right": "Heard God call him"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-03",
+      "left": "Eli’s sons",
+      "right": "Ignored their warning"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-04",
+      "left": "The Lord",
+      "right": "Spoke during the night"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-05",
+      "left": "God’s message",
+      "right": "Eli’s family punished"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-06",
+      "left": "Israel",
+      "right": "Recognized Samuel"
+    }
+  ],
+  "keyPhrases": [
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-01",
+      "text": "Speak, Lord. I’m listening."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-02",
+      "text": "Eli warned his sons to stop sinning."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-03",
+      "text": "Eli knew his sons did evil, but did not stop them."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-04",
+      "text": "The Lord called Samuel by name."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-05",
+      "text": "Samuel was afraid but told Eli the truth."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-06",
+      "text": "Sin leads to death."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-07",
+      "text": "God gave Samuel a message of warning."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-08",
+      "text": "The gift of God is eternal life in Christ Jesus."
+    },
+    {
+      "id": "kp-review-1",
+      "text": "The Bible warns us that sin leads to death.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "publication": {
+    "status": "approved",
+    "approved": true,
+    "teacherSignoff": {
+      "reviewer": "Andrew Doane",
+      "date": "2026-11-19",
+      "notes": "Approved with verified BSB verse through Curriculum Review Studio"
+    },
+    "scriptureRights": {
+      "status": "cleared",
+      "basis": "Berean Standard Bible (BSB), dedicated to the public domain on April 30, 2023. Official terms: https://berean.bible/terms.htm. Scripture text confirmed against https://bereanbible.com/bsb.txt.",
+      "reviewedBy": "Andrew Doane",
+      "reviewedOn": "2026-11-19"
+    },
+    "resolvedReviewFlagIds": [],
+    "notes": "Approved through Review Studio after teacher review and a successful 27/27 content/preflight check of four numbered presets. Original conversion notes and checks remain as historical records.",
+    "reviewStudioVerification": {
+      "source": "Review Studio measured preflight",
+      "checkedAt": "2026-11-19T20:54:10.489Z",
+      "convertedCount": 27,
+      "totalCount": 27,
+      "issueCount": 0,
+      "numberedPresetsChecked": 4,
+      "scope": "Candidate-specific content conversion, four numbered preset content checks, and measured Connect the Verse fit. Standalone repository commands and independently rendered PDFs are not claimed.",
+      "matchingWorksheetSource": "preparedActivities.matchWords",
+      "matchingCandidatePool": "matchingPairs is retained separately as historical/source candidate material"
+    },
+    "reviewFlagDisposition": []
+  },
+  "schemaStatus": "approved; Review Studio 27/27 preflight passed"
+}

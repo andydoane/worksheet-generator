@@ -1,0 +1,1274 @@
+{
+  "schemaVersion": 1,
+  "id": "ot-048-samuel-is-born",
+  "curriculum": {
+    "series": "OT",
+    "lessonNumber": 48
+  },
+  "lessonDetails": {
+    "title": "Samuel Is Born",
+    "scripturePassages": [
+      "1 Samuel 1–2",
+      "Psalm 34:15",
+      "Romans 15:4"
+    ],
+    "scriptureDisplay": "1 Samuel 1–2",
+    "bigIdeas": [
+      {
+        "origin": "source",
+        "text": "God hears us when we pray."
+      }
+    ],
+    "memoryVerse": {
+      "reference": "Psalm 34:15",
+      "translation": "BSB",
+      "text": "The eyes of the LORD are on the righteous, and His ears are inclined to their cry.",
+      "isExcerpt": false,
+      "origin": "adapted",
+      "requiresTextReview": false,
+      "teacherReviewRequired": true,
+      "originalTranslation": "ESV",
+      "hasEllipses": false,
+      "bsbSource": {
+        "reference": "Psalm 34:15",
+        "sourceUrl": "https://bereanbible.com/bsb.txt",
+        "publicDomainTerms": "https://berean.bible/terms.htm",
+        "startWord": 0,
+        "endWord": 16
+      }
+    }
+  },
+  "preparedActivities": {
+    "drawPicture": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "prompt": "Hannah praying silently beside the Tabernacle"
+    },
+    "multipleChoice": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-01",
+        "question": "Why was Hannah sad?",
+        "correctAnswer": "She could not have a child.",
+        "choices": [
+          {
+            "origin": "suggested",
+            "text": "She could not have a child.",
+            "isCorrect": true
+          },
+          {
+            "origin": "suggested",
+            "text": "Her husband died.",
+            "isCorrect": false
+          },
+          {
+            "origin": "suggested",
+            "text": "Her house burned down.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-02",
+        "question": "What did Hannah promise God if he gave her a son?",
+        "correctAnswer": "Her son would serve the Lord.",
+        "choices": [
+          {
+            "origin": "suggested",
+            "text": "Her son would serve the Lord.",
+            "isCorrect": true
+          },
+          {
+            "origin": "suggested",
+            "text": "She would give a sacrifice",
+            "isCorrect": false
+          },
+          {
+            "origin": "suggested",
+            "text": "She would never sin",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-03",
+        "question": "Why did Eli think Hannah had drunk too much wine?",
+        "correctAnswer": "She was crying and praying silently",
+        "choices": [
+          {
+            "origin": "suggested",
+            "text": "She was crying and praying silently",
+            "isCorrect": true
+          },
+          {
+            "origin": "suggested",
+            "text": "She was speaking nonsense",
+            "isCorrect": false
+          },
+          {
+            "origin": "suggested",
+            "text": "She fell down on the ground",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-04",
+        "question": "How did God answer Hannah’s prayer?",
+        "correctAnswer": "He gave her a son named Samuel.",
+        "choices": [
+          {
+            "origin": "suggested",
+            "text": "He gave her a son named Samuel.",
+            "isCorrect": true
+          },
+          {
+            "origin": "suggested",
+            "text": "She adopted a baby boy",
+            "isCorrect": false
+          },
+          {
+            "origin": "suggested",
+            "text": "She gave birth to twins",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-05",
+        "question": "When Samuel was old enough, where did Hannah bring Samuel?",
+        "correctAnswer": "To help Eli at the Tabernacle.",
+        "choices": [
+          {
+            "origin": "suggested",
+            "text": "To help Eli at the Tabernacle.",
+            "isCorrect": true
+          },
+          {
+            "origin": "suggested",
+            "text": "To live in a palace",
+            "isCorrect": false
+          },
+          {
+            "origin": "suggested",
+            "text": "To the Red Sea",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-06",
+        "question": "What did Hannah give Samuel when she visited each year?",
+        "correctAnswer": "A robe she had made.",
+        "choices": [
+          {
+            "origin": "suggested",
+            "text": "A robe she had made.",
+            "isCorrect": true
+          },
+          {
+            "origin": "suggested",
+            "text": "A basket of bread.",
+            "isCorrect": false
+          },
+          {
+            "origin": "suggested",
+            "text": "A new pair of sandals.",
+            "isCorrect": false
+          }
+        ]
+      }
+    ],
+    "trueFalse": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "factId": "tf-07",
+      "statement": "Hannah brought young Samuel to serve God with Eli.",
+      "isTrue": true
+    },
+    "firstLetters": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Psalm 34:15",
+      "verse": "The eyes of the LORD are on the righteous, and His ears are inclined to their cry."
+    },
+    "oddWords": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "related": [
+        "HEART",
+        "CHILD",
+        "VISIT",
+        "GOD",
+        "SERVE"
+      ],
+      "unrelated": [
+        "scroll",
+        "shadows",
+        "weeds",
+        "gem",
+        "raisins"
+      ],
+      "unrelatedOrigin": "suggested"
+    },
+    "unscrambleWords": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "answers": [
+        "SAMUEL",
+        "TABERNACLE"
+      ]
+    },
+    "checkboxes": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "correct": [
+        "ELI",
+        "ELKANAH",
+        "TABERNACLE",
+        "SON",
+        "PROMISE"
+      ],
+      "incorrect": [
+        "seed",
+        "statue",
+        "Hebron",
+        "coast",
+        "Abigail"
+      ],
+      "incorrectOrigin": "suggested"
+    },
+    "whoAmI": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "clue": "I prayed silently for a son and promised that he would serve the Lord. God answered my prayer and gave me Samuel.",
+      "answer": "HANNAH"
+    },
+    "matchWords": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "pair-01",
+        "left": "Hannah",
+        "right": "Prayed"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "pair-02",
+        "left": "Samuel",
+        "right": "Baby"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "pair-03",
+        "left": "Eli",
+        "right": "Priest"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "pair-04",
+        "left": "Elkanah",
+        "right": "Husband"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "pair-06",
+        "left": "Gift",
+        "right": "Robe"
+      }
+    ],
+    "finishVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Psalm 34:15",
+      "sourceVerse": "The eyes of the LORD are on the righteous, and His ears are inclined to their cry.",
+      "markedVerse": "The [eyes] of the [LORD] are on the [righteous], and [His] ears are [inclined] to their [cry]."
+    },
+    "unscrambleVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Psalm 34:15",
+      "sourceVerse": "The eyes of the LORD are on the righteous, and His ears are inclined to their cry.",
+      "markedVerse": "The [eyes] of the [LORD] are on the [righteous], and [His] ears are [inclined] to their [cry]."
+    },
+    "circleMistakes": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "paragraph": "Hannah was sad because she had too many children. Near the Tabernacle, she prayed for God to give her a new house. Eli first thought Hannah was singing a happy song. After she explained, Eli told her that God would never help her. Later Hannah gave birth to a son named Moses. Hannah broke her promise: she never took her baby to serve with Eli.",
+      "mistakeCount": 6,
+      "mistakes": [
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "incorrect": "too many children",
+          "correction": "no children"
+        },
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "incorrect": "a new house",
+          "correction": "a son"
+        },
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "incorrect": "singing a happy song",
+          "correction": "praying silently, although Eli first thought she was drunk"
+        },
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "incorrect": "God would never help her",
+          "correction": "God would give her what she asked for"
+        },
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "incorrect": "a son named Moses",
+          "correction": "a son named Samuel"
+        },
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "incorrect": "never took her baby to serve with Eli",
+          "correction": "brought Samuel to serve with Eli"
+        }
+      ]
+    },
+    "mediumWordSearch": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "words": [
+        "HANNAH",
+        "SAMUEL",
+        "ELI",
+        "PRAYER",
+        "ROBE",
+        "SHILOH"
+      ]
+    },
+    "trueFalseMaze": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "factId": "tf-11",
+      "statement": "Hannah named her newborn son Moses.",
+      "isTrue": false
+    },
+    "bigIdeaCryptogram": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "phrase": "God hears us when we pray."
+    },
+    "upsideDownVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Psalm 34:15",
+      "verse": "The eyes of the LORD are on the righteous, and His ears are inclined to their cry."
+    },
+    "connectBigIdea": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "phrase": "God hears us when we pray."
+    },
+    "pixelPicture": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "phrase": "God heard Hannah when she prayed silently in her heart."
+    },
+    "finishStory": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "markedParagraph": "Hannah was [sad] because she could not have a [child]. At the [Tabernacle], she prayed silently to [God] and made a [promise]: \"If you give me a child, I will give him back to you.\" At first, the priest [Eli] believed that Hannah had drunk too much [wine], but he later gave her a [blessing]. God answered her prayer, and Hannah gave birth to a boy named [Samuel]. When Samuel was old enough, Hannah brought him to Shiloh to serve with Eli. Each year she returned to [visit] him and brought a new [robe] that she had made. God also blessed Hannah with more [children]."
+    },
+    "storyOrder": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 1,
+        "text": "Hannah wept because she could not have a child."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 2,
+        "text": "Hannah silently prayed and promised that her son would serve the Lord."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 3,
+        "text": "Eli thought Hannah had been drinking wine because her lips moved without a sound."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 4,
+        "text": "Hannah explained her sadness, and Eli blessed her."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 5,
+        "text": "God answered her prayer, and Hannah named her baby Samuel."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 6,
+        "text": "When Samuel was older, Hannah brought him to serve with Eli at the Tabernacle."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 7,
+        "text": "Young Samuel served the Lord under Eli’s care."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 8,
+        "text": "Hannah visited Samuel each year and brought him a robe she had made."
+      }
+    ],
+    "sortStory": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-01",
+        "statement": "Hannah cried because she could not have a child.",
+        "isTrue": true,
+        "id": "tf-01"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-02",
+        "statement": "Hannah prayed silently to the Lord at the Tabernacle.",
+        "isTrue": true,
+        "id": "tf-02"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-03",
+        "statement": "Hannah promised to give her son to serve the Lord.",
+        "isTrue": true,
+        "id": "tf-03"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-05",
+        "statement": "Eli wished that God would answer Hannah’s prayer.",
+        "isTrue": true,
+        "id": "tf-05"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-09",
+        "statement": "Hannah shouted her prayer so everyone could hear it.",
+        "isTrue": false,
+        "id": "tf-09"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-10",
+        "statement": "Eli thought Hannah was a crazy person.",
+        "isTrue": false,
+        "id": "tf-10"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-12",
+        "statement": "Hannah broke her promise and never brought Samuel to Eli.",
+        "isTrue": false,
+        "id": "tf-12"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-14",
+        "statement": "God gave Hannah no more children after Samuel was born.",
+        "isTrue": false,
+        "id": "tf-14"
+      }
+    ],
+    "drawStory": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "Hannah cried outside the Tabernacle because she longed to have a child."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "Hannah prayed silently to God and promised that her son would serve him."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "Eli listened to Hannah explain why she was praying, then blessed her."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "God gave Hannah a baby boy, and she named him Samuel."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "Hannah brought Samuel to the Tabernacle to help Eli serve the Lord."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "Hannah visited Samuel each year and brought him a new robe she had made."
+      }
+    ],
+    "wordSearch": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "words": [
+        "ELKANAH",
+        "ANSWERED",
+        "TABERNACLE",
+        "BLESSING",
+        "CHILDREN",
+        "SILENT",
+        "MOTHER",
+        "FATHER",
+        "WINE",
+        "FAMILY",
+        "HANNAH",
+        "SAMUEL"
+      ]
+    },
+    "verseCryptogram": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Psalm 34:15",
+      "verse": "The eyes of the LORD are on the righteous, and His ears are inclined to their cry."
+    },
+    "crossword": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "HANNAH",
+        "clue": "Mother who prayed for a child"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "SAMUEL",
+        "clue": "Son who grew up serving the Lord"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "ELI",
+        "clue": "Priest who blessed Hannah"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "TABERNACLE",
+        "clue": "Special tent where God met with his people"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "PRAYER",
+        "clue": "Talking to God as Hannah did"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "ROBE",
+        "clue": "Clothing Hannah made for Samuel"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "PROMISE",
+        "clue": "What Hannah made to God"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "PRIEST",
+        "clue": "Eli’s job at the Tabernacle"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "SON",
+        "clue": "What Hannah asked God to give her"
+      },
+      {
+        "answer": "SILENT",
+        "clue": "How Hannah prayed",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "spiralVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Psalm 34:15",
+      "verse": "The eyes of the LORD are on the righteous, and His ears are inclined to their cry."
+    },
+    "connectVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Psalm 34:15",
+      "verse": "The eyes of the LORD are on the righteous, and His ears are inclined to their cry."
+    }
+  },
+  "vocabulary": {
+    "related": [
+      "HANNAH",
+      "SAMUEL",
+      "ELI",
+      "ELKANAH",
+      "PENINNAH",
+      "SHILOH",
+      "TABERNACLE",
+      "PRAYER",
+      "PROMISE",
+      "HEART",
+      "SILENT",
+      "SON",
+      "BLESSING",
+      "CHILD",
+      "CHILDREN",
+      "ROBE",
+      "VISIT",
+      "SERVE",
+      "LISTEN",
+      "GOD",
+      "FAMILY",
+      "PRIEST",
+      "WINE",
+      "BIRTH",
+      "MOTHER",
+      "FATHER",
+      "FAITH"
+    ],
+    "unrelated": [
+      "LION",
+      "TRUMPET",
+      "SWORD",
+      "BOAT",
+      "PHARAOH",
+      "JERICHO",
+      "RAINBOW",
+      "GIANT",
+      "PALACE",
+      "CHARIOT"
+    ],
+    "entries": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-01",
+        "term": "HANNAH",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-02",
+        "term": "SAMUEL",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-03",
+        "term": "ELI",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-04",
+        "term": "ELKANAH",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-05",
+        "term": "PENINNAH",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-06",
+        "term": "SHILOH",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-07",
+        "term": "TABERNACLE",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-08",
+        "term": "PRAYER",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-09",
+        "term": "PROMISE",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-10",
+        "term": "HEART",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-11",
+        "term": "SILENT",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-12",
+        "term": "SON",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-13",
+        "term": "BLESSING",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-14",
+        "term": "CHILD",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-15",
+        "term": "CHILDREN",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-16",
+        "term": "ROBE",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-17",
+        "term": "VISIT",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-18",
+        "term": "SERVE",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-19",
+        "term": "LISTEN",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-20",
+        "term": "GOD",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-21",
+        "term": "FAMILY",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-22",
+        "term": "PRIEST",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-23",
+        "term": "WINE",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-24",
+        "term": "BIRTH",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-25",
+        "term": "MOTHER",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-26",
+        "term": "FATHER",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-27",
+        "term": "FAITH",
+        "scope": "story"
+      }
+    ]
+  },
+  "facts": [
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-01",
+      "statement": "Hannah cried because she could not have a child.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-02",
+      "statement": "Hannah prayed silently to the Lord at the Tabernacle.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-03",
+      "statement": "Hannah promised to give her son to serve the Lord.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-04",
+      "statement": "At first, Eli thought Hannah had been drinking wine.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-05",
+      "statement": "Eli wished that God would answer Hannah’s prayer.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-06",
+      "statement": "God gave Hannah a son, and she named him Samuel.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-07",
+      "statement": "Hannah brought young Samuel to serve God with Eli.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-08",
+      "statement": "Hannah visited Samuel each year and brought him a robe.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-09",
+      "statement": "Hannah shouted her prayer so everyone could hear it.",
+      "isTrue": false
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-10",
+      "statement": "Eli thought Hannah was a crazy person.",
+      "isTrue": false
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-11",
+      "statement": "Hannah named her newborn son Moses.",
+      "isTrue": false
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-12",
+      "statement": "Hannah broke her promise and never brought Samuel to Eli.",
+      "isTrue": false
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-13",
+      "statement": "Hannah never returned to visit Samuel after he left home.",
+      "isTrue": false
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-14",
+      "statement": "God gave Hannah no more children after Samuel was born.",
+      "isTrue": false
+    }
+  ],
+  "characters": [
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "ch-01",
+      "name": "Hannah",
+      "scope": "story",
+      "clues": [
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "text": "I wept and prayed because I could not have a child."
+        },
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "text": "I promised to give my son to the Lord and brought him to Eli."
+        }
+      ]
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "ch-02",
+      "name": "Samuel",
+      "scope": "story",
+      "clues": [
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "text": "God answered my mother’s prayer by giving her a son."
+        },
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "text": "I served the Lord at the Tabernacle while I was still a boy."
+        }
+      ]
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "ch-03",
+      "name": "Eli",
+      "scope": "story",
+      "clues": [
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "text": "I was the priest who at first misunderstood Hannah’s silent prayer."
+        },
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "text": "I blessed Hannah and helped teach Samuel to serve the Lord."
+        }
+      ]
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "ch-04",
+      "name": "Elkanah",
+      "scope": "story",
+      "clues": [
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "text": "I was Hannah’s husband and traveled with her to Shiloh."
+        }
+      ]
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "ch-05",
+      "name": "Peninnah",
+      "scope": "story",
+      "clues": [
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "text": "I had children and teased Hannah because she had none."
+        }
+      ]
+    }
+  ],
+  "drawingPrompts": [
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-01",
+      "prompt": "Hannah crying near the Tabernacle and praying for a child"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-02",
+      "prompt": "Eli seated near the Tabernacle while Hannah prays silently"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-03",
+      "prompt": "Hannah standing before Eli as he blesses her"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-04",
+      "prompt": "Hannah and Elkanah holding baby Samuel at home"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-05",
+      "prompt": "Hannah bringing young Samuel to Eli at the Tabernacle"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-06",
+      "prompt": "Samuel wearing a small robe while helping Eli serve the Lord"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-07",
+      "prompt": "Hannah visiting Samuel and giving him a robe she sewed"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-08",
+      "prompt": "Hannah praying as her other children gather around her"
+    }
+  ],
+  "matchingPairs": [
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-01",
+      "left": "Hannah",
+      "right": "Prayed for a son"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-02",
+      "left": "Samuel",
+      "right": "Answered prayer"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-03",
+      "left": "Eli",
+      "right": "Tabernacle priest"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-04",
+      "left": "Shiloh",
+      "right": "Place of prayer"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-05",
+      "left": "Elkanah",
+      "right": "Hannah’s husband"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-06",
+      "left": "Robe",
+      "right": "Yearly gift to Samuel"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-07",
+      "left": "Peninnah",
+      "right": "Teased Hannah"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-08",
+      "left": "Promise",
+      "right": "To give her son to God"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-09",
+      "left": "Tabernacle",
+      "right": "Place where Samuel served"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-10",
+      "left": "Prayer",
+      "right": "Hannah spoke in her heart"
+    }
+  ],
+  "keyPhrases": [
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-01",
+      "text": "God hears us when we pray."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-02",
+      "text": "Hannah prayed in her heart, and God heard her."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-03",
+      "text": "Eli misunderstood Hannah before he knew why she was sad."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-04",
+      "text": "Hannah promised that her son would serve the Lord."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-05",
+      "text": "God answered Hannah’s prayer with a baby boy named Samuel."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-06",
+      "text": "Samuel served the Lord at the Tabernacle with Eli."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-07",
+      "text": "Hannah kept her promise to God."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-08",
+      "text": "Hannah visited Samuel each year and gave him a robe."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-09",
+      "text": "God hears the prayers of his children anytime and anywhere."
+    }
+  ],
+  "publication": {
+    "status": "approved",
+    "approved": true,
+    "teacherSignoff": {
+      "reviewer": "Andrew Doane",
+      "date": "2026-11-19",
+      "notes": "Approved with verified BSB verse through Curriculum Review Studio"
+    },
+    "scriptureRights": {
+      "status": "cleared",
+      "basis": "Berean Standard Bible (BSB), dedicated to the public domain on April 30, 2023. Official terms: https://berean.bible/terms.htm. Scripture text confirmed against https://bereanbible.com/bsb.txt.",
+      "reviewedBy": "Andrew Doane",
+      "reviewedOn": "2026-11-19"
+    },
+    "resolvedReviewFlagIds": [],
+    "notes": "Approved through Review Studio after teacher review and a successful 27/27 content/preflight check of four numbered presets. Original conversion notes and checks remain as historical records.",
+    "reviewStudioVerification": {
+      "source": "Review Studio measured preflight",
+      "checkedAt": "2026-11-19T19:51:04.356Z",
+      "convertedCount": 27,
+      "totalCount": 27,
+      "issueCount": 0,
+      "numberedPresetsChecked": 4,
+      "scope": "Candidate-specific content conversion, four numbered preset content checks, and measured Connect the Verse fit. Standalone repository commands and independently rendered PDFs are not claimed.",
+      "matchingWorksheetSource": "preparedActivities.matchWords",
+      "matchingCandidatePool": "matchingPairs is retained separately as historical/source candidate material"
+    },
+    "reviewFlagDisposition": []
+  },
+  "schemaStatus": "approved; Review Studio 27/27 preflight passed"
+}
