@@ -40,6 +40,16 @@ These lessons are intended for elementary-aged children. **Choose the main chara
 5. Never claim BSB verification, rights clearance, teacher review or successful generator runs you didn't perform. A teacher makes these decisions in Review Studio.
 6. Parse and validate the precise candidate JSON, run real puzzles/layouts when available, report unrun checks **NOT RUN**, and deliver an unapproved content file plus a concise 27-activity handoff (not a source-ID inventory).
 
+### Editorial defaults for elementary-age lessons
+
+These defaults apply to newly prepared worksheet material, **not** the truth of the Bible account or the exact technical limits in §4.
+
+- **Lead with the story, not trivia.** Favor the main people, actions, cause-and-effect, God's promises and responses, and the source lesson's Important Idea. A child should be able to answer from understanding the lesson, not memorizing incidental statistics, obscure place names, a king's exact length of rule, or other small technical details. Include a number when it is central to the lesson's meaning (for example, Gideon's 300 men demonstrate how small his army was), not merely to reach a quota. This applies equally to TRUE/FALSE facts, Multiple Choice, matching, word games, and distractors.
+- **Verify meaning, not just Boolean consistency.** For *each* canonical TRUE and FALSE fact, independently compare the claim with the uploaded lesson. A FALSE record must actually state something false; a statement that is true does not become false because `isTrue:false`. Keep false alternatives clear, plausible, age-appropriate, and nonredundant. After verifying individual facts, check the exact `factId` / statement / `isTrue` matches in Sort the Story, Small True/False, and True/False Maze. Validator success alone does not establish factual truth.
+- **Use the title story's actual chapters in `scriptureDisplay`.** For example, `"Genesis 29"` or `"Judges 6–7"`; don't use only the Bible book name, and don't add unrelated supporting or memory-verse passages to this *display* field. Put supporting passages in `scripturePassages`. If the title story spans nonconsecutive chapters, list those chapters clearly.
+- **Keep normal content pools lean.** Approximately 7–8 TRUE facts, 6–7 FALSE facts, and six varied Multiple Choice questions are preparation targets, not requirements to pad weak material. If a source supports fewer worthwhile questions, explain the deviation in the handoff report.
+- **Give usable downloads.** Deliver a standalone unapproved lesson JSON, and optionally a ZIP containing the JSON and concise conversion handoff as a fallback for download failures. Verify that the JSON parses and the ZIP opens before linking them. A fresh file copy can remedy an expired download link; never imply a refreshed filename constitutes a new content review or an official validation run.
+
 **Illustrative compact shape only (not 27/27 ready, and placeholder text is not Scripture):**
 
 ```json
