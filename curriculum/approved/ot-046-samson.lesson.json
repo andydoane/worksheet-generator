@@ -1,0 +1,1134 @@
+{
+  "schemaVersion": 1,
+  "id": "ot-046-samson",
+  "curriculum": {
+    "series": "OT",
+    "lessonNumber": 46
+  },
+  "lessonDetails": {
+    "title": "Samson",
+    "scripturePassages": [
+      "Judges 13–16",
+      "John 15:13",
+      "Romans 15:4"
+    ],
+    "scriptureDisplay": "Judges 13–16",
+    "bigIdeas": [
+      {
+        "origin": "source",
+        "text": "Samson’s death points us to Jesus, who was willing to DIE to save us."
+      }
+    ],
+    "memoryVerse": {
+      "reference": "John 15:13",
+      "translation": "BSB",
+      "text": "Greater love has no one than this, that he lay down his life for his friends.",
+      "isExcerpt": false,
+      "origin": "adapted",
+      "requiresTextReview": false,
+      "teacherReviewRequired": true,
+      "originalTranslation": "ESV",
+      "hasEllipses": false,
+      "bsbSource": {
+        "reference": "John 15:13",
+        "sourceUrl": "https://bereanbible.com/bsb.txt",
+        "publicDomainTerms": "https://berean.bible/terms.htm",
+        "startWord": 0,
+        "endWord": 15
+      }
+    }
+  },
+  "preparedActivities": {
+    "drawPicture": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "prompt": "Samson pushing two large pillars in the Philistine temple"
+    },
+    "multipleChoice": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-01",
+        "question": "Who told Samson’s mother that she would have a son?",
+        "correctAnswer": "An angel",
+        "choices": [
+          {
+            "origin": "suggested",
+            "text": "An angel",
+            "isCorrect": true
+          },
+          {
+            "origin": "suggested",
+            "text": "Moses",
+            "isCorrect": false
+          },
+          {
+            "origin": "suggested",
+            "text": "Joshua",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-02",
+        "question": "Why was Samson able to break ropes and defeat powerful enemies?",
+        "correctAnswer": "God’s Spirit gave him strength",
+        "choices": [
+          {
+            "origin": "suggested",
+            "text": "God’s Spirit gave him strength",
+            "isCorrect": true
+          },
+          {
+            "origin": "suggested",
+            "text": "He worked out",
+            "isCorrect": false
+          },
+          {
+            "origin": "suggested",
+            "text": "He used magic power",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-03",
+        "question": "What unusual weapon did Samson use against Philistine soldiers?",
+        "correctAnswer": "A donkey’s jawbone",
+        "choices": [
+          {
+            "origin": "suggested",
+            "text": "A donkey’s jawbone",
+            "isCorrect": true
+          },
+          {
+            "origin": "suggested",
+            "text": "A banana",
+            "isCorrect": false
+          },
+          {
+            "origin": "suggested",
+            "text": "A red rope",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-04",
+        "question": "What did the Philistine rulers pay Delilah to do?",
+        "correctAnswer": "Learn Samson’s secret",
+        "choices": [
+          {
+            "origin": "suggested",
+            "text": "Learn Samson’s secret",
+            "isCorrect": true
+          },
+          {
+            "origin": "suggested",
+            "text": "Find a wife for Samson",
+            "isCorrect": false
+          },
+          {
+            "origin": "suggested",
+            "text": "Give Samson poison",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-05",
+        "question": "What happened after Samson’s hair was shaved?",
+        "correctAnswer": "The Philistines captured him",
+        "choices": [
+          {
+            "origin": "suggested",
+            "text": "The Philistines captured him",
+            "isCorrect": true
+          },
+          {
+            "origin": "suggested",
+            "text": "He became stronger",
+            "isCorrect": false
+          },
+          {
+            "origin": "suggested",
+            "text": "He defeated the soldiers",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-06",
+        "question": "What did Samson do at the Philistine temple?",
+        "correctAnswer": "Pushed down the pillars",
+        "choices": [
+          {
+            "origin": "suggested",
+            "text": "Pushed down the pillars",
+            "isCorrect": true
+          },
+          {
+            "origin": "suggested",
+            "text": "Worshiped the god Dagon",
+            "isCorrect": false
+          },
+          {
+            "origin": "suggested",
+            "text": "Escaped through a window",
+            "isCorrect": false
+          }
+        ]
+      }
+    ],
+    "trueFalse": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-07",
+      "statement": "After Samson’s hair was shaved, the Philistines captured him.",
+      "isTrue": true,
+      "factId": "tf-07"
+    },
+    "firstLetters": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "John 15:13",
+      "verse": "Greater love has no one than this, that he lay down his life for his friends."
+    },
+    "oddWords": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "related": [
+        "SAMSON",
+        "DELILAH",
+        "LION",
+        "PILLARS",
+        "JAWBONE"
+      ],
+      "unrelated": [
+        "mud",
+        "children",
+        "fruit",
+        "Assyria",
+        "well"
+      ],
+      "unrelatedOrigin": "suggested"
+    },
+    "unscrambleWords": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "answers": [
+        "SAMSON",
+        "JAWBONE"
+      ]
+    },
+    "checkboxes": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "correct": [
+        "SAMSON",
+        "ANGEL",
+        "HAIR",
+        "DELILAH",
+        "TEMPLE"
+      ],
+      "incorrect": [
+        "stump",
+        "Esau",
+        "Aaron",
+        "pasture",
+        "Meshach"
+      ],
+      "incorrectOrigin": "suggested"
+    },
+    "whoAmI": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "clue": "God sent me to rescue Israel. I lost my strength when my hair was cut. I pushed down the pillars of the temple.",
+      "answer": "SAMSON"
+    },
+    "matchWords": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "pair-01",
+        "left": "Samson",
+        "right": "Strong"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "pair-03",
+        "left": "Cut hair",
+        "right": "Delilah"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "pair-04",
+        "left": "Philistines",
+        "right": "Enemies"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "pair-05",
+        "left": "Jawbone",
+        "right": "Samson's weapon"
+      },
+      {
+        "id": "mp-01",
+        "left": "Temple",
+        "right": "Destroyed",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-02",
+        "left": "New ropes",
+        "right": "Torn apart",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "finishVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "John 15:13",
+      "markedVerse": "Greater [love] has no [one] than [this], that he [lay] down his [life] for his [friends].",
+      "sourceVerse": "Greater love has no one than this, that he lay down his life for his friends."
+    },
+    "unscrambleVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "John 15:13",
+      "markedVerse": "Greater [love] has no [one] than [this], that he [lay] down his [life] for his [friends].",
+      "sourceVerse": "Greater love has no one than this, that he lay down his life for his friends."
+    },
+    "circleMistakes": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "paragraph": "An angel told Samson’s mother she would have a daughter. Samson got his strength from magic. He defeated a hippo with his bare hands. The Philistine rulers paid Mary to discover his secret. After his hair was cut, Samson became even stronger. At the temple, Samson tore down the temple by blowing a trumpet.",
+      "mistakeCount": 6,
+      "mistakes": [
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "incorrect": "daughter",
+          "correction": "son"
+        },
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "incorrect": "magic",
+          "correction": "the Spirit of the Lord"
+        },
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "incorrect": "hippo",
+          "correction": "lion"
+        },
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "incorrect": "Mary",
+          "correction": "Delilah"
+        },
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "incorrect": "became even stronger",
+          "correction": "was captured and imprisoned"
+        },
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "incorrect": "blowing a trumpet",
+          "correction": "pushing the temple pillars"
+        }
+      ]
+    },
+    "mediumWordSearch": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "words": [
+        "SAMSON",
+        "DELILAH",
+        "JAWBONE",
+        "HAIR",
+        "PILLARS",
+        "SPIRIT"
+      ]
+    },
+    "trueFalseMaze": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-14",
+      "statement": "Samson escaped from the Philistine temple unharmed.",
+      "isTrue": false,
+      "factId": "tf-14"
+    },
+    "bigIdeaCryptogram": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "phrase": "Samson points us to Jesus, who died to save his people."
+    },
+    "upsideDownVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "John 15:13",
+      "verse": "Greater love has no one than this, that he lay down his life for his friends."
+    },
+    "connectBigIdea": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "phrase": "Samson’s death points us to Jesus, who was willing to die to save us."
+    },
+    "pixelPicture": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "phrase": "When Samson's hair was cut, God took away his great strength."
+    },
+    "finishStory": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "markedParagraph": "An [angel] told Samson’s mother she would have a [son]. God set him apart to help rescue Israel from the [Philistines]. The [Spirit] of the Lord gave Samson great [strength]. He defeated a [lion] with his bare hands and defeated many soldiers using a donkey’s [jawbone]. Later, the Philistine rulers paid [Delilah] to learn his secret. When his [hair] was cut, Samson was [captured] and put in prison. At a Philistine temple, Samson [prayed] for strength and pushed against two [pillars]. The building fell, and Samson died."
+    },
+    "storyOrder": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 1,
+        "text": "An angel told Samson’s mother she would have a son who would help rescue Israel."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 2,
+        "text": "Samson grew up, and the Spirit of the Lord gave him great strength."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 3,
+        "text": "Samson defeated a lion and later fought Philistines with a donkey’s jawbone."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 4,
+        "text": "The Philistine rulers offered Delilah silver to learn Samson’s secret."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 5,
+        "text": "Samson gave Delilah false answers about how he could be made weak."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 6,
+        "text": "Samson told Delilah about his uncut hair, and it was shaved while he slept."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 7,
+        "text": "The Philistines captured Samson, blinded him, and put him in prison."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 8,
+        "text": "Samson prayed for strength and pushed the pillars, bringing down the temple."
+      }
+    ],
+    "sortStory": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "tf-01",
+        "factId": "tf-01",
+        "statement": "An angel told Samson’s mother that she would have a baby boy.",
+        "isTrue": true
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "tf-03",
+        "factId": "tf-03",
+        "statement": "The Spirit of the Lord gave Samson his great strength.",
+        "isTrue": true
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "tf-04",
+        "factId": "tf-04",
+        "statement": "Samson tore apart a lion with his bare hands.",
+        "isTrue": true
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "tf-09",
+        "factId": "tf-09",
+        "statement": "God sent Samson to be king of the Philistines.",
+        "isTrue": false
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "tf-11",
+        "factId": "tf-11",
+        "statement": "The Philistines kept Samson tied up with strong new ropes.",
+        "isTrue": false
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "tf-12",
+        "factId": "tf-12",
+        "statement": "The Philistine rulers paid Delilah to keep Samson safe.",
+        "isTrue": false
+      }
+    ],
+    "drawStory": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "An angel told Samson’s mother she would have a special son."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "The Spirit of the Lord gave Samson strength to defeat a lion."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "Samson broke his ropes and fought with a donkey’s jawbone."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "The Philistine rulers paid Delilah to discover Samson’s secret."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "After his hair was shaved, Samson lost his strength and was captured."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "Samson prayed and pushed down the pillars of the Philistine temple."
+      }
+    ],
+    "wordSearch": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "words": [
+        "SAMSON",
+        "DELILAH",
+        "JAWBONE",
+        "ANGEL",
+        "LION",
+        "HAIR",
+        "PILLARS",
+        "TEMPLE",
+        "PHILISTINES",
+        "ROPE",
+        "STRENGTH",
+        "Eyes"
+      ]
+    },
+    "verseCryptogram": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "John 15:13",
+      "verse": "Greater love has no one than this, that he lay down his life for his friends."
+    },
+    "crossword": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "SAMSON",
+        "clue": "Judge given great strength by the Spirit of the Lord"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "DELILAH",
+        "clue": "Woman paid to learn the secret of Samson’s strength"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "ANGEL",
+        "clue": "Messenger who announced Samson’s birth"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "LION",
+        "clue": "Animal Samson defeated with his bare hands"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "SPIRIT",
+        "clue": "The One who gave Samson strength"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "JAWBONE",
+        "clue": "Weapon Samson used to fight Philistine soldiers"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "HAIR",
+        "clue": "This was shaved while Samson slept"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "PRISON",
+        "clue": "Place where the Philistines held Samson"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "PILLARS",
+        "clue": "Samson pushed these to bring down the temple"
+      },
+      {
+        "answer": "ROPES",
+        "clue": "Samson tore these apart",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "spiralVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "John 15:13",
+      "verse": "Greater love has no one than this, that he lay down his life for his friends."
+    },
+    "connectVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "John 15:13",
+      "verse": "Greater love has no one than this, that he lay down his life for his friends."
+    }
+  },
+  "vocabulary": {
+    "related": [
+      "SAMSON",
+      "DELILAH",
+      "PHILISTINES",
+      "LION",
+      "JAWBONE",
+      "ROPE",
+      "HAIR",
+      "PILLARS",
+      "ANGEL",
+      "STRENGTH",
+      "SPIRIT",
+      "TEMPLE"
+    ],
+    "unrelated": [
+      "ROCKET",
+      "PENGUIN",
+      "BANANA",
+      "PILLOW",
+      "BICYCLE",
+      "CARPET"
+    ],
+    "entries": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-01",
+        "term": "SAMSON",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-02",
+        "term": "DELILAH",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-03",
+        "term": "PHILISTINES",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-04",
+        "term": "LION",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-05",
+        "term": "JAWBONE",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-06",
+        "term": "ROPE",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-07",
+        "term": "HAIR",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-08",
+        "term": "PILLARS",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-09",
+        "term": "ANGEL",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-10",
+        "term": "STRENGTH",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-11",
+        "term": "SPIRIT",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-12",
+        "term": "TEMPLE",
+        "scope": "story"
+      }
+    ]
+  },
+  "facts": [
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-01",
+      "statement": "An angel told Samson’s mother that she would have a baby boy.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-02",
+      "statement": "God set Samson apart to help rescue Israel from the Philistines.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-03",
+      "statement": "The Spirit of the Lord gave Samson his great strength.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-04",
+      "statement": "Samson tore apart a lion with his bare hands.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-05",
+      "statement": "Samson defeated Philistine soldiers with a donkey’s jawbone.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-06",
+      "statement": "The Philistine rulers paid Delilah to learn Samson’s secret.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-07",
+      "statement": "After Samson’s hair was shaved, the Philistines captured him.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-08",
+      "statement": "Samson prayed for strength and pushed against the temple pillars.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-09",
+      "statement": "God sent Samson to be king of the Philistines.",
+      "isTrue": false
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-10",
+      "statement": "When a lion attacked, Samson made it his pet.",
+      "isTrue": false
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-11",
+      "statement": "The Philistines kept Samson tied up with strong new ropes.",
+      "isTrue": false
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-12",
+      "statement": "The Philistine rulers paid Delilah to keep Samson safe.",
+      "isTrue": false
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-13",
+      "statement": "When Samson's hair was washed, he lost his strength.",
+      "isTrue": false
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-14",
+      "statement": "Samson escaped from the Philistine temple unharmed.",
+      "isTrue": false
+    }
+  ],
+  "characters": [
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "ch-01",
+      "name": "Samson",
+      "scope": "story",
+      "clues": [
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "text": "I was set apart before birth. God gave me great strength to fight Israel’s enemies."
+        }
+      ]
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "ch-02",
+      "name": "Delilah",
+      "scope": "story",
+      "clues": [
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "text": "The Philistine rulers paid me to learn the secret that Samson tried to hide."
+        }
+      ]
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "ch-03",
+      "name": "The angel of the Lord",
+      "scope": "story",
+      "clues": [
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "text": "I told Samson’s mother that she would have a son who would help save Israel."
+        }
+      ]
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "ch-04",
+      "name": "The Philistine rulers",
+      "scope": "story",
+      "clues": [
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "text": "We offered silver for Samson’s secret because we wanted to defeat him."
+        }
+      ]
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "ch-05",
+      "name": "Samson’s mother",
+      "scope": "story",
+      "clues": [
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "text": "An angel promised I would have a son even though I could not have children."
+        }
+      ]
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "ch-06",
+      "name": "Jesus",
+      "scope": "story",
+      "clues": [
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "text": "I willingly died to save my people and rose from the dead."
+        }
+      ]
+    }
+  ],
+  "drawingPrompts": [
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-01",
+      "prompt": "Samson’s mother hearing the angel’s promise of a baby"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-02",
+      "prompt": "Samson with a lion in the countryside"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-03",
+      "prompt": "Samson snapping ropes that had tied his arms"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-04",
+      "prompt": "Samson holding a donkey’s jawbone"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-05",
+      "prompt": "Delilah talking to the Philistine rulers"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-06",
+      "prompt": "Samson sleeping as someone cuts his long hair"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-07",
+      "prompt": "Samson in prison as his hair begins to grow again"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-08",
+      "prompt": "Samson pushing two large pillars inside a temple"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-09",
+      "prompt": "a cross and an empty tomb to show how Jesus saved us"
+    }
+  ],
+  "matchingPairs": [
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-01",
+      "left": "Samson",
+      "right": "Strong judge of Israel"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-02",
+      "left": "The Lord’s Spirit",
+      "right": "Source of his strength"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-03",
+      "left": "Delilah",
+      "right": "Learned his secret"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-04",
+      "left": "Philistines",
+      "right": "Enemies of Israel"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-05",
+      "left": "Jawbone",
+      "right": "An unusual weapon"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-06",
+      "left": "Hair",
+      "right": "Shaved before capture"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-07",
+      "left": "Prison",
+      "right": "Samson was held here"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-08",
+      "left": "Pillars",
+      "right": "Pushed at the temple"
+    }
+  ],
+  "keyPhrases": [
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-01",
+      "text": "God chose Samson to help rescue Israel."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-02",
+      "text": "The Spirit of the Lord gave Samson great strength."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-03",
+      "text": "Samson defeated a lion with his bare hands."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-04",
+      "text": "The Philistine rulers paid Delilah to learn his secret."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-05",
+      "text": "Samson lost his strength and was captured."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-06",
+      "text": "Samson prayed for strength one final time."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-07",
+      "text": "Samson’s death points us to Jesus, who was willing to die to save us."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-08",
+      "text": "Jesus died to save his people and rose from the dead."
+    },
+    {
+      "id": "kp-review-1",
+      "text": "Samson points us to Jesus, who died to save his people.",
+      "origin": "suggested",
+      "teacherReviewRequired": true
+    }
+  ],
+  "publication": {
+    "status": "approved",
+    "approved": true,
+    "teacherSignoff": {
+      "reviewer": "Andrew Doane",
+      "date": "2026-11-19",
+      "notes": "Approved with verified BSB verse through Curriculum Review Studio"
+    },
+    "scriptureRights": {
+      "status": "cleared",
+      "basis": "Berean Standard Bible (BSB), dedicated to the public domain on April 30, 2023. Official terms: https://berean.bible/terms.htm. Scripture text confirmed against https://bereanbible.com/bsb.txt.",
+      "reviewedBy": "Andrew Doane",
+      "reviewedOn": "2026-11-19"
+    },
+    "resolvedReviewFlagIds": [],
+    "notes": "Approved through Review Studio after teacher review and a successful 27/27 content/preflight check of four numbered presets. Original conversion notes and checks remain as historical records.",
+    "reviewStudioVerification": {
+      "source": "Review Studio measured preflight",
+      "checkedAt": "2026-11-19T15:10:05.656Z",
+      "convertedCount": 27,
+      "totalCount": 27,
+      "issueCount": 0,
+      "numberedPresetsChecked": 4,
+      "scope": "Candidate-specific content conversion, four numbered preset content checks, and measured Connect the Verse fit. Standalone repository commands and independently rendered PDFs are not claimed.",
+      "matchingWorksheetSource": "preparedActivities.matchWords",
+      "matchingCandidatePool": "matchingPairs is retained separately as historical/source candidate material"
+    },
+    "reviewFlagDisposition": []
+  },
+  "schemaStatus": "approved; Review Studio 27/27 preflight passed"
+}
