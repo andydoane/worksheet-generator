@@ -75,7 +75,7 @@ export default function WelcomeScreen({
      <button type="button" className="welcome-back" onClick={goBack}>‹ Back to choices</button>
      <p className="welcome-eyebrow">STEP 1 · CHOOSE A LESSON</p>
      <h1 id="welcome-title">Choose a <em>Bible Story.</em></h1>
-     <p className="welcome-intro">Approved curriculum lessons will appear here. You can customize every activity after choosing a story.</p>
+     <p className="welcome-intro">You can customize every activity after choosing a story.</p>
      {stories.length===0
       ?<div className="welcome-empty" role="status">
        <span className="welcome-empty-icon" aria-hidden="true">▤</span>
