@@ -1,0 +1,1321 @@
+{
+  "schemaVersion": 1,
+  "id": "ot-050-the-philistines-capture-the-ark",
+  "curriculum": {
+    "series": "OT",
+    "lessonNumber": 50
+  },
+  "lessonDetails": {
+    "title": "The Philistines Capture the Ark",
+    "scripturePassages": [
+      "1 Samuel 4–6",
+      "Psalm 96:5",
+      "Romans 15:4"
+    ],
+    "scriptureDisplay": "1 Samuel 4–6",
+    "bigIdeas": [
+      {
+        "origin": "source",
+        "teacherReviewRequired": true,
+        "text": "The Lord God of Israel is the one and ONLY God."
+      }
+    ],
+    "memoryVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Psalm 96:5",
+      "translation": "BSB",
+      "text": "For all the gods of the nations are idols, but it is the LORD who made the heavens.",
+      "isExcerpt": false,
+      "requiresTextReview": false,
+      "originalTranslation": "ESV",
+      "hasEllipses": false,
+      "bsbSource": {
+        "reference": "Psalm 96:5",
+        "sourceUrl": "https://bereanbible.com/bsb.txt",
+        "publicDomainTerms": "https://berean.bible/terms.htm",
+        "startWord": 0,
+        "endWord": 17
+      }
+    }
+  },
+  "preparedActivities": {
+    "drawPicture": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "prompt": "two cows pulling the ark on a cart toward Israel"
+    },
+    "multipleChoice": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-01",
+        "question": "What did the Israelites carry into the battle against the Philistines?",
+        "correctAnswer": "The Ark of the Covenant",
+        "choices": [
+          {
+            "origin": "suggested",
+            "teacherReviewRequired": true,
+            "text": "The Ark of the Covenant",
+            "isCorrect": true
+          },
+          {
+            "origin": "suggested",
+            "teacherReviewRequired": true,
+            "text": "The Tabernacle Tent",
+            "isCorrect": false
+          },
+          {
+            "origin": "suggested",
+            "teacherReviewRequired": true,
+            "text": "The Staff of Moses",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-02",
+        "question": "Who captured the Ark of the Covenant?",
+        "correctAnswer": "The Philistines",
+        "choices": [
+          {
+            "origin": "suggested",
+            "teacherReviewRequired": true,
+            "text": "The Philistines",
+            "isCorrect": true
+          },
+          {
+            "origin": "suggested",
+            "teacherReviewRequired": true,
+            "text": "The Egyptians",
+            "isCorrect": false
+          },
+          {
+            "origin": "suggested",
+            "teacherReviewRequired": true,
+            "text": "The Moabites",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-03",
+        "question": "What happened to the statue of Dagon?",
+        "correctAnswer": "It fell down and broke",
+        "choices": [
+          {
+            "origin": "suggested",
+            "teacherReviewRequired": true,
+            "text": "It fell down and broke",
+            "isCorrect": true
+          },
+          {
+            "origin": "suggested",
+            "teacherReviewRequired": true,
+            "text": "It spoke to the priests",
+            "isCorrect": false
+          },
+          {
+            "origin": "suggested",
+            "teacherReviewRequired": true,
+            "text": "It burned down",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-04",
+        "question": "Why did the Philistines keep moving the ark to other cities?",
+        "correctAnswer": "People suffered wherever it went",
+        "choices": [
+          {
+            "origin": "suggested",
+            "teacherReviewRequired": true,
+            "text": "People suffered wherever it went",
+            "isCorrect": true
+          },
+          {
+            "origin": "suggested",
+            "teacherReviewRequired": true,
+            "text": "They wanted everyone to worship it",
+            "isCorrect": false
+          },
+          {
+            "origin": "suggested",
+            "teacherReviewRequired": true,
+            "text": "It was part of a parade",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-05",
+        "question": "How did the Philistines send the ark back toward Israel?",
+        "correctAnswer": "On a cart pulled by cows",
+        "choices": [
+          {
+            "origin": "suggested",
+            "teacherReviewRequired": true,
+            "text": "On a cart pulled by cows",
+            "isCorrect": true
+          },
+          {
+            "origin": "suggested",
+            "teacherReviewRequired": true,
+            "text": "On a ship across the sea",
+            "isCorrect": false
+          },
+          {
+            "origin": "suggested",
+            "teacherReviewRequired": true,
+            "text": "On a wagon pulled by horses",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-06",
+        "question": "How did God punish the Philistine cities",
+        "correctAnswer": "With panic, growths, and rats",
+        "choices": [
+          {
+            "origin": "suggested",
+            "teacherReviewRequired": true,
+            "text": "With panic, growths, and rats",
+            "isCorrect": true
+          },
+          {
+            "origin": "suggested",
+            "teacherReviewRequired": true,
+            "text": "With an earthquake",
+            "isCorrect": false
+          },
+          {
+            "origin": "suggested",
+            "teacherReviewRequired": true,
+            "text": "With sickness and blindness",
+            "isCorrect": false
+          }
+        ]
+      }
+    ],
+    "trueFalse": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "statement": "The cows carried the ark straight back to Israel.",
+      "isTrue": true,
+      "factId": "tf-08"
+    },
+    "firstLetters": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Psalm 96:5",
+      "verse": "For all the gods of the nations are idols, but it is the LORD who made the heavens."
+    },
+    "oddWords": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "related": [
+        "BATTLE",
+        "TEMPLE",
+        "CHEST",
+        "GROWTHS",
+        "PRIESTS"
+      ],
+      "unrelated": [
+        "seller",
+        "island",
+        "Isaac",
+        "niece",
+        "thread"
+      ],
+      "unrelatedOrigin": "suggested"
+    },
+    "unscrambleWords": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "answers": [
+        "DAGON",
+        "COWS"
+      ]
+    },
+    "checkboxes": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "correct": [
+        "COWS",
+        "ARK",
+        "CART",
+        "DAGON",
+        "ISRAEL"
+      ],
+      "incorrect": [
+        "autumn",
+        "gnats",
+        "crocodile",
+        "rivers",
+        "hymns"
+      ],
+      "incorrectOrigin": "suggested"
+    },
+    "whoAmI": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "clue": "I was the pretend god of the Philistines. My statue fell down and broke next to the Ark of the Covenant.",
+      "answer": "Dagon"
+    },
+    "matchWords": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mp-01",
+        "left": "Philistines",
+        "right": "Won battle"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mp-02",
+        "left": "Israel",
+        "right": "Lost battle"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mp-03",
+        "left": "Dagon",
+        "right": "Statue"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mp-05",
+        "left": "Cows",
+        "right": "Pulled ark"
+      },
+      {
+        "id": "mp-04",
+        "left": "Ark",
+        "right": "Captured",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      },
+      {
+        "id": "mp-06",
+        "left": "Cities",
+        "right": "Growths",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "finishVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Psalm 96:5",
+      "markedVerse": "For all the [gods] of the [nations] are [idols], but it is the [LORD] who [made] the [heavens].",
+      "sourceVerse": "For all the gods of the nations are idols, but it is the LORD who made the heavens."
+    },
+    "unscrambleVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Psalm 96:5",
+      "markedVerse": "For all the [gods] of the [nations] are [idols], but it is the [LORD] who [made] the [heavens].",
+      "sourceVerse": "For all the gods of the nations are idols, but it is the LORD who made the heavens."
+    },
+    "circleMistakes": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "paragraph": "The Israelites defeated the Philistines, but the Philistines stole the ark. They placed it beside a statue of Moses. The statue burned in a fire. Everywhere the ark went, God blessed the people with good health. The Philistines decided to set the ark on a cart pulled by horses. The cart went straight to Egypt.",
+      "mistakeCount": 6,
+      "mistakes": [
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "incorrect": "defeated the Philistines",
+          "correction": "lost the battle"
+        },
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "incorrect": "statue of Moses",
+          "correction": "statue of Dagon"
+        },
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "incorrect": "burned in a fire",
+          "correction": "fell before the ark both mornings and broke on the second"
+        },
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "incorrect": "blessed the people with good health",
+          "correction": "punished the people with growths"
+        },
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "incorrect": "pulled by horses",
+          "correction": "pulled by two cows"
+        },
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "incorrect": "Egypt",
+          "correction": "Israel"
+        }
+      ]
+    },
+    "mediumWordSearch": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "words": [
+        "COWS",
+        "DAGON",
+        "ARK",
+        "GOLD",
+        "LORD",
+        "CART"
+      ]
+    },
+    "trueFalseMaze": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "factId": "tf-13",
+      "statement": "The cows turned around and went back to their calves.",
+      "isTrue": false
+    },
+    "bigIdeaCryptogram": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "phrase": "The Lord God of Israel is the one and ONLY God."
+    },
+    "upsideDownVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Psalm 96:5",
+      "verse": "For all the gods of the nations are idols, but it is the LORD who made the heavens."
+    },
+    "connectBigIdea": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "phrase": "The Lord God of Israel is the one and ONLY God."
+    },
+    "pixelPicture": {
+      "origin": "source",
+      "teacherReviewRequired": true,
+      "phrase": "The Lord God of Israel is the one and ONLY God."
+    },
+    "finishStory": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "markedParagraph": "The [Philistines] defeated Israel and captured the Ark of the [Covenant]. The Israelites had hoped the ark would [save] them, but the Ark was not some magic good luck box. The Philistines placed the ark in the temple of their idol [Dagon]. His statue [fell] down two times and broke into pieces. In the city of [Ashdod], people suffered painful [growths]. The Philistines kept sending the ark away to other [cities]. They finally put it on a [cart] pulled by two [cows]. Guided by God, the cows went [straight] back toward [Israel], mooing the entire way."
+    },
+    "storyOrder": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 1,
+        "text": "The Israelites carried the ark into battle but were defeated by the Philistines."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 2,
+        "text": "The Philistines captured the ark, and Eli’s sons died in battle."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 3,
+        "text": "When Eli heard the news about the ark, he fell and died."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 4,
+        "text": "In Dagon’s temple, the statue fell before the ark and broke the next morning."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 5,
+        "text": "People suffered as the Philistines moved the ark from city to city."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 6,
+        "text": "The Philistines put the ark on a new cart pulled by two cows."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 7,
+        "text": "The cows went straight to Israel, and God’s people rejoiced when the ark returned."
+      }
+    ],
+    "sortStory": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-01",
+        "statement": "The Philistines defeated Israel and captured the Ark of the Covenant.",
+        "isTrue": true
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-03",
+        "statement": "The Philistines placed the ark beside the statue of Dagon.",
+        "isTrue": true
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-05",
+        "statement": "The people of Ashdod suffered painful growths on their bodies.",
+        "isTrue": true
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-06",
+        "statement": "The Philistines moved the ark from city to city.",
+        "isTrue": true
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-09",
+        "statement": "The Israelites defeated the Philistines and kept the ark safe.",
+        "isTrue": false
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-10",
+        "statement": "The ark broke to pieces near the statue of Dagon.",
+        "isTrue": false
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-12",
+        "statement": "The Philistines kept the ark in one city the whole time.",
+        "isTrue": false
+      }
+    ],
+    "drawStory": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "Philistine soldiers captured the ark after defeating Israel."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "The statue of Dagon fell face down beside the ark."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "The people of Ashdod suffered, so they sent the ark away."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "Philistine rulers placed the ark on a cart pulled by two cows."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "The cows walked toward Israel without turning back."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "The people of Beth Shemesh rejoiced when they saw the ark return."
+      }
+    ],
+    "wordSearch": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "words": [
+        "PHILISTINES",
+        "ISRAEL",
+        "ARK",
+        "COWS",
+        "CART",
+        "LORD",
+        "POWER",
+        "RETURN",
+        "PANIC",
+        "RATS",
+        "Lumps",
+        "COVENANT"
+      ]
+    },
+    "verseCryptogram": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Psalm 96:5",
+      "verse": "For all the gods of the nations are idols, but it is the LORD who made the heavens."
+    },
+    "crossword": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "DAGON",
+        "clue": "Name of the Philistine idol whose statue fell down"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "STATUE",
+        "clue": "Dagon was not a real god. He was this."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "ELI",
+        "clue": "Priest of Israel"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "TEMPLE",
+        "clue": "Building where the Philistines placed the ark"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "BATTLE",
+        "clue": "Israel lost this against the Philistines"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "COWS",
+        "clue": "Animals that pulled the ark back to Israel"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "LUMPS",
+        "clue": "Painful growths on the people in Philistine cities"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "PANIC",
+        "clue": "God caused the Philistine people to do this"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "ISRAEL",
+        "clue": "Where the cows carried the ark back to"
+      }
+    ],
+    "spiralVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Psalm 96:5",
+      "verse": "For all the gods of the nations are idols, but it is the LORD who made the heavens."
+    },
+    "connectVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Psalm 96:5",
+      "verse": "For all the gods of the nations are idols, but it is the LORD who made the heavens."
+    }
+  },
+  "vocabulary": {
+    "related": [
+      "ARK",
+      "COVENANT",
+      "PHILISTINES",
+      "ISRAEL",
+      "DAGON",
+      "IDOL",
+      "STATUE",
+      "TEMPLE",
+      "BATTLE",
+      "ELI",
+      "HOPHNI",
+      "PHINEHAS",
+      "ASHDOD",
+      "GATH",
+      "EKRON",
+      "GROWTHS",
+      "LUMPS",
+      "PANIC",
+      "COWS",
+      "CART",
+      "CALVES",
+      "GOLD",
+      "GOLDEN",
+      "RATS",
+      "CHEST",
+      "POWER",
+      "LORD",
+      "RETURN",
+      "BETH SHEMESH",
+      "OFFERING",
+      "CAPTURE",
+      "PRIESTS",
+      "FALLEN",
+      "BROKEN",
+      "JOY",
+      "GOD"
+    ],
+    "unrelated": [
+      "HARP",
+      "OLIVE",
+      "SHEEP",
+      "JACOB",
+      "FLEECE",
+      "MANGER",
+      "GRAPES",
+      "LADDER",
+      "FISH",
+      "CAMEL",
+      "LION",
+      "FLUTE"
+    ],
+    "entries": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-01",
+        "term": "ARK",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-02",
+        "term": "COVENANT",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-03",
+        "term": "PHILISTINES",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-04",
+        "term": "ISRAEL",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-05",
+        "term": "DAGON",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-06",
+        "term": "IDOL",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-07",
+        "term": "STATUE",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-08",
+        "term": "TEMPLE",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-09",
+        "term": "BATTLE",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-10",
+        "term": "ELI",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-11",
+        "term": "HOPHNI",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-12",
+        "term": "PHINEHAS",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-13",
+        "term": "ASHDOD",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-14",
+        "term": "GATH",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-15",
+        "term": "EKRON",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-16",
+        "term": "GROWTHS",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-17",
+        "term": "LUMPS",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-18",
+        "term": "PANIC",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-19",
+        "term": "COWS",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-20",
+        "term": "CART",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-21",
+        "term": "CALVES",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-22",
+        "term": "GOLD",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-23",
+        "term": "GOLDEN",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-24",
+        "term": "RATS",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-25",
+        "term": "CHEST",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-26",
+        "term": "POWER",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-27",
+        "term": "LORD",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-28",
+        "term": "RETURN",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-29",
+        "term": "BETH SHEMESH",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-30",
+        "term": "OFFERING",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-31",
+        "term": "CAPTURE",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-32",
+        "term": "PRIESTS",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-33",
+        "term": "FALLEN",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-34",
+        "term": "BROKEN",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-35",
+        "term": "JOY",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-36",
+        "term": "GOD",
+        "scope": "story"
+      }
+    ]
+  },
+  "facts": [
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-01",
+      "statement": "The Philistines defeated Israel and captured the Ark of the Covenant.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-02",
+      "statement": "Eli’s two sons died during the battle with the Philistines.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-03",
+      "statement": "The Philistines placed the ark beside the statue of Dagon.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-04",
+      "statement": "Dagon’s statue fell before the ark and later broke into pieces.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-05",
+      "statement": "The people of Ashdod suffered painful growths on their bodies.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-06",
+      "statement": "The Philistines moved the ark from city to city.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-07",
+      "statement": "The Philistines put the ark on a cart pulled by two cows.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-08",
+      "statement": "The cows carried the ark straight back to Israel.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-09",
+      "statement": "The Israelites defeated the Philistines and kept the ark safe.",
+      "isTrue": false
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-10",
+      "statement": "The ark broke to pieces near the statue of Dagon.",
+      "isTrue": false
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-11",
+      "statement": "The people of Ashdod celebrated when the ark arrived.",
+      "isTrue": false
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-12",
+      "statement": "The Philistines kept the ark in one city the whole time.",
+      "isTrue": false
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-13",
+      "statement": "The cows turned around and went back to their calves.",
+      "isTrue": false
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-14",
+      "statement": "Israel rescued the ark by sending a large army to get it.",
+      "isTrue": false
+    }
+  ],
+  "characters": [
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "ch-01",
+      "name": "Eli",
+      "scope": "story",
+      "clues": [
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "text": "I was the priest who died after hearing the ark was captured."
+        },
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "text": "My two sons died in battle against the Philistines."
+        }
+      ]
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "ch-02",
+      "name": "Dagon",
+      "scope": "story",
+      "clues": [
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "text": "The Philistines worshiped my statue, but it fell face down before the ark."
+        },
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "text": "My statue broke after falling a second time."
+        }
+      ]
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "ch-03",
+      "name": "Samuel",
+      "scope": "background",
+      "clues": [
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "text": "God had warned me that Eli’s family would be punished."
+        },
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "text": "I served the Lord with Eli before the ark was captured."
+        }
+      ]
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "ch-04",
+      "name": "Hophni",
+      "scope": "story",
+      "clues": [
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "text": "I was one of Eli’s sons and died when the Philistines won the battle."
+        }
+      ]
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "ch-05",
+      "name": "Phinehas",
+      "scope": "story",
+      "clues": [
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "text": "I was one of Eli’s sons who died in the battle when the ark was captured."
+        }
+      ]
+    }
+  ],
+  "drawingPrompts": [
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-01",
+      "prompt": "the Israelites carrying the gold-covered ark into battle"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-02",
+      "prompt": "Philistine soldiers carrying the captured ark away"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-03",
+      "prompt": "Dagon’s statue falling face down beside the ark"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-04",
+      "prompt": "the fallen statue of Dagon with its broken head and hands"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-05",
+      "prompt": "Philistine people asking their rulers to send the ark away"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-06",
+      "prompt": "two cows pulling a wooden cart with the ark on it"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-07",
+      "prompt": "the cows walking on the road toward Israel"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-08",
+      "prompt": "people in Beth Shemesh welcoming the returning ark"
+    }
+  ],
+  "matchingPairs": [
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-01",
+      "left": "The Philistines",
+      "right": "Captured the ark"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-02",
+      "left": "The Israelites",
+      "right": "Lost the battle"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-03",
+      "left": "Dagon",
+      "right": "A powerless idol"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-04",
+      "left": "Ashdod",
+      "right": "People suffered"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-05",
+      "left": "Two cows",
+      "right": "Pulled the cart"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-06",
+      "left": "Beth Shemesh",
+      "right": "Welcomed the ark"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-07",
+      "left": "Eli",
+      "right": "Died after hearing news"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-08",
+      "left": "The Lord",
+      "right": "Brought the ark home"
+    }
+  ],
+  "keyPhrases": [
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-01",
+      "text": "The Lord God of Israel is the one and ONLY God."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-02",
+      "text": "The ark was not a magical lucky charm."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-03",
+      "text": "Dagon was a powerless idol."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-04",
+      "text": "God’s power was greater than the Philistines."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-05",
+      "text": "The Lord brought the ark back to Israel."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-06",
+      "text": "The cows went straight toward Israel."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-07",
+      "text": "The Lord alone has the power to save."
+    }
+  ],
+  "publication": {
+    "status": "approved",
+    "approved": true,
+    "teacherSignoff": {
+      "reviewer": "Andrew Doane",
+      "date": "2026-11-19",
+      "notes": "Approved with verified BSB verse through Curriculum Review Studio"
+    },
+    "scriptureRights": {
+      "status": "cleared",
+      "basis": "Berean Standard Bible (BSB), dedicated to the public domain on April 30, 2023. Official terms: https://berean.bible/terms.htm. Scripture text confirmed against https://bereanbible.com/bsb.txt.",
+      "reviewedBy": "Andrew Doane",
+      "reviewedOn": "2026-11-19"
+    },
+    "resolvedReviewFlagIds": [],
+    "notes": "Approved through Review Studio after teacher review and a successful 27/27 content/preflight check of four numbered presets. Original conversion notes and checks remain as historical records.",
+    "reviewStudioVerification": {
+      "source": "Review Studio measured preflight",
+      "checkedAt": "2026-11-19T21:26:17.899Z",
+      "convertedCount": 27,
+      "totalCount": 27,
+      "issueCount": 0,
+      "numberedPresetsChecked": 4,
+      "scope": "Candidate-specific content conversion, four numbered preset content checks, and measured Connect the Verse fit. Standalone repository commands and independently rendered PDFs are not claimed.",
+      "matchingWorksheetSource": "preparedActivities.matchWords",
+      "matchingCandidatePool": "matchingPairs is retained separately as historical/source candidate material"
+    },
+    "reviewFlagDisposition": []
+  },
+  "schemaStatus": "approved; Review Studio 27/27 preflight passed"
+}
