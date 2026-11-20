@@ -1,0 +1,1320 @@
+{
+  "schemaVersion": 1,
+  "id": "ot-051-saul-becomes-king",
+  "curriculum": {
+    "series": "OT",
+    "lessonNumber": 51
+  },
+  "lessonDetails": {
+    "title": "Saul Becomes King",
+    "scripturePassages": [
+      "1 Samuel 8–10",
+      "Psalm 103:19",
+      "Romans 15:4"
+    ],
+    "scriptureDisplay": "1 Samuel 8–10",
+    "bigIdeas": [
+      {
+        "text": "The Lord is the KING of the Universe.",
+        "origin": "source",
+        "teacherReviewRequired": true
+      }
+    ],
+    "memoryVerse": {
+      "reference": "Psalm 103:19",
+      "translation": "BSB",
+      "text": "The LORD has established His throne in heaven, and His kingdom rules over all.",
+      "isExcerpt": false,
+      "origin": "adapted",
+      "requiresTextReview": false,
+      "teacherReviewRequired": true,
+      "originalTranslation": "ESV",
+      "hasEllipses": false,
+      "bsbSource": {
+        "reference": "Psalm 103:19",
+        "sourceUrl": "https://bereanbible.com/bsb.txt",
+        "publicDomainTerms": "https://berean.bible/terms.htm",
+        "startWord": 0,
+        "endWord": 13
+      }
+    }
+  },
+  "preparedActivities": {
+    "drawPicture": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "prompt": "Samuel pouring olive oil on Saul’s head to anoint him as king"
+    },
+    "multipleChoice": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-01",
+        "question": "Why did the Israelites ask for a king?",
+        "correctAnswer": "To be like other nations",
+        "choices": [
+          {
+            "origin": "suggested",
+            "teacherReviewRequired": true,
+            "text": "To be like other nations",
+            "isCorrect": true
+          },
+          {
+            "origin": "suggested",
+            "teacherReviewRequired": true,
+            "text": "They thought it would be fun",
+            "isCorrect": false
+          },
+          {
+            "origin": "suggested",
+            "teacherReviewRequired": true,
+            "text": "Because God told them to",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-02",
+        "question": "What did Samuel warn that a king might do?",
+        "correctAnswer": "Take their things and make them serve",
+        "choices": [
+          {
+            "origin": "suggested",
+            "teacherReviewRequired": true,
+            "text": "Take their things and make them serve",
+            "isCorrect": true
+          },
+          {
+            "origin": "suggested",
+            "teacherReviewRequired": true,
+            "text": "Make all their dreams come true",
+            "isCorrect": false
+          },
+          {
+            "origin": "suggested",
+            "teacherReviewRequired": true,
+            "text": "Let the people be in charge",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-03",
+        "question": "What was Saul searching for when he met Samuel?",
+        "correctAnswer": "Lost donkeys",
+        "choices": [
+          {
+            "origin": "suggested",
+            "teacherReviewRequired": true,
+            "text": "Lost donkeys",
+            "isCorrect": true
+          },
+          {
+            "origin": "suggested",
+            "teacherReviewRequired": true,
+            "text": "Missing sheep",
+            "isCorrect": false
+          },
+          {
+            "origin": "suggested",
+            "teacherReviewRequired": true,
+            "text": "Runaway cows",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-04",
+        "question": "How did Samuel anoint Saul as king?",
+        "correctAnswer": "Poured oil on his head",
+        "choices": [
+          {
+            "origin": "suggested",
+            "teacherReviewRequired": true,
+            "text": "Poured oil on his head",
+            "isCorrect": true
+          },
+          {
+            "origin": "suggested",
+            "teacherReviewRequired": true,
+            "text": "Placed a crown on his head",
+            "isCorrect": false
+          },
+          {
+            "origin": "suggested",
+            "teacherReviewRequired": true,
+            "text": "Handed Saul a sword",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-05",
+        "question": "How was Saul different than the other Israelites?",
+        "correctAnswer": "He was a head taller",
+        "choices": [
+          {
+            "origin": "suggested",
+            "teacherReviewRequired": true,
+            "text": "He was a head taller",
+            "isCorrect": true
+          },
+          {
+            "origin": "suggested",
+            "teacherReviewRequired": true,
+            "text": "He was very short",
+            "isCorrect": false
+          },
+          {
+            "origin": "suggested",
+            "teacherReviewRequired": true,
+            "text": "He had big muscles",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-06",
+        "question": "Where did Saul hide when he was chosen as king?",
+        "correctAnswer": "Among the supplies",
+        "choices": [
+          {
+            "origin": "suggested",
+            "teacherReviewRequired": true,
+            "text": "Among the supplies",
+            "isCorrect": true
+          },
+          {
+            "origin": "suggested",
+            "teacherReviewRequired": true,
+            "text": "Inside the Tabernacle",
+            "isCorrect": false
+          },
+          {
+            "origin": "suggested",
+            "teacherReviewRequired": true,
+            "text": "Behind a donkey",
+            "isCorrect": false
+          }
+        ]
+      }
+    ],
+    "trueFalse": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "factId": "tf-07",
+      "statement": "God’s Spirit came powerfully upon Saul.",
+      "isTrue": true
+    },
+    "firstLetters": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Psalm 103:19",
+      "verse": "The LORD has established His throne in heaven, and His kingdom rules over all."
+    },
+    "oddWords": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "related": [
+        "SAUL",
+        "SAMUEL",
+        "DONKEYS",
+        "OIL",
+        "LOTS"
+      ],
+      "unrelated": [
+        "wilderness",
+        "pools",
+        "ink",
+        "silver",
+        "stake"
+      ],
+      "unrelatedOrigin": "suggested"
+    },
+    "unscrambleWords": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "answers": [
+        "SAUL",
+        "DONKEYS"
+      ]
+    },
+    "checkboxes": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "correct": [
+        "DONKEYS",
+        "KING",
+        "OIL",
+        "SPIRIT",
+        "SAMUEL"
+      ],
+      "incorrect": [
+        "vineyard",
+        "pie",
+        "sponge",
+        "crosses",
+        "dogs"
+      ],
+      "incorrectOrigin": "suggested"
+    },
+    "whoAmI": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "clue": "I searched for my father’s lost donkeys and later hid among the supplies when chosen as king.",
+      "answer": "Saul"
+    },
+    "matchWords": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mp-01",
+        "left": "Israel",
+        "right": "Asked for King"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mp-02",
+        "left": "Samuel",
+        "right": "Warned"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mp-03",
+        "left": "Saul",
+        "right": "Lost Donkeys"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mp-04",
+        "left": "Oil",
+        "right": "Anoint"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mp-06",
+        "left": "Supplies",
+        "right": "Hiding spot"
+      },
+      {
+        "id": "mp-05",
+        "left": "God",
+        "right": "True king",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "finishVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Psalm 103:19",
+      "markedVerse": "The [LORD] has established His [throne] in [heaven], and His [kingdom] [rules] over [all].",
+      "sourceVerse": "The LORD has established His throne in heaven, and His kingdom rules over all."
+    },
+    "unscrambleVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Psalm 103:19",
+      "markedVerse": "The [LORD] has established His [throne] in [heaven], and His [kingdom] [rules] over [all].",
+      "sourceVerse": "The LORD has established His throne in heaven, and His kingdom rules over all."
+    },
+    "circleMistakes": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "paragraph": "Israel’s elders asked Samuel for a president. Samuel warned them that a human king would let them do whatever they wanted. Saul met Samuel while searching for his father's lost cows. Samuel anointed Saul by pouring water on Saul’s head. When Saul was chosen as king in front of the people, they couldn't find him. He was hiding in a cave.",
+      "mistakeCount": 5,
+      "mistakes": [
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "incorrect": "a president",
+          "correction": "a human king"
+        },
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "incorrect": "let them do whatever they wanted",
+          "correction": "take their fields and make them serve"
+        },
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "incorrect": "lost cows",
+          "correction": "his father’s lost donkeys"
+        },
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "incorrect": "water on Saul’s head",
+          "correction": "olive oil on Saul’s head"
+        },
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "incorrect": "hiding in a cave",
+          "correction": "hiding among the supplies"
+        }
+      ]
+    },
+    "mediumWordSearch": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "words": [
+        "SAMUEL",
+        "DONKEY",
+        "ANOINT",
+        "SAUL",
+        "ISRAEL",
+        "KING"
+      ]
+    },
+    "trueFalseMaze": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "factId": "tf-13",
+      "statement": "Saul was a head shorter than all the Israelites.",
+      "isTrue": false
+    },
+    "bigIdeaCryptogram": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "phrase": "The Lord is the KING of the Universe."
+    },
+    "upsideDownVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Psalm 103:19",
+      "verse": "The LORD has established His throne in heaven, and His kingdom rules over all."
+    },
+    "connectBigIdea": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "phrase": "The Lord is the KING of the Universe."
+    },
+    "pixelPicture": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "phrase": "God guided Saul to Samuel and chose him to lead Israel."
+    },
+    "finishStory": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "markedParagraph": "When Samuel grew [old], Israel’s leaders asked him for a [king] like other nations. God told Samuel that the people were rejecting [him] as their true king. Samuel [warned] that a human king might take their fields and force the people to serve him. The Israelites still wanted a king. Meanwhile, [Saul] was out searching for his father’s lost [donkeys]. God led Saul to [Samuel], who poured olive [oil] on his head to anoint him as king. Samuel also gave Saul [signs] that all came true. God’s [Spirit] came upon Saul. Later, when the people chose their king, Saul was [hiding] among the [supplies]."
+    },
+    "storyOrder": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 1,
+        "text": "The elders of Israel asked Samuel to give them a human king."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 2,
+        "text": "Samuel prayed, and God explained that the people were rejecting him as king."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 3,
+        "text": "Samuel warned the people what a king might do, but they still wanted one."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 4,
+        "text": "While searching for lost donkeys, Saul and his servant went to Samuel."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 5,
+        "text": "Samuel poured olive oil on Saul’s head because God had chosen him as king."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 6,
+        "text": "The signs Samuel gave Saul came true, and God’s Spirit came upon him."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 7,
+        "text": "When Samuel presented the new king to Israel, Saul was hiding among the supplies."
+      }
+    ],
+    "sortStory": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-01",
+        "statement": "The Israelites asked Samuel to appoint a human king.",
+        "isTrue": true
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-03",
+        "statement": "Samuel warned the people that a king could take their possessions.",
+        "isTrue": true
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-04",
+        "statement": "Saul searched for his father’s lost donkeys.",
+        "isTrue": true
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-06",
+        "statement": "Samuel poured olive oil on Saul’s head to anoint him.",
+        "isTrue": true
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-09",
+        "statement": "Samuel’s sons were good leaders who cared more for people than money.",
+        "isTrue": false
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-10",
+        "statement": "The Israelites asked Samuel to give them a president.",
+        "isTrue": false
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-12",
+        "statement": "Samuel anointed Saul by placing a crown on his head.",
+        "isTrue": false
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-14",
+        "statement": "Saul bravely stood in front of everyone when he was chosen as king.",
+        "isTrue": false
+      }
+    ],
+    "drawStory": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "Israel’s elders came to Samuel and asked him for a king."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "Samuel warned the people what a human king might do."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "Saul and his servant went searching for his father’s lost donkeys."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "Samuel poured olive oil on Saul’s head to show that God had chosen him."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "Saul met people just as Samuel had predicted."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "The people found Saul hiding among the supplies."
+      }
+    ],
+    "wordSearch": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "words": [
+        "LEADER",
+        "SERVANTS",
+        "THRONE",
+        "ISRAEL",
+        "WARNING",
+        "ELDERS",
+        "PRAYER",
+        "PROPHETS",
+        "SUPPLIES",
+        "CHOSEN",
+        "SAUL",
+        "SAMUEL"
+      ]
+    },
+    "verseCryptogram": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Psalm 103:19",
+      "verse": "The LORD has established His throne in heaven, and His kingdom rules over all."
+    },
+    "crossword": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "SAMUEL",
+        "clue": "Prophet who anointed Saul as king"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "SAUL",
+        "clue": "Man chosen to be Israel’s first king"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "DONKEYS",
+        "clue": "Lost animals Saul was sent to find"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "KING",
+        "clue": "The Israelites asked Samuel to give them this"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "OIL",
+        "clue": "What Samuel poured on Saul’s head"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "SPIRIT",
+        "clue": "God’s presence that came powerfully upon Saul"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "ISRAEL",
+        "clue": "Saul was the first king of this nation"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "THRONE",
+        "clue": "What a king sits on"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "SUPPLIES",
+        "clue": "Where Saul hid when the people looked for him"
+      }
+    ],
+    "spiralVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Psalm 103:19",
+      "verse": "The LORD has established His throne in heaven, and His kingdom rules over all."
+    },
+    "connectVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Psalm 103:19",
+      "verse": "The LORD has established His throne in heaven, and His kingdom rules over all."
+    }
+  },
+  "vocabulary": {
+    "related": [
+      "ISRAEL",
+      "ELDERS",
+      "SAMUEL",
+      "SAUL",
+      "KING",
+      "DONKEYS",
+      "SERVANT",
+      "ANOINT",
+      "OLIVE OIL",
+      "SPIRIT",
+      "SIGNS",
+      "PROPHETS",
+      "BREAD",
+      "SUPPLIES",
+      "BENJAMIN",
+      "LOTS",
+      "WARNING",
+      "LEADER",
+      "JUDGE",
+      "THRONE",
+      "GOD",
+      "PRAYER",
+      "CHOSEN",
+      "LORD",
+      "RULE",
+      "TRUST",
+      "CROWN",
+      "KISH",
+      "KINGDOM",
+      "SERVANTS",
+      "REJECTED",
+      "NATIONS",
+      "FIELDS",
+      "ANIMALS",
+      "SONS"
+    ],
+    "unrelated": [
+      "FLEECE",
+      "MANGER",
+      "FISH",
+      "RIVER",
+      "HARP",
+      "BASKET",
+      "LAMB",
+      "LADDER",
+      "SHEPHERD",
+      "DOVE",
+      "CAVE",
+      "GRAPES"
+    ],
+    "entries": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-01",
+        "term": "ISRAEL",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-02",
+        "term": "ELDERS",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-03",
+        "term": "SAMUEL",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-04",
+        "term": "SAUL",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-05",
+        "term": "KING",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-06",
+        "term": "DONKEYS",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-07",
+        "term": "SERVANT",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-08",
+        "term": "ANOINT",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-09",
+        "term": "OLIVE OIL",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-10",
+        "term": "SPIRIT",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-11",
+        "term": "SIGNS",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-12",
+        "term": "PROPHETS",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-13",
+        "term": "BREAD",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-14",
+        "term": "SUPPLIES",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-15",
+        "term": "BENJAMIN",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-16",
+        "term": "LOTS",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-17",
+        "term": "WARNING",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-18",
+        "term": "LEADER",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-19",
+        "term": "JUDGE",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-20",
+        "term": "THRONE",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-21",
+        "term": "GOD",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-22",
+        "term": "PRAYER",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-23",
+        "term": "CHOSEN",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-24",
+        "term": "LORD",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-25",
+        "term": "RULE",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-26",
+        "term": "TRUST",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-27",
+        "term": "CROWN",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-28",
+        "term": "KISH",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-29",
+        "term": "KINGDOM",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-30",
+        "term": "SERVANTS",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-31",
+        "term": "REJECTED",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-32",
+        "term": "NATIONS",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-33",
+        "term": "FIELDS",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-34",
+        "term": "ANIMALS",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-35",
+        "term": "SONS",
+        "scope": "story"
+      }
+    ]
+  },
+  "facts": [
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-01",
+      "statement": "The Israelites asked Samuel to appoint a human king.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-02",
+      "statement": "God told Samuel that Israel was rejecting him as king.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-03",
+      "statement": "Samuel warned the people that a king could take their possessions.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-04",
+      "statement": "Saul searched for his father’s lost donkeys.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-05",
+      "statement": "God showed Samuel that Saul was chosen to lead Israel.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-06",
+      "statement": "Samuel poured olive oil on Saul’s head to anoint him.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-07",
+      "statement": "God’s Spirit came powerfully upon Saul.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-08",
+      "statement": "Saul hid among the supplies when the people chose him as king.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-09",
+      "statement": "Samuel’s sons were good leaders who cared more for people than money.",
+      "isTrue": false
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-10",
+      "statement": "The Israelites asked Samuel to give them a president.",
+      "isTrue": false
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-11",
+      "statement": "Saul was searching for his father’s lost sheep when he met Samuel.",
+      "isTrue": false
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-12",
+      "statement": "Samuel anointed Saul by placing a crown on his head.",
+      "isTrue": false
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-13",
+      "statement": "Saul was a head shorter than all the Israelites.",
+      "isTrue": false
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-14",
+      "statement": "Saul bravely stood in front of everyone when he was chosen as king.",
+      "isTrue": false
+    }
+  ],
+  "characters": [
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "ch-01",
+      "name": "Samuel",
+      "scope": "story",
+      "clues": [
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "text": "I was Israel’s last judge and warned the people about demanding a king."
+        },
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "text": "I poured olive oil on Saul’s head to anoint him as king."
+        }
+      ]
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "ch-02",
+      "name": "Saul",
+      "scope": "story",
+      "clues": [
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "text": "I searched for my father’s lost donkeys and met Samuel."
+        },
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "text": "I hid among the supplies when the people chose me as king."
+        }
+      ]
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "ch-03",
+      "name": "The Lord",
+      "scope": "teaching",
+      "clues": [
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "text": "I was the true King the Israelites rejected when they demanded a human king."
+        }
+      ]
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "ch-04",
+      "name": "Saul’s servant",
+      "scope": "story",
+      "clues": [
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "text": "I suggested asking Samuel for help finding the missing donkeys."
+        }
+      ]
+    }
+  ],
+  "drawingPrompts": [
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-01",
+      "prompt": "Israel’s elders standing before Samuel and asking for a king"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-02",
+      "prompt": "Samuel warning a crowd about what a human king might do"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-03",
+      "prompt": "Saul and his servant searching for lost donkeys"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-04",
+      "prompt": "Saul meeting Samuel on his search for the missing donkeys"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-05",
+      "prompt": "Samuel pouring olive oil on Saul’s head"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-06",
+      "prompt": "Saul meeting people just as Samuel predicted"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-07",
+      "prompt": "the Israelites gathering while Samuel chooses their new king"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-08",
+      "prompt": "Saul hiding behind sacks and supplies"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "scene-09",
+      "prompt": "the people discovering Saul behind the supplies"
+    }
+  ],
+  "matchingPairs": [
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-01",
+      "left": "Israel’s elders",
+      "right": "Asked for a king"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-02",
+      "left": "Samuel",
+      "right": "Warned the people"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-03",
+      "left": "Saul",
+      "right": "Searched for donkeys"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-04",
+      "left": "Olive oil",
+      "right": "Used to anoint Saul"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-05",
+      "left": "God’s Spirit",
+      "right": "Came upon Saul"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-06",
+      "left": "Supplies",
+      "right": "Saul hid among them"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-07",
+      "left": "Samuel’s sons",
+      "right": "Loved money"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-08",
+      "left": "God",
+      "right": "Israel’s true king"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "poolpair-09",
+      "left": "The elders",
+      "right": "Wanted a human king"
+    }
+  ],
+  "keyPhrases": [
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-01",
+      "text": "The Lord is the KING of the Universe."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-02",
+      "text": "The Lord God was the true King of Israel."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-03",
+      "text": "The people wanted a king like other nations."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-04",
+      "text": "Samuel warned them that a king could take their things."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-05",
+      "text": "God led Saul to Samuel while he searched for donkeys."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-06",
+      "text": "Samuel poured oil on Saul to show that God chose him."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-07",
+      "text": "God’s Spirit came powerfully upon Saul."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-08",
+      "text": "Saul hid among the supplies when he was chosen."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "phrase-09",
+      "text": "A good king is more than a handsome face."
+    }
+  ],
+  "publication": {
+    "status": "approved",
+    "approved": true,
+    "teacherSignoff": {
+      "reviewer": "Andrew Doane",
+      "date": "2026-11-20",
+      "notes": "Approved with verified BSB verse through Curriculum Review Studio"
+    },
+    "scriptureRights": {
+      "status": "cleared",
+      "basis": "Berean Standard Bible (BSB), dedicated to the public domain on April 30, 2023. Official terms: https://berean.bible/terms.htm. Scripture text confirmed against https://bereanbible.com/bsb.txt.",
+      "reviewedBy": "Andrew Doane",
+      "reviewedOn": "2026-11-20"
+    },
+    "resolvedReviewFlagIds": [],
+    "notes": "Approved through Review Studio after teacher review and a successful 27/27 content/preflight check of four numbered presets. Original conversion notes and checks remain as historical records.",
+    "reviewStudioVerification": {
+      "source": "Review Studio measured preflight",
+      "checkedAt": "2026-11-20T19:51:20.701Z",
+      "convertedCount": 27,
+      "totalCount": 27,
+      "issueCount": 0,
+      "numberedPresetsChecked": 4,
+      "scope": "Candidate-specific content conversion, four numbered preset content checks, and measured Connect the Verse fit. Standalone repository commands and independently rendered PDFs are not claimed.",
+      "matchingWorksheetSource": "preparedActivities.matchWords",
+      "matchingCandidatePool": "matchingPairs is retained separately as historical/source candidate material"
+    },
+    "reviewFlagDisposition": []
+  },
+  "schemaStatus": "approved; Review Studio 27/27 preflight passed"
+}
