@@ -1,0 +1,1230 @@
+{
+  "schemaVersion": 1,
+  "id": "ot-052-saul-disobeys-god",
+  "curriculum": {
+    "series": "OT",
+    "lessonNumber": 52
+  },
+  "lessonDetails": {
+    "title": "Saul Disobeys God",
+    "scripturePassages": [
+      "1 Samuel 11–13",
+      "Proverbs 14:12",
+      "Romans 15:4"
+    ],
+    "scriptureDisplay": "1 Samuel 11–13",
+    "bigIdeas": [
+      {
+        "text": "Do what GOD says is right, not what seems right to YOU.",
+        "origin": "source",
+        "teacherReviewRequired": true
+      }
+    ],
+    "memoryVerse": {
+      "reference": "Proverbs 14:12",
+      "translation": "BSB",
+      "text": "There is a way that seems right to a man, but its end is the way of death.",
+      "isExcerpt": false,
+      "origin": "adapted",
+      "requiresTextReview": false,
+      "teacherReviewRequired": true,
+      "originalTranslation": "ESV",
+      "hasEllipses": false,
+      "bsbSource": {
+        "reference": "Proverbs 14:12",
+        "sourceUrl": "https://bereanbible.com/bsb.txt",
+        "publicDomainTerms": "https://berean.bible/terms.htm",
+        "startWord": 0,
+        "endWord": 17
+      }
+    }
+  },
+  "preparedActivities": {
+    "drawPicture": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "prompt": "Samuel speaking to Saul after the king offered a sacrifice"
+    },
+    "multipleChoice": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-01",
+        "question": "Why did Saul gather an army to fight King Nahash?",
+        "correctAnswer": "To rescue the people of Jabesh Gilead",
+        "choices": [
+          {
+            "text": "To rescue the people of Jabesh Gilead",
+            "isCorrect": true,
+            "origin": "suggested"
+          },
+          {
+            "text": "To search for his lost donkeys",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "To show off his power",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ]
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-02",
+        "question": "What did Samuel remind Israel about in his speech?",
+        "correctAnswer": "The many times God rescued them",
+        "choices": [
+          {
+            "text": "The many times God rescued them",
+            "isCorrect": true,
+            "origin": "suggested"
+          },
+          {
+            "text": "How to pray",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Where to build the temple",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ]
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-03",
+        "question": "What happened when Samuel prayed in front of Israel?",
+        "correctAnswer": "God sent thunder and rain",
+        "choices": [
+          {
+            "text": "God sent thunder and rain",
+            "isCorrect": true,
+            "origin": "suggested"
+          },
+          {
+            "text": "The Jordan River dried up",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "The ground shook",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ]
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-04",
+        "question": "Why were Saul's soldiers hiding and running away?",
+        "correctAnswer": "They feared the huge Philistine army",
+        "choices": [
+          {
+            "text": "They feared the huge Philistine army",
+            "isCorrect": true,
+            "origin": "suggested"
+          },
+          {
+            "text": "They were wimps",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "They were playing hide and seek",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ]
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-05",
+        "question": "What did Saul do when Samuel did not arrive as soon as expected?",
+        "correctAnswer": "Offered the sacrifice himself",
+        "choices": [
+          {
+            "text": "Offered the sacrifice himself",
+            "isCorrect": true,
+            "origin": "suggested"
+          },
+          {
+            "text": "Waited patiently for Samuel",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Sent for another priest",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ]
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mc-06",
+        "question": "After Saul disobeyed, what did Samuel say?",
+        "correctAnswer": "God had chosen another king",
+        "choices": [
+          {
+            "text": "God had chosen another king",
+            "isCorrect": true,
+            "origin": "suggested"
+          },
+          {
+            "text": "God was pleased with Saul",
+            "isCorrect": false,
+            "origin": "suggested"
+          },
+          {
+            "text": "Saul would get a second chance",
+            "isCorrect": false,
+            "origin": "suggested"
+          }
+        ]
+      }
+    ],
+    "trueFalse": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "factId": "tf-07",
+      "statement": "Saul offered the sacrifice himself.",
+      "isTrue": true
+    },
+    "firstLetters": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Proverbs 14:12",
+      "verse": "There is a way that seems right to a man, but its end is the way of death."
+    },
+    "oddWords": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "related": [
+        "NAHASH",
+        "JABESH",
+        "ALTAR",
+        "SAMUEL",
+        "SAUL"
+      ],
+      "unrelated": [
+        "Abel",
+        "niece",
+        "trees",
+        "prince",
+        "medals"
+      ],
+      "unrelatedOrigin": "suggested"
+    },
+    "unscrambleWords": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "answers": [
+        "SACRIFICE",
+        "SAMUEL"
+      ]
+    },
+    "checkboxes": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "correct": [
+        "ARMY",
+        "SPEECH",
+        "STORM",
+        "OFFERING",
+        "KING"
+      ],
+      "incorrect": [
+        "buffalo",
+        "seeds",
+        "candles",
+        "scorpion",
+        "harp"
+      ],
+      "incorrectOrigin": "suggested"
+    },
+    "whoAmI": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "clue": "I rescued the people of Jabesh Gilead. When Samuel was a little bit late, I offered the sacrifice myself.",
+      "answer": "Saul"
+    },
+    "matchWords": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mp-01",
+        "left": "Evil King",
+        "right": "Nahash"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mp-02",
+        "left": "Saul",
+        "right": "Offered sacrifice"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mp-05",
+        "left": "Samuel",
+        "right": "gave speech"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "mp-06",
+        "left": "Philistines",
+        "right": "Attacked"
+      },
+      {
+        "id": "mp-03",
+        "left": "city attacked",
+        "right": "jabesh gilead",
+        "origin": "suggested",
+        "teacherReviewRequired": true
+      }
+    ],
+    "finishVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Proverbs 14:12",
+      "markedVerse": "There is a [way] that seems [right] to a [man], but its [end] is the [way] of [death].",
+      "sourceVerse": "There is a way that seems right to a man, but its end is the way of death."
+    },
+    "unscrambleVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Proverbs 14:12",
+      "markedVerse": "There is a [way] that seems [right] to a [man], but its [end] is the [way] of [death].",
+      "sourceVerse": "There is a way that seems right to a man, but its end is the way of death."
+    },
+    "circleMistakes": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "paragraph": "Saul refused to help the people of Jabesh Gilead. Samuel reminded Israel that God had failed his people many times. When Samuel prayed, God sent a snowstorm. Later, the Philistine army attacked and Saul's soldiers weren't scared at all. Saul patiently waited until Samuel came and offered the sacrifice. Samuel congratulated Saul for disobeying God.",
+      "mistakeCount": 6,
+      "mistakes": [
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "incorrect": "refused to help",
+          "correction": "led an army to rescue"
+        },
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "incorrect": "God had failed his people many times",
+          "correction": "God has rescued his people many times"
+        },
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "incorrect": "a snowstorm",
+          "correction": "thunder and rain"
+        },
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "incorrect": "weren't scared at all",
+          "correction": "ran away scared"
+        },
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "incorrect": "patiently waited",
+          "correction": "offered the sacrifice himself"
+        },
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "incorrect": "congratulated Saul",
+          "correction": "warned Saul about disobeying God"
+        }
+      ]
+    },
+    "mediumWordSearch": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "words": [
+        "SAUL",
+        "SAMUEL",
+        "RAIN",
+        "RESCUE",
+        "SPIRIT",
+        "KING"
+      ]
+    },
+    "trueFalseMaze": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "factId": "tf-13",
+      "statement": "Saul waited and let Samuel offer the sacrifice.",
+      "isTrue": false
+    },
+    "bigIdeaCryptogram": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "phrase": "Do what GOD says is right, not what seems right to YOU."
+    },
+    "upsideDownVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Proverbs 14:12",
+      "verse": "There is a way that seems right to a man, but its end is the way of death."
+    },
+    "connectBigIdea": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "phrase": "Do what GOD says is right, not what seems right to YOU."
+    },
+    "pixelPicture": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "phrase": "Saul offered the sacrifice instead of waiting for Samuel."
+    },
+    "finishStory": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "markedParagraph": "King [Nahash] threatened to put out the right eyes of the people of [Jabesh] Gilead. God's [Spirit] came powerfully on Saul, and he gathered an [army] to rescue them. Later, [Samuel] reminded Israel that the Lord had rescued his people again and again. When Samuel [prayed], God sent [thunder] and rain. Then a huge [Philistine] army frightened Saul's soldiers. Samuel asked Saul to [wait] so he could offer a [sacrifice]. But Saul grew impatient and offered it [himself]. Samuel said Saul had [disobeyed] God and that another king would be chosen."
+    },
+    "storyOrder": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 1,
+        "text": "King Nahash threatened the people of Jabesh Gilead."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 2,
+        "text": "God's Spirit empowered Saul to lead an army and rescue the city."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 3,
+        "text": "Samuel reminded the people that God had rescued them many times."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 4,
+        "text": "Samuel prayed, and God sent thunder and rain."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 5,
+        "text": "The Philistine army frightened Saul's soldiers, who began to scatter."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 6,
+        "text": "Saul offered the sacrifice himself instead of waiting for Samuel."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "order": 7,
+        "text": "Samuel arrived and said God had chosen another king."
+      }
+    ],
+    "sortStory": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-01",
+        "statement": "God's Spirit gave Saul power to rescue the people of Jabesh Gilead.",
+        "isTrue": true
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-02",
+        "statement": "Samuel reminded Israel how God had rescued them before.",
+        "isTrue": true
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-03",
+        "statement": "God sent thunder and rain after Samuel prayed.",
+        "isTrue": true
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-04",
+        "statement": "The Philistine army frightened Saul's soldiers.",
+        "isTrue": true
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-09",
+        "statement": "Saul was too scared to rescue the people of Jabesh Gilead.",
+        "isTrue": false
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-10",
+        "statement": "Samuel reminded the people of the many times God failed them.",
+        "isTrue": false
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-11",
+        "statement": "When Samuel prayed, God sent a snowstorm.",
+        "isTrue": false
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "factId": "tf-12",
+        "statement": "The Israelites weren't even a tiny bit scared of the Philistines.",
+        "isTrue": false
+      }
+    ],
+    "drawStory": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "Saul led his army to rescue the people of Jabesh Gilead."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "Samuel spoke to the people about God's past rescues."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "Samuel prayed, and God sent a mighty thunderstorm."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "Saul's frightened soldiers hid from the Philistine army."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "Saul offered a sacrifice himself instead of waiting for Samuel."
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "prompt": "Samuel warned Saul that God had chosen another king."
+      }
+    ],
+    "wordSearch": {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "words": [
+        "PHILISTINES",
+        "SOLDIERS",
+        "SACRIFICE",
+        "THUNDER",
+        "WAITING",
+        "PRAYER",
+        "CAVES",
+        "COMMANDS",
+        "ISRAEL",
+        "VICTORY",
+        "SAUL",
+        "SAMUEL"
+      ]
+    },
+    "verseCryptogram": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Proverbs 14:12",
+      "verse": "There is a way that seems right to a man, but its end is the way of death."
+    },
+    "crossword": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "SAUL",
+        "clue": "King who offered a sacrifice before Samuel arrived"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "SAMUEL",
+        "clue": "He was supposed to be the one to offer the sacrifice"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "NAHASH",
+        "clue": "King whose army threatened the people of Jabesh Gilead"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "SPIRIT",
+        "clue": "God gave Saul power through his Holy ____"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "THUNDER",
+        "clue": "Loud sound that came with the rain Samuel prayed for"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "KING",
+        "clue": "This was Saul's job"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "SACRIFICE",
+        "clue": "Offering Saul made before Samuel arrived"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "PHILISTINES",
+        "clue": "Enemy army that frightened Saul's soldiers"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "answer": "WAIT",
+        "clue": "What Saul should have done until Samuel arrived"
+      }
+    ],
+    "spiralVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Proverbs 14:12",
+      "verse": "There is a way that seems right to a man, but its end is the way of death."
+    },
+    "connectVerse": {
+      "origin": "adapted",
+      "teacherReviewRequired": true,
+      "reference": "Proverbs 14:12",
+      "verse": "There is a way that seems right to a man, but its end is the way of death."
+    }
+  },
+  "vocabulary": {
+    "related": [
+      "SAUL",
+      "SAMUEL",
+      "NAHASH",
+      "JABESH GILEAD",
+      "AMMONITES",
+      "PHILISTINES",
+      "SOLDIERS",
+      "ARMY",
+      "RESCUE",
+      "SPIRIT",
+      "PRAY",
+      "THUNDER",
+      "RAIN",
+      "WARNING",
+      "KING",
+      "SACRIFICE",
+      "WAIT",
+      "OBEY",
+      "COMMANDS",
+      "ALTAR",
+      "BATTLE",
+      "FEAR",
+      "VICTORY",
+      "GOD",
+      "ISRAEL",
+      "SPEECH",
+      "CAVES",
+      "OFFERING",
+      "SCATTER",
+      "PATIENT"
+    ],
+    "unrelated": [
+      "MANGER",
+      "FLEECE",
+      "DOVE",
+      "OLIVES",
+      "BASKET",
+      "WHALE",
+      "LADDER",
+      "PEAR",
+      "FISH",
+      "FLUTE"
+    ],
+    "entries": [
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-01",
+        "term": "SAUL",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-02",
+        "term": "SAMUEL",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-03",
+        "term": "NAHASH",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-04",
+        "term": "JABESH GILEAD",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-05",
+        "term": "AMMONITES",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-06",
+        "term": "PHILISTINES",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-07",
+        "term": "SOLDIERS",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-08",
+        "term": "ARMY",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-09",
+        "term": "RESCUE",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-10",
+        "term": "SPIRIT",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-11",
+        "term": "PRAY",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-12",
+        "term": "THUNDER",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-13",
+        "term": "RAIN",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-14",
+        "term": "WARNING",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-15",
+        "term": "KING",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-16",
+        "term": "SACRIFICE",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-17",
+        "term": "WAIT",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-18",
+        "term": "OBEY",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-19",
+        "term": "COMMANDS",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-20",
+        "term": "ALTAR",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-21",
+        "term": "BATTLE",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-22",
+        "term": "FEAR",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-23",
+        "term": "VICTORY",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-24",
+        "term": "GOD",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-25",
+        "term": "ISRAEL",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-26",
+        "term": "SPEECH",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-27",
+        "term": "CAVES",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-28",
+        "term": "OFFERING",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-29",
+        "term": "SCATTER",
+        "scope": "story"
+      },
+      {
+        "origin": "suggested",
+        "teacherReviewRequired": true,
+        "id": "voc-30",
+        "term": "PATIENT",
+        "scope": "story"
+      }
+    ]
+  },
+  "facts": [
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-01",
+      "statement": "God's Spirit gave Saul power to rescue the people of Jabesh Gilead.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-02",
+      "statement": "Samuel reminded Israel how God had rescued them before.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-03",
+      "statement": "God sent thunder and rain after Samuel prayed.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-04",
+      "statement": "The Philistine army frightened Saul's soldiers.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-05",
+      "statement": "Saul offered the sacrifice before Samuel arrived.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-06",
+      "statement": "Samuel told Saul that his kingdom would not last.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-07",
+      "statement": "Saul offered the sacrifice himself.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-08",
+      "statement": "King Nahash threatened to put out the right eyes of the people in Jabesh Gilead.",
+      "isTrue": true
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-09",
+      "statement": "Saul was too scared to rescue the people of Jabesh Gilead.",
+      "isTrue": false
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-10",
+      "statement": "Samuel reminded the people of the many times God failed them.",
+      "isTrue": false
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-11",
+      "statement": "When Samuel prayed, God sent a snowstorm.",
+      "isTrue": false
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-12",
+      "statement": "The Israelites weren't even a tiny bit scared of the Philistines.",
+      "isTrue": false
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-13",
+      "statement": "Saul waited and let Samuel offer the sacrifice.",
+      "isTrue": false
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "tf-14",
+      "statement": "Samuel praised Saul for offering the sacrifice on his own.",
+      "isTrue": false
+    }
+  ],
+  "characters": [
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "ch-01",
+      "name": "Saul",
+      "scope": "story",
+      "clues": [
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "text": "I led an army to rescue Israel but later made a sacrifice instead of waiting."
+        }
+      ]
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "ch-02",
+      "name": "Samuel",
+      "scope": "story",
+      "clues": [
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "text": "I reminded Israel of God’s victories and warned the king to obey."
+        }
+      ]
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "ch-03",
+      "name": "Nahash",
+      "scope": "story",
+      "clues": [
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "text": "I was the king of Ammon who threatened Jabesh Gilead."
+        }
+      ]
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "ch-04",
+      "name": "The Philistines",
+      "scope": "story",
+      "clues": [
+        {
+          "origin": "suggested",
+          "teacherReviewRequired": true,
+          "text": "Our large army frightened Saul’s soldiers."
+        }
+      ]
+    }
+  ],
+  "drawingPrompts": [
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "dp-01",
+      "prompt": "King Nahash standing before his army as he threatens a city"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "dp-02",
+      "prompt": "Saul gathering an army to rescue the people of Jabesh Gilead"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "dp-03",
+      "prompt": "Samuel standing before Israel and reminding them about God’s help"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "dp-04",
+      "prompt": "Samuel praying while thunderclouds gather above Israel"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "dp-05",
+      "prompt": "Israelite soldiers hiding in caves from the Philistines"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "dp-06",
+      "prompt": "Saul standing beside an altar with an offering"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "dp-07",
+      "prompt": "Samuel warning Saul about his disobedience"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "dp-08",
+      "prompt": "Saul standing beside the altar as Samuel warns him about his choice"
+    }
+  ],
+  "matchingPairs": [
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "mp-01",
+      "left": "King Nahash",
+      "right": "Threatened Jabesh"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "mp-02",
+      "left": "Saul",
+      "right": "Rescued the city"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "mp-03",
+      "left": "God’s Spirit",
+      "right": "Gave Saul power"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "mp-04",
+      "left": "Samuel’s speech",
+      "right": "Told of past rescues"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "mp-05",
+      "left": "Samuel’s prayer",
+      "right": "God sent a storm"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "mp-06",
+      "left": "Philistines",
+      "right": "Scared the soldiers"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "mp-07",
+      "left": "Saul’s choice",
+      "right": "Offered the sacrifice"
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "mp-08",
+      "left": "Samuel’s warning",
+      "right": "A new king was chosen"
+    }
+  ],
+  "keyPhrases": [
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "kp-01",
+      "text": "Do what GOD says is right, not what seems right to YOU."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "kp-02",
+      "text": "Do what God says is right."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "kp-03",
+      "text": "The Lord rescued his people."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "kp-04",
+      "text": "God sent thunder and rain."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "kp-05",
+      "text": "Saul did not wait for Samuel."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "kp-06",
+      "text": "Obey God even when waiting is hard."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "kp-07",
+      "text": "God chose another king."
+    },
+    {
+      "origin": "suggested",
+      "teacherReviewRequired": true,
+      "id": "kp-08",
+      "text": "Believe in Jesus for eternal life."
+    }
+  ],
+  "publication": {
+    "status": "approved",
+    "approved": true,
+    "teacherSignoff": {
+      "reviewer": "Andrew Doane",
+      "date": "2026-11-21",
+      "notes": "Approved with verified BSB verse through Curriculum Review Studio"
+    },
+    "scriptureRights": {
+      "status": "cleared",
+      "basis": "Berean Standard Bible (BSB), dedicated to the public domain on April 30, 2023. Official terms: https://berean.bible/terms.htm. Scripture text confirmed against https://bereanbible.com/bsb.txt.",
+      "reviewedBy": "Andrew Doane",
+      "reviewedOn": "2026-11-21"
+    },
+    "resolvedReviewFlagIds": [],
+    "notes": "Approved through Review Studio after teacher review and a successful 27/27 content/preflight check of four numbered presets. Original conversion notes and checks remain as historical records.",
+    "reviewStudioVerification": {
+      "source": "Review Studio measured preflight",
+      "checkedAt": "2026-11-21T02:33:02.126Z",
+      "convertedCount": 27,
+      "totalCount": 27,
+      "issueCount": 0,
+      "numberedPresetsChecked": 4,
+      "scope": "Candidate-specific content conversion, four numbered preset content checks, and measured Connect the Verse fit. Standalone repository commands and independently rendered PDFs are not claimed.",
+      "matchingWorksheetSource": "preparedActivities.matchWords",
+      "matchingCandidatePool": "matchingPairs is retained separately as historical/source candidate material"
+    },
+    "reviewFlagDisposition": []
+  },
+  "schemaStatus": "approved; Review Studio 27/27 preflight passed"
+}
